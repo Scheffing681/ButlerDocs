@@ -30,7 +30,7 @@ const odt=k=>cv5n(odS[k]);
 
 /* --- the white list --- */
 const OD_OK=new Set(['home','search','profile','concierge','style','stylemy','styleic','stylecol','ly6','pv','dossier',
- 'archive','arcf','bdoc','letters','envl','law','dcana','ins','insedit','sc9',
+ 'archive','arcf','dccat','lpage','bdoc','letters','envl','law','dcana','ins','insedit','sc9',
  'mycal','reminders','tasks','projects','project','ax5now','ax5week','td9today',
  'fnacc','fnlost','life','lbooks','lbook','lsearch',
  'dnach','assets','asset','axdet','axdata','axdocs','axsvc','axval','people','person','dall','dsrok']);
@@ -72,7 +72,9 @@ function odPrune(){try{if(!odOn())return;
 Hooks.on('render',odTidy);
 {let q=0;new MutationObserver(()=>{if(q||!odOn())return;q=1;requestAnimationFrame(()=>{q=0;odPrune()})}).observe(document.body,{childList:!0,subtree:!0})}
 /* weather on the home screen is only information (it used to open the wardrobe) */
-Hooks.on('screen',h=>typeof h==='string'&&m.route==='home'&&odOn()?h.replace(/class="dhwx" data-act="go" data-to="wd"/,'class="dhwx" aria-disabled="true"'):h);
+/* and the sign at the top is the original living sign from the sign-in screen (with DOCS) */
+Hooks.on('screen',h=>{if(typeof h!=='string'||m.route!=='home'||!odOn())return h;h=h.replace(/class="dhwx" data-act="go" data-to="wd"/,'class="dhwx" aria-disabled="true"');
+ try{if(typeof hl9sign==='function')h=h.replace(/<div class="dhlogo">[\s\S]*?<\/div>/,`<div class="odlogo">${hl9sign('head')}</div>`)}catch(e){Hooks.err('odlogo',e)}return h});
 Hooks.act('dhbank',()=>{try{R(odOn()?'fnacc':'cat',odOn()?void 0:'bank')}catch{}},{replace:!0});
 
 /* --- the «+» sheet: Document · Scan · Task · Event · Reminder --- */
@@ -117,6 +119,9 @@ Hooks.css('only-docs',`
 .od .plprof,.od .row[data-act=sheet][data-s=start],.od .bd8pm .note,.od .bd8pm .inc,.od .bd8pm .exp,.od .bd8pm .proj,.od .bd8pm .shop,.od .bd8sheet .bd8me,.od .odoff{display:none!important}
 .bd8pm .odpm .dhi{width:26px;height:26px;color:var(--green)}
 .dhwx[aria-disabled]{cursor:default}
+.odlogo{flex:1;display:flex;justify-content:center;min-width:0;margin:-6px 4px -4px}
+.odlogo .hl9-head{width:min(62vw,244px);height:104px;color:var(--ink)}
+.odlogo .hl9-head b{font-size:20.5px}.odlogo .hl9-head span{font-size:9.5px;margin-top:3px;gap:7px}.odlogo .hl9-head span i{width:20px}.odlogo .odsg{font-size:9.5px;margin-top:3px;color:var(--green)}
 .hl9tx .odsg{display:block;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.42em;margin-top:2px;color:var(--gold,#C99A3E)}
 .odh{margin:20px 2px 10px;font-size:17px}
 .odin{color:var(--muted);font-size:14.5px;line-height:1.45;margin:2px 0 6px}

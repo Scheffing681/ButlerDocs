@@ -1,0 +1,22 @@
+/* Network first for the app itself, so every update arrives at once; the last copy is kept for offline use.
+   Program libraries (PDF viewer, camera model) are kept on the phone after the first use.
+   In «fully offline» mode nothing leaves the phone: every request to another site is refused here. */
+const C='bdocs-v1',LIBS='bdocs-libs',PV='bdocs-pv';
+const LIB_RE=/^https:\/\/(cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|unpkg\.com|storage\.googleapis\.com\/mediapipe-)/;
+let OFF=null;
+const offNow=()=>OFF!==null?Promise.resolve(OFF):caches.open(PV).then(c=>c.match('/__pv')).then(m=>m?m.text():'0').then(t=>(OFF=t==='1')).catch(()=>(OFF=false));
+self.addEventListener('message',e=>{const d=e.data||{};if('pvOff' in d){OFF=!!d.pvOff;caches.open(PV).then(c=>c.put('/__pv',new Response(OFF?'1':'0'))).catch(()=>{})}});
+self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(C).then(c=>c.addAll(['./','index.html','app.css?v=1','app.js?v=1','manifest.webmanifest','icons/icon-192.png','img/ic3.webp','img/clockhero.webp','img/butler.webp','fonts/fonts.css']).then(()=>c.addAll(['img/c_c49be66298.webp','img/c_a7436d1635.webp','img/c_caeee9c5b1.webp','img/person_m.webp','img/person_f.webp','lib/pdf.min.mjs','lib/pdf.worker.min.mjs','lib/d3geo.js','geo/world.json']).catch(()=>{}))).catch(()=>{}))});
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>/^bdocs-/.test(x)&&x!==C&&x!=='bdocs-books'&&x!=='bdocs-ics'&&x!=='bdocs-ocr'&&x!==LIBS&&x!==PV).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
+offNow();
+self.addEventListener('fetch',e=>{const r=e.request,u=new URL(r.url);
+  if(u.origin!==location.origin){const lib=r.method==='GET'&&LIB_RE.test(r.url);
+    if(OFF===false&&!lib)return; /* online: the browser handles it as usual */
+    e.respondWith(offNow().then(off=>{
+      if(lib)return caches.open(LIBS).then(c=>c.match(r).then(m=>m||(off?Response.error():fetch(r).then(res=>{if(res&&(res.ok||res.type==='opaque'))c.put(r,res.clone()).catch(()=>{});return res}))));
+      return off?Response.error():fetch(r)}));
+    return}
+  if(r.method!=='GET')return;
+  if(/\/lib\/(ocr\/|pdf-lib)/.test(u.pathname)){e.respondWith(caches.open('bdocs-ocr').then(c=>c.match(r).then(m=>m||fetch(r).then(res=>{if(res&&res.ok)c.put(r,res.clone()).catch(()=>{});return res}))));return}
+  if(/\/ics\/[^/]+\.ics$/.test(u.pathname)){e.respondWith(caches.open('bdocs-ics').then(c=>c.match(r.url)).then(m=>m||new Response('',{status:404})));return}
+  e.respondWith(fetch(r).then(res=>{if(res&&res.ok){const cp=res.clone();caches.open(C).then(c=>c.put(r,cp))}return res}).catch(()=>caches.match(r).then(m=>m||caches.match('index.html'))))});

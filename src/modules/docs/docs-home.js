@@ -88,8 +88,8 @@ Hooks.css('docs-home',`
 .dhhd{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}.dhhd b{font-size:19px}.dhhd button{border:0;background:none;color:var(--muted)!important;font-size:15px;display:flex;align-items:center;gap:2px}
 .dhrow{display:flex;align-items:center;gap:12px;padding:9px 0;color:var(--ink)}.dhrow+.dhrow{border-top:1px solid var(--line)}.dhrow .dhi{color:var(--green);flex:none}.dhrow .tm{min-width:44px;font-variant-numeric:tabular-nums}.dhrow .tx{flex:1;font-size:15px}
 .dhnone{color:var(--muted);margin:8px 0 2px;font-size:14.5px}
-.dhqh{display:block;font-size:19px;margin-bottom:10px}.dhqr{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
-.dhqr button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 2px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}.dhqr .dhi{color:var(--green);width:26px;height:26px}.dhqr span{font-size:11.5px;line-height:1.15;text-align:center}
+.dhqh{display:block;font-size:19px;margin-bottom:10px}.dhqr{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.dhqr button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 2px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}.dhqr .dhi{color:var(--green);width:26px;height:26px}.dhqr span{font-size:10.5px;max-width:100%;overflow-wrap:anywhere;line-height:1.15;text-align:center}
 `);
 /* ===== Nachlass: one place for provision and instructions for the family ===== */
 const dnS={t:['Наследство и забота','Nachlass & Vorsorge','Estate & provision','Spadek i zabezpieczenie','Miras ve önlem','Succession & prévoyance','Herencia y previsión'],

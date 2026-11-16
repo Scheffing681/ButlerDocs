@@ -147,6 +147,21 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  if(r){await p.mouse.move(r[0],r[1]);await p.mouse.down();await p.waitForTimeout(800);await p.mouse.up();await p.waitForTimeout(500)}
  await T(()=>document.querySelector('.he1f[data-k=goal] [data-he=rm]').click());await p.waitForTimeout(400);await T(()=>document.querySelector('[data-he=done]').click());await p.waitForTimeout(500);
  check('«Готово» keeps it as «Мой: …»',await T(()=>!window.__T.bd8C().cfg.blocks.includes('goal')&&window.__T.bd8C().saved.some(s=>s.he1&&/План/.test(s.n))))}
+ /* Butler Docs: only the original plan (docs/only-docs.js) — the checks above run with the Butler shell (dhOff) */
+ where='only docs';{await T(()=>{document.querySelectorAll('.he1sheet,.dtsheet').forEach(s=>s.remove());const g=window.__T.g();g.dhOff=0;window.__T.m().he1=null;window.__T.R('home');window.__T.v()});await p.waitForTimeout(500);
+ const go=async(r,c)=>{await T(([r,c])=>window.__T.R(r,c),[r,c]);await p.waitForTimeout(350);return T(()=>window.__T.m().route)};
+ for(const r of ['wd','fin','body','kbshop','trv','mira','lib','routine','cycle','food']){const to=await go(r);check('closed screen '+r+' leads away',to!=='wd'&&to===({fin:'fnacc'}[r]||'home'),to)}
+ check('Банки open the bank accounts, not Butler Finance',(await go('cat','bank'))==='fnacc');check('Законы stay',(await go('cat','law'))==='cat');check('Здоровье is closed',(await go('cat','health'))==='home');
+ check('Прогресс becomes Сроки',(await go('stats'))==='dsrok');check('Сроки screen is drawn',await T(()=>!!document.querySelector('.screen.odsrok')));
+ check('▦ shows only document sections',(await go('bd9all'))==='dall'&&await T(()=>document.querySelectorAll('.odall .dht').length===14));
+ await T(()=>document.querySelector('.odall [data-to=sc9]')?.click());await p.waitForTimeout(600);check('Сканер opens from ▦',await T(()=>!!document.querySelector('.sc9')));await T(()=>{document.querySelector('.sc9 [data-a=x]')?.click();document.querySelectorAll('.sc9').forEach(x=>x.remove())});
+ for(const r of ['archive','ins','mycal','tasks','fnacc','life','dnach','assets','people','letters','dossier','profile','search','concierge'])check('screen '+r+' stays open',(await go(r))===r);
+ const ks=await T(()=>window.__T.x());check('no Butler-only sections in lists',!ks.some(k=>/^(c:(health|sport|wd|rest|travel|books|work|notes|bank|family)|q:(routine|report|fin|stats|goals|edu|body))$/.test(k)),ks.join(','));
+ await go('home');check('the tab is called Butler Docs',await T(()=>document.title)==='Butler Docs');check('weather no longer opens the wardrobe',await T(()=>!document.querySelector('[data-to=wd]')));
+ check('nav says Сроки',await T(()=>/Сроки/.test(document.querySelector('nav.nav [data-k=stats]')?.innerText||'')));
+ await T(()=>document.querySelector('[data-act=bd8plus]')?.click());await p.waitForTimeout(700);
+ const pl=await T(()=>[...document.querySelectorAll('.bd8pm button')].filter(b=>getComputedStyle(b).display!=='none').map(b=>b.innerText.trim()).join(','));check('«+» offers only document actions',pl==='Документ,Задача,Событие,Сканер,Напоминание',pl);
+ await T(()=>document.querySelector('.bd8sheet [data-x]')?.click());await p.waitForTimeout(300);await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()))}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

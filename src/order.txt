@@ -54,3 +54,4 @@ notes/shopping-back.js
 travel/real-earth.js
 hooks/install.js
 docs/docs-home.js
+docs/only-docs.js

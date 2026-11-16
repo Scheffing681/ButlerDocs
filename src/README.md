@@ -30,6 +30,7 @@
 | `books/` | «Зеркало себя»: free writing, analysis only on request, portrait and plan |
 | `money/` | one Finance section; Butler Finance: decision centre, calculators, health score, stress test, history |
 | `backup/` | data protection, safety copy, restore the latest copy |
+| `docs/` | Butler Docs: document home, Nachlass; `only-docs.js` keeps the app to the original plan (white list of screens, ▦ All sections, Deadlines, «+» with document actions) |
 
 ## One connection point (Hooks)
 New code does not wrap app functions any more. It plugs in through `Hooks` (`src/modules/hooks/registry.js`, installed last by `hooks/install.js`):

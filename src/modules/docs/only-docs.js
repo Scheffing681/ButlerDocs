@@ -24,6 +24,7 @@ const odS={
  none:['Сроков пока нет. Впишите «Срок действия» в документе или страховке — и он появится здесь.','Noch keine Fristen. Tragen Sie bei einem Dokument oder einer Versicherung ein Ablaufdatum ein – dann erscheint es hier.','No deadlines yet. Add an expiry date to a document or policy and it will appear here.','Brak terminów. Dodaj datę ważności w dokumencie lub polisie.','Henüz süre yok. Bir belgeye veya poliçeye bitiş tarihi ekleyin.','Pas encore d’échéances. Ajoutez une date d’expiration à un document ou une police.','Aún no hay plazos. Añada una fecha de caducidad a un documento o póliza.'],
  add:['Добавить документ','Dokument hinzufügen','Add a document','Dodaj dokument','Belge ekle','Ajouter un document','Añadir documento'],
  doc:['Документ','Dokument','Document','Dokument','Belge','Document','Documento'],rem:['Напоминание','Erinnerung','Reminder','Przypomnienie','Hatırlatma','Rappel','Recordatorio'],
+ nf:['Ничего не найдено.','Nichts gefunden.','Nothing found.','Nic nie znaleziono.','Hiçbir şey bulunamadı.','Aucun résultat.','No se encontró nada.'],
  day:['Календарь и задачи','Kalender & Aufgaben','Calendar & tasks','Kalendarz i zadania','Takvim ve görevler','Agenda et tâches','Calendario y tareas']};
 const odt=k=>cv5n(odS[k]);
 
@@ -52,15 +53,24 @@ function odTidy(){try{
  const on=odOn();document.documentElement.classList.toggle('od',on);if(!on)return;
  if(m.logged&&m.route&&!odOk(m.route,m.cat)&&!odTidy.busy){odTidy.busy=1;setTimeout(()=>{odTidy.busy=0;try{R(odTo(m.route,m.cat))}catch{}},0)}
  if(document.title!=='Butler Docs')document.title='Butler Docs';
- /* a link out of the plan is hidden; a «back» arrow that would lead out goes home instead */
- const off=b=>{if(b.matches('.sub-hdr .iconbtn,.iconbtn[aria-label]')&&b.closest('.sub-hdr,.hdr,header,.screen>div:first-child')){b.dataset.act='odback';delete b.dataset.to;delete b.dataset.id;return}b.hidden=!0;b.classList.add('odoff')};
- document.querySelectorAll('[data-to]').forEach(b=>{const t=String(b.dataset.to||'').split(':')[0];if(!t||OD_OK.has(t)||OD_TO[t]||t==='cat')return;off(b)});
- document.querySelectorAll('[data-act="cat"][data-id],[data-act="opencat"][data-id]').forEach(b=>{OD_CAT.has(b.dataset.id)||b.dataset.id==='bank'||off(b)});
+ odPrune();
  const st=document.querySelector('nav.nav [data-k="stats"]');if(st&&!st.dataset.od){st.dataset.od=1;const s=st.querySelector('span');s&&(s.textContent=odt('dl'));const sv=st.querySelector('svg');sv&&(sv.innerHTML=OD_DL)}
  if(st)st.classList.toggle('on',m.route==='dsrok');
  document.querySelectorAll('.hl9tx').forEach(x=>{if(!x.querySelector('.odsg')){const e=document.createElement('em');e.className='odsg';e.textContent='DOCS';x.appendChild(e)}});
 }catch(e){Hooks.err('odtidy',e)}}
+/* a link out of the plan is hidden; a «back» arrow that would lead out goes home instead.
+   Runs after every redraw and when a part of the screen is filled in later (search results, chat). */
+const OD_NOTE=/заметк|notiz|\bnote|notatk|\bnot\b|\bnota\b/i;
+function odPrune(){try{if(!odOn())return;
+ const off=b=>{if(b.matches('.sub-hdr .iconbtn,.iconbtn[aria-label]')&&b.closest('.sub-hdr,.hdr,header,.screen>div:first-child')){b.dataset.act='odback';delete b.dataset.to;delete b.dataset.id;return}b.hidden=!0;b.classList.add('odoff')};
+ document.querySelectorAll('[data-to]:not(.odoff)').forEach(b=>{const t=String(b.dataset.to||'').split(':')[0];if(!t||OD_OK.has(t)||OD_TO[t]||t==='cat')return;off(b)});
+ document.querySelectorAll('[data-act="cat"][data-id]:not(.odoff),[data-act="opencat"][data-id]:not(.odoff)').forEach(b=>{OD_CAT.has(b.dataset.id)||off(b)});
+ document.querySelectorAll('.chip[data-act="ask"][data-q]:not(.odoff)').forEach(b=>{OD_NOTE.test(b.dataset.q)&&off(b)});
+ const sr=document.getElementById('sres');if(sr){sr.querySelectorAll('.list').forEach(l=>{const vis=[...l.children].some(c=>!c.classList.contains('odoff'));l.classList.toggle('odoff',!vis);const h=l.previousElementSibling;if(h&&h.matches('h3'))h.classList.toggle('odoff',!vis)});
+  const any=[...sr.children].some(c=>!c.classList.contains('odoff')&&!c.classList.contains('odnone'));let e=sr.querySelector('.odnone');if(!any&&!sr.querySelector('.empty')&&!e){e=document.createElement('p');e.className='empty odnone';e.textContent=odt('nf');sr.appendChild(e)}else if(any&&e)e.remove()}
+}catch(e){Hooks.err('odprune',e)}}
 Hooks.on('render',odTidy);
+{let q=0;new MutationObserver(()=>{if(q||!odOn())return;q=1;requestAnimationFrame(()=>{q=0;odPrune()})}).observe(document.body,{childList:!0,subtree:!0})}
 /* weather on the home screen is only information (it used to open the wardrobe) */
 Hooks.on('screen',h=>typeof h==='string'&&m.route==='home'&&odOn()?h.replace(/class="dhwx" data-act="go" data-to="wd"/,'class="dhwx" aria-disabled="true"'):h);
 Hooks.act('dhbank',()=>{try{R(odOn()?'fnacc':'cat',odOn()?void 0:'bank')}catch{}},{replace:!0});

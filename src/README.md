@@ -15,7 +15,7 @@
 | `clocks/` | thirty more clocks; day-night map, sky and time, background, Galaxy, classic kits; light kits; clock faces |
 | `seal/` | seal and signature |
 | `today/` | «?» tour, Today, search across everything, Butler commands |
-| `notes/` | notes and quick input; back from «Покупки» |
+| `notes/` | notes and quick input (shopping, recipes, pantry and meal plan were removed in Butler Docs) |
 | `affairs/` | manager of affairs: repeat, steps, promises, weekly review |
 | `calendar/` | personal calendar: faiths, holidays, sky, setup |
 | `home/` | own bottom bar and layout, home on one screen, builder and templates, folded templates |
@@ -26,11 +26,10 @@
 | `saved/` | saved entries stay visible |
 | `scanner/` | the document scanner |
 | `kits/` | ready-made style sets (hidden) |
-| `travel/` | real Earth colours on the travel globe and map |
-| `books/` | «Зеркало себя»: free writing, analysis only on request, portrait and plan |
-| `money/` | one Finance section; Butler Finance: decision centre, calculators, health score, stress test, history |
 | `backup/` | data protection, safety copy, restore the latest copy |
 | `docs/` | Butler Docs: document home, Nachlass; `only-docs.js` keeps the app to the original plan (white list of screens, ▦ All sections, Deadlines, «+» with document actions) |
+
+Removed in Butler Docs (step 2): the finance modules, shopping/recipes/pantry/meal plan, «Зеркало себя», the travel globe colours, the philosophy library texts (`books/`) and the health/fitness/Kakebo pictures. Butler keeps them.
 
 ## One connection point (Hooks)
 New code does not wrap app functions any more. It plugs in through `Hooks` (`src/modules/hooks/registry.js`, installed last by `hooks/install.js`):

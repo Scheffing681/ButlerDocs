@@ -101,12 +101,8 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('[data-act=f12undo]')?.click());await p.waitForTimeout(600);check('undo takes the folder apart',(await tiles.count())===n0);
  await T(()=>{window.confirm=()=>true;window.__T.L.f12grp()});
 
- /* one finance section, projects inside tasks (v261) */
- where='one finance';{const ks=await T(()=>window.__T.x());check('Финансы/Активы/Проекты are not separate tiles',!ks.some(k=>['q:fin','q:assets','q:projects'].includes(k)),ks.join(','));
- await T(()=>{window.__T.R('home');window.__T.h9go('c:bank')});await p.waitForTimeout(500);check('finance opens on the Butler Finance home',await T(()=>!!document.querySelector('.screen.fin2 .f2grid')));await T(()=>document.querySelector('.f2book')?.click());await p.waitForTimeout(500);check('the book is called Финансы',/ФИНАНСЫ|Финансы/.test(await T(()=>document.querySelector('.st32tt')?.innerText||'')));
- await T(()=>{window.__T.m().ftab='ov';window.__T.R('fin')});await p.waitForTimeout(400);const fh=await T(()=>document.querySelector('.screen').innerHTML);check('inner finance room has no repeated overview',!/data-v="ov"/.test(fh)&&!/kbfinl/.test(fh)&&/data-act="kbhome"/.test(fh));
- await T(()=>window.__T.R('tasks'));await p.waitForTimeout(400);await T(()=>document.querySelector('.pj1chip').click());await p.waitForTimeout(400);check('Проекты open from Задачи',await T(()=>window.__T.m().route)==='projects');
- await T(()=>window.__T.L.fin1t());await p.waitForTimeout(300);check('old look can come back (two sections)',(await T(()=>window.__T.x())).includes('q:fin'));await T(()=>window.__T.L.fin1t());await p.waitForTimeout(300);check('and one section again',!(await T(()=>window.__T.x())).includes('q:fin'))}
+ /* projects inside tasks (v261); the finance checks are gone with the finance modules (Butler Docs) */
+ where='projects';{await T(()=>window.__T.R('tasks'));await p.waitForTimeout(400);await T(()=>document.querySelector('.pj1chip').click());await p.waitForTimeout(400);check('Проекты open from Задачи',await T(()=>window.__T.m().route)==='projects')}
  /* no twin sections (v262) */
  where='no twins';{const ks=await T(()=>window.__T.x());check('no twin Контакты / Здоровье tiles',!ks.includes('c:contacts')&&!ks.includes('q:body'),ks.join(','));
  await T(()=>{window.__T.R('home');window.__T.h9go('c:health')});await p.waitForTimeout(500);await T(()=>document.querySelector('[data-act=gobody]').click());await p.waitForTimeout(900);await T(()=>document.querySelector('[data-act=tw1health]').click());await p.waitForTimeout(400);{const rr=await T(()=>window.__T.m().route+':'+window.__T.m().cat);check('Моё состояние goes back to Здоровье',rr==='cat:health',rr+' btn:'+await T(()=>!!document.querySelector('[data-act=tw1health]')))}
@@ -159,6 +155,9 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  const ks=await T(()=>window.__T.x());check('no Butler-only sections in lists',!ks.some(k=>/^(c:(health|sport|wd|rest|travel|books|work|notes|bank|family)|q:(routine|report|fin|stats|goals|edu|body))$/.test(k)),ks.join(','));
  await go('home');check('the tab is called Butler Docs',await T(()=>document.title)==='Butler Docs');check('weather no longer opens the wardrobe',await T(()=>!document.querySelector('[data-to=wd]')));
  check('nav says Сроки',await T(()=>/Сроки/.test(document.querySelector('nav.nav [data-k=stats]')?.innerText||'')));
+ await go('search');await T(()=>{const q=document.querySelector('.screen input');q.value='гардероб';q.dispatchEvent(new Event('input',{bubbles:true}))});await p.waitForTimeout(600);
+ check('search does not offer closed sections',await T(()=>![...document.querySelectorAll('#sres button')].some(b=>getComputedStyle(b).display!=='none'&&b.offsetParent)),await T(()=>document.getElementById('sres')?.innerText));
+ await go('home');
  await T(()=>document.querySelector('[data-act=bd8plus]')?.click());await p.waitForTimeout(700);
  const pl=await T(()=>[...document.querySelectorAll('.bd8pm button')].filter(b=>getComputedStyle(b).display!=='none').map(b=>b.innerText.trim()).join(','));check('«+» offers only document actions',pl==='Документ,Задача,Событие,Сканер,Напоминание',pl);
  await T(()=>document.querySelector('.bd8sheet [data-x]')?.click());await p.waitForTimeout(300);await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()))}

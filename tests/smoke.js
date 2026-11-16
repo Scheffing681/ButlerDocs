@@ -13,7 +13,7 @@ const copy=(s,d)=>{for(const n of fs.readdirSync(s)){if(n==='.git'||n==='tests')
 copy(ROOT,TMP);
 {const f=path.join(TMP,'app.js');let s=fs.readFileSync(f,'utf8');const end='v(),Sq()})();',i=s.trimEnd().lastIndexOf(end);
  if(i<0)throw new Error('app.js end marker not found');
- s=s.slice(0,i)+'try{window.__T={bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
+ s=s.slice(0,i)+'try{window.__T={vault:odV,Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
 const MIME={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webmanifest':'application/manifest+json','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
 const srv=http.createServer((q,r)=>{const u=decodeURIComponent(q.url.split('?')[0]);const f=path.join(TMP,u==='/'?'index.html':u);if(!f.startsWith(TMP)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);return r.end()}r.writeHead(200,{'content-type':MIME[path.extname(f)]||'application/octet-stream'});fs.createReadStream(f).pipe(r)});
 
@@ -164,6 +164,36 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('[data-act=bd8plus]')?.click());await p.waitForTimeout(700);
  const pl=await T(()=>[...document.querySelectorAll('.bd8pm button')].filter(b=>getComputedStyle(b).display!=='none').map(b=>b.innerText.trim()).join(','));check('«+» offers only document actions',pl==='Документ,Задача,Событие,Сканер,Напоминание',pl);
  await T(()=>document.querySelector('.bd8sheet [data-x]')?.click());await p.waitForTimeout(300);await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()))}
+ /* Butler Docs: the vault (docs/vault.js) */
+ where='vault';{await T(()=>{document.querySelectorAll('.dtsheet').forEach(s=>s.remove());window.__T.g().dhOff=0;window.__T.R('home')});
+ const mk=await T(async()=>{const W=window.__T,c=document.createElement('canvas');c.width=40;c.height=30;const x=c.getContext('2d');x.fillStyle='#c33';x.fillRect(0,0,40,30);
+  const b=await new Promise(r=>c.toBlob(r,'image/jpeg'));const f=await W.nr(b);const b64=await W.ni({id:f.id,n:f.n});
+  await W.ao('dtext','vt1doc',{t:'ПАСПОРТ ТЕКСТ 45 01 123456'});W.Ke().items.push({id:'vt1doc',title:'Паспорт ТЕСТ-СЕЙФ',kind:'other',party:'МВД',end:'2027-03-12',note:'серия 45',files:[],pages:[{id:f.id,n:f.n,type:'image/jpeg'}],ts:Date.now(),folder:'f1',dcat:'personal',dtype:'passport',f:{number:'45 01 123456'}});W.save();return{pid:f.id,b64}});
+ await T(()=>{window.__T.m().bdid='vt1doc';window.__T.R('bdoc')});await p.waitForTimeout(500);check('a document offers «В сейф»',await T(()=>!!document.querySelector('[data-act=vin][data-id=vt1doc]')));
+ await T(()=>document.querySelector('[data-act=vin][data-id=vt1doc]').click());await p.waitForTimeout(800);
+ check('moved: out of the document list, into the vault',await T(()=>window.__T.m().route==='dsafe'&&!window.__T.Ke().items.some(d=>d.id==='vt1doc')&&window.__T.vault.list().some(d=>d.id==='vt1doc')));
+ check('the vault screen lists it',await T(()=>/ТЕСТ-СЕЙФ/.test(document.querySelector('.screen').innerText)));
+ check('without a code the vault is plain (no lock)',await T(()=>!window.__T.vault.has()&&!!document.querySelector('.vsafe [data-act=vcode]')));
+ const ok=await T(()=>window.__T.vault.vSetCode('2468'));check('a code can be set',ok===true);
+ const st=await T(async([pid])=>{const W=window.__T,G=W.g();const plain=await W.ni({id:pid,n:1});const txt=await W.fl('dtext','vt1doc');const txs=await W.fl('vault','dtext:vt1doc');const h=await W.fl('vault',pid+'-0');return{txt,txs:!!(txs&&txs.iv&&!JSON.stringify(txs).includes('ПАСПОРТ')),plain,h:!!(h&&h.iv&&h.d),enc:!!(G.vault.enc&&G.vault.enc.ct),items:G.vault.items,where:Object.keys(G).filter(k=>{const t=JSON.stringify(G[k]);return t&&(t.includes('ТЕСТ-СЕЙФ')||t.includes('45 01 123456'))}).map(k=>k+':'+JSON.stringify(G[k]).slice(0,300)),leak:JSON.stringify(G).includes('ТЕСТ-СЕЙФ')||JSON.stringify(G).includes('45 01 123456')}},[mk.pid]);
+ check('with the code: scanned text is encrypted too',!st.txt&&st.txs);
+ await p.waitForTimeout(600);const px=await T(async()=>{const I=window.__T.Ic,out=[];for(const k of await I.keys()){const v=JSON.stringify(await I.get(k));if(/ПАСПОРТ|ТЕСТ-СЕЙФ|45 01 123456/.test(v))out.push(k)}let ls=[];for(let j=0;j<localStorage.length;j++){const k=localStorage.key(j),v=localStorage.getItem(k)||'';if(/ПАСПОРТ|ТЕСТ-СЕЙФ|45 01 123456/.test(v))ls.push(k)}const core=await new Promise(res=>{const r=indexedDB.open('bdocs-core',1);r.onsuccess=()=>{try{const q=r.result.transaction('kv','readonly').objectStore('kv').get('S');q.onsuccess=()=>res(q.result&&q.result.json||'');q.onerror=()=>res('')}catch{res('')}};r.onerror=()=>res('')});if(/ТЕСТ-СЕЙФ|45 01 123456/.test(core))out.push('bdocs-core:S');return out.concat(ls)});
+ check('with the code: nothing readable left anywhere on the phone',!px.length,px.join(','));check('with the code: page is encrypted, plain copy deleted',st.h&&!st.plain,JSON.stringify(st).slice(0,200));check('with the code: no name or number left in the saved data',st.enc&&!st.items&&!st.leak,JSON.stringify(st.where).slice(0,600));
+ await T(()=>{window.__T.vault.vLock();window.__T.R('dsafe')});await p.waitForTimeout(400);
+ check('locked: the list is gone from memory and the lock screen shows',await T(()=>!window.__T.vault.open()&&window.__T.vault.list().length===0&&!!document.querySelector('.vlk #vcode')));
+ check('a wrong code does not open it',(await T(()=>window.__T.vault.vUnlock('1111')))==='bad');
+ await T(()=>{const c=document.getElementById('vcode');c.value='2468';c.form.requestSubmit()});await p.waitForTimeout(2500);
+ check('the right code opens it',await T(()=>window.__T.vault.open()&&/ТЕСТ-СЕЙФ/.test(document.querySelector('.screen').innerText)));
+ await T(()=>document.querySelector('[data-act=vsel][data-id=vt1doc]').click());await p.waitForTimeout(1200);
+ check('an opened document shows its decrypted page',await T(()=>/^data:image/.test(document.querySelector('img[data-vimg]')?.src||'')));
+ check('«Сроки» show the date but not the name',await T(()=>{window.__T.R('dsrok');const t=document.querySelector('.screen').innerText;return /в сейфе/i.test(t)&&!/ТЕСТ-СЕЙФ/.test(t)}));
+ await T(()=>window.__T.vault.vOut('vt1doc'));await p.waitForTimeout(500);
+ const back=await T(async([pid])=>{const W=window.__T;return{inList:W.Ke().items.some(d=>d.id==='vt1doc'),b64:await W.ni({id:pid,n:1}),h:await W.fl('vault',pid+'-0'),txt:await W.fl('dtext','vt1doc')}},[mk.pid]);
+ check('back to documents: the page is plain again and identical',back.inList&&back.b64===mk.b64&&!back.h);check('back to documents: the scanned text is back',(back.txt&&back.txt.t)==='ПАСПОРТ ТЕКСТ 45 01 123456');
+ await T(()=>window.__T.vault.vIn('vt1doc'));await p.waitForTimeout(700);check('a locked vault still takes documents after the code',await T(()=>window.__T.vault.list().some(d=>d.id==='vt1doc')));
+ const off=await T(()=>window.__T.vault.vClearCode());const st2=await T(async([pid])=>{const W=window.__T;return{has:W.vault.has(),b64:await W.ni({id:pid,n:1})}},[mk.pid]);
+ check('the code can be removed, files come back',off===true&&!st2.has&&st2.b64===mk.b64);
+ await T(()=>{const W=window.__T;W.vault.vOut('vt1doc')});await p.waitForTimeout(400);await T(()=>{const W=window.__T,A=W.Ke().items,k=A.findIndex(d=>d.id==='vt1doc');k>=0&&A.splice(k,1);W.save();W.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

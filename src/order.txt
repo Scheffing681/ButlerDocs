@@ -40,3 +40,4 @@ home/tiles-one-tap.js
 hooks/install.js
 docs/docs-home.js
 docs/only-docs.js
+docs/vault.js

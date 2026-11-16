@@ -6,3 +6,4 @@ The Silentium's Butler — Dokumente. A separate app next to Butler: documents, 
 - Own data: every key is stored under the `bdocs:` prefix, own databases (`bdocs-*`) and own offline cache, so it never mixes with Butler on the same site.
 - Built the same way as Butler: `node build.js`, `node tests/bump.js`, `node tests/smoke.js`.
 - Only the original plan: `src/modules/docs/only-docs.js` closes every Butler part that is not about documents (wardrobe, fitness, health, places, growth, shopping, money planning…). Their data is not deleted.
+- Сейф: `src/modules/docs/vault.js`. Without a code a separate shelf; with a code (4–8 digits) the list, files and scanned text of its documents are encrypted (PBKDF2 → AES-256-GCM). A forgotten code cannot be recovered.

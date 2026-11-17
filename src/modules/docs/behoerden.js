@@ -1,4 +1,4 @@
-/* ===== Butler Docs: Behörden & Services (stage 1) =====
+/* ===== Butler Docs: Behörden & Dienste (stage 1) =====
    The user's own list of offices and services: police, Bürgeramt, Finanzamt, doctors, clubs … — only what he uses.
    It takes the place of the «Aufgaben» tile on home (tasks stay in the calendar and in the bottom bar).
    - g.bsv = {items, grp (group order), ppl (for whom), nf (own emergency data), setup, plz}
@@ -11,7 +11,7 @@
      the most current source), by pasting a link, or by hand with one smart field (phone, e-mail or link).
      Dates are only suggested; nothing goes into the calendar without the user's «Внести». */
 const bsvS={
- t:['Ведомства и службы','Behörden & Services','Offices & services'],
+ t:['Ведомства и службы','Behörden & Dienste','Offices & services'],
  tS:['Термины, номера, ссылки','Termine, Nummern, Links','Appointments, numbers, links'],
  ord:['Порядок','Ordnen','Order'],done:['Готово','Fertig','Done'],
  add:['Добавить','Hinzufügen','Add'],addQ:['Что добавить?','Was hinzufügen?','What to add?'],

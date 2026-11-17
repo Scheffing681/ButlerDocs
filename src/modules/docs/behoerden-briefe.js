@@ -1,4 +1,4 @@
-/* ===== Butler Docs: Behörden & Services (stage 3) — letters, Anträge, journal =====
+/* ===== Butler Docs: Behörden & Dienste (stage 3) — letters, Anträge, journal =====
    - A scanned letter: the scanned text tells which office wrote, what kind of letter, its date and (for a Bescheid)
      the objection deadline: date + 4 days (Bekanntgabe, rule since 2025) + 1 month, moved off a weekend. Always «bitte prüfen».
      An explicit «bis zum …» in the letter is taken as it stands. The document can be tied to the office.

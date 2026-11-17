@@ -39,7 +39,8 @@ const DH_I={
  umb:'<path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6.5a2 2 0 0 1-4 0"/>',
  chev:'<path d="M9.5 6l6 6-6 6"/>'};
 const dhi=(n,c)=>`<svg class="dhi${c?' '+c:''}" viewBox="0 0 24 24" aria-hidden="true">${DH_I[n]||''}</svg>`;
-const DH_T=[['docs','fld','data-act="go" data-to="archive"'],['ins','shield','data-act="go" data-to="ins"'],['pers','id','data-act="dccat" data-v="personal"'],
+/* «Versicherungen» has no tile of its own: «Dokumente» switches between documents and insurance */
+const DH_T=[['docs','fld','data-act="go" data-to="archive"'],['pers','id','data-act="dccat" data-v="personal"'],
  ['cal','cal','data-act="go" data-to="mycal"'],['task','chk','data-act="go" data-to="tasks"'],['bank','bank','data-act="dhbank"'],
  ['vault','vault','data-act="dhvault"'],['life','book','data-act="go" data-to="life"'],['leg','sprout','data-act="go" data-to="dnach"']];
 function dhGreet(){const h=new Date().getHours();const k=h<5?'night':h<11?'morning':h<18?'day':h<22?'evening':'night';let n='';try{n=(g.user&&(g.user.short||g.user.first))||''}catch{}return dht(k)+(n?',':'')+(n?'<br>'+i(n):'')}

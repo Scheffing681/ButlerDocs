@@ -1,4 +1,4 @@
-/* ===== Butler Docs: Behörden & Services (stage 2) — Termine, deadlines, yearly duties, links to the rest of the app =====
+/* ===== Butler Docs: Behörden & Dienste (stage 2) — Termine, deadlines, yearly duties, links to the rest of the app =====
    - Frist → Termin: a document that runs out soon (passport, residence title …) shows which office renews it and a Termin button.
    - «Termin eingetragen»: date, time, for whom, what for, a «Mitbringen» checklist and documents from the app.
      It goes into the calendar (an event) and the day before into tasks (a reminder). Termin-Mappe = one Termin with all of it.
@@ -23,7 +23,7 @@ const bsvS2={
  yrChk:['Сроки взяты из общих правил — проверьте их для себя.','Fristen nach allgemeinen Regeln – bitte für sich prüfen.','Dates follow general rules – please check them for you.'],
  save:['Сохранить','Speichern','Save'],del:['Удалить','Löschen','Delete'],delQ:['Точно удалить? Нажмите ещё раз','Wirklich löschen? Nochmals tippen','Really delete? Tap again'],
  home:['Ведомства','Behörden','Offices'],nach:['Ведомства и службы','Behörden & Dienste','Offices & services'],nachS:['Куда сообщить: пенсионная, больничная касса, Finanzamt…','Wen benachrichtigen: Rente, Krankenkasse, Finanzamt …','Whom to notify: pension, health insurer, tax office …'],
- sGrp:['Ведомства и службы','Behörden & Services','Offices & services'],
+ sGrp:['Ведомства и службы','Behörden & Dienste','Offices & services'],
  aSec:['%t лежит в сейфе — откройте карточку «%n» и нажмите «Показать».','%t liegt im Tresor – Karte „%n“ öffnen und „Zeigen“ tippen.','%t is in the vault – open “%n” and tap “Show”.'],
  aNum:['%t (%n): %v','%t (%n): %v','%t (%n): %v'],aTel:['%n: телефон %v','%n: Telefon %v','%n: phone %v'],aNext:['Ближайший термин: %n, %d','Nächster Termin: %n, %d','Next appointment: %n, %d'],aNoT:['Терминов нет','Keine Termine','No appointments']};
 const bsvt2=(k,o)=>{let s=cv5n(bsvS2[k]||[k]);if(o)for(const p in o)s=s.split('%'+p).join(o[p]);return s};

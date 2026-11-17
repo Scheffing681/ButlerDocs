@@ -23,7 +23,7 @@ bd8menu=(f=>function(edit){const r=f.apply(this,arguments);try{const sh=[...docu
   new MutationObserver(()=>{if(!box.contains(d)&&!box.querySelector('.bd8pm.ed'))box.appendChild(d)}).observe(box,{childList:!0})}}catch{}return r})(bd8menu);
 v=(f=>function(){const r=f.apply(this,arguments);try{requestAnimationFrame(h10dot)}catch{}return r})(v);
 /* iPhone: the page itself reaches the very bottom of the screen, so nothing white can show below it */
-function h10edge(){try{const R=document.documentElement,gap=parseFloat(getComputedStyle(R).getPropertyValue('--g9gap'))||0;R.style.setProperty('--h10vh',innerHeight+'px');R.classList.toggle('h10x',gap>0);
+function h10edge(){try{const R=document.documentElement,gap=parseFloat(getComputedStyle(R).getPropertyValue('--g9gap'))||0;
  const bot=(()=>{const L2=document.elementsFromPoint(innerWidth/2,innerHeight-2).filter(e=>!e.closest('.bd8sv,.toast'));return L2[0]&&g9col(L2[0],0)})()||getComputedStyle(document.body).backgroundColor;R.style.setProperty('background-repeat','no-repeat','important');document.body.style.setProperty('background-repeat','no-repeat','important');if(bot){R.style.setProperty('background-color',bot,'important');document.body.style.setProperty('background-color',bot,'important');R.style.setProperty('--h10bot',bot)}}catch{}}
 g9edges=(f=>function(){const r=f.apply(this,arguments);h10edge();return r})(g9edges);
 {const st=document.createElement('style');st.textContent=`

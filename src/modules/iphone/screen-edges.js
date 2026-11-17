@@ -10,8 +10,7 @@ function g9edges(){try{if(document.hidden)return;const R=document.documentElemen
  const key=top+'|'+bot;if(key===g9last)return;g9last=key;const bg=`linear-gradient(${top} 0 50%,${bot} 50% 100%)`;
  R.style.setProperty('background',bg,'important');document.body.style.setProperty('background',bg,'important');
  const mt=document.querySelector('meta[name="theme-color"]');mt&&mt.content!==top&&(mt.content=top)}catch{}}
-function g9gap(){try{const st=matchMedia('(display-mode: standalone)').matches||navigator.standalone;const port=innerHeight>innerWidth;const ae=document.activeElement;const typing=ae&&/^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName)||ae&&ae.isContentEditable;
- let gap=0;if(g.g9gapOn&&st&&port&&!typing&&screen&&screen.height){gap=Math.max(0,Math.min(90,screen.height-innerHeight))}document.documentElement.style.setProperty('--g9gap',gap+'px');document.documentElement.classList.toggle('g9short',gap>0)}catch{}}
+function g9gap(){try{ssSet()}catch{}}/* v26: the gap is measured in one place only — docs/steady-screen.js (ssSet) */
 v=(f=>function(){const r=f.apply(this,arguments);try{requestAnimationFrame(()=>{g9gap();g9edges()})}catch{}return r})(v);
 ['resize','orientationchange','pageshow','focusin','focusout'].forEach(n=>addEventListener(n,()=>setTimeout(()=>{g9gap();g9last='';g9edges()},250)));
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)setTimeout(()=>{g9gap();g9last='';g9edges()},300)});

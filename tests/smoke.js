@@ -227,7 +227,9 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await q.goto(URL0);await q.waitForTimeout(1500);await q.evaluate(()=>{const m=window.__T.m();m.logged=true;window.__T.R('mycal')});await q.waitForTimeout(500);
  await q.setViewportSize({width:393,height:470});await q.evaluate(()=>window.__T.v());await q.waitForTimeout(300);
  await q.setViewportSize({width:393,height:852});await q.evaluate(()=>{Object.defineProperty(window,'innerHeight',{get:()=>470,configurable:true});window.__T.v()});await q.waitForTimeout(300);
- const bh=await q.evaluate(()=>Math.round(document.body.getBoundingClientRect().height));check('after the keyboard the app keeps its full height (iPhone app mode)',bh>=848,bh+' of 852');await q.close()}
+ const bh=await q.evaluate(()=>Math.round(document.body.getBoundingClientRect().height));check('after the keyboard the app keeps its full height (iPhone app mode)',bh>=848,bh+' of 852');
+ const one=await q.evaluate(()=>{const R=document.documentElement,c=getComputedStyle(R),v=n=>c.getPropertyValue(n).trim();return [v('--ssvh'),v('--h10vh'),v('--h236vh'),v('--h236gap'),R.classList.contains('h236')]});
+ check('one height for all old helpers (v26: ssvh = h10vh = h236vh, gap = real screen − page)',one[0]==='852px'&&one[1]==='852px'&&one[2]==='852px'&&one[3]==='26px'&&one[4]===true,JSON.stringify(one));await q.close()}
  /* Butler Docs: Behörden & Services (docs/behoerden.js) */
  where='behoerden';{await T(()=>{document.querySelectorAll('.dtsheet').forEach(s=>s.remove());const g=window.__T.g();g.dhOff=0;g.me=Object.assign(g.me||{},{first:'Alexander',last:'Scheffing',addr:'Tannenweg 11, 63741 Aschaffenburg',email:'alex@example.de'});
   g.bsv={items:[{id:'old115',n:'Behördennummer 115',e:'☎️',grp:'nf',src:'b115',tel:'115',links:[],nums:[]},{id:'oldfa',n:'Mein Steuerberater',e:'🧾',grp:'amt',src:'',tel:'06021 1',links:[],nums:[]}],grp:['nf','amt'],ppl:['Я'],nf:{},setup:1};window.__T.m().sheet=null;window.__T.R('home')});await p.waitForTimeout(400);

@@ -2,11 +2,7 @@
    v237: steady — the value is measured once and kept; focusing a field or opening the keyboard no longer flips it (that made the screen jump) */
 try{
  let g236=-1,vh236=0;
- function h236(){try{const R=document.documentElement;const st=matchMedia('(display-mode: standalone)').matches||navigator.standalone;const port=innerHeight>innerWidth;const vv=window.visualViewport;
-  if(vv&&vv.height<innerHeight-120)return;/* keyboard open: keep everything exactly as it is */
-  let gap=0;if(st&&port&&screen&&screen.height)gap=Math.max(0,Math.min(90,screen.height-innerHeight));
-  if(gap===g236&&innerHeight===vh236)return;g236=gap;vh236=innerHeight;
-  R.style.setProperty('--h236gap',gap+'px');R.style.setProperty('--h236vh',innerHeight+'px');R.classList.toggle('h236',gap>0)}catch{}}
+ function h236(){try{ssSet()}catch{}}/* v26: measured in docs/steady-screen.js only */
  v=(f=>function(){const r=f.apply(this,arguments);try{h236()}catch{}return r})(v);
  ['resize','orientationchange','pageshow'].forEach(n=>addEventListener(n,()=>setTimeout(h236,140)));
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)setTimeout(h236,120)});h236();

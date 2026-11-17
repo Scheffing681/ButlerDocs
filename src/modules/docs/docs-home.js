@@ -68,6 +68,8 @@ function dhHome(){const d=new Date();let ds='';try{ds=d.toLocaleDateString(he(),
 Hooks.act('dhbank',()=>{try{R('cat','bank')}catch{}});
 Hooks.act('dhvault',()=>{try{R('archive');setTimeout(()=>{const b=document.querySelector('[data-act=dcold]');b&&b.click()},60)}catch{}});
 Hooks.css('docs-home',`
+/* «Neuer Vertrag»: the camera sits on the edge of the round logo (the label was inline, so the badge slid below the circle) */
+.insprev .fmphl{display:block;flex:none;width:112px;height:112px}.insprev .fmphl .fmcam{right:0;bottom:2px}
 .dhome{padding-top:calc(env(safe-area-inset-top) + 6px)!important;font-family:-apple-system,"SF Pro Text",system-ui,sans-serif;color:var(--ink)}
 .dhome button{font:inherit;color:inherit;cursor:pointer}.dhome,.dhome *{hyphens:manual!important;-webkit-hyphens:manual!important}
 :root[data-style="klassisch"] .dhome .dht,:root[data-style="klassisch"] .dhome .dhcard,:root[data-style="klassisch"] .dhome .dhwx,:root[data-style="klassisch"] .dhome .dhqr button,:root[data-style="klassisch"] .dhome .dhrb{background:#fff}
@@ -108,7 +110,7 @@ const dnt=k=>cv5n(dnS[k]);
 function dnScreen(){const N=g.dnach||{};const row=(ic,k,a)=>`<button type="button" class="dnr" ${a}>${dhi(ic)}<span><b>${i(dnt(k))}</b><small>${i(dnt(k+'s'))}</small></span>${dhi('chev','sm')}</button>`;
  return`<div class="screen dnw"><div class="sub-hdr"><button class="iconbtn" data-act="dnback" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(dnt('t'))}</h2></div><span></span></div>
  <p class="dnin">${i(dnt('intro'))}</p>
- <div class="dhcard dnl">${row('fld','l1','data-act="dccat" data-v="law"')}${row('bank','l2','data-act="go" data-to="assets"')}${row('id','l3','data-act="go" data-to="dossier"')}${row('chk','l4','data-act="go" data-to="people"')}${row('layers','l5','data-act="b3pack"')}</div>
+ <div class="dhcard dnl">${row('fld','l1','data-act="dccat" data-v="law"')}${row('bank','l2','data-act="go" data-to="assets"')}${row('chk','l4','data-act="go" data-to="people"')}${row('layers','l5','data-act="b3pack"')}</div>
  <h3 class="dnh">${i(dnt('ins'))}</h3><textarea class="field dnta" rows="8" placeholder="${i(dnt('insPh'))}" data-dnin>${i(N.txt||'')}</textarea><small class="dnst" data-dnst></small>
  <p class="dnnote">${i(dnt('note'))}</p></div>`}
 ['dnach'].forEach(r=>{Te.includes(r)||Te.push(r)});

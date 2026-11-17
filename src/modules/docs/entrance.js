@@ -122,7 +122,6 @@ const EN_I={doc:'<path d="M14 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h
  crown:'<path d="M4 17h16l1-9-5 4-4-6-4 6-5-4z"/><path d="M4 20h16"/>',fleur:'<path d="M12 4c-2 3-2 6 0 9 2-3 2-6 0-9zM12 13c-3-2-6-2-8 0 2 2 5 2 8 0zm0 0c3-2 6-2 8 0-2 2-5 2-8 0zM12 13v7"/>'};
 const eni=(n,c)=>`<svg class="en-i${c?' '+c:''}" viewBox="0 0 24 24" aria-hidden="true">${EN_I[n]||''}</svg>`;
 function enBlock(t){return`<div class="en-w">
- <button type="button" class="en-gear" data-act="enpick" aria-label="${i(entx('gear'))}">${eni('gear')}</button>
  <div class="en-sign"><svg class="en-arc" viewBox="0 0 300 40" aria-hidden="true"><defs>${enMetal('enAr',t.metal,0,0,1,0)}</defs><path d="M10 38Q150 -8 290 38" fill="none" stroke="url(#enAr)" stroke-width="2"/><circle cx="150" cy="15.5" r="2" fill="url(#enAr)"/></svg>
   <b>The Silentium’s</b><span><i></i>BUTLER<i></i></span><em>DOCS</em></div>
  <div class="en-clock" role="img" aria-label="${i(entx('hint'))}" title="${i(entx('hint'))}">${enClock(t)}</div>
@@ -136,7 +135,10 @@ function enMount(){try{const lg=document.querySelector('.login');if(!lg||m.logge
  lg.classList.add('enL');lg.dataset.en=t.id;lg.classList.toggle('enDark',!!t.dark);lg.classList.toggle('enRound',!!t.round);lg.classList.toggle('enAmber',t.btn==='amber');lg.setAttribute('style',enVars(t));
  let bg=lg.querySelector(':scope>.en-bg');if(!bg||bg.dataset.t!==t.id){bg&&bg.remove();lg.insertAdjacentHTML('afterbegin',enBg(t));lg.firstElementChild.dataset.t=t.id}
  const w=lg.querySelector('.en-w');if(!w||w.dataset.t!==t.id){w&&w.remove();const mid=lg.querySelector('.lg9mid')||lg.querySelector('.pwform')||lg.firstElementChild;mid.insertAdjacentHTML('beforebegin',enBlock(t));lg.querySelector('.en-w').dataset.t=t.id}
- lg.querySelector('.en-orn')||lg.querySelector('.lg9lang')?.insertAdjacentHTML('afterend',enTail(t));
+ /* ⚙ sits next to the language button at the bottom (up top it touched the golden arc on the iPhone) */
+ const lang=lg.querySelector('.lg9lang');let row=null;if(lang){row=lang.parentElement&&lang.parentElement.classList.contains('en-lrow')?lang.parentElement:null;if(!row){row=document.createElement('div');row.className='en-lrow';lang.before(row);row.appendChild(lang)}
+  if(!row.querySelector('.en-gear'))row.insertAdjacentHTML('beforeend',`<button type="button" class="en-gear" data-act="enpick" aria-label="${i(entx('gear'))}">${eni('gear')}</button>`)}
+ lg.querySelector('.en-orn')||row?.insertAdjacentHTML('afterend',enTail(t));
  document.documentElement.classList.add('enOn')}catch(e){Hooks.err('enmount',e)}}
 function enUnmount(){if(!document.querySelector('.login'))document.documentElement.classList.remove('enOn')}
 Hooks.on('render',()=>{enMount();enUnmount()});
@@ -163,7 +165,8 @@ html.enOn,html.enOn body{background:${'transparent'}!important}
 .login.enL{position:relative;z-index:1;background:none!important;color:var(--en-ink);min-height:100dvh;display:flex!important;flex-direction:column;align-items:center;justify-content:flex-start;gap:0;padding:calc(env(safe-area-inset-top) + 8px) 24px calc(env(safe-area-inset-bottom) + 14px)!important;box-sizing:border-box;overflow:hidden}
 .login.enL>.lg9glow,.login.enL>.br9ltop,.login.enL>.hl9,.login.enL .hl9-login,.login.enL .br9clk,.login.enL .br9qc{display:none!important}
 .en-w{width:100%;display:flex;flex-direction:column;align-items:center;position:relative}
-.en-gear{position:absolute;right:-6px;top:6px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;padding:0;cursor:pointer;background:var(--en-ic);color:var(--en-ink);border:1.5px solid var(--en-m3);box-shadow:0 3px 10px rgba(0,0,0,.12);z-index:2}
+.en-lrow{display:flex;align-items:center;justify-content:center;gap:10px}
+.en-gear{position:relative;flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;padding:0;cursor:pointer;background:var(--en-ic);color:var(--en-ink);border:1.5px solid var(--en-m3);box-shadow:0 3px 10px rgba(0,0,0,.12);z-index:2}
 .en-i{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .en-sign{display:flex;flex-direction:column;align-items:center;margin-top:48px;position:relative;width:100%}
 .en-arc{position:absolute;top:-34px;width:min(78vw,300px);height:40px}

@@ -326,7 +326,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>{const q=document.querySelector('.screen input');q.value='SECRET';q.dispatchEvent(new Event('input',{bubbles:true}))});await p.waitForTimeout(500);check('search never shows secret numbers',await T(()=>!/SECRET-99/.test(document.getElementById('sres')?.innerText||'')));
  const a=await T(()=>{const f=window.__T.bsv.ask;return[f('Aktenzeichen?'),f('Kundennummer?'),f('телефон Finanzamt'),f('напомни завтра позвонить в Finanzamt')].map(r=>r&&r.msg)});
  check('Butler AI answers «Aktenzeichen?»',/AZ-77\/26/.test(a[0]||''),a[0]);check('…never says a secret number',!!a[1]&&!/SECRET-99/.test(a[1]),a[1]);check('…knows the phone of an office',/492/.test(a[2]||''),a[2]);check('…leaves «напомни …» to the tasks',!/492/.test(a[3]||''),a[3]);
- await T(()=>window.__T.R('dnach'));await p.waitForTimeout(400);check('Nachlass links to the offices',await T(()=>!!document.querySelector('.dnr[data-to=bsv]')));
+ await T(()=>window.__T.R('dnach'));await p.waitForTimeout(400);check('Nachlass has no «Persönliche Akte» and no «Behörden & Dienste» rows',await T(()=>!document.querySelector('.dnr[data-to=bsv]')&&!document.querySelector('.dnr[data-to=dossier]')));
  await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>!/^bsfx/.test(d.id));W.save();W.R('home')});await p.waitForTimeout(300)}
  /* Behörden stage 3 (docs/behoerden-briefe.js): scanned letter → deadline, German letters, Anträge, journal */
  where='behoerden 3';{const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||400)};

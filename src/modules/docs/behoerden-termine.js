@@ -142,7 +142,6 @@ Hooks.on('screen',h=>{try{if(typeof h!=='string')return h;
   const rows=F.slice(0,2).map(f=>`<button type="button" class="odr ${f.n<0?'r':'y'}" data-act="go" data-to="bsv"><i></i><span><b>${i(f.t)}</b><small>${i(bsvOfName(f.src))} · ${i(f.n<0?bsvt2('past'):bsvWhen(f.k))}</small></span>${dhi('chev','sm')}</button>`).join('')+U2.map(bsvTRow).join('');
   const card=`<div class="dhcard bsvhome bsvhm2"><b class="dhqh">${i(bsvt2('home'))}</b><div class="odl">${rows}</div></div>`;
   h=h.includes('class="dhcard bsvhome"')?h.replace('<div class="dhcard bsvhome">',card+'<div class="dhcard bsvhome">'):h.replace('<button type="button" class="dhcard dhai"',card+'<button type="button" class="dhcard dhai"')}}
- if(m.route==='dnach')h=h.replace('<button type="button" class="dnr" data-act="b3pack"',`<button type="button" class="dnr" data-act="go" data-to="bsv">${dhi('gov')}<span><b>${i(bsvt2('nach'))}</b><small>${i(bsvt2('nachS'))}</small></span>${dhi('chev','sm')}</button><button type="button" class="dnr" data-act="b3pack"`);
  return h}catch(e){Hooks.err('bsv2screen',e);return h}});
 ['bsvtf','bsvtv'].forEach(r=>{OD_OK.add(r);Te.includes(r)||Te.push(r)});
 (Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='bsvtf'){if(!bsvTd)return setTimeout(()=>R('bsv'),0),'<div class="screen"></div>';return bsvTForm()}

@@ -125,7 +125,7 @@ Hooks.css('docs-finanzen',`
 .fzth img{width:34px;height:34px;object-fit:cover;border-radius:8px;display:block}
 .fzph{display:flex!important;align-items:center;justify-content:center;gap:8px;margin-top:12px;cursor:pointer;color:#1d1a10!important}
 .fzplain{display:block;width:100%;border:0;background:none;padding:12px;color:var(--green)!important;font-weight:600}
-.fzpdf{display:block;width:100%;border:2px dashed var(--green);background:none;border-radius:16px;padding:14px;margin-top:6px;font-weight:700;font-size:15.5px;color:var(--green)!important}
+.fzpdf{display:block;width:100%;text-align:center;border:2px dashed var(--green);background:none;border-radius:16px;padding:14px;margin-top:6px;font-weight:700;font-size:15.5px;color:var(--green)!important}
 .fzallb{border:0;background:none;color:var(--green)!important;font-weight:600;font-size:15px;padding:2px 2px 8px}
 .fzch{margin:4px 2px 10px;font-size:18px}.fztip{background:#eef5ee;border-radius:14px;padding:11px 13px;font-size:13.5px;line-height:1.45;margin-bottom:10px}.fztip b{color:var(--green)}.fztip small{display:block;color:var(--muted);font-size:12px;margin-top:4px}
 .fzsh .bsvchips button{font-size:13px}.fzbig{width:100%;max-height:34vh;object-fit:contain;border-radius:12px;background:var(--surface)}.fzsh .bsvdel.on{background:#fdecea;border-radius:14px}

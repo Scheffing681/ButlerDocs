@@ -49,3 +49,4 @@ docs/behoerden-termine.js
 docs/behoerden-briefe.js
 docs/finanzen.js
 docs/layout-docs.js
+docs/finanzen2.js

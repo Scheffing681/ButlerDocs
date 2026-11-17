@@ -157,7 +157,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  for(const r of ['archive','ins','mycal','tasks','fnacc','life','dnach','assets','people','letters','dossier','profile','search','concierge'])check('screen '+r+' stays open',(await go(r))===r);
  const ks=await T(()=>window.__T.x());check('no Butler-only sections in lists',!ks.some(k=>/^(c:(health|sport|wd|rest|travel|books|work|notes|bank|family)|q:(routine|report|fin|stats|goals|edu|body))$/.test(k)),ks.join(','));
  await go('home');check('the tab is called Butler Docs',await T(()=>document.title)==='Butler Docs');check('weather no longer opens the wardrobe',await T(()=>!document.querySelector('[data-to=wd]')));
- check('nav says Задачи (in place of Прогресс)',await T(()=>/Задачи/.test(document.querySelector('nav.nav [data-od]')?.innerText||'')&&document.querySelector('nav.nav [data-od]').dataset.k==='tasks'));
+ check('nav says Задачи (in place of Прогресс)',await T(()=>/Задачи/.test(document.querySelector('nav.nav [data-k=tasks]')?.innerText||'')&&!document.querySelector('nav.nav [data-k=stats]')));
  await go('search');await T(()=>{const q=document.querySelector('.screen input');q.value='гардероб';q.dispatchEvent(new Event('input',{bubbles:true}))});await p.waitForTimeout(600);
  check('search does not offer closed sections',await T(()=>![...document.querySelectorAll('#sres button')].some(b=>getComputedStyle(b).display!=='none'&&b.offsetParent)),await T(()=>document.getElementById('sres')?.innerText));
  await go('home');
@@ -293,7 +293,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
   await T(()=>window.__T.vault.vClearCode());await p.waitForTimeout(300);check('removing the vault code gives it back readable',await T(id=>window.__T.bsv.D().items.find(x=>x.id===id).nums[0].v==='A123456789',mid))}
  /* delete */
  await T(id=>window.__T.L.bsvopen({id}),'oldfa');await p.waitForTimeout(300);await clk('[data-act=bsvdel]',200);check('delete asks once more',await T(()=>!!document.querySelector('.bsvdel.on')));await clk('[data-act=bsvdel]',400);check('…and then deletes',await rt()==='bsv'&&await T(()=>!window.__T.bsv.D().items.some(x=>x.id==='oldfa')));
- await clk('nav.nav [data-od]',400);check('bottom bar «Задачи» opens tasks',await rt()==='tasks');await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>d.id!=='bsl0');W.save();W.R('home')})}
+ await clk('nav.nav [data-k=tasks]',400);check('bottom bar «Задачи» opens tasks',await rt()==='tasks');await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>d.id!=='bsl0');W.save();W.R('home')})}
  /* Behörden stage 2 (docs/behoerden-termine.js): Frist → Termin, Termin-Mappe, yearly duties, search, Butler AI, Nachlass */
  where='behoerden 2';{const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||400)};
  const iso=n=>{const d=new Date();d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)};
@@ -396,6 +396,16 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>{navigator.canShare=()=>true;navigator.share=async o=>{window.__fzsh=o.files[0].name+'|'+o.files[0].type+'|'+o.files[0].size}});await T(()=>window.__T.fz.pdf());await p.waitForTimeout(1200);
  check('the year\'s PDF goes to the phone\'s share menu',await T(y=>new RegExp('Steuererklärung '+(+y-1)+'\\.pdf\\|application/pdf\\|\\d{4,}').test(window.__fzsh||''),y0),await T(()=>window.__fzsh));
  await T(()=>{const W=window.__T;W.g().fin.accounts=W.g().fin.accounts.filter(a=>!/^fzacc/.test(a.id));W.bsv.D().items=W.bsv.D().items.filter(x=>x.n!=='Sparkasse ТЕСТ');W.save();W.R('home')});await p.waitForTimeout(300)}
+ /* Butler Docs: «Anordnung und Farbe» for Docs (docs/layout-docs.js) */
+ where='layout docs';{const rt=()=>T(()=>window.__T.m().route);await T(()=>{const W=window.__T,g=W.g();g.dhOff=0;g.nav6=['home','search','stats','notes'];delete g.dhOrd;delete g.dhHid;delete g.dhBlk;W.save();W.R('ly6')});await p.waitForTimeout(600);
+ check('the bar keeps only Docs places (Прогресс → Задачи, old ones replaced)',await T(()=>JSON.stringify(window.__T.g().nav6))==='["home","search","tasks","profile"]',await T(()=>JSON.stringify(window.__T.g().nav6)));
+ check('no old quick access, no Butler sections, no «one screen»',await T(()=>{const t=document.querySelector('.screen.ly6').innerText;return!/Schnellzugriff|Быстрый доступ|Meine Bereiche|Мои разделы/.test(t)&&![...document.querySelectorAll('.ly7tg')].some(x=>x.offsetParent)}));
+ check('the pool offers only Docs places',await T(()=>[...document.querySelectorAll('.ly6pool [data-k]')].map(b=>b.dataset.k).join(','))==='home,search,tasks,mycal,archive,letters,bsv,fzm,dsafe,sc9,profile');
+ await T(()=>{const L=window.__T.L;L.ly6sel({i:3});L.ly6put({k:'bsv'})});await p.waitForTimeout(300);await T(()=>window.__T.R('home'));await p.waitForTimeout(400);
+ check('«Behörden» can be put into the bottom bar and opens',await T(()=>!!document.querySelector('nav.nav [data-k=bsv]'))&&await T(()=>{document.querySelector('nav.nav [data-k=bsv]').click();return 1})&&(await p.waitForTimeout(300),await rt())==='bsv');
+ await T(()=>{const L=window.__T.L;L.lydhide({k:'life'});L.lydmv({k:'fin',d:'-1'});window.__T.g().dhBlk={quick:1};window.__T.R('home')});await p.waitForTimeout(400);
+ check('home follows: tile hidden, order changed, block off',await T(()=>{const k=[...document.querySelectorAll('.dhgrid .dht')].map(b=>b.innerText.split('\n')[0]);return!document.querySelector('.dhgrid .dht[data-to=life]')&&k.indexOf(window.__T.g().lang==='ru'?'Финансы':'Finanzen')<k.findIndex(t=>/Ведомства|Behörden/.test(t))&&!document.querySelector('.dhq')}));
+ await T(()=>window.__T.L.lydreset());await p.waitForTimeout(300);check('reset brings everything back',await T(()=>{const g=window.__T.g();return JSON.stringify(g.nav6)==='["home","search","tasks","profile"]'&&!g.dhOrd&&!g.dhHid&&!g.dhBlk}));await T(()=>window.__T.R('home'))}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

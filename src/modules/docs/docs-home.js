@@ -48,21 +48,24 @@ function dhWx(){try{const r=typeof bd8wx==='function'?bd8wx():null;if(!r)return'
  return`<button type="button" class="dhwx" data-act="go" data-to="wd"><span class="dhsun">${w.e||w.ic||'⛅'}</span><b>${t!=null?Math.round(t)+' °C':'—'}</b><small>${i(nm)}</small></button>`}catch{return''}}
 function dhToday(){let L=[];try{L=typeof bd8today==='function'?bd8today().filter(x=>!x.done).slice(0,4):[]}catch{}
  return`<div class="dhcard dhtd"><div class="dhhd"><b>${i(dht('today'))}</b><button type="button" data-act="go" data-to="ax5now">${i(dht('all'))} ${dhi('chev','sm')}</button></div>${L.length?L.map(x=>`<div class="dhrow">${dhi(x.ev?'cal':/versich|polic|страх|insur/i.test(x.t)?'umb':'clock')}<span class="tm">${i(x.tm||'')}</span><span class="tx">${i(x.t)}</span></div>`).join(''):`<p class="dhnone">${i(dht('none'))}</p>`}</div>`}
+/* the user's own order and choice of tiles and blocks («Anordnung und Farbe» → Startseite) */
+const dhTiles=()=>{const ord=Array.isArray(g.dhOrd)?g.dhOrd:[],hid=Array.isArray(g.dhHid)?g.dhHid:[];const A=DH_T.slice().sort((a,b)=>{const x1=ord.indexOf(a[0]),x2=ord.indexOf(b[0]);return(x1<0?99+DH_T.indexOf(a):x1)-(x2<0?99+DH_T.indexOf(b):x2)});return A.filter(t=>!hid.includes(t[0]))};
+const dhOff=k=>{try{return!!(g.dhBlk&&g.dhBlk[k])}catch{return!1}};
 function dhHome(){const d=new Date();let ds='';try{ds=d.toLocaleDateString(he(),{weekday:'short',day:'numeric',month:'long'})}catch{}
  return`<div class="screen dhome">
  <div class="dhtop"><button type="button" class="dhrb" data-act="go" data-to="bd9all" aria-label="menu">${dhi('grid')}</button>
   <div class="dhlogo"><span class="t1">The Silentium’s</span><span class="t2">BUTLER</span><span class="t3">DOCS</span></div>
   <div class="dhtr"><button type="button" class="dhib" data-act="go" data-to="reminders" aria-label="bell">${dhi('bell')}</button><button type="button" class="dhrb" data-act="go" data-to="style" aria-label="design">${dhi('leaf')}</button></div></div>
- <div class="dhgr"><div><h1>${dhGreet()}</h1><p>${i(ds)}</p></div>${dhWx()}</div>
- <div class="dhgrid">${DH_T.map(([k,ic,a])=>`<button type="button" class="dht" ${a}>${dhi(ic,'big')}<b>${i(dht(k))}</b><small>${i(dht(k+'S'))}</small></button>`).join('')}</div>
- <button type="button" class="dhcard dhai" data-act="go" data-to="concierge"><span class="inf"><svg viewBox="0 0 64 32" aria-hidden="true"><defs><linearGradient id="dhrg" x1="0" x2="1"><stop offset="0" stop-color="#22c3ee"/><stop offset=".3" stop-color="#3ddc84"/><stop offset=".55" stop-color="#f7d63b"/><stop offset=".8" stop-color="#ff6a3d"/><stop offset="1" stop-color="#e040fb"/></linearGradient></defs><path d="M32 16c-5-7-9.5-10-14-10a10 10 0 0 0 0 20c4.5 0 9-3 14-10s9.5-10 14-10a10 10 0 0 1 0 20c-4.5 0-9-3-14-10z" fill="none" stroke="url(#dhrg)" stroke-width="5"/></svg></span><span class="tx"><b>${i(dht('ai'))}</b><small>${i(dht('aiS'))}</small></span>${dhi('chev')}</button>
- ${dhToday()}
- <div class="dhcard dhq"><b class="dhqh">${i(dht('quick'))}</b><div class="dhqr">
+ <div class="dhgr"><div><h1>${dhGreet()}</h1><p>${i(ds)}</p></div>${dhOff('wx')?'':dhWx()}</div>
+ <div class="dhgrid">${dhTiles().map(([k,ic,a])=>`<button type="button" class="dht" ${a}>${dhi(ic,'big')}<b>${i(dht(k))}</b><small>${i(dht(k+'S'))}</small></button>`).join('')}</div>
+ ${dhOff('ai')?'':`<button type="button" class="dhcard dhai" data-act="go" data-to="concierge"><span class="inf"><svg viewBox="0 0 64 32" aria-hidden="true"><defs><linearGradient id="dhrg" x1="0" x2="1"><stop offset="0" stop-color="#22c3ee"/><stop offset=".3" stop-color="#3ddc84"/><stop offset=".55" stop-color="#f7d63b"/><stop offset=".8" stop-color="#ff6a3d"/><stop offset="1" stop-color="#e040fb"/></linearGradient></defs><path d="M32 16c-5-7-9.5-10-14-10a10 10 0 0 0 0 20c4.5 0 9-3 14-10s9.5-10 14-10a10 10 0 0 1 0 20c-4.5 0-9-3-14-10z" fill="none" stroke="url(#dhrg)" stroke-width="5"/></svg></span><span class="tx"><b>${i(dht('ai'))}</b><small>${i(dht('aiS'))}</small></span>${dhi('chev')}</button>`}
+ ${dhOff('today')?'':dhToday()}
+ ${dhOff('quick')?'':`<div class="dhcard dhq"><b class="dhqh">${i(dht('quick'))}</b><div class="dhqr">
   <button type="button" data-act="go" data-to="sc9">${dhi('scan')}<span>${i(dht('q_scan'))}</span></button>
   <button type="button" data-act="dcaddq">${dhi('add')}<span>${i(dht('q_add'))}</span></button>
   <button type="button" data-act="b3pack">${dhi('layers')}<span>${i(dht('q_pack'))}</span></button>
   <button type="button" data-act="remnew">${dhi('bell')}<span>${i(dht('q_rem'))}</span></button>
-  <button type="button" data-act="go" data-to="letters">${dhi('mail')}<span>${i(dht('q_mail'))}</span></button></div></div>
+  <button type="button" data-act="go" data-to="letters">${dhi('mail')}<span>${i(dht('q_mail'))}</span></button></div></div>`}
  </div>`}
 (Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='home'&&!g.dhOff)return dhHome()}catch(e){Hooks.err('dhhome',e)}});
 Hooks.act('dhbank',()=>{try{R('cat','bank')}catch{}});

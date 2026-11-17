@@ -35,15 +35,17 @@ const ly6t=(k,o)=>{let s=cv5n(ly6S[k]||[k]);if(o)for(const p in o)s=s.split('%'+
 const ly6DEF=['home','search','stats','profile'];
 const ly6POOL=['home','search','mycal','stats','profile','tasks','notes','fin','letters','archive','people','goals','routine','report','st20','ax5now'];
 const ly6IC={home:'main',search:'search',mycal:'calendar',stats:'stats',profile:'profile',tasks:'tasks',notes:'docs',fin:'finance',letters:'mail',archive:'files',people:'contacts',goals:'goals',routine:'routine',report:'bell',ax5now:'star'};
+/* other modules (Butler Docs) can add places for the bottom bar: ly6EXT[key]={lab:()=>text, ic:()=>svg, open:()=>void} */
+const ly6EXT={};
 const ly6slots=()=>{const a=Array.isArray(g.nav6)&&g.nav6.length===4?g.nav6:ly6DEF;return a.map(k=>ly6POOL.includes(k)?k:'home')};
-function ly6lab(k){try{if(k==='home')return K('n_start');if(k==='search')return K('n_search');if(k==='stats')return ee('progress');if(k==='profile')return K('n_prof');if(k==='mycal')return cvt('title');if(k==='notes'){const c=nt('notes');return c?yt(c):ua('title')}if(k==='st20')return za('t').replace(/^⚡\s*/,'');if(k==='ax5now')return ax5t('now');if(k==='report')return Yn('report');return Yn(k)}catch{return k}}
-const ly6ic=k=>k==='st20'?_('plus'):($r(ly6IC[k]||'star','n')||_('star'));
+function ly6lab(k){try{if(ly6EXT[k])return ly6EXT[k].lab();if(k==='home')return K('n_start');if(k==='search')return K('n_search');if(k==='stats')return ee('progress');if(k==='profile')return K('n_prof');if(k==='mycal')return cvt('title');if(k==='notes'){const c=nt('notes');return c?yt(c):ua('title')}if(k==='st20')return za('t').replace(/^⚡\s*/,'');if(k==='ax5now')return ax5t('now');if(k==='report')return Yn('report');return Yn(k)}catch{return k}}
+const ly6ic=k=>ly6EXT[k]?ly6EXT[k].ic():k==='st20'?_('plus'):($r(ly6IC[k]||'star','n')||_('star'));
 function ly6cur(){const r=m.route,S=ly6slots();if(r==='cat'&&m.cat==='notes'&&S.includes('notes'))return'notes';if(S.includes(r))return r;if(r==='cat'||r==='mycal'||Te.includes(r))return'home';return r}
 j0=function(){const S=ly6slots(),c=ly6cur(),b=k=>`<button data-act="ly6go" data-k="${k}" data-to="${k}" class="${c===k?'on':''}" ${c===k?'aria-current="page"':''}>${ly6ic(k)}<span>${i(ly6lab(k))}</span></button>`;
  return`<nav class="nav">${b(S[0])}${b(S[1])}
    <button class="mic" data-act="navmic" aria-label="${K('n_conc')}">${_('mic')}<span>${K('n_conc')}</span></button>
    ${b(S[2])}${b(S[3])}</nav>`};
-function ly6open(k){if(k==='home')return R('home');if(k==='search')return R('search');if(k==='notes')return R('cat','notes');if(k==='st20')return L.st20();if(k==='mycal')return R('mycal');R(k)}
+function ly6open(k){if(ly6EXT[k]&&ly6EXT[k].open)return ly6EXT[k].open();if(k==='home')return R('home');if(k==='search')return R('search');if(k==='notes')return R('cat','notes');if(k==='st20')return L.st20();if(k==='mycal')return R('mycal');R(k)}
 /* usage counter for the tip */
 R=(f=>function(e,a){try{if(m.logged){g.ly6c=g.ly6c||{};const k=e==='cat'?(a==='notes'?'notes':null):e;if(k&&ly6POOL.includes(k))g.ly6c[k]=(g.ly6c[k]||0)+1}}catch{}return f.apply(this,arguments)})(R);
 function ly6tip(){const c=g.ly6c||{},S=ly6slots(),dis=g.dismiss||{};const lo2=S.filter(k=>k!=='home').map(k=>[k,c[k]||0]).sort((a,b)=>a[1]-b[1])[0];const hi=ly6POOL.filter(k=>!S.includes(k)&&k!=='st20').map(k=>[k,c[k]||0]).sort((a,b)=>b[1]-a[1])[0];

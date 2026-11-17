@@ -272,9 +272,11 @@ function bsvPickLetter(){let D=[];try{D=Ke().items.filter(d=>!d.type).slice().so
  if(m.route==='bsve'){if(!bsvEd)bsvEd=bsvNew();return bsvForm()}}catch(e){Hooks.err('bsvscreen',e)}});
 /* the tile on home (instead of «Aufgaben») and entries «Auf die Startseite» */
 try{DH_I.gov=BSV_IC;dhS.bsv=bsvS.t;dhS.bsvS=bsvS.tS;const ix=DH_T.findIndex(t=>t[0]==='task');if(ix>=0)DH_T[ix]=['bsv','gov','data-act="go" data-to="bsv"']}catch(e){Hooks.err('bsvtile',e)}
-Hooks.on('screen',h=>{try{if(typeof h!=='string'||m.route!=='home'||g.dhOff)return h;const H2=bsvD().items.filter(x=>x.home);if(!H2.length)return h;
+/* a block goes onto home before the Butler AI card, or before «Heute», or at the end (the user can hide those) */
+const bsvHomeIns=(h,blk)=>{for(const a2 of ['<button type="button" class="dhcard dhai"','<div class="dhcard dhtd">','<div class="dhcard dhq">'])if(h.includes(a2))return h.replace(a2,blk+a2);const k=h.lastIndexOf('</div>');return k>0?h.slice(0,k)+blk+h.slice(k):h+blk};
+Hooks.on('screen',h=>{try{if(typeof h!=='string'||m.route!=='home'||g.dhOff||(g.dhBlk&&g.dhBlk.bsv))return h;const H2=bsvD().items.filter(x=>x.home);if(!H2.length)return h;
  const blk=`<div class="dhcard bsvhome"><b class="dhqh">${i(bsvt('t'))}</b><div class="bsvhr">${H2.map(x=>`<button type="button" data-act="bsvopen" data-id="${i(x.id)}"><span>${i(x.e||'🏛️')}</span><small>${i(x.n)}</small></button>`).join('')}</div></div>`;
- return h.replace('<button type="button" class="dhcard dhai"',blk+'<button type="button" class="dhcard dhai"')}catch(e){Hooks.err('bsvhome',e);return h}});
+ return bsvHomeIns(h,blk)}catch(e){Hooks.err('bsvhome',e);return h}});
 
 /* --- actions --- */
 Hooks.act('bsvback',()=>{bsvDel=0;if(m.route==='bsve'){const id=bsvEd&&bsvEd.id;bsvEd=null;if(id&&bsvGet(id)){bsvSel=id;return bsvGo('bsvi')}return bsvGo('bsv')}if(m.route==='bsvi')return bsvGo('bsv');bsvOrd=0;R('home',void 0,!0)});

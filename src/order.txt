@@ -47,3 +47,4 @@ docs/steady-screen.js
 docs/behoerden.js
 docs/behoerden-termine.js
 docs/behoerden-briefe.js
+docs/finanzen.js

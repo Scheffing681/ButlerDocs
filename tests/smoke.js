@@ -13,7 +13,7 @@ const copy=(s,d)=>{for(const n of fs.readdirSync(s)){if(n==='.git'||n==='tests')
 copy(ROOT,TMP);
 {const f=path.join(TMP,'app.js');let s=fs.readFileSync(f,'utf8');const end='v(),Sq()})();',i=s.trimEnd().lastIndexOf(end);
  if(i<0)throw new Error('app.js end marker not found');
- s=s.slice(0,i)+'try{window.__ndSame=c=>bsvSame(c);window.__ndMerge=(a,b)=>bsvMerge(a,b);window.__T={vault:odV,fz:{D:()=>fzD(),banks:()=>fzBanks(),guess:t=>fzGuess(t),cents:v=>fzCents(v),pdf:()=>fzPdf()},bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1),parse:t=>bsvParse(t),letter:t=>bsvLetterData(t),call:o=>{bsvCallP=o;bsvAfterCall()}},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
+ s=s.slice(0,i)+'try{window.__rlA=o=>rlAnalyze(o);window.__rlOpen=(t,n)=>rlOpen(t,n);window.__ndSame=c=>bsvSame(c);window.__ndMerge=(a,b)=>bsvMerge(a,b);window.__T={vault:odV,fz:{D:()=>fzD(),banks:()=>fzBanks(),guess:t=>fzGuess(t),cents:v=>fzCents(v),pdf:()=>fzPdf()},bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1),parse:t=>bsvParse(t),letter:t=>bsvLetterData(t),call:o=>{bsvCallP=o;bsvAfterCall()}},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
 const MIME={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webmanifest':'application/manifest+json','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
 const srv=http.createServer((q,r)=>{const u=decodeURIComponent(q.url.split('?')[0]);const f=path.join(TMP,u==='/'?'index.html':u);if(!f.startsWith(TMP)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);return r.end()}r.writeHead(200,{'content-type':MIME[path.extname(f)]||'application/octet-stream'});fs.createReadStream(f).pipe(r)});
 
@@ -463,6 +463,23 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>{const W=window.__T,G=W.g();delete G.bkrHide;G.bkLast=Date.now()-3*864e5;W.save();W.R('home')});await p.waitForTimeout(400);check('a fresh backup shows no reminder',await T(()=>!document.querySelector('.bkrcard')));
  await T(()=>{const W=window.__T,G=W.g();delete G.bkLast;W.save();W.R('home')});await p.waitForTimeout(400);check('no backup at all, documents older than 2 days → reminder',await T(()=>!!document.querySelector('.bkrcard')));
  await T(()=>{const W=window.__T,G=W.g();G.bkLast=Date.now();W.Ke().items=W.Ke().items.filter(d=>d.id!=='bkd1');W.save();W.R('home')});await p.waitForTimeout(300)}
+ /* v28: reliability — check a backup, readable update bar, one error report */
+ where='reliability';{await T(()=>{window.__T.R('profile')});await p.waitForTimeout(600);
+ check('«Sicherung prüfen» sits next to «Sicherung erstellen»',await T(()=>!!document.querySelector('.st53 [data-act=rlcheck]')));
+ const ra=await T(()=>{const G=JSON.parse(JSON.stringify(window.__T.g()));G.v=1;G.arc={items:[{id:'r1',title:'Pass',pages:[{id:'p1'},{id:'p2'}],files:[]},{id:'r2',type:'ins',co:'X'}]};G._ph={p1:'data:image/jpeg;base64,'+'A'.repeat(200)};G.bsv={items:[{},{}]};G.events=[{},{},{}];G.vault={enc:'xyz'};
+  const r=window.__rlA(G),ok=window.__rlA(Object.assign({},G,{_ph:{p1:G._ph.p1,p2:G._ph.p1}})),bad=window.__rlA({x:1});return [r.docs,r.ctr,r.ph,r.miss,r.bsv,r.ev,r.vault,ok.miss,bad.bad]});
+ check('a backup is counted: documents, contracts, photos, Behörden, Termine, Tresor',ra[0]===1&&ra[1]===1&&ra[2]===1&&ra[4]===2&&ra[5]===3&&ra[6]==='enc',JSON.stringify(ra));
+ check('…a missing photo is found, a complete one is fine, a foreign file is refused',ra[3]===1&&ra[7]===0&&ra[8]===1,JSON.stringify(ra));
+ await T(()=>{const G=JSON.parse(JSON.stringify(window.__T.g()));G.v=1;G._ph={};window.__rlOpen(JSON.stringify(G),'silentium-test.json')});await p.waitForTimeout(400);
+ check('the result says «nur geprüft» and changes nothing',await T(()=>!!document.querySelector('.dtsheet .rlres')&&/geprüft|проверено|checked/i.test(document.querySelector('.dtsheet').innerText)));await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));
+ await T(()=>window.__rlOpen('not json','x.json'));await p.waitForTimeout(300);check('a broken file is said plainly',await T(()=>!!document.querySelector('.dtsheet .rlres.bad')));await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));
+ check('only one «report» button in the profile',await T(()=>!document.querySelector('.screen .td9rep')&&!!document.querySelector('[data-act=st1rep]')));
+ await T(()=>document.querySelector('[data-act=st1rep]').click());await p.waitForTimeout(400);
+ check('the error report shows version, screen and backup — and opens the own mail, share or copy',await T(()=>{const s=document.querySelector('.dtsheet');return!!s&&/Butler Docs · \S+ \d+/.test(s.querySelector('.rlpre').innerText)&&!!s.querySelector('[data-rr=mail]')&&!!s.querySelector('[data-rr=share]')}));
+ await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));
+ const ub=await T(()=>{const d=document.createElement('div');d.className='upbar';d.innerHTML='<span><b>Neu</b><small>x</small></span>';document.body.appendChild(d);const c=getComputedStyle(d.querySelector('b')).color,r=d.getBoundingClientRect();d.remove();return [c,Math.round(r.bottom),innerHeight]});
+ check('the update bar text is readable (light on dark) and sits above the bottom bar',/255, 255, 255/.test(ub[0])&&ub[1]<ub[2]-80,JSON.stringify(ub));
+ await T(()=>window.__T.R('home'));await p.waitForTimeout(300)}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

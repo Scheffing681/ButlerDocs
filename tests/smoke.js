@@ -13,7 +13,7 @@ const copy=(s,d)=>{for(const n of fs.readdirSync(s)){if(n==='.git'||n==='tests')
 copy(ROOT,TMP);
 {const f=path.join(TMP,'app.js');let s=fs.readFileSync(f,'utf8');const end='v(),Sq()})();',i=s.trimEnd().lastIndexOf(end);
  if(i<0)throw new Error('app.js end marker not found');
- s=s.slice(0,i)+'try{window.__T={vault:odV,bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1)},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
+ s=s.slice(0,i)+'try{window.__T={vault:odV,bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1),parse:t=>bsvParse(t),call:o=>{bsvCallP=o;bsvAfterCall()}},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
 const MIME={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webmanifest':'application/manifest+json','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
 const srv=http.createServer((q,r)=>{const u=decodeURIComponent(q.url.split('?')[0]);const f=path.join(TMP,u==='/'?'index.html':u);if(!f.startsWith(TMP)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);return r.end()}r.writeHead(200,{'content-type':MIME[path.extname(f)]||'application/octet-stream'});fs.createReadStream(f).pipe(r)});
 
@@ -318,6 +318,48 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('Butler AI answers «Aktenzeichen?»',/AZ-77\/26/.test(a[0]||''),a[0]);check('…never says a secret number',!!a[1]&&!/SECRET-99/.test(a[1]),a[1]);check('…knows the phone of an office',/492/.test(a[2]||''),a[2]);check('…leaves «напомни …» to the tasks',!/492/.test(a[3]||''),a[3]);
  await T(()=>window.__T.R('dnach'));await p.waitForTimeout(400);check('Nachlass links to the offices',await T(()=>!!document.querySelector('.dnr[data-to=bsv]')));
  await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>!/^bsfx/.test(d.id));W.save();W.R('home')});await p.waitForTimeout(300)}
+ /* Behörden stage 3 (docs/behoerden-briefe.js): scanned letter → deadline, German letters, Anträge, journal */
+ where='behoerden 3';{const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||400)};
+ const P=await T(()=>{const f=window.__T.bsv.parse;return{
+  a:f('Finanzamt Aschaffenburg Steuernummer 204/123/45678 Aschaffenburg, 10.11.2026 Bescheid für 2025 über Einkommensteuer. Rechtsbehelfsbelehrung: Der Einspruch ist innerhalb eines Monats nach Bekanntgabe einzulegen.'),
+  b:f('Jobcenter Stadt Aschaffenburg Datum: 15.11.2026 Bescheid über Leistungen. Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden.'),
+  c:f('Stadt Aschaffenburg Bürgeramt Anhörung vom 02.11.2026. Sie können sich bis zum 05.12.2026 äußern. Mit freundlichen Grüßen'),
+  d:f('Rezept: 200 g Mehl, 2 Eier, eine Prise Salz, alles gut verrühren und backen.')}});
+ check('a scanned Bescheid: office, kind, date, Einspruch deadline (+4 days +1 month)',P.a&&P.a.src==='fa'&&P.a.kind==='Bescheid'&&P.a.date==='2026-11-10'&&P.a.frist==='2026-12-14'&&P.a.obj==='Einspruch',JSON.stringify(P.a));
+ check('Widerspruch, and a deadline on Saturday moves to Monday',P.b&&P.b.src==='jc'&&P.b.obj==='Widerspruch'&&P.b.frist==='2026-12-21',JSON.stringify(P.b));
+ check('«bis zum …» in the letter is taken as it stands',P.c&&P.c.kind==='Anhörung'&&P.c.dl==='2026-12-05'&&!P.c.frist,JSON.stringify(P.c));check('not every text is a letter',P.d===null,JSON.stringify(P.d));
+ await T(async()=>{const W=window.__T;await W.ao('dtext','bsl1',{t:'Finanzamt Aschaffenburg Aschaffenburg, 10.11.2026 Bescheid für 2025 über Einkommensteuer. Rechtsbehelfsbelehrung: Der Einspruch ist innerhalb eines Monats nach Bekanntgabe einzulegen.'});
+  W.Ke().items.push({id:'bsl1',title:'Steuerbescheid ТЕСТ',kind:'other',files:[],pages:[],ts:Date.now(),folder:'f1',dcat:'other'});const fa=W.bsv.D().items.find(z=>z.src==='fa');fa.nums=[{id:'q9',t:'Steuernummer',v:'204/123/45678',s:false,m:'78'}];W.save();W.m().bdid='bsl1';W.R('bdoc')});
+ await p.waitForTimeout(1200);await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));await p.waitForTimeout(400);
+ check('the scanned letter shows its office and deadline',await T(()=>{const b=document.querySelector('.bsvlb');return!!b&&/Finanzamt/.test(b.innerText)&&/14\.12\.2026/.test(b.innerText)}));
+ await clk('.bsvlb [data-act=bsvlcal]',700);const L1=await T(()=>{const W=window.__T,d=W.Ke().items.find(z=>z.id==='bsl1'),G=W.g();return{L:d.bsvL,ev:G.events.find(e=>e.id===d.bsvL.ev),tk:G.tasks.find(k=>k.id===d.bsvL.tk)}});
+ check('«Срок в календарь»: calendar + reminder a week before, tied to the office',!!L1.ev&&L1.ev.date==='2026-12-14'&&/Einspruch/.test(L1.ev.title)&&!!L1.tk&&L1.tk.due==='2026-12-07'&&!!L1.L.it,JSON.stringify(L1));
+ check('no «saved · open» bar after it',await T(()=>!document.querySelector('.bd8sv')));
+ await T(()=>window.__T.R('dsrok'));await p.waitForTimeout(400);check('«Сроки» show the Einspruch deadline',await T(()=>/Einspruch: Finanzamt/.test(document.querySelector('.screen').innerText)));
+ await T(()=>{window.__T.m().bdid='bsl1';window.__T.R('bdoc')});await p.waitForTimeout(900);await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));await p.waitForTimeout(300);
+ await clk('.bsvlb [data-act=bsvlobj]',700);const tx=await T(()=>document.querySelector('.bsvbrt')?.value||'');
+ check('«Einspruch» opens a German letter with sender, office, number and date',await rt()==='bsvbr'&&/Einspruch gegen den Bescheid vom 10\.11\.2026/.test(tx)&&/Steuernummer: 204\/123\/45678/.test(tx)&&/Sehr geehrte Damen und Herren/.test(tx)&&/Auhofstraße 13/.test(tx),tx.slice(0,300));
+ check('the letter is German only',!/[а-яё]/i.test(tx));
+ await T(()=>{const x=document.querySelector('[data-brf=trk]');x.value='RR 1234 5678 9DE';x.dispatchEvent(new Event('input',{bubbles:true}));const t=document.querySelector('.bsvbrt');t.value+='\nPS';t.dispatchEvent(new Event('input',{bubbles:true}))});await clk('[data-act=bsvbrsent]',600);
+ const S3=await T(()=>{const W=window.__T,G=W.g();return{log:W.bsv.D().log[0],dr:G.drafts[0]}});
+ check('«Отправлено» → journal with the Einschreiben number, and into «Письма»',S3.log&&S3.log.k==='sent'&&S3.log.trk==='RR 1234 5678 9DE'&&/Einspruch/.test(S3.dr.subj)&&/PS$/.test(S3.dr.text)&&await rt()==='bsvi',JSON.stringify(S3).slice(0,300));
+ check('the card lists the letter and the journal',await T(()=>/Steuerbescheid ТЕСТ/.test(document.querySelector('.screen').innerText)&&!!document.querySelector('[data-act=bsvtrack]')));
+ /* Anträge */
+ const fid=await T(()=>window.__T.bsv.D().items.find(z=>z.src==='fa').id);await T(id=>window.__T.L.bsvantadd({id}),fid);await p.waitForTimeout(400);
+ await T(()=>{document.querySelector('[data-af=t]').value='Antrag ТЕСТ';document.querySelector('[data-af=az]').value='AZ-1';document.querySelector('[data-asave]').click()});await p.waitForTimeout(400);
+ let an=await T(()=>{const W=window.__T,a=W.bsv.D().ant.find(z=>z.t==='Antrag ТЕСТ');return{a,tk:a&&W.g().tasks.find(k=>k.id===a.tk)}});
+ const d28=await T(()=>{const d=new Date();d.setDate(d.getDate()+28);return d.toISOString().slice(0,10)});
+ check('an Antrag gets «ask after 4 weeks»',!!an.a&&an.a.st===1&&!!an.tk&&an.tk.due===d28,JSON.stringify(an));
+ await T(id=>window.__T.L.bsvantnx({id}),an.a.id);await T(id=>window.__T.L.bsvantnx({id}),an.a.id);await p.waitForTimeout(300);
+ an=await T(id=>{const W=window.__T,a=W.bsv.D().ant.find(z=>z.id===id);return{a,tk:W.g().tasks.some(k=>k.bsvA===id)}},an.a.id);check('decision received closes the reminder',an.a.st===3&&!!an.a.d3&&!an.tk);
+ await T(id=>window.__T.L.bsvantask({id}),an.a.id);await p.waitForTimeout(400);check('«Спросить статус» = Sachstandsanfrage with the number',await rt()==='bsvbr'&&await T(()=>/Sachstandsanfrage – Antrag ТЕСТ/.test(document.querySelector('.bsvbrt').value)&&/Aktenzeichen: AZ-1/.test(document.querySelector('.bsvbrt').value)));
+ await T(()=>document.querySelector('.screen > .sub-hdr > button:first-child').click());await p.waitForTimeout(400);check('back from the letter',await rt()==='bsvi');
+ /* after a call */
+ await T(id=>window.__T.bsv.call({it:id,at:Date.now()-60000}),fid);await p.waitForTimeout(300);check('coming back after «Позвонить» asks who it was',await T(()=>!!document.querySelector('.dtsheet [data-lf=who]')));
+ await T(()=>{document.querySelector('[data-lf=who]').value='Frau Weber';document.querySelector('[data-lsave]').click()});await p.waitForTimeout(500);check('the call is in the journal',await T(()=>window.__T.bsv.D().log.some(l=>l.k==='call'&&l.who==='Frau Weber')));
+ await T(()=>{window.__T.m().bdid='bsl1';window.__T.R('bdoc')});await p.waitForTimeout(900);await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));await p.waitForTimeout(300);
+ await clk('.bsvlb [data-act=bsvlno]',300);check('× hides the letter banner for good',await T(()=>!document.querySelector('.bsvlb')&&window.__T.Ke().items.find(z=>z.id==='bsl1').bsvL.no===1));
+ await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>d.id!=='bsl1');W.save();W.R('home')});await p.waitForTimeout(300)}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

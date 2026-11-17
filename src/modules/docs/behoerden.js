@@ -24,7 +24,7 @@ const bsvS={
  b115:['115 — единый номер ведомств: подскажут, какое ведомство Вам нужно','115 – Behördennummer: sagt Ihnen, welches Amt zuständig ist','115 – the public-service number: tells you which office is in charge'],
  open:['Открыто до %t','Geöffnet bis %t','Open until %t'],closed:['Закрыто','Geschlossen','Closed'],opens:['откроется %d %t','öffnet %d %t','opens %d %t'],today:['сегодня','heute','today'],tom:['завтра','morgen','tomorrow'],
  dn:['Пн Вт Ср Чт Пт Сб Вс','Mo Di Mi Do Fr Sa So','Mon Tue Wed Thu Fri Sat Sun'],
- term:['Термин','Termin','Appointment'],call:['Позвонить','Anrufen','Call'],mail:['Написать','E-Mail','Email'],route:['Маршрут','Route','Route'],
+ term:['Термин','Termin','Appointment'],call:['Позвонить','Anrufen','Call'],mail:['E-mail','E-Mail','Email'],route:['Маршрут','Route','Route'],
  nums:['Мои номера','Meine Nummern','My numbers'],copy:['Копировать','Kopieren','Copy'],copied:['Скопировано','Kopiert','Copied'],show:['Показать','Zeigen','Show'],
  secret:['секретный — в сейфе','geheim – im Tresor','secret – in the vault'],secNo:['Номер скрыт. Поставьте код сейфа — тогда он будет зашифрован.','Die Nummer ist verdeckt. Mit einem Tresor-Code wird sie verschlüsselt.','The number is masked. With a vault code it is encrypted.'],
  addr:['Адрес','Adresse','Address'],hrs:['Часы работы','Öffnungszeiten','Opening hours'],note:['Заметка','Notiz','Note'],
@@ -143,7 +143,7 @@ let bsvSel=null,bsvEd=null,bsvOrd=0,bsvWho='',bsvDel=0;
 /* --- the list --- */
 function bsvRow(it){const st=it.hrs?bsvNow(it.hrs):null,sm=st?st.txt:[it.tel,it.addr].filter(Boolean)[0]||'';
  const mv=bsvOrd?`<span class="bsvmv"><button type="button" data-act="bsvmv" data-id="${i(it.id)}" data-d="-1" aria-label="up">${bsvi('up')}</button><button type="button" data-act="bsvmv" data-id="${i(it.id)}" data-d="1" aria-label="down">${bsvi('down')}</button></span>`
-  :it.tel?`<a class="bsvq" href="${i(bsvTel(it.tel))}" aria-label="${i(bsvt('call'))}">${bsvi('tel')}</a>`:dhi('chev','sm');
+  :it.tel?`<a class="bsvq" data-bsvcall="${i(it.id)}" href="${i(bsvTel(it.tel))}" aria-label="${i(bsvt('call'))}">${bsvi('tel')}</a>`:dhi('chev','sm');
  return`<div class="odr bsvrow"><button type="button" class="bsvhit" data-act="bsvopen" data-id="${i(it.id)}"><span class="bsvemo">${i(it.e||'🏛️')}</span><span><b>${i(it.n||'—')}${it.pin&&bsvOrd?' ★':''}</b>${sm?`<small class="${st?st.open?'on':'off':''}">${i(sm)}</small>`:''}</span></button>${mv}</div>`}
 function bsvList(){const o=bsvD(),A=o.items.filter(it=>!bsvWho||!(it.who||[]).length||(it.who||[]).includes(bsvWho));
  const pin=bsvOrd?[]:A.filter(x=>x.pin),rest=bsvOrd?A:A.filter(x=>!x.pin);
@@ -164,9 +164,11 @@ function bsvList(){const o=bsvD(),A=o.items.filter(it=>!bsvWho||!(it.who||[]).le
 /* --- one entry --- */
 function bsvCard(it){const st=it.hrs?bsvNow(it.hrs):null,acts=[];
  if(it.term&&bsvUrl(it.term))acts.push(`<a class="bsvact main" href="${i(bsvUrl(it.term))}" target="_blank" rel="noopener">${bsvi('cal')}<span>${i(bsvt('term'))}</span></a>`);
- if(it.tel)acts.push(`<a class="bsvact" href="${i(bsvTel(it.tel))}">${bsvi('tel')}<span>${i(bsvt('call'))}</span></a>`);
+ if(it.tel)acts.push(`<a class="bsvact" data-bsvcall="${i(it.id)}" href="${i(bsvTel(it.tel))}">${bsvi('tel')}<span>${i(bsvt('call'))}</span></a>`);
  if(it.mail)acts.push(`<a class="bsvact" href="mailto:${i(it.mail)}">${bsvi('mail')}<span>${i(bsvt('mail'))}</span></a>`);
  if(it.addr)acts.push(`<a class="bsvact" href="${i(bsvMap(it.addr))}" target="_blank" rel="noopener">${bsvi('map')}<span>${i(bsvt('route'))}</span></a>`);
+ /* «Письмо» (behoerden-briefe.js) — a letter to this office from a template */
+ acts.push(`<button type="button" class="bsvact" data-act="bsvbrnew" data-id="${i(it.id)}">${bsvi('mail')}<span>${i(cv5n(['Письмо','Brief','Letter']))}</span></button>`);
  const lk=(it.links||[]).map(l=>{const u=bsvUrl(l.u);return u?`<a class="bsvlink" href="${i(u)}" ${/^https?:/i.test(u)?'target="_blank" rel="noopener"':''}>${bsvi(/^tel:/.test(u)?'tel':/^mailto:/.test(u)?'mail':'link')}<span>${i(l.t||l.u)}</span></a>`:''}).join('');
  const nums=(it.nums||[]).map(n=>`<div class="bsvnum"><span><small>${i(n.t||bsvt('numV'))}${n.s?' · '+bsvi('lock','sm'):''}</small><b>${i(n.s?bsvMask(n):n.v||'')}</b></span>${n.s?`<button type="button" data-act="bsvshow" data-id="${i(it.id)}" data-n="${i(n.id)}">${i(bsvt('show'))}</button>`:`<button type="button" data-act="bsvcp" data-id="${i(it.id)}" data-n="${i(n.id)}">${bsvi('copy')}<span>${i(bsvt('copy'))}</span></button>`}</div>`).join('');
  return`<div class="screen dhome bsv bsvc">${bsvHdr(bsvt('t'),'bsvback',`<button type="button" class="iconbtn" data-act="bsvedit" data-id="${i(it.id)}" aria-label="${i(bsvt('edit'))}">${bsvi('edit')}</button>`)}

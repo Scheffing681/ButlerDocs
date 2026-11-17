@@ -2,7 +2,6 @@
    Ten designs drawn in code (marble, metal ribbons, amber, waves) after the owner's pictures.
    - the sign «The Silentium’s · BUTLER · DOCS»;
    - a living clock: real time, night sky with the moon (day: the sun), today’s moon phase in the arc above;
-   - four icons: Документ (quick put / add), Документы, Сейф, Копия — the last three sign in first, then open their place;
    - hold the clock for 3 seconds (a golden ring fills) or tap ⚙ → choose one of the ten designs. A short tap changes nothing.
    The working parts of the old screen (Войти / Face ID, password, language) stay; only their look changes.
    The choice is kept in g.enTheme. */
@@ -127,13 +126,12 @@ function enBlock(t){return`<div class="en-w">
  <div class="en-sign"><svg class="en-arc" viewBox="0 0 300 40" aria-hidden="true"><defs>${enMetal('enAr',t.metal,0,0,1,0)}</defs><path d="M10 38Q150 -8 290 38" fill="none" stroke="url(#enAr)" stroke-width="2"/><circle cx="150" cy="15.5" r="2" fill="url(#enAr)"/></svg>
   <b>The Silentium’s</b><span><i></i>BUTLER<i></i></span><em>DOCS</em></div>
  <div class="en-clock" role="img" aria-label="${i(entx('hint'))}" title="${i(entx('hint'))}">${enClock(t)}</div>
- <div class="en-icons">${[['doc','doc','endoc'],['fld','docs','endocs'],['safe','safe','ensafe'],['bk','bk','enbk']].map(([ic,k,a])=>`<button type="button" class="en-ic" data-act="${a}" aria-label="${i(entx(k))}">${eni(ic)}</button>`).join('')}</div></div>`}
+</div></div>`}
 function enTail(t){return t.orn?`<div class="en-orn"><i></i>${eni(t.orn)}<i></i></div>`:''}
 function enVars(t){const M=EN_M[t.metal],btn=t.btn==='amber'?'linear-gradient(90deg,#ffe2a0,#f39a1e,#ffd88a)':`linear-gradient(180deg,${t.btn[0]},${t.btn[1]})`;
  return`--en-ink:${t.ink};--en-acc:${t.acc};--en-m1:${M[0]};--en-m2:${M[1]};--en-m3:${M[2]};--en-ic:${t.icon};--en-btn:${btn};--en-btnInk:${t.btnInk}`}
 
 /* --- mounting on the sign-in screen --- */
-let enNext=null;
 function enMount(){try{const lg=document.querySelector('.login');if(!lg||m.logged)return;const t=enTh();
  lg.classList.add('enL');lg.dataset.en=t.id;lg.classList.toggle('enDark',!!t.dark);lg.classList.toggle('enRound',!!t.round);lg.classList.toggle('enAmber',t.btn==='amber');lg.setAttribute('style',enVars(t));
  let bg=lg.querySelector(':scope>.en-bg');if(!bg||bg.dataset.t!==t.id){bg&&bg.remove();lg.insertAdjacentHTML('afterbegin',enBg(t));lg.firstElementChild.dataset.t=t.id}
@@ -141,15 +139,8 @@ function enMount(){try{const lg=document.querySelector('.login');if(!lg||m.logge
  lg.querySelector('.en-orn')||lg.querySelector('.lg9lang')?.insertAdjacentHTML('afterend',enTail(t));
  document.documentElement.classList.add('enOn')}catch(e){Hooks.err('enmount',e)}}
 function enUnmount(){if(!document.querySelector('.login'))document.documentElement.classList.remove('enOn')}
-Hooks.on('render',()=>{enMount();enUnmount();enAfter()});
+Hooks.on('render',()=>{enMount();enUnmount()});
 setInterval(()=>{const c=document.querySelector('.login .en-clock');if(c&&!document.hidden){const h=c.querySelector('.en-hold.on');if(!h)c.innerHTML=enClock(enTh())}},2e4);
-
-/* --- the four icons: sign in first, then open the place --- */
-function enGo(next){enNext=next;const f=document.querySelector('.login .pwform input, .login #pwin');if(f){f.focus();return}const b=document.querySelector('.login [data-act=face]');b?b.click():(L.face&&L.face())}
-function enAfter(){if(!m.logged||!enNext)return;const n=enNext;enNext=null;setTimeout(()=>{try{
- if(n==='docs')R('archive');else if(n==='safe')L.dhvault?L.dhvault():R('dsafe');else if(n==='doc'){L.dcaddq&&L.dcaddq()}else if(n==='bk'){R('profile');setTimeout(()=>{try{hh()}catch(e){Hooks.err('enbk',e)}},350)}}catch(e){Hooks.err('ennext',e)}},150)}
-Hooks.act('endoc',()=>{if(!g.br9qcOff&&typeof L.br9qc==='function')L.br9qc();else enGo('doc')});
-Hooks.act('endocs',()=>enGo('docs'));Hooks.act('ensafe',()=>enGo('safe'));Hooks.act('enbk',()=>enGo('bk'));
 
 /* --- choosing the design: ⚙, or hold the clock for 3 seconds --- */
 function enThumb(t){const M=EN_M[t.metal],ring=t.ring==='marble'?'#f1dfc0':t.ring==='silver'?'#c9cdd3':t.ring,btn=t.btn==='amber'?'linear-gradient(90deg,#ffd27a,#f39a1e,#ffcf6b)':`linear-gradient(180deg,${t.btn[0]},${t.btn[1]})`;
@@ -181,13 +172,9 @@ html.enOn,html.enOn body{background:${'transparent'}!important}
 .en-sign span{display:flex;align-items:center;gap:12px;font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:clamp(15px,4.6vw,19px);letter-spacing:.42em;padding-left:.42em;margin-top:8px;color:var(--en-ink)}
 .en-sign span i{display:block;width:clamp(56px,20vw,90px);height:2px;background:linear-gradient(90deg,transparent,var(--en-m3) 30%,var(--en-ink));border-radius:2px}.en-sign span i:last-child{transform:scaleX(-1)}
 .en-sign em{font-style:normal;font-family:'EB Garamond',Georgia,serif;font-weight:700;font-size:clamp(15px,4.6vw,19px);letter-spacing:.32em;padding-left:.32em;margin-top:4px;color:var(--en-acc)}
-.en-clock{width:min(84vw,330px,46vh);margin:4px 0 0;cursor:pointer;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;touch-action:manipulation}.en-clk{width:100%;height:auto;display:block}
+.en-clock{width:min(86vw,340px,50vh);margin:6px 0 22px;cursor:pointer;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;touch-action:manipulation}.en-clk{width:100%;height:auto;display:block}
 .en-rn{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:15px}.en-rn.big{font-size:20px}
 .en-hold{stroke-dasharray:804.2;stroke-dashoffset:804.2;opacity:0;transition:none}.en-hold.on{opacity:1;stroke-dashoffset:0;transition:stroke-dashoffset 3s linear,opacity .2s}
-.en-icons{display:flex;gap:clamp(12px,4.6vw,22px);justify-content:center;margin:6px 0 18px}
-.en-ic{width:clamp(60px,17vw,70px);height:clamp(56px,15.5vw,64px);border-radius:18px;display:grid;place-items:center;padding:0;cursor:pointer;color:var(--en-ink);background:linear-gradient(180deg,var(--en-ic),color-mix(in srgb,var(--en-ic) 88%,#000));border:1.6px solid var(--en-m3);box-shadow:0 0 0 1px color-mix(in srgb,var(--en-m2) 70%,transparent) inset,0 6px 14px rgba(0,0,0,.14)}
-.enRound .en-ic{border-radius:50%;width:clamp(62px,17.5vw,72px);height:clamp(62px,17.5vw,72px)}
-.en-ic .en-i{width:30px;height:30px;stroke-width:1.5}
 .login.enL .lg9mid{width:100%;display:flex;flex-direction:column;align-items:center;gap:12px;margin:0!important;position:static!important}
 .login.enL .lg9go:not(.h12go){box-sizing:border-box;width:100%;max-width:340px;height:58px;border-radius:32px!important;background:var(--en-btn)!important;color:var(--en-btnInk)!important;border:1.6px solid var(--en-m3)!important;box-shadow:0 0 0 1px color-mix(in srgb,var(--en-m2) 60%,transparent) inset,0 8px 22px rgba(0,0,0,.2)!important;font-family:'EB Garamond',Georgia,serif!important;font-size:25px!important;font-weight:500!important;display:flex!important;align-items:center;justify-content:center;position:relative;padding:0 56px!important}
 .login.enL .lg9go:not(.h12go) svg{position:absolute;right:22px;width:26px;height:26px;color:inherit;stroke:currentColor}

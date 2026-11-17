@@ -27,4 +27,6 @@ html.h10x body::after,html.h236 body::after{top:var(--ssvh,100%)!important}
 @keyframes ssUp{from{transform:translateY(30px)}to{transform:none}}
 .sheet{animation-name:ssUp!important}
 .dtsheet,.dzov,.nz5ed,.sh12{animation:none!important}
+/* whatever happens to an animation on iOS, a window is never see-through */
+.sheet-wrap,.sheet,.dtsheet,.dtsheet>*,.dzov,.nz5ed,.sh12{opacity:1!important}
 `);

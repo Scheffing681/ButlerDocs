@@ -13,7 +13,7 @@ const copy=(s,d)=>{for(const n of fs.readdirSync(s)){if(n==='.git'||n==='tests')
 copy(ROOT,TMP);
 {const f=path.join(TMP,'app.js');let s=fs.readFileSync(f,'utf8');const end='v(),Sq()})();',i=s.trimEnd().lastIndexOf(end);
  if(i<0)throw new Error('app.js end marker not found');
- s=s.slice(0,i)+'try{window.__T={vault:odV,fz:{D:()=>fzD(),banks:()=>fzBanks(),guess:t=>fzGuess(t),cents:v=>fzCents(v),pdf:()=>fzPdf()},bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1),parse:t=>bsvParse(t),letter:t=>bsvLetterData(t),call:o=>{bsvCallP=o;bsvAfterCall()}},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
+ s=s.slice(0,i)+'try{window.__ndSame=c=>bsvSame(c);window.__ndMerge=(a,b)=>bsvMerge(a,b);window.__T={vault:odV,fz:{D:()=>fzD(),banks:()=>fzBanks(),guess:t=>fzGuess(t),cents:v=>fzCents(v),pdf:()=>fzPdf()},bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1),parse:t=>bsvParse(t),letter:t=>bsvLetterData(t),call:o=>{bsvCallP=o;bsvAfterCall()}},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
 const MIME={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webmanifest':'application/manifest+json','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
 const srv=http.createServer((q,r)=>{const u=decodeURIComponent(q.url.split('?')[0]);const f=path.join(TMP,u==='/'?'index.html':u);if(!f.startsWith(TMP)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);return r.end()}r.writeHead(200,{'content-type':MIME[path.extname(f)]||'application/octet-stream'});fs.createReadStream(f).pipe(r)});
 
@@ -270,7 +270,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>window.__T.R('bsv'));await p.waitForTimeout(300);await clk('[data-act=bsvcat]',300);await clk('.dtsheet [data-a3=u]',400);
  await fill('[data-lk=u]','javascript:alert(1)');await clk('[data-lks]',300);check('a bad link is refused',await T(()=>!!document.querySelector('[data-lkerr]').textContent));
  await fill('[data-lk=u]','https://termine.aschaffenburg.de/buergeramt');check('the name comes from the link',await T(()=>document.querySelector('[data-lk=n]').value==='termine.aschaffenburg.de'));
- await clk('[data-lks]',500);check('a pasted link becomes an entry with a Termin button',await rt()==='bsvi'&&await T(()=>!!document.querySelector('.bsvact.main[href="https://termine.aschaffenburg.de/buergeramt"]')));
+ await clk('[data-lks]',500);check('a link to a place that looks known asks first (v23)',await T(()=>!!document.querySelector('.dtsheet [data-dn]')));await clk('.dtsheet [data-dn]',500);check('a pasted link becomes an entry with a Termin button',await rt()==='bsvi'&&await T(()=>!!document.querySelector('.bsvact.main[href="https://termine.aschaffenburg.de/buergeramt"]')));
  /* list: pinned, search */
  await T(()=>window.__T.R('bsv'));await p.waitForTimeout(400);check('pinned entry is on top',await T(()=>/★/.test(document.querySelector('.bsv .odh')?.innerText||'')&&/Dr\. Müller/.test(document.querySelector('.bsv .dhcard.odl').innerText)));
  await fill('[data-bsvsr]','204/123');check('search in the list',await T(()=>{const v=[...document.querySelectorAll('.bsvrow')].filter(r=>!r.hidden).map(r=>r.innerText);return v.length===1&&/Finanzamt/.test(v[0])}));
@@ -431,6 +431,23 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.screen > .sub-hdr > button:first-child').click());await p.waitForTimeout(400);check('back goes to the list of employers',await rt()==='kar');
  await T(()=>{navigator.canShare=()=>true;navigator.share=async o=>{window.__krsh=o.files[0].name+'|'+o.files[0].size}});await clk('[data-act=krpdf]',1200);check('the CV list goes out as a PDF',await T(()=>/\.pdf\|\d{4,}/.test(window.__krsh||'')),await T(()=>window.__krsh));
  await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>!/^kr/.test(d.id));delete W.g().kar;W.save();W.R('home')});await p.waitForTimeout(300)}
+ /* v23 no doubles: Behörden, Karriere, documents */
+ where='no doubles';{const rt=()=>T(()=>window.__T.m().route);
+ const r1=await T(()=>{const o=window.__T.bsv.D();o.items.push({id:'ndf1',n:'Finanzamt ТЕСТ-Mitte',e:'🏛️',grp:'',who:[],tel:'030 1111 222',mail:'post@fa-test.de',addr:'',hrs:'',term:'',links:[],nums:[],ts:1});window.__T.save();
+  const S=window.__ndSame;return [S({n:'FA',mail:'POST@fa-test.de ',links:[]})?.w,S({n:'Hotline',tel:'+49 30 1111222',links:[]})?.w,S({n:'Finanzamt ТЕСТ-Mitte',links:[]})?.w,S({n:'Finanzamt Neukölln',links:[]})]});
+ check('same e-mail / phone / name find the card that is already there',r1[0]==='wM'&&r1[1]==='wT'&&r1[2]==='wN',JSON.stringify(r1));
+ check('…a different Finanzamt is not taken for the same one',r1[3]==null,JSON.stringify(r1));
+ const r2=await T(()=>{const it=window.__T.bsv.D().items.find(x=>x.id==='ndf1');window.__ndMerge(it,{tel:'030 999',mail:'',links:[{t:'Portal',u:'https://fa-test.de'}],nums:[{t:'StNr',v:'12/345'}]});return [it.tel,it.links.length,it.nums.length,(it.links||[]).some(l=>/tel:030999/.test(l.u))]});
+ check('«add to the card» keeps both numbers and adds links and numbers',r2[0]==='030 1111 222'&&r2[1]===2&&r2[2]===1&&r2[3],JSON.stringify(r2));
+ await T(()=>{const W=window.__T;W.bsv.D().items=W.bsv.D().items.filter(x=>x.id!=='ndf1');W.g().kar={jobs:[{id:'ndj',co:'ТЕСТ GmbH',from:'2015-01',to:'2016-01',docs:[],proj:[]}]};W.save();W.R('kar')});await p.waitForTimeout(300);
+ await T(()=>document.querySelector('[data-act=krjobed]').click());await p.waitForTimeout(300);
+ await T(()=>{document.querySelector('[data-kf=co]').value='ТЕСТ';document.querySelector('[data-ksave]').click()});await p.waitForTimeout(300);
+ check('the same employer again asks first',await T(()=>!!document.querySelector('.krdup')&&window.__T.g().kar.jobs.length===1));
+ await T(()=>document.querySelector('[data-kdn]').click());await p.waitForTimeout(400);check('…«I worked there again» makes a second entry',await T(()=>window.__T.g().kar.jobs.length===2)&&await rt()==='karj');
+ await T(()=>{const W=window.__T;delete W.g().kar;const K=W.Ke().items;K.push({id:'ndd1',title:'Mietvertrag ТЕСТ',files:[],pages:[],ts:Date.now()-5e3});W.save();K.push({id:'ndd2',title:'Mietvertrag – ТЕСТ (Kopie)',files:[],pages:[],ts:Date.now()});W.save()});await p.waitForTimeout(300);
+ check('a second copy of a document is pointed out',await T(()=>!!document.querySelector('.ndbar [data-id=ndd1]')));
+ await T(()=>document.querySelector('.ndbar [data-ndk]').click());await p.waitForTimeout(200);check('…«keep both» closes it and remembers',await T(()=>!document.querySelector('.ndbar')&&window.__T.Ke().items.find(d=>d.id==='ndd2').ndOk===1));
+ await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>!/^ndd/.test(d.id));W.save();W.R('home')});await p.waitForTimeout(300)}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

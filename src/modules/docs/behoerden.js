@@ -241,6 +241,7 @@ async function bsvSave(){const d=bsvEd;if(!d)return;d.n=String(d.n||'').trim();i
  d.nums=(d.nums||[]).filter(n=>n.x||String(n.v||'').trim()).map(n=>{if(!n.id)n.id=bsvId();if(n.v!=null){n.v=String(n.v).trim();n.m=n.v.slice(-2)}n.s=!!n.s;return n});
  const sec=d.nums.some(n=>n.s&&n.v!=null);if(sec&&sfHas()&&!sfKey)return sfAsk(()=>bsvSave());
  const o=bsvD();delete d.ng;delete d.np;delete d.ct;delete d.open;['tel','mail','addr','hrs','term','note'].forEach(k=>{d[k]=String(d[k]||'').trim()});
+ if(!(d.id&&bsvGet(d.id))&&!d.ndOk){const S=bsvSame(d);if(S)return bsvDupAsk(S,()=>{bsvMerge(S.it,d);$();bsvEd=null;bsvSel=S.it.id;bsvToast(bsvtU('dMerged',{n:S.it.n}));bsvGo('bsvi')},()=>{d.ndOk=1;bsvSave()})}delete d.ndOk;
  let it=d.id&&bsvGet(d.id);if(it)Object.assign(it,d);else{it=Object.assign(d,{id:bsvId(),ts:Date.now()});o.items.push(it)}
  if(bsvOwnG(it.grp)&&!o.grp.includes(it.grp))o.grp.push(it.grp);
  if(sec&&sfHas()&&sfKey)await bsvSecIn();$();bsvEd=null;bsvSel=it.id;bsvToast(bsvt('saved')+' ✓');bsvGo('bsvi')}
@@ -257,7 +258,9 @@ function bsvLinkSheet(){H(bsvt('aU'),`<div class="bsvys"><label class="bsvl">${i
   const fill=()=>{if(auto&&bsvKind(u.value)==='url')n.value=bsvHost(u.value)};u.addEventListener('input',fill);n.addEventListener('input',()=>{auto=!n.value});
   el.querySelector('[data-lkp]').onclick=()=>bsvPaste(u);
   el.querySelector('[data-lks]').onclick=()=>{const v=u.value.trim();if(bsvKind(v)!=='url'||!bsvUrl(v)){el.querySelector('[data-lkerr]').textContent=bsvt('badU');return}
-   const it={id:bsvId(),n:n.value.trim()||bsvHost(v),e:'🔗',grp:'',who:[],tel:'',mail:'',addr:'',hrs:'',term:v,links:[],nums:[],ts:Date.now()};bsvD().items.push(it);$();el.remove();bsvSel=it.id;bsvToast(bsvt('saved')+' ✓');R('bsvi')}})}
+   const it={id:bsvId(),n:n.value.trim()||bsvHost(v),e:'🔗',grp:'',who:[],tel:'',mail:'',addr:'',hrs:'',term:v,links:[],nums:[],ts:Date.now()};
+   const add=()=>{bsvD().items.push(it);$();el.remove();bsvSel=it.id;bsvToast(bsvt('saved')+' ✓');R('bsvi')},S=bsvSame(it);
+   if(S)return bsvDupAsk(S,()=>{bsvMerge(S.it,it);$();el.remove();bsvSel=S.it.id;bsvToast(bsvtU('dMerged',{n:S.it.n}));R('bsvi')},add);add()}})}
 function bsvPickLetter(){let D=[];try{D=Ke().items.filter(d=>!d.type).slice().sort((a,b)=>(b.ts||0)-(a.ts||0)).slice(0,40)}catch{}
  H(bsvt('pickL'),`<div class="bsvys"><button type="button" class="bsvbig main" data-pls><span>📷</span><span><b>${i(bsvt('scanNew'))}</b><small>${i(bsvt('scanBack'))}</small></span></button>
  ${D.length?`<div class="odl bsvpl">${D.map(d=>`<button type="button" class="odr" data-pld="${i(d.id)}">${dhi('mail')}<span><b>${i(d.title||'—')}</b><small>${i([d.party,d.date&&vA(d.date)].filter(Boolean).join(' · '))}</small></span>${dhi('chev','sm')}</button>`).join('')}</div>`:`<p class="dhnone">${i(bsvt('noLet'))}</p>`}</div>`,
@@ -365,3 +368,31 @@ button.bsvact{font:600 13px -apple-system,"SF Pro Text",system-ui,sans-serif!imp
 .bsvhome .bsvhr{display:flex;gap:8px;overflow-x:auto;margin-top:8px;padding-bottom:2px}.bsvhome .bsvhr button{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;width:78px;border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:9px 4px}
 .bsvhome .bsvhr span{font-size:24px}.bsvhome .bsvhr small{font-size:11.5px;line-height:1.2;text-align:center;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 `);
+
+/* --- v23 «no doubles»: one card per office. Before a second card is made the user is asked:
+   same name, same e-mail, same phone or same booking site → «add to the existing card» or «it is another office».
+   Only same-looking names (Finanzamt Mitte / Finanzamt Neukölln) are offered too, but never merged on their own. --- */
+const bsvSU={dH:['Такое уже есть?','Schon vorhanden?','Already there?'],
+ dTx:['Похоже на «%n» — %w. Добавить данные туда, чтобы письма и сроки были в одном месте?','Sieht aus wie „%n“ – %w. Angaben dort ergänzen, damit Briefe und Fristen an einem Ort bleiben?','Looks like “%n” – %w. Add the details there so letters and deadlines stay in one place?'],
+ wN:['то же название','gleicher Name','same name'],wM:['тот же e-mail','gleiche E-Mail','same e-mail'],wT:['тот же телефон','gleiche Telefonnummer','same phone'],wU:['тот же сайт','gleiche Website','same website'],wW:['похожее название','ähnlicher Name','similar name'],
+ dJoin:['Добавить в «%n»','Zu „%n“ hinzufügen','Add to “%n”'],dNew:['Это другое ведомство — создать новое','Andere Stelle – neu anlegen','Another office – create new'],
+ dMerged:['Добавлено в «%n» ✓','Zu „%n“ hinzugefügt ✓','Added to “%n” ✓']};
+const bsvtU=(k,o)=>{let s=cv5n(bsvSU[k]||[k]);if(o)for(const p in o)s=s.split('%'+p).join(o[p]);return s};
+const bsvNmK=s=>String(s||'').toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-zа-яё0-9]+/g,' ').trim();
+const bsvDig=s=>{const d=String(s||'').replace(/[^\d]/g,'').replace(/^0049/,'0').replace(/^49(?=[1-9])/,'0');return d.length>=6?d:''};
+const BSV_GEN=new Set(['stadt','landes','bundes','agentur','service','amt','amts','verwaltung','beratung','zentrale','kreis','gemeinde','berlin','hamburg','muenchen','koeln','deutschland','gmbh']);
+function bsvSame(c,ex){const A=bsvD().items.filter(x=>x!==c&&x.id!==(ex||c.id)),n=bsvNmK(c.n),ml=String(c.mail||'').toLowerCase().trim(),tl=bsvDig(c.tel),
+  hs=[c.term].concat((c.links||[]).map(l=>l.u)).filter(u=>u&&/^https?:|^[\w-]+\.[a-z]/i.test(u)).map(bsvHost).filter(h=>h&&!/(^|\.)(google|apple|bund|service\.berlin)\.(de|com)$/.test(h));
+ for(const it of A){if(n&&bsvNmK(it.n)===n)return{it,w:'wN'};if(ml&&String(it.mail||'').toLowerCase().trim()===ml)return{it,w:'wM'};if(tl&&bsvDig(it.tel)===tl)return{it,w:'wT'};
+  const ih=[it.term].concat((it.links||[]).map(l=>l.u)).filter(Boolean).map(bsvHost);if(hs.some(h=>ih.includes(h)))return{it,w:'wU'}}
+ const W=n.split(' ').filter(w=>w.length>=5&&!BSV_GEN.has(w));if(!W.length)return null;
+ const hit=A.filter(it=>bsvNmK(it.n).split(' ').some(w=>W.includes(w)));return hit.length===1?{it:hit[0],w:'wW'}:null}
+function bsvMerge(it,d){['tel','mail','addr','hrs','term','note'].forEach(k=>{const v=String(d[k]||'').trim();if(!v)return;if(!String(it[k]||'').trim())it[k]=v;else if(k==='note'&&!it.note.includes(v))it.note+='\n'+v;
+  else if(it[k]!==v&&(k==='tel'||k==='mail'||k==='term')&&!(it.links||[]).some(l=>l.u.replace(/^(tel:|mailto:)/,'')===v.replace(/[^\d+]/g,'')||l.u===v))(it.links=it.links||[]).push(k==='tel'?{t:bsvt('tel'),u:'tel:'+v.replace(/[^\d+]/g,''),ct:1}:k==='mail'?{t:v,u:'mailto:'+v,ct:1}:{t:bsvHost(v),u:v,ct:1})});
+ (d.links||[]).forEach(l=>{if(l.u&&!(it.links=it.links||[]).some(q=>q.u===l.u))it.links.push(l)});
+ (d.nums||[]).forEach(q=>{if((q.v||q.x)&&!(it.nums=it.nums||[]).some(z=>z.v!=null&&z.v===q.v)){if(!q.id)q.id=bsvId();it.nums.push(q)}});
+ (d.who||[]).forEach(w=>{if(!(it.who=it.who||[]).includes(w))it.who.push(w)});if(!it.grp&&d.grp)it.grp=d.grp;return it}
+function bsvDupAsk(S,join,fresh){const el=H(bsvtU('dH'),`<div class="bsvys"><div class="dhcard bsvdup"><span class="bsvemo">${i(S.it.e||'🏛️')}</span><p>${i(bsvtU('dTx',{n:S.it.n,w:bsvtU(S.w)}))}</p></div>
+ <button type="button" class="dcadd gold" data-dj>${i(bsvtU('dJoin',{n:S.it.n}))}</button><button type="button" class="bsvcan" data-dn>${i(bsvtU('dNew'))}</button></div>`,
+ e=>{e.classList.add('bsvsh');e.querySelector('[data-dj]').onclick=()=>{e.remove();join()};e.querySelector('[data-dn]').onclick=()=>{e.remove();fresh()}});return el}
+Hooks.css('bsv-dup','.bsvdup{display:flex;gap:12px;align-items:flex-start}.bsvdup p{margin:0;line-height:1.4}.bsvdup .bsvemo{font-size:26px;flex:none}');

@@ -125,7 +125,7 @@ function bsvLetterData(text){const t=String(text||'').replace(/\s+/g,' '),me=bsv
  return R2}
 let bsvFl=null;
 async function bsvFromLetter(docId,then){try{const d=Ke().items.find(z=>z.id===docId);if(!d)return;const r=await bsvScanDoc(docId),t=(bsvScanC[docId]&&bsvScanC[docId].t)||'';const ld=bsvLetterData(t);
- let it=(d.bsvL&&d.bsvL.it&&bsvGet(d.bsvL.it))||(r&&r.it&&bsvGet(r.it))||(r&&r.src&&bsvD().items.find(z=>z.src===r.src))||(ld.name&&bsvD().items.find(z=>bsvWords(z.n).some(w=>w.length>=5&&ld.name.toLowerCase().includes(w))))||null;
+ let it=(d.bsvL&&d.bsvL.it&&bsvGet(d.bsvL.it))||(r&&r.it&&bsvGet(r.it))||(r&&r.src&&bsvD().items.find(z=>z.src===r.src))||((ld.name||ld.mail||ld.tel)&&(bsvSame({n:ld.name||'',mail:ld.mail||'',tel:ld.tel||'',links:[]})||{}).it)||null;
  const k=r&&(r.dl||r.frist);
  bsvFl={doc:docId,it:it?it.id:'',name:it?it.n:(ld.name||(r&&r.src?bsvOfName(r.src):'')),src:r&&r.src||'',addr:ld.addr,tel:ld.tel,mail:ld.mail,nums:ld.nums,
   take:{addr:!!ld.addr,tel:!!ld.tel&&!(it&&it.tel),mail:!1},takeN:ld.nums.map(()=>!0),dk:k||'',dKind:r&&(r.dl?'Antwort':r.obj||'Frist')||'',dOn:k?'yes':'no',kind:r&&r.kind||'',date:r&&r.date||'',obj:r&&r.obj||'',then:then||''};R('bsvfl')}catch(e){Hooks.err('bsvfl',e)}}

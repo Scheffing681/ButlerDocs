@@ -215,6 +215,16 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.mchit').click());await p.waitForTimeout(600);
  check('the chosen place becomes the city of the app',await T(()=>{const G=window.__T.g();return G.city==='my'&&G.cityX.zip==='60311'&&Math.abs(G.cityX.lat-50.1106)<1e-3}));
  await T(()=>{window.__T.L.cv5close();window.__T.R('home')});await p.unroute('**/nominatim.openstreetmap.org/**')}
+ /* Butler Docs: steady screen (docs/steady-screen.js) — sheets never fade, the keyboard never leaves the app short */
+ where='steady screen';{const open=async t=>{await T(()=>{document.querySelectorAll('.dtsheet').forEach(s=>s.remove());window.__T.m().sheet=null;window.__T.R('home')});await p.waitForTimeout(300);await T(()=>document.querySelector('[data-act=bd8plus]').click());await p.waitForTimeout(400);await T(t=>[...document.querySelectorAll('.bd8pm button')].find(b=>b.innerText.includes(t)).click(),t)};
+ for(const t of ['Задача','Событие']){await open(t);await p.waitForTimeout(30);const op=await T(()=>{const s=document.querySelector('.sheet-wrap .sheet');return s?+getComputedStyle(s).opacity:-1});check('«'+t+'» opens solid at once (no half see-through)',op>.99,String(op));await T(()=>{window.__T.m().sheet=null;window.__T.v()})}
+ await T(()=>{window.__T.R('dsafe')});await p.waitForTimeout(300);await T(()=>document.querySelector('[data-act=vcode]').click());await p.waitForTimeout(30);
+ check('a drawn sheet (vault code) opens solid at once',await T(()=>{const s=document.querySelector('.dtsheet');return!!s&&+getComputedStyle(s).opacity>.99}));await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));
+ const q=await ctx.newPage();await q.addInitScript(()=>{Object.defineProperty(navigator,'standalone',{get:()=>true});const mm=window.matchMedia.bind(window);window.matchMedia=x=>/standalone/.test(x)?{matches:true,media:x,addEventListener(){},removeEventListener(){},addListener(){},removeListener(){}}:mm(x);Object.defineProperty(screen,'height',{get:()=>878,configurable:true})});
+ await q.goto(URL0);await q.waitForTimeout(1500);await q.evaluate(()=>{const m=window.__T.m();m.logged=true;window.__T.R('mycal')});await q.waitForTimeout(500);
+ await q.setViewportSize({width:393,height:470});await q.evaluate(()=>window.__T.v());await q.waitForTimeout(300);
+ await q.setViewportSize({width:393,height:852});await q.evaluate(()=>{Object.defineProperty(window,'innerHeight',{get:()=>470,configurable:true});window.__T.v()});await q.waitForTimeout(300);
+ const bh=await q.evaluate(()=>Math.round(document.body.getBoundingClientRect().height));check('after the keyboard the app keeps its full height (iPhone app mode)',bh>=848,bh+' of 852');await q.close()}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

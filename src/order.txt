@@ -43,3 +43,4 @@ docs/only-docs.js
 docs/vault.js
 docs/entrance.js
 docs/my-city.js
+docs/steady-screen.js

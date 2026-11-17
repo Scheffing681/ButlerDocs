@@ -13,7 +13,7 @@ const copy=(s,d)=>{for(const n of fs.readdirSync(s)){if(n==='.git'||n==='tests')
 copy(ROOT,TMP);
 {const f=path.join(TMP,'app.js');let s=fs.readFileSync(f,'utf8');const end='v(),Sq()})();',i=s.trimEnd().lastIndexOf(end);
  if(i<0)throw new Error('app.js end marker not found');
- s=s.slice(0,i)+'try{window.__T={vault:odV,bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1),parse:t=>bsvParse(t),letter:t=>bsvLetterData(t),pages:t=>bsvPdfPages(t).length,call:o=>{bsvCallP=o;bsvAfterCall()}},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
+ s=s.slice(0,i)+'try{window.__T={vault:odV,bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1),parse:t=>bsvParse(t),letter:t=>bsvLetterData(t),call:o=>{bsvCallP=o;bsvAfterCall()}},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
 const MIME={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webmanifest':'application/manifest+json','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
 const srv=http.createServer((q,r)=>{const u=decodeURIComponent(q.url.split('?')[0]);const f=path.join(TMP,u==='/'?'index.html':u);if(!f.startsWith(TMP)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);return r.end()}r.writeHead(200,{'content-type':MIME[path.extname(f)]||'application/octet-stream'});fs.createReadStream(f).pipe(r)});
 
@@ -339,7 +339,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('Widerspruch, and a deadline on Saturday moves to Monday',P.b&&P.b.src==='jc'&&P.b.obj==='Widerspruch'&&P.b.frist==='2026-12-21',JSON.stringify(P.b));
  check('«bis zum …» in the letter is taken as it stands',P.c&&P.c.kind==='Anhörung'&&P.c.dl==='2026-12-05'&&!P.c.frist,JSON.stringify(P.c));check('not every text is a letter',P.d===null,JSON.stringify(P.d));
  await T(async()=>{const W=window.__T;await W.ao('dtext','bsl1',{t:'Finanzamt Aschaffenburg Aschaffenburg, 10.11.2026 Bescheid für 2025 über Einkommensteuer. Rechtsbehelfsbelehrung: Der Einspruch ist innerhalb eines Monats nach Bekanntgabe einzulegen.'});
-  W.Ke().items.push({id:'bsl1',title:'Steuerbescheid ТЕСТ',kind:'other',files:[],pages:[],ts:Date.now(),folder:'f1',dcat:'other'});const fa=W.bsv.D().items.find(z=>z.src==='fa');fa.nums=[{id:'q9',t:'Steuernummer',v:'204/123/45678',s:false,m:'78'}];W.save();W.m().bdid='bsl1';W.R('bdoc')});
+  W.Ke().items.push({id:'bsl1',title:'Steuerbescheid ТЕСТ',kind:'other',files:[],pages:[],ts:Date.now(),folder:'f1',dcat:'other'});const fa=W.bsv.D().items.find(z=>z.src==='fa');fa.mail='poststelle@fa-ab.bayern.de';fa.nums=[{id:'q9',t:'Steuernummer',v:'204/123/45678',s:false,m:'78'}];W.save();W.m().bdid='bsl1';W.R('bdoc')});
  await p.waitForTimeout(1200);await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));await p.waitForTimeout(400);
  check('the scanned letter shows its office and deadline',await T(()=>{const b=document.querySelector('.bsvlb');return!!b&&/Finanzamt/.test(b.innerText)&&/14\.12\.2026/.test(b.innerText)}));
  await clk('.bsvlb [data-act=bsvlcal]',700);const L1=await T(()=>{const W=window.__T,d=W.Ke().items.find(z=>z.id==='bsl1'),G=W.g();return{L:d.bsvL,ev:G.events.find(e=>e.id===d.bsvL.ev),tk:G.tasks.find(k=>k.id===d.bsvL.tk)}});
@@ -347,15 +347,18 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('no «saved · open» bar after it',await T(()=>!document.querySelector('.bd8sv')));
  await T(()=>window.__T.R('dsrok'));await p.waitForTimeout(400);check('«Сроки» show the Einspruch deadline',await T(()=>/Einspruch: Finanzamt/.test(document.querySelector('.screen').innerText)));
  await T(()=>{window.__T.m().bdid='bsl1';window.__T.R('bdoc')});await p.waitForTimeout(900);await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));await p.waitForTimeout(300);
- await clk('.bsvlb [data-act=bsvlobj]',700);const tx=await T(()=>document.querySelector('.bsvbrt')?.value||'');
- check('«Einspruch» opens a German letter with sender, office, number and date',await rt()==='bsvbr'&&/Einspruch gegen den Bescheid vom 10\.11\.2026/.test(tx)&&/Steuernummer: 204\/123\/45678/.test(tx)&&/Sehr geehrte Damen und Herren/.test(tx)&&/Neue Straße 5/.test(tx),tx.slice(0,300));
- check('the letter is German only',!/[а-яё]/i.test(tx));check('my own e-mail is in the letter',/alex@example\.de/.test(tx));
- await T(()=>{navigator.canShare=()=>true;navigator.share=async o=>{window.__sh=o.files[0].name+'|'+o.files[0].type+'|'+o.files[0].size}});await clk('[data-act=bsvbrpdf]',1200);
- check('«Отправить PDF» hands an A4 PDF to the phone (own mail app)',await T(()=>/\.pdf\|application\/pdf\|\d{4,}/.test(window.__sh||'')),await T(()=>window.__sh));
- await T(()=>{const x=document.querySelector('[data-brf=trk]');x.value='RR 1234 5678 9DE';x.dispatchEvent(new Event('input',{bubbles:true}));const t=document.querySelector('.bsvbrt');t.value+='\nPS';t.dispatchEvent(new Event('input',{bubbles:true}))});await clk('[data-act=bsvbrsent]',600);
- const S3=await T(()=>{const W=window.__T,G=W.g();return{log:W.bsv.D().log[0],dr:G.drafts[0]}});
- check('«Отправлено» → journal with the Einschreiben number, and into «Письма»',S3.log&&S3.log.k==='sent'&&S3.log.trk==='RR 1234 5678 9DE'&&/Einspruch/.test(S3.dr.subj)&&/PS$/.test(S3.dr.text)&&await rt()==='bsvi',JSON.stringify(S3).slice(0,300));
- check('the card lists the letter and the journal',await T(()=>/Steuerbescheid ТЕСТ/.test(document.querySelector('.screen').innerText)&&!!document.querySelector('[data-act=bsvtrack]')));
+ await clk('.bsvlb [data-act=bsvlobj]',900);const LT=await T(()=>JSON.parse(JSON.stringify(window.__T.m().letter||{})));const tx=(LT.subj||'')+'\n'+(LT.body||'');
+ check('«Einspruch» opens my own «Briefe» editor, filled in',await rt()==='letters'&&/Einspruch gegen den Bescheid vom 10\.11\.2026/.test(LT.subj||'')&&/Steuernummer: 204\/123\/45678/.test(LT.body||'')&&/Sehr geehrte Damen und Herren/.test(LT.body||'')&&LT.to==='poststelle@fa-ab.bayern.de'&&/Finanzamt/.test(LT.toName||''),JSON.stringify(LT).slice(0,300));
+ check('the letter is German only',!/[а-яё]/i.test(tx));check('my own editor keeps its own design (official letter with my letterhead)',await T(()=>{const d=window.__T.m().letter.des||{};return d.mode==='official'}));
+ await T(()=>document.querySelector('.screen > .sub-hdr > button:first-child')?.click());await p.waitForTimeout(500);check('back from «Briefe» returns to the letter',await rt()==='bdoc');
+ const fid0=await T(()=>window.__T.bsv.D().items.find(z=>z.src==='fa').id);await T(id=>window.__T.L.bsvopen({id}),fid0);await p.waitForTimeout(400);
+ check('the card has one «Schreiben», no separate E-Mail / Brief',await T(()=>!!document.querySelector('.bsvact[data-act=bsvwrite]')&&!document.querySelector('.bsvact[href^="mailto:"]')&&!document.querySelector('[data-act=bsvbrnew]')));
+ await clk('.bsvact[data-act=bsvwrite]',400);check('«Schreiben» offers an empty letter and the templates',await T(()=>['frei','obj','frist','nach','stand','adr'].every(k=>document.querySelector(`.dtsheet [data-wr=${k}]`))));
+ await clk('.dtsheet [data-wr=frist]',700);check('a template opens «Briefe» with the text',await rt()==='letters'&&await T(()=>/Fristverlängerung/.test(window.__T.m().letter.subj)&&/Verlängerung der Frist/.test(window.__T.m().letter.body)));
+ await T(()=>{const G=window.__T.g();G.drafts=G.drafts||[];G.drafts.unshift({id:'smkd1',to:'poststelle@fa-ab.bayern.de',subj:'Einspruch ТЕСТ-ПИСЬМО',text:'x',at:Date.now(),sent:true});window.__T.save()});
+ await T(id=>window.__T.L.bsvopen({id}),fid0);await p.waitForTimeout(400);check('letters sent from «Briefe» show on the card',await T(()=>/Einspruch ТЕСТ-ПИСЬМО/.test(document.querySelector('.screen').innerText)));
+ await T(id=>window.__T.L.bsvlog({id,k:'sent'}),fid0);await p.waitForTimeout(400);await T(()=>{document.querySelector('[data-lf=txt]').value='Einspruch per Einschreiben';document.querySelector('[data-lf=trk]').value='RR 1234 5678 9DE';document.querySelector('[data-lsave]').click()});await p.waitForTimeout(500);
+ check('the card lists the scanned letter and the Einschreiben in the journal',await T(()=>/Steuerbescheid ТЕСТ/.test(document.querySelector('.screen').innerText)&&!!document.querySelector('[data-act=bsvtrack]')));
  /* Anträge */
  const fid=await T(()=>window.__T.bsv.D().items.find(z=>z.src==='fa').id);await T(id=>window.__T.L.bsvantadd({id}),fid);await p.waitForTimeout(400);
  await T(()=>{document.querySelector('[data-af=t]').value='Antrag ТЕСТ';document.querySelector('[data-af=az]').value='AZ-1';document.querySelector('[data-asave]').click()});await p.waitForTimeout(400);
@@ -364,7 +367,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('an Antrag gets «ask after 4 weeks»',!!an.a&&an.a.st===1&&!!an.tk&&an.tk.due===d28,JSON.stringify(an));
  await T(id=>window.__T.L.bsvantnx({id}),an.a.id);await T(id=>window.__T.L.bsvantnx({id}),an.a.id);await p.waitForTimeout(300);
  an=await T(id=>{const W=window.__T,a=W.bsv.D().ant.find(z=>z.id===id);return{a,tk:W.g().tasks.some(k=>k.bsvA===id)}},an.a.id);check('decision received closes the reminder',an.a.st===3&&!!an.a.d3&&!an.tk);
- await T(id=>window.__T.L.bsvantask({id}),an.a.id);await p.waitForTimeout(400);check('«Спросить статус» = Sachstandsanfrage with the number',await rt()==='bsvbr'&&await T(()=>/Sachstandsanfrage – Antrag ТЕСТ/.test(document.querySelector('.bsvbrt').value)&&/Aktenzeichen: AZ-1/.test(document.querySelector('.bsvbrt').value)));
+ await T(id=>window.__T.L.bsvantask({id}),an.a.id);await p.waitForTimeout(400);check('«Спросить статус» = Sachstandsanfrage with the number',await rt()==='letters'&&await T(()=>/Sachstandsanfrage – Antrag ТЕСТ/.test(window.__T.m().letter.subj)&&/Aktenzeichen: AZ-1/.test(window.__T.m().letter.body)));
  await T(()=>document.querySelector('.screen > .sub-hdr > button:first-child').click());await p.waitForTimeout(400);check('back from the letter',await rt()==='bsvi');
  /* after a call */
  await T(id=>window.__T.bsv.call({it:id,at:Date.now()-60000}),fid);await p.waitForTimeout(300);check('coming back after «Позвонить» asks who it was',await T(()=>!!document.querySelector('.dtsheet [data-lf=who]')));

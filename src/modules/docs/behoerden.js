@@ -170,10 +170,9 @@ document.addEventListener('input',e=>{const t=e.target;if(!t||!t.matches||!t.mat
 function bsvCard(it){const st=it.hrs?bsvNow(it.hrs):null,acts=[];
  if(it.term&&bsvUrl(it.term))acts.push(`<a class="bsvact main" href="${i(bsvUrl(it.term))}" target="_blank" rel="noopener">${bsvi('cal')}<span>${i(bsvt('term'))}</span></a>`);
  if(it.tel)acts.push(`<a class="bsvact" data-bsvcall="${i(it.id)}" href="${i(bsvTel(it.tel))}">${bsvi('tel')}<span>${i(bsvt('call'))}</span></a>`);
- if(it.mail)acts.push(`<a class="bsvact" href="mailto:${i(it.mail)}">${bsvi('mail')}<span>${i(bsvt('mail'))}</span></a>`);
  if(it.addr)acts.push(`<a class="bsvact" href="${i(bsvMap(it.addr))}" target="_blank" rel="noopener">${bsvi('map')}<span>${i(bsvt('route'))}</span></a>`);
- /* «Письмо» (behoerden-briefe.js) — a letter to this office from a template */
- acts.push(`<button type="button" class="bsvact" data-act="bsvbrnew" data-id="${i(it.id)}">${bsvi('mail')}<span>${i(cv5n(['Письмо','Brief','Letter']))}</span></button>`);
+ /* «Schreiben» (behoerden-briefe.js): one button — it opens the user's own «Briefe» editor, already filled in */
+ acts.splice(it.tel?2:it.term?1:0,0,`<button type="button" class="bsvact" data-act="bsvwrite" data-id="${i(it.id)}">${bsvi('edit')}<span>${i(cv5n(['Написать','Schreiben','Write']))}</span></button>`);
  const lk=(it.links||[]).map(l=>{const u=bsvUrl(l.u);return u?`<a class="bsvlink" href="${i(u)}" ${/^https?:/i.test(u)?'target="_blank" rel="noopener"':''}>${bsvi(/^tel:/.test(u)?'tel':/^mailto:/.test(u)?'mail':'link')}<span>${i(l.t||l.u)}</span></a>`:''}).join('');
  const nums=(it.nums||[]).map(n=>`<div class="bsvnum"><span><small>${i(n.t||bsvt('numV'))}${n.s?' · '+bsvi('lock','sm'):''}</small><b>${i(n.s?bsvMask(n):n.v||'')}</b></span>${n.s?`<button type="button" data-act="bsvshow" data-id="${i(it.id)}" data-n="${i(n.id)}">${i(bsvt('show'))}</button>`:`<button type="button" data-act="bsvcp" data-id="${i(it.id)}" data-n="${i(n.id)}">${bsvi('copy')}<span>${i(bsvt('copy'))}</span></button>`}</div>`).join('');
  return`<div class="screen dhome bsv bsvc">${bsvHdr(bsvt('t'),'bsvback',`<button type="button" class="iconbtn" data-act="bsvedit" data-id="${i(it.id)}" aria-label="${i(bsvt('edit'))}">${bsvi('edit')}</button>`)}
@@ -331,7 +330,7 @@ Hooks.css('docs-behoerden',`
 .bsvchk{display:flex;align-items:center;gap:10px;background:#fff8e6!important;border-color:#f0dca8!important;font-size:13.5px;line-height:1.35}.bsvchk span{flex:1}.bsvchk button{flex:none;border:0;border-radius:999px;padding:8px 12px;background:#b07a10;color:#fff!important;font-weight:600;font-size:13px}
 .bsvacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:8px;margin:8px 0 10px}
 .bsvact{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 4px;border-radius:16px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--ink)!important;font-size:13px;font-weight:600}
-.bsvact .dhi{color:var(--green)}.bsvact.main{background:var(--green);border-color:var(--green);color:#fff!important}.bsvact.main .dhi{color:#fff}
+button.bsvact{font:600 13px -apple-system,"SF Pro Text",system-ui,sans-serif!important;cursor:pointer}.bsvact .dhi{color:var(--green)}.bsvact.main{background:var(--green);border-color:var(--green);color:#fff!important}.bsvact.main .dhi{color:#fff}
 .bsvlinks{display:flex;flex-direction:column;padding-top:4px!important;padding-bottom:4px!important}.bsvlink{display:flex;align-items:center;gap:12px;padding:11px 0;text-decoration:none;color:var(--ink)!important;font-weight:600}.bsvlink+.bsvlink{border-top:1px solid var(--line)}.bsvlink .dhi{color:var(--green);flex:none}
 .bsvkv{grid-template-columns:1fr!important}
 .bsvnums{display:flex;flex-direction:column}.bsvnum{display:flex;align-items:center;gap:10px;padding:9px 0}.bsvnum+.bsvnum{border-top:1px solid var(--line)}.bsvnum>span{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0}

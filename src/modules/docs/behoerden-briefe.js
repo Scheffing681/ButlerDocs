@@ -2,9 +2,10 @@
    - A scanned letter: the scanned text tells which office wrote, what kind of letter, its date and (for a Bescheid)
      the objection deadline: date + 4 days (Bekanntgabe, rule since 2025) + 1 month, moved off a weekend. Always «bitte prüfen».
      An explicit «bis zum …» in the letter is taken as it stands. The document can be tied to the office.
-   - Letters from templates, in German only (Einspruch/Widerspruch, Fristverlängerung, Adressänderung, Unterlagen nachreichen,
-     Sachstandsanfrage, free text): sender, office, reference numbers and dates are filled in. Print / PDF, e-mail, copy;
-     «Отправлено» writes it into the journal and into «Письма».
+   - Writing (v17): one button «Schreiben» → «Leeres Schreiben» or a German template (Einspruch/Widerspruch, Fristverlängerung,
+     Unterlagen nachreichen, Sachstandsanfrage, Adressänderung) → the user's own «Briefe» editor opens filled in
+     (to, subject, reference number, text). Envelope, letterhead, PDF / e-mail / SMS, signature stay the user's own.
+     What the user sent from «Briefe» to the office's address shows on the card («Gesendete Schreiben»).
    - Anträge: submitted → in progress → decision; a reminder to ask after 4 weeks; «Спросить статус» = Sachstandsanfrage.
    - Journal per office: calls (who, what), sent (Einschreiben number, photo of the receipt), received.
      After «Позвонить» from the app, coming back to the app asks «С кем говорили?».
@@ -38,7 +39,8 @@ const bsvS3={
  flYes:['Внести','Eintragen','Add'],flOther:['Другая дата','Anderes Datum','Other date'],flNo:['Не нужно','Nicht nötig','Not needed'],
  flNew:['Создать карточку','Karte anlegen','Create the card'],flUpd:['Сохранить в «%n»','In „%n“ speichern','Save to “%n”'],flChg:['Адрес изменился: было «%a»','Adresse geändert: vorher „%a“','Address changed: was “%a”'],
  flSaved:['Готово — карточка «%n»','Fertig – Karte „%n“','Done – card “%n”'],addrChg:['Адрес изменился — обновить','Adresse geändert – aktualisieren','Address changed – update'],
- pdf:['Отправить PDF','PDF senden','Send PDF'],date:['Дата','Datum','Date'],save:['Сохранить','Speichern','Save'],del:['Удалить','Löschen','Delete'],none:['Пока пусто','Noch leer','Empty so far'],photo:['фото','Foto','photo']};
+ wrT:['Написать: %o','Schreiben an %o','Write to %o'],wrEmpty:['Пустое письмо','Leeres Schreiben','Empty letter'],wrEmptyS:['Адрес и номер дела уже внутри','Adresse und Aktenzeichen sind schon drin','Address and reference are already in'],
+ sentT:['Отправленные письма','Gesendete Schreiben','Sent letters'],date:['Дата','Datum','Date'],save:['Сохранить','Speichern','Save'],del:['Удалить','Löschen','Delete'],none:['Пока пусто','Noch leer','Empty so far'],photo:['фото','Foto','photo']};
 const bsvt3=(k,o)=>{let s=cv5n(bsvS3[k]||[k]);if(o)for(const p in o)s=s.split('%'+p).join(o[p]);return s};
 const bsvAnts=()=>{const o=bsvD();if(!Array.isArray(o.ant))o.ant=[];return o.ant};
 const bsvLogs=()=>{const o=bsvD();if(!Array.isArray(o.log))o.log=[];return o.log};
@@ -93,50 +95,22 @@ const BSV_TPL={
  adr:{n:'Adressänderung',subj:()=>'Mitteilung meiner neuen Anschrift',body:c=>`hiermit teile ich Ihnen mit, dass sich meine Anschrift ab dem ${c.today} geändert hat.\n\nNeue Anschrift:\n${c.addr||'…'}\n\nBitte senden Sie künftige Post an diese Anschrift.`},
  nach:{n:'Unterlagen nachreichen',subj:c=>`Nachreichung von Unterlagen${c.rd?' – Ihr Schreiben vom '+c.rd:''}`,body:()=>`anbei übersende ich Ihnen die angeforderten Unterlagen:\n\n- \n- \n\nBitte bestätigen Sie mir den Eingang.`},
  stand:{n:'Sachstandsanfrage',subj:c=>`Sachstandsanfrage${c.ant?' – '+c.ant:''}`,body:c=>`am ${c.antD||'…'} habe ich ${c.ant?'meinen Antrag „'+c.ant+'“':'einen Antrag'} gestellt. Bis heute habe ich keine Nachricht von Ihnen erhalten.\n\nBitte teilen Sie mir den aktuellen Stand der Bearbeitung mit.`},
- frei:{n:'Freier Text',subj:()=>'',body:()=>''}};
-let bsvBr=null;
+ frei:{n:'Leeres Schreiben',subj:()=>'',body:()=>''}};
 function bsvMe(){let me={};try{me=ja()}catch{}const name=[me.first,me.mid,me.last].filter(Boolean).join(' ')||((g.user&&[g.user.first,g.user.last].filter(Boolean).join(' '))||'');const addr=String(me.addr||(bsvD().nf||{}).addr||'').trim();const mail=String(me.email||(g.user&&g.user.email)||'').trim();return{name,addr,mail}}
 function bsvAz(it,ant){if(ant&&ant.az)return'Aktenzeichen: '+ant.az;const n=(it.nums||[]).find(z=>!z.s&&z.v&&/aktenzeichen|steuernummer|kundennummer|bg-nummer|kindergeld|versicherungsnummer|\baz\b/i.test(z.t||''));return n?(n.t+': '+n.v):''}
+/* the letter's subject and text (sender, office, date, signature come from the «Briefe» editor itself) */
 function bsvLetter(b){const it=bsvGet(b.it)||{},me=bsvMe(),ant=b.ant&&bsvAnts().find(z=>z.id===b.ant),tp=BSV_TPL[b.tpl]||BSV_TPL.frei;
- const today=bsvDE(x(new Date())),c={objW:/finanzamt|familienkasse/i.test(it.n||'')||it.src==='fa'||it.src==='fk'?'Einspruch':(b.objW||'Widerspruch'),kind:b.kind,rd:bsvDE(b.rdate),plus4w:bsvDE(bsvAddDay(x(new Date()),28)),today,addr:me.addr,ant:ant&&ant.t,antD:ant&&bsvDE(ant.d)};
- if(b.objW)c.objW=b.objW;const city=(me.addr.match(/\d{5}\s+([^\n,]+)/)||[])[1]||((g.cityX&&g.cityX.name)||'');
- const to=[it.n,...String(it.addr||'').split(/\s*,\s*/)].filter(Boolean).join('\n'),az=b.az!=null?b.az:bsvAz(it,ant),subj=tp.subj(c);
- return{subj,text:[me.name,me.addr,me.mail,'',to,'',(city?city.trim()+', ':'')+today,'',subj,az,'','Sehr geehrte Damen und Herren,','',tp.body(c),'','Mit freundlichen Grüßen','','',me.name].filter((l,j,a)=>!(l===''&&a[j-1]==='')).join('\n').replace(/^\n+/,'')}}
-function bsvBrNew(o){bsvBr=Object.assign({it:'',tpl:'frei',rdate:'',kind:'',objW:'',ant:'',doc:'',via:'ein',trk:''},o||{});const L2=bsvLetter(bsvBr);bsvBr.subj=L2.subj;bsvBr.text=L2.text;R('bsvbr')}
-function bsvBrScreen(){const b=bsvBr,it=bsvGet(b.it)||{},me=bsvMe();
- return`<div class="screen dhome bsv bsvbr">${bsvHdr(bsvt3('br'),'bsvbrx')}
- <div class="bsvhd sm"><span class="bsvemo big">${i(it.e||'🏛️')}</span><h3>${i(it.n||'—')}</h3></div>
- <label class="bsvl">${i(bsvt3('tpl'))}</label><div class="bsvchips">${Object.entries(BSV_TPL).map(([k,t])=>`<button type="button" class="${b.tpl===k?'on':''}" data-act="bsvbrtpl" data-k="${k}">${i(t.n)}</button>`).join('')}</div>
- ${me.addr?'':`<p class="vhint">${i(bsvt3('noAddr'))}</p>`}
- <label class="bsvl">${i(bsvt3('txt'))}</label><textarea class="field bsvbrt" data-brf="text" rows="16" spellcheck="true" lang="de">${i(b.text)}</textarea>
- <label class="bsvl">${i(bsvt3('via'))}</label><div class="bsvchips">${['ein','post','mail','fax','hand'].map(k=>`<button type="button" class="${b.via===k?'on':''}" data-act="bsvbrvia" data-k="${k}">${i(bsvt3('v_'+k))}</button>`).join('')}</div>
- ${b.via==='ein'?`<label class="bsvl">${i(bsvt3('trk'))}</label><input class="field" data-brf="trk" value="${i(b.trk||'')}" placeholder="RR 1234 5678 9DE" autocomplete="off">`:''}
- <div class="bsvbra"><button type="button" class="dcadd gold" data-act="bsvbrprint">${i(bsvt3('print'))}</button>
- <button type="button" class="dcadd" data-act="bsvbrpdf">${i(bsvt3('pdf'))}</button>
- <div class="bsv2c"><button type="button" class="bsvsm" data-act="bsvbrmail">${i(bsvt3('mail'))}</button><button type="button" class="bsvsm" data-act="bsvbrcopy">${i(bsvt3('copy'))}</button></div>
- <button type="button" class="dcadd" data-act="bsvbrsent">✓ ${i(bsvt3('sent'))}</button></div></div>`}
-document.addEventListener('input',e=>{const t=e.target;if(!bsvBr||m.route!=='bsvbr'||!t.dataset||!t.dataset.brf)return;bsvBr[t.dataset.brf]=t.value},!0);
-function bsvBrPrint(){const b=bsvBr;if(!b)return;const it=bsvGet(b.it)||{};const doc=`<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${i(b.subj||'Brief')}</title>
-<style>@page{size:A4;margin:25mm 20mm 20mm 25mm}body{font:11.5pt/1.45 Georgia,"Times New Roman",serif;color:#000;max-width:170mm;margin:12mm auto;padding:0 6mm;white-space:pre-wrap}</style></head><body>${i(b.text)}</body>
-<script>setTimeout(function(){try{print()}catch(e){}},500)<\/script></html>`;
- try{const u=URL.createObjectURL(new Blob([doc],{type:'text/html'}));const w=window.open(u,'_blank');if(!w){const a=document.createElement('a');a.href=u;a.download=(it.n||'Brief').replace(/[^\wäöüß -]+/gi,'')+'.html';a.click()}setTimeout(()=>URL.revokeObjectURL(u),6e4)}catch(e){Hooks.err('bsvprint',e)}}
-function bsvBrSent(){const b=bsvBr;if(!b)return;const it=bsvGet(b.it)||{};bsvLogs().unshift({id:bsvId(),it:b.it,k:'sent',d:x(new Date()),txt:b.subj||BSV_TPL[b.tpl].n,via:b.via,trk:b.via==='ein'?String(b.trk||'').trim():''});
- try{g.drafts=g.drafts||[];g.drafts.unshift({id:V(),to:it.mail||it.n||'',subj:b.subj||'',text:b.text,at:Date.now(),sent:!0})}catch{}
- if(b.ant){const a=bsvAnts().find(z=>z.id===b.ant);if(a)a.asked=x(new Date())}
- bsvQuiet();$();bsvToast(bsvt3('sentOk'));const id=b.it;bsvBr=null;const h=m.hist||[];while(h.length&&h[h.length-1].route==='bsvbr')h.pop();if(bsvGet(id)){bsvSel=id;R('bsvi',void 0,!0)}else R('bsv',void 0,!0)}
-
-/* the letter as an A4 PDF (drawn on pages, same PDF writer as the rest of the app) — shared through the phone's own menu,
-   so an e-mail goes out from the user's own mail app and address */
-function bsvPdfPages(text){const W=1240,H2=1754,ml=148,mr=118,mt=148,mb=130,fs=24,lh=34,P=[];let c,x2,y;
- const page=()=>{c=document.createElement('canvas');c.width=W;c.height=H2;x2=c.getContext('2d');x2.fillStyle='#fff';x2.fillRect(0,0,W,H2);x2.fillStyle='#000';x2.font=`${fs}px Georgia, "Times New Roman", serif`;x2.textBaseline='top';y=mt;P.push(c)};page();
- for(const para of String(text||'').split('\n')){const words=para.split(/(\s+)/);let line='';const out=[];
-  for(const w of words){const t=line+w;if(x2.measureText(t).width>W-ml-mr&&line.trim()){out.push(line);line=w.trimStart()}else line=t}out.push(line);
-  for(const l of out){if(y+lh>H2-mb)page();x2.fillText(l,ml,y);y+=lh}}
- return P}
-async function bsvBrPdf(){const b=bsvBr;if(!b)return;const it=bsvGet(b.it)||{};const bytes=Kn(bsvPdfPages(b.text));const blob=new Blob([bytes],{type:'application/pdf'});
- const name=((b.subj||'Brief')+' – '+(it.n||'')).replace(/[^\wäöüßÄÖÜ .,–-]+/g,'').slice(0,80).trim()+'.pdf';
- const f=new File([blob],name,{type:'application/pdf'});try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:name});return}}catch(e){if(e&&e.name==='AbortError')return}
- try{await xu({blob,name})}catch{const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),6e4)}}
+ const c={objW:b.objW||(it.src==='fa'||it.src==='fk'||/finanzamt|familienkasse/i.test(it.n||'')?'Einspruch':'Widerspruch'),kind:b.kind,rd:bsvDE(b.rdate),plus4w:bsvDE(bsvAddDay(x(new Date()),28)),today:bsvDE(x(new Date())),addr:me.addr,ant:ant&&ant.t,antD:ant&&bsvDE(ant.d)};
+ const az=bsvAz(it,ant),subj=tp.subj(c),body=[az,az?'':null,'Sehr geehrte Damen und Herren,','',tp.body(c)].filter(l=>l!=null).join('\n').replace(/\n+$/,'')+'\n';return{subj,body,text:body}}
+function bsvToBriefe(o){const b=Object.assign({it:'',tpl:'frei',rdate:'',kind:'',objW:'',ant:''},o||{}),it=bsvGet(b.it)||{},L2=bsvLetter(b);
+ try{p_({to:it.mail||'',toName:it.n||'',subj:L2.subj,body:L2.body,lang:'de'})}catch(e){Hooks.err('bsvbriefe',e);R('letters')}}
+const bsvBrNew=o=>bsvToBriefe(o);
+const BSV_WR=[['frei','📝'],['obj','⚖️'],['frist','⏳'],['nach','📎'],['stand','❓'],['adr','🏠']];
+function bsvWriteSheet(itId){const it=bsvGet(itId)||{};
+ H(bsvt3('wrT',{o:it.n||''}),`<div class="bsvadd3">${BSV_WR.map(([k,e],j)=>`<button type="button" class="bsvbig${j?'':' main'}" data-wr="${k}"><span>${e}</span><span><b>${i(k==='frei'?bsvt3('wrEmpty'):BSV_TPL[k].n)}</b>${k==='frei'?`<small>${i(bsvt3('wrEmptyS'))}</small>`:''}</span></button>`).join('')}</div>`,
+ el=>{el.classList.add('bsvsh');el.addEventListener('click',e=>{const b=e.target.closest('[data-wr]');if(!b)return;el.remove();const k=b.dataset.wr,an=k==='stand'&&bsvAnts().filter(z=>z.it===itId&&(z.st||1)<3).sort((x1,x2)=>x2.d.localeCompare(x1.d))[0];bsvToBriefe({it:itId,tpl:k,ant:an?an.id:''})})})}
+/* what the user sent from «Briefe» to this office's e-mail */
+function bsvSentTo(it){try{const ml=String(it.mail||'').toLowerCase();if(!ml)return[];return(g.drafts||[]).filter(d=>d&&d.sent&&String(d.to||'').toLowerCase().includes(ml)).sort((a,b)=>(b.at||0)-(a.at||0))}catch{return[]}}
 
 /* --- «Из письма»: what the letterhead says, the user ticks what to keep --- */
 const bsvNorm=a=>String(a||'').toLowerCase().replace(/str\.|straße|strasse/g,'str').replace(/[^a-z0-9äöüß]/g,'');
@@ -231,27 +205,21 @@ Hooks.on('screen',h=>{try{if(typeof h!=='string'||m.route!=='bsvi')return h;cons
  const A=bsvAnts().filter(a=>a.it===it.id).sort((a,b)=>(a.st||1)-(b.st||1)||b.d.localeCompare(a.d));
  const ants=A.length?`<h3 class="odh">${i(bsvt3('ants'))}</h3>${A.map(bsvAntCard).join('')}`:'';
  const LG=bsvLogs().filter(l=>l.it===it.id),sh=bsvLogAll?LG:LG.slice(0,5);
+ const SD=bsvSentTo(it),sent=SD.length?`<h3 class="odh">${i(bsvt3('sentT'))}</h3><div class="dhcard odl">${SD.slice(0,6).map(d=>`<button type="button" class="odr" data-act="go" data-to="letters">${dhi('mail')}<span><b>${i(d.subj||'—')}</b><small>${i(d.at?vA(x(new Date(d.at))):'')}</small></span>${dhi('chev','sm')}</button>`).join('')}</div>`:'';
  const log=`<h3 class="odh">${i(bsvt3('log'))}</h3>${LG.length?`<div class="dhcard bsvlgs">${sh.map(bsvLogRow).join('')}${LG.length>sh.length?`<button type="button" class="bsvmore" data-act="bsvlogall">${i(bsvt3('all',{n:LG.length}))}</button>`:''}</div>`:''}
 `;
  /* v16: one row «＋ ещё» instead of empty sections */
  const more=`<div class="bsvmorer"><b>＋ ${i(bsvt3('moreR'))}</b><div class="bsvfxb">${[['bsvtnew','',bsvt2('tEdit')],['bsvantadd','',bsvt3('antOne')],['bsvlog','call',bsvt3('k_call')],['bsvlog','sent',bsvt3('k_sent')],['bsvlog','got',bsvt3('k_got')],['bsvyadd','',bsvt2('yr')]].map(([a2,k,t])=>`<button type="button" data-act="${a2}" ${k?`data-k="${k}"`:''} data-id="${i(it.id)}">${i(t)}</button>`).join('')}</div></div>`;
- return h.replace('<button type="button" class="bsvdel',lets+ants+(LG.length?log:'')+more+'<button type="button" class="bsvdel')}catch(e){Hooks.err('bsv3screen',e);return h}});
-Hooks.on('render',()=>{if(m.route!=='bsvi')bsvLogAll=0;if(m.route!=='bsvbr')bsvBr=null;if(m.route!=='bsvfl')bsvFl=null});
+ return h.replace('<button type="button" class="bsvdel',lets+sent+ants+(LG.length?log:'')+more+'<button type="button" class="bsvdel')}catch(e){Hooks.err('bsv3screen',e);return h}});
+Hooks.on('render',()=>{if(m.route!=='bsvi')bsvLogAll=0;if(m.route!=='bsvfl')bsvFl=null});
 function bsvDl3(){try{return Ke().items.filter(d=>d.bsvL&&!d.bsvL.no&&d.bsvL.ev&&(d.bsvL.dl||d.bsvL.frist)).map(d=>{const L2=d.bsvL;return{k:L2.dl||L2.frist,t:(L2.dl?'Frist':L2.obj||'Frist')+': '+bsvOffName(L2),w:d.title||'',act:`data-act="dzopen" data-id="${d.id}"`}})}catch{return[]}}
-['bsvbr','bsvfl'].forEach(r=>{OD_OK.add(r);Te.includes(r)||Te.push(r)});
-(Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='bsvfl'){if(!bsvFl)return setTimeout(()=>R('bsv'),0),'<div class="screen"></div>';return bsvFlScreen()}
- if(m.route==='bsvbr'){if(!bsvBr)return setTimeout(()=>R('bsv'),0),'<div class="screen"></div>';return bsvBrScreen()}}catch(e){Hooks.err('bsvbrscreen',e)}});
+['bsvfl'].forEach(r=>{OD_OK.add(r);Te.includes(r)||Te.push(r)});
+(Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='bsvfl'){if(!bsvFl)return setTimeout(()=>R('bsv'),0),'<div class="screen"></div>';return bsvFlScreen()}}catch(e){Hooks.err('bsvbrscreen',e)}});
 
 /* --- actions --- */
-Hooks.act('bsvbrnew',d=>bsvBrNew({it:d.id}));
+Hooks.act('bsvbrnew',d=>bsvToBriefe({it:d.id}));Hooks.act('bsvwrite',d=>bsvWriteSheet(d.id));
 Hooks.act('bsvfld',d=>{if(!bsvFl)return;bsvFl.dOn=d.k;bsvRe()});Hooks.act('bsvflsave',()=>{try{bsvFlSave()}catch(e){Hooks.err('bsvflsave',e)}});
 Hooks.act('bsvflx',()=>{bsvFl=null;const h=m.hist||[];if(h.length){const p=h.pop();return R(p.route,p.route==='cat'?p.cat:void 0,!0)}R('bsv',void 0,!0)});
-Hooks.act('bsvbrx',()=>{const id=bsvBr&&bsvBr.it;bsvBr=null;const h=m.hist||[];if(h.length){const p=h.pop();return R(p.route,p.route==='cat'?p.cat:void 0,!0)}if(id&&bsvGet(id)){bsvSel=id;return R('bsvi',void 0,!0)}R('bsv',void 0,!0)});
-Hooks.act('bsvbrtpl',d=>{if(!bsvBr)return;bsvBr.tpl=d.k;const L2=bsvLetter(bsvBr);bsvBr.subj=L2.subj;bsvBr.text=L2.text;bsvRe()});
-Hooks.act('bsvbrvia',d=>{if(!bsvBr)return;bsvBr.via=d.k;bsvRe()});
-Hooks.act('bsvbrprint',()=>bsvBrPrint());Hooks.act('bsvbrpdf',()=>{bsvBrPdf().catch(e=>Hooks.err('bsvbrpdf',e))});Hooks.act('bsvbrcopy',()=>{if(bsvBr)bsvCopy(bsvBr.text)});
-Hooks.act('bsvbrmail',()=>{const b=bsvBr;if(!b)return;const it=bsvGet(b.it)||{};if(!it.mail)return bsvToast(bsvt3('noMail'));location.href='mailto:'+encodeURIComponent(it.mail).replace('%40','@')+'?subject='+encodeURIComponent(b.subj||'')+'&body='+encodeURIComponent(b.text||'')});
-Hooks.act('bsvbrsent',()=>{try{bsvBrSent()}catch(e){Hooks.err('bsvbrsent',e)}});
 Hooks.act('bsvlcal',d=>bsvLDo(d.id,doc=>{const L2=doc.bsvL,it=bsvLTie(doc),on=it?it.n:bsvOffName(L2),k=L2.dl||L2.frist,e=L2.dl?'Antwort':L2.obj||'Frist';if(!k||L2.ev)return;
  const ev=bsvEv({title:bsvt3('calT',{e,o:on}),date:k,note:doc.title||''});ev.bsvD=doc.id;L2.ev=ev.id;const rd=bsvAddDay(k,-7);
  if(bsvDays(rd)>=0){const tk={id:V(),t:bsvt3('calR',{e,o:on}),due:rd,prio:2,proj:'',done:!1,bsvD:doc.id};g.tasks.push(tk);L2.tk=tk.id}bsvQuiet();bsvToast(bsvt2('tSaved').split(',')[0])}));
@@ -272,9 +240,6 @@ Hooks.css('docs-behoerden-3',`
 .bsvlb{display:flex;flex-direction:column;gap:4px;background:#fff8e6!important;border:1px solid #f0dca8!important;margin:6px 0 10px}.bsvlb small{color:var(--muted);font-size:13px;line-height:1.38}.bsvlb small b{color:var(--ink)}
 .bsvlb .bsvfxb a,.bsvlb .bsvfxb button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 12px;font-size:13.5px;font-weight:600;color:var(--ink)!important}
 .bsvlb .bsvfxb .on{background:var(--green);border-color:var(--green);color:#fff!important}.bsvlb .bsvfxb .x{margin-left:auto;color:var(--muted)!important}.bsvok{font-size:13.5px;font-weight:600;color:#2c8a4b;padding:8px 4px}
-.bsvbr .bsvl{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:14px 2px 6px}.bsvbr .field{width:100%;box-sizing:border-box}
-.bsvbrt{font:14.5px/1.45 Georgia,"Times New Roman",serif!important;height:440px!important;min-height:440px!important;max-height:none!important;resize:vertical;white-space:pre-wrap}
-.bsvbra{display:flex;flex-direction:column;gap:8px;margin-top:12px}.bsvbra .bsv2c .bsvsm{width:100%;padding:12px}
 .bsvant{padding-top:10px!important}.bsvat{display:flex;flex-direction:column;gap:2px;border:0;background:none;padding:0 0 6px;text-align:left;width:100%}.bsvat b{font-weight:700}.bsvat small{color:var(--muted);font-size:13px}
 .bsvst2{display:flex;gap:10px;align-items:flex-start;padding:5px 0;font-size:14.5px}.bsvst2 i{width:13px;height:13px;border-radius:50%;background:var(--line);margin-top:4px;flex:none}.bsvst2.ok i{background:#2c8a4b}.bsvst2.now i{background:#d9a017;box-shadow:0 0 0 4px #fbecc4}.bsvst2 small{color:var(--muted);font-size:12.5px}
 .bsvant .bsvfxb button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 12px;font-size:13.5px;font-weight:600}.bsvant .bsvfxb .on{background:var(--green);border-color:var(--green);color:#fff!important}

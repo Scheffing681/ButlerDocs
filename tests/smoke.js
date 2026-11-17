@@ -448,6 +448,12 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('a second copy of a document is pointed out',await T(()=>!!document.querySelector('.ndbar [data-id=ndd1]')));
  await T(()=>document.querySelector('.ndbar [data-ndk]').click());await p.waitForTimeout(200);check('…«keep both» closes it and remembers',await T(()=>!document.querySelector('.ndbar')&&window.__T.Ke().items.find(d=>d.id==='ndd2').ndOk===1));
  await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>!/^ndd/.test(d.id));W.save();W.R('home')});await p.waitForTimeout(300)}
+ /* v24: the page follows the real screen height (bottom bar never below the edge); quick-action words are not cut */
+ where='steady bottom';{const vp=p.viewportSize();await T(()=>window.__T.R('home'));await p.waitForTimeout(300);
+ await p.setViewportSize({width:vp.width,height:vp.height-70});await p.waitForTimeout(800);
+ check('a shorter screen makes the page shorter too (bottom bar stays on screen)',await T(()=>parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--ssvh'))===innerHeight));
+ await p.setViewportSize(vp);await p.waitForTimeout(800);check('…and back to full height',await T(()=>parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--ssvh'))===innerHeight));
+ check('quick-action labels fit without cutting a word',await T(()=>[...document.querySelectorAll('.dhqr span')].every(x=>x.scrollWidth<=x.clientWidth+1)))}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

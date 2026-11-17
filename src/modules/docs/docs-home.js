@@ -13,7 +13,7 @@ const dhS={
  ai:['Butler AI','Butler AI','Butler AI','Butler AI','Butler AI','Butler AI','Butler AI'],aiS:['Искать, упорядочить, подготовить','Suchen, organisieren, vorbereiten','Search, organise, prepare','Szukaj, porządkuj, przygotuj','Ara, düzenle, hazırla','Chercher, organiser, préparer','Buscar, organizar, preparar'],
  today:['Сегодня','Heute','Today','Dziś','Bugün','Aujourd’hui','Hoy'],all:['Все','Alle','All','Wszystko','Tümü','Tout','Todo'],none:['На сегодня ничего не запланировано','Für heute nichts geplant','Nothing planned for today','Na dziś nic nie zaplanowano','Bugün için plan yok','Rien de prévu aujourd’hui','Nada previsto para hoy'],
  quick:['Быстрые действия','Schnellaktionen','Quick actions','Szybkie akcje','Hızlı işlemler','Actions rapides','Acciones rápidas'],
- q_scan:['Сканировать','Scannen','Scan','Skanuj','Tara','Scanner','Escanear'],q_add:['Добавить','Hinzufügen','Add','Dodaj','Ekle','Ajouter','Añadir'],q_pack:['Собрать пакет','Paket erstellen','Build package','Pakiet','Paket oluştur','Dossier PDF','Crear paquete'],q_rem:['Напоминание','Erinnerung','Reminder','Przypomnienie','Hatırlatma','Rappel','Recordatorio'],q_mail:['E-Mail','E-Mail','E-mail','E-mail','E-posta','E-mail','E-mail'],
+ q_scan:['Сканировать','Scannen','Scan','Skanuj','Tara','Scanner','Escanear'],q_add:['Добавить','Hinzu\u00ADfügen','Add','Dodaj','Ekle','Ajouter','Añadir'],q_pack:['Собрать пакет','Paket erstellen','Build package','Pakiet','Paket oluştur','Dossier PDF','Crear paquete'],q_rem:['Напоминание','Erinne\u00ADrung','Reminder','Przypomnienie','Hatırlatma','Rappel','Recordatorio'],q_mail:['E-Mail','E-Mail','E-mail','E-mail','E-posta','E-mail','E-mail'],
  morning:['Доброе утро','Guten Morgen','Good morning','Dzień dobry','Günaydın','Bonjour','Buenos días'],day:['Добрый день','Guten Tag','Good afternoon','Dzień dobry','İyi günler','Bonjour','Buenas tardes'],evening:['Добрый вечер','Guten Abend','Good evening','Dobry wieczór','İyi akşamlar','Bonsoir','Buenas tardes'],night:['Доброй ночи','Gute Nacht','Good night','Dobranoc','İyi geceler','Bonne nuit','Buenas noches']};
 const dht=k=>cv5n(dhS[k]);
 /* light green look as the default of this app (can still be changed under Design) */
@@ -95,7 +95,7 @@ Hooks.css('docs-home',`
 .dhrow{display:flex;align-items:center;gap:12px;padding:9px 0;color:var(--ink)}.dhrow+.dhrow{border-top:1px solid var(--line)}.dhrow .dhi{color:var(--green);flex:none}.dhrow .tm{min-width:44px;font-variant-numeric:tabular-nums}.dhrow .tx{flex:1;font-size:15px}
 .dhnone{color:var(--muted);margin:8px 0 2px;font-size:14.5px}
 .dhqh{display:block;font-size:19px;margin-bottom:10px}.dhqr{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
-.dhqr button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 2px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}.dhqr .dhi{color:var(--green);width:26px;height:26px}.dhqr span{font-size:10.5px;max-width:100%;overflow-wrap:anywhere;line-height:1.15;text-align:center}
+.dhqr button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 2px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}.dhqr .dhi{color:var(--green);width:26px;height:26px}.dhqr span{font-size:10.5px;max-width:100%;overflow-wrap:normal;word-break:normal;-webkit-hyphens:manual;hyphens:manual;white-space:normal;line-height:1.15;text-align:center}
 `);
 /* ===== Nachlass: one place for provision and instructions for the family ===== */
 const dnS={t:['Наследство и забота','Nachlass & Vorsorge','Estate & provision','Spadek i zabezpieczenie','Miras ve önlem','Succession & prévoyance','Herencia y previsión'],
@@ -126,3 +126,9 @@ Hooks.css('docs-nachlass',`
 .dnh{margin:20px 0 8px;font-size:17px}.dnta{width:100%;min-height:150px;line-height:1.45}.dnst{display:block;color:var(--green);font-size:13px;margin-top:6px;min-height:16px}
 .dnnote{color:var(--muted);font-size:12.5px;line-height:1.4;margin-top:10px}
 `);
+
+/* v24: quick-action labels never break inside a word («Scanne-n»): with big text the five labels shrink together until the longest word fits */
+function dhQFit(){try{const S=[...document.querySelectorAll('.dhqr span')];if(!S.length)return;S.forEach(x=>x.style.fontSize='');
+ const f0=parseFloat(getComputedStyle(S[0]).fontSize)||10.5;let f=f0;const over=()=>S.some(x=>x.scrollWidth>x.clientWidth+.5);
+ while(over()&&f>f0*.6){f-=.5;S.forEach(x=>x.style.fontSize=f+'px')}}catch(e){Hooks.err('dhqfit',e)}}
+Hooks.on('render',()=>requestAnimationFrame(dhQFit));addEventListener('resize',()=>setTimeout(dhQFit,120));

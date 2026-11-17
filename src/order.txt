@@ -51,3 +51,4 @@ docs/finanzen.js
 docs/layout-docs.js
 docs/finanzen2.js
 docs/no-doubles.js
+docs/backup-reminder.js

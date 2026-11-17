@@ -456,6 +456,13 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('a shorter screen makes the page shorter too (bottom bar stays on screen)',await T(()=>parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--ssvh'))===innerHeight));
  await p.setViewportSize(vp);await p.waitForTimeout(800);check('…and back to full height',await T(()=>parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--ssvh'))===innerHeight));
  check('quick-action labels fit without cutting a word',await T(()=>[...document.querySelectorAll('.dhqr span')].every(x=>x.scrollWidth<=x.clientWidth+1)))}
+ /* v27: backup reminder on home */
+ where='backup reminder';{await T(()=>{const W=window.__T,G=W.g();G.bkLast=Date.now()-40*864e5;delete G.bkrHide;W.Ke().items.push({id:'bkd1',title:'ТЕСТ Ausweis',files:[],pages:[],ts:Date.now()-9*864e5});W.save();W.R('home')});await p.waitForTimeout(500);
+ check('an old backup (40 days) is reminded on home',await T(()=>/40/.test(document.querySelector('.bkrcard')?.innerText||'')&&!!document.querySelector('.bkrcard [data-act=bkrgo]')));
+ await T(()=>document.querySelector('.bkrcard [data-act=bkrlater]').click());await p.waitForTimeout(400);check('«Später» hides it for a week',await T(()=>!document.querySelector('.bkrcard')&&!!window.__T.g().bkrHide));
+ await T(()=>{const W=window.__T,G=W.g();delete G.bkrHide;G.bkLast=Date.now()-3*864e5;W.save();W.R('home')});await p.waitForTimeout(400);check('a fresh backup shows no reminder',await T(()=>!document.querySelector('.bkrcard')));
+ await T(()=>{const W=window.__T,G=W.g();delete G.bkLast;W.save();W.R('home')});await p.waitForTimeout(400);check('no backup at all, documents older than 2 days → reminder',await T(()=>!!document.querySelector('.bkrcard')));
+ await T(()=>{const W=window.__T,G=W.g();G.bkLast=Date.now();W.Ke().items=W.Ke().items.filter(d=>d.id!=='bkd1');W.save();W.R('home')});await p.waitForTimeout(300)}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

@@ -206,6 +206,15 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.en-sheet [data-en=night]').click());await p.waitForTimeout(700);check('a design is chosen and kept',await T(()=>window.__T.g().enTheme==='night'&&document.querySelector('.login').dataset.en==='night'&&!document.querySelector('.en-sheet')));
  await T(()=>document.querySelector('.login .en-gear').click());await p.waitForTimeout(400);check('⚙ opens the designs too',await T(()=>!!document.querySelector('.en-sheet')));await T(()=>document.querySelector('.en-sheet [data-en=ivory]').click());await p.waitForTimeout(600);
  await T(()=>document.querySelector('.login [data-act=face]').click());await waitIn();check('back inside after the entrance checks',await T(()=>window.__T.m().logged))}
+ /* Butler Docs: own city with postal code (docs/my-city.js) */
+ where='my city';{await p.route('**/nominatim.openstreetmap.org/**',r=>r.fulfill({contentType:'application/json',body:JSON.stringify([{lat:'50.1106',lon:'8.6820',display_name:'60311, Frankfurt am Main',address:{postcode:'60311',city:'Frankfurt am Main',state:'Hessen',country_code:'de'}}])}));
+ await T(()=>{document.querySelectorAll('.dtsheet').forEach(s=>s.remove());window.__T.R('mycal');window.__T.L.cv5set()});await p.waitForTimeout(700);
+ check('the region step has a city/postal-code field instead of the list',await T(()=>!!document.getElementById('mcq')&&!document.querySelector('select[data-cv5=city]')));
+ await T(()=>{const q=document.getElementById('mcq');q.value='60311 Frankfurt';q.form.requestSubmit()});await p.waitForTimeout(800);
+ check('typed place is found',await T(()=>/60311 Frankfurt am Main/.test(document.querySelector('.mcres').innerText)));
+ await T(()=>document.querySelector('.mchit').click());await p.waitForTimeout(600);
+ check('the chosen place becomes the city of the app',await T(()=>{const G=window.__T.g();return G.city==='my'&&G.cityX.zip==='60311'&&Math.abs(G.cityX.lat-50.1106)<1e-3}));
+ await T(()=>{window.__T.L.cv5close();window.__T.R('home')});await p.unroute('**/nominatim.openstreetmap.org/**')}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

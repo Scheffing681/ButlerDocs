@@ -27,7 +27,7 @@
 | `scanner/` | the document scanner |
 | `kits/` | ready-made style sets (hidden) |
 | `backup/` | data protection, safety copy, restore the latest copy |
-| `docs/` | Butler Docs: document home, Nachlass; `entrance.js` is the sign-in screen (10 designs, living clock, 4 icons, hold the clock 3 s to choose); `vault.js` is the Сейф (separate shelf; optional code → AES-256-GCM encryption of list, files, scanned text); `only-docs.js` keeps the app to the original plan (white list of screens, ▦ All sections, Deadlines, «+» with document actions) |
+| `docs/` | Butler Docs: document home, Nachlass; `entrance.js` is the sign-in screen (10 designs, living clock, 4 icons, hold the clock 3 s to choose); `my-city.js` lets you type your city or postal code in the calendar region step; `vault.js` is the Сейф (separate shelf; optional code → AES-256-GCM encryption of list, files, scanned text); `only-docs.js` keeps the app to the original plan (white list of screens, ▦ All sections, Deadlines, «+» with document actions) |
 
 Removed in Butler Docs (step 2): the finance modules, shopping/recipes/pantry/meal plan, «Зеркало себя», the travel globe colours, the philosophy library texts (`books/`) and the health/fitness/Kakebo pictures. Butler keeps them.
 

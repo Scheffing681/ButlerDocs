@@ -45,3 +45,4 @@ docs/entrance.js
 docs/my-city.js
 docs/steady-screen.js
 docs/behoerden.js
+docs/behoerden-termine.js

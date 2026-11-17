@@ -13,7 +13,7 @@ const copy=(s,d)=>{for(const n of fs.readdirSync(s)){if(n==='.git'||n==='tests')
 copy(ROOT,TMP);
 {const f=path.join(TMP,'app.js');let s=fs.readFileSync(f,'utf8');const end='v(),Sq()})();',i=s.trimEnd().lastIndexOf(end);
  if(i<0)throw new Error('app.js end marker not found');
- s=s.slice(0,i)+'try{window.__T={vault:odV,bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
+ s=s.slice(0,i)+'try{window.__T={vault:odV,bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1)},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
 const MIME={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webmanifest':'application/manifest+json','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
 const srv=http.createServer((q,r)=>{const u=decodeURIComponent(q.url.split('?')[0]);const f=path.join(TMP,u==='/'?'index.html':u);if(!f.startsWith(TMP)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);return r.end()}r.writeHead(200,{'content-type':MIME[path.extname(f)]||'application/octet-stream'});fs.createReadStream(f).pipe(r)});
 
@@ -284,6 +284,40 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>window.__T.R('home'));await p.waitForTimeout(400);check('«Auf die Startseite» shows it on home',await T(()=>/Finanzamt/.test(document.querySelector('.bsvhome')?.innerText||'')));
  await T(()=>window.__T.R('bsv'));await p.waitForTimeout(500);check('the questions are not asked again',await T(()=>!document.querySelector('.bsvwzs')));
  await clk('nav.nav [data-od]',400);check('bottom bar «Задачи» opens tasks',await rt()==='tasks');await T(()=>window.__T.R('home'))}
+ /* Behörden stage 2 (docs/behoerden-termine.js): Frist → Termin, Termin-Mappe, yearly duties, search, Butler AI, Nachlass */
+ where='behoerden 2';{const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||400)};
+ const iso=n=>{const d=new Date();d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)};
+ await T(([e])=>{const W=window.__T;document.querySelectorAll('.dtsheet').forEach(s=>s.remove());W.Ke().items.push({id:'bsfx1',title:'Aufenthaltstitel ТЕСТ',kind:'other',end:e,files:[],pages:[],ts:Date.now(),folder:'f1',dcat:'personal'});W.Ke().items.push({id:'bsfx2',title:'Reisepass fern',kind:'other',end:'2031-01-01',files:[],pages:[],ts:Date.now(),folder:'f1',dcat:'personal',dtype:'passport'});W.save();W.R('bsv')},[iso(40)]);await p.waitForTimeout(500);
+ check('a residence title running out shows «Ausländerbehörde» with a Termin button',await T(()=>{const f=window.__T.bsv.fx();return f.length===1&&f[0].src==='ausl'&&!!document.querySelector('.bsvfx [data-act=bsvfxhave][data-k=ausl]')}));
+ await clk('.bsvfx [data-act=bsvfxhave]',500);check('«Термин уже есть» opens the Termin form with the right checklist',await rt()==='bsvtf'&&await T(()=>document.querySelector('[data-tf=what]').value==='Aufenthaltstitel ТЕСТ'&&/Aufenthaltstitel/.test(document.querySelector('.bsvbr').innerText)));
+ await T(()=>{document.querySelector('[data-act=bsvtsave]').click()});await p.waitForTimeout(200);check('a Termin needs a date',await rt()==='bsvtf'&&await T(()=>!!document.querySelector('[data-bsvterr]').textContent));
+ await T(([d])=>{const f=(s,v)=>{const x=document.querySelector(s);x.value=v;x.dispatchEvent(new Event('input',{bubbles:true}))};f('[data-tf=date]',d);f('[data-tf=time]','09:30');const c=document.querySelector('[data-tb="0"]');c.checked=true;c.dispatchEvent(new Event('change',{bubbles:true}));const k=document.querySelector('[data-td=bsfx1]');k.checked=true;k.dispatchEvent(new Event('change',{bubbles:true}));document.querySelector('[data-act=bsvtsave]').click()},[iso(9)]);await p.waitForTimeout(600);
+ const tm=await T(()=>{const W=window.__T,t=W.bsv.D().terms[0],G=W.g();return{t,ev:G.events.find(e=>e.id===t.ev),tk:G.tasks.find(k=>k.id===t.tk)}});
+ check('saved Termin opens as Termin-Mappe',await rt()==='bsvtv'&&tm.t.docs[0]==='bsfx1'&&tm.t.bring[0].ok===true);
+ check('…it is in the calendar',!!tm.ev&&tm.ev.date===iso(9)&&tm.ev.time==='09:30'&&/Ausländerbehörde/.test(tm.ev.title),JSON.stringify(tm.ev));
+ check('…and a reminder the day before',!!tm.tk&&tm.tk.due===iso(8)&&!tm.tk.done,JSON.stringify(tm.tk));
+ check('no «saved · open» bar left behind',await T(()=>!document.querySelector('.bd8sv')));
+ check('the deadline banner is gone once a Termin exists',await T(()=>window.__T.bsv.fx().length===0));
+ check('Mappe shows the document to bring',await T(()=>!!document.querySelector('.bsvtv [data-act=dzopen][data-id=bsfx1]')));
+ await T(()=>{const c=document.querySelector('[data-tvb="1"]');c.checked=true;c.dispatchEvent(new Event('change',{bubbles:true}))});check('ticking «Mitbringen» is kept',await T(()=>window.__T.bsv.D().terms[0].bring[1].ok===true&&/2 /.test(document.querySelector('.bsvrd').innerText)));
+ await T(()=>window.__T.R('dsrok'));await p.waitForTimeout(400);check('«Сроки» show the Termin',await T(()=>/Termin: Ausländerbehörde/.test(document.querySelector('.screen').innerText)));
+ await T(()=>window.__T.R('home'));await p.waitForTimeout(400);check('home shows the coming Termin',await T(()=>!!document.querySelector('.bsvhm2 [data-act=bsvtopen]')));
+ const tid=tm.t.id;await T(id=>window.__T.L.bsvtopen({id}),tid);await p.waitForTimeout(400);await clk('[data-act=bsvtdone]',400);
+ check('«Erledigt» takes it out of the calendar and tasks',await T(id=>{const W=window.__T,G=W.g(),t=W.bsv.D().terms.find(z=>z.id===id);return t.done&&!G.events.some(e=>e.bsvT===id)&&!G.tasks.some(k=>k.bsvT===id)},tid));
+ await clk('[data-act=bsvtdel]',200);await clk('[data-act=bsvtdel]',400);check('delete a Termin',await T(id=>!window.__T.bsv.D().terms.some(z=>z.id===id),tid)&&await rt()==='bsvi');
+ /* yearly duties */
+ await T(()=>window.__T.R('bsv'));await p.waitForTimeout(400);await clk('[data-act=bsvyadd]',400);await clk('[data-yt=kfzv]',200);await clk('[data-ysave]',400);
+ const y=await T(()=>{const W=window.__T,y=W.bsv.D().yr[0];return{y,ev:W.g().events.find(e=>e.id===y.ev)}});check('a yearly duty gets its next date and a yearly calendar entry',!!y.y&&/-11-30$/.test(y.y.next)&&y.ev&&y.ev.yearly===true,JSON.stringify(y));
+ const n0=y.y.next;await T(id=>window.__T.L.bsvydone({id}),y.y.id);await p.waitForTimeout(300);check('«✓» moves it one year on',await T(([id,n])=>{const z=window.__T.bsv.D().yr.find(q=>q.id===id);return z.next===String(+n.slice(0,4)+1)+n.slice(4)},[y.y.id,n0]));
+ /* search and Butler AI */
+ await T(()=>{const it=window.__T.bsv.D().items.find(x=>x.src==='ausl');it.nums=[{id:'nq1',t:'Aktenzeichen',v:'AZ-77/26',s:false,m:'26'},{id:'nq2',t:'Kundennummer',v:'SECRET-99',s:true,m:'99'}];window.__T.save()});
+ await T(()=>window.__T.R('search'));await p.waitForTimeout(300);await T(()=>{const q=document.querySelector('.screen input');q.value='Aktenzeichen';q.dispatchEvent(new Event('input',{bubbles:true}))});await p.waitForTimeout(600);
+ check('search finds own numbers in the offices',await T(()=>/AZ-77\/26/.test(document.getElementById('sres')?.innerText||'')));
+ await T(()=>{const q=document.querySelector('.screen input');q.value='SECRET';q.dispatchEvent(new Event('input',{bubbles:true}))});await p.waitForTimeout(500);check('search never shows secret numbers',await T(()=>!/SECRET-99/.test(document.getElementById('sres')?.innerText||'')));
+ const a=await T(()=>{const f=window.__T.bsv.ask;return[f('Aktenzeichen?'),f('Kundennummer?'),f('телефон Finanzamt'),f('напомни завтра позвонить в Finanzamt')].map(r=>r&&r.msg)});
+ check('Butler AI answers «Aktenzeichen?»',/AZ-77\/26/.test(a[0]||''),a[0]);check('…never says a secret number',!!a[1]&&!/SECRET-99/.test(a[1]),a[1]);check('…knows the phone of an office',/492/.test(a[2]||''),a[2]);check('…leaves «напомни …» to the tasks',!/492/.test(a[3]||''),a[3]);
+ await T(()=>window.__T.R('dnach'));await p.waitForTimeout(400);check('Nachlass links to the offices',await T(()=>!!document.querySelector('.dnr[data-to=bsv]')));
+ await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>!/^bsfx/.test(d.id));W.save();W.R('home')});await p.waitForTimeout(300)}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

@@ -168,6 +168,8 @@ function td9cmd(text){const t=String(text||'').trim().replace(/[.!]+$/,'');if(!t
   return{msg:td9f(td9('rTask'),{t:title,d:w.due?td9f(td9('rOn'),{d:td9dl(w.due)+(w.time?' '+w.time:'')}):''})}}
  if(TD9RX.letter.test(lt))return{msg:td9('rLet'),go:'letters'};
  if(TD9RX.cal.test(lt))return{msg:td9('rCal'),go:'mycal'};
+ /* other parts of the app can answer too (Butler Docs: offices, own numbers, Termine) */
+ try{const hk=Hooks.run('ask',null,t,lt);if(hk&&hk.msg)return hk}catch(e){}
  return null}
 Lr=(o=>async function(){const a=Ne.el&&Ne.el.querySelector('#ibin'),t=a?a.value.trim():'';if(!t||Ne.busy||Ne.pend)return o.apply(this,arguments);let r=null;try{r=td9cmd(t)}catch(e){r=null}if(!r)return o.apply(this,arguments);
   a.value='';Wt(i(r.msg),'ans');try{Cy(r.msg)}catch(e){}if(r.run)setTimeout(()=>{try{so()}catch(e){}r.run()},700);else if(r.go)setTimeout(()=>{try{so()}catch(e){}R(r.go)},1100);else v()})(Lr);

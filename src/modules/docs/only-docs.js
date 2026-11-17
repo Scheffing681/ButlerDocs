@@ -97,7 +97,7 @@ function odAll(){const x=[['scan','scan','data-act="go" data-to="sc9"'],['dl','c
 function odDays(k){try{const a=new Date();a.setHours(0,0,0,0);const b=new Date(k+'T00:00:00');return Math.round((b-a)/864e5)}catch{return 0}}
 function odDate(k){try{return new Date(k+'T00:00:00').toLocaleDateString(he(),{day:'numeric',month:'long',year:'numeric'})}catch{return k}}
 function odSrok(){let L2=[];try{L2=typeof IZ==='function'?IZ():[]}catch(e){Hooks.err('odsrok',e)}
- try{if(typeof vDl==='function')L2=L2.concat(vDl()).sort((a,b)=>a.k<b.k?-1:1)}catch{}
+ try{if(typeof vDl==='function')L2=L2.concat(vDl());if(typeof bsvDl==='function')L2=L2.concat(bsvDl());L2.sort((a,b)=>a.k<b.k?-1:1)}catch{}
  const row=t=>{const n=odDays(t.k),c=n<0?'r':n<=90?'y':'g',w=n<0?odt('past'):n===0?odt('today'):odt('inN').replace('%n',n);
   return`<button type="button" class="odr ${c}" ${t.act||''}><i></i><span><b>${i(t.t)}</b><small>${i([t.w,odDate(t.k)].filter(Boolean).join(' · '))}</small></span><em>${i(w)}</em></button>`};
  const grp=(k,f)=>{const R2=L2.filter(f);return R2.length?`<h3 class="odh">${i(odt(k))}</h3><div class="dhcard odl">${R2.map(row).join('')}</div>`:''};

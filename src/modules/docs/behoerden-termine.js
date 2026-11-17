@@ -111,7 +111,7 @@ const BSV_YT=[['st',{t:'Steuererklärung abgeben',md:'07-31',iv:1,src:'fa'}],['k
  ['wba',{t:'Weiterbewilligungsantrag Bürgergeld',iv:1,src:'jc'}],['ausw',{t:'Ausweise der Familie prüfen',md:'01-15',iv:1,src:'buerger'}]];
 const bsvNextMd=md=>{const y=new Date().getFullYear();let k=y+'-'+md;if(bsvDays(k)<0)k=(y+1)+'-'+md;return k};
 let bsvYEd=null;
-function bsvYSheet(id){const Y=id&&bsvYs().find(z=>z.id===id);bsvYEd=Y?JSON.parse(JSON.stringify(Y)):{id:'',t:'',next:'',iv:1,it:''};const o=bsvD();
+function bsvYSheet(id,itId){const Y=id&&bsvYs().find(z=>z.id===id);bsvYEd=Y?JSON.parse(JSON.stringify(Y)):{id:'',t:'',next:'',iv:1,it:itId||''};const o=bsvD();
  const tpl=Y?'':`<div class="bsvchips">${BSV_YT.map(([k,d])=>`<button type="button" data-yt="${k}">${i(d.t)}</button>`).join('')}</div>`;
  const body=()=>`${tpl}<label class="bsvl">${i(bsvt2('yrT'))}</label><input class="field" data-yf="t" value="${i(bsvYEd.t)}">
   <div class="bsv2c"><div><label class="bsvl">${i(bsvt2('yrNext'))}</label><input class="field" type="date" data-yf="next" value="${i(bsvYEd.next)}"></div><div><label class="bsvl">${i(bsvt2('yrIv'))}</label><select class="field" data-yf="iv"><option value="1" ${bsvYEd.iv==1?'selected':''}>${i(bsvt2('iv1'))}</option><option value="2" ${bsvYEd.iv==2?'selected':''}>${i(bsvt2('iv2'))}</option></select></div></div>
@@ -120,7 +120,7 @@ function bsvYSheet(id){const Y=id&&bsvYs().find(z=>z.id===id);bsvYEd=Y?JSON.pars
  H(bsvt2('yrQ'),`<div class="bsvys">${body()}</div>`,el=>{el.classList.add('bsvsh');let arm=0;
   el.addEventListener('input',e=>{const t=e.target;if(t.dataset.yf)bsvYEd[t.dataset.yf]=t.dataset.yf==='iv'?+t.value:t.value});el.addEventListener('change',e=>{const t=e.target;if(t.dataset.yf)bsvYEd[t.dataset.yf]=t.dataset.yf==='iv'?+t.value:t.value});
   el.addEventListener('click',e=>{const t=e.target,yt=t.closest('[data-yt]');
-   if(yt){const d=BSV_YT.find(z=>z[0]===yt.dataset.yt)[1];const it=d.src&&o.items.find(z=>z.src===d.src);Object.assign(bsvYEd,{t:d.t,iv:d.iv,next:d.md?bsvNextMd(d.md):bsvYEd.next,it:it?it.id:bsvYEd.it});el.querySelector('.bsvys').innerHTML=body();return}
+   if(yt){const d=BSV_YT.find(z=>z[0]===yt.dataset.yt)[1];const it=!bsvYEd.it&&d.src&&o.items.find(z=>z.src===d.src);Object.assign(bsvYEd,{t:d.t,iv:d.iv,next:d.md?bsvNextMd(d.md):bsvYEd.next,it:it?it.id:bsvYEd.it});el.querySelector('.bsvys').innerHTML=body();return}
    if(t.closest('[data-ysave]')){const y=bsvYEd;y.t=String(y.t||'').trim();if(!y.t||!/^\d{4}-\d\d-\d\d$/.test(y.next||'')){el.querySelector('[data-yerr]').textContent=bsvt2('needD');return}
     const Y2=bsvYs();let z=y.id&&Y2.find(q=>q.id===y.id);if(z)Object.assign(z,y);else{z=Object.assign(y,{id:bsvId()});Y2.push(z)}bsvYSync(z);$();el.remove();bsvToast(bsvt('saved')+' ✓');v();return}
    if(t.closest('[data-ydel]')){if(!arm){arm=1;t.closest('[data-ydel]').textContent=bsvt2('delQ');t.closest('[data-ydel]').classList.add('on');return}const z=bsvYs().find(q=>q.id===bsvYEd.id);if(z){z.done=1;bsvYSync(z)}bsvD().yr=bsvYs().filter(q=>q.id!==bsvYEd.id);$();el.remove();v()}})})}
@@ -132,11 +132,11 @@ const bsvYRow=y=>{const n=bsvDays(y.next),c=n<0?'r':n<=30?'y':'g';return`<div cl
 Hooks.on('screen',h=>{try{if(typeof h!=='string')return h;
  if(m.route==='bsv'&&!bsvOrd){const F=bsvFxList(),U2=bsvUp().slice(0,4),Y=bsvYs().slice().sort((a,b)=>a.next.localeCompare(b.next));
   const top=F.map(bsvFxCard).join('')+(U2.length?`<h3 class="odh">${i(bsvt2('tms'))}</h3><div class="dhcard odl">${U2.map(bsvTRow).join('')}</div>`:'');
-  const yr=`<h3 class="odh">${i(bsvt2('yr'))}</h3>${Y.length?`<div class="dhcard odl">${Y.map(bsvYRow).join('')}</div>`:''}<button type="button" class="bsvplus" data-act="bsvyadd">${i(bsvt2('yrAdd'))}</button>`;
-  h=h.replace('<button type="button" class="dhcard vline bsvmy"',top+'<button type="button" class="dhcard vline bsvmy"').replace('<button type="button" class="dhcard odadd" data-act="bsvcat"',yr+'<button type="button" class="dhcard odadd" data-act="bsvcat"')}
+  /* v16: yearly duties show only when there are some (added from a card: «＋ ещё → Ежегодно») */
+  const yr=Y.length?`<h3 class="odh">${i(bsvt2('yr'))}</h3><div class="dhcard odl">${Y.map(bsvYRow).join('')}</div>`:'';
+  h=h.replace('<span class="bsvmy"></span>',top).replace('<button type="button" class="bsvaddb" data-act="bsvcat"',yr+'<button type="button" class="bsvaddb" data-act="bsvcat"')}
  if(m.route==='bsvi'){const it=bsvGet(bsvSel);if(!it)return h;const T2=bsvTs().filter(t=>t.it===it.id).sort((a,b)=>b.date.localeCompare(a.date)),Y=bsvYs().filter(y=>y.it===it.id);
-  const add=`<button type="button" class="dhcard odadd bsvtadd" data-act="bsvtnew" data-id="${i(it.id)}">${bsvi('cal')}<span>${i(bsvt2('tNew'))}</span></button>`;
-  const blk=add+(T2.length?`<h3 class="odh">${i(bsvt2('tmy'))}</h3><div class="dhcard odl">${T2.map(bsvTRow).join('')}</div>`:'')+(Y.length?`<h3 class="odh">${i(bsvt2('yr'))}</h3><div class="dhcard odl">${Y.map(bsvYRow).join('')}</div>`:'');
+  const blk=(T2.length?`<h3 class="odh">${i(bsvt2('tmy'))}</h3><div class="dhcard odl">${T2.map(bsvTRow).join('')}</div>`:'')+(Y.length?`<h3 class="odh">${i(bsvt2('yr'))}</h3><div class="dhcard odl">${Y.map(bsvYRow).join('')}</div>`:'');
   h=h.replace('<button type="button" class="bsvdel',blk+'<button type="button" class="bsvdel')}
  if(m.route==='home'&&!g.dhOff){const F=bsvFxList(),U2=bsvUp().filter(t=>bsvDays(t.date)<=14).slice(0,2);if(F.length||U2.length){
   const rows=F.slice(0,2).map(f=>`<button type="button" class="odr ${f.n<0?'r':'y'}" data-act="go" data-to="bsv"><i></i><span><b>${i(f.t)}</b><small>${i(bsvOfName(f.src))} · ${i(f.n<0?bsvt2('past'):bsvWhen(f.k))}</small></span>${dhi('chev','sm')}</button>`).join('')+U2.map(bsvTRow).join('');
@@ -188,7 +188,7 @@ Hooks.act('bsvtdel',d=>{if(!bsvTDel){bsvTDel=1;v();setTimeout(()=>{if(bsvTDel){b
 Hooks.act('bsvfxadd',d=>{bsvAddSrc(d.k,!0)});
 Hooks.act('bsvfxhave',d=>{let it=bsvD().items.find(z=>z.src===d.k);if(!it)it=bsvAddSrc(d.k,!1);if(!it)return;let doc=null;try{doc=Ke().items.find(z=>z.id===d.doc)}catch{}bsvTNew(it.id,{doc:d.doc,what:doc?doc.title:''})});
 Hooks.act('bsvfxno',d=>{const o=bsvD();o.fx=o.fx||{};o.fx[d.id+':'+d.d]=1;$();v()});
-Hooks.act('bsvyadd',()=>bsvYSheet());Hooks.act('bsvyed',d=>bsvYSheet(d.id));
+Hooks.act('bsvyadd',d=>bsvYSheet('',d&&d.id));Hooks.act('bsvyed',d=>bsvYSheet(d.id));
 Hooks.act('bsvydone',d=>{const y=bsvYs().find(z=>z.id===d.id);if(!y)return;y.next=bsvAddY(y.next,y.iv==2?2:1);while(bsvDays(y.next)<0)y.next=bsvAddY(y.next,y.iv==2?2:1);y.last=x(new Date());bsvYSync(y);$();bsvToast(bsvt2('yrDone',{d:vA(y.next)}));v()});
 
 Hooks.css('docs-behoerden-2',`

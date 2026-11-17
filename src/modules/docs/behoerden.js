@@ -6,7 +6,10 @@
    - booking always happens on the office's own site — the app only keeps the right link at hand.
    - «secret» numbers are masked; once the vault has a code they are encrypted with the vault key (AES-GCM)
      and are shown only after the vault code. vault.js calls bsvSecIn / bsvSecOut when the code is set or removed.
-   - the prefilled addresses (63741 Aschaffenburg) are marked «bitte prüfen»: offices move and change hours. */
+   - v16 «simple»: the list holds only what the user added himself — no emergency numbers (the phone has them),
+     no ready-made sets and no prefilled addresses. Three ways to add: from a letter (the office's own letterhead —
+     the most current source), by pasting a link, or by hand with one smart field (phone, e-mail or link).
+     Dates are only suggested; nothing goes into the calendar without the user's «Внести». */
 const bsvS={
  t:['Ведомства и службы','Behörden & Services','Offices & services'],
  tS:['Термины, номера, ссылки','Termine, Nummern, Links','Appointments, numbers, links'],
@@ -50,12 +53,25 @@ const bsvS={
  wz2:['Для кого вести?','Für wen?','For whom?'],wz2S:['Ведомства у каждого свои — потом можно отметить, чьё это.','Jeder hat eigene Ämter – später lässt sich markieren, für wen.','Each person has their own offices – you can mark whose later.'],
  wz3:['Что Вам нужно?','Was brauchen Sie?','What do you need?'],wz3S:['Отметьте нужное. Остальное можно добавить потом.','Wählen Sie aus. Den Rest können Sie später hinzufügen.','Pick what you need. Add the rest later.'],
  next:['Дальше','Weiter','Next'],back:['Назад','Zurück','Back'],skip:['Пропустить','Überspringen','Skip'],wzDone:['Готово: добавлено %n','Fertig: %n hinzugefügt','Done: %n added'],
- here:['Здесь','Hier','Here']};
+ here:['Здесь','Hier','Here'],
+ search:['Поиск: имя, номер, Aktenzeichen…','Suche: Name, Nummer, Aktenzeichen …','Search: name, number, reference …'],
+ addH:['Добавить','Hinzufügen','Add'],aL:['Из письма','Aus einem Schreiben','From a letter'],aLS:['Скан → ведомство, адрес, номер дела — из шапки письма','Scan → Amt, Adresse, Aktenzeichen – aus dem Briefkopf','Scan → office, address, reference – from the letterhead'],
+ aU:['Вставить ссылку','Link einfügen','Paste a link'],aUS:['Скопировали ссылку на запись — вставили, готово','Link zur Terminbuchung kopiert – einfügen, fertig','Copied a booking link – paste it, done'],
+ aM:['Вручную','Selbst eintragen','By hand'],aMS:['Название и один контакт — 10 секунд','Name und ein Kontakt – 10 Sekunden','A name and one contact – 10 seconds'],
+ pickL:['Какое письмо?','Welches Schreiben?','Which letter?'],scanNew:['Сканировать письмо','Schreiben scannen','Scan a letter'],scanBack:['После скана вернитесь сюда и выберите письмо.','Nach dem Scannen hierher zurück und das Schreiben wählen.','After scanning, come back here and pick the letter.'],
+ noLet:['Сканов пока нет','Noch keine Scans','No scans yet'],
+ ct:['Телефон, e-mail или ссылка','Telefon, E-Mail oder Link','Phone, email or link'],ctAdd:['＋ ещё контакт','＋ weiterer Kontakt','＋ another contact'],
+ k_tel:['✓ понял: телефон','✓ erkannt: Telefon','✓ phone'],k_mail:['✓ понял: e-mail','✓ erkannt: E-Mail','✓ email'],k_url:['✓ понял: ссылка → кнопка «Termin»','✓ erkannt: Link → Knopf „Termin“','✓ link → “Termin” button'],k_url2:['✓ понял: ссылка','✓ erkannt: Link','✓ link'],k_no:['? не понял — проверьте','? nicht erkannt – bitte prüfen','? not recognised – please check'],
+ more:['Дополнительно (по желанию)','Weitere Angaben (optional)','More (optional)'],moreS:['адрес · часы · номера · значок · группа · кнопки · на главную','Adresse · Zeiten · Nummern · Symbol · Gruppe · Knöpfe · Startseite','address · hours · numbers · symbol · group · buttons · home'],
+ lnk:['Ссылка','Link','Link'],lnkN:['Как назвать','Bezeichnung','Name'],
+ noGrp:['Без группы','Ohne Gruppe','No group']};
 const bsvt=(k,o)=>{let s=cv5n(bsvS[k]||[k]);if(o)for(const p in o)s=s.split('%'+p).join(o[p]);return s};
 
 /* --- data --- */
-const bsvD=()=>{const o=g.bsv=g.bsv&&typeof g.bsv==='object'?g.bsv:{};if(!Array.isArray(o.items))o.items=[];if(!Array.isArray(o.grp))o.grp=['nf','amt','med','fam','ver'];
- if(!Array.isArray(o.ppl)||!o.ppl.length)o.ppl=[bsvt('me')];if(!o.nf||typeof o.nf!=='object')o.nf={};return o};
+const bsvD=()=>{const o=g.bsv=g.bsv&&typeof g.bsv==='object'?g.bsv:{};if(!Array.isArray(o.items))o.items=[];if(!Array.isArray(o.grp))o.grp=[];
+ if(!Array.isArray(o.ppl)||!o.ppl.length)o.ppl=[bsvt('me')];if(!o.nf||typeof o.nf!=='object')o.nf={};
+ /* v16: the emergency group (110/112/115 …) is gone — the phone has these numbers */
+ if(!o.v2){o.items=o.items.filter(x=>!(x&&x.grp==='nf'&&['gift','sperr','seel','b115'].includes(x.src)));o.grp=o.grp.filter(k=>k!=='nf');o.v2=1}return o};
 const bsvGL=k=>String(k||'').startsWith('c:')?String(k).slice(2):bsvS['g_'+k]?bsvt('g_'+k):String(k||'');
 const bsvGet=id=>bsvD().items.find(x=>x.id===id);
 const bsvId=()=>'bs'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
@@ -82,32 +98,16 @@ function bsvNow(s,at){const W=bsvHours(s);if(!W)return null;const d=at||new Date
   if(nx)return{open:!1,txt:bsvt('closed')+' · '+bsvt('opens',{d:k===0?bsvt('today'):k===1?bsvt('tom'):dn[dd],t:bsvHM(nx[0])})}}
  return{open:!1,txt:bsvt('closed')}}
 
-/* --- catalog (local data only where it was checked: 63741 Aschaffenburg, marked «bitte prüfen») --- */
+/* --- known offices: only names and symbols — used to recognise letters and to name a new entry (no prefilled data since v16) --- */
 const BSV_C=[
- ['nf','gift',{n:'Giftnotruf (Bayern)',e:'🧪',tel:'089 19240'}],['nf','sperr',{n:'Sperr-Notruf (Karten, Online-Banking)',e:'💳',tel:'116 116'}],
- ['nf','seel',{n:'Telefonseelsorge',e:'📞',tel:'0800 111 0 111'}],['nf','b115',{n:'Behördennummer 115',e:'☎️',tel:'115'}],
- ['amt','buerger',{n:'Bürgeramt',e:'🏛️'}],['amt','ausl',{n:'Ausländerbehörde',e:'🛂'}],['amt','fa',{n:'Finanzamt',e:'🧾',term:'https://www.elster.de/eportal/uebersichtservicezentren'}],
- ['amt','jc',{n:'Jobcenter',e:'💼',links:[{t:'jobcenter.digital',u:'https://www.jobcenter.digital'}]}],['amt','aa',{n:'Agentur für Arbeit',e:'🧑‍💼',tel:'0800 4 5555 00',term:'https://www.arbeitsagentur.de/eservices'}],
- ['amt','kfz',{n:'Kfz-Zulassung',e:'🚗'}],['amt','ord',{n:'Ordnungs- & Straßenverkehrsamt',e:'🚦'}],['amt','ag',{n:'Amtsgericht',e:'⚖️'}],
- ['amt','fk',{n:'Familienkasse',e:'👨‍👩‍👧',tel:'0800 4 5555 30',links:[{t:'Familienkasse online',u:'https://www.arbeitsagentur.de/familie-und-kinder'}]}],
- ['amt','drv',{n:'Deutsche Rentenversicherung',e:'📮',tel:'0800 1000 4800',term:'https://www.deutsche-rentenversicherung.de'}],
- ['amt','pol',{n:'Polizeiinspektion',e:'👮'}],
- ['med','kk',{n:'Krankenkasse',e:'🏥'}],['med','arzt',{n:'Hausarzt',e:'🩺',links:[{t:'116117 Termin',u:'https://www.116117.de'}]}],['med','zahn',{n:'Zahnarzt',e:'🦷'}],
- ['fam','schule',{n:'Schule / Kita',e:'🏫'}],['ver','verein',{n:'Verein',e:'⚽'}]];
-const BSV_AB={buerger:{n:'Bürgeramt Aschaffenburg',addr:'Dalbergstraße 15, 63739 Aschaffenburg',tel:'06021 330555',mail:'buergeramt@aschaffenburg.de',hrs:'Mo–Do 8–16, Fr 8–13',term:'https://www.aschaffenburg.de'},
- ausl:{n:'Ausländerbehörde Aschaffenburg',addr:'Dalbergstraße 15, 63739 Aschaffenburg',tel:'06021 330-0',hrs:'Mo–Do 8–16, Fr 8–13',links:[{t:'Online-Antrag Aufenthaltstitel',u:'https://www.bayernportal.de/dokumente/onlineverfahren/8198924057163'}]},
- fa:{n:'Finanzamt Aschaffenburg',addr:'Auhofstraße 13, 63741 Aschaffenburg',tel:'06021 492-0',hrs:'Mo–Mi 8:30–13, Do 8:30–17, Fr 8:30–12'},
- jc:{n:'Jobcenter Stadt Aschaffenburg',tel:'06021 390800',mail:'Jobcenter-Aschaffenburg@jobcenter-ge.de'},
- aa:{n:'Agentur für Arbeit Aschaffenburg',addr:'Memeler Straße 15, 63739 Aschaffenburg'},
- kfz:{n:'Kfz-Zulassung Aschaffenburg',tel:'06021 330-0',note:'Nur mit Termin'},
- ord:{n:'Ordnungs- & Straßenverkehrsamt Aschaffenburg',addr:'Wermbachstraße 30, 63739 Aschaffenburg',tel:'06021 330-1812'},
- ag:{n:'Amtsgericht Aschaffenburg',addr:'Erthalstraße 3, 63739 Aschaffenburg'}};
-function bsvLocal(){try{const o=bsvD(),c=g.cityX||{};return/^637[34]\d|aschaffenburg/i.test(String(o.plz||'').trim())||(!o.plz&&(/^637[34]\d/.test(String(c.zip||''))||/aschaffenburg/i.test(String(c.name||''))))}catch{return!1}}
-function bsvFrom(key){const c=BSV_C.find(x=>x[1]===key);if(!c)return null;const loc=bsvLocal()&&BSV_AB[key];
- const it=Object.assign({id:bsvId(),grp:c[0],src:key,who:[],links:[],nums:[],ts:Date.now()},JSON.parse(JSON.stringify(c[2])),loc?JSON.parse(JSON.stringify(loc)):{});
- if(loc&&c[2].links&&loc.links)it.links=c[2].links.concat(loc.links);if(loc)it.chk=1;return it}
+ ['amt','buerger',{n:'Bürgeramt',e:'🏛️'}],['amt','ausl',{n:'Ausländerbehörde',e:'🛂'}],['amt','fa',{n:'Finanzamt',e:'🧾'}],['amt','jc',{n:'Jobcenter',e:'💼'}],
+ ['amt','aa',{n:'Agentur für Arbeit',e:'🧑‍💼'}],['amt','kfz',{n:'Kfz-Zulassung',e:'🚗'}],['amt','ord',{n:'Ordnungs- & Straßenverkehrsamt',e:'🚦'}],['amt','ag',{n:'Amtsgericht',e:'⚖️'}],
+ ['amt','fk',{n:'Familienkasse',e:'👨‍👩‍👧'}],['amt','drv',{n:'Deutsche Rentenversicherung',e:'📮'}],['amt','pol',{n:'Polizei',e:'👮'}],
+ ['med','kk',{n:'Krankenkasse',e:'🏥'}],['med','arzt',{n:'Hausarzt',e:'🩺'}],['med','zahn',{n:'Zahnarzt',e:'🦷'}],['fam','schule',{n:'Schule / Kita',e:'🏫'}],['ver','verein',{n:'Verein',e:'⚽'}]];
+const BSV_AB={};const bsvLocal=()=>!1;
+function bsvFrom(key){const c=BSV_C.find(x=>x[1]===key);if(!c)return null;return{id:bsvId(),n:c[2].n,e:c[2].e,grp:'',src:key,who:[],links:[],nums:[],ts:Date.now()}}
 const bsvHasSrc=k=>bsvD().items.some(x=>x.src===k);
-function bsvAddSrc(key,open){if(bsvHasSrc(key))return null;const it=bsvFrom(key);if(!it)return null;const o=bsvD();o.items.push(it);if(!o.grp.includes(it.grp))o.grp.push(it.grp);$();if(open){bsvSel=it.id;R('bsvi');bsvToast(bsvt('added'))}return it}
+function bsvAddSrc(key,open){const ex=bsvD().items.find(x=>x.src===key);if(ex)return open?(bsvSel=ex.id,R('bsvi'),ex):null;const it=bsvFrom(key);if(!it)return null;bsvD().items.push(it);$();if(open){bsvSel=it.id;R('bsvi')}return it}
 
 /* --- secret numbers: masked; encrypted with the vault key once the vault has a code --- */
 const bsvSecAll=()=>bsvD().items.flatMap(it=>(it.nums||[]).filter(n=>n&&n.s));
@@ -140,26 +140,31 @@ const bsvRe=()=>{const s=document.scrollingElement||document.documentElement,y=s
 const bsvGo=r=>{const h=m.hist||[];while(h.length&&['bsve',r].includes(h[h.length-1].route))h.pop();R(r,void 0,!0)};
 let bsvSel=null,bsvEd=null,bsvOrd=0,bsvWho='',bsvDel=0;
 
-/* --- the list --- */
-function bsvRow(it){const st=it.hrs?bsvNow(it.hrs):null,sm=st?st.txt:[it.tel,it.addr].filter(Boolean)[0]||'';
+/* --- the list: only own entries; headers only for groups the user made --- */
+function bsvRow(it){const st=it.hrs?bsvNow(it.hrs):null,sn=(it.nums||[]).find(n=>!n.s&&n.v),sm=st?st.txt:sn?(sn.t+' '+sn.v):[it.tel,it.addr].filter(Boolean)[0]||'';
  const mv=bsvOrd?`<span class="bsvmv"><button type="button" data-act="bsvmv" data-id="${i(it.id)}" data-d="-1" aria-label="up">${bsvi('up')}</button><button type="button" data-act="bsvmv" data-id="${i(it.id)}" data-d="1" aria-label="down">${bsvi('down')}</button></span>`
   :it.tel?`<a class="bsvq" data-bsvcall="${i(it.id)}" href="${i(bsvTel(it.tel))}" aria-label="${i(bsvt('call'))}">${bsvi('tel')}</a>`:dhi('chev','sm');
- return`<div class="odr bsvrow"><button type="button" class="bsvhit" data-act="bsvopen" data-id="${i(it.id)}"><span class="bsvemo">${i(it.e||'🏛️')}</span><span><b>${i(it.n||'—')}${it.pin&&bsvOrd?' ★':''}</b>${sm?`<small class="${st?st.open?'on':'off':''}">${i(sm)}</small>`:''}</span></button>${mv}</div>`}
+ const q=[it.n,it.addr,it.tel,it.mail,it.note,...(it.nums||[]).filter(n=>!n.s).map(n=>n.t+' '+n.v)].filter(Boolean).join(' ').toLowerCase();
+ return`<div class="odr bsvrow" data-q="${i(q)}"><button type="button" class="bsvhit" data-act="bsvopen" data-id="${i(it.id)}"><span class="bsvemo">${i(it.e||'🏛️')}</span><span><b>${i(it.n||'—')}${it.pin&&bsvOrd?' ★':''}</b>${sm?`<small class="${st?st.open?'on':'off':''}">${i(sm)}</small>`:''}</span></button>${mv}</div>`}
+const bsvOwnG=k=>String(k||'').startsWith('c:');
 function bsvList(){const o=bsvD(),A=o.items.filter(it=>!bsvWho||!(it.who||[]).length||(it.who||[]).includes(bsvWho));
  const pin=bsvOrd?[]:A.filter(x=>x.pin),rest=bsvOrd?A:A.filter(x=>!x.pin);
- const grpK=[...o.grp,...rest.map(x=>x.grp).filter(k=>!o.grp.includes(k))].filter((k,j,a)=>a.indexOf(k)===j);
- const gs=grpK.map(k=>{const R2=rest.filter(x=>x.grp===k);if(!R2.length)return'';
-  const mv=bsvOrd?`<span class="bsvmv"><button type="button" data-act="bsvgmv" data-k="${i(k)}" data-d="-1" aria-label="up">${bsvi('up')}</button><button type="button" data-act="bsvgmv" data-k="${i(k)}" data-d="1" aria-label="down">${bsvi('down')}</button></span>`:'';
-  return`<h3 class="odh bsvgh"><span>${i(bsvGL(k))}</span>${mv}</h3><div class="dhcard odl">${R2.map(bsvRow).join('')}</div>`}).join('');
+ const free=rest.filter(x=>!bsvOwnG(x.grp)),G=[...o.grp.filter(bsvOwnG),...rest.map(x=>x.grp).filter(bsvOwnG)].filter((k,j,a)=>a.indexOf(k)===j);
+ const gmv=k=>bsvOrd?`<span class="bsvmv"><button type="button" data-act="bsvgmv" data-k="${i(k)}" data-d="-1" aria-label="up">${bsvi('up')}</button><button type="button" data-act="bsvgmv" data-k="${i(k)}" data-d="1" aria-label="down">${bsvi('down')}</button></span>`:'';
+ const gs=G.map(k=>{const R2=rest.filter(x=>x.grp===k);return R2.length?`<h3 class="odh bsvgh"><span>${i(bsvGL(k))}</span>${gmv(k)}</h3><div class="dhcard odl">${R2.map(bsvRow).join('')}</div>`:''}).join('');
  const chips=o.ppl.length>1?`<div class="bsvchips">${['',...o.ppl].map(p=>`<button type="button" class="${bsvWho===p?'on':''}" data-act="bsvwho" data-p="${i(p)}">${i(p||bsvt('all'))}</button>`).join('')}</div>`:'';
- const nf=bsvOrd?'':`<div class="bsvnf"><a class="b110" href="tel:110"><b>110</b><small>${i(bsvt('p110'))}</small></a><a class="b112" href="tel:112"><b>112</b><small>${i(bsvt('p112'))}</small></a><a class="b116" href="tel:116117"><b>116 117</b><small>${i(bsvt('p116'))}</small></a></div>
-  <button type="button" class="dhcard vline bsvmy" data-act="bsvnf">${bsvi('heart')}<span>${i(bsvt('nfMy'))}</span>${dhi('chev','sm')}</button>`;
- return`<div class="screen dhome bsv">${bsvHdr(bsvt('t'),'bsvback',o.items.length?`<button type="button" class="iconbtn bsvordb${bsvOrd?' on':''}" data-act="bsvord" aria-label="${i(bsvOrd?bsvt('done'):bsvt('ord'))}" title="${i(bsvOrd?bsvt('done'):bsvt('ord'))}">${bsvi(bsvOrd?'ok':'sort')}</button>`:'')}
- ${nf}${chips}
+ const any=pin.length||rest.length;
+ return`<div class="screen dhome bsv">${bsvHdr(bsvt('t'),'bsvback',o.items.length>1?`<button type="button" class="iconbtn bsvordb${bsvOrd?' on':''}" data-act="bsvord" aria-label="${i(bsvOrd?bsvt('done'):bsvt('ord'))}" title="${i(bsvOrd?bsvt('done'):bsvt('ord'))}">${bsvi(bsvOrd?'ok':'sort')}</button>`:'')}
+ ${o.items.length>3&&!bsvOrd?`<input class="field bsvsr" type="search" data-bsvsr placeholder="${i(bsvt('search'))}" autocomplete="off">`:''}
+ <span class="bsvmy"></span>${chips}
  ${pin.length?`<h3 class="odh">★ ${i(bsvt('pinned'))}</h3><div class="dhcard odl">${pin.map(bsvRow).join('')}</div>`:''}
- ${gs||(!pin.length?`<div class="dhcard"><p class="dhnone">${i(bsvt('empty'))}</p>${o.setup?'':`<button type="button" class="dcadd gold bsvwzb" data-act="bsvwz">${i(bsvt('wzGo'))}</button>`}</div>`:'')}
- ${bsvOrd?'':`<button type="button" class="dhcard odadd" data-act="bsvcat">${dhi('add')}<span>${i(bsvt('add'))}</span></button>
- <a class="dhcard bsv115" href="tel:115"><b>115</b><span>${i(bsvt('b115'))}</span>${bsvi('tel')}</a>`}</div>`}
+ ${free.length?`${G.length&&(pin.length||gs)?`<h3 class="odh">${i(bsvt('noGrp'))}</h3>`:''}<div class="dhcard odl">${free.map(bsvRow).join('')}</div>`:''}${gs}
+ ${any?'':`<div class="dhcard"><p class="dhnone">${i(bsvt('empty'))}</p></div>`}
+ ${bsvOrd?'':`<button type="button" class="bsvaddb" data-act="bsvcat">＋ ${i(bsvt('addH'))}</button>`}</div>`}
+/* live search in the list — no redraw */
+document.addEventListener('input',e=>{const t=e.target;if(!t||!t.matches||!t.matches('[data-bsvsr]'))return;const q=t.value.trim().toLowerCase();
+ document.querySelectorAll('.bsv .bsvrow').forEach(r=>{r.hidden=!!q&&!(r.dataset.q||'').includes(q)});
+ document.querySelectorAll('.bsv .dhcard.odl').forEach(c=>{if(!c.querySelector('.bsvrow'))return;const vis=[...c.querySelectorAll('.bsvrow')].some(r=>!r.hidden);c.hidden=!vis;const h=c.previousElementSibling;if(h&&h.matches('h3.odh'))h.hidden=!vis})},!0);
 
 /* --- one entry --- */
 function bsvCard(it){const st=it.hrs?bsvNow(it.hrs):null,acts=[];
@@ -172,7 +177,7 @@ function bsvCard(it){const st=it.hrs?bsvNow(it.hrs):null,acts=[];
  const lk=(it.links||[]).map(l=>{const u=bsvUrl(l.u);return u?`<a class="bsvlink" href="${i(u)}" ${/^https?:/i.test(u)?'target="_blank" rel="noopener"':''}>${bsvi(/^tel:/.test(u)?'tel':/^mailto:/.test(u)?'mail':'link')}<span>${i(l.t||l.u)}</span></a>`:''}).join('');
  const nums=(it.nums||[]).map(n=>`<div class="bsvnum"><span><small>${i(n.t||bsvt('numV'))}${n.s?' · '+bsvi('lock','sm'):''}</small><b>${i(n.s?bsvMask(n):n.v||'')}</b></span>${n.s?`<button type="button" data-act="bsvshow" data-id="${i(it.id)}" data-n="${i(n.id)}">${i(bsvt('show'))}</button>`:`<button type="button" data-act="bsvcp" data-id="${i(it.id)}" data-n="${i(n.id)}">${bsvi('copy')}<span>${i(bsvt('copy'))}</span></button>`}</div>`).join('');
  return`<div class="screen dhome bsv bsvc">${bsvHdr(bsvt('t'),'bsvback',`<button type="button" class="iconbtn" data-act="bsvedit" data-id="${i(it.id)}" aria-label="${i(bsvt('edit'))}">${bsvi('edit')}</button>`)}
- <div class="bsvhd"><span class="bsvemo big">${i(it.e||'🏛️')}</span><h3>${i(it.n||'—')}</h3><p>${i(bsvGL(it.grp))}${(it.who||[]).length?' · '+i(it.who.join(', ')):''}</p>
+ <div class="bsvhd"><span class="bsvemo big">${i(it.e||'🏛️')}</span><h3>${i(it.n||'—')}</h3>${bsvOwnG(it.grp)||(it.who||[]).length?`<p>${[bsvOwnG(it.grp)?i(bsvGL(it.grp)):'',(it.who||[]).length?i(it.who.join(', ')):''].filter(Boolean).join(' · ')}</p>`:''}
   ${st?`<em class="bsvst ${st.open?'on':'off'}">${i(st.txt)}</em>`:''}
   <button type="button" class="bsvpin${it.pin?' on':''}" data-act="bsvpin" data-id="${i(it.id)}">${bsvi('star')}<span>${i(bsvt('pin'))}</span></button></div>
  ${it.chk?`<div class="dhcard bsvchk"><span>${i(bsvt('chk'))}</span><button type="button" data-act="bsvok" data-id="${i(it.id)}">${i(bsvt('chkOk'))}</button></div>`:''}
@@ -183,92 +188,82 @@ function bsvCard(it){const st=it.hrs?bsvNow(it.hrs):null,acts=[];
  ${it.note?`<div class="dhcard"><small class="vlab">${i(bsvt('note'))}</small><p class="vnote">${i(it.note)}</p></div>`:''}
  <button type="button" class="bsvdel${bsvDel?' on':''}" data-act="bsvdel" data-id="${i(it.id)}">${i(bsvDel?bsvt('delQ'):bsvt('del'))}</button></div>`}
 
-/* --- the form: one entry, own links and buttons, own numbers --- */
-const BSV_EMO=['🏛️','🛂','🧾','💼','🚗','⚖️','👮','🚓','🚒','🚑','🩺','🦷','🏥','💊','🏫','⚽','🎵','⛪','🏦','📮','🔧','🏠','👨‍👩‍👧','🐾','📞','⭐','🕵️','🧪'];
-function bsvNew(){return{id:'',n:'',e:'🏛️',grp:'amt',who:[],tel:'',mail:'',addr:'',hrs:'',term:'',links:[],nums:[],pin:!1,home:!1,note:''}}
-function bsvForm(){const d=bsvEd,o=bsvD();const inp=(f,ph,t,v)=>`<input class="field" data-bf="${f}" type="${t||'text'}" placeholder="${i(ph||'')}" value="${i(v!=null?v:d[f]||'')}" autocomplete="off">`;
- const grps=[...o.grp,...(o.grp.includes(d.grp)?[]:[d.grp])];
- return`<div class="screen dhome bsv bsve">${bsvHdr(d.id?bsvt('edit'):bsvt('own'),'bsvback')}
+/* --- the form: a name and one smart field (phone, e-mail or link); the rest under «Дополнительно» --- */
+const BSV_EMO=['🏛️','🛂','🧾','💼','🚗','⚖️','👮','🩺','🦷','🏥','💊','🏫','⚽','🎵','⛪','🏦','📮','🔧','🏠','👨‍👩‍👧','🐾','📞','⭐','🕵️','🔗','🧪','🎓','🏢'];
+function bsvKind(v){v=String(v||'').trim();if(!v)return'';if(/^mailto:|^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(v))return'mail';if(/^tel:|^\+?[\d\s\/().-]{5,}$/.test(v)&&/\d{4}/.test(v.replace(/\D/g,'')))return'tel';if(/^https?:\/\//i.test(v)||/^[\w-]+(\.[\w-]+)+(\/\S*)?$/i.test(v))return'url';return'?'}
+const bsvHost=u=>{try{return new URL(bsvUrl(u)).hostname.replace(/^www\./,'')}catch{return String(u||'')}};
+function bsvNew(o){return Object.assign({id:'',n:'',e:'🏛️',grp:'',who:[],tel:'',mail:'',addr:'',hrs:'',term:'',links:[],nums:[],pin:!1,home:!1,note:'',ct:['']},o||{})}
+function bsvCtHint(v,first){const k=bsvKind(v);return k?bsvt(k==='url'?(first?'k_url':'k_url2'):k==='?'?'k_no':'k_'+k):''}
+function bsvForm(){const d=bsvEd,o=bsvD();if(!Array.isArray(d.ct))d.ct=[d.tel,d.mail,d.term].filter(Boolean).concat(d.tel||d.mail||d.term?[]:['']);
+ const inp=(f,ph,t,v)=>`<input class="field" data-bf="${f}" type="${t||'text'}" placeholder="${i(ph||'')}" value="${i(v!=null?v:d[f]||'')}" autocomplete="off">`;
+ const own=o.grp.filter(bsvOwnG);let firstUrl=!0;
+ const cts=d.ct.map((c,j)=>{const k=bsvKind(c),f=k==='url'&&firstUrl;if(k==='url')firstUrl=!1;return`<div class="bsvrowin"><input class="field" data-bct="${j}" placeholder="${i(bsvt('ct'))}" value="${i(c)}" autocomplete="off" inputmode="url"><button type="button" class="bsvsm" data-act="bsvpaste" data-c="${j}">${i(bsvt('paste'))}</button>${d.ct.length>1?`<button type="button" class="bsvsm x" data-act="bsvctrm" data-j="${j}" aria-label="${i(bsvt('del'))}">×</button>`:''}</div><small class="bsvkh${k==='?'?' no':''}" data-bkh="${j}">${i(bsvCtHint(c,f))}</small>`}).join('');
+ return`<div class="screen dhome bsv bsve">${bsvHdr(d.id?bsvt('edit'):bsvt('aM'),'bsvback')}
  <label class="bsvl">${i(bsvt('nm'))}</label>${inp('n',bsvt('nmPh'))}
- <label class="bsvl">${i(bsvt('sym'))}</label><div class="bsvemos">${BSV_EMO.map(e=>`<button type="button" class="${d.e===e?'on':''}" data-act="bsvemo" data-e="${i(e)}">${e}</button>`).join('')}</div>
- <label class="bsvl">${i(bsvt('grp'))}</label><div class="bsvchips">${grps.map(k=>`<button type="button" class="${d.grp===k?'on':''}" data-act="bsvgrp" data-k="${i(k)}">${i(bsvGL(k))}</button>`).join('')}</div>
- <div class="bsvrowin">${inp('ng',bsvt('newG'),'text','')}<button type="button" class="bsvsm" data-act="bsvng">＋</button></div>
- <label class="bsvl">${i(bsvt('who'))}</label><div class="bsvchips">${o.ppl.map(p=>`<button type="button" class="${(d.who||[]).includes(p)?'on':''}" data-act="bsvwhoe" data-p="${i(p)}">${i(p)}</button>`).join('')}</div>
- <div class="bsvrowin">${inp('np',bsvt('newP'),'text','')}<button type="button" class="bsvsm" data-act="bsvnp">＋</button></div>
- <label class="bsvl">${i(bsvt('termL'))}</label><div class="bsvrowin">${inp('term','https://…','url')}<button type="button" class="bsvsm" data-act="bsvpaste" data-f="term">${i(bsvt('paste'))}</button></div><p class="vhint">${i(bsvt('termS'))}</p>
- <label class="bsvl">${i(bsvt('tel'))}</label>${inp('tel','06021 …','tel')}
- <label class="bsvl">${i(bsvt('em'))}</label>${inp('mail','name@…','email')}
+ <label class="bsvl">${i(bsvt('ct'))}</label>${cts}
+ <button type="button" class="bsvplus" data-act="bsvctadd">${i(bsvt('ctAdd'))}</button>
+ <small class="verr" data-bsverr></small>
+ <button type="button" class="dcadd gold" data-act="bsvsave">${i(bsvt('save'))}</button>
+ <details class="vdet bsvmore" ${d.open?'open':''}><summary>${i(bsvt('more'))}<small>${i(bsvt('moreS'))}</small></summary>
  <label class="bsvl">${i(bsvt('addr'))}</label>${inp('addr','Straße 1, 12345 Ort')}
  <label class="bsvl">${i(bsvt('hrs'))}</label>${inp('hrs',bsvt('hrsPh'))}
- <label class="bsvl">${i(bsvt('btns'))}</label>
- ${(d.links||[]).map((l,j)=>`<div class="bsvlrow"><input class="field" data-bl="${j}" data-k="t" placeholder="${i(bsvt('btnT'))}" value="${i(l.t||'')}"><div class="bsvrowin"><input class="field" data-bl="${j}" data-k="u" placeholder="${i(bsvt('btnU'))}" value="${i(l.u||'')}"><button type="button" class="bsvsm" data-act="bsvpaste" data-l="${j}">${i(bsvt('paste'))}</button><button type="button" class="bsvsm x" data-act="bsvlrm" data-j="${j}" aria-label="${i(bsvt('del'))}">×</button></div></div>`).join('')}
- <button type="button" class="bsvplus" data-act="bsvladd">${i(bsvt('btnAdd'))}</button>
  <label class="bsvl">${i(bsvt('nums'))}</label><p class="vhint">${i(bsvt('numEx'))}</p>
  ${(d.nums||[]).map((n,j)=>`<div class="bsvlrow"><input class="field" data-bn="${j}" data-k="t" placeholder="${i(bsvt('numT'))}" value="${i(n.t||'')}"><div class="bsvrowin">${n.x?`<input class="field" disabled value="${i(bsvMask(n))}">`:`<input class="field" data-bn="${j}" data-k="v" placeholder="${i(bsvt('numV'))}" value="${i(n.v||'')}">`}<button type="button" class="bsvsm x" data-act="bsvnrm" data-j="${j}" aria-label="${i(bsvt('del'))}">×</button></div>
   <label class="bsvtog sm"><input type="checkbox" data-bn="${j}" data-k="s" ${n.s?'checked':''} ${n.x?'disabled':''}><span>${bsvi('lock','sm')} ${i(bsvt('numS'))}</span></label></div>`).join('')}
  <button type="button" class="bsvplus" data-act="bsvnadd">${i(bsvt('numAdd'))}</button>
+ <label class="bsvl">${i(bsvt('sym'))}</label><div class="bsvemos">${BSV_EMO.map(e=>`<button type="button" class="${d.e===e?'on':''}" data-act="bsvemo" data-e="${i(e)}">${e}</button>`).join('')}</div>
+ <label class="bsvl">${i(bsvt('grp'))}</label><div class="bsvchips"><button type="button" class="${bsvOwnG(d.grp)?'':'on'}" data-act="bsvgrp" data-k="">${i(bsvt('noGrp'))}</button>${own.map(k=>`<button type="button" class="${d.grp===k?'on':''}" data-act="bsvgrp" data-k="${i(k)}">${i(bsvGL(k))}</button>`).join('')}</div>
+ <div class="bsvrowin">${inp('ng',bsvt('newG'),'text','')}<button type="button" class="bsvsm" data-act="bsvng">＋</button></div>
+ <label class="bsvl">${i(bsvt('who'))}</label><div class="bsvchips">${o.ppl.map(p=>`<button type="button" class="${(d.who||[]).includes(p)?'on':''}" data-act="bsvwhoe" data-p="${i(p)}">${i(p)}</button>`).join('')}</div>
+ <div class="bsvrowin">${inp('np',bsvt('newP'),'text','')}<button type="button" class="bsvsm" data-act="bsvnp">＋</button></div>
+ <label class="bsvl">${i(bsvt('btns'))}</label>
+ ${(d.links||[]).map((l,j)=>`<div class="bsvlrow"><input class="field" data-bl="${j}" data-k="t" placeholder="${i(bsvt('btnT'))}" value="${i(l.t||'')}"><div class="bsvrowin"><input class="field" data-bl="${j}" data-k="u" placeholder="${i(bsvt('btnU'))}" value="${i(l.u||'')}"><button type="button" class="bsvsm" data-act="bsvpaste" data-l="${j}">${i(bsvt('paste'))}</button><button type="button" class="bsvsm x" data-act="bsvlrm" data-j="${j}" aria-label="${i(bsvt('del'))}">×</button></div></div>`).join('')}
+ <button type="button" class="bsvplus" data-act="bsvladd">${i(bsvt('btnAdd'))}</button>
  <label class="bsvl">${i(bsvt('note'))}</label><textarea class="field" data-bf="note" rows="3">${i(d.note||'')}</textarea>
  <label class="bsvtog"><input type="checkbox" data-bf="pin" ${d.pin?'checked':''}><span>★ ${i(bsvt('pin'))}</span></label>
- <label class="bsvtog"><input type="checkbox" data-bf="home" ${d.home?'checked':''}><span>⌂ ${i(bsvt('home'))}</span></label>
- <small class="verr" data-bsverr></small>
- <button type="button" class="dcadd gold" data-act="bsvsave">${i(bsvt('save'))}</button><button type="button" class="bsvcan" data-act="bsvback">${i(bsvt('cancel'))}</button></div>`}
+ <label class="bsvtog"><input type="checkbox" data-bf="home" ${d.home?'checked':''}><span>⌂ ${i(bsvt('home'))}</span></label></details>
+ <button type="button" class="bsvcan" data-act="bsvback">${i(bsvt('cancel'))}</button></div>`}
 /* every keystroke goes into the draft, so a redraw never loses what was typed */
 document.addEventListener('input',e=>{const t=e.target;if(!bsvEd||m.route!=='bsve'||!t.closest||!t.closest('.bsve'))return;const d=bsvEd;
  if(t.dataset.bf){if(t.type==='checkbox')d[t.dataset.bf]=t.checked;else d[t.dataset.bf]=t.value}
+ else if(t.dataset.bct!=null){d.ct[+t.dataset.bct]=t.value;let fu2=!0;d.ct.forEach((c,j)=>{const k=bsvKind(c),h=document.querySelector(`[data-bkh="${j}"]`);if(h){h.textContent=bsvCtHint(c,k==='url'&&fu2);h.classList.toggle('no',k==='?')}if(k==='url')fu2=!1})}
  else if(t.dataset.bl!=null){const l=d.links[+t.dataset.bl];if(l)l[t.dataset.k]=t.value}
  else if(t.dataset.bn!=null){const n=d.nums[+t.dataset.bn];if(n)n[t.dataset.k]=t.type==='checkbox'?t.checked:t.value}},!0);
 document.addEventListener('change',e=>{const t=e.target;if(t&&t.type==='checkbox'&&bsvEd&&m.route==='bsve'&&t.closest&&t.closest('.bsve'))t.dispatchEvent(new Event('input',{bubbles:!0}))},!0);
+document.addEventListener('toggle',e=>{if(bsvEd&&e.target&&e.target.matches&&e.target.matches('.bsvmore'))bsvEd.open=e.target.open},!0);
 function bsvErr(k){const e=document.querySelector('[data-bsverr]');if(e)e.textContent=k?bsvt(k):''}
 async function bsvSave(){const d=bsvEd;if(!d)return;d.n=String(d.n||'').trim();if(!d.n){bsvErr('needN');return}
+ if(Array.isArray(d.ct)){const C=d.ct.map(c=>String(c||'').trim()).filter(Boolean);if(C.some(c=>bsvKind(c)==='?')){bsvErr('badU');return}
+  const old=(d.links||[]).filter(l=>!l.ct);let tel='',mail='',term='';const ex=[];
+  C.forEach(c=>{const k=bsvKind(c),v=c.replace(/^(tel:|mailto:)/i,'');if(k==='tel'){if(!tel)tel=v;else ex.push({t:bsvt('tel'),u:'tel:'+v.replace(/[^\d+]/g,''),ct:1})}else if(k==='mail'){if(!mail)mail=v;else ex.push({t:v,u:'mailto:'+v,ct:1})}else if(k==='url'){if(!term)term=c;else ex.push({t:bsvHost(c),u:c,ct:1})}});
+  d.tel=tel;d.mail=mail;d.term=term;d.links=old.concat(ex)}
  if(d.term&&!bsvUrl(d.term)){bsvErr('badU');return}
- d.links=(d.links||[]).map(l=>({t:String(l.t||'').trim(),u:String(l.u||'').trim()})).filter(l=>l.u);if(d.links.some(l=>!bsvUrl(l.u))){bsvErr('badU');return}
+ d.links=(d.links||[]).map(l=>Object.assign({t:String(l.t||'').trim(),u:String(l.u||'').trim()},l.ct?{ct:1}:{})).filter(l=>l.u);if(d.links.some(l=>!bsvUrl(l.u))){bsvErr('badU');return}
  d.nums=(d.nums||[]).filter(n=>n.x||String(n.v||'').trim()).map(n=>{if(!n.id)n.id=bsvId();if(n.v!=null){n.v=String(n.v).trim();n.m=n.v.slice(-2)}n.s=!!n.s;return n});
  const sec=d.nums.some(n=>n.s&&n.v!=null);if(sec&&sfHas()&&!sfKey)return sfAsk(()=>bsvSave());
- const o=bsvD();delete d.ng;delete d.np;['tel','mail','addr','hrs','term','note'].forEach(k=>{d[k]=String(d[k]||'').trim()});
+ const o=bsvD();delete d.ng;delete d.np;delete d.ct;delete d.open;['tel','mail','addr','hrs','term','note'].forEach(k=>{d[k]=String(d[k]||'').trim()});
  let it=d.id&&bsvGet(d.id);if(it)Object.assign(it,d);else{it=Object.assign(d,{id:bsvId(),ts:Date.now()});o.items.push(it)}
- if(!o.grp.includes(it.grp))o.grp.push(it.grp);
+ if(bsvOwnG(it.grp)&&!o.grp.includes(it.grp))o.grp.push(it.grp);
  if(sec&&sfHas()&&sfKey)await bsvSecIn();$();bsvEd=null;bsvSel=it.id;bsvToast(bsvt('saved')+' ✓');bsvGo('bsvi')}
 
-/* --- catalog sheet --- */
-function bsvCat(){const L2=g2=>BSV_C.filter(c=>c[0]===g2).map(([,k,d])=>{const has=bsvHasSrc(k),loc=bsvLocal()&&BSV_AB[k];
-  return`<button type="button" class="odr" data-bsvk="${i(k)}" ${has?'disabled':''}><span class="bsvemo">${d.e}</span><span><b>${i(loc&&loc.n||d.n)}</b>${d.tel||loc?`<small>${i([d.tel||loc&&loc.tel,loc&&loc.addr].filter(Boolean).join(' · '))}</small>`:''}</span><em>${has?'✓ '+i(bsvt('has')):'＋'}</em></button>`}).join('');
- H(bsvt('addQ'),`<div class="bsvcat"><button type="button" class="dhcard vline" data-bsvown>${dhi('add')}<span><b>${i(bsvt('own'))}</b><small>${i(bsvt('ownS'))}</small></span></button>
-  ${['nf','amt','med','fam','ver'].map(k=>`<h3 class="odh">${i(bsvGL(k))}</h3><div class="odl">${L2(k)}</div>`).join('')}</div>`,
-  el=>{el.classList.add('bsvsh');el.addEventListener('click',e=>{const b=e.target.closest('[data-bsvk]');if(b&&!b.disabled){el.remove();bsvAddSrc(b.dataset.bsvk,!0);return}
-   if(e.target.closest('[data-bsvown]')){el.remove();bsvEd=bsvNew();R('bsve')}})})}
-
-/* --- own emergency data --- */
-function bsvNf(){const n=bsvD().nf,F=[['addr','nfAddr'],['blood','nfBlood'],['all','nfAll'],['med','nfMed'],['ice','nfIce'],['iceT','nfIceT']];
- H(bsvt('nfMy'),`<div class="bsvnfs"><div class="dhcard bsvsay"><b>${i(bsvt('nfSay'))}</b><p>${i(bsvt('nf5'))}</p></div>
-  ${F.some(([k])=>n[k])?'':`<p class="vhint">${i(bsvt('nfNone'))}</p>`}
-  ${F.map(([k,l])=>`<label class="bsvl">${i(bsvt(l))}</label><input class="field" data-nf="${k}" ${k==='iceT'?'type="tel"':''} value="${i(n[k]||'')}" autocomplete="off">`).join('')}
-  ${n.iceT?`<a class="dcadd gold bsvice" href="${i(bsvTel(n.iceT))}">${i(bsvt('call'))}: ${i(n.ice||n.iceT)}</a>`:''}
-  <button type="button" class="dcadd" data-nfsave>${i(bsvt('save'))}</button></div>`,
-  el=>{el.classList.add('bsvsh');if(!n.addr){try{const a=document.querySelector('[data-nf=addr]');const me=g.me||{};if(a&&me.addr)a.value=me.addr}catch{}}
-   el.querySelector('[data-nfsave]').onclick=()=>{el.querySelectorAll('[data-nf]').forEach(x=>{n[x.dataset.nf]=x.value.trim()});$();el.remove();bsvToast(bsvt('saved')+' ✓')}})}
-
-/* --- first run: three questions --- */
-let bsvWz={s:1};
-function bsvWzOpen(){const o=bsvD(),c=g.cityX||{};bsvWz={s:1,plz:o.plz||[c.zip,c.name].filter(Boolean).join(' '),ppl:{sp:o.ppl.includes(bsvt('sp')),kid:o.ppl.includes(bsvt('kid'))},sel:null};bsvWzDraw()}
-function bsvWzSugg(){const loc=bsvLocal(),kid=bsvWz.ppl.kid,on=new Set(['b115','buerger','fa','kk','arzt']);if(loc)on.add('ausl');if(kid){on.add('fk');on.add('schule')}return on}
-function bsvWzDraw(){const w=bsvWz,o=bsvD();let b='';
- if(w.s===1)b=`<h3>${i(bsvt('wz1'))}</h3><p class="vhint">${i(bsvt('wz1S'))}</p><input class="field" data-wz="plz" value="${i(w.plz||'')}" placeholder="63741 Aschaffenburg" autocomplete="off">`;
- else if(w.s===2)b=`<h3>${i(bsvt('wz2'))}</h3><p class="vhint">${i(bsvt('wz2S'))}</p><label class="bsvtog"><input type="checkbox" checked disabled><span>${i(o.ppl[0])}</span></label>
-  <label class="bsvtog"><input type="checkbox" data-wzp="sp" ${w.ppl.sp?'checked':''}><span>${i(bsvt('sp'))}</span></label><label class="bsvtog"><input type="checkbox" data-wzp="kid" ${w.ppl.kid?'checked':''}><span>${i(bsvt('kid'))}</span></label>`;
- else{if(!w.sel)w.sel=bsvWzSugg();const loc=bsvLocal();
-  b=`<h3>${i(bsvt('wz3'))}</h3><p class="vhint">${i(bsvt('wz3S'))}</p><div class="odl bsvwzl">${BSV_C.map(([,k,d])=>bsvHasSrc(k)?'':`<label class="bsvtog"><input type="checkbox" data-wzk="${i(k)}" ${w.sel.has(k)?'checked':''}><span>${d.e} ${i(loc&&BSV_AB[k]&&BSV_AB[k].n||d.n)}</span></label>`).join('')}</div>`}
- const html=`<div class="bsvwz"><div class="bsvdots">${[1,2,3].map(n=>`<i class="${n<=w.s?'on':''}"></i>`).join('')}</div>${b}
-  <div class="bsvwzb2">${w.s>1?`<button type="button" class="bsvcan" data-wzb>${i(bsvt('back'))}</button>`:`<button type="button" class="bsvcan" data-wzskip>${i(bsvt('skip'))}</button>`}<button type="button" class="dcadd gold" data-wzn>${i(w.s<3?bsvt('next'):bsvt('add'))}</button></div></div>`;
- const ex=document.querySelector('.dtsheet.bsvwzs .dtscroll');if(ex){ex.innerHTML=html;return}
- H(bsvt('wz'),html,el=>{el.classList.add('bsvsh','bsvwzs');el.addEventListener('click',e=>{const t=e.target;
-  if(t.closest('[data-wzskip]')){o.setup=1;$();el.remove();v();return}
-  if(t.closest('[data-wzb]')){bsvWzRead(el);w.s--;bsvWzDraw();return}
-  if(t.closest('[data-wzn]')){bsvWzRead(el);if(w.s<3){w.s++;bsvWzDraw();return}bsvWzEnd();el.remove()}})})}
-function bsvWzRead(el){const w=bsvWz,o=bsvD();const p=el.querySelector('[data-wz=plz]');if(p){w.plz=p.value.trim();o.plz=w.plz;w.sel=null}
- el.querySelectorAll('[data-wzp]').forEach(x=>{w.ppl[x.dataset.wzp]=x.checked;w.sel=null});
- const ks=el.querySelectorAll('[data-wzk]');if(ks.length){w.sel=new Set();ks.forEach(x=>{if(x.checked)w.sel.add(x.dataset.wzk)})}}
-function bsvWzEnd(){const w=bsvWz,o=bsvD();['sp','kid'].forEach(k=>{const nm=bsvt(k);if(w.ppl[k]&&!o.ppl.includes(nm))o.ppl.push(nm)});
- let n=0;(w.sel||new Set()).forEach(k=>{if(bsvAddSrc(k,!1))n++});o.setup=1;$();bsvToast(bsvt('wzDone',{n}));if(m.route==='bsv')v();else R('bsv')}
+/* --- «Добавить»: from a letter · paste a link · by hand --- */
+function bsvCat(){H(bsvt('addH'),`<div class="bsvadd3"><button type="button" class="bsvbig main" data-a3="l"><span>📷</span><span><b>${i(bsvt('aL'))}</b><small>${i(bsvt('aLS'))}</small></span></button>
+ <button type="button" class="bsvbig" data-a3="u"><span>🔗</span><span><b>${i(bsvt('aU'))}</b><small>${i(bsvt('aUS'))}</small></span></button>
+ <button type="button" class="bsvbig" data-a3="m"><span>✍️</span><span><b>${i(bsvt('aM'))}</b><small>${i(bsvt('aMS'))}</small></span></button></div>`,
+ el=>{el.classList.add('bsvsh');el.addEventListener('click',e=>{const b=e.target.closest('[data-a3]');if(!b)return;const k=b.dataset.a3;el.remove();
+  if(k==='m'){bsvEd=bsvNew();R('bsve')}else if(k==='u')bsvLinkSheet();else bsvPickLetter()})})}
+function bsvLinkSheet(){H(bsvt('aU'),`<div class="bsvys"><label class="bsvl">${i(bsvt('lnk'))}</label><div class="bsvrowin"><input class="field" data-lk="u" placeholder="https://…" inputmode="url" autocomplete="off"><button type="button" class="bsvsm" data-lkp>${i(bsvt('paste'))}</button></div>
+ <label class="bsvl">${i(bsvt('lnkN'))}</label><input class="field" data-lk="n" placeholder="${i(bsvt('nmPh'))}" autocomplete="off"><small class="verr" data-lkerr></small><button type="button" class="dcadd gold" data-lks>${i(bsvt('save'))}</button></div>`,
+ el=>{el.classList.add('bsvsh');const u=el.querySelector('[data-lk=u]'),n=el.querySelector('[data-lk=n]');let auto=!0;
+  const fill=()=>{if(auto&&bsvKind(u.value)==='url')n.value=bsvHost(u.value)};u.addEventListener('input',fill);n.addEventListener('input',()=>{auto=!n.value});
+  el.querySelector('[data-lkp]').onclick=()=>bsvPaste(u);
+  el.querySelector('[data-lks]').onclick=()=>{const v=u.value.trim();if(bsvKind(v)!=='url'||!bsvUrl(v)){el.querySelector('[data-lkerr]').textContent=bsvt('badU');return}
+   const it={id:bsvId(),n:n.value.trim()||bsvHost(v),e:'🔗',grp:'',who:[],tel:'',mail:'',addr:'',hrs:'',term:v,links:[],nums:[],ts:Date.now()};bsvD().items.push(it);$();el.remove();bsvSel=it.id;bsvToast(bsvt('saved')+' ✓');R('bsvi')}})}
+function bsvPickLetter(){let D=[];try{D=Ke().items.filter(d=>!d.type).slice().sort((a,b)=>(b.ts||0)-(a.ts||0)).slice(0,40)}catch{}
+ H(bsvt('pickL'),`<div class="bsvys"><button type="button" class="bsvbig main" data-pls><span>📷</span><span><b>${i(bsvt('scanNew'))}</b><small>${i(bsvt('scanBack'))}</small></span></button>
+ ${D.length?`<div class="odl bsvpl">${D.map(d=>`<button type="button" class="odr" data-pld="${i(d.id)}">${dhi('mail')}<span><b>${i(d.title||'—')}</b><small>${i([d.party,d.date&&vA(d.date)].filter(Boolean).join(' · '))}</small></span>${dhi('chev','sm')}</button>`).join('')}</div>`:`<p class="dhnone">${i(bsvt('noLet'))}</p>`}</div>`,
+ el=>{el.classList.add('bsvsh');el.addEventListener('click',e=>{if(e.target.closest('[data-pls]')){el.remove();try{L.go({to:'sc9'})}catch{R('sc9')}return}
+  const b=e.target.closest('[data-pld]');if(b){el.remove();typeof bsvFromLetter==='function'&&bsvFromLetter(b.dataset.pld)}})})}
 
 /* --- screens and routes --- */
 ['bsv','bsvi','bsve'].forEach(r=>{OD_OK.add(r);Te.includes(r)||Te.push(r)});
@@ -276,8 +271,6 @@ function bsvWzEnd(){const w=bsvWz,o=bsvD();['sp','kid'].forEach(k=>{const nm=bsv
  if(m.route==='bsv')return bsvList();
  if(m.route==='bsvi'){const it=bsvGet(bsvSel);if(it)return bsvCard(it);setTimeout(()=>R('bsv'),0);return bsvList()}
  if(m.route==='bsve'){if(!bsvEd)bsvEd=bsvNew();return bsvForm()}}catch(e){Hooks.err('bsvscreen',e)}});
-/* first visit: the three questions */
-Hooks.on('render',()=>{try{if(m.route==='bsv'&&!bsvD().setup&&!bsvD().items.length&&!document.querySelector('.dtsheet')&&!bsvWzOpen.done){bsvWzOpen.done=1;setTimeout(()=>{if(m.route==='bsv')bsvWzOpen()},250)}}catch(e){Hooks.err('bsvwz',e)}});
 /* the tile on home (instead of «Aufgaben») and entries «Auf die Startseite» */
 try{DH_I.gov=BSV_IC;dhS.bsv=bsvS.t;dhS.bsvS=bsvS.tS;const ix=DH_T.findIndex(t=>t[0]==='task');if(ix>=0)DH_T[ix]=['bsv','gov','data-act="go" data-to="bsv"']}catch(e){Hooks.err('bsvtile',e)}
 Hooks.on('screen',h=>{try{if(typeof h!=='string'||m.route!=='home'||g.dhOff)return h;const H2=bsvD().items.filter(x=>x.home);if(!H2.length)return h;
@@ -290,7 +283,7 @@ Hooks.on('render',()=>{if(m.route!=='bsve')bsvEd=null;if(m.route!=='bsv')bsvOrd=
 Hooks.act('bsvopen',d=>{bsvSel=d.id;bsvDel=0;R('bsvi')});
 Hooks.act('bsvord',()=>{bsvOrd=bsvOrd?0:1;v()});
 Hooks.act('bsvwho',d=>{bsvWho=d.p||'';v()});
-Hooks.act('bsvcat',()=>bsvCat());Hooks.act('bsvnf',()=>bsvNf());Hooks.act('bsvwz',()=>bsvWzOpen());
+Hooks.act('bsvcat',()=>bsvCat());
 Hooks.act('bsvmv',d=>{const A=bsvD().items,ix=A.findIndex(x=>x.id===d.id);if(ix<0)return;const it=A[ix],dir=+d.d;let j=ix+dir;while(j>=0&&j<A.length&&A[j].grp!==it.grp)j+=dir;if(j<0||j>=A.length)return;A[ix]=A[j];A[j]=it;$();v()});
 Hooks.act('bsvgmv',d=>{const G=bsvD().grp,ix=G.indexOf(d.k),j=ix+ +d.d;if(ix<0||j<0||j>=G.length)return;[G[ix],G[j]]=[G[j],G[ix]];$();v()});
 Hooks.act('bsvpin',d=>{const it=bsvGet(d.id);if(!it)return;it.pin=!it.pin;$();v()});
@@ -298,17 +291,19 @@ Hooks.act('bsvok',d=>{const it=bsvGet(d.id);if(!it)return;delete it.chk;$();v()}
 Hooks.act('bsvcp',d=>{const it=bsvGet(d.id),n=it&&(it.nums||[]).find(z=>z.id===d.n);if(n&&!n.s)bsvCopy(n.v||'')});
 Hooks.act('bsvshow',d=>bsvShow(d.id,d.n));
 Hooks.act('bsvdel',d=>{if(!bsvDel){bsvDel=1;v();setTimeout(()=>{if(bsvDel){bsvDel=0;if(m.route==='bsvi')v()}},4e3);return}bsvDel=0;const o=bsvD();o.items=o.items.filter(x=>x.id!==d.id);$();bsvToast(bsvt('deleted'));bsvGo('bsv')});
-Hooks.act('bsvedit',d=>{const it=bsvGet(d.id);if(!it)return;bsvEd=JSON.parse(JSON.stringify(it));R('bsve')});
+Hooks.act('bsvedit',d=>{const it=bsvGet(d.id);if(!it)return;bsvEd=JSON.parse(JSON.stringify(it));bsvEd.links=(bsvEd.links||[]).filter(l=>!l.ct);bsvEd.ct=[it.tel,it.mail,it.term,...(it.links||[]).filter(l=>l.ct).map(l=>String(l.u).replace(/^(tel:|mailto:)/,''))].filter(Boolean);if(!bsvEd.ct.length)bsvEd.ct=[''];R('bsve')});
 Hooks.act('bsvemo',d=>{if(bsvEd){bsvEd.e=d.e;document.querySelectorAll('.bsvemos button').forEach(b=>b.classList.toggle('on',b.dataset.e===d.e))}});
 Hooks.act('bsvgrp',d=>{if(bsvEd){bsvEd.grp=d.k;document.querySelectorAll('[data-act=bsvgrp]').forEach(b=>b.classList.toggle('on',b.dataset.k===d.k))}});
 Hooks.act('bsvng',()=>{if(!bsvEd)return;const n=String(bsvEd.ng||'').trim();if(!n)return;const k='c:'+n,o=bsvD();if(!o.grp.includes(k)&&!o.grp.some(x=>bsvGL(x).toLowerCase()===n.toLowerCase()))o.grp.push(k);bsvEd.grp=o.grp.find(x=>bsvGL(x).toLowerCase()===n.toLowerCase())||k;bsvEd.ng='';$();bsvRe()});
 Hooks.act('bsvwhoe',d=>{if(!bsvEd)return;const w=bsvEd.who=bsvEd.who||[];const j=w.indexOf(d.p);j<0?w.push(d.p):w.splice(j,1);document.querySelectorAll('[data-act=bsvwhoe]').forEach(b=>b.classList.toggle('on',w.includes(b.dataset.p)))});
-Hooks.act('bsvnp',()=>{if(!bsvEd)return;const n=String(bsvEd.np||'').trim();if(!n)return;const o=bsvD();if(!o.ppl.includes(n))o.ppl.push(n);bsvEd.who=bsvEd.who||[];bsvEd.who.includes(n)||bsvEd.who.push(n);bsvEd.np='';$();bsvRe()});
-Hooks.act('bsvladd',()=>{if(!bsvEd)return;bsvEd.links.push({t:'',u:''});bsvRe();setTimeout(()=>{const x=[...document.querySelectorAll('[data-bl][data-k=t]')].pop();x&&x.focus()},60)});
+Hooks.act('bsvnp',()=>{if(!bsvEd)return;bsvEd.open=!0;const n=String(bsvEd.np||'').trim();if(!n)return;const o=bsvD();if(!o.ppl.includes(n))o.ppl.push(n);bsvEd.who=bsvEd.who||[];bsvEd.who.includes(n)||bsvEd.who.push(n);bsvEd.np='';$();bsvRe()});
+Hooks.act('bsvladd',()=>{if(!bsvEd)return;bsvEd.open=!0;bsvEd.links.push({t:'',u:''});bsvRe();setTimeout(()=>{const x=[...document.querySelectorAll('[data-bl][data-k=t]')].pop();x&&x.focus()},60)});
 Hooks.act('bsvlrm',d=>{if(!bsvEd)return;bsvEd.links.splice(+d.j,1);bsvRe()});
-Hooks.act('bsvnadd',()=>{if(!bsvEd)return;bsvEd.nums.push({id:bsvId(),t:'',v:'',s:!1});bsvRe();setTimeout(()=>{const x=[...document.querySelectorAll('[data-bn][data-k=t]')].pop();x&&x.focus()},60)});
+Hooks.act('bsvnadd',()=>{if(!bsvEd)return;bsvEd.open=!0;bsvEd.nums.push({id:bsvId(),t:'',v:'',s:!1});bsvRe();setTimeout(()=>{const x=[...document.querySelectorAll('[data-bn][data-k=t]')].pop();x&&x.focus()},60)});
 Hooks.act('bsvnrm',d=>{if(!bsvEd)return;bsvEd.nums.splice(+d.j,1);bsvRe()});
-Hooks.act('bsvpaste',d=>{const x=d.f?document.querySelector(`[data-bf="${d.f}"]`):document.querySelector(`[data-bl="${d.l}"][data-k=u]`);if(x)bsvPaste(x)});
+Hooks.act('bsvctadd',()=>{if(!bsvEd)return;bsvEd.ct.push('');bsvRe();setTimeout(()=>{const x=[...document.querySelectorAll('[data-bct]')].pop();x&&x.focus()},60)});
+Hooks.act('bsvctrm',d=>{if(!bsvEd)return;bsvEd.ct.splice(+d.j,1);if(!bsvEd.ct.length)bsvEd.ct=[''];bsvRe()});
+Hooks.act('bsvpaste',d=>{const x=d.c!=null?document.querySelector(`[data-bct="${d.c}"]`):d.f?document.querySelector(`[data-bf="${d.f}"]`):document.querySelector(`[data-bl="${d.l}"][data-k=u]`);if(x)bsvPaste(x)});
 Hooks.act('bsvsave',()=>{bsvSave().catch(e=>{Hooks.err('bsvsave',e);bsvToast(bsvt('pasteNo'))})});
 
 Hooks.css('docs-behoerden',`
@@ -358,6 +353,14 @@ Hooks.css('docs-behoerden',`
 .bsvsec{display:flex;flex-direction:column;align-items:center;gap:12px;padding:10px 0}.bsvbig{font-size:26px;letter-spacing:.06em;font-variant-numeric:tabular-nums;text-align:center;overflow-wrap:anywhere;user-select:all}
 .bsvwz h3{margin:6px 0 4px;font-size:20px}.bsvwz .field{width:100%;box-sizing:border-box;margin-top:10px}.bsvdots{display:flex;gap:6px;justify-content:center}.bsvdots i{width:26px;height:5px;border-radius:3px;background:var(--line)}.bsvdots i.on{background:var(--green)}
 .bsvwzl{max-height:46vh;overflow:auto}.bsvwzb2{display:flex;flex-direction:column}
+.bsvsr{width:100%;box-sizing:border-box;margin:2px 0 10px}
+.bsvaddb{display:block;width:100%;border:2px dashed var(--green);background:none;border-radius:18px;padding:15px;font-size:17px;font-weight:700;color:var(--green)!important;margin-top:8px}
+.bsvadd3,.bsvys{display:flex;flex-direction:column;gap:10px}.bsvbig,.bsvbig *{letter-spacing:normal!important}.bsvbig{display:flex;align-items:center;gap:14px;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:18px;padding:15px;width:100%}
+.bsvbig>span:first-child{font-size:28px;flex:none}.bsvbig>span:last-child{display:flex;flex-direction:column;gap:3px}.bsvbig b{font-size:16.5px}.bsvbig small{color:var(--muted);font-size:13px;line-height:1.35}
+.bsvbig.main{background:var(--green);border-color:var(--green);color:#fff!important}.bsvbig.main small{color:rgba(255,255,255,.85)}
+.bsvpl{max-height:52vh;overflow:auto}
+.bsvkh{display:block;color:var(--green);font-size:13px;font-weight:600;margin:3px 4px 0;min-height:16px}.bsvkh.no{color:#c0392b}
+.bsvmore{margin-top:16px}.bsvmore summary{display:flex;flex-direction:column;gap:2px}.bsvmore summary small{font-weight:400;color:var(--muted);font-size:12.5px}
 .bsvhome .bsvhr{display:flex;gap:8px;overflow-x:auto;margin-top:8px;padding-bottom:2px}.bsvhome .bsvhr button{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;width:78px;border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:9px 4px}
 .bsvhome .bsvhr span{font-size:24px}.bsvhome .bsvhr small{font-size:11.5px;line-height:1.2;text-align:center;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 `);

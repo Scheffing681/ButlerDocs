@@ -13,7 +13,7 @@ const copy=(s,d)=>{for(const n of fs.readdirSync(s)){if(n==='.git'||n==='tests')
 copy(ROOT,TMP);
 {const f=path.join(TMP,'app.js');let s=fs.readFileSync(f,'utf8');const end='v(),Sq()})();',i=s.trimEnd().lastIndexOf(end);
  if(i<0)throw new Error('app.js end marker not found');
- s=s.slice(0,i)+'try{window.__T={vault:odV,bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1),parse:t=>bsvParse(t),call:o=>{bsvCallP=o;bsvAfterCall()}},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
+ s=s.slice(0,i)+'try{window.__T={vault:odV,bsv:{D:()=>bsvD(),hours:bsvHours,now:bsvNow,url:bsvUrl,fx:()=>bsvFxList(),up:()=>bsvUp(),dl:()=>bsvDl(),ask:t=>td9cmd(t),add:k=>bsvAddSrc(k,!1),parse:t=>bsvParse(t),letter:t=>bsvLetterData(t),pages:t=>bsvPdfPages(t).length,call:o=>{bsvCallP=o;bsvAfterCall()}},Ke,nr,ni,fl,ao,bd8cfg,L,g:()=>g,m:()=>m,R:(...a)=>R(...a),v:()=>v(),save:()=>$(),x:()=>x_(),h9go:k=>h9go(k),hh:()=>hh(),vt,Ic,bd8C,BD8T,NT,Hooks,sc:{scDetect,scWarp,scClean,scSmooth,scHome}}}catch(e){}\n'+s.slice(i);fs.writeFileSync(f,s)}
 const MIME={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webmanifest':'application/manifest+json','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
 const srv=http.createServer((q,r)=>{const u=decodeURIComponent(q.url.split('?')[0]);const f=path.join(TMP,u==='/'?'index.html':u);if(!f.startsWith(TMP)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);return r.end()}r.writeHead(200,{'content-type':MIME[path.extname(f)]||'application/octet-stream'});fs.createReadStream(f).pipe(r)});
 
@@ -148,7 +148,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  const go=async(r,c)=>{await T(([r,c])=>window.__T.R(r,c),[r,c]);await p.waitForTimeout(350);return T(()=>window.__T.m().route)};
  for(const r of ['wd','fin','body','kbshop','trv','mira','lib','routine','cycle','food']){const to=await go(r);check('closed screen '+r+' leads away',to!=='wd'&&to===({fin:'fnacc'}[r]||'home'),to)}
  check('Банки open the bank accounts, not Butler Finance',(await go('cat','bank'))==='fnacc');check('Законы stay',(await go('cat','law'))==='cat');check('Здоровье is closed',(await go('cat','health'))==='home');
- await T(()=>{delete window.__T.g().bsv});for(const n of [0,1,2,3,4,5,6,7,8]){await go('home');await T(n=>document.querySelectorAll('.dhgrid .dht')[n].click(),n);await p.waitForTimeout(500);const r=await T(()=>window.__T.m().route);check('home tile '+(n+1)+' opens its section',r!=='home',r);if(r==='bsv'){await p.waitForTimeout(400);check('first visit of Ведомства asks three questions',await T(()=>!!document.querySelector('.dtsheet.bsvwzs [data-wz=plz]')));await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()))}}
+ await T(()=>{delete window.__T.g().bsv});for(const n of [0,1,2,3,4,5,6,7,8]){await go('home');await T(n=>document.querySelectorAll('.dhgrid .dht')[n].click(),n);await p.waitForTimeout(500);const r=await T(()=>window.__T.m().route);check('home tile '+(n+1)+' opens its section',r!=='home',r);if(r==='bsv'){await p.waitForTimeout(400);check('Ведомства open empty, without emergency buttons',await T(()=>!document.querySelector('.bsv a[href="tel:110"]')&&!!document.querySelector('.bsv [data-act=bsvcat]')));await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()))}}
  await go('home');check('the living sign is on top of home',await T(()=>!!document.querySelector('.odlogo canvas.hl9cv')&&/DOCS/.test(document.querySelector('.odlogo').innerText)));
  for(const n of [0,1,2,3,4]){await go('dall');await T(n=>document.querySelectorAll('.odall .dhgrid')[1].querySelectorAll('.dht')[n].click(),n);await p.waitForTimeout(500);const r=await T(()=>window.__T.m().route+(document.querySelector('.sc9')?':sc9':''));check('▦ extra tile '+(n+1)+' opens',r!=='home'&&r!=='dall',r);await T(()=>document.querySelectorAll('.sc9').forEach(x=>x.remove()))}
  check('Прогресс becomes Сроки',(await go('stats'))==='dsrok');check('Сроки screen is drawn',await T(()=>!!document.querySelector('.screen.odsrok')));
@@ -229,61 +229,71 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await q.setViewportSize({width:393,height:852});await q.evaluate(()=>{Object.defineProperty(window,'innerHeight',{get:()=>470,configurable:true});window.__T.v()});await q.waitForTimeout(300);
  const bh=await q.evaluate(()=>Math.round(document.body.getBoundingClientRect().height));check('after the keyboard the app keeps its full height (iPhone app mode)',bh>=848,bh+' of 852');await q.close()}
  /* Butler Docs: Behörden & Services (docs/behoerden.js) */
- where='behoerden';{const W='window.__T';await T(()=>{document.querySelectorAll('.dtsheet').forEach(s=>s.remove());const g=window.__T.g();g.dhOff=0;delete g.bsv;window.__T.m().sheet=null;window.__T.R('home')});await p.waitForTimeout(400);
+ where='behoerden';{await T(()=>{document.querySelectorAll('.dtsheet').forEach(s=>s.remove());const g=window.__T.g();g.dhOff=0;g.me=Object.assign(g.me||{},{first:'Alexander',last:'Scheffing',addr:'Tannenweg 11, 63741 Aschaffenburg',email:'alex@example.de'});
+  g.bsv={items:[{id:'old115',n:'Behördennummer 115',e:'☎️',grp:'nf',src:'b115',tel:'115',links:[],nums:[]},{id:'oldfa',n:'Mein Steuerberater',e:'🧾',grp:'amt',src:'',tel:'06021 1',links:[],nums:[]}],grp:['nf','amt'],ppl:['Я'],nf:{},setup:1};window.__T.m().sheet=null;window.__T.R('home')});await p.waitForTimeout(400);
  const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||400)};
+ const fill=(sel,v)=>T(([sel,v])=>{const x=document.querySelector(sel);x.value=v;x.dispatchEvent(new Event('input',{bubbles:true}));x.dispatchEvent(new Event('change',{bubbles:true}))},[sel,v]);
  check('home tile «Ведомства и службы» replaces «Задачи»',await T(()=>!!document.querySelector('.dhgrid .dht[data-to=bsv]')&&!document.querySelector('.dhgrid .dht[data-to=tasks]')));
- await clk('.dhgrid .dht[data-to=bsv]',900);check('the tile opens the section',await rt()==='bsv');
- /* (the tile loop above already opened it once — then the questions came by themselves; now the button asks them) */if(!await T(()=>!!document.querySelector('.dtsheet.bsvwzs')))await clk('.bsvwzb',400);
- check('the three questions open',await T(()=>!!document.querySelector('.dtsheet.bsvwzs [data-wz=plz]')));
- await T(()=>{document.querySelector('[data-wz=plz]').value='63741 Aschaffenburg';document.querySelector('[data-wzn]').click()});await p.waitForTimeout(200);
- await T(()=>{document.querySelector('[data-wzp=kid]').checked=true;document.querySelector('[data-wzn]').click()});await p.waitForTimeout(200);
- const sug=await T(()=>[...document.querySelectorAll('[data-wzk]:checked')].map(x=>x.dataset.wzk).join(','));check('suggestions fit (Aschaffenburg + child)',/fa/.test(sug)&&/ausl/.test(sug)&&/fk/.test(sug)&&/schule/.test(sug)&&!/jc/.test(sug),sug);
- await T(()=>{document.querySelector('[data-wzk=jc]').checked=true;document.querySelector('[data-wzk=gift]').checked=false;document.querySelector('[data-wzn]').click()});await p.waitForTimeout(500);
- const D=()=>T(()=>JSON.parse(JSON.stringify(window.__T.bsv.D())));let d=await D();
- check('only the ticked entries are added',d.items.some(x=>x.src==='jc')&&!d.items.some(x=>x.src==='gift')&&d.setup===1,d.items.map(x=>x.src).join(','));
- const fa=d.items.find(x=>x.src==='fa');check('Finanzamt is prefilled for 63741 and marked «bitte prüfen»',!!fa&&/Auhofstraße 13/.test(fa.addr)&&fa.chk===1&&/492/.test(fa.tel),JSON.stringify(fa));
- check('for whom: me + child',d.ppl.length===2,d.ppl.join(','));
- check('emergency 110 / 112 / 116117 are real call buttons',await T(()=>['tel:110','tel:112','tel:116117','tel:115'].every(h=>document.querySelector(`.bsv a[href="${h}"]`))));
- const H=await T(()=>{const B=window.__T.bsv,h=B.hours('Mo–Mi 8:30–13, Do 8:30–17, Fr 8:30–12');const at=(dd,hh,mm)=>{const x=new Date(2026,10,dd,hh,mm);return B.now('Mo–Mi 8:30–13, Do 8:30–17, Fr 8:30–12',x)};
+ await clk('.dhgrid .dht[data-to=bsv]',700);check('the tile opens the section',await rt()==='bsv');
+ check('no emergency buttons, no 115, no «Notfalldaten»',await T(()=>!document.querySelector('.bsv a[href^="tel:11"]')&&!document.querySelector('[data-act=bsvnf]')&&!/115/.test(document.querySelector('.screen').innerText)));
+ check('the old emergency entries are gone, own entries stay',await T(()=>{const D=window.__T.bsv.D();return!D.items.some(x=>x.id==='old115')&&D.items.some(x=>x.id==='oldfa')&&!D.grp.includes('nf')}));
+ check('no questions, no ready-made sets',await T(()=>!document.querySelector('.bsvwzs')));
+ await clk('[data-act=bsvcat]',400);check('«Добавить» offers: from a letter · a link · by hand',await T(()=>['l','u','m'].every(k=>document.querySelector(`.dtsheet [data-a3=${k}]`))));
+ /* from a letter */
+ await T(async()=>{const W=window.__T;await W.ao('dtext','bsl0',{t:'Finanzamt Aschaffenburg Auhofstraße 13 63741 Aschaffenburg Telefon 06021 492-0 poststelle@fa-ab.bayern.de Herrn Alexander Scheffing Tannenweg 11 63741 Aschaffenburg Steuernummer 204/123/45678 Aschaffenburg, 10.11.2026 Bescheid für 2025 über Einkommensteuer. Rechtsbehelfsbelehrung: Der Einspruch ist innerhalb eines Monats nach Bekanntgabe einzulegen.'});
+  W.Ke().items.push({id:'bsl0',title:'Bescheid ТЕСТ0',kind:'other',files:[],pages:[],ts:Date.now()+5,folder:'f1',dcat:'other'});W.save()});
+ await clk('.dtsheet [data-a3=l]',400);check('«Из письма» lists the scans',await T(()=>!!document.querySelector('.dtsheet [data-pld=bsl0]')&&!!document.querySelector('.dtsheet [data-pls]')));
+ await clk('.dtsheet [data-pld=bsl0]',900);const fl=await T(()=>document.querySelector('.bsvfl')?.innerText||'');
+ check('the letterhead gives office, address (not mine), phone and number',await rt()==='bsvfl'&&await T(()=>document.querySelector('[data-fln]').value==='Finanzamt Aschaffenburg')&&/Auhofstraße 13, 63741 Aschaffenburg/.test(fl)&&!/Tannenweg/.test(fl)&&/06021 492-0/.test(fl)&&/204\/123\/45678/.test(fl),fl.slice(0,300));
+ check('the deadline is only suggested',/14\.12\.2026/.test(fl)&&await T(()=>!!document.querySelector('[data-act=bsvfld][data-k=no]')));
+ await clk('[data-act=bsvfld][data-k=no]',300);await clk('[data-act=bsvflsave]',700);
+ const fa0=await T(()=>{const W=window.__T,it=W.bsv.D().items.find(x=>x.n==='Finanzamt Aschaffenburg'),d=W.Ke().items.find(z=>z.id==='bsl0');return{it,L:d.bsvL,ev:W.g().events.some(e=>e.bsvD==='bsl0')}});
+ check('card made from the letter, nothing put into the calendar on its own',await rt()==='bsvi'&&fa0.it&&fa0.it.src==='fa'&&/Auhofstraße 13/.test(fa0.it.addr)&&fa0.it.tel==='06021 492-0'&&fa0.it.nums[0].v==='204/123/45678'&&fa0.L.it===fa0.it.id&&!fa0.ev,JSON.stringify(fa0));
+ check('the card shows only what is filled, plus «＋ ещё»',await T(()=>!!document.querySelector('.bsvmorer')&&!/Мои заявления|Звонки и доказательства/.test(document.querySelector('.screen').innerText)));
+ /* a new letter with another address */
+ await T(async()=>{const W=window.__T;await W.ao('dtext','bsl0',{t:'Finanzamt Aschaffenburg Neue Straße 5 63739 Aschaffenburg Telefon 06021 492-0 Herrn Alexander Scheffing Tannenweg 11 63741 Aschaffenburg Steuernummer 204/123/45678 Aschaffenburg, 10.11.2026 Schreiben.'});W.m().bdid='bsl0';W.R('bdoc')});await p.waitForTimeout(1200);await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));await p.waitForTimeout(400);
+ check('a letter with a new address offers «обновить»',await T(()=>!!document.querySelector('.bsvlb [data-act=bsvltie].on')));
+ await clk('.bsvlb [data-act=bsvltie]',900);await clk('[data-act=bsvflsave]',700);check('…and updates the card',await T(id=>/Neue Straße 5/.test(window.__T.bsv.D().items.find(x=>x.id===id).addr),fa0.it.id));
+ /* by hand: one smart field */
+ await T(()=>window.__T.R('bsv'));await p.waitForTimeout(300);await clk('[data-act=bsvcat]',300);await clk('.dtsheet [data-a3=m]',500);check('«Вручную» opens the short form',await rt()==='bsve');
+ await fill('[data-bf=n]','Dr. Müller');await fill('[data-bct="0"]','06021 12345');await clk('[data-act=bsvctadd]',300);await fill('[data-bct="1"]','doctolib.de/praxis');await clk('[data-act=bsvctadd]',300);await fill('[data-bct="2"]','xyz');
+ check('it tells what it understood',await T(()=>/Телефон|телефон/i.test(document.querySelector('[data-bkh="0"]').textContent)&&/Termin/.test(document.querySelector('[data-bkh="1"]').textContent)&&document.querySelector('[data-bkh="2"]').classList.contains('no')));
+ await clk('[data-act=bsvsave]',300);check('something not understood is refused',await rt()==='bsve');
+ await clk('[data-act=bsvctrm][data-j="2"]',300);await fill('[data-bct="2"]','praxis@mueller.de').catch(()=>{});await clk('[data-act=bsvsave]',500);
+ const mu=await T(()=>window.__T.bsv.D().items.find(x=>x.n==='Dr. Müller'));check('phone, link (→ Termin) and e-mail land in the right places',await rt()==='bsvi'&&mu.tel==='06021 12345'&&mu.term==='doctolib.de/praxis'&&await T(()=>!!document.querySelector('.bsvact.main[href="https://doctolib.de/praxis"]')),JSON.stringify(mu));
+ await clk('[data-act=bsvedit]',400);check('editing shows the contacts again',await T(()=>document.querySelector('[data-bct="0"]').value==='06021 12345'&&document.querySelector('[data-bct="1"]').value==='doctolib.de/praxis'));
+ /* secret number, pin and home — under «Дополнительно» */
+ await clk('[data-act=bsvnadd]',300);await fill('[data-bn="0"][data-k=t]','Versichertennummer');await fill('[data-bn="0"][data-k=v]','A123456789');await T(()=>{const c=document.querySelector('[data-bn="0"][data-k=s]');c.checked=true;c.dispatchEvent(new Event('change',{bubbles:true}))});
+ await T(()=>{for(const k of ['pin','home']){const c=document.querySelector(`[data-bf=${k}]`);c.checked=true;c.dispatchEvent(new Event('change',{bubbles:true}))}});await clk('[data-act=bsvsave]',500);
+ check('a secret number is masked on the card',await T(()=>/•••• 89/.test(document.querySelector('.screen').innerText)&&!/A123456789/.test(document.querySelector('.screen').innerText)));
+ /* paste a link */
+ await T(()=>window.__T.R('bsv'));await p.waitForTimeout(300);await clk('[data-act=bsvcat]',300);await clk('.dtsheet [data-a3=u]',400);
+ await fill('[data-lk=u]','javascript:alert(1)');await clk('[data-lks]',300);check('a bad link is refused',await T(()=>!!document.querySelector('[data-lkerr]').textContent));
+ await fill('[data-lk=u]','https://termine.aschaffenburg.de/buergeramt');check('the name comes from the link',await T(()=>document.querySelector('[data-lk=n]').value==='termine.aschaffenburg.de'));
+ await clk('[data-lks]',500);check('a pasted link becomes an entry with a Termin button',await rt()==='bsvi'&&await T(()=>!!document.querySelector('.bsvact.main[href="https://termine.aschaffenburg.de/buergeramt"]')));
+ /* list: pinned, search */
+ await T(()=>window.__T.R('bsv'));await p.waitForTimeout(400);check('pinned entry is on top',await T(()=>/★/.test(document.querySelector('.bsv .odh')?.innerText||'')&&/Dr\. Müller/.test(document.querySelector('.bsv .dhcard.odl').innerText)));
+ await fill('[data-bsvsr]','204/123');check('search in the list',await T(()=>{const v=[...document.querySelectorAll('.bsvrow')].filter(r=>!r.hidden).map(r=>r.innerText);return v.length===1&&/Finanzamt/.test(v[0])}));
+ await T(()=>window.__T.R('home'));await p.waitForTimeout(400);check('«Auf die Startseite» shows it on home',await T(()=>/Dr\. Müller/.test(document.querySelector('.bsvhome')?.innerText||'')));
+ /* hours, links */
+ const H=await T(()=>{const B=window.__T.bsv,h=B.hours('Mo–Mi 8:30–13, Do 8:30–17, Fr 8:30–12');const at=(dd,hh,mm)=>B.now('Mo–Mi 8:30–13, Do 8:30–17, Fr 8:30–12',new Date(2026,10,dd,hh,mm));
   return{mo:JSON.stringify(h[0]),th:JSON.stringify(h[3]),sa:h[5].length,a:at(16,10,0),b:at(19,16,30),c:at(20,13,0),d:at(21,9,0),e:B.hours('Nur mit Termin'),f:JSON.stringify(B.hours('Mo, Mi 8–12 / 14–16 Uhr')),g:JSON.stringify(B.hours('täglich 9.00 - 18.00'))}});
  check('hours are read (Mo–Mi 8:30–13 …)',H.mo==='[[510,780]]'&&H.th==='[[510,1020]]'&&H.sa===0,JSON.stringify(H));
  check('open now / closed / opens next',H.a.open&&/13:00/.test(H.a.txt)&&H.b.open&&/17:00/.test(H.b.txt)&&!H.c.open&&!H.d.open&&/8:30/.test(H.d.txt),JSON.stringify([H.a,H.b,H.c,H.d]));
  check('«Nur mit Termin» is not taken for Mittwoch',H.e===null);check('day lists, two ranges, «täglich», dots',H.f==='[[[480,720],[840,960]],[],[[480,720],[840,960]],[],[],[],[]]'&&JSON.parse(H.g).every(x=>x[0]&&x[0][0]===540&&x[0][1]===1080),H.f+' '+H.g);
  check('links: only web, phone and mail',await T(()=>{const u=window.__T.bsv.url;return u('elster.de')==='https://elster.de'&&u('javascript:alert(1)')===''&&u('0800 123 456')==='tel:0800123456'&&u('a@b.de')==='mailto:a@b.de'&&u('data:text/html,x')===''}));
- await T(id=>document.querySelector(`[data-act=bsvopen][data-id="${id}"]`).click(),fa.id);await p.waitForTimeout(400);
- check('the card has Termin, call and route',await rt()==='bsvi'&&await T(()=>!!document.querySelector('.bsvact.main[href^="https://www.elster.de"]')&&!!document.querySelector('.bsvact[href="tel:060214920"]')&&!!document.querySelector('.bsvact[href^="https://maps.apple.com/?daddr=Auhofstra"]')));
- await clk('[data-act=bsvok]');check('«Проверено» removes the note',await T(id=>!window.__T.bsv.D().items.find(x=>x.id===id).chk&&!document.querySelector('.bsvchk'),fa.id));
- await clk('[data-act=bsvpin]');check('pin',await T(id=>window.__T.bsv.D().items.find(x=>x.id===id).pin===true,fa.id));
- await clk('[data-act=bsvedit]',500);check('edit opens the form',await rt()==='bsve');
- await T(()=>{const f=(s,v)=>{const x=document.querySelector(s);x.value=v;x.dispatchEvent(new Event('input',{bubbles:true}))};document.querySelector('[data-act=bsvnadd]').click()});await p.waitForTimeout(200);
- await T(()=>{const f=(s,v)=>{const x=document.querySelector(s);if(x.type==='checkbox'){x.checked=v;x.dispatchEvent(new Event('change',{bubbles:true}))}else{x.value=v;x.dispatchEvent(new Event('input',{bubbles:true}))}};f('[data-bn="0"][data-k=t]','Steuer-ID');f('[data-bn="0"][data-k=v]','12 345 678 901');f('[data-bn="0"][data-k=s]',true);document.querySelector('[data-act=bsvnadd]').click()});await p.waitForTimeout(200);
- await T(()=>{const f=(s,v)=>{const x=document.querySelector(s);if(x.type==='checkbox'){x.checked=v;x.dispatchEvent(new Event('change',{bubbles:true}))}else{x.value=v;x.dispatchEvent(new Event('input',{bubbles:true}))}};f('[data-bn="1"][data-k=t]','Steuernummer');f('[data-bn="1"][data-k=v]','204/123/45678');f('[data-bf=home]',true);document.querySelector('[data-act=bsvladd]').click()});await p.waitForTimeout(200);
- check('a redraw keeps what was typed',await T(()=>document.querySelector('[data-bn="0"][data-k=v]').value==='12 345 678 901'&&document.querySelector('[data-bf=home]').checked));
- await T(()=>{const x=document.querySelector('[data-bl="0"][data-k=u]');x.value='javascript:alert(1)';x.dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('[data-act=bsvsave]').click()});await p.waitForTimeout(300);
- check('a bad link is refused',await rt()==='bsve'&&await T(()=>!!document.querySelector('[data-bsverr]').textContent));
- await T(()=>{const a=document.querySelector('[data-bl="0"][data-k=t]'),b=document.querySelector('[data-bl="0"][data-k=u]');a.value='ELSTER';b.value='elster.de';[a,b].forEach(x=>x.dispatchEvent(new Event('input',{bubbles:true})));document.querySelector('[data-act=bsvsave]').click()});await p.waitForTimeout(500);
- check('saved: own button, copyable number, masked secret',await rt()==='bsvi'&&await T(()=>!!document.querySelector('.bsvlink[href="https://elster.de"]')&&!!document.querySelector('[data-act=bsvcp]')&&!!document.querySelector('[data-act=bsvshow]')&&!/345 678 901/.test(document.querySelector('.screen').innerText)&&/•••• 01/.test(document.querySelector('.screen').innerText)));
- await T(()=>document.querySelector('.screen > .sub-hdr > button:first-child').click());await p.waitForTimeout(400);check('back after saving goes to the list, not the form',await rt()==='bsv');
- check('pinned entry is on top',await T(()=>/Закреп/.test(document.querySelector('.bsv .odh')?.innerText||'')));
- /* own entry */
- await clk('[data-act=bsvcat]',400);check('catalog shows what is already added',await T(()=>!!document.querySelector('[data-bsvk=fa][disabled]')&&!document.querySelector('[data-bsvk=gift][disabled]')));
- await T(()=>document.querySelector('[data-bsvown]').click());await p.waitForTimeout(400);
- await T(()=>{const x=document.querySelector('[data-bf=n]');x.value='BND';x.dispatchEvent(new Event('input',{bubbles:true}));const y=document.querySelector('[data-bf=ng]');y.value='Sicherheit';y.dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('[data-act=bsvng]').click()});await p.waitForTimeout(300);
- await T(()=>{const x=document.querySelector('[data-bf=tel]');x.value='030 41 46 0';x.dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('[data-act=bsvsave]').click()});await p.waitForTimeout(400);
- d=await D();const bnd=d.items.find(x=>x.n==='BND');check('own entry in its own group',!!bnd&&bnd.grp==='c:Sicherheit'&&d.grp.includes('c:Sicherheit'),JSON.stringify(bnd));
- await clk('[data-act=bsvdel]',200);check('delete asks once more',await T(()=>!!document.querySelector('.bsvdel.on'))&&!!(await D()).items.find(x=>x.n==='BND'));await clk('[data-act=bsvdel]');check('…and then deletes',await rt()==='bsv'&&!(await D()).items.find(x=>x.n==='BND'));
  /* the vault code encrypts secret numbers */
- const had=await T(()=>window.__T.vault.has());
+ const mid=mu.id;const had=await T(()=>window.__T.vault.has());
  if(!had){await T(()=>window.__T.vault.vSetCode('2468'));await p.waitForTimeout(300);
-  const sx=await T(id=>{const n=window.__T.bsv.D().items.find(x=>x.id===id).nums[0];return{x:!!n.x,v:'v' in n,raw:JSON.stringify(window.__T.g().bsv)}},fa.id);check('with a vault code the secret number is encrypted',sx.x&&!sx.v&&!/345 678 901/.test(sx.raw));
-  await T(()=>window.__T.vault.vLock());await T(id=>{window.__T.m();document.querySelectorAll('.dtsheet').forEach(s=>s.remove())});
-  await T(id=>{window.__T.L.bsvopen({id});},fa.id);await p.waitForTimeout(300);await clk('[data-act=bsvshow]',300);check('showing it asks for the vault code',await T(()=>!!document.querySelector('.dtsheet form[data-vform=ask]')));
+  const sx=await T(id=>{const n=window.__T.bsv.D().items.find(x=>x.id===id).nums[0];return{x:!!n.x,v:'v' in n,raw:JSON.stringify(window.__T.g().bsv)}},mid);check('with a vault code the secret number is encrypted',sx.x&&!sx.v&&!/A123456789/.test(sx.raw));
+  await T(()=>window.__T.vault.vLock());await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));
+  await T(id=>window.__T.L.bsvopen({id}),mid);await p.waitForTimeout(300);await clk('[data-act=bsvshow]',300);check('showing it asks for the vault code',await T(()=>!!document.querySelector('.dtsheet form[data-vform=ask]')));
   await T(()=>{const f=document.querySelector('.dtsheet form[data-vform=ask]');f.querySelector('[data-c1]').value='2468';f.requestSubmit()});await p.waitForTimeout(1500);
-  check('…and then shows it',await T(()=>/12 345 678 901/.test(document.querySelector('.dtsheet .bsvbig')?.innerText||'')));await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));
-  await T(()=>window.__T.vault.vClearCode());await p.waitForTimeout(300);check('removing the vault code gives it back readable',await T(id=>window.__T.bsv.D().items.find(x=>x.id===id).nums[0].v==='12 345 678 901',fa.id))}
- await T(()=>window.__T.R('home'));await p.waitForTimeout(400);check('«Auf die Startseite» shows it on home',await T(()=>/Finanzamt/.test(document.querySelector('.bsvhome')?.innerText||'')));
- await T(()=>window.__T.R('bsv'));await p.waitForTimeout(500);check('the questions are not asked again',await T(()=>!document.querySelector('.bsvwzs')));
- await clk('nav.nav [data-od]',400);check('bottom bar «Задачи» opens tasks',await rt()==='tasks');await T(()=>window.__T.R('home'))}
+  check('…and then shows it',await T(()=>/A123456789/.test(document.querySelector('.dtsheet .bsvbig')?.innerText||'')));await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));
+  await T(()=>window.__T.vault.vClearCode());await p.waitForTimeout(300);check('removing the vault code gives it back readable',await T(id=>window.__T.bsv.D().items.find(x=>x.id===id).nums[0].v==='A123456789',mid))}
+ /* delete */
+ await T(id=>window.__T.L.bsvopen({id}),'oldfa');await p.waitForTimeout(300);await clk('[data-act=bsvdel]',200);check('delete asks once more',await T(()=>!!document.querySelector('.bsvdel.on')));await clk('[data-act=bsvdel]',400);check('…and then deletes',await rt()==='bsv'&&await T(()=>!window.__T.bsv.D().items.some(x=>x.id==='oldfa')));
+ await clk('nav.nav [data-od]',400);check('bottom bar «Задачи» opens tasks',await rt()==='tasks');await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>d.id!=='bsl0');W.save();W.R('home')})}
  /* Behörden stage 2 (docs/behoerden-termine.js): Frist → Termin, Termin-Mappe, yearly duties, search, Butler AI, Nachlass */
  where='behoerden 2';{const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||400)};
  const iso=n=>{const d=new Date();d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)};
@@ -306,7 +316,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('«Erledigt» takes it out of the calendar and tasks',await T(id=>{const W=window.__T,G=W.g(),t=W.bsv.D().terms.find(z=>z.id===id);return t.done&&!G.events.some(e=>e.bsvT===id)&&!G.tasks.some(k=>k.bsvT===id)},tid));
  await clk('[data-act=bsvtdel]',200);await clk('[data-act=bsvtdel]',400);check('delete a Termin',await T(id=>!window.__T.bsv.D().terms.some(z=>z.id===id),tid)&&await rt()==='bsvi');
  /* yearly duties */
- await T(()=>window.__T.R('bsv'));await p.waitForTimeout(400);await clk('[data-act=bsvyadd]',400);await clk('[data-yt=kfzv]',200);await clk('[data-ysave]',400);
+ await T(()=>window.__T.R('bsv'));await p.waitForTimeout(400);await T(()=>window.__T.L.bsvyadd({}));await p.waitForTimeout(400);await clk('[data-yt=kfzv]',200);await clk('[data-ysave]',400);
  const y=await T(()=>{const W=window.__T,y=W.bsv.D().yr[0];return{y,ev:W.g().events.find(e=>e.id===y.ev)}});check('a yearly duty gets its next date and a yearly calendar entry',!!y.y&&/-11-30$/.test(y.y.next)&&y.ev&&y.ev.yearly===true,JSON.stringify(y));
  const n0=y.y.next;await T(id=>window.__T.L.bsvydone({id}),y.y.id);await p.waitForTimeout(300);check('«✓» moves it one year on',await T(([id,n])=>{const z=window.__T.bsv.D().yr.find(q=>q.id===id);return z.next===String(+n.slice(0,4)+1)+n.slice(4)},[y.y.id,n0]));
  /* search and Butler AI */
@@ -338,8 +348,10 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>window.__T.R('dsrok'));await p.waitForTimeout(400);check('«Сроки» show the Einspruch deadline',await T(()=>/Einspruch: Finanzamt/.test(document.querySelector('.screen').innerText)));
  await T(()=>{window.__T.m().bdid='bsl1';window.__T.R('bdoc')});await p.waitForTimeout(900);await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));await p.waitForTimeout(300);
  await clk('.bsvlb [data-act=bsvlobj]',700);const tx=await T(()=>document.querySelector('.bsvbrt')?.value||'');
- check('«Einspruch» opens a German letter with sender, office, number and date',await rt()==='bsvbr'&&/Einspruch gegen den Bescheid vom 10\.11\.2026/.test(tx)&&/Steuernummer: 204\/123\/45678/.test(tx)&&/Sehr geehrte Damen und Herren/.test(tx)&&/Auhofstraße 13/.test(tx),tx.slice(0,300));
- check('the letter is German only',!/[а-яё]/i.test(tx));
+ check('«Einspruch» opens a German letter with sender, office, number and date',await rt()==='bsvbr'&&/Einspruch gegen den Bescheid vom 10\.11\.2026/.test(tx)&&/Steuernummer: 204\/123\/45678/.test(tx)&&/Sehr geehrte Damen und Herren/.test(tx)&&/Neue Straße 5/.test(tx),tx.slice(0,300));
+ check('the letter is German only',!/[а-яё]/i.test(tx));check('my own e-mail is in the letter',/alex@example\.de/.test(tx));
+ await T(()=>{navigator.canShare=()=>true;navigator.share=async o=>{window.__sh=o.files[0].name+'|'+o.files[0].type+'|'+o.files[0].size}});await clk('[data-act=bsvbrpdf]',1200);
+ check('«Отправить PDF» hands an A4 PDF to the phone (own mail app)',await T(()=>/\.pdf\|application\/pdf\|\d{4,}/.test(window.__sh||'')),await T(()=>window.__sh));
  await T(()=>{const x=document.querySelector('[data-brf=trk]');x.value='RR 1234 5678 9DE';x.dispatchEvent(new Event('input',{bubbles:true}));const t=document.querySelector('.bsvbrt');t.value+='\nPS';t.dispatchEvent(new Event('input',{bubbles:true}))});await clk('[data-act=bsvbrsent]',600);
  const S3=await T(()=>{const W=window.__T,G=W.g();return{log:W.bsv.D().log[0],dr:G.drafts[0]}});
  check('«Отправлено» → journal with the Einschreiben number, and into «Письма»',S3.log&&S3.log.k==='sent'&&S3.log.trk==='RR 1234 5678 9DE'&&/Einspruch/.test(S3.dr.subj)&&/PS$/.test(S3.dr.text)&&await rt()==='bsvi',JSON.stringify(S3).slice(0,300));

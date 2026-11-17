@@ -32,7 +32,13 @@ const bsvS3={
  lWho:['С кем говорили','Gesprächspartner','Who'],lTxt:['Что сказали / что это','Was wurde gesagt / was ist es','What was said / what it is'],lPh:['Фото квитанции или письма','Foto vom Beleg oder Schreiben','Photo of the receipt or letter'],
  track:['Отследить','Verfolgen','Track'],trackS:['Номер скопирован — вставьте его на странице Deutsche Post','Nummer kopiert – auf der Seite der Deutschen Post einfügen','Number copied – paste it on the Deutsche Post page'],
  after:['Вы звонили в «%o». С кем говорили? Что сказали?','Sie haben „%o“ angerufen. Mit wem? Was wurde gesagt?','You called “%o”. Who did you talk to? What was said?'],
- all:['Все записи: %n','Alle Einträge: %n','All entries: %n'],date:['Дата','Datum','Date'],save:['Сохранить','Speichern','Save'],del:['Удалить','Löschen','Delete'],none:['Пока пусто','Noch leer','Empty so far'],photo:['фото','Foto','photo']};
+ all:['Все записи: %n','Alle Einträge: %n','All entries: %n'],moreR:['ещё','mehr','more'],antOne:['Заявление','Antrag','Application'],
+ fl:['Нашёл в письме','Im Schreiben gefunden','Found in the letter'],flOff:['Ведомство','Behörde','Office'],flTake:['Что сохранить','Was übernehmen','What to keep'],flNone:['Ничего не нашёл — впишите сами','Nichts gefunden – bitte selbst eintragen','Nothing found – please type it'],
+ flDl:['Срок из письма — решаете Вы','Frist aus dem Schreiben – Sie entscheiden','Deadline from the letter – you decide'],flSug:['Похоже: %e до %f','Vermutlich: %e bis %f','Looks like: %e until %f'],
+ flYes:['Внести','Eintragen','Add'],flOther:['Другая дата','Anderes Datum','Other date'],flNo:['Не нужно','Nicht nötig','Not needed'],
+ flNew:['Создать карточку','Karte anlegen','Create the card'],flUpd:['Сохранить в «%n»','In „%n“ speichern','Save to “%n”'],flChg:['Адрес изменился: было «%a»','Adresse geändert: vorher „%a“','Address changed: was “%a”'],
+ flSaved:['Готово — карточка «%n»','Fertig – Karte „%n“','Done – card “%n”'],addrChg:['Адрес изменился — обновить','Adresse geändert – aktualisieren','Address changed – update'],
+ pdf:['Отправить PDF','PDF senden','Send PDF'],date:['Дата','Datum','Date'],save:['Сохранить','Speichern','Save'],del:['Удалить','Löschen','Delete'],none:['Пока пусто','Noch leer','Empty so far'],photo:['фото','Foto','photo']};
 const bsvt3=(k,o)=>{let s=cv5n(bsvS3[k]||[k]);if(o)for(const p in o)s=s.split('%'+p).join(o[p]);return s};
 const bsvAnts=()=>{const o=bsvD();if(!Array.isArray(o.ant))o.ant=[];return o.ant};
 const bsvLogs=()=>{const o=bsvD();if(!Array.isArray(o.log))o.log=[];return o.log};
@@ -61,7 +67,7 @@ function bsvParse(text){const t=String(text||'').replace(/\s+/g,' ');if(t.length
 const bsvOffName=r=>{const it=r.it&&bsvGet(r.it);return it?it.n:r.src?bsvOfName(r.src):bsvt3('lt')};
 let bsvScanC={};
 async function bsvScanDoc(id){try{const d=Ke().items.find(z=>z.id===id);if(!d)return null;let t='';try{t=(Fa.text&&Fa.text[id])||''}catch{}if(!t){const r=await fl('dtext',id);t=r&&r.t||''}
- const c=bsvScanC[id];if(c&&c.len===t.length)return c.r;const r=bsvParse(t);bsvScanC[id]={len:t.length,r};return r}catch(e){Hooks.err('bsvscan',e);return null}}
+ const c=bsvScanC[id];if(c&&c.len===t.length)return c.r;const r=bsvParse(t);bsvScanC[id]={len:t.length,r,t};return r}catch(e){Hooks.err('bsvscan',e);return null}}
 async function bsvLetterBanner(){try{if(m.route!=='bdoc')return;const id=m.bdid,d=Ke().items.find(z=>z.id===id);if(!d||(d.bsvL&&d.bsvL.no))return;
  const hd=document.querySelector('.screen > .sub-hdr');if(!hd)return;const ex=document.querySelector('.bsvlb');if(ex&&ex.dataset.id===id&&ex.dataset.v===String(bsvLetterBanner.v))return;
  const r=await bsvScanDoc(id);if(m.route!=='bdoc'||m.bdid!==id)return;if(!r){ex&&ex.remove();return}const L2=d.bsvL||{};const on=bsvOffName(Object.assign({},r,L2.it?{it:L2.it}:{}));
@@ -69,14 +75,16 @@ async function bsvLetterBanner(){try{if(m.route!=='bdoc')return;const id=m.bdid,
  const html=`<div class="dhcard warn bsvlb" data-id="${i(id)}" data-v="${bsvLetterBanner.v}"><b>🏛️ ${i(bsvt3('ltOf',{o:on}))}</b>${r.kind||r.date?`<small>${i(bsvt3('ltKind',{k:r.kind||bsvt3('lt'),d:r.date?bsvDE(r.date):'—'}))}</small>`:''}
   ${f?`<small>${i(bsvt3('obj',{e:r.obj,f:bsvDE(f)}))}</small>`:''}${dl?`<small><b>${i(bsvt3('expl',{f:bsvDE(dl)}))}</b></small>`:''}
   <div class="bsvfxb">${f||dl?L2.ev?`<span class="bsvok">${i(bsvt3('inCal'))}</span>`:`<button type="button" class="on" data-act="bsvlcal" data-id="${i(id)}">${i(bsvt3('toCal'))}</button>`:''}
-  ${L2.it&&bsvGet(L2.it)?`<button type="button" data-act="bsvopen" data-id="${i(L2.it)}">${i(bsvt3('tied',{o:bsvGet(L2.it).n}))}</button>`:(r.it||r.src)?`<button type="button" data-act="bsvltie" data-id="${i(id)}">${i(bsvt3('toOff',{o:on}))}</button>`:''}
+  ${(()=>{const t2=L2.it&&bsvGet(L2.it);if(t2){const ld=bsvLetterData(bsvScanC[id]&&bsvScanC[id].t||'');const ch=ld.addr&&t2.addr&&bsvNorm(ld.addr)!==bsvNorm(t2.addr);
+   return`<button type="button" data-act="bsvopen" data-id="${i(L2.it)}">${i(bsvt3('tied',{o:t2.n}))}</button>`+(ch?`<button type="button" class="on" data-act="bsvltie" data-id="${i(id)}">${i(bsvt3('addrChg'))}</button>`:'')}
+   return`<button type="button" data-act="bsvltie" data-id="${i(id)}">${i(bsvt3('toOff',{o:on}))}</button>`})()}
   ${r.obj?`<button type="button" data-act="bsvlobj" data-id="${i(id)}">${i(r.obj)}</button>`:''}<button type="button" class="x" data-act="bsvlno" data-id="${i(id)}" aria-label="×">×</button></div></div>`;
  const w=document.createElement('div');w.innerHTML=html;if(ex)ex.replaceWith(w.firstElementChild);else hd.after(w.firstElementChild)}catch(e){Hooks.err('bsvlb',e)}}
 bsvLetterBanner.v=0;
 Hooks.on('render',()=>{if(m.route==='bdoc')bsvLetterBanner()});
 {let q=0;new MutationObserver(()=>{if(q||m.route!=='bdoc')return;q=1;setTimeout(()=>{q=0;if(!document.querySelector('.bsvlb'))bsvLetterBanner()},300)}).observe(document.body,{childList:!0,subtree:!0})}
 async function bsvLDo(id,f){const d=Ke().items.find(z=>z.id===id);if(!d)return;const r=await bsvScanDoc(id);if(!r)return;d.bsvL=Object.assign({src:r.src,it:r.it,kind:r.kind,date:r.date,frist:r.frist,dl:r.dl,obj:r.obj},d.bsvL||{});f(d,r);$();bsvLetterBanner.v++;bsvLetterBanner()}
-function bsvLTie(d){const L2=d.bsvL;if(L2.it&&bsvGet(L2.it))return bsvGet(L2.it);let it=L2.src&&bsvD().items.find(z=>z.src===L2.src);if(!it&&L2.src)it=bsvAddSrc(L2.src,!1);if(it)L2.it=it.id;return it}
+function bsvLTie(d){const L2=d.bsvL;if(L2.it&&bsvGet(L2.it))return bsvGet(L2.it);const it=L2.src&&bsvD().items.find(z=>z.src===L2.src);if(it)L2.it=it.id;return it||null}
 
 /* --- letters from templates (German only) --- */
 const BSV_TPL={
@@ -87,13 +95,13 @@ const BSV_TPL={
  stand:{n:'Sachstandsanfrage',subj:c=>`Sachstandsanfrage${c.ant?' – '+c.ant:''}`,body:c=>`am ${c.antD||'…'} habe ich ${c.ant?'meinen Antrag „'+c.ant+'“':'einen Antrag'} gestellt. Bis heute habe ich keine Nachricht von Ihnen erhalten.\n\nBitte teilen Sie mir den aktuellen Stand der Bearbeitung mit.`},
  frei:{n:'Freier Text',subj:()=>'',body:()=>''}};
 let bsvBr=null;
-function bsvMe(){let me={};try{me=ja()}catch{}const name=[me.first,me.mid,me.last].filter(Boolean).join(' ')||((g.user&&[g.user.first,g.user.last].filter(Boolean).join(' '))||'');const addr=String(me.addr||(bsvD().nf||{}).addr||'').trim();return{name,addr}}
+function bsvMe(){let me={};try{me=ja()}catch{}const name=[me.first,me.mid,me.last].filter(Boolean).join(' ')||((g.user&&[g.user.first,g.user.last].filter(Boolean).join(' '))||'');const addr=String(me.addr||(bsvD().nf||{}).addr||'').trim();const mail=String(me.email||(g.user&&g.user.email)||'').trim();return{name,addr,mail}}
 function bsvAz(it,ant){if(ant&&ant.az)return'Aktenzeichen: '+ant.az;const n=(it.nums||[]).find(z=>!z.s&&z.v&&/aktenzeichen|steuernummer|kundennummer|bg-nummer|kindergeld|versicherungsnummer|\baz\b/i.test(z.t||''));return n?(n.t+': '+n.v):''}
 function bsvLetter(b){const it=bsvGet(b.it)||{},me=bsvMe(),ant=b.ant&&bsvAnts().find(z=>z.id===b.ant),tp=BSV_TPL[b.tpl]||BSV_TPL.frei;
  const today=bsvDE(x(new Date())),c={objW:/finanzamt|familienkasse/i.test(it.n||'')||it.src==='fa'||it.src==='fk'?'Einspruch':(b.objW||'Widerspruch'),kind:b.kind,rd:bsvDE(b.rdate),plus4w:bsvDE(bsvAddDay(x(new Date()),28)),today,addr:me.addr,ant:ant&&ant.t,antD:ant&&bsvDE(ant.d)};
  if(b.objW)c.objW=b.objW;const city=(me.addr.match(/\d{5}\s+([^\n,]+)/)||[])[1]||((g.cityX&&g.cityX.name)||'');
  const to=[it.n,...String(it.addr||'').split(/\s*,\s*/)].filter(Boolean).join('\n'),az=b.az!=null?b.az:bsvAz(it,ant),subj=tp.subj(c);
- return{subj,text:[me.name,me.addr,'',to,'',(city?city.trim()+', ':'')+today,'',subj,az,'','Sehr geehrte Damen und Herren,','',tp.body(c),'','Mit freundlichen Grüßen','','',me.name].filter((l,j,a)=>!(l===''&&a[j-1]==='')).join('\n').replace(/^\n+/,'')}}
+ return{subj,text:[me.name,me.addr,me.mail,'',to,'',(city?city.trim()+', ':'')+today,'',subj,az,'','Sehr geehrte Damen und Herren,','',tp.body(c),'','Mit freundlichen Grüßen','','',me.name].filter((l,j,a)=>!(l===''&&a[j-1]==='')).join('\n').replace(/^\n+/,'')}}
 function bsvBrNew(o){bsvBr=Object.assign({it:'',tpl:'frei',rdate:'',kind:'',objW:'',ant:'',doc:'',via:'ein',trk:''},o||{});const L2=bsvLetter(bsvBr);bsvBr.subj=L2.subj;bsvBr.text=L2.text;R('bsvbr')}
 function bsvBrScreen(){const b=bsvBr,it=bsvGet(b.it)||{},me=bsvMe();
  return`<div class="screen dhome bsv bsvbr">${bsvHdr(bsvt3('br'),'bsvbrx')}
@@ -104,6 +112,7 @@ function bsvBrScreen(){const b=bsvBr,it=bsvGet(b.it)||{},me=bsvMe();
  <label class="bsvl">${i(bsvt3('via'))}</label><div class="bsvchips">${['ein','post','mail','fax','hand'].map(k=>`<button type="button" class="${b.via===k?'on':''}" data-act="bsvbrvia" data-k="${k}">${i(bsvt3('v_'+k))}</button>`).join('')}</div>
  ${b.via==='ein'?`<label class="bsvl">${i(bsvt3('trk'))}</label><input class="field" data-brf="trk" value="${i(b.trk||'')}" placeholder="RR 1234 5678 9DE" autocomplete="off">`:''}
  <div class="bsvbra"><button type="button" class="dcadd gold" data-act="bsvbrprint">${i(bsvt3('print'))}</button>
+ <button type="button" class="dcadd" data-act="bsvbrpdf">${i(bsvt3('pdf'))}</button>
  <div class="bsv2c"><button type="button" class="bsvsm" data-act="bsvbrmail">${i(bsvt3('mail'))}</button><button type="button" class="bsvsm" data-act="bsvbrcopy">${i(bsvt3('copy'))}</button></div>
  <button type="button" class="dcadd" data-act="bsvbrsent">✓ ${i(bsvt3('sent'))}</button></div></div>`}
 document.addEventListener('input',e=>{const t=e.target;if(!bsvBr||m.route!=='bsvbr'||!t.dataset||!t.dataset.brf)return;bsvBr[t.dataset.brf]=t.value},!0);
@@ -115,6 +124,59 @@ function bsvBrSent(){const b=bsvBr;if(!b)return;const it=bsvGet(b.it)||{};bsvLog
  try{g.drafts=g.drafts||[];g.drafts.unshift({id:V(),to:it.mail||it.n||'',subj:b.subj||'',text:b.text,at:Date.now(),sent:!0})}catch{}
  if(b.ant){const a=bsvAnts().find(z=>z.id===b.ant);if(a)a.asked=x(new Date())}
  bsvQuiet();$();bsvToast(bsvt3('sentOk'));const id=b.it;bsvBr=null;const h=m.hist||[];while(h.length&&h[h.length-1].route==='bsvbr')h.pop();if(bsvGet(id)){bsvSel=id;R('bsvi',void 0,!0)}else R('bsv',void 0,!0)}
+
+/* the letter as an A4 PDF (drawn on pages, same PDF writer as the rest of the app) — shared through the phone's own menu,
+   so an e-mail goes out from the user's own mail app and address */
+function bsvPdfPages(text){const W=1240,H2=1754,ml=148,mr=118,mt=148,mb=130,fs=24,lh=34,P=[];let c,x2,y;
+ const page=()=>{c=document.createElement('canvas');c.width=W;c.height=H2;x2=c.getContext('2d');x2.fillStyle='#fff';x2.fillRect(0,0,W,H2);x2.fillStyle='#000';x2.font=`${fs}px Georgia, "Times New Roman", serif`;x2.textBaseline='top';y=mt;P.push(c)};page();
+ for(const para of String(text||'').split('\n')){const words=para.split(/(\s+)/);let line='';const out=[];
+  for(const w of words){const t=line+w;if(x2.measureText(t).width>W-ml-mr&&line.trim()){out.push(line);line=w.trimStart()}else line=t}out.push(line);
+  for(const l of out){if(y+lh>H2-mb)page();x2.fillText(l,ml,y);y+=lh}}
+ return P}
+async function bsvBrPdf(){const b=bsvBr;if(!b)return;const it=bsvGet(b.it)||{};const bytes=Kn(bsvPdfPages(b.text));const blob=new Blob([bytes],{type:'application/pdf'});
+ const name=((b.subj||'Brief')+' – '+(it.n||'')).replace(/[^\wäöüßÄÖÜ .,–-]+/g,'').slice(0,80).trim()+'.pdf';
+ const f=new File([blob],name,{type:'application/pdf'});try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:name});return}}catch(e){if(e&&e.name==='AbortError')return}
+ try{await xu({blob,name})}catch{const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),6e4)}}
+
+/* --- «Из письма»: what the letterhead says, the user ticks what to keep --- */
+const bsvNorm=a=>String(a||'').toLowerCase().replace(/str\.|straße|strasse/g,'str').replace(/[^a-z0-9äöüß]/g,'');
+const BSV_OFFN=/(Finanzamt|Ausländerbehörde|Jobcenter|Familienkasse|Agentur für Arbeit|Deutsche Rentenversicherung|Amtsgericht|Landgericht|Landratsamt|Bürgeramt|Bürgerbüro|Standesamt|Zulassungsstelle|Ordnungsamt|Straßenverkehrsamt|Bußgeldstelle|Polizeiinspektion|AOK|Techniker Krankenkasse|Barmer|DAK-Gesundheit|IKK|Krankenkasse|Stadt|Gemeinde|Kreisverwaltung)(?:\s+(?!Bescheid|Steuernummer|Postfach|Herrn|Frau|Datum|Telefon|Tel|Fax|Ihr|Sehr)([A-ZÄÖÜ][a-zäöüß]+(?:-[A-ZÄÖÜ][a-zäöüß]+)?))?/;
+const BSV_NUMR=/(Steuernummer|Steuer-Nr\.?|St\.-Nr\.?|Aktenzeichen|Az\.|Kundennummer|Kunden-Nr\.?|BG-Nummer|Versicherungsnummer|Versichertennummer|Kindergeldnummer|Vorgangsnummer|Geschäftszeichen)\s*:?\s*([0-9A-Z][0-9A-Z\/.-]*(?: [0-9A-Z\/.-]*[0-9][0-9A-Z\/.-]*)*)/g;
+function bsvLetterData(text){const t=String(text||'').replace(/\s+/g,' '),me=bsvMe(),meA=bsvNorm(me.addr),R2={name:'',addr:'',tel:'',mail:'',nums:[]};if(!t)return R2;
+ const n=t.match(BSV_OFFN);if(n)R2.name=(n[1]+(n[2]?' '+n[2]:'')).trim();
+ const A=[...t.matchAll(/((?:[A-ZÄÖÜ][a-zäöüß]+(?:e|er|es)\s)?(?:[A-ZÄÖÜ][a-zäöüß.-]*(?:straße|str\.|strasse|weg|platz|allee|gasse|ring|damm|ufer|steig|berg)|Straße|Str\.|Weg|Platz|Allee|Gasse|Ring|Damm|Ufer)\s*\d+\s?[a-z]?)[,\s]+(\d{5})\s+([A-ZÄÖÜ][a-zäöüß-]+(?: am [A-ZÄÖÜ][a-zäöüß]+)?)/g)].map(z=>z[1].trim()+', '+z[2]+' '+z[3]).filter(a=>!meA||!meA.includes(bsvNorm(a.split(',')[0])));
+ R2.addr=A[0]||'';const tl=t.match(/(?:Telefon|Tel\.?|Fon)\s*:?\s*(\+?\d[\d \/()-]{4,}\d)/);if(tl)R2.tel=tl[1].trim();
+ R2.mail=([...t.matchAll(/[\w.+-]+@[\w-]+(?:\.[\w-]+)+/g)].map(z=>z[0]).find(z=>z.toLowerCase()!==String(me.mail||'').toLowerCase())||'').replace(/\.$/,'');
+ for(const z of t.matchAll(BSV_NUMR)){const v=z[2].trim().replace(/[.,-]+$/,'');if(/\d/.test(v)&&v.length>=4&&!R2.nums.some(q=>q.v===v))R2.nums.push({t:z[1].replace(/\.$/,'').replace('Steuer-Nr','Steuernummer').replace('St.-Nr','Steuernummer').replace('Az','Aktenzeichen'),v})}
+ return R2}
+let bsvFl=null;
+async function bsvFromLetter(docId,then){try{const d=Ke().items.find(z=>z.id===docId);if(!d)return;const r=await bsvScanDoc(docId),t=(bsvScanC[docId]&&bsvScanC[docId].t)||'';const ld=bsvLetterData(t);
+ let it=(d.bsvL&&d.bsvL.it&&bsvGet(d.bsvL.it))||(r&&r.it&&bsvGet(r.it))||(r&&r.src&&bsvD().items.find(z=>z.src===r.src))||(ld.name&&bsvD().items.find(z=>bsvWords(z.n).some(w=>w.length>=5&&ld.name.toLowerCase().includes(w))))||null;
+ const k=r&&(r.dl||r.frist);
+ bsvFl={doc:docId,it:it?it.id:'',name:it?it.n:(ld.name||(r&&r.src?bsvOfName(r.src):'')),src:r&&r.src||'',addr:ld.addr,tel:ld.tel,mail:ld.mail,nums:ld.nums,
+  take:{addr:!!ld.addr,tel:!!ld.tel&&!(it&&it.tel),mail:!1},takeN:ld.nums.map(()=>!0),dk:k||'',dKind:r&&(r.dl?'Antwort':r.obj||'Frist')||'',dOn:k?'yes':'no',kind:r&&r.kind||'',date:r&&r.date||'',obj:r&&r.obj||'',then:then||''};R('bsvfl')}catch(e){Hooks.err('bsvfl',e)}}
+function bsvFlScreen(){const f=bsvFl,it=f.it&&bsvGet(f.it);const row=(k,v)=>v?`<label class="bsvtog"><input type="checkbox" data-flt="${k}" ${f.take[k]?'checked':''}><span>${i(v)}</span></label>`:'';
+ const ch=it&&f.addr&&it.addr&&bsvNorm(f.addr)!==bsvNorm(it.addr);const found=f.addr||f.tel||f.mail||f.nums.length;
+ return`<div class="screen dhome bsv bsvfl">${bsvHdr(bsvt3('fl'),'bsvflx')}
+ <label class="bsvl">${i(bsvt3('flOff'))}</label><input class="field" data-fln value="${i(f.name)}" placeholder="${i(bsvt('nmPh'))}" autocomplete="off" ${it?'disabled':''}>
+ <label class="bsvl">${i(bsvt3('flTake'))}</label><div class="dhcard bsvbr">${found?row('addr',f.addr)+row('tel',f.tel?'Tel. '+f.tel:'')+row('mail',f.mail)+f.nums.map((n,j)=>`<label class="bsvtog"><input type="checkbox" data-fln2="${j}" ${f.takeN[j]?'checked':''}><span>${i(n.t+' '+n.v)}</span></label>`).join(''):`<p class="dhnone">${i(bsvt3('flNone'))}</p>`}</div>
+ ${ch?`<p class="vhint"><b>${i(bsvt3('flChg',{a:it.addr}))}</b></p>`:''}
+ ${f.dk?`<label class="bsvl">${i(bsvt3('flDl'))}</label><div class="dhcard warn bsvlb"><b>${i(bsvt3('flSug',{e:f.dKind,f:bsvDE(f.dk)}))}</b><div class="bsvfxb">${['yes','other','no'].map(k=>`<button type="button" class="${f.dOn===k?'on':''}" data-act="bsvfld" data-k="${k}">${i(bsvt3(k==='yes'?'flYes':k==='other'?'flOther':'flNo'))}</button>`).join('')}</div>
+  ${f.dOn==='other'?`<input class="field" type="date" data-fldate value="${i(f.dk)}">`:''}</div>`:''}
+ <small class="verr" data-flerr></small>
+ <button type="button" class="dcadd gold" data-act="bsvflsave">${i(it?bsvt3('flUpd',{n:it.n}):bsvt3('flNew'))}</button><button type="button" class="bsvcan" data-act="bsvflx">${i(bsvt('cancel'))}</button></div>`}
+document.addEventListener('change',e=>{const t=e.target;if(!bsvFl||m.route!=='bsvfl'||!t||!t.dataset)return;if(t.dataset.flt)bsvFl.take[t.dataset.flt]=t.checked;if(t.dataset.fln2!=null)bsvFl.takeN[+t.dataset.fln2]=t.checked;if(t.matches('[data-fldate]'))bsvFl.dk=t.value},!0);
+document.addEventListener('input',e=>{const t=e.target;if(!bsvFl||m.route!=='bsvfl'||!t||!t.dataset)return;if(t.matches('[data-fln]'))bsvFl.name=t.value;if(t.matches('[data-fldate]'))bsvFl.dk=t.value},!0);
+function bsvFlSave(){const f=bsvFl;if(!f)return;const d=Ke().items.find(z=>z.id===f.doc);let it=f.it&&bsvGet(f.it);
+ if(!it){const n=String(f.name||'').trim();if(!n){const er=document.querySelector('[data-flerr]');if(er)er.textContent=bsvt('needN');return}
+  const c=f.src&&BSV_C.find(z=>z[1]===f.src);it={id:bsvId(),n,e:c?c[2].e:'🏛️',grp:'',src:f.src||'',who:[],tel:'',mail:'',addr:'',hrs:'',term:'',links:[],nums:[],ts:Date.now()};bsvD().items.push(it)}
+ if(f.take.addr&&f.addr)it.addr=f.addr;if(f.take.tel&&f.tel)it.tel=f.tel;if(f.take.mail&&f.mail)it.mail=f.mail;
+ it.nums=it.nums||[];f.nums.forEach((n,j)=>{if(f.takeN[j]&&!it.nums.some(q=>q.v===n.v))it.nums.push({id:bsvId(),t:n.t,v:n.v,s:!1,m:n.v.slice(-2)})});delete it.chk;
+ if(d){d.bsvL=Object.assign(d.bsvL||{},{src:f.src,it:it.id,kind:f.kind,date:f.date,obj:f.obj});delete d.bsvL.no;
+  if(f.dk&&f.dOn!=='no'&&/^\d{4}-\d\d-\d\d$/.test(f.dk)&&!d.bsvL.ev){const e=f.dKind,ev=bsvEv({title:bsvt3('calT',{e,o:it.n}),date:f.dk,note:d.title||''});ev.bsvD=d.id;d.bsvL.ev=ev.id;if(f.dKind==='Antwort')d.bsvL.dl=f.dk;else d.bsvL.frist=f.dk;
+   const rd=bsvAddDay(f.dk,-7);if(bsvDays(rd)>=0){const tk={id:V(),t:bsvt3('calR',{e,o:it.n}),due:rd,prio:2,proj:'',done:!1,bsvD:d.id};g.tasks.push(tk);d.bsvL.tk=tk.id}}}
+ bsvQuiet();$();bsvLetterBanner.v++;const then=f.then;bsvFl=null;bsvToast(bsvt3('flSaved',{n:it.n}));const h=m.hist||[];while(h.length&&h[h.length-1].route==='bsvfl')h.pop();
+ if(then==='obj'&&d)return bsvBrNew({it:it.id,tpl:'obj',rdate:d.bsvL.date,kind:d.bsvL.kind,objW:d.bsvL.obj,doc:d.id});bsvSel=it.id;R('bsvi',void 0,!0)}
 
 /* --- Anträge --- */
 const BSV_ANT={ausl:['Verlängerung Aufenthaltstitel','Niederlassungserlaubnis','Einbürgerung'],buerger:['Personalausweis','Reisepass','Ummeldung','Führerschein'],fk:['Kindergeld'],jc:['Bürgergeld','Weiterbewilligung Bürgergeld'],
@@ -167,29 +229,34 @@ Hooks.on('screen',h=>{try{if(typeof h!=='string'||m.route!=='bsvi')return h;cons
  let D=[];try{D=Ke().items.filter(d=>d.bsvL&&d.bsvL.it===it.id&&!d.bsvL.no)}catch{}
  const lets=D.length?`<h3 class="odh">${i(bsvt3('lets'))}</h3><div class="dhcard odl">${D.map(d=>{const L2=d.bsvL,f=L2.dl||L2.frist;return`<button type="button" class="odr" data-act="dzopen" data-id="${i(d.id)}">${dhi('mail')}<span><b>${i(d.title||L2.kind||'—')}</b><small>${i([L2.kind,L2.date&&bsvDE(L2.date),f&&('Frist '+bsvDE(f))].filter(Boolean).join(' · '))}</small></span>${dhi('chev','sm')}</button>`}).join('')}</div>`:'';
  const A=bsvAnts().filter(a=>a.it===it.id).sort((a,b)=>(a.st||1)-(b.st||1)||b.d.localeCompare(a.d));
- const ants=`<h3 class="odh">${i(bsvt3('ants'))}</h3>${A.map(bsvAntCard).join('')}<button type="button" class="bsvplus" data-act="bsvantadd" data-id="${i(it.id)}">${i(bsvt3('antAdd'))}</button>`;
+ const ants=A.length?`<h3 class="odh">${i(bsvt3('ants'))}</h3>${A.map(bsvAntCard).join('')}`:'';
  const LG=bsvLogs().filter(l=>l.it===it.id),sh=bsvLogAll?LG:LG.slice(0,5);
  const log=`<h3 class="odh">${i(bsvt3('log'))}</h3>${LG.length?`<div class="dhcard bsvlgs">${sh.map(bsvLogRow).join('')}${LG.length>sh.length?`<button type="button" class="bsvmore" data-act="bsvlogall">${i(bsvt3('all',{n:LG.length}))}</button>`:''}</div>`:''}
-  <div class="bsvfxb bsvlgadd">${['call','sent','got'].map(k=>`<button type="button" ${k==='call'?'class="on"':''} data-act="bsvlog" data-k="${k}" data-id="${i(it.id)}">＋ ${i(bsvt3('k_'+k))}</button>`).join('')}</div>`;
- return h.replace('<button type="button" class="bsvdel',lets+ants+log+'<button type="button" class="bsvdel')}catch(e){Hooks.err('bsv3screen',e);return h}});
-Hooks.on('render',()=>{if(m.route!=='bsvi')bsvLogAll=0;if(m.route!=='bsvbr')bsvBr=null});
+`;
+ /* v16: one row «＋ ещё» instead of empty sections */
+ const more=`<div class="bsvmorer"><b>＋ ${i(bsvt3('moreR'))}</b><div class="bsvfxb">${[['bsvtnew','',bsvt2('tEdit')],['bsvantadd','',bsvt3('antOne')],['bsvlog','call',bsvt3('k_call')],['bsvlog','sent',bsvt3('k_sent')],['bsvlog','got',bsvt3('k_got')],['bsvyadd','',bsvt2('yr')]].map(([a2,k,t])=>`<button type="button" data-act="${a2}" ${k?`data-k="${k}"`:''} data-id="${i(it.id)}">${i(t)}</button>`).join('')}</div></div>`;
+ return h.replace('<button type="button" class="bsvdel',lets+ants+(LG.length?log:'')+more+'<button type="button" class="bsvdel')}catch(e){Hooks.err('bsv3screen',e);return h}});
+Hooks.on('render',()=>{if(m.route!=='bsvi')bsvLogAll=0;if(m.route!=='bsvbr')bsvBr=null;if(m.route!=='bsvfl')bsvFl=null});
 function bsvDl3(){try{return Ke().items.filter(d=>d.bsvL&&!d.bsvL.no&&d.bsvL.ev&&(d.bsvL.dl||d.bsvL.frist)).map(d=>{const L2=d.bsvL;return{k:L2.dl||L2.frist,t:(L2.dl?'Frist':L2.obj||'Frist')+': '+bsvOffName(L2),w:d.title||'',act:`data-act="dzopen" data-id="${d.id}"`}})}catch{return[]}}
-OD_OK.add('bsvbr');Te.includes('bsvbr')||Te.push('bsvbr');
-(Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='bsvbr'){if(!bsvBr)return setTimeout(()=>R('bsv'),0),'<div class="screen"></div>';return bsvBrScreen()}}catch(e){Hooks.err('bsvbrscreen',e)}});
+['bsvbr','bsvfl'].forEach(r=>{OD_OK.add(r);Te.includes(r)||Te.push(r)});
+(Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='bsvfl'){if(!bsvFl)return setTimeout(()=>R('bsv'),0),'<div class="screen"></div>';return bsvFlScreen()}
+ if(m.route==='bsvbr'){if(!bsvBr)return setTimeout(()=>R('bsv'),0),'<div class="screen"></div>';return bsvBrScreen()}}catch(e){Hooks.err('bsvbrscreen',e)}});
 
 /* --- actions --- */
 Hooks.act('bsvbrnew',d=>bsvBrNew({it:d.id}));
+Hooks.act('bsvfld',d=>{if(!bsvFl)return;bsvFl.dOn=d.k;bsvRe()});Hooks.act('bsvflsave',()=>{try{bsvFlSave()}catch(e){Hooks.err('bsvflsave',e)}});
+Hooks.act('bsvflx',()=>{bsvFl=null;const h=m.hist||[];if(h.length){const p=h.pop();return R(p.route,p.route==='cat'?p.cat:void 0,!0)}R('bsv',void 0,!0)});
 Hooks.act('bsvbrx',()=>{const id=bsvBr&&bsvBr.it;bsvBr=null;const h=m.hist||[];if(h.length){const p=h.pop();return R(p.route,p.route==='cat'?p.cat:void 0,!0)}if(id&&bsvGet(id)){bsvSel=id;return R('bsvi',void 0,!0)}R('bsv',void 0,!0)});
 Hooks.act('bsvbrtpl',d=>{if(!bsvBr)return;bsvBr.tpl=d.k;const L2=bsvLetter(bsvBr);bsvBr.subj=L2.subj;bsvBr.text=L2.text;bsvRe()});
 Hooks.act('bsvbrvia',d=>{if(!bsvBr)return;bsvBr.via=d.k;bsvRe()});
-Hooks.act('bsvbrprint',()=>bsvBrPrint());Hooks.act('bsvbrcopy',()=>{if(bsvBr)bsvCopy(bsvBr.text)});
+Hooks.act('bsvbrprint',()=>bsvBrPrint());Hooks.act('bsvbrpdf',()=>{bsvBrPdf().catch(e=>Hooks.err('bsvbrpdf',e))});Hooks.act('bsvbrcopy',()=>{if(bsvBr)bsvCopy(bsvBr.text)});
 Hooks.act('bsvbrmail',()=>{const b=bsvBr;if(!b)return;const it=bsvGet(b.it)||{};if(!it.mail)return bsvToast(bsvt3('noMail'));location.href='mailto:'+encodeURIComponent(it.mail).replace('%40','@')+'?subject='+encodeURIComponent(b.subj||'')+'&body='+encodeURIComponent(b.text||'')});
 Hooks.act('bsvbrsent',()=>{try{bsvBrSent()}catch(e){Hooks.err('bsvbrsent',e)}});
 Hooks.act('bsvlcal',d=>bsvLDo(d.id,doc=>{const L2=doc.bsvL,it=bsvLTie(doc),on=it?it.n:bsvOffName(L2),k=L2.dl||L2.frist,e=L2.dl?'Antwort':L2.obj||'Frist';if(!k||L2.ev)return;
  const ev=bsvEv({title:bsvt3('calT',{e,o:on}),date:k,note:doc.title||''});ev.bsvD=doc.id;L2.ev=ev.id;const rd=bsvAddDay(k,-7);
  if(bsvDays(rd)>=0){const tk={id:V(),t:bsvt3('calR',{e,o:on}),due:rd,prio:2,proj:'',done:!1,bsvD:doc.id};g.tasks.push(tk);L2.tk=tk.id}bsvQuiet();bsvToast(bsvt2('tSaved').split(',')[0])}));
-Hooks.act('bsvltie',d=>bsvLDo(d.id,doc=>{const it=bsvLTie(doc);if(it)bsvToast(bsvt3('tied',{o:it.n}))}));
-Hooks.act('bsvlobj',d=>bsvLDo(d.id,doc=>{const it=bsvLTie(doc);if(!it)return;setTimeout(()=>bsvBrNew({it:it.id,tpl:'obj',rdate:doc.bsvL.date,kind:doc.bsvL.kind,objW:doc.bsvL.obj,doc:doc.id}),0)}));
+Hooks.act('bsvltie',d=>bsvFromLetter(d.id));
+Hooks.act('bsvlobj',d=>bsvLDo(d.id,doc=>{const it=bsvLTie(doc);if(!it)return bsvFromLetter(doc.id,'obj');setTimeout(()=>bsvBrNew({it:it.id,tpl:'obj',rdate:doc.bsvL.date,kind:doc.bsvL.kind,objW:doc.bsvL.obj,doc:doc.id}),0)}));
 Hooks.act('bsvlno',d=>{const doc=Ke().items.find(z=>z.id===d.id);if(!doc)return;doc.bsvL=Object.assign(doc.bsvL||{},{no:1});$();document.querySelectorAll('.bsvlb').forEach(z=>z.remove())});
 Hooks.act('bsvantadd',d=>bsvAntSheet(d.id));Hooks.act('bsvanted',d=>{const a=bsvAnts().find(z=>z.id===d.id);if(a)bsvAntSheet(a.it,a.id)});
 Hooks.act('bsvantnx',d=>{const a=bsvAnts().find(z=>z.id===d.id);if(!a)return;a.st=Math.min(3,(a.st||1)+1);a['d'+a.st]=x(new Date());bsvAntSync(a);$();v()});
@@ -215,5 +282,7 @@ Hooks.css('docs-behoerden-3',`
 .bsvlg>span:nth-child(2){flex:1;display:flex;flex-direction:column;gap:2px;min-width:0}.bsvlg b{font-weight:600;font-size:14px}.bsvlg small{color:var(--muted);font-size:13px;overflow-wrap:anywhere}
 .bsvlgb{display:flex;gap:4px;flex:none}.bsvlgb button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 9px;font-size:12px;font-weight:600;color:var(--green)!important}.bsvlgb .x{color:var(--muted)!important}
 .bsvlgadd{margin-top:6px}.bsvlgadd button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 12px;font-size:13.5px;font-weight:600}.bsvlgadd .on{background:var(--green);border-color:var(--green);color:#fff!important}
+.bsvmorer{margin:14px 0 4px}.bsvmorer>b{display:block;color:var(--green);font-size:15px;margin:0 2px 2px}.bsvmorer .bsvfxb button{border:1px dashed var(--green);background:none;border-radius:999px;padding:8px 12px;font-size:13.5px;font-weight:600;color:var(--green)!important}
+.bsvfl .bsvl{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:14px 2px 6px}.bsvfl .field{width:100%;box-sizing:border-box}.bsvfl .bsvlb input{margin-top:8px}
 .bsvmore{border:0;background:none;color:var(--green)!important;font-weight:600;padding:8px 0;text-align:left}
 `);

@@ -93,12 +93,12 @@ const sfDropPlain=f=>{try{yl(f)}catch{}try{delete Fa.img[f.id]}catch{}};
 /* --- code: set, check, unlock, lock, remove --- */
 async function sfSetCode(code){if(sfHas())return!1;const salt=crypto.getRandomValues(new Uint8Array(16)),key=await sfDerive(code,salt),items=sfVault().items||[];
  sfKey=key;const done=[];for(const d of items){if(!await sfPrivToSafe(d.id)){sfKey=null;return!1}for(const f of sfRefs(d)){if(!await sfFileToSafe(f)){for(const x of done)await sfFileDropSafe(x);sfKey=null;return!1}done.push(f)}}
- sfVault().enc={s:sfB64(salt)};sfItems=items;sfDropEvents(items.map(d=>d.id));await sfSaveItems();for(const f of done)sfDropPlain(f);for(const d of items)await sfPrivDropPlain(d.id);sfLast=Date.now();return!0}
+ sfVault().enc={s:sfB64(salt)};sfItems=items;sfDropEvents(items.map(d=>d.id));await sfSaveItems();try{typeof bsvSecIn==='function'&&await bsvSecIn()}catch{}for(const f of done)sfDropPlain(f);for(const d of items)await sfPrivDropPlain(d.id);sfLast=Date.now();return!0}
 async function sfCheck(code){try{const o=sfVault();const key=await sfDerive(code,sfU8(o.enc.s));const u=await sfDec(key,o.enc);return{key,items:JSON.parse(new TextDecoder().decode(u))}}catch{return null}}
 async function sfUnlock(code){if(Date.now()<sfWait)return'wait';const r=await sfCheck(code);if(!r){if(++sfFails>=5){sfWait=Date.now()+3e4;sfFails=0}return'bad'}
  sfKey=r.key;sfItems=r.items;sfFails=0;sfLast=Date.now();return'ok'}
 function sfLock(){if(!sfKey&&!sfItems)return;sfKey=null;sfItems=null;sfSel=null;sfImg={};document.querySelectorAll('.dtsheet.vsh').forEach(x=>x.remove());if(m.route==='dsafe')v()}
-async function sfClearCode(){if(!sfHas()||!sfKey)return!1;const all=[];for(const d of sfItems||[]){if(!await sfPrivToPlain(d.id))return!1;for(const f of sfRefs(d)){if(!await sfFileToPlain(f))return!1;all.push(f)}}
+async function sfClearCode(){if(!sfHas()||!sfKey)return!1;if(typeof bsvSecOut==='function'&&!await bsvSecOut())return!1;const all=[];for(const d of sfItems||[]){if(!await sfPrivToPlain(d.id))return!1;for(const f of sfRefs(d)){if(!await sfFileToPlain(f))return!1;all.push(f)}}
  const o=sfVault(),items=sfItems||[];delete o.enc;o.items=items;sfKey=null;sfItems=null;await sfSaveItems();for(const f of all)await sfFileDropSafe(f);for(const d of items)await sfPrivDropSafe(d.id);return!0}
 
 /* --- moving documents in and out --- */

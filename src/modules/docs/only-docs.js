@@ -16,6 +16,7 @@ const odS={
  let:['Письма','Briefe','Letters','Listy','Mektuplar','Lettres','Cartas'],letS:['Написать, отправить','Schreiben, senden','Write, send','Napisz, wyślij','Yaz, gönder','Écrire, envoyer','Escribir, enviar'],
  law:['Правовые документы','Rechtliche Dokumente','Legal documents','Dokumenty prawne','Hukuki belgeler','Documents juridiques','Documentos legales'],lawS:['Договоры, доверенности, счета','Verträge, Vollmachten, Rechnungen','Contracts, powers of attorney, bills','Umowy, pełnomocnictwa, rachunki','Sözleşmeler, vekaletler, faturalar','Contrats, procurations, factures','Contratos, poderes, facturas'],
  ppl:['Контакты','Kontakte','Contacts','Kontakty','Kişiler','Contacts','Contactos'],pplS:['Нотариус, страховая, близкие','Notar, Versicherung, Angehörige','Notary, insurer, family','Notariusz, ubezpieczyciel, bliscy','Noter, sigorta, yakınlar','Notaire, assureur, proches','Notario, aseguradora, familia'],
+ tk:['Задачи','Aufgaben','Tasks','Zadania','Görevler','Tâches','Tareas'],
  dl:['Сроки','Fristen','Deadlines','Terminy','Süreler','Échéances','Plazos'],dlS:['Что скоро истекает','Was bald abläuft','What runs out soon','Co wkrótce wygasa','Yakında dolacaklar','Ce qui expire bientôt','Lo que vence pronto'],
  dlT:['Сроки документов','Fristen der Dokumente','Document deadlines','Terminy dokumentów','Belge süreleri','Échéances des documents','Plazos de los documentos'],
  dlIn:['Паспорт, ID, полисы, договоры — всё, у чего есть срок действия или последний день расторжения.','Pass, Ausweis, Policen, Verträge – alles mit Ablaufdatum oder letztem Kündigungstag.','Passport, ID, policies, contracts – everything with an expiry date or a last day to cancel.','Paszport, dowód, polisy, umowy – wszystko, co ma termin ważności lub wypowiedzenia.','Pasaport, kimlik, poliçeler, sözleşmeler – süresi ya da fesih son günü olan her şey.','Passeport, carte d’identité, polices, contrats – tout ce qui a une date d’expiration ou de résiliation.','Pasaporte, DNI, pólizas, contratos: todo lo que tiene fecha de caducidad o de cancelación.'],
@@ -48,14 +49,16 @@ try{if(typeof h9S==='object'&&h9S.day)h9S.day=odS.day}catch{}
 Hooks.on('search',G=>{try{if(!odOn())return G;return(G||[]).filter(x=>!['sMoney','sShop','sRout'].includes(x.k))}catch{return G}});
 
 /* --- after every redraw: hide what leads out of the plan, keep names and signs right --- */
+const OD_TK='<rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M8.2 12.2l2.6 2.6 5-5.2"/>';
 const OD_DL='<path d="M7 3h12M7 23h12M8.5 3c0 5 9 6 9 10s-9 5-9 10M17.5 3c0 5-9 6-9 10"/>';
 function odTidy(){try{
  const on=odOn();document.documentElement.classList.toggle('od',on);if(!on)return;
  if(m.logged&&m.route&&!odOk(m.route,m.cat)&&!odTidy.busy){odTidy.busy=1;setTimeout(()=>{odTidy.busy=0;try{R(odTo(m.route,m.cat))}catch{}},0)}
  if(document.title!=='Butler Docs')document.title='Butler Docs';
  odPrune();
- const st=document.querySelector('nav.nav [data-k="stats"]');if(st&&!st.dataset.od){st.dataset.od=1;const s=st.querySelector('span');s&&(s.textContent=odt('dl'));const sv=st.querySelector('svg');sv&&(sv.innerHTML=OD_DL)}
- if(st)st.classList.toggle('on',m.route==='dsrok');
+ /* bottom bar: «Aufgaben» in place of «Прогресс» (deadlines are on home, in ▦ and in the calendar) */
+ const st=document.querySelector('nav.nav [data-k="stats"]');if(st&&!st.dataset.od){st.dataset.od=1;st.dataset.k='tasks';st.dataset.to='tasks';const s=st.querySelector('span');s&&(s.textContent=odt('tk'));const sv=st.querySelector('svg');sv&&(sv.innerHTML=OD_TK)}
+ const tk=document.querySelector('nav.nav [data-od]');if(tk){const on=['tasks','projects','project'].includes(m.route);tk.classList.toggle('on',on);if(on)document.querySelectorAll('nav.nav [data-k=home].on').forEach(x=>x.classList.remove('on'))}
  document.querySelectorAll('.hl9tx').forEach(x=>{if(!x.querySelector('.odsg')){const e=document.createElement('em');e.className='odsg';e.textContent='DOCS';x.appendChild(e)}});
 }catch(e){Hooks.err('odtidy',e)}}
 /* a link out of the plan is hidden; a «back» arrow that would lead out goes home instead.

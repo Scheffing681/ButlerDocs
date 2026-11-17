@@ -44,3 +44,4 @@ docs/vault.js
 docs/entrance.js
 docs/my-city.js
 docs/steady-screen.js
+docs/behoerden.js

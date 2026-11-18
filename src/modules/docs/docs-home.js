@@ -10,6 +10,7 @@ const dhS={
  vault:['Сейф','Tresor','Vault','Sejf','Kasa','Coffre','Caja fuerte'],vaultS:['Защищённые папки с PIN','Sichere Ablage wichtiger Daten','Safe storage for key data','Bezpieczne miejsce na dane','Önemli veriler için güvenli alan','Rangement sûr des données','Lugar seguro para datos'],
  life:['Книга жизни','Lebensbuch','Book of life','Księga życia','Hayat kitabı','Livre de vie','Libro de la vida'],lifeS:['Моя история, события, документы','Meine Geschichte, Ereignisse, Dokumente','My story, events, documents','Moja historia, wydarzenia','Hikâyem, olaylar, belgeler','Mon histoire, événements','Mi historia, sucesos'],
  leg:['Забота и наследство','Vorsorge & Nachlass','Provision & estate','Zabezpieczenie i spadek','Önlem ve miras','Prévoyance & succession','Previsión y herencia'],legS:['Имущество, распоряжения, последние желания','Vermögen, Verfügungen, letzte Wünsche','Assets, directives, last wishes','Majątek, dyspozycje, ostatnia wola','Varlıklar, vasiyetler, son istekler','Patrimoine, dispositions, dernières volontés','Patrimonio, disposiciones, últimas voluntades'],
+ ppl:['Контакты','Kontakte','Contacts','Kontakty','Kişiler','Contacts','Contactos'],pplS:['Близкие, нотариус, страховая','Familie, Notar, Versicherung','Family, notary, insurer','Bliscy, notariusz, ubezpieczyciel','Aile, noter, sigorta','Proches, notaire, assureur','Familia, notario, aseguradora'],
  ai:['Butler AI','Butler AI','Butler AI','Butler AI','Butler AI','Butler AI','Butler AI'],aiS:['Искать, упорядочить, подготовить','Suchen, organisieren, vorbereiten','Search, organise, prepare','Szukaj, porządkuj, przygotuj','Ara, düzenle, hazırla','Chercher, organiser, préparer','Buscar, organizar, preparar'],
  today:['Сегодня','Heute','Today','Dziś','Bugün','Aujourd’hui','Hoy'],all:['Все','Alle','All','Wszystko','Tümü','Tout','Todo'],none:['На сегодня ничего не запланировано','Für heute nichts geplant','Nothing planned for today','Na dziś nic nie zaplanowano','Bugün için plan yok','Rien de prévu aujourd’hui','Nada previsto para hoy'],
  quick:['Быстрые действия','Schnellaktionen','Quick actions','Szybkie akcje','Hızlı işlemler','Actions rapides','Acciones rápidas'],
@@ -37,12 +38,13 @@ const DH_I={
  leaf:'<path d="M5 19c0-8 5-13.5 14.5-14-.3 9.5-5.8 14.5-14 14z"/><path d="M5 19l8.5-8.5"/>',
  clock:'<circle cx="12" cy="12.5" r="7.5"/><path d="M12 8.5v4.3l2.8 1.7M9 3h6"/>',
  umb:'<path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6.5a2 2 0 0 1-4 0"/>',
+ users:'<circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.8" cy="9.5" r="2.5"/><path d="M15.5 14.3c2.6-.3 4.5 1.3 5 4.2"/>',
  chev:'<path d="M9.5 6l6 6-6 6"/>'};
 const dhi=(n,c)=>`<svg class="dhi${c?' '+c:''}" viewBox="0 0 24 24" aria-hidden="true">${DH_I[n]||''}</svg>`;
 /* «Versicherungen» has no tile of its own: «Dokumente» switches between documents and insurance */
 const DH_T=[['docs','fld','data-act="go" data-to="archive"'],['pers','id','data-act="dccat" data-v="personal"'],
  ['cal','cal','data-act="go" data-to="mycal"'],['task','chk','data-act="go" data-to="tasks"'],['bank','bank','data-act="dhbank"'],
- ['vault','vault','data-act="dhvault"'],['life','book','data-act="go" data-to="life"'],['leg','sprout','data-act="go" data-to="dnach"']];
+ ['vault','vault','data-act="dhvault"'],['life','book','data-act="go" data-to="life"'],['leg','sprout','data-act="go" data-to="dnach"'],['ppl','users','data-act="go" data-to="people"']];
 function dhGreet(){const h=new Date().getHours();const k=h<5?'night':h<11?'morning':h<18?'day':h<22?'evening':'night';let n='';try{n=(g.user&&(g.user.short||g.user.first))||''}catch{}return dht(k)+(n?',':'')+(n?'<br>'+i(n):'')}
 function dhWx(){try{const r=typeof bd8wx==='function'?bd8wx():null;if(!r)return'';const w=r.w||{},t=w.t!=null?w.t:w.temp!=null?w.temp:w.tt;const nm=r.nm||'';if(t==null&&!nm)return'';
  return`<button type="button" class="dhwx" data-act="go" data-to="wd"><span class="dhsun">${w.e||w.ic||'⛅'}</span><b>${t!=null?Math.round(t)+' °C':'—'}</b><small>${i(nm)}</small></button>`}catch{return''}}

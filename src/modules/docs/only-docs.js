@@ -86,7 +86,7 @@ new MutationObserver(()=>{try{if(!odOn())return;document.querySelectorAll('.bd8p
   b.onclick=e=>{e.stopPropagation();try{const x=sh&&sh.querySelector('[data-x]');x&&x.click()}catch{}setTimeout(()=>{try{fn()}catch(er){Hooks.err('odplus',er)}},120)};return b};
  pm.prepend(mk('oddoc','add',odt('doc'),()=>L.dcaddq()));pm.append(mk('odrem','bell',odt('rem'),()=>L.remnew()))})}catch(e){Hooks.err('odplus',e)}}).observe(document.body,{childList:!0,subtree:!0});
 
-/* --- ▦ All sections: only the document sections --- */
+/* --- ▦ All sections: only the document sections; «Weitere»: Scanner, Fristen (v38: «Kontakte» is a tile of its own on home) --- */
 function odAll(){const x=[['scan','scan','data-act="go" data-to="sc9"'],['dl','clock','data-act="go" data-to="dsrok"']];
  return`<div class="screen dhome odall"><div class="sub-hdr"><button class="iconbtn" data-act="odback" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(odt('all'))}</h2></div><span></span></div>
  <div class="dhgrid">${DH_T.map(([k,ic,a])=>`<button type="button" class="dht" ${a}>${dhi(ic,'big')}<b>${i(dht(k))}</b><small>${i(dht(k+'S'))}</small></button>`).join('')}</div>

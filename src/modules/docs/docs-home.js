@@ -37,6 +37,7 @@ const DH_I={
  leaf:'<path d="M5 19c0-8 5-13.5 14.5-14-.3 9.5-5.8 14.5-14 14z"/><path d="M5 19l8.5-8.5"/>',
  clock:'<circle cx="12" cy="12.5" r="7.5"/><path d="M12 8.5v4.3l2.8 1.7M9 3h6"/>',
  umb:'<path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6.5a2 2 0 0 1-4 0"/>',
+ users:'<circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.8" cy="9.5" r="2.5"/><path d="M15.5 14.3c2.6-.3 4.5 1.3 5 4.2"/>',
  chev:'<path d="M9.5 6l6 6-6 6"/>'};
 const dhi=(n,c)=>`<svg class="dhi${c?' '+c:''}" viewBox="0 0 24 24" aria-hidden="true">${DH_I[n]||''}</svg>`;
 /* «Versicherungen» has no tile of its own: «Dokumente» switches between documents and insurance */

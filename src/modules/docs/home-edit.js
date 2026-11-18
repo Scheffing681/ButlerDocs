@@ -66,6 +66,8 @@ Hooks.act('heplus',d=>{heBack(d.k);T(het('back'));v()});
   if(!heOn())return;if(e.target.closest&&e.target.closest('[data-act=dhex],[data-act=dhsz],[data-act=hebx],[data-act=hedone],[data-act=headd],.dtsheet'))return;
   e.preventDefault();e.stopPropagation();if(!e.target.closest('.dht,.dhcard,.dhwx,.hebar'))heStop()},!0);
  document.addEventListener('contextmenu',e=>{if(m.route==='home'&&e.target.closest&&e.target.closest('.dhome .dht, .dhome .dhcard'))e.preventDefault()},!0)}
+/* v40: the «Butler AI» card is hidden once for everyone (the green ＋ held opens the same Butler); «＋ Hinzufügen» brings it back */
+const heAi=()=>{try{if(m.logged&&g&&!g.heAi40){g.heAi40=1;const B=g.dhBlk=g.dhBlk&&typeof g.dhBlk==='object'?g.dhBlk:{};B.ai=1;$();if(m.route==='home')setTimeout(v,0)}}catch(e){Hooks.err('heai40',e)}};heAi();Hooks.on('render',heAi);
 /* leaving home ends edit mode */
 Hooks.on('route',r=>{if(r!=='home'&&m.dhEdit)m.dhEdit=0});
 

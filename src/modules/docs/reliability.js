@@ -47,12 +47,12 @@ function rlAnalyze(o){if(!o||typeof o!=='object'||o.v!==1)return{bad:1};const ph
  return{bad:0,ts:o.bkTs||o.ts||0,docs:docs.length,ctr:ctr.length,ph:keys.size,miss,brk,bsv:(o.bsv&&Array.isArray(o.bsv.items)?o.bsv.items.length:0),ev:Array.isArray(o.events)?o.events.length:0,
   vault:vt.enc?'enc':Array.isArray(vt.items)?vt.items.length:0,now,older:now>docs.length}}
 function rlShow(r,name,size){const row=(l,v,s)=>`<div class="rlr"><span>${i(l)}</span><b>${i(String(v))}${s?`<small>${i(s)}</small>`:''}</b></div>`;
- if(r.bad){H(rlt('chk'),`<div class="rlres bad"><h4>${i(rlt('badH'))}</h4><p>${i(name||'')}</p></div><p class="fdsmall">${i(rlt('only'))}</p><button type="button" class="dcadd gold" data-x="1" data-act="st53bk">${i(rlt('save'))}</button>`);return}
+ if(r.bad){H(rlt('chk'),`<div class="rlres bad"><h4>${i(rlt('badH'))}</h4><p>${i(name||'')}</p></div><p class="fdsmall">${i(rlt('only'))}</p><button type="button" class="dcadd gold" data-kgo="st53bk">${i(rlt('save'))}</button>`);return}
  const warn=r.miss||r.brk||r.older,mb=!size?'':size>=1048576?(size/1048576).toFixed(1).replace('.',',')+' MB':Math.max(1,Math.round(size/1024))+' KB';
  H(rlt('chk'),`<div class="rlres ${warn?'warn':'ok'}"><h4>${i(rlt(warn?'warnH':'okH'))}</h4><p>${i([name,mb].filter(Boolean).join(' · '))}${r.ts?'<br>'+i(rlt('made',{d:rlWhen(r.ts)})):''}</p></div>
   <div class="rlbox">${row(rlt('docs'),r.docs,rlt('phone',{n:r.now}))}${r.ctr?row(rlt('ctr'),r.ctr):''}${row(rlt('ph'),r.ph)}${row(rlt('bsv'),r.bsv)}${row(rlt('ev'),r.ev)}${row(rlt('vault'),r.vault==='enc'?rlt('vEnc'):r.vault||rlt('vNone'))}</div>
   ${r.miss?`<p class="rlw">${i(rlt('miss',{n:r.miss}))}</p>`:''}${r.brk?`<p class="rlw">${i(rlt('brk',{n:r.brk}))}</p>`:''}${r.older?`<p class="rlw">${i(rlt('older'))}</p>`:''}
-  <p class="fdsmall">${i(rlt('only'))}</p>${warn?`<button type="button" class="dcadd gold" data-x="1" data-act="st53bk">${i(rlt('save'))}</button>`:`<button type="button" class="btn rlfull" data-x="1">${i(rlt('done'))}</button>`}`)}
+  <p class="fdsmall">${i(rlt('only'))}</p>${warn?`<button type="button" class="dcadd gold" data-kgo="st53bk">${i(rlt('save'))}</button>`:`<button type="button" class="btn rlfull" data-x="1">${i(rlt('done'))}</button>`}`)}
 async function rlOpen(text,name){let t=null;try{t=JSON.parse(text)}catch{}if(!t){rlShow({bad:1},name);return}
  const go=o=>{let r;try{r=rlAnalyze(o)}catch(e){Hooks.err('rlanalyze',e);r={bad:1}}rlShow(r,name,text.length)};
  if(!t['silentium-enc']){go(t);return}

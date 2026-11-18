@@ -426,12 +426,12 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await clk('[data-act=krjobed]',400);await T(()=>{document.querySelector('[data-ksave]').click()});await p.waitForTimeout(200);check('an employer needs a name',await T(()=>!!document.querySelector('[data-kerr]').textContent));
  await T(()=>{const f=(k,v)=>{document.querySelector(`[data-kf=${k}]`).value=v};f('co','ТЕСТ AG');f('role','Techniker');f('from','2015-08');f('to','2021-02');document.querySelector('[data-ksave]').click()});await p.waitForTimeout(500);
  check('saving opens the employer',await rt()==='karj'&&await T(()=>/08\/2015 – 02\/2021/.test(document.querySelector('.screen').innerText)));
- await clk('[data-act=krdocs]',400);check('documents that fit are suggested',await T(()=>!!document.querySelector('.krdl [data-kd=krd1]')&&/Passt|Похоже|Probably/.test(document.querySelector('.dtsheet').innerText)));
- await T(()=>{document.querySelector('[data-kd=krd1]').checked=true;document.querySelector('[data-dsave]').click()});await p.waitForTimeout(400);check('…and are tied to the employer',await T(()=>!!document.querySelector('.karj, .kar [data-act=dzopen][data-id=krd1]')||!!document.querySelector('[data-act=dzopen][data-id=krd1]')));
+ await clk('[data-act=krslot][data-k=zeugnis]',400);check('a place «Arbeitszeugnis» offers scan, file and fitting documents (v30)',await T(()=>!!document.querySelector('.kradd [data-ko=cam]')&&!!document.querySelector('.kradd [data-ko=file]')&&/passt|подходит|fits/.test(document.querySelector('.kradd [data-kh=krd1]')?.innerText||'')));
+ await T(()=>document.querySelector('[data-kh=krd1]').click());await p.waitForTimeout(400);check('…one tap links it to the place, no copy',await T(()=>{const j=window.__T.g().kar.jobs[0];return j.dk&&j.dk.krd1==='zeugnis'&&window.__T.Ke().items.filter(d=>d.id==='krd1').length===1&&/✓/.test(document.querySelector('[data-act=krslot][data-k=zeugnis]').innerText)}));
  await clk('[data-act=krproj]',400);await T(()=>{const f=(k,v)=>{document.querySelector(`[data-pf=${k}]`).value=v};f('t','Halle 4');f('y','2019');f('what','Umbau');f('res','12 % unter Budget');document.querySelector('[data-psave]').click()});await p.waitForTimeout(400);
  check('a project with its result',await T(()=>/Halle 4 \(2019\)/.test(document.querySelector('.screen').innerText)&&/12 % unter Budget/.test(document.querySelector('.screen').innerText)));
  await T(()=>document.querySelector('.screen > .sub-hdr > button:first-child').click());await p.waitForTimeout(400);check('back goes to the list of employers',await rt()==='kar');
- await T(()=>{navigator.canShare=()=>true;navigator.share=async o=>{window.__krsh=o.files[0].name+'|'+o.files[0].size}});await clk('[data-act=krpdf]',1200);check('the CV list goes out as a PDF',await T(()=>/\.pdf\|\d{4,}/.test(window.__krsh||'')),await T(()=>window.__krsh));
+ await T(()=>{navigator.canShare=()=>true;navigator.share=async o=>{window.__krsh=o.files[0].name+'|'+o.files[0].size}});await clk('[data-act=krmappe]',500);check('Bewerbungsmappe lets one choose (CV ticked)',await T(()=>!!document.querySelector('[data-km=cv]:checked')));await clk('[data-mgo]',1500);check('…and makes one PDF',await T(()=>/\.pdf\|\d{4,}/.test(window.__krsh||'')),await T(()=>window.__krsh));
  await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>!/^kr/.test(d.id));delete W.g().kar;W.save();W.R('home')});await p.waitForTimeout(300)}
  /* v23 no doubles: Behörden, Karriere, documents */
  where='no doubles';{const rt=()=>T(()=>window.__T.m().route);
@@ -492,6 +492,22 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  if(k==='pw'){await T(()=>document.querySelector('.mvwel [data-mv]').click());await p.waitForTimeout(800);check('«Passwort festlegen» opens the password setting right away',await T(()=>!!document.getElementById('f-pw')));await T(()=>{const W=window.__T;W.m().sheet=null;W.v()})}
  else{await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));check('with a lock the move offers Face ID',k==='face')}
  await T(()=>{document.querySelectorAll('.dtsheet').forEach(s=>s.remove());window.__T.R('home')});await p.waitForTimeout(300)}
+ /* v30: Karriere — dates, education, recognition reminder */
+ where='karriere 2';{await T(()=>{const W=window.__T;W.g().kar={jobs:[],edu:[]};W.save();W.R('kar')});await p.waitForTimeout(400);
+ await T(()=>document.querySelector('[data-act=krjobed]').click());await p.waitForTimeout(300);
+ await T(()=>{const s=document.querySelector('.dtsheet');s.querySelector('[data-kf=co]').value='ТЕСТ GmbH';s.querySelector('[data-kf=from]').value='13.2020';s.querySelector('[data-ksave]').click()});await p.waitForTimeout(300);
+ check('a wrong month is refused with a hint (MM.JJJJ)',await T(()=>/MM|ММ/.test(document.querySelector('[data-kerr]').textContent)&&window.__T.g().kar.jobs.length===0));
+ await T(()=>{const s=document.querySelector('.dtsheet');s.querySelector('[data-kf=from]').value='2.2020';s.querySelector('[data-kf=to]').value='';s.querySelector('[data-ksave]').click()});await p.waitForTimeout(400);
+ check('«2.2020» is stored as February 2020',await T(()=>(window.__T.g().kar.jobs[0]||{}).from==='2020-02'));
+ await T(()=>{document.querySelectorAll('.dtsheet').forEach(s=>s.remove());const W=window.__T;W.g().kar.tab='edu';W.save();W.R('kar')});await p.waitForTimeout(400);
+ await T(()=>document.querySelector('[data-act=kredu]').click());await p.waitForTimeout(300);
+ await T(()=>{const s=document.querySelector('.dtsheet');s.querySelector('[data-ef=t]').value='Attestat ТЕСТ';s.querySelector('[data-ef=land]').value='Russland';const a=s.querySelector('[data-ef=an]');a.value='req';a.onchange();s.querySelector('[data-ef=anDue]').value='2031-01-15';s.querySelector('[data-esave]').click()});await p.waitForTimeout(500);
+ check('a qualification with «Anerkennung beantragt» is listed with its date',await T(()=>/Attestat ТЕСТ/.test(document.querySelector('.screen').innerText)&&!!document.querySelector('.kred .krpill.wait')));
+ check('…and a reminder task is made once',await T(()=>(window.__T.g().tasks||[]).filter(t=>/Attestat ТЕСТ/.test(t.t)&&t.due==='2031-01-15').length===1));
+ check('…the sheet stays open to add its pages',await T(()=>!!document.querySelector('.dtsheet [data-eadd]')));
+ await T(()=>{const s=document.querySelector('.dtsheet');const a=s.querySelector('[data-ef=an]');a.value='ok';a.onchange();s.querySelector('[data-esave]').click()});await p.waitForTimeout(400);
+ check('«anerkannt» removes the open reminder',await T(()=>!(window.__T.g().tasks||[]).some(t=>/Attestat ТЕСТ/.test(t.t)&&!t.done)));
+ await T(()=>{document.querySelectorAll('.dtsheet').forEach(s=>s.remove());const W=window.__T;delete W.g().kar;W.save();W.R('home')});await p.waitForTimeout(300)}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

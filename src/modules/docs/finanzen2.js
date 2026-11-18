@@ -57,16 +57,15 @@ const krMon=k=>{if(!k)return'';const[y,mo]=String(k).split('-');return mo?`${mo}
 const krPer=j=>`${krMon(j.from)||'?'} – ${j.to?krMon(j.to):krt('now')}`;
 const krDocs=ids=>{try{return(ids||[]).map(id=>Ke().items.find(d=>d.id===id)).filter(Boolean)}catch{return[]}};
 let krSel=null;
-function krList(){const J=krD().jobs.slice().sort((a,b)=>String(b.to||'9999').localeCompare(String(a.to||'9999'))||String(b.from||'').localeCompare(String(a.from||'')));
- return`<div class="screen dhome fz kar"><div class="sub-hdr"><button class="iconbtn" data-act="fzback" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(krt('kar'))}</h2></div><span></span></div>
+function krList(){if(krD().tab==='edu')return krEduList();const J=krD().jobs.slice().sort((a,b)=>String(b.to||'9999').localeCompare(String(a.to||'9999'))||String(b.from||'').localeCompare(String(a.from||'')));
+ return`<div class="screen dhome fz kar"><div class="sub-hdr"><button class="iconbtn" data-act="fzback" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(krt('kar'))}</h2></div><span></span></div>${krTabs()}
  ${J.length?`<div class="krtl">${J.map(j=>{const D=krDocs(j.docs);return`<button type="button" class="krit" data-act="kropen" data-id="${i(j.id)}"><b>${i(j.co)}</b><small>${i([krPer(j),j.role].filter(Boolean).join(' · '))}</small>
   ${D.length||(j.proj||[]).length?`<span class="krch">${D.slice(0,3).map(d=>`<i>📄 ${i(d.title||'—')}</i>`).join('')}${D.length>3?`<i>+${D.length-3}</i>`:''}${(j.proj||[]).length?`<i>⭐ ${(j.proj||[]).length}</i>`:''}</span>`:''}</button>`}).join('')}</div>`:`<div class="dhcard"><p class="dhnone">${i(krt('kEmpty'))}</p></div>`}
- <button type="button" class="dcadd gold" data-act="krjobed">${i(krt('kAdd'))}</button>${J.length?`<button type="button" class="fzpdf" data-act="krpdf">${i(krt('kPdf'))}</button>`:''}</div>`}
+ <button type="button" class="dcadd gold" data-act="krjobed">${i(krt('kAdd'))}</button>${krMappeBtn()}</div>`}
 function krJobScreen(j){const D=krDocs(j.docs);
  return`<div class="screen dhome fz kar"><div class="sub-hdr"><button class="iconbtn" data-act="krlist" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(j.co)}</h2></div><button type="button" class="iconbtn" data-act="krjobed" data-id="${i(j.id)}" aria-label="${i(krt('edit'))}">${bsvi('edit')}</button></div>
  <p class="krper">${i([krPer(j),j.role].filter(Boolean).join(' · '))}</p>${j.note?`<div class="dhcard"><p class="vnote">${i(j.note)}</p></div>`:''}
- <h3 class="odh">${i(krt('docs'))}</h3>${D.length?`<div class="dhcard odl">${D.map(d=>`<div class="odr krdr"><button type="button" class="bsvhit" data-act="dzopen" data-id="${i(d.id)}">${dhi('fld')}<span><b>${i(d.title||'—')}</b>${d.date?`<small>${i(vA(d.date))}</small>`:''}</span></button><button type="button" class="bsvsm x" data-act="krdocx" data-j="${i(j.id)}" data-id="${i(d.id)}" aria-label="×">×</button></div>`).join('')}</div>`:''}
- <button type="button" class="bsvplus" data-act="krdocs" data-id="${i(j.id)}">${i(krt('docAdd'))}</button>
+ ${krSlotsHtml(j)}
  <h3 class="odh">⭐ ${i(krt('proj'))}</h3>${(j.proj||[]).slice().sort((a,b)=>String(b.y||'').localeCompare(String(a.y||''))).map(p=>`<button type="button" class="dhcard krp" data-act="krproj" data-j="${i(j.id)}" data-id="${i(p.id)}"><b>${i(p.t)}${p.y?` (${i(p.y)})`:''}</b>${p.what?`<span>${i(p.what)}</span>`:''}${p.res?`<span class="krres">${i(krt('res'))}: ${i(p.res)}</span>`:''}</button>`).join('')}
  <button type="button" class="bsvplus" data-act="krproj" data-j="${i(j.id)}">${i(krt('pAdd'))}</button></div>`}
 ['kar','karj'].forEach(r=>{OD_OK.add(r);Te.includes(r)||Te.push(r)});
@@ -76,11 +75,12 @@ Hooks.on('render',()=>{if(m.route!=='karj')krSel=null});
 function krJobSheet(id){const j0=id&&krJob(id),j=j0?JSON.parse(JSON.stringify(j0)):{co:'',role:'',from:'',to:'',note:''};
  H(j0?krt('edit'):krt('kAdd').replace(/^＋\s*/,''),`<div class="bsvys"><label class="bsvl">${i(krt('co'))}</label><input class="field" data-kf="co" value="${i(j.co)}" autocomplete="off">
   <label class="bsvl">${i(krt('role'))}</label><input class="field" data-kf="role" value="${i(j.role||'')}" autocomplete="off">
-  <div class="bsv2c"><div><label class="bsvl">${i(krt('from'))}</label><input class="field" type="month" data-kf="from" value="${i(j.from||'')}"></div><div><label class="bsvl">${i(krt('to'))}</label><input class="field" type="month" data-kf="to" value="${i(j.to||'')}"></div></div>
+  <div class="bsv2c"><div><label class="bsvl">${i(krt('from'))}</label><input class="field" data-kf="from" inputmode="numeric" placeholder="MM.JJJJ" value="${i(krMonIn(j.from))}"></div><div><label class="bsvl">${i(krt('to'))}</label><input class="field" data-kf="to" inputmode="numeric" placeholder="MM.JJJJ" value="${i(krMonIn(j.to))}"></div></div>
   <label class="bsvl">${i(krt('note'))}</label><textarea class="field" data-kf="note" rows="2">${i(j.note||'')}</textarea>
   <small class="verr" data-kerr></small><button type="button" class="dcadd gold" data-ksave>${i(krt('save'))}</button>${j0?`<button type="button" class="bsvdel" data-kdel>${i(krt('del'))}</button>`:''}</div>`,
  el=>{el.classList.add('bsvsh');let arm=0;el.addEventListener('click',e=>{
   if(e.target.closest('[data-ksave]')){el.querySelectorAll('[data-kf]').forEach(z=>{j[z.dataset.kf]=z.value.trim()});if(!j.co){el.querySelector('[data-kerr]').textContent=krt('need');return}
+   for(const k of['from','to']){const q=krMonParse(j[k]);if(q===null){el.querySelector('[data-kerr]').textContent=krt2('badMon');return}j[k]=q}
    const nn=x=>String(x||'').toLowerCase().replace(/\b(gmbh|ag|kg|se|e\.?v\.?|co\.?|&)\b/g,'').replace(/[^a-zа-яёäöüß0-9]+/g,'');
    const tw=!j0&&!j.ndOk&&krD().jobs.find(z=>nn(z.co)&&nn(z.co)===nn(j.co));
    if(tw){const b=el.querySelector('.bsvys');if(!b.querySelector('.krdup'))b.insertAdjacentHTML('afterbegin',`<div class="dhcard warn krdup"><b>${i(krt('dupH',{n:tw.co}))}</b><small>${i(krPer(tw))}</small><div class="bsvfxb"><button type="button" data-kdo>${i(krt('dupOpen'))}</button><button type="button" data-kdn>${i(krt('dupNew'))}</button></div></div>`);

@@ -77,7 +77,7 @@ function krSlotSheet(jid,k){const j=krJob(jid);if(!j)return;const dk=krDk(j),L2=
   sh.querySelectorAll('[data-ku]').forEach(b=>b.onclick=()=>{const id=b.dataset.ku;j.docs=(j.docs||[]).filter(z=>z!==id);delete dk[id];$();sh.remove();v();krSlotSheet(jid,k)})})}
 /* ---------- Ausbildung & Abschlüsse ---------- */
 const krEdu=()=>{const o=krD();if(!Array.isArray(o.edu))o.edu=[];return o.edu};
-const krTabs=()=>{const t=krD().tab==='edu'?'edu':'job';return`<div class="fztabs krtabs"><button type="button" class="${t==='job'?'on':''}" data-act="krtab" data-k="job">${i(krt2('tJob'))}</button><button type="button" class="${t==='edu'?'on':''}" data-act="krtab" data-k="edu">${i(krt2('tEdu'))}</button></div>`};
+const krTabs=()=>{const bz=bzxOn(),t=krD().tab==='edu'?'edu':krD().tab==='biz'&&bz?'biz':'job';return`<div class="fztabs krtabs${bz?' kr3':''}"><button type="button" class="${t==='job'?'on':''}" data-act="krtab" data-k="job">${i(krt2('tJob'))}</button>${bz?`<button type="button" class="${t==='biz'?'on':''}" data-act="krtab" data-k="biz">${i(bzxT('tab'))}</button>`:''}<button type="button" class="${t==='edu'?'on':''}" data-act="krtab" data-k="edu">${i(bz?bzxT('tEdu3'):krt2('tEdu'))}</button></div>`};
 const krMappeBtn=()=>(krD().jobs.length||krEdu().length)?`<button type="button" class="fzpdf krmb" data-act="krmappe">📎 ${i(krt2('mappe'))}</button>`:'';
 const krAnPill=e=>e.an==='ok'?`<span class="krpill ok">${i(krt2('an_ok'))}</span>`:e.an==='req'?`<span class="krpill wait">${i(krt2('an_req'))}${e.anDue?' · '+i(vA(e.anDue)):''}</span>`:e.an==='no'?`<span class="krpill wait">${i(krt2('an_no'))}</span>`:'';
 function krEduList(){const E=krEdu().slice().sort((a,b)=>String(b.y||'').localeCompare(String(a.y||'')));
@@ -135,7 +135,7 @@ async function krMappePdf(sel){const P=[];if(sel.includes('cv'))P.push(...krCvPa
  if(!P.length)return;const blob=new Blob([Kn(P)],{type:'application/pdf'}),name=krt2('mT')+'.pdf',f=new File([blob],name,{type:'application/pdf'});window.__krMappe={pages:P.length,size:blob.size};
  try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:name});return}}catch(e){if(e&&e.name==='AbortError')return}
  try{await xu({blob,name})}catch{const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),6e4)}}
-Hooks.act('krslot',d=>krSlotSheet(d.j,d.k));Hooks.act('krtab',d=>{krD().tab=d.k==='edu'?'edu':'job';$();v()});Hooks.act('kredu',d=>krEduSheet(d&&d.id));Hooks.act('krmappe',()=>krMappe());
+Hooks.act('krslot',d=>krSlotSheet(d.j,d.k));Hooks.act('krtab',d=>{krD().tab=d.k==='edu'?'edu':d.k==='biz'?'biz':'job';try{bsvQuiet()}catch{}$();v()});Hooks.act('kredu',d=>krEduSheet(d&&d.id));Hooks.act('krmappe',()=>krMappe());
 Hooks.css('docs-karriere-2',`
 .krtabs{margin:0 0 12px}.krslots{padding:10px 14px!important}.krprog{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin:2px 0 4px}.krprog div{flex:1;height:7px;border-radius:9px;background:rgba(0,0,0,.07);overflow:hidden}.krprog i{display:block;height:100%;background:#C9A55E;border-radius:9px}
 .krslot{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);background:none;padding:11px 0;color:inherit;font:inherit}.krslot:last-child{border-bottom:0}

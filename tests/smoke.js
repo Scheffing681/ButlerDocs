@@ -480,6 +480,18 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  const ub=await T(()=>{const d=document.createElement('div');d.className='upbar';d.innerHTML='<span><b>Neu</b><small>x</small></span>';document.body.appendChild(d);const c=getComputedStyle(d.querySelector('b')).color,r=d.getBoundingClientRect();d.remove();return [c,Math.round(r.bottom),innerHeight]});
  check('the update bar text is readable (light on dark) and sits above the bottom bar',/255, 255, 255/.test(ub[0])&&ub[1]<ub[2]-80,JSON.stringify(ub));
  await T(()=>window.__T.R('home'));await p.waitForTimeout(300)}
+ /* v29: move to a new phone */
+ where='move phone';{await T(()=>window.__T.R('profile'));await p.waitForTimeout(500);
+ check('profile has «Auf neues Telefon umziehen» with save + share link',await T(()=>{const c=document.querySelector('.mvcard');return!!c&&!!c.querySelector('[data-act=st53bk]')&&!!c.querySelector('[data-act=mvlink]')&&c.querySelectorAll('.mvst').length===3}));
+ await T(()=>{const d=document.createElement('div');d.className='tbset';d.id='mvtest';d.innerHTML='<div class="tbcard"><button class="tbgo">Beginnen</button></div>';document.body.appendChild(d)});await p.waitForTimeout(300);
+ check('the first screen of a new phone offers «Vom alten Telefon übernehmen»',await T(()=>!!document.querySelector('#mvtest .mvbtn')));await T(()=>document.getElementById('mvtest').remove());
+ await T(()=>{sessionStorage.setItem('bdocs-mvjust',String(Date.now()));window.__T.R('home')});await p.waitForTimeout(900);
+ check('after a move «Willkommen zurück» shows what came over',await T(()=>{const w=document.querySelector('.mvwel');return!!w&&/\d/.test(w.innerText)&&!!w.querySelector('[data-mv]')}));
+ check('…and it is shown only once',await T(()=>!sessionStorage.getItem('bdocs-mvjust')));
+ const k=await T(()=>document.querySelector('.mvwel [data-mv]').dataset.mv);
+ if(k==='pw'){await T(()=>document.querySelector('.mvwel [data-mv]').click());await p.waitForTimeout(800);check('«Passwort festlegen» opens the password setting right away',await T(()=>!!document.getElementById('f-pw')));await T(()=>{const W=window.__T;W.m().sheet=null;W.v()})}
+ else{await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));check('with a lock the move offers Face ID',k==='face')}
+ await T(()=>{document.querySelectorAll('.dtsheet').forEach(s=>s.remove());window.__T.R('home')});await p.waitForTimeout(300)}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

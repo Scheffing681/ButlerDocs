@@ -59,3 +59,4 @@ docs/tidy.js
 docs/notizen.js
 docs/vorsorge.js
 docs/badge-place.js
+docs/home-edit.js

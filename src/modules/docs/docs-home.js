@@ -39,6 +39,7 @@ const DH_I={
  clock:'<circle cx="12" cy="12.5" r="7.5"/><path d="M12 8.5v4.3l2.8 1.7M9 3h6"/>',
  umb:'<path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6.5a2 2 0 0 1-4 0"/>',
  users:'<circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.8" cy="9.5" r="2.5"/><path d="M15.5 14.3c2.6-.3 4.5 1.3 5 4.2"/>',
+ sq:'<rect x="6" y="6" width="12" height="12" rx="3"/>',row:'<rect x="3" y="8" width="18" height="8" rx="3"/>',
  chev:'<path d="M9.5 6l6 6-6 6"/>'};
 const dhi=(n,c)=>`<svg class="dhi${c?' '+c:''}" viewBox="0 0 24 24" aria-hidden="true">${DH_I[n]||''}</svg>`;
 /* «Versicherungen» has no tile of its own: «Dokumente» switches between documents and insurance */
@@ -52,6 +53,11 @@ function dhToday(){let L=[];try{L=typeof bd8today==='function'?bd8today().filter
  return`<div class="dhcard dhtd"><div class="dhhd"><b>${i(dht('today'))}</b><button type="button" data-act="go" data-to="ax5now">${i(dht('all'))} ${dhi('chev','sm')}</button></div>${L.length?L.map(x=>`<div class="dhrow">${dhi(x.ev?'cal':/versich|polic|страх|insur/i.test(x.t)?'umb':'clock')}<span class="tm">${i(x.tm||'')}</span><span class="tx">${i(x.t)}</span></div>`).join(''):`<p class="dhnone">${i(dht('none'))}</p>`}</div>`}
 /* the user's own order and choice of tiles and blocks («Anordnung und Farbe» → Startseite) */
 const dhTiles=()=>{const ord=Array.isArray(g.dhOrd)?g.dhOrd:[],hid=Array.isArray(g.dhHid)?g.dhHid:[];const A=DH_T.slice().sort((a,b)=>{const x1=ord.indexOf(a[0]),x2=ord.indexOf(b[0]);return(x1<0?99+DH_T.indexOf(a):x1)-(x2<0?99+DH_T.indexOf(b):x2)});return A.filter(t=>!hid.includes(t[0]))};
+/* a tile is a square or a wide row (g.dhWide); in edit mode (m.dhEdit, see home-edit.js) it gets «−» and a size switch */
+const dhWide=k=>Array.isArray(g.dhWide)&&g.dhWide.includes(k);
+function dhTile([k,ic,a]){const w=dhWide(k),inner=w?`${dhi(ic,'big')}<span class="dhwt"><b>${i(dht(k))}</b><small>${i(dht(k+'S'))}</small></span>${dhi('chev')}`:`${dhi(ic,'big')}<b>${i(dht(k))}</b><small>${i(dht(k+'S'))}</small>`;
+ if(m.dhEdit)return`<div class="dht${w?' wide':''}" data-k="${k}">${inner}<button type="button" class="dhx" data-act="dhex" data-k="${k}" aria-label="−">−</button><button type="button" class="dhsz" data-act="dhsz" data-k="${k}" aria-label="size">${dhi(w?'sq':'row')}</button></div>`;
+ return`<button type="button" class="dht${w?' wide':''}" data-k="${k}" ${a}>${inner}</button>`}
 const dhOff=k=>{try{return!!(g.dhBlk&&g.dhBlk[k])}catch{return!1}};
 function dhHome(){const d=new Date();let ds='';try{ds=d.toLocaleDateString(he(),{weekday:'short',day:'numeric',month:'long'})}catch{}
  return`<div class="screen dhome">
@@ -59,7 +65,7 @@ function dhHome(){const d=new Date();let ds='';try{ds=d.toLocaleDateString(he(),
   <div class="dhlogo"><span class="t1">The Silentium’s</span><span class="t2">BUTLER</span><span class="t3">DOCS</span></div>
   <div class="dhtr"><button type="button" class="dhib" data-act="go" data-to="reminders" aria-label="bell">${dhi('bell')}</button><button type="button" class="dhrb" data-act="go" data-to="style" aria-label="design">${dhi('leaf')}</button></div></div>
  <div class="dhgr"><div><h1>${dhGreet()}</h1><p>${i(ds)}</p></div>${dhOff('wx')?'':dhWx()}</div>
- <div class="dhgrid">${dhTiles().map(([k,ic,a])=>`<button type="button" class="dht" ${a}>${dhi(ic,'big')}<b>${i(dht(k))}</b><small>${i(dht(k+'S'))}</small></button>`).join('')}</div>
+ <div class="dhgrid${m.dhEdit?' dhed':''}">${dhTiles().map(dhTile).join('')}</div>
  ${dhOff('ai')?'':`<button type="button" class="dhcard dhai" data-act="go" data-to="concierge"><span class="inf"><svg viewBox="0 0 64 32" aria-hidden="true"><defs><linearGradient id="dhrg" x1="0" x2="1"><stop offset="0" stop-color="#22c3ee"/><stop offset=".3" stop-color="#3ddc84"/><stop offset=".55" stop-color="#f7d63b"/><stop offset=".8" stop-color="#ff6a3d"/><stop offset="1" stop-color="#e040fb"/></linearGradient></defs><path d="M32 16c-5-7-9.5-10-14-10a10 10 0 0 0 0 20c4.5 0 9-3 14-10s9.5-10 14-10a10 10 0 0 1 0 20c-4.5 0-9-3-14-10z" fill="none" stroke="url(#dhrg)" stroke-width="5"/></svg></span><span class="tx"><b>${i(dht('ai'))}</b><small>${i(dht('aiS'))}</small></span>${dhi('chev')}</button>`}
  ${dhOff('today')?'':dhToday()}
  ${dhOff('quick')?'':`<div class="dhcard dhq"><b class="dhqh">${i(dht('quick'))}</b><div class="dhqr">

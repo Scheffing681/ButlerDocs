@@ -528,6 +528,13 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('the profile shows the self-check with «Jetzt prüfen»',await T(()=>!!document.querySelector('[data-act=tdrun]')&&!!document.querySelector('.tdline')));
  check('Butler leftovers are not shown in the profile (Baukasten, Spiegel, Tarife, Protokoll, Startbildschirm, Geschwindigkeit)',await T(()=>['[data-to=bd8]','[data-to=mirror]','[data-act=plopen]','[data-act=cmdlog]','[data-act=sheet][data-s=start]','[data-act=sp8]'].every(q=>{const e=document.querySelector('.screen '+q);return!e||!e.offsetParent})));
  await T(()=>window.__T.R('home'));await p.waitForTimeout(300)}
+ /* v32: one place for contracts */
+ where='one place contracts';{const rt=()=>T(()=>window.__T.m().route);await T(()=>window.__T.R('archive'));await p.waitForTimeout(500);
+ check('«Dokumente» has no «Versicherungen» switch any more',await T(()=>!document.querySelector('.screen .dctabs')&&!!document.querySelector('.screen [data-act=fzkost]')));
+ await T(()=>document.querySelector('.screen [data-act=fzkost]').click());await p.waitForTimeout(500);
+ check('…its row opens «Finanzen → Verträge & Kosten»',await rt()==='fzm'&&await T(()=>window.__T.fz.D().tab==='kost'));
+ await T(()=>{const W=window.__T;W.m().dcTab='ins';W.R('archive')});await p.waitForTimeout(600);check('an old way to the insurance list lands in Finanzen',await rt()==='fzm');
+ await T(()=>{window.__T.fz.D().tab='stm';window.__T.R('home')});await p.waitForTimeout(300)}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

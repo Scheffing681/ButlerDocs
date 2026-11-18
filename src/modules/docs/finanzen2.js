@@ -11,7 +11,7 @@ const krS={
  kb:['%n — можно расторгнуть до %d (через %k дн.)','%n – kündbar bis %d (in %k Tagen)','%n – can be cancelled until %d (in %k days)'],
  dbl:['%k: %n похожих договора — двойные? Проверьте.','%k: %n ähnliche Verträge – doppelt? Bitte prüfen.','%k: %n similar contracts – double? Please check.'],
  noAmt:['Без суммы: %n — допишите, чтобы итог был точным','Ohne Betrag: %n – ergänzen, damit die Summe stimmt','Without an amount: %n – add it so the total is right'],
- old:['с %y · цену стоит проверить','seit %y · Preis prüfen','since %y · check the price'],kbS:['можно расторгнуть до %d','kündbar bis %d','cancel by %d'],none:['Договоров пока нет. Их суммы и сроки берутся из «Документы → Страховки».','Noch keine Verträge. Beträge und Fristen kommen aus „Dokumente → Versicherungen“.','No contracts yet. Amounts and deadlines come from “Documents → Insurance”.'],
+ old:['с %y · цену стоит проверить','seit %y · Preis prüfen','since %y · check the price'],kbS:['можно расторгнуть до %d','kündbar bis %d','cancel by %d'],none:['Договоров пока нет. Нажмите «＋ Договор»: страховка, свет, телефон, интернет, спорт …','Noch keine Verträge. Tippen Sie auf „＋ Vertrag“ – Versicherung, Strom, Handy, Internet, Sport …','No contracts yet. Tap “＋ Contract” – insurance, power, phone, internet, gym …'],
  add:['＋ Договор','＋ Vertrag','＋ Contract'],tip:['Полезно знать:','Gut zu wissen:','Good to know:'],
  tipK:['После повышения цены часто можно расторгнуть договор досрочно (Sonderkündigung) — это написано в письме фирмы.','Nach einer Preiserhöhung ist oft eine Sonderkündigung möglich – das steht im Schreiben des Anbieters.','After a price rise an early cancellation is often possible – it says so in the provider’s letter.'],
  chk:['Общие правила, не консультация — пожалуйста, проверьте.','Allgemeine Regeln, keine Beratung – bitte prüfen.','General rules, not advice – please check.'],
@@ -133,3 +133,14 @@ Hooks.css('docs-finanzen-2',`
 .krp{display:flex!important;flex-direction:column;gap:4px;width:100%;text-align:left;margin-bottom:8px}.krp b{font-size:15.5px}.krp span{font-size:14px;line-height:1.4}.krp .krres{color:var(--green);font-weight:600}
 .krdl{display:flex;flex-direction:column;max-height:34vh;overflow:auto}.krdl small{color:var(--muted)}
 `);
+
+/* v32: ONE place for contracts and insurances — «Finanzen → Verträge & Kosten» (it also counts the money).
+   «Dokumente» loses its «Dokumente | Versicherungen» switch; a row there leads to Finanzen. The data is the same
+   as before (core contracts), nothing moves. Any way that still opens the old insurance list lands in Finanzen. */
+const KR_ONE={row:['Договоры и страховки','Verträge & Versicherungen','Contracts & insurance'],rowS:['в «Финансах» — с суммами и сроками','in «Finanzen» – mit Beträgen und Fristen','in «Finances» – with amounts and deadlines']};
+const krOne=k=>cv5n(KR_ONE[k]);
+Hooks.act('fzkost',()=>{try{fzD().tab='kost';$()}catch{}R('fzm')});
+Hooks.on('screen',h=>{try{if(m.route!=='archive'||typeof h!=='string'||!h.includes('class="dctabs"'))return h;
+ return h.replace(/<div class="dctabs" role="tablist">[\s\S]*?<\/div>/,`<button type="button" class="dcrow fzonerow" data-act="fzkost"><span class="fzonei">🛡</span><span><b>${i(krOne('row'))}</b><small>${i(krOne('rowS'))}</small></span><span class="fzonea">›</span></button>`)}catch(e){Hooks.err('fzone',e);return h}});
+Hooks.on('render',()=>{try{if(m.route==='archive'&&m.dcTab==='ins'){m.dcTab='docs';fzD().tab='kost';R('fzm')}}catch(e){Hooks.err('fzoneR',e)}});
+Hooks.css('docs-one-contracts',`.fzonerow{display:flex!important;align-items:center;gap:12px;width:100%;text-align:left;margin:4px 0 12px}.fzonerow .fzonei{font-size:22px;flex:none}.fzonerow b{display:block;font-size:16px}.fzonerow small{display:block;color:var(--muted);font-size:13px}.fzonerow .fzonea{margin-left:auto;font-size:22px;color:var(--muted)}`);

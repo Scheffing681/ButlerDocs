@@ -8113,6 +8113,7 @@ const dhS={
  vault:['Сейф','Tresor','Vault','Sejf','Kasa','Coffre','Caja fuerte'],vaultS:['Защищённые папки с PIN','Sichere Ablage wichtiger Daten','Safe storage for key data','Bezpieczne miejsce na dane','Önemli veriler için güvenli alan','Rangement sûr des données','Lugar seguro para datos'],
  life:['Книга жизни','Lebensbuch','Book of life','Księga życia','Hayat kitabı','Livre de vie','Libro de la vida'],lifeS:['Моя история, события, документы','Meine Geschichte, Ereignisse, Dokumente','My story, events, documents','Moja historia, wydarzenia','Hikâyem, olaylar, belgeler','Mon histoire, événements','Mi historia, sucesos'],
  leg:['Забота и наследство','Vorsorge & Nachlass','Provision & estate','Zabezpieczenie i spadek','Önlem ve miras','Prévoyance & succession','Previsión y herencia'],legS:['Имущество, распоряжения, последние желания','Vermögen, Verfügungen, letzte Wünsche','Assets, directives, last wishes','Majątek, dyspozycje, ostatnia wola','Varlıklar, vasiyetler, son istekler','Patrimoine, dispositions, dernières volontés','Patrimonio, disposiciones, últimas voluntades'],
+ ppl:['Контакты','Kontakte','Contacts','Kontakty','Kişiler','Contacts','Contactos'],pplS:['Близкие, нотариус, страховая','Familie, Notar, Versicherung','Family, notary, insurer','Bliscy, notariusz, ubezpieczyciel','Aile, noter, sigorta','Proches, notaire, assureur','Familia, notario, aseguradora'],
  ai:['Butler AI','Butler AI','Butler AI','Butler AI','Butler AI','Butler AI','Butler AI'],aiS:['Искать, упорядочить, подготовить','Suchen, organisieren, vorbereiten','Search, organise, prepare','Szukaj, porządkuj, przygotuj','Ara, düzenle, hazırla','Chercher, organiser, préparer','Buscar, organizar, preparar'],
  today:['Сегодня','Heute','Today','Dziś','Bugün','Aujourd’hui','Hoy'],all:['Все','Alle','All','Wszystko','Tümü','Tout','Todo'],none:['На сегодня ничего не запланировано','Für heute nichts geplant','Nothing planned for today','Na dziś nic nie zaplanowano','Bugün için plan yok','Rien de prévu aujourd’hui','Nada previsto para hoy'],
  quick:['Быстрые действия','Schnellaktionen','Quick actions','Szybkie akcje','Hızlı işlemler','Actions rapides','Acciones rápidas'],
@@ -8146,7 +8147,7 @@ const dhi=(n,c)=>`<svg class="dhi${c?' '+c:''}" viewBox="0 0 24 24" aria-hidden=
 /* «Versicherungen» has no tile of its own: «Dokumente» switches between documents and insurance */
 const DH_T=[['docs','fld','data-act="go" data-to="archive"'],['pers','id','data-act="dccat" data-v="personal"'],
  ['cal','cal','data-act="go" data-to="mycal"'],['task','chk','data-act="go" data-to="tasks"'],['bank','bank','data-act="dhbank"'],
- ['vault','vault','data-act="dhvault"'],['life','book','data-act="go" data-to="life"'],['leg','sprout','data-act="go" data-to="dnach"']];
+ ['vault','vault','data-act="dhvault"'],['life','book','data-act="go" data-to="life"'],['leg','sprout','data-act="go" data-to="dnach"'],['ppl','users','data-act="go" data-to="people"']];
 function dhGreet(){const h=new Date().getHours();const k=h<5?'night':h<11?'morning':h<18?'day':h<22?'evening':'night';let n='';try{n=(g.user&&(g.user.short||g.user.first))||''}catch{}return dht(k)+(n?',':'')+(n?'<br>'+i(n):'')}
 function dhWx(){try{const r=typeof bd8wx==='function'?bd8wx():null;if(!r)return'';const w=r.w||{},t=w.t!=null?w.t:w.temp!=null?w.temp:w.tt;const nm=r.nm||'';if(t==null&&!nm)return'';
  return`<button type="button" class="dhwx" data-act="go" data-to="wd"><span class="dhsun">${w.e||w.ic||'⛅'}</span><b>${t!=null?Math.round(t)+' °C':'—'}</b><small>${i(nm)}</small></button>`}catch{return''}}
@@ -8332,8 +8333,8 @@ new MutationObserver(()=>{try{if(!odOn())return;document.querySelectorAll('.bd8p
   b.onclick=e=>{e.stopPropagation();try{const x=sh&&sh.querySelector('[data-x]');x&&x.click()}catch{}setTimeout(()=>{try{fn()}catch(er){Hooks.err('odplus',er)}},120)};return b};
  pm.prepend(mk('oddoc','add',odt('doc'),()=>L.dcaddq()));pm.append(mk('odrem','bell',odt('rem'),()=>L.remnew()))})}catch(e){Hooks.err('odplus',e)}}).observe(document.body,{childList:!0,subtree:!0});
 
-/* --- ▦ All sections: only the document sections; «Weitere»: Scanner, Fristen, Kontakte (v38: contacts are no longer in Nachlass) --- */
-function odAll(){const x=[['scan','scan','data-act="go" data-to="sc9"'],['dl','clock','data-act="go" data-to="dsrok"'],['ppl','users','data-act="go" data-to="people"']];
+/* --- ▦ All sections: only the document sections; «Weitere»: Scanner, Fristen (v38: «Kontakte» is a tile of its own on home) --- */
+function odAll(){const x=[['scan','scan','data-act="go" data-to="sc9"'],['dl','clock','data-act="go" data-to="dsrok"']];
  return`<div class="screen dhome odall"><div class="sub-hdr"><button class="iconbtn" data-act="odback" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(odt('all'))}</h2></div><span></span></div>
  <div class="dhgrid">${DH_T.map(([k,ic,a])=>`<button type="button" class="dht" ${a}>${dhi(ic,'big')}<b>${i(dht(k))}</b><small>${i(dht(k+'S'))}</small></button>`).join('')}</div>
  <h3 class="odh">${i(odt('more'))}</h3>

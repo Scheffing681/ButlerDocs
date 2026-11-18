@@ -244,7 +244,7 @@ Hooks.css('docs-notizen',`
 .nzqol{padding:4px 14px!important}.nzqo{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}.nzqo:last-child{border-bottom:0}.nzqo span,.nzqot{flex:1;min-width:0}.nzqot{border:0;background:none;color:inherit;font:inherit;text-align:left;padding:0}
 .nzqo b{display:block;font-size:15px;font-weight:600}.nzqo small{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
 .nzqcb{width:22px;height:22px;border-radius:7px;border:2px solid #b9c4b2;background:#fff;flex:none;margin-top:1px;color:#fff;font-size:13px;line-height:1;padding:0;display:grid;place-items:center}.nzqcb.y{background:var(--green,#2f6b3e);border-color:var(--green,#2f6b3e)}
-.nzqtop{display:flex;gap:0}.nzqtop .iconbtn{font-size:19px;width:38px;min-width:38px}
+.nzqed>.sub-hdr{grid-template-columns:44px minmax(0,1fr) auto}.nzqtop{display:flex;gap:0;justify-self:end}.nzqtop .iconbtn{font-size:19px;width:38px;min-width:38px}
 .nzqtt{width:100%;min-height:1.3em;border:0;background:none;resize:none;font:600 26px Georgia,serif;color:inherit;padding:2px 0;margin:2px 0 8px;line-height:1.2;overflow:hidden;outline:none}
 .nzqchips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}.nzqchips .chip,.nzqtagq .chip{border:1px solid var(--line);border-radius:999px;padding:6px 11px;font:inherit;font-size:13px;background:var(--card,#fff);color:inherit}.nzqchips .chip.g{border-color:#C9A55E;color:#8a6420;background:#fff8ea}
 .nzqtagq{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}

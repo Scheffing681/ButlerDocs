@@ -157,7 +157,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  for(const r of ['archive','ins','mycal','tasks','fnacc','life','dnach','assets','people','letters','dossier','profile','search','concierge'])check('screen '+r+' stays open',(await go(r))===r);
  const ks=await T(()=>window.__T.x());check('no Butler-only sections in lists',!ks.some(k=>/^(c:(health|sport|wd|rest|travel|books|work|notes|bank|family)|q:(routine|report|fin|stats|goals|edu|body))$/.test(k)),ks.join(','));
  await go('home');check('the tab is called Butler Docs',await T(()=>document.title)==='Butler Docs');check('weather no longer opens the wardrobe',await T(()=>!document.querySelector('[data-to=wd]')));
- check('nav says Задачи (in place of Прогресс)',await T(()=>/Задачи/.test(document.querySelector('nav.nav [data-k=tasks]')?.innerText||'')&&!document.querySelector('nav.nav [data-k=stats]')));
+ check('nav says Заметки (in place of Прогресс / Задачи, v33)',await T(()=>/Заметки|Notizen/.test(document.querySelector('nav.nav [data-k=notiz]')?.innerText||'')&&!document.querySelector('nav.nav [data-k=stats]')));
  await go('search');await T(()=>{const q=document.querySelector('.screen input');q.value='гардероб';q.dispatchEvent(new Event('input',{bubbles:true}))});await p.waitForTimeout(600);
  check('search does not offer closed sections',await T(()=>![...document.querySelectorAll('#sres button')].some(b=>getComputedStyle(b).display!=='none'&&b.offsetParent)),await T(()=>document.getElementById('sres')?.innerText));
  await go('home');
@@ -295,7 +295,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
   await T(()=>window.__T.vault.vClearCode());await p.waitForTimeout(300);check('removing the vault code gives it back readable',await T(id=>window.__T.bsv.D().items.find(x=>x.id===id).nums[0].v==='A123456789',mid))}
  /* delete */
  await T(id=>window.__T.L.bsvopen({id}),'oldfa');await p.waitForTimeout(300);await clk('[data-act=bsvdel]',200);check('delete asks once more',await T(()=>!!document.querySelector('.bsvdel.on')));await clk('[data-act=bsvdel]',400);check('…and then deletes',await rt()==='bsv'&&await T(()=>!window.__T.bsv.D().items.some(x=>x.id==='oldfa')));
- await clk('nav.nav [data-k=tasks]',400);check('bottom bar «Задачи» opens tasks',await rt()==='tasks');await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>d.id!=='bsl0');W.save();W.R('home')})}
+ await clk('nav.nav [data-k=notiz]',400);check('bottom bar «Notizen» opens the notes (v33, was «Aufgaben»)',await rt()==='notiz');await T(()=>{const W=window.__T;W.Ke().items=W.Ke().items.filter(d=>d.id!=='bsl0');W.save();W.R('home')})}
  /* Behörden stage 2 (docs/behoerden-termine.js): Frist → Termin, Termin-Mappe, yearly duties, search, Butler AI, Nachlass */
  where='behoerden 2';{const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||400)};
  const iso=n=>{const d=new Date();d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)};
@@ -400,14 +400,14 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>{const W=window.__T;W.g().fin.accounts=W.g().fin.accounts.filter(a=>!/^fzacc/.test(a.id));W.bsv.D().items=W.bsv.D().items.filter(x=>x.n!=='Sparkasse ТЕСТ');W.save();W.R('home')});await p.waitForTimeout(300)}
  /* Butler Docs: «Anordnung und Farbe» for Docs (docs/layout-docs.js) */
  where='layout docs';{const rt=()=>T(()=>window.__T.m().route);await T(()=>{const W=window.__T,g=W.g();g.dhOff=0;g.nav6=['home','search','stats','notes'];delete g.dhOrd;delete g.dhHid;delete g.dhBlk;W.save();W.R('ly6')});await p.waitForTimeout(600);
- check('the bar keeps only Docs places (Прогресс → Задачи, old ones replaced)',await T(()=>JSON.stringify(window.__T.g().nav6))==='["home","search","tasks","profile"]',await T(()=>JSON.stringify(window.__T.g().nav6)));
+ check('the bar keeps only Docs places (Прогресс → Notizen, old ones replaced)',await T(()=>JSON.stringify(window.__T.g().nav6))==='["home","search","notiz","profile"]',await T(()=>JSON.stringify(window.__T.g().nav6)));
  check('no old quick access, no Butler sections, no «one screen»',await T(()=>{const t=document.querySelector('.screen.ly6').innerText;return!/Schnellzugriff|Быстрый доступ|Meine Bereiche|Мои разделы/.test(t)&&![...document.querySelectorAll('.ly7tg')].some(x=>x.offsetParent)}));
- check('the pool offers only Docs places',await T(()=>[...document.querySelectorAll('.ly6pool [data-k]')].map(b=>b.dataset.k).join(','))==='home,search,tasks,mycal,archive,letters,bsv,fzm,dsafe,sc9,kar,profile');
+ check('the pool offers only Docs places',await T(()=>[...document.querySelectorAll('.ly6pool [data-k]')].map(b=>b.dataset.k).join(','))==='home,search,notiz,tasks,mycal,archive,letters,bsv,fzm,dsafe,sc9,kar,profile');
  await T(()=>{const L=window.__T.L;L.ly6sel({i:3});L.ly6put({k:'bsv'})});await p.waitForTimeout(300);await T(()=>window.__T.R('home'));await p.waitForTimeout(400);
  check('«Behörden» can be put into the bottom bar and opens',await T(()=>!!document.querySelector('nav.nav [data-k=bsv]'))&&await T(()=>{document.querySelector('nav.nav [data-k=bsv]').click();return 1})&&(await p.waitForTimeout(300),await rt())==='bsv');
  await T(()=>{const L=window.__T.L;L.lydhide({k:'life'});L.lydmv({k:'fin',d:'-1'});window.__T.g().dhBlk={quick:1};window.__T.R('home')});await p.waitForTimeout(400);
  check('home follows: tile hidden, order changed, block off',await T(()=>{const k=[...document.querySelectorAll('.dhgrid .dht')].map(b=>b.innerText.split('\n')[0]);return!document.querySelector('.dhgrid .dht[data-to=life]')&&k.indexOf(window.__T.g().lang==='ru'?'Финансы':'Finanzen')<k.findIndex(t=>/Ведомства|Behörden/.test(t))&&!document.querySelector('.dhq')}));
- await T(()=>window.__T.L.lydreset());await p.waitForTimeout(300);check('reset brings everything back',await T(()=>{const g=window.__T.g();return JSON.stringify(g.nav6)==='["home","search","tasks","profile"]'&&!g.dhOrd&&!g.dhHid&&!g.dhBlk}));await T(()=>window.__T.R('home'))}
+ await T(()=>window.__T.L.lydreset());await p.waitForTimeout(300);check('reset brings everything back',await T(()=>{const g=window.__T.g();return JSON.stringify(g.nav6)==='["home","search","notiz","profile"]'&&!g.dhOrd&&!g.dhHid&&!g.dhBlk}));await T(()=>window.__T.R('home'))}
  /* Finanzen stage 2 (docs/finanzen2.js): Verträge & Kosten, Arbeit & Karriere */
  where='finanzen 2';{const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||400)};
  await T(()=>{const W=window.__T,K=W.Ke().items,y=new Date().getFullYear(),s=new Date();s.setDate(s.getDate()+40);const md=String(s.getMonth()+1).padStart(2,'0')+'-'+String(s.getDate()).padStart(2,'0');
@@ -535,6 +535,43 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('…its row opens «Finanzen → Verträge & Kosten»',await rt()==='fzm'&&await T(()=>window.__T.fz.D().tab==='kost'));
  await T(()=>{const W=window.__T;W.m().dcTab='ins';W.R('archive')});await p.waitForTimeout(600);check('an old way to the insurance list lands in Finanzen',await rt()==='fzm');
  await T(()=>{window.__T.fz.D().tab='stm';window.__T.R('home')});await p.waitForTimeout(300)}
+ /* v33: Notizen instead of Aufgaben */
+ where='notizen';{const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||350)};
+ await T(()=>window.__T.R('home'));await p.waitForTimeout(400);
+ check('the bottom bar has «Notizen» in place of «Aufgaben»',await T(()=>!!document.querySelector('.nav [data-k=notiz]')&&!document.querySelector('.nav [data-k=tasks]')));
+ await clk('.nav [data-k=notiz]',500);check('«Notizen» opens with quick actions, lists and folders',await rt()==='notiz'&&await T(()=>document.querySelectorAll('.nzqqa button').length===4&&document.querySelectorAll('.nzqli').length===6&&document.querySelectorAll('.nzqgrid .nzqf').length>=3));
+ await clk('.nzqqa [data-act=nzqnew]',500);check('«Neue Notiz» opens an empty note',await rt()==='nzed');
+ await T(()=>{const t=document.querySelector('.nzqtt');t.value='ТЕСТ Projekt';t.dispatchEvent(new Event('input',{bubbles:true}))});
+ await clk('[data-act=nzqckadd]',300);await T(()=>{const x=document.querySelector('.nzqct');x.value='Punkt A';x.dispatchEvent(new Event('input',{bubbles:true}))});
+ await clk('[data-act=nzqckadd]',300);await T(()=>{const x=document.querySelectorAll('.nzqct')[1];x.value='Punkt B';x.dispatchEvent(new Event('input',{bubbles:true}))});
+ await T(()=>{const b=document.querySelector('.nzqbody');b.value='• eins\n• zwei';b.dispatchEvent(new Event('input',{bubbles:true}))});await p.waitForTimeout(900);
+ const n1=await T(()=>{const n=window.__T.g().notes.find(n=>/^ТЕСТ Projekt/.test(n.text||''));return n&&[n.text,n.ck.map(c=>c.t).join('|')]});
+ check('title is the first line, points and text are kept (core stays compatible)',!!n1&&n1[0]==='ТЕСТ Projekt\n• eins\n• zwei'&&n1[1]==='Punkt A|Punkt B',JSON.stringify(n1));
+ await T(()=>document.querySelectorAll('[data-act=nzqdue]')[1].click());await p.waitForTimeout(300);await T(()=>{const s=document.querySelector('.dtsheet');s.querySelector('[data-dd]').value='2031-03-03';s.querySelector('[data-ds]').click()});await p.waitForTimeout(400);
+ const tk=await T(()=>(window.__T.g().tasks||[]).filter(t=>/Punkt B · ТЕСТ Projekt/.test(t.t)).map(t=>t.due+'|'+t.done));check('a point with a date becomes ONE task (calendar, iPhone export, badge)',tk.length===1&&tk[0]==='2031-03-03|false',JSON.stringify(tk));
+ await T(()=>{const t=window.__T.g().tasks.find(t=>/Punkt B · ТЕСТ/.test(t.t));t.done=true;window.__T.save();window.__T.v()});await p.waitForTimeout(400);
+ check('ticked in the calendar → ticked in the note',await T(()=>window.__T.g().notes.find(n=>/^ТЕСТ Projekt/.test(n.text)).ck[1].done===true));
+ await clk('[data-act=nzqfpick]',300);await clk('.dtsheet [data-fp=projekte]',400);check('the note goes into a folder',await T(()=>window.__T.g().notes.find(n=>/^ТЕСТ Projekt/.test(n.text)).fld==='projekte'));
+ await T(()=>{const W=window.__T;W.g().kar={jobs:[{id:'nzj',co:'ТЕСТ Firma',docs:[],proj:[]}]};W.save()});
+ await clk('[data-act=nzqlk]',300);await clk('.dtsheet [data-lk=job][data-id=nzj]',400);check('a note can be linked to an employer',await T(()=>/ТЕСТ Firma/.test(document.querySelector('.nzqlk')?.innerText||'')));
+ await T(()=>{window.__T.R('kar')});await p.waitForTimeout(300);await clk('[data-act=kropen]',500);check('…and the employer shows that note',await T(()=>[...document.querySelectorAll('.nzqn')].some(b=>/ТЕСТ Projekt/.test(b.innerText))));
+ await clk('.nzqn',500);check('…a tap opens it',await rt()==='nzed');
+ await T(()=>window.__T.R('notiz'));await p.waitForTimeout(300);await clk('[data-act=nzqlist][data-f=open]',400);
+ check('«Offene Punkte» lists the open point and the old tasks',await T(()=>/Punkt A/.test(document.querySelector('.screen').innerText)));
+ await T(()=>window.__T.R('notiz'));await p.waitForTimeout(300);await clk('[data-act=nzqlist][data-f=all]',400);
+ await T(()=>{const f=document.querySelector('.nzqfind');f.value='zwei';f.dispatchEvent(new Event('input',{bubbles:true}))});await p.waitForTimeout(700);check('search finds notes by their text',await T(()=>document.querySelectorAll('.nzqn').length===1));
+ await T(()=>{const W=window.__T;W.R('search')});await p.waitForTimeout(400);await T(()=>{const q=document.querySelector('.screen input[type=search],.screen input');if(q){q.value='zwei';q.dispatchEvent(new Event('input',{bubbles:true}))}});await p.waitForTimeout(900);
+ const sr=await T(()=>!!document.querySelector('.screen [data-act=nzqopen]'));check('the app search finds the note and opens it in Notizen',sr);if(sr){await clk('.screen [data-act=nzqopen]',500)}else{await T(()=>window.__T.R('nzlist'));await p.waitForTimeout(300);await clk('.nzqn',500)}
+ await clk('[data-act=nzqmenu]',300);await clk('.dtsheet [data-mm=trash]',600);
+ check('«In den Papierkorb» with undo',await T(()=>!!document.querySelector('.nzqundo')&&!!window.__T.g().notes.find(n=>/^ТЕСТ Projekt/.test(n.text)).del));
+ check('…its dated point leaves the calendar',await T(()=>!(window.__T.g().tasks||[]).some(t=>/ТЕСТ Projekt/.test(t.t))));
+ await T(()=>document.querySelector('.nzqundo [data-u]').click());await p.waitForTimeout(300);check('…undo brings it back',await T(()=>!window.__T.g().notes.find(n=>/^ТЕСТ Projekt/.test(n.text)).del));
+ await T(()=>window.__T.R('nzord'));await p.waitForTimeout(300);await clk('.nzqf.add',300);
+ await T(()=>{const s=document.querySelector('.dtsheet');s.querySelector('[data-fn]').value='ТЕСТ Ordner';s.querySelector('[data-em="🏠"]').click();s.querySelector('[data-fs]').click()});await p.waitForTimeout(400);
+ check('a new folder with its own symbol',await T(()=>window.__T.g().nzqF.some(f=>f.n==='ТЕСТ Ordner'&&f.e==='🏠')&&/ТЕСТ Ordner/.test(document.querySelector('.screen').innerText)));
+ await T(()=>window.__T.R('notiz'));await p.waitForTimeout(300);await clk('.nzqqa [data-act=nzqnew]',400);await T(()=>window.__T.R('notiz'));await p.waitForTimeout(400);
+ check('an empty new note is not kept',await T(()=>!window.__T.g().notes.some(n=>n.u&&!String(n.text||'').trim()&&!(n.ck||[]).length)),await T(()=>JSON.stringify(window.__T.g().notes.filter(n=>!String(n.text||'').trim()).map(n=>[n.id,n.d,Object.keys(n)]))));
+ await T(()=>{const W=window.__T,G=W.g();G.notes=G.notes.filter(n=>!/ТЕСТ/.test(n.text||''));G.tasks=(G.tasks||[]).filter(t=>!/ТЕСТ/.test(t.t||''));G.nzqF=G.nzqF.filter(f=>f.n!=='ТЕСТ Ordner');delete G.kar;W.save();W.R('home')});await p.waitForTimeout(300)}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

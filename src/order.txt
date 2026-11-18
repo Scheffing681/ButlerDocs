@@ -56,3 +56,4 @@ docs/backup-reminder.js
 docs/reliability.js
 docs/move-phone.js
 docs/tidy.js
+docs/notizen.js

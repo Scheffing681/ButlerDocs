@@ -11,8 +11,8 @@ const lydS={home:['Главная','Startseite','Home'],homeS:['Порядок �
  reset:['Сбросить расположение','Anordnung zurücksetzen','Reset layout'],resetOk:['Расположение как раньше ✓','Anordnung wie vorher ✓','Layout restored ✓'],
  n_bsv:['Ведомства','Behörden','Offices'],n_fz:['Финансы','Finanzen','Finances'],n_safe:['Сейф','Tresor','Vault'],n_scan:['Сканер','Scanner','Scanner'],n_docs:['Документы','Dokumente','Documents']};
 const lydt=k=>cv5n(lydS[k]||[k]);
-const LYD_POOL=['home','search','tasks','mycal','archive','letters','bsv','fzm','dsafe','sc9','profile'];
-const LYD_DEF=['home','search','tasks','profile'];
+const LYD_POOL=['home','search','notiz','tasks','mycal','archive','letters','bsv','fzm','dsafe','sc9','profile'];
+const LYD_DEF=['home','search','notiz','profile'];/* v33: «Notizen» in place of «Aufgaben» */
 const lydOn=()=>{try{return!g.dhOff}catch{return!0}};
 /* the bottom bar knows the new places */
 const lydSvg=p=>{try{return _('star').replace(/(<svg[^>]*>)[\s\S]*<\/svg>/,'$1'+p+'</svg>')}catch{return`<svg class="i" viewBox="0 0 24 24">${p}</svg>`}};
@@ -24,8 +24,8 @@ try{Object.assign(ly6EXT,{
  archive:{lab:()=>lydt('n_docs'),ic:()=>lydSvg(DH_I.fld||''),open:()=>R('archive')}});
  ['bsv','fzm','dsafe','sc9'].forEach(k=>{ly6POOL.includes(k)||ly6POOL.push(k)})}catch(e){Hooks.err('lydext',e)}
 /* Docs: «Прогресс» was never a Docs place — the default bar is Start · Suche · Aufgaben · Profil, and old places are replaced */
-function lydNav(){try{if(!lydOn())return;if(ly6DEF[2]==='stats')ly6DEF[2]='tasks';if(!Array.isArray(g.nav6)||g.nav6.length!==4)return;
- let ch=0;const S=g.nav6.map(k=>k==='stats'?(ch=1,'tasks'):k);for(let j=0;j<4;j++)if(!LYD_POOL.includes(S[j])){S[j]=LYD_DEF.find(k=>!S.includes(k))||'home';ch=1}
+function lydNav(){try{if(!lydOn())return;if(ly6DEF[2]==='stats'||ly6DEF[2]==='tasks')ly6DEF[2]='notiz';if(!Array.isArray(g.nav6)||g.nav6.length!==4)return;
+ let ch=0;const S=g.nav6.map(k=>k==='stats'?(ch=1,'notiz'):k);for(let j=0;j<4;j++)if(!LYD_POOL.includes(S[j])){S[j]=LYD_DEF.find(k=>!S.includes(k))||'home';ch=1}
  if(ch){g.nav6=S;$()}}catch(e){Hooks.err('lydnav',e)}}
 lydNav();
 

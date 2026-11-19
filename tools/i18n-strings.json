@@ -1,0 +1,6324 @@
+{
+ "Letter from an office": {
+  "ru": "Письмо из ведомства",
+  "de": "Behördenschreiben",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Looks like a letter from: %o": {
+  "ru": "Похоже на письмо: %o",
+  "de": "Schreiben von: %o",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "%k of %d": {
+  "ru": "%k от %d",
+  "de": "%k vom %d",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "%e – about until %f: letter date + 4 days delivery + 1 month. Please check the letter.": {
+  "ru": "%e — примерно до %f: дата письма + 4 дня на доставку + 1 месяц. Проверьте по письму.",
+  "de": "%e – etwa bis %f: Datum + 4 Tage Zustellung + 1 Monat. Bitte im Schreiben prüfen.",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Deadline in the letter: until %f": {
+  "ru": "Срок в письме: до %f",
+  "de": "Frist im Schreiben: bis %f",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Deadline to calendar": {
+  "ru": "Срок в календарь",
+  "de": "Frist eintragen",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Deadline in calendar ✓": {
+  "ru": "Срок в календаре ✓",
+  "de": "Frist eingetragen ✓",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "To “%o”": {
+  "ru": "К «%o»",
+  "de": "Zu „%o“",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Tied to “%o”": {
+  "ru": "Привязано к «%o»",
+  "de": "Zugeordnet: %o",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Deadline: %e – %o": {
+  "ru": "Frist: %e — %o",
+  "de": "Frist: %e – %o",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Deadline in a week: %e – %o": {
+  "ru": "Через неделю срок: %e — %o",
+  "de": "In einer Woche Frist: %e – %o",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Letters & decisions": {
+  "ru": "Письма и решения",
+  "de": "Schreiben & Bescheide",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Letter": {
+  "ru": "Письмо",
+  "de": "Brief",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Template": {
+  "ru": "Шаблон",
+  "de": "Vorlage",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Decision / letter of": {
+  "ru": "Решение / письмо от",
+  "de": "Bescheid / Schreiben vom",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Reference": {
+  "ru": "Номер дела",
+  "de": "Aktenzeichen",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Letter text": {
+  "ru": "Текст письма",
+  "de": "Brieftext",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "How to send": {
+  "ru": "Как отправить",
+  "de": "Versand",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Registered": {
+  "ru": "Einschreiben",
+  "de": "Einschreiben",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Post": {
+  "ru": "Обычной почтой",
+  "de": "Brief",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Email": {
+  "ru": "E-mail",
+  "de": "E-Mail",
+  "files": [
+   "behoerden-briefe.js",
+   "behoerden.js"
+  ]
+ },
+ "Fax": {
+  "ru": "Факс",
+  "de": "Fax",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "In person": {
+  "ru": "Лично",
+  "de": "Persönlich",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "PDF / print": {
+  "ru": "PDF / печать",
+  "de": "PDF / Drucken",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Copy": {
+  "ru": "Копировать",
+  "de": "Kopieren",
+  "files": [
+   "behoerden-briefe.js",
+   "behoerden.js",
+   "reliability.js"
+  ]
+ },
+ "Sent": {
+  "ru": "Отправлено",
+  "de": "Gesendet",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Tracking number": {
+  "ru": "Номер отправления (Einschreiben)",
+  "de": "Sendungsnummer (Einschreiben)",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Saved to the log and “Letters”": {
+  "ru": "Записано в журнал и в «Письма»",
+  "de": "Im Verlauf und unter „Briefe“ gespeichert",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Add your address under “My details” – it then goes into the letter.": {
+  "ru": "Свой адрес впишите в «Мои данные» — он встанет в письмо сам.",
+  "de": "Ihre Adresse unter „Meine Angaben“ eintragen – dann steht sie im Brief.",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "No email for this office – add it on the card": {
+  "ru": "У ведомства нет e-mail — впишите его в карточке",
+  "de": "Keine E-Mail-Adresse beim Amt – bitte in der Karte eintragen",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "My applications": {
+  "ru": "Мои заявления",
+  "de": "Meine Anträge",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "＋ application": {
+  "ru": "＋ заявление",
+  "de": "＋ Antrag",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "What was applied for": {
+  "ru": "Что подано",
+  "de": "Was wurde beantragt",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Submitted": {
+  "ru": "Подано",
+  "de": "Gestellt am",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "How": {
+  "ru": "Как подано",
+  "de": "Wie gestellt",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "online": {
+  "ru": "онлайн",
+  "de": "online",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "by post": {
+  "ru": "почтой",
+  "de": "per Post",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "in person": {
+  "ru": "лично",
+  "de": "persönlich",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "In progress": {
+  "ru": "В работе",
+  "de": "In Bearbeitung",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Decision received": {
+  "ru": "Решение получено",
+  "de": "Bescheid erhalten",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Next step": {
+  "ru": "Следующий шаг",
+  "de": "Nächster Schritt",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Ask for status": {
+  "ru": "Спросить статус",
+  "de": "Sachstand anfragen",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "ask if nothing comes by %d": {
+  "ru": "спросить, если нет ответа до %d",
+  "de": "nachfragen, falls bis %d nichts kommt",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Ask for status: %t – %o": {
+  "ru": "Спросить статус: %t — %o",
+  "de": "Nachfragen: %t – %o",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Calls & proof": {
+  "ru": "Звонки и доказательства",
+  "de": "Gespräche & Nachweise",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Call": {
+  "ru": "Звонок",
+  "de": "Anruf",
+  "files": [
+   "behoerden-briefe.js",
+   "behoerden.js"
+  ]
+ },
+ "Received": {
+  "ru": "Получил",
+  "de": "Erhalten",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Who": {
+  "ru": "С кем говорили",
+  "de": "Gesprächspartner",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "What was said / what it is": {
+  "ru": "Что сказали / что это",
+  "de": "Was wurde gesagt / was ist es",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Photo of the receipt or letter": {
+  "ru": "Фото квитанции или письма",
+  "de": "Foto vom Beleg oder Schreiben",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Track": {
+  "ru": "Отследить",
+  "de": "Verfolgen",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Number copied – paste it on the Deutsche Post page": {
+  "ru": "Номер скопирован — вставьте его на странице Deutsche Post",
+  "de": "Nummer kopiert – auf der Seite der Deutschen Post einfügen",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "You called “%o”. Who did you talk to? What was said?": {
+  "ru": "Вы звонили в «%o». С кем говорили? Что сказали?",
+  "de": "Sie haben „%o“ angerufen. Mit wem? Was wurde gesagt?",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "All entries: %n": {
+  "ru": "Все записи: %n",
+  "de": "Alle Einträge: %n",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "more": {
+  "ru": "ещё",
+  "de": "mehr",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Application": {
+  "ru": "Заявление",
+  "de": "Antrag",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Found in the letter": {
+  "ru": "Нашёл в письме",
+  "de": "Im Schreiben gefunden",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Office": {
+  "ru": "Ведомство",
+  "de": "Behörde",
+  "files": [
+   "behoerden-briefe.js",
+   "behoerden-termine.js",
+   "business.js"
+  ]
+ },
+ "What to keep": {
+  "ru": "Что сохранить",
+  "de": "Was übernehmen",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Nothing found – please type it": {
+  "ru": "Ничего не нашёл — впишите сами",
+  "de": "Nichts gefunden – bitte selbst eintragen",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Deadline from the letter – you decide": {
+  "ru": "Срок из письма — решаете Вы",
+  "de": "Frist aus dem Schreiben – Sie entscheiden",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Looks like: %e until %f": {
+  "ru": "Похоже: %e до %f",
+  "de": "Vermutlich: %e bis %f",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Add": {
+  "ru": "Внести",
+  "de": "Eintragen",
+  "files": [
+   "behoerden-briefe.js",
+   "behoerden.js"
+  ]
+ },
+ "Other date": {
+  "ru": "Другая дата",
+  "de": "Anderes Datum",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Not needed": {
+  "ru": "Не нужно",
+  "de": "Nicht nötig",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Create the card": {
+  "ru": "Создать карточку",
+  "de": "Karte anlegen",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Save to “%n”": {
+  "ru": "Сохранить в «%n»",
+  "de": "In „%n“ speichern",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Address changed: was “%a”": {
+  "ru": "Адрес изменился: было «%a»",
+  "de": "Adresse geändert: vorher „%a“",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Done – card “%n”": {
+  "ru": "Готово — карточка «%n»",
+  "de": "Fertig – Karte „%n“",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Address changed – update": {
+  "ru": "Адрес изменился — обновить",
+  "de": "Adresse geändert – aktualisieren",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Write to %o": {
+  "ru": "Написать: %o",
+  "de": "Schreiben an %o",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Empty letter": {
+  "ru": "Пустое письмо",
+  "de": "Leeres Schreiben",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Address and reference are already in": {
+  "ru": "Адрес и номер дела уже внутри",
+  "de": "Adresse und Aktenzeichen sind schon drin",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Sent letters": {
+  "ru": "Отправленные письма",
+  "de": "Gesendete Schreiben",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Date": {
+  "ru": "Дата",
+  "de": "Datum",
+  "files": [
+   "behoerden-briefe.js",
+   "behoerden-termine.js",
+   "business.js",
+   "finanzen.js",
+   "notizen.js"
+  ]
+ },
+ "Save": {
+  "ru": "Сохранить",
+  "de": "Speichern",
+  "files": [
+   "behoerden-briefe.js",
+   "behoerden-termine.js",
+   "behoerden.js",
+   "business.js",
+   "finanzen.js",
+   "finanzen2.js",
+   "steuer-plus.js",
+   "vorsorge.js"
+  ]
+ },
+ "Delete": {
+  "ru": "Удалить",
+  "de": "Löschen",
+  "files": [
+   "behoerden-briefe.js",
+   "behoerden-termine.js",
+   "behoerden.js",
+   "business.js",
+   "finanzen.js",
+   "finanzen2.js",
+   "steuer-plus.js"
+  ]
+ },
+ "Empty so far": {
+  "ru": "Пока пусто",
+  "de": "Noch leer",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "photo": {
+  "ru": "фото",
+  "de": "Foto",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Einbürgerung": {
+  "ru": "Verlängerung Aufenthaltstitel",
+  "de": "Niederlassungserlaubnis",
+  "files": [
+   "behoerden-briefe.js"
+  ]
+ },
+ "Upcoming appointments": {
+  "ru": "Ближайшие термины",
+  "de": "Nächste Termine",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "My appointments": {
+  "ru": "Мои термины",
+  "de": "Meine Termine",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Add appointment": {
+  "ru": "Термин записан — внести",
+  "de": "Termin eintragen",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Appointment": {
+  "ru": "Термин",
+  "de": "Termin",
+  "files": [
+   "behoerden-termine.js",
+   "behoerden.js"
+  ]
+ },
+ "Time": {
+  "ru": "Время",
+  "de": "Uhrzeit",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "What for": {
+  "ru": "Зачем",
+  "de": "Worum geht es",
+  "files": [
+   "behoerden-termine.js",
+   "business.js"
+  ]
+ },
+ "e.g. renewing the residence permit": {
+  "ru": "Напр. продление ВНЖ",
+  "de": "z. B. Verlängerung Aufenthaltstitel",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Bring along": {
+  "ru": "Взять с собой",
+  "de": "Mitbringen",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "＋ item": {
+  "ru": "＋ пункт",
+  "de": "＋ Punkt",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "What else to bring": {
+  "ru": "Что ещё взять",
+  "de": "Was noch mitnehmen",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Documents from the app": {
+  "ru": "Документы из приложения",
+  "de": "Dokumente aus der App",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Choose documents": {
+  "ru": "Выбрать документы",
+  "de": "Dokumente wählen",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "No documents yet": {
+  "ru": "Документов пока нет",
+  "de": "Noch keine Dokumente",
+  "files": [
+   "behoerden-termine.js",
+   "finanzen2.js",
+   "karriere2.js"
+  ]
+ },
+ "Please enter a date": {
+  "ru": "Укажите дату",
+  "de": "Bitte ein Datum angeben",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Appointment in the calendar, reminder the day before": {
+  "ru": "Термин в календаре, напоминание — накануне",
+  "de": "Termin im Kalender, Erinnerung am Vortag",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Tomorrow: %n – get the papers ready": {
+  "ru": "Завтра термин: %n — подготовить документы",
+  "de": "Morgen Termin: %n – Unterlagen bereitlegen",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Done": {
+  "ru": "Состоялся",
+  "de": "Erledigt",
+  "files": [
+   "behoerden-termine.js",
+   "behoerden.js",
+   "linkup.js",
+   "reliability.js"
+  ]
+ },
+ "Restore": {
+  "ru": "Вернуть",
+  "de": "Zurückholen",
+  "files": [
+   "behoerden-termine.js",
+   "notizen.js"
+  ]
+ },
+ "Ready: %a of %b": {
+  "ru": "Готово к термину: %a из %b",
+  "de": "Bereit: %a von %b",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "in %n days": {
+  "ru": "через %n дн.",
+  "de": "in %n Tagen",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "today": {
+  "ru": "сегодня",
+  "de": "heute",
+  "files": [
+   "behoerden-termine.js",
+   "behoerden.js"
+  ]
+ },
+ "tomorrow": {
+  "ru": "завтра",
+  "de": "morgen",
+  "files": [
+   "behoerden-termine.js",
+   "behoerden.js"
+  ]
+ },
+ "past": {
+  "ru": "прошло",
+  "de": "vorbei",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "%d – runs out %w": {
+  "ru": "%d — истекает %w",
+  "de": "%d – läuft ab %w",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Renewed by: %o. Book early – waits can take weeks.": {
+  "ru": "Продлевает: %o. Записывайтесь заранее — сроки ожидания бывают недели.",
+  "de": "Zuständig: %o. Früh buchen – Wartezeiten dauern oft Wochen.",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Book": {
+  "ru": "Записаться",
+  "de": "Termin buchen",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Open": {
+  "ru": "Открыть",
+  "de": "Öffnen",
+  "files": [
+   "behoerden-termine.js",
+   "karriere2.js",
+   "reliability.js"
+  ]
+ },
+ "Add “%o”": {
+  "ru": "Добавить «%o»",
+  "de": "„%o“ hinzufügen",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "I have one": {
+  "ru": "Термин уже есть",
+  "de": "Termin habe ich",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Hide": {
+  "ru": "Скрыть",
+  "de": "Ausblenden",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Every year": {
+  "ru": "Каждый год",
+  "de": "Jährlich",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "＋ yearly duty": {
+  "ru": "＋ ежегодная обязанность",
+  "de": "＋ jährliche Pflicht",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Yearly duty": {
+  "ru": "Ежегодная обязанность",
+  "de": "Jährliche Pflicht",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Own": {
+  "ru": "Своя",
+  "de": "Eigene",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "What to do": {
+  "ru": "Что сделать",
+  "de": "Was ist zu tun",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Next date": {
+  "ru": "Следующий срок",
+  "de": "Nächste Frist",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Repeat": {
+  "ru": "Повтор",
+  "de": "Wiederholung",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "every year": {
+  "ru": "каждый год",
+  "de": "jedes Jahr",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "every 2 years": {
+  "ru": "раз в 2 года",
+  "de": "alle 2 Jahre",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Done – next date %d": {
+  "ru": "Сделано — следующий срок %d",
+  "de": "Erledigt – nächste Frist %d",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Dates follow general rules – please check them for you.": {
+  "ru": "Сроки взяты из общих правил — проверьте их для себя.",
+  "de": "Fristen nach allgemeinen Regeln – bitte für sich prüfen.",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Really delete? Tap again": {
+  "ru": "Точно удалить? Нажмите ещё раз",
+  "de": "Wirklich löschen? Nochmals tippen",
+  "files": [
+   "behoerden-termine.js",
+   "behoerden.js",
+   "finanzen.js",
+   "finanzen2.js"
+  ]
+ },
+ "Offices": {
+  "ru": "Ведомства",
+  "de": "Behörden",
+  "files": [
+   "behoerden-termine.js",
+   "behoerden.js",
+   "layout-docs.js"
+  ]
+ },
+ "Offices & services": {
+  "ru": "Ведомства и службы",
+  "de": "Behörden & Dienste",
+  "files": [
+   "behoerden-termine.js",
+   "behoerden.js"
+  ]
+ },
+ "Whom to notify: pension, health insurer, tax office …": {
+  "ru": "Куда сообщить: пенсионная, больничная касса, Finanzamt…",
+  "de": "Wen benachrichtigen: Rente, Krankenkasse, Finanzamt …",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "%t is in the vault – open “%n” and tap “Show”.": {
+  "ru": "%t лежит в сейфе — откройте карточку «%n» и нажмите «Показать».",
+  "de": "%t liegt im Tresor – Karte „%n“ öffnen und „Zeigen“ tippen.",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "%n: phone %v": {
+  "ru": "%n: телефон %v",
+  "de": "%n: Telefon %v",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Next appointment: %n, %d": {
+  "ru": "Ближайший термин: %n, %d",
+  "de": "Nächster Termin: %n, %d",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "No appointments": {
+  "ru": "Терминов нет",
+  "de": "Keine Termine",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Belege": {
+  "ru": "Steuer-ID und Steuernummer",
+  "de": "Schreiben vom Finanzamt",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Medikamentenliste": {
+  "ru": "Gesundheitskarte",
+  "de": "Überweisung",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Schreiben / Unterlagen": {
+  "ru": "Personalausweis",
+  "de": "Terminbestätigung",
+  "files": [
+   "behoerden-termine.js"
+  ]
+ },
+ "Appointments, numbers, links": {
+  "ru": "Термины, номера, ссылки",
+  "de": "Termine, Nummern, Links",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Order": {
+  "ru": "Порядок",
+  "de": "Ordnen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "What to add?": {
+  "ru": "Что добавить?",
+  "de": "Was hinzufügen?",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Create your own": {
+  "ru": "Создать своё",
+  "de": "Eigenes anlegen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Any office, doctor or club – with your own links and buttons": {
+  "ru": "Любая служба, врач, клуб — со своими ссылками и кнопками",
+  "de": "Jede Stelle, Arzt, Verein – mit eigenen Links und Knöpfen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Pinned": {
+  "ru": "Закреплённые",
+  "de": "Angeheftet",
+  "files": [
+   "behoerden.js",
+   "notizen.js"
+  ]
+ },
+ "All": {
+  "ru": "Все",
+  "de": "Alle",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Your offices and services go here. Add only what you use.": {
+  "ru": "Здесь будут Ваши ведомства и службы. Добавьте только то, чем пользуетесь.",
+  "de": "Hier stehen Ihre Behörden und Dienste. Fügen Sie nur hinzu, was Sie nutzen.",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Emergency": {
+  "ru": "Экстренно",
+  "de": "Notfall",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Police": {
+  "ru": "Полиция",
+  "de": "Polizei",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Fire · ambulance": {
+  "ru": "Пожар · скорая",
+  "de": "Feuer · Rettung",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Doctor on call": {
+  "ru": "Дежурный врач",
+  "de": "Bereitschaftsarzt",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "My emergency data": {
+  "ru": "Мои экстренные данные",
+  "de": "Meine Notfalldaten",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "What to say on the phone": {
+  "ru": "Что сказать по телефону",
+  "de": "Was sage ich am Telefon?",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Where? – address, floor · What happened? · How many hurt? · Who is calling? · Wait for questions – don’t hang up.": {
+  "ru": "Где? — адрес, этаж · Что случилось? · Сколько пострадавших? · Кто звонит? · Ждите вопросов, не кладите трубку.",
+  "de": "Wo? – Adresse, Etage · Was ist passiert? · Wie viele Verletzte? · Wer ruft an? · Warten auf Rückfragen – nicht auflegen.",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "My address": {
+  "ru": "Мой адрес",
+  "de": "Meine Adresse",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Blood type": {
+  "ru": "Группа крови",
+  "de": "Blutgruppe",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Allergies": {
+  "ru": "Аллергии",
+  "de": "Allergien",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Medication": {
+  "ru": "Лекарства",
+  "de": "Medikamente",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Emergency contact": {
+  "ru": "Кому сообщить",
+  "de": "Notfallkontakt",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Contact’s phone": {
+  "ru": "Его телефон",
+  "de": "Telefon des Kontakts",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Fill this in now – there is no time in an emergency.": {
+  "ru": "Заполните заранее — в беде некогда вспоминать.",
+  "de": "Füllen Sie das vorher aus – im Notfall fehlt die Zeit.",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "115 – the public-service number: tells you which office is in charge": {
+  "ru": "115 — единый номер ведомств: подскажут, какое ведомство Вам нужно",
+  "de": "115 – Behördennummer: sagt Ihnen, welches Amt zuständig ist",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Open until %t": {
+  "ru": "Открыто до %t",
+  "de": "Geöffnet bis %t",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Closed": {
+  "ru": "Закрыто",
+  "de": "Geschlossen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "opens %d %t": {
+  "ru": "откроется %d %t",
+  "de": "öffnet %d %t",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Mon Tue Wed Thu Fri Sat Sun": {
+  "ru": "Пн Вт Ср Чт Пт Сб Вс",
+  "de": "Mo Di Mi Do Fr Sa So",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Route": {
+  "ru": "Маршрут",
+  "de": "Route",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "My numbers": {
+  "ru": "Мои номера",
+  "de": "Meine Nummern",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Copied": {
+  "ru": "Скопировано",
+  "de": "Kopiert",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Show": {
+  "ru": "Показать",
+  "de": "Zeigen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "secret – in the vault": {
+  "ru": "секретный — в сейфе",
+  "de": "geheim – im Tresor",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "The number is masked. With a vault code it is encrypted.": {
+  "ru": "Номер скрыт. Поставьте код сейфа — тогда он будет зашифрован.",
+  "de": "Die Nummer ist verdeckt. Mit einem Tresor-Code wird sie verschlüsselt.",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Address": {
+  "ru": "Адрес",
+  "de": "Adresse",
+  "files": [
+   "behoerden.js",
+   "business.js"
+  ]
+ },
+ "Opening hours": {
+  "ru": "Часы работы",
+  "de": "Öffnungszeiten",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Note": {
+  "ru": "Заметка",
+  "de": "Notiz",
+  "files": [
+   "behoerden.js",
+   "finanzen2.js"
+  ]
+ },
+ "Prefilled – please check: addresses and hours change.": {
+  "ru": "Данные заполнены заранее — пожалуйста, проверьте: адреса и часы меняются.",
+  "de": "Vorausgefüllt – bitte prüfen: Adressen und Zeiten ändern sich.",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Checked": {
+  "ru": "Проверено",
+  "de": "Geprüft",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Edit": {
+  "ru": "Изменить",
+  "de": "Bearbeiten",
+  "files": [
+   "behoerden.js",
+   "finanzen2.js"
+  ]
+ },
+ "Deleted": {
+  "ru": "Удалено",
+  "de": "Gelöscht",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Name": {
+  "ru": "Название",
+  "de": "Name",
+  "files": [
+   "behoerden.js",
+   "notizen.js"
+  ]
+ },
+ "e.g. Ausländerbehörde": {
+  "ru": "Напр. Ausländerbehörde",
+  "de": "z. B. Ausländerbehörde",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Symbol": {
+  "ru": "Значок",
+  "de": "Symbol",
+  "files": [
+   "behoerden.js",
+   "notizen.js"
+  ]
+ },
+ "Group": {
+  "ru": "Группа",
+  "de": "Gruppe",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "New group": {
+  "ru": "Новая группа",
+  "de": "Neue Gruppe",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "For whom": {
+  "ru": "Для кого",
+  "de": "Für wen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Phone": {
+  "ru": "Телефон",
+  "de": "Telefon",
+  "files": [
+   "behoerden.js",
+   "business.js"
+  ]
+ },
+ "Mon–Fri 8–12, Thu 14–18": {
+  "ru": "Mo–Fr 8–12, Do 14–18",
+  "de": "Mo–Fr 8–12, Do 14–18",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Booking link": {
+  "ru": "Ссылка на запись (Termin)",
+  "de": "Link zur Terminbuchung",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Booking always happens on the office’s site – this is only the link.": {
+  "ru": "Запись всегда на сайте ведомства — здесь только ссылка.",
+  "de": "Gebucht wird immer auf der Seite des Amts – hier liegt nur der Link.",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Paste": {
+  "ru": "Вставить",
+  "de": "Einfügen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Could not paste – hold the field and choose “Paste”": {
+  "ru": "Не удалось вставить — удержите поле и нажмите «Вставить»",
+  "de": "Einfügen nicht möglich – Feld gedrückt halten und „Einfügen“",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Buttons and links": {
+  "ru": "Кнопки и ссылки",
+  "de": "Knöpfe und Links",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "＋ own button": {
+  "ru": "＋ свою кнопку",
+  "de": "＋ eigener Knopf",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Label": {
+  "ru": "Надпись",
+  "de": "Beschriftung",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Link, phone or email": {
+  "ru": "Ссылка, телефон или e-mail",
+  "de": "Link, Telefon oder E-Mail",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "＋ number": {
+  "ru": "＋ номер",
+  "de": "＋ Nummer",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "What it is": {
+  "ru": "Что за номер",
+  "de": "Wofür",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Number": {
+  "ru": "Номер",
+  "de": "Nummer",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "secret": {
+  "ru": "секретный",
+  "de": "geheim",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Tax ID, customer number, file reference …": {
+  "ru": "Steuer-ID, Kundennummer, Aktenzeichen …",
+  "de": "Steuer-ID, Kundennummer, Aktenzeichen …",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Pin to top": {
+  "ru": "Закрепить наверху",
+  "de": "Oben anheften",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "On the home screen": {
+  "ru": "На главную",
+  "de": "Auf die Startseite",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Cancel": {
+  "ru": "Отмена",
+  "de": "Abbrechen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Saved": {
+  "ru": "Сохранено",
+  "de": "Gespeichert",
+  "files": [
+   "behoerden.js",
+   "business.js",
+   "steuer-plus.js"
+  ]
+ },
+ "Please enter a name": {
+  "ru": "Впишите название",
+  "de": "Bitte einen Namen eingeben",
+  "files": [
+   "behoerden.js",
+   "business.js"
+  ]
+ },
+ "This link is not valid": {
+  "ru": "Эта ссылка не подходит",
+  "de": "Dieser Link passt nicht",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Added – please check the details": {
+  "ru": "Добавлено — проверьте данные",
+  "de": "Hinzugefügt – bitte Angaben prüfen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "added": {
+  "ru": "уже есть",
+  "de": "schon da",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Health": {
+  "ru": "Здоровье",
+  "de": "Gesundheit",
+  "files": [
+   "behoerden.js",
+   "finanzen.js",
+   "notizen.js"
+  ]
+ },
+ "Family & school": {
+  "ru": "Семья и школа",
+  "de": "Familie & Schule",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Clubs & more": {
+  "ru": "Клубы и прочее",
+  "de": "Vereine & Sonstiges",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Me": {
+  "ru": "Я",
+  "de": "Ich",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Wife": {
+  "ru": "Супруга",
+  "de": "Ehefrau",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Child": {
+  "ru": "Ребёнок",
+  "de": "Kind",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Set up": {
+  "ru": "Настройка",
+  "de": "Einrichten",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Set up in a minute": {
+  "ru": "Настроить за минуту",
+  "de": "In einer Minute einrichten",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Where do you live?": {
+  "ru": "Где Вы живёте?",
+  "de": "Wo wohnen Sie?",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Postcode or town – used to prefill addresses (exact so far for 63741 Aschaffenburg).": {
+  "ru": "Индекс или город — по нему подставлю адреса ведомств (пока точно — для 63741 Aschaffenburg).",
+  "de": "PLZ oder Ort – danach fülle ich Adressen vor (genau bisher für 63741 Aschaffenburg).",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "For whom?": {
+  "ru": "Для кого вести?",
+  "de": "Für wen?",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Each person has their own offices – you can mark whose later.": {
+  "ru": "Ведомства у каждого свои — потом можно отметить, чьё это.",
+  "de": "Jeder hat eigene Ämter – später lässt sich markieren, für wen.",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "What do you need?": {
+  "ru": "Что Вам нужно?",
+  "de": "Was brauchen Sie?",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Pick what you need. Add the rest later.": {
+  "ru": "Отметьте нужное. Остальное можно добавить потом.",
+  "de": "Wählen Sie aus. Den Rest können Sie später hinzufügen.",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Next": {
+  "ru": "Дальше",
+  "de": "Weiter",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Back": {
+  "ru": "Назад",
+  "de": "Zurück",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Skip": {
+  "ru": "Пропустить",
+  "de": "Überspringen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Done: %n added": {
+  "ru": "Готово: добавлено %n",
+  "de": "Fertig: %n hinzugefügt",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Here": {
+  "ru": "Здесь",
+  "de": "Hier",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Search: name, number, reference …": {
+  "ru": "Поиск: имя, номер, Aktenzeichen…",
+  "de": "Suche: Name, Nummer, Aktenzeichen …",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "From a letter": {
+  "ru": "Из письма",
+  "de": "Aus einem Schreiben",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Scan → office, address, reference – from the letterhead": {
+  "ru": "Скан → ведомство, адрес, номер дела — из шапки письма",
+  "de": "Scan → Amt, Adresse, Aktenzeichen – aus dem Briefkopf",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Paste a link": {
+  "ru": "Вставить ссылку",
+  "de": "Link einfügen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Copied a booking link – paste it, done": {
+  "ru": "Скопировали ссылку на запись — вставили, готово",
+  "de": "Link zur Terminbuchung kopiert – einfügen, fertig",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "By hand": {
+  "ru": "Вручную",
+  "de": "Selbst eintragen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "A name and one contact – 10 seconds": {
+  "ru": "Название и один контакт — 10 секунд",
+  "de": "Name und ein Kontakt – 10 Sekunden",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Which letter?": {
+  "ru": "Какое письмо?",
+  "de": "Welches Schreiben?",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Scan a letter": {
+  "ru": "Сканировать письмо",
+  "de": "Schreiben scannen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "After scanning, come back here and pick the letter.": {
+  "ru": "После скана вернитесь сюда и выберите письмо.",
+  "de": "Nach dem Scannen hierher zurück und das Schreiben wählen.",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "No scans yet": {
+  "ru": "Сканов пока нет",
+  "de": "Noch keine Scans",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Phone, email or link": {
+  "ru": "Телефон, e-mail или ссылка",
+  "de": "Telefon, E-Mail oder Link",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "＋ another contact": {
+  "ru": "＋ ещё контакт",
+  "de": "＋ weiterer Kontakt",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "✓ phone": {
+  "ru": "✓ понял: телефон",
+  "de": "✓ erkannt: Telefon",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "✓ email": {
+  "ru": "✓ понял: e-mail",
+  "de": "✓ erkannt: E-Mail",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "✓ link → “Termin” button": {
+  "ru": "✓ понял: ссылка → кнопка «Termin»",
+  "de": "✓ erkannt: Link → Knopf „Termin“",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "✓ link": {
+  "ru": "✓ понял: ссылка",
+  "de": "✓ erkannt: Link",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "? not recognised – please check": {
+  "ru": "? не понял — проверьте",
+  "de": "? nicht erkannt – bitte prüfen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "More (optional)": {
+  "ru": "Дополнительно (по желанию)",
+  "de": "Weitere Angaben (optional)",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "address · hours · numbers · symbol · group · buttons · home": {
+  "ru": "адрес · часы · номера · значок · группа · кнопки · на главную",
+  "de": "Adresse · Zeiten · Nummern · Symbol · Gruppe · Knöpfe · Startseite",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Link": {
+  "ru": "Ссылка",
+  "de": "Link",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "No group": {
+  "ru": "Без группы",
+  "de": "Ohne Gruppe",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Write": {
+  "ru": "Написать",
+  "de": "Schreiben",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"bsv\"": {
+  "ru": "bsv",
+  "de": "gov",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "<div class=\"dhcard dhq\">": {
+  "ru": "<button type=\"button\" class=\"dhcard dhai\"",
+  "de": "<div class=\"dhcard dhtd\">",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Already there?": {
+  "ru": "Такое уже есть?",
+  "de": "Schon vorhanden?",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Looks like “%n” – %w. Add the details there so letters and deadlines stay in one place?": {
+  "ru": "Похоже на «%n» — %w. Добавить данные туда, чтобы письма и сроки были в одном месте?",
+  "de": "Sieht aus wie „%n“ – %w. Angaben dort ergänzen, damit Briefe und Fristen an einem Ort bleiben?",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "same name": {
+  "ru": "то же название",
+  "de": "gleicher Name",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "same e-mail": {
+  "ru": "тот же e-mail",
+  "de": "gleiche E-Mail",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "same phone": {
+  "ru": "тот же телефон",
+  "de": "gleiche Telefonnummer",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "same website": {
+  "ru": "тот же сайт",
+  "de": "gleiche Website",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "similar name": {
+  "ru": "похожее название",
+  "de": "ähnlicher Name",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Add to “%n”": {
+  "ru": "Добавить в «%n»",
+  "de": "Zu „%n“ hinzufügen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Another office – create new": {
+  "ru": "Это другое ведомство — создать новое",
+  "de": "Andere Stelle – neu anlegen",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "Added to “%n” ✓": {
+  "ru": "Добавлено в «%n» ✓",
+  "de": "Zu „%n“ hinzugefügt ✓",
+  "files": [
+   "behoerden.js"
+  ]
+ },
+ "My business": {
+  "ru": "Мой бизнес",
+  "de": "Mein Business",
+  "files": [
+   "business.js",
+   "linkup.js"
+  ]
+ },
+ "Education": {
+  "ru": "Образование",
+  "de": "Ausbildung",
+  "files": [
+   "business.js"
+  ]
+ },
+ "💼 I have my own business": {
+  "ru": "💼 У меня есть своё дело",
+  "de": "💼 Ich habe ein eigenes Geschäft",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Invoices, receipts, firm papers, deadlines – «My business»": {
+  "ru": "Счета, чеки, документы фирмы, сроки — вкладка «Mein Business»",
+  "de": "Rechnungen, Belege, Firmenunterlagen, Fristen – Bereich «Mein Business»",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Firm data not filled in yet": {
+  "ru": "Данные фирмы ещё не заполнены",
+  "de": "Firmendaten noch nicht eingetragen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Tap to fill in": {
+  "ru": "Нажмите, чтобы заполнить",
+  "de": "Tippen zum Eintragen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Small business § 19 UStG": {
+  "ru": "Kleinunternehmer § 19 UStG",
+  "de": "Kleinunternehmer § 19 UStG",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Standard VAT": {
+  "ru": "с НДС (Regelbesteuerung)",
+  "de": "Regelbesteuerung (mit USt)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "PULSE": {
+  "ru": "ПУЛЬС",
+  "de": "PULS",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Open invoices": {
+  "ru": "Неоплаченные счета",
+  "de": "Offene Rechnungen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Overdue for %d days": {
+  "ru": "Просрочено с %d дн.",
+  "de": "Überfällig seit %d Tagen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Overdue for 1 day": {
+  "ru": "Просрочено с 1 дня",
+  "de": "Überfällig seit 1 Tag",
+  "files": [
+   "business.js"
+  ]
+ },
+ "All invoices paid": {
+  "ru": "Все счета оплачены",
+  "de": "Alle Rechnungen bezahlt",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Tax return %y": {
+  "ru": "Налоговая декларация %y",
+  "de": "Steuererklärung %y",
+  "files": [
+   "business.js"
+  ]
+ },
+ "VAT pre-return": {
+  "ru": "USt-Voranmeldung",
+  "de": "USt-Voranmeldung",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Invoice": {
+  "ru": "Счёт",
+  "de": "Rechnung",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Receipt": {
+  "ru": "Чек",
+  "de": "Beleg",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Customer": {
+  "ru": "Клиент",
+  "de": "Kunde",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Papers": {
+  "ru": "Документы",
+  "de": "Unterlagen",
+  "files": [
+   "business.js",
+   "karriere2.js"
+  ]
+ },
+ "%y · income & expenses": {
+  "ru": "%y · доходы и расходы",
+  "de": "%y · Einnahmen & Ausgaben",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Income": {
+  "ru": "Доходы",
+  "de": "Einnahmen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Expenses": {
+  "ru": "Расходы",
+  "de": "Ausgaben",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Profit": {
+  "ru": "Прибыль",
+  "de": "Gewinn",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Simplified: income counts on the day it was paid. Please check.": {
+  "ru": "Упрощённо: доход считается в день оплаты. Проверьте, пожалуйста.",
+  "de": "Vereinfacht: Einnahmen zählen am Tag der Zahlung. Bitte prüfen.",
+  "files": [
+   "business.js"
+  ]
+ },
+ "📎 For the tax adviser: list + receipts (PDF/CSV)": {
+  "ru": "📎 Для налогового консультанта: список + чеки (PDF/CSV)",
+  "de": "📎 Für den Steuerberater: Liste + Belege (PDF/CSV)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Invoices %y": {
+  "ru": "Счета %y",
+  "de": "Rechnungen %y",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Expenses %y": {
+  "ru": "Расходы %y",
+  "de": "Ausgaben %y",
+  "files": [
+   "business.js"
+  ]
+ },
+ "No invoices yet": {
+  "ru": "Счетов пока нет",
+  "de": "Noch keine Rechnungen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "No receipts yet": {
+  "ru": "Чеков пока нет",
+  "de": "Noch keine Belege",
+  "files": [
+   "business.js"
+  ]
+ },
+ "paid": {
+  "ru": "оплачен",
+  "de": "bezahlt",
+  "files": [
+   "business.js"
+  ]
+ },
+ "open": {
+  "ru": "открыт",
+  "de": "offen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "overdue": {
+  "ru": "просрочен",
+  "de": "überfällig",
+  "files": [
+   "business.js"
+  ]
+ },
+ "cancelled": {
+  "ru": "отменён",
+  "de": "storniert",
+  "files": [
+   "business.js"
+  ]
+ },
+ "From 2028 invoices to firms (B2B) need an e-invoice format – small businesses are exempt, private customers are not affected. Please check.": {
+  "ru": "С 2028 года счета фирмам (B2B) должны быть в формате E-Rechnung – Kleinunternehmer освобождены, частных клиентов это не касается. Проверьте, пожалуйста.",
+  "de": "Ab 2028 brauchen Rechnungen an Firmen (B2B) ein E-Rechnungsformat – Kleinunternehmer sind ausgenommen, Privatkunden betrifft es nicht. Bitte prüfen.",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Business name": {
+  "ru": "Название фирмы",
+  "de": "Name der Firma",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Owner (full name)": {
+  "ru": "Владелец (полное имя)",
+  "de": "Inhaber/in (voller Name)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Legal form": {
+  "ru": "Форма",
+  "de": "Rechtsform",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Tax number": {
+  "ru": "Steuernummer",
+  "de": "Steuernummer",
+  "files": [
+   "business.js"
+  ]
+ },
+ "VAT ID (if any)": {
+  "ru": "USt-IdNr (если есть)",
+  "de": "USt-IdNr (falls vorhanden)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "I am a small business (§ 19 UStG, no VAT)": {
+  "ru": "Я Kleinunternehmer (§ 19 UStG, без НДС)",
+  "de": "Ich bin Kleinunternehmer (§ 19 UStG, ohne USt)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "none": {
+  "ru": "не нужна",
+  "de": "keine",
+  "files": [
+   "business.js",
+   "reliability.js"
+  ]
+ },
+ "monthly": {
+  "ru": "ежемесячно",
+  "de": "monatlich",
+  "files": [
+   "business.js"
+  ]
+ },
+ "quarterly": {
+  "ru": "ежеквартально",
+  "de": "vierteljährlich",
+  "files": [
+   "business.js"
+  ]
+ },
+ "I have a tax adviser": {
+  "ru": "У меня есть налоговый консультант (Steuerberater)",
+  "de": "Ich habe einen Steuerberater",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Bank": {
+  "ru": "Банк",
+  "de": "Bank",
+  "files": [
+   "business.js",
+   "steuer-plus.js"
+  ]
+ },
+ "E-mail": {
+  "ru": "E-Mail",
+  "de": "E-Mail",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Invoice number prefix": {
+  "ru": "Префикс номера счёта",
+  "de": "Kürzel der Rechnungsnummer",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Hide «My business»": {
+  "ru": "Скрыть «Mein Business»",
+  "de": "«Mein Business» ausblenden",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Data stays; you can switch it on again here.": {
+  "ru": "Данные остаются, вкладку можно снова включить здесь.",
+  "de": "Die Daten bleiben; der Bereich lässt sich hier jederzeit wieder einschalten.",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Sole trader": {
+  "ru": "Einzelunternehmen",
+  "de": "Einzelunternehmen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Freelancer": {
+  "ru": "Freiberufler",
+  "de": "Freiberufler/in",
+  "files": [
+   "business.js"
+  ]
+ },
+ "UG": {
+  "ru": "UG (haftungsbeschränkt)",
+  "de": "UG (haftungsbeschränkt)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Other": {
+  "ru": "другая",
+  "de": "Sonstige",
+  "files": [
+   "business.js",
+   "finanzen.js",
+   "linkup.js"
+  ]
+ },
+ "Customers": {
+  "ru": "Клиенты",
+  "de": "Kunden",
+  "files": [
+   "business.js"
+  ]
+ },
+ "＋ New customer": {
+  "ru": "＋ Новый клиент",
+  "de": "＋ Neuer Kunde",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Name / company": {
+  "ru": "Имя / фирма",
+  "de": "Name / Firma",
+  "files": [
+   "business.js"
+  ]
+ },
+ "No customers yet": {
+  "ru": "Клиентов пока нет",
+  "de": "Noch keine Kunden",
+  "files": [
+   "business.js"
+  ]
+ },
+ "%n invoices": {
+  "ru": "%n счетов",
+  "de": "%n Rechnungen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Customer has invoices – cannot delete": {
+  "ru": "У клиента есть счета – удалить нельзя",
+  "de": "Kunde hat Rechnungen – Löschen nicht möglich",
+  "files": [
+   "business.js"
+  ]
+ },
+ "New invoice": {
+  "ru": "Новый счёт",
+  "de": "Neue Rechnung",
+  "files": [
+   "business.js"
+  ]
+ },
+ "— choose —": {
+  "ru": "— выбрать —",
+  "de": "— auswählen —",
+  "files": [
+   "business.js"
+  ]
+ },
+ "No. (automatic)": {
+  "ru": "Номер (автоматически)",
+  "de": "Nr. (automatisch)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Invoice date": {
+  "ru": "Дата счёта",
+  "de": "Rechnungsdatum",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Date of service": {
+  "ru": "Дата услуги / поставки",
+  "de": "Leistungsdatum",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Payable within": {
+  "ru": "Оплата в течение",
+  "de": "Zahlbar innerhalb",
+  "files": [
+   "business.js"
+  ]
+ },
+ "%n days": {
+  "ru": "%n дней",
+  "de": "%n Tagen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Items": {
+  "ru": "Позиции",
+  "de": "Positionen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Description": {
+  "ru": "Описание",
+  "de": "Beschreibung",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Qty": {
+  "ru": "Кол-во",
+  "de": "Menge",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Unit": {
+  "ru": "Ед.",
+  "de": "Einheit",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Price €": {
+  "ru": "Цена, €",
+  "de": "Preis €",
+  "files": [
+   "business.js"
+  ]
+ },
+ "VAT": {
+  "ru": "НДС",
+  "de": "USt",
+  "files": [
+   "business.js"
+  ]
+ },
+ "＋ Item": {
+  "ru": "＋ Позиция",
+  "de": "＋ Position",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Net": {
+  "ru": "Нетто",
+  "de": "Netto",
+  "files": [
+   "business.js"
+  ]
+ },
+ "VAT %r %": {
+  "ru": "USt %r %",
+  "de": "USt %r %",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Total": {
+  "ru": "Итого",
+  "de": "Gesamt",
+  "files": [
+   "business.js",
+   "finanzen.js"
+  ]
+ },
+ "The text is set by itself: «Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.» Mandatory data (name, address, tax no., date, no.) comes from «My business».": {
+  "ru": "Текст ставится сам: «Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.» Обязательные данные (имя, адрес, St.-Nr., дата, номер) берутся из «Mein Business».",
+  "de": "Text wird selbst gesetzt: «Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.» Pflichtangaben (Name, Anschrift, St.-Nr., Datum, Nr.) kommen aus «Mein Business».",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Enter net prices; VAT is calculated. Mandatory data comes from «My business».": {
+  "ru": "Цены указываются нетто, НДС считается сам. Обязательные данные берутся из «Mein Business».",
+  "de": "Preise netto eingeben, die USt wird selbst gerechnet. Pflichtangaben kommen aus «Mein Business».",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Note on the invoice (optional)": {
+  "ru": "Примечание на счёте (необязательно)",
+  "de": "Hinweis auf der Rechnung (optional)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Paid on": {
+  "ru": "Оплачено (дата)",
+  "de": "Bezahlt am",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Empty = still open. The payment date counts for the income of that year.": {
+  "ru": "Пусто = ещё не оплачен. Дата оплаты считается доходом этого года.",
+  "de": "Leer = noch offen. Das Zahlungsdatum zählt für die Einnahmen des Jahres.",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Make PDF": {
+  "ru": "Создать PDF",
+  "de": "PDF erstellen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "✉ Send by e-mail (your mail)": {
+  "ru": "✉ Отправить по e-mail (ваша почта)",
+  "de": "✉ Per E-Mail senden (Ihre E-Mail)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Cancel invoice": {
+  "ru": "Отменить счёт (Storno)",
+  "de": "Rechnung stornieren",
+  "files": [
+   "business.js"
+  ]
+ },
+ "An issued invoice is not deleted but cancelled – it stays in the list.": {
+  "ru": "Выставленный счёт не удаляют, а отменяют – он остаётся в списке.",
+  "de": "Eine geschriebene Rechnung wird nicht gelöscht, sondern storniert – sie bleibt in der Liste.",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Undo cancel": {
+  "ru": "Вернуть счёт",
+  "de": "Storno aufheben",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Invoice saved": {
+  "ru": "Счёт сохранён",
+  "de": "Rechnung gespeichert",
+  "files": [
+   "business.js"
+  ]
+ },
+ "PDF saved in «Documents»": {
+  "ru": "PDF сохранён в «Документах»",
+  "de": "PDF in «Dokumente» gespeichert",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Please choose a customer": {
+  "ru": "Выберите клиента",
+  "de": "Bitte einen Kunden wählen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "At least one item with description and price": {
+  "ru": "Нужна хотя бы одна позиция с описанием и ценой",
+  "de": "Mindestens eine Position mit Beschreibung und Preis",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Please fill in the firm name, owner, address and tax number first": {
+  "ru": "Сначала заполните название, владельца, адрес и Steuernummer фирмы",
+  "de": "Bitte zuerst Name, Inhaber/in, Anschrift und Steuernummer der Firma eintragen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "This number already exists": {
+  "ru": "Такой номер уже есть",
+  "de": "Diese Nummer gibt es schon",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Invoice %n": {
+  "ru": "Счёт %n",
+  "de": "Rechnung %n",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Hello,\n\nplease find attached invoice %n for %s.\n\nKind regards\n%f": {
+  "ru": "Здравствуйте,\n\nво вложении счёт %n на сумму %s.\n\nС уважением\n%f",
+  "de": "Guten Tag,\n\nanbei erhalten Sie die Rechnung %n über %s.\n\nMit freundlichen Grüßen\n%f",
+  "files": [
+   "business.js"
+  ]
+ },
+ "PDF downloaded – please attach it to the e-mail.": {
+  "ru": "PDF скачан – приложите его к письму.",
+  "de": "PDF wurde geladen – bitte an die E-Mail anhängen.",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Check payment: %n · %c": {
+  "ru": "Проверить оплату: %n · %c",
+  "de": "Zahlung prüfen: %n · %c",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Tax return %y (EÜR) by %d": {
+  "ru": "Налоговая декларация %y (EÜR) до %d",
+  "de": "Steuererklärung %y (EÜR) bis %d",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Receipt / expense": {
+  "ru": "Чек / расход",
+  "de": "Beleg / Ausgabe",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Amount € (gross)": {
+  "ru": "Сумма, € (брутто)",
+  "de": "Betrag € (brutto)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Category": {
+  "ru": "Категория",
+  "de": "Kategorie",
+  "files": [
+   "business.js",
+   "finanzen.js"
+  ]
+ },
+ "Photo or file of the receipt": {
+  "ru": "Фото или файл чека",
+  "de": "Foto oder Datei des Belegs",
+  "files": [
+   "business.js"
+  ]
+ },
+ "📷 Scan": {
+  "ru": "📷 Сканировать",
+  "de": "📷 Scannen",
+  "files": [
+   "business.js",
+   "steuer-plus.js"
+  ]
+ },
+ "📄 File": {
+  "ru": "📄 Файл",
+  "de": "📄 Datei",
+  "files": [
+   "business.js",
+   "steuer-plus.js"
+  ]
+ },
+ "✓ %n file(s) chosen": {
+  "ru": "✓ %n файл(ов) выбрано",
+  "de": "✓ %n Datei(en) gewählt",
+  "files": [
+   "business.js"
+  ]
+ },
+ "✓ saved in «Documents»": {
+  "ru": "✓ сохранён в «Документах»",
+  "de": "✓ in «Dokumente» gespeichert",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Please enter the amount": {
+  "ru": "Укажите сумму",
+  "de": "Bitte den Betrag eintragen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Receipt saved": {
+  "ru": "Чек сохранён",
+  "de": "Beleg gespeichert",
+  "files": [
+   "business.js",
+   "finanzen.js"
+  ]
+ },
+ "no picture": {
+  "ru": "без фото",
+  "de": "ohne Bild",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Materials / goods": {
+  "ru": "Материалы / товар",
+  "de": "Material / Waren",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Software / services": {
+  "ru": "Программы / сервисы",
+  "de": "Software / Dienste",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Travel / car": {
+  "ru": "Поездки / авто",
+  "de": "Fahrt / Auto",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Phone / internet": {
+  "ru": "Телефон / интернет",
+  "de": "Telefon / Internet",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Insurance": {
+  "ru": "Страховки",
+  "de": "Versicherungen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Rent": {
+  "ru": "Аренда",
+  "de": "Miete",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Advertising": {
+  "ru": "Реклама",
+  "de": "Werbung",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Papers & deadlines": {
+  "ru": "Документы и сроки фирмы",
+  "de": "Unterlagen & Fristen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "%a of %b": {
+  "ru": "%a из %b",
+  "de": "%a von %b",
+  "files": [
+   "business.js",
+   "karriere2.js",
+   "steuer-plus.js",
+   "vorsorge.js"
+  ]
+ },
+ "Deadlines": {
+  "ru": "Сроки",
+  "de": "Fristen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Business registration": {
+  "ru": "Gewerbeanmeldung",
+  "de": "Gewerbeanmeldung",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Tax number (tax office)": {
+  "ru": "Steuernummer (Finanzamt)",
+  "de": "Steuernummer (Finanzamt)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Business liability insurance": {
+  "ru": "Betriebshaftpflicht",
+  "de": "Betriebshaftpflicht",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Customer contracts": {
+  "ru": "Договоры с клиентами",
+  "de": "Verträge mit Kunden",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Rent / office": {
+  "ru": "Аренда / офис",
+  "de": "Miete / Büro",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Commercial register / IHK": {
+  "ru": "Handelsregister / IHK",
+  "de": "Handelsregister / IHK",
+  "files": [
+   "business.js"
+  ]
+ },
+ "from the trade office": {
+  "ru": "из Gewerbeamt",
+  "de": "vom Gewerbeamt",
+  "files": [
+   "business.js"
+  ]
+ },
+ "questionnaire + letter": {
+  "ru": "анкета + письмо Finanzamt",
+  "de": "Fragebogen + Bescheid",
+  "files": [
+   "business.js"
+  ]
+ },
+ "→ contract also in Finance › Costs": {
+  "ru": "→ договор также в Finanzen › Kosten",
+  "de": "→ Vertrag auch in Finanzen › Kosten",
+  "files": [
+   "business.js"
+  ]
+ },
+ "contracts, offers": {
+  "ru": "договоры, предложения",
+  "de": "Verträge, Angebote",
+  "files": [
+   "business.js"
+  ]
+ },
+ "if any": {
+  "ru": "если есть",
+  "de": "falls vorhanden",
+  "files": [
+   "business.js",
+   "karriere2.js"
+  ]
+ },
+ "%n documents": {
+  "ru": "%n док.",
+  "de": "%n Dokumente",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Add %s": {
+  "ru": "%s — добавить",
+  "de": "%s hinzufügen",
+  "files": [
+   "business.js",
+   "karriere2.js",
+   "vorsorge.js"
+  ]
+ },
+ "The document is saved once in «Documents» and only linked here.": {
+  "ru": "Документ сохраняется один раз в «Документах», здесь только ссылка.",
+  "de": "Das Dokument wird einmal in «Dokumente» gespeichert und hier nur verknüpft.",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Scan / photo": {
+  "ru": "Сканировать / фото",
+  "de": "Scannen / Foto",
+  "files": [
+   "business.js"
+  ]
+ },
+ "File (PDF, photo)": {
+  "ru": "Файл (PDF, фото)",
+  "de": "Datei (PDF, Foto)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Already in «Documents»": {
+  "ru": "Уже есть в «Документах»",
+  "de": "Schon in «Dokumente»",
+  "files": [
+   "business.js",
+   "karriere2.js"
+  ]
+ },
+ "Search …": {
+  "ru": "Поиск …",
+  "de": "Suchen …",
+  "files": [
+   "business.js",
+   "karriere2.js"
+  ]
+ },
+ "No other documents": {
+  "ru": "Других документов нет",
+  "de": "Keine weiteren Dokumente",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Linked": {
+  "ru": "Связано",
+  "de": "Verknüpft",
+  "files": [
+   "business.js"
+  ]
+ },
+ "remove here (document stays)": {
+  "ru": "убрать отсюда (документ остаётся)",
+  "de": "hier entfernen (Dokument bleibt)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "＋ More": {
+  "ru": "＋ ещё",
+  "de": "＋ Weitere",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Invoice %n due": {
+  "ru": "Счёт %n к оплате",
+  "de": "Rechnung %n fällig",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Tax return %y (EÜR)": {
+  "ru": "Налоговая декларация %y (EÜR)",
+  "de": "Steuererklärung %y (EÜR)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "without tax adviser": {
+  "ru": "без консультанта",
+  "de": "ohne Steuerberater",
+  "files": [
+   "business.js"
+  ]
+ },
+ "with tax adviser": {
+  "ru": "с консультантом",
+  "de": "mit Steuerberater",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Keep receipts & invoices %y": {
+  "ru": "Хранить чеки и счета %y",
+  "de": "Belege & Rechnungen %y aufbewahren",
+  "files": [
+   "business.js"
+  ]
+ },
+ "8 years (since 2025) – please check": {
+  "ru": "8 лет (с 2025) – проверьте",
+  "de": "8 Jahre (seit 2025) – bitte prüfen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "until %d": {
+  "ru": "до %d",
+  "de": "bis %d",
+  "files": [
+   "business.js"
+  ]
+ },
+ "No open deadlines": {
+  "ru": "Открытых сроков нет",
+  "de": "Keine offenen Fristen",
+  "files": [
+   "business.js"
+  ]
+ },
+ "General rules, not tax advice. Please check with the tax office or an adviser.": {
+  "ru": "Общие правила, не налоговая консультация. Проверьте, пожалуйста, у Finanzamt или консультанта.",
+  "de": "Allgemeine Regeln, keine Steuerberatung. Bitte beim Finanzamt oder Steuerberater prüfen.",
+  "files": [
+   "business.js"
+  ]
+ },
+ "For the tax adviser": {
+  "ru": "Для налогового консультанта",
+  "de": "Für den Steuerberater",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Year": {
+  "ru": "Год",
+  "de": "Jahr",
+  "files": [
+   "business.js",
+   "finanzen2.js",
+   "karriere2.js"
+  ]
+ },
+ "%a invoices · %b receipts": {
+  "ru": "%a счетов · %b чеков",
+  "de": "%a Rechnungen · %b Belege",
+  "files": [
+   "business.js"
+  ]
+ },
+ "List (CSV, for Excel)": {
+  "ru": "Список (CSV, для Excel)",
+  "de": "Liste (CSV, für Excel)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "All in one PDF (overview, invoices, receipts)": {
+  "ru": "Всё в одном PDF (обзор, счета, чеки)",
+  "de": "Alles in einem PDF (Übersicht, Rechnungen, Belege)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "You send it yourself – by your mail or «Share». Receipts that exist only as a PDF file are not put in the combined PDF – they are in «Documents».": {
+  "ru": "Отправляете вы сами – через свою почту или «Поделиться». Чеки, которые есть только как PDF-файл, в общий PDF не попадают – они в «Документах».",
+  "de": "Sie senden selbst – über Ihre E-Mail oder «Teilen». Belege, die nur als PDF-Datei vorliegen, kommen nicht ins Gesamt-PDF – sie liegen in «Dokumente».",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Tax prepayments": {
+  "ru": "Авансовые платежи налога (Vorauszahlungen)",
+  "de": "Steuer-Vorauszahlungen vom Finanzamt",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Amount per quarter, €": {
+  "ru": "Сумма за квартал, €",
+  "de": "Betrag je Quartal, €",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Prepayment": {
+  "ru": "Vorauszahlung",
+  "de": "Vorauszahlung",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Tax prepayment %s": {
+  "ru": "Vorauszahlung Finanzamt %s",
+  "de": "Vorauszahlung Finanzamt %s",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Km driven (there and back)": {
+  "ru": "Км (туда и обратно)",
+  "de": "Gefahrene km (hin und zurück)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "From → to": {
+  "ru": "Откуда → куда",
+  "de": "Von → Nach",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Own car for business trips: 0.30 € per km. The amount is set by itself. Please check.": {
+  "ru": "Своя машина по делам фирмы: 0,30 € за км. Сумма ставится сама. Проверьте, пожалуйста.",
+  "de": "Eigenes Auto für Geschäftsfahrten: 0,30 € je km. Der Betrag wird selbst gesetzt. Bitte prüfen.",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Own business – if you have one": {
+  "ru": "Своё дело – по желанию",
+  "de": "Eigenes Geschäft – wenn Sie eins haben",
+  "files": [
+   "business.js"
+  ]
+ },
+ "For anyone self-employed or selling something on the side.": {
+  "ru": "Для тех, кто работает на себя или подрабатывает (Gewerbe, Freiberufler, Kleinunternehmer).",
+  "de": "Für alle, die selbstständig sind oder nebenbei etwas verkaufen (Gewerbe, Freiberufler, Kleinunternehmer).",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Invoices as PDF with all mandatory data": {
+  "ru": "Счета в PDF с правильными данными (§ 19 или НДС)",
+  "de": "Rechnungen als PDF mit allen Pflichtangaben (§ 19 oder USt)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Receipts, income, expenses and profit per year": {
+  "ru": "Чеки и расходы, доход и прибыль за год",
+  "de": "Belege, Einnahmen, Ausgaben und Gewinn pro Jahr",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Firm papers and deadlines": {
+  "ru": "Документы фирмы и сроки (Finanzamt, Vorauszahlungen)",
+  "de": "Firmenunterlagen und Fristen (Finanzamt, Vorauszahlungen)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "List for the tax adviser (PDF/CSV)": {
+  "ru": "Список для налогового консультанта (PDF/CSV)",
+  "de": "Liste für den Steuerberater (PDF/CSV)",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Switch on «My business»": {
+  "ru": "Включить «Mein Business»",
+  "de": "«Mein Business» einschalten",
+  "files": [
+   "business.js"
+  ]
+ },
+ "No business? Just leave it off – nothing changes.": {
+  "ru": "Нет своего дела? Просто не включайте – ничего не изменится.",
+  "de": "Kein eigenes Geschäft? Einfach nicht einschalten – es ändert sich nichts.",
+  "files": [
+   "business.js"
+  ]
+ },
+ "immediately": {
+  "ru": "сразу",
+  "de": "sofort",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Making …": {
+  "ru": "Собираю …",
+  "de": "Wird erstellt …",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Overview %y": {
+  "ru": "Обзор %y",
+  "de": "Übersicht %y",
+  "files": [
+   "business.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"archive\"": {
+  "ru": "docs",
+  "de": "fld",
+  "files": [
+   "docs-home.js"
+  ]
+ },
+ "data-act=\"dccat\" data-v=\"personal\"": {
+  "ru": "pers",
+  "de": "id",
+  "files": [
+   "docs-home.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"mycal\"": {
+  "ru": "cal",
+  "de": "cal",
+  "files": [
+   "docs-home.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"tasks\"": {
+  "ru": "task",
+  "de": "chk",
+  "files": [
+   "docs-home.js"
+  ]
+ },
+ "data-act=\"dhbank\"": {
+  "ru": "bank",
+  "de": "bank",
+  "files": [
+   "docs-home.js"
+  ]
+ },
+ "data-act=\"dhvault\"": {
+  "ru": "vault",
+  "de": "vault",
+  "files": [
+   "docs-home.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"life\"": {
+  "ru": "life",
+  "de": "book",
+  "files": [
+   "docs-home.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"dnach\"": {
+  "ru": "leg",
+  "de": "sprout",
+  "files": [
+   "docs-home.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"people\"": {
+  "ru": "ppl",
+  "de": "users",
+  "files": [
+   "docs-home.js"
+  ]
+ },
+ "Finances": {
+  "ru": "Финансы",
+  "de": "Finanzen",
+  "files": [
+   "finanzen.js",
+   "layout-docs.js",
+   "notizen.js"
+  ]
+ },
+ "Tax folder, costs": {
+  "ru": "Налоговая папка, расходы",
+  "de": "Steuer-Mappe, Kosten",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Tax folder %y": {
+  "ru": "Налоговая папка %y",
+  "de": "Steuer-Mappe %y",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "%n receipts · %a": {
+  "ru": "Чеков: %n · %a",
+  "de": "%n Belege · %a",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Tax return %y due %z (without adviser – please check)": {
+  "ru": "Декларация за %y — срок %z (без консультанта, проверьте)",
+  "de": "Steuererklärung %y fällig %z (ohne Steuerberater – bitte prüfen)",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Of which labour, €": {
+  "ru": "Из них стоимость работы, €",
+  "de": "Davon Arbeitskosten, €",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Paid by bank transfer": {
+  "ru": "Оплачено переводом",
+  "de": "Per Überweisung bezahlt",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Paid cash – usually not accepted. Material does not count.": {
+  "ru": "Наличными – Finanzamt обычно не признаёт. Материал не считается.",
+  "de": "Bar bezahlt – erkennt das Finanzamt meist nicht an. Material zählt nicht.",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Labour: %a → up to %b less tax (20 %, limits apply – please check)": {
+  "ru": "Работа: %a → до %b меньше налога (20 %, есть лимиты – проверьте)",
+  "de": "Arbeitskosten: %a → bis zu %b weniger Steuer (20 %, Höchstbeträge – bitte prüfen)",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Photograph a receipt": {
+  "ru": "Сфотографировать чек",
+  "de": "Beleg fotografieren",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Add without photo": {
+  "ru": "Внести без фото",
+  "de": "Ohne Foto eintragen",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "PDF for ELSTER / adviser": {
+  "ru": "PDF для ELSTER / консультанта",
+  "de": "PDF für ELSTER / Steuerberater",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "No receipts for this year yet": {
+  "ru": "Пока нет чеков за этот год",
+  "de": "Noch keine Belege für dieses Jahr",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Good to know:": {
+  "ru": "Полезно знать:",
+  "de": "Gut zu wissen:",
+  "files": [
+   "finanzen.js",
+   "finanzen2.js"
+  ]
+ },
+ "Empty so far – photograph the first receipt.": {
+  "ru": "Здесь пока пусто — сфотографируйте первый чек.",
+  "de": "Noch leer – fotografieren Sie den ersten Beleg.",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Amount, €": {
+  "ru": "Сумма, €",
+  "de": "Betrag, €",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "What is it": {
+  "ru": "Что это",
+  "de": "Was ist es",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "e.g. glasses, optician": {
+  "ru": "Напр. очки, Fielmann",
+  "de": "z. B. Brille, Fielmann",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "New receipt": {
+  "ru": "Новый чек",
+  "de": "Neuer Beleg",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Please enter an amount": {
+  "ru": "Впишите сумму",
+  "de": "Bitte einen Betrag eingeben",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "All categories": {
+  "ru": "Все разделы",
+  "de": "Alle Bereiche",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Receipts for the tax return %y": {
+  "ru": "Belege für die Steuererklärung %y",
+  "de": "Belege für die Steuererklärung %y",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Banks are now under “Offices & services”": {
+  "ru": "Банки теперь в «Ведомства и службы»",
+  "de": "Banken stehen jetzt unter „Behörden & Dienste“",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Work (Werbungskosten)": {
+  "ru": "Работа (Werbungskosten)",
+  "de": "Arbeit (Werbungskosten)",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Travel, work equipment, courses": {
+  "ru": "Дорога, рабочие вещи, курсы",
+  "de": "Fahrten, Arbeitsmittel, Fortbildung",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Craftsmen & household": {
+  "ru": "Мастера и хозяйство",
+  "de": "Handwerker & Haushalt",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Only labour counts": {
+  "ru": "Считается только работа",
+  "de": "Nur Arbeitskosten zählen",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Co-payments, glasses, dentist": {
+  "ru": "Доплаты, очки, зубной врач",
+  "de": "Zuzahlungen, Brille, Zahnarzt",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Childcare": {
+  "ru": "Присмотр за детьми",
+  "de": "Kinderbetreuung",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Kita, childminder, after-school": {
+  "ru": "Kita, Tagesmutter, Hort",
+  "de": "Kita, Tagesmutter, Hort",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Donations": {
+  "ru": "Пожертвования",
+  "de": "Spenden",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Insurance & pensions": {
+  "ru": "Страховки и пенсия",
+  "de": "Versicherungen & Vorsorge",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Health, liability, pension": {
+  "ru": "Kranken-, Haftpflicht-, Rentenversicherung",
+  "de": "Kranken-, Haftpflicht-, Rentenversicherung",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "The tax office counts 1,230 € a year automatically (employee allowance). Receipts help if your costs are higher.": {
+  "ru": "Финансамт сам учитывает 1 230 € в год (Arbeitnehmer-Pauschbetrag). Чеки помогают, если расходов на работу больше.",
+  "de": "Das Finanzamt rechnet automatisch 1.230 € im Jahr an (Arbeitnehmer-Pauschbetrag). Belege lohnen sich, wenn Ihre Kosten darüber liegen.",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Craftsmen: 20 % of labour costs, at most 1,200 € off the tax. Material does not count. Pay by transfer, not cash.": {
+  "ru": "Мастера: 20 % стоимости работы, максимум 1 200 € с налога. Материал не считается. Платить переводом, не наличными.",
+  "de": "Handwerker: 20 % der Arbeitskosten, höchstens 1.200 € Steuerermäßigung. Material zählt nicht. Per Überweisung zahlen, nicht bar.",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Health costs count only above a “reasonable burden” that depends on income. Keep the receipts anyway.": {
+  "ru": "Расходы на здоровье считаются только выше «допустимой нагрузки», которая зависит от дохода. Чеки сохраняйте всё равно.",
+  "de": "Krankheitskosten zählen erst über der „zumutbaren Belastung“, die vom Einkommen abhängt. Belege trotzdem sammeln.",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "From 2025: 80 % of the costs, at most 4,800 € per child up to 14.": {
+  "ru": "С 2025 года: 80 % расходов, максимум 4 800 € на ребёнка до 14 лет.",
+  "de": "Ab 2025: 80 % der Kosten, höchstens 4.800 € je Kind bis 14 Jahre.",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Up to 300 € a bank statement often replaces a donation receipt.": {
+  "ru": "До 300 € часто хватает выписки из банка вместо справки о пожертвовании.",
+  "de": "Bis 300 € reicht oft der Kontoauszug statt einer Zuwendungsbestätigung.",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Much is already reported through your salary. Private insurance goes in separately.": {
+  "ru": "Многое уже учтено через зарплату (больничная касса, пенсия). Частные страховки — отдельной строкой.",
+  "de": "Vieles ist über den Lohn schon erfasst (Kranken-, Rentenversicherung). Private Versicherungen gesondert angeben.",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "General rules, not tax advice – please check.": {
+  "ru": "Общие правила, не налоговая консультация — пожалуйста, проверьте.",
+  "de": "Allgemeine Regeln, keine Steuerberatung – bitte prüfen.",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Card": {
+  "ru": "Карта",
+  "de": "Karte",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Block the card": {
+  "ru": "Заблокировать карту",
+  "de": "Karte sperren",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"fzm\"": {
+  "ru": "fin",
+  "de": "coin",
+  "files": [
+   "finanzen.js"
+  ]
+ },
+ "Tax folder": {
+  "ru": "Налоговая папка",
+  "de": "Steuer-Mappe",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Contracts & costs": {
+  "ru": "Договоры и расходы",
+  "de": "Verträge & Kosten",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "I pay for contracts": {
+  "ru": "Я плачу по договорам",
+  "de": "Ich zahle für Verträge",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "%a / month": {
+  "ru": "%a в месяц",
+  "de": "%a / Monat",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "%a a year · %n contracts": {
+  "ru": "%a в год · договоров: %n",
+  "de": "%a im Jahr · %n Verträge",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "%n – can be cancelled until %d (in %k days)": {
+  "ru": "%n — можно расторгнуть до %d (через %k дн.)",
+  "de": "%n – kündbar bis %d (in %k Tagen)",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "%k: %n similar contracts – double? Please check.": {
+  "ru": "%k: %n похожих договора — двойные? Проверьте.",
+  "de": "%k: %n ähnliche Verträge – doppelt? Bitte prüfen.",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Without an amount: %n – add it so the total is right": {
+  "ru": "Без суммы: %n — допишите, чтобы итог был точным",
+  "de": "Ohne Betrag: %n – ergänzen, damit die Summe stimmt",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "since %y · check the price": {
+  "ru": "с %y · цену стоит проверить",
+  "de": "seit %y · Preis prüfen",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "cancel by %d": {
+  "ru": "можно расторгнуть до %d",
+  "de": "kündbar bis %d",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "No contracts yet. Tap “＋ Contract” – insurance, power, phone, internet, gym …": {
+  "ru": "Договоров пока нет. Нажмите «＋ Договор»: страховка, свет, телефон, интернет, спорт …",
+  "de": "Noch keine Verträge. Tippen Sie auf „＋ Vertrag“ – Versicherung, Strom, Handy, Internet, Sport …",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "＋ Contract": {
+  "ru": "＋ Договор",
+  "de": "＋ Vertrag",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "After a price rise an early cancellation is often possible – it says so in the provider’s letter.": {
+  "ru": "После повышения цены часто можно расторгнуть договор досрочно (Sonderkündigung) — это написано в письме фирмы.",
+  "de": "Nach einer Preiserhöhung ist oft eine Sonderkündigung möglich – das steht im Schreiben des Anbieters.",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "General rules, not advice – please check.": {
+  "ru": "Общие правила, не консультация — пожалуйста, проверьте.",
+  "de": "Allgemeine Regeln, keine Beratung – bitte prüfen.",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Work & business": {
+  "ru": "Работа и бизнес",
+  "de": "Arbeit & Business",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Job, own business, education": {
+  "ru": "Работа, свой бизнес, образование",
+  "de": "Job, eigenes Geschäft, Ausbildung",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Add your employers – contracts, references and projects stay at hand for years.": {
+  "ru": "Добавьте работодателей — договоры, Arbeitszeugnis и проекты будут под рукой и через годы.",
+  "de": "Fügen Sie Ihre Arbeitgeber hinzu – Verträge, Zeugnisse und Projekte sind auch in Jahren noch griffbereit.",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "＋ Employer": {
+  "ru": "＋ Работодатель",
+  "de": "＋ Arbeitgeber",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "CV list (PDF)": {
+  "ru": "Список для резюме (PDF)",
+  "de": "Lebenslauf-Liste als PDF",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Company": {
+  "ru": "Фирма",
+  "de": "Firma",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Role": {
+  "ru": "Должность",
+  "de": "Position",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "From (month)": {
+  "ru": "С (месяц)",
+  "de": "Von (Monat)",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "To (empty = now)": {
+  "ru": "По (пусто — сейчас)",
+  "de": "Bis (leer = heute)",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "now": {
+  "ru": "по сей день",
+  "de": "heute",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Documents": {
+  "ru": "Документы",
+  "de": "Dokumente",
+  "files": [
+   "finanzen2.js",
+   "layout-docs.js",
+   "move-phone.js",
+   "notizen.js",
+   "reliability.js"
+  ]
+ },
+ "＋ Document from the app": {
+  "ru": "＋ Документ из приложения",
+  "de": "＋ Dokument aus der App",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Which documents?": {
+  "ru": "Какие документы?",
+  "de": "Welche Dokumente?",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Probably fitting": {
+  "ru": "Похоже, подходят",
+  "de": "Passt vermutlich",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "All documents": {
+  "ru": "Все документы",
+  "de": "Alle Dokumente",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Projects & achievements": {
+  "ru": "Проекты и достижения",
+  "de": "Projekte & Erfolge",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "＋ Project": {
+  "ru": "＋ Проект",
+  "de": "＋ Projekt",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Title": {
+  "ru": "Название",
+  "de": "Titel",
+  "files": [
+   "finanzen2.js",
+   "karriere2.js",
+   "notizen.js"
+  ]
+ },
+ "What I did": {
+  "ru": "Что я делал",
+  "de": "Was habe ich gemacht",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Result (numbers, time, praise)": {
+  "ru": "Результат (цифры, сроки, отзыв)",
+  "de": "Ergebnis (Zahlen, Zeit, Lob)",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "“%n” is already in the list": {
+  "ru": "«%n» уже есть в списке",
+  "de": "„%n“ steht schon in der Liste",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Open it": {
+  "ru": "Открыть его",
+  "de": "Diesen öffnen",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "I worked there again": {
+  "ru": "Я там работал ещё раз",
+  "de": "Ich war dort noch einmal",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Please enter the company": {
+  "ru": "Впишите название фирмы",
+  "de": "Bitte die Firma eintragen",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Please enter a title": {
+  "ru": "Впишите название проекта",
+  "de": "Bitte einen Titel eintragen",
+  "files": [
+   "finanzen2.js",
+   "karriere2.js"
+  ]
+ },
+ "Career": {
+  "ru": "Профессиональный путь",
+  "de": "Beruflicher Werdegang",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Result": {
+  "ru": "Результат",
+  "de": "Ergebnis",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"kar\"": {
+  "ru": "kar",
+  "de": "brief",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Contracts & insurance": {
+  "ru": "Договоры и страховки",
+  "de": "Verträge & Versicherungen",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "in «Finances» – with amounts and deadlines": {
+  "ru": "в «Финансах» — с суммами и сроками",
+  "de": "in «Finanzen» – mit Beträgen und Fristen",
+  "files": [
+   "finanzen2.js"
+  ]
+ },
+ "Employers": {
+  "ru": "Работодатели",
+  "de": "Arbeitgeber",
+  "files": [
+   "karriere2.js",
+   "notizen.js"
+  ]
+ },
+ "Education & certificates": {
+  "ru": "Образование и аттестаты",
+  "de": "Ausbildung & Abschlüsse",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Other papers": {
+  "ru": "Другие документы",
+  "de": "Weitere Unterlagen",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Employment contract": {
+  "ru": "Трудовой договор",
+  "de": "Arbeitsvertrag",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Reference (Zeugnis)": {
+  "ru": "Arbeitszeugnis",
+  "de": "Arbeitszeugnis",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Termination": {
+  "ru": "Увольнение / соглашение",
+  "de": "Kündigung / Aufhebung",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Payslips": {
+  "ru": "Расчётные листы",
+  "de": "Gehaltsabrechnungen",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Wage tax certificate": {
+  "ru": "Lohnsteuerbescheinigung",
+  "de": "Lohnsteuerbescheinigung",
+  "files": [
+   "karriere2.js",
+   "steuer-plus.js"
+  ]
+ },
+ "signed contract": {
+  "ru": "подписанный договор",
+  "de": "unterschriebener Vertrag",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "interim or final": {
+  "ru": "промежуточный или итоговый",
+  "de": "Zwischen- oder Endzeugnis",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "month by month": {
+  "ru": "по месяцам",
+  "de": "Monat für Monat",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "for the tax return": {
+  "ru": "для налоговой",
+  "de": "für die Steuer",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Saved once in «Documents» and linked here – no copy.": {
+  "ru": "Сохраняется один раз в «Документах» и здесь только привязывается — без копии.",
+  "de": "Wird einmal in «Dokumente» gespeichert und hier verknüpft – keine Kopie.",
+  "files": [
+   "karriere2.js",
+   "notizen.js"
+  ]
+ },
+ "Scan / take a photo": {
+  "ru": "Сканировать / сфотографировать",
+  "de": "Scannen / Fotografieren",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "several pages possible": {
+  "ru": "можно несколько страниц",
+  "de": "mehrere Seiten möglich",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Pick a file": {
+  "ru": "Выбрать файл",
+  "de": "Datei wählen",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "PDF or picture from Files": {
+  "ru": "PDF или фото из «Файлов»",
+  "de": "PDF oder Bild aus «Dateien»",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "tap = link": {
+  "ru": "нажать = привязать",
+  "de": "antippen = verknüpfen",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "fits": {
+  "ru": "подходит",
+  "de": "passt",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Linked ✓": {
+  "ru": "Привязано ✓",
+  "de": "Verknüpft ✓",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Saved in «Documents» and linked ✓": {
+  "ru": "Сохранено в «Документах» и привязано ✓",
+  "de": "In «Dokumente» gespeichert und verknüpft ✓",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Unlink": {
+  "ru": "Отвязать",
+  "de": "Lösen",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "The document stays in «Documents».": {
+  "ru": "Документ останется в «Документах».",
+  "de": "Das Dokument bleibt in «Dokumente».",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "＋ Another document": {
+  "ru": "＋ Ещё документ",
+  "de": "＋ Weiteres Dokument",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "＋ Add a qualification": {
+  "ru": "＋ Аттестат или диплом",
+  "de": "＋ Abschluss hinzufügen",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "School, training, degree, courses, certificates – all in one place for applications.": {
+  "ru": "Школьный аттестат, Ausbildung, диплом, курсы, сертификаты — всё в одном месте и под рукой для заявлений.",
+  "de": "Schulabschluss, Ausbildung, Studium, Kurse, Zertifikate – alles an einem Ort und griffbereit für Bewerbungen.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "School certificate": {
+  "ru": "Школьный аттестат",
+  "de": "Schulabschluss / Attestat",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Vocational training": {
+  "ru": "Ausbildung",
+  "de": "Ausbildung",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Degree": {
+  "ru": "Высшее / диплом",
+  "de": "Studium / Diplom",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Course": {
+  "ru": "Курс / повышение квалификации",
+  "de": "Weiterbildung / Kurs",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Certificate / licence": {
+  "ru": "Сертификат / права",
+  "de": "Zertifikat / Schein",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Kind": {
+  "ru": "Вид",
+  "de": "Art",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "School / institution": {
+  "ru": "Школа / учебное заведение",
+  "de": "Schule / Einrichtung",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Country": {
+  "ru": "Страна",
+  "de": "Land",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Recognition in Germany": {
+  "ru": "Признание в Германии",
+  "de": "Anerkennung in Deutschland",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "— (German qualification)": {
+  "ru": "— (немецкий документ)",
+  "de": "— (deutscher Abschluss)",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Recognised ✓": {
+  "ru": "Признан ✓",
+  "de": "Anerkannt ✓",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Applied for": {
+  "ru": "Подано заявление",
+  "de": "Beantragt",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Not applied yet": {
+  "ru": "Ещё не подано",
+  "de": "Noch nicht beantragt",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Answer / deadline by": {
+  "ru": "Ответ / срок до",
+  "de": "Antwort / Frist bis",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Recognition: %t": {
+  "ru": "Признание: %t",
+  "de": "Anerkennung: %t",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Foreign qualifications: anerkennung-in-deutschland.de": {
+  "ru": "Признание иностранных документов: anerkennung-in-deutschland.de",
+  "de": "Ausländische Abschlüsse: anerkennung-in-deutschland.de",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Pages & papers": {
+  "ru": "Страницы и документы",
+  "de": "Seiten & Unterlagen",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "You can add papers after saving.": {
+  "ru": "Документы можно добавить после сохранения.",
+  "de": "Unterlagen können Sie nach dem Speichern hinzufügen.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Date as MM.YYYY, e.g. 02.2026": {
+  "ru": "Дата в виде ММ.ГГГГ, например 02.2026",
+  "de": "Datum als MM.JJJJ, z. B. 02.2026",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Application folder (PDF)": {
+  "ru": "Bewerbungsmappe (PDF)",
+  "de": "Bewerbungsmappe (PDF)",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Application folder": {
+  "ru": "Bewerbungsmappe",
+  "de": "Bewerbungsmappe",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "What goes into the PDF? The originals stay unchanged.": {
+  "ru": "Что войдёт в PDF? Оригиналы не меняются.",
+  "de": "Was soll in die PDF? Die Originale bleiben unverändert.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "CV (career)": {
+  "ru": "Резюме (профессиональный путь)",
+  "de": "Lebenslauf (Werdegang)",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "%n p.": {
+  "ru": "%n стр.",
+  "de": "%n S.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "PDF file – cannot be inserted": {
+  "ru": "PDF-файл — в папку не вставляется",
+  "de": "PDF-Datei – nicht einfügbar",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "no pages": {
+  "ru": "без страниц",
+  "de": "ohne Seiten",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Make the PDF · %n pages": {
+  "ru": "Создать PDF · %n стр.",
+  "de": "PDF erstellen · %n Seiten",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Please tick at least one": {
+  "ru": "Отметьте хотя бы одно",
+  "de": "Bitte mindestens eins wählen",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Making the PDF …": {
+  "ru": "Собираю PDF …",
+  "de": "PDF wird erstellt …",
+  "files": [
+   "karriere2.js",
+   "vorsorge.js"
+  ]
+ },
+ "Then: send by your own e-mail or keep in Files": {
+  "ru": "Потом: отправить через вашу почту или сохранить в «Файлах»",
+  "de": "Danach: per E-Mail (Ihre E-Mail) senden oder in «Dateien» sichern",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "What the Zeugnis phrases mean": {
+  "ru": "Что значат фразы Zeugnis",
+  "de": "Zeugnissprache verstehen",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "A German Zeugnis hides the grade in polite phrases. General rules – not legal advice, please check.": {
+  "ru": "В немецком Zeugnis оценка «зашифрована» вежливыми фразами. Общие правила — не юридическая оценка, пожалуйста, проверьте.",
+  "de": "Im deutschen Arbeitszeugnis steckt die Note in höflichen Formeln. Allgemeine Regeln – keine Rechtsberatung, bitte prüfen.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Found in your Zeugnis:": {
+  "ru": "Найдено в вашем Zeugnis:",
+  "de": "Gefunden in Ihrem Zeugnis:",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "The Zeugnis text is not recognised. Scan it with text recognition – then the phrases are found by themselves.": {
+  "ru": "Текст Zeugnis не распознан. Отсканируйте его со «Texterkennung» — тогда фразы найдутся сами.",
+  "de": "Der Text des Zeugnisses ist nicht erkannt. Mit Texterkennung scannen – dann werden die Formeln selbst gefunden.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "No typical phrases found in the text.": {
+  "ru": "Типичных фраз в тексте не найдено.",
+  "de": "Keine typischen Formeln im Text gefunden.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Usual phrases": {
+  "ru": "Обычные формулы",
+  "de": "Übliche Formeln",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Closing": {
+  "ru": "Концовка",
+  "de": "Schlussformel",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Thanks and good wishes are there – a good sign.": {
+  "ru": "Есть благодарность и пожелания — хороший знак.",
+  "de": "Dank und gute Wünsche sind da – ein gutes Zeichen.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "No thanks or wishes at the end – often a sign of a poor rating.": {
+  "ru": "Нет благодарности и пожеланий в конце — часто это знак плохой оценки.",
+  "de": "Kein Dank und keine Wünsche am Ende – oft ein Zeichen für eine schlechte Bewertung.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "1 – very good": {
+  "ru": "1 — очень хорошо",
+  "de": "1 – sehr gut",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "2 – good": {
+  "ru": "2 — хорошо",
+  "de": "2 – gut",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "3 – satisfactory": {
+  "ru": "3 — удовлетворительно",
+  "de": "3 – befriedigend",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "4 – sufficient": {
+  "ru": "4 — достаточно",
+  "de": "4 – ausreichend",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "5 – poor": {
+  "ru": "5 — плохо",
+  "de": "5 – mangelhaft",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "6 – insufficient": {
+  "ru": "6 — неудовлетворительно",
+  "de": "6 – ungenügend",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Contract deadlines": {
+  "ru": "Сроки из договора",
+  "de": "Fristen aus dem Vertrag",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "＋ Deadlines: probation, notice, fixed term": {
+  "ru": "＋ Сроки: Probezeit, Kündigungsfrist, конец договора",
+  "de": "＋ Fristen: Probezeit, Kündigungsfrist, Befristung",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Probation until": {
+  "ru": "Испытательный срок до",
+  "de": "Probezeit bis",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Fixed term until": {
+  "ru": "Договор (befristet) до",
+  "de": "Befristet bis",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Notice period": {
+  "ru": "Срок увольнения (Kündigungsfrist)",
+  "de": "Kündigungsfrist",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Own wording": {
+  "ru": "Свой вариант",
+  "de": "Eigene Angabe",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "– not given": {
+  "ru": "— не указан",
+  "de": "– nicht angegeben",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "2 weeks (during probation)": {
+  "ru": "2 недели (в Probezeit)",
+  "de": "2 Wochen (in der Probezeit)",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "4 weeks to the 15th or month end (by law)": {
+  "ru": "4 недели к 15-му или концу месяца (по закону)",
+  "de": "4 Wochen zum 15. oder Monatsende (gesetzlich)",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "1 month to month end": {
+  "ru": "1 месяц к концу месяца",
+  "de": "1 Monat zum Monatsende",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "3 months to quarter end": {
+  "ru": "3 месяца к концу квартала",
+  "de": "3 Monate zum Quartalsende",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "other": {
+  "ru": "другой",
+  "de": "andere",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "probation over ✓": {
+  "ru": "испытательный срок прошёл ✓",
+  "de": "Probezeit vorbei ✓",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Register as job-seeking (Agentur für Arbeit) – by %d": {
+  "ru": "Встать на учёт как ищущий работу (Agentur für Arbeit) — до %d",
+  "de": "Arbeitsuchend melden (Agentur für Arbeit) – bis %d",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Register as job-seeking – now (within 3 days)": {
+  "ru": "Встать на учёт как ищущий работу — как можно скорее (в течение 3 дней)",
+  "de": "Arbeitsuchend melden – jetzt (innerhalb von 3 Tagen)",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "General rule: 3 months before the end; if known later – within 3 days. Please check.": {
+  "ru": "Общее правило: за 3 месяца до конца договора, если позже узнали — в течение 3 дней. Пожалуйста, проверьте.",
+  "de": "Allgemeine Regel: 3 Monate vor Vertragsende, wenn später bekannt – innerhalb von 3 Tagen. Bitte prüfen.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Contract ends %m? Enter the exact date – then I remind in time.": {
+  "ru": "Конец договора %m? Впишите точную дату — тогда напомню вовремя.",
+  "de": "Vertrag endet %m? Genaues Datum eintragen – dann erinnere ich rechtzeitig.",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Probation ends on %d – %c": {
+  "ru": "Испытательный срок заканчивается %d — %c",
+  "de": "Probezeit endet am %d – %c",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Register as job-seeking – contract %c ends on %d": {
+  "ru": "Встать на учёт в Agentur für Arbeit — договор %c до %d",
+  "de": "Arbeitsuchend melden – Vertrag %c endet am %d",
+  "files": [
+   "karriere2.js"
+  ]
+ },
+ "Home": {
+  "ru": "Главная",
+  "de": "Startseite",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "Order of the tiles ↑↓ · eye = show/hide": {
+  "ru": "Порядок плиток ↑↓ · глаз — показать или скрыть",
+  "de": "Reihenfolge der Kacheln ↑↓ · Auge = zeigen/ausblenden",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "hidden": {
+  "ru": "скрыто",
+  "de": "ausgeblendet",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "Blocks on home": {
+  "ru": "Блоки на главной",
+  "de": "Blöcke auf der Startseite",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "Weather": {
+  "ru": "Погода",
+  "de": "Wetter",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "Today": {
+  "ru": "Сегодня",
+  "de": "Heute",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "Offices (appointments, deadlines)": {
+  "ru": "Ведомства (термины, сроки)",
+  "de": "Behörden (Termine, Fristen)",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "Quick actions": {
+  "ru": "Быстрые действия",
+  "de": "Schnellaktionen",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "Reset layout": {
+  "ru": "Сбросить расположение",
+  "de": "Anordnung zurücksetzen",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "Layout restored ✓": {
+  "ru": "Расположение как раньше ✓",
+  "de": "Anordnung wie vorher ✓",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "Vault": {
+  "ru": "Сейф",
+  "de": "Tresor",
+  "files": [
+   "layout-docs.js",
+   "move-phone.js",
+   "reliability.js"
+  ]
+ },
+ "Scanner": {
+  "ru": "Сканер",
+  "de": "Scanner",
+  "files": [
+   "layout-docs.js"
+  ]
+ },
+ "Show here too? (no copy)": {
+  "ru": "Показать и здесь? (без копии)",
+  "de": "Auch hier zeigen? (keine Kopie)",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Saved once in «Documents»": {
+  "ru": "Сохранено один раз в «Документах»",
+  "de": "Einmal in «Dokumente» gespeichert",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Add employer «%n»": {
+  "ru": "Добавить работодателя «%n»",
+  "de": "Arbeitgeber «%n» anlegen",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Add an employer": {
+  "ru": "Добавить работодателя",
+  "de": "Arbeitgeber neu anlegen",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Company name": {
+  "ru": "Название фирмы",
+  "de": "Name der Firma",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Keep only in Documents": {
+  "ru": "Оставить только в «Документах»",
+  "de": "Nur in Dokumente lassen",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Stop asking for «%k»": {
+  "ru": "Больше не спрашивать для «%k»",
+  "de": "Für «%k» nicht mehr fragen",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Also shown at %n": {
+  "ru": "Показано и у %n",
+  "de": "Auch bei %n gezeigt",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Undo": {
+  "ru": "Отменить",
+  "de": "Rückgängig",
+  "files": [
+   "linkup.js",
+   "notizen.js"
+  ]
+ },
+ "Also shown in": {
+  "ru": "Показан также в",
+  "de": "Erscheint auch in",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "＋ Another place": {
+  "ru": "＋ Ещё место",
+  "de": "＋ Weitere Stelle",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "× removes it there – the document stays.": {
+  "ru": "× убирает отсюда – документ остаётся.",
+  "de": "× nimmt es dort weg – das Dokument bleibt.",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Only in «Documents» so far": {
+  "ru": "Пока только в «Документах»",
+  "de": "Bisher nur in «Dokumente»",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "→ also in the tax folder %y": {
+  "ru": "→ также в Steuer-Mappe %y",
+  "de": "→ auch in der Steuer-Mappe %y",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Where else?": {
+  "ru": "Куда ещё?",
+  "de": "Wo noch zeigen?",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Employer": {
+  "ru": "Работодатель",
+  "de": "Arbeitgeber",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Which place?": {
+  "ru": "Какое место?",
+  "de": "Welcher Platz?",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "No matching places. Add an employer in «Work & business».": {
+  "ru": "Подходящих мест нет. Работодателя можно добавить в «Arbeit & Business».",
+  "de": "Keine passenden Stellen. Einen Arbeitgeber legen Sie in «Arbeit & Business» an.",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Will & powers": {
+  "ru": "Завещание и доверенности",
+  "de": "Testament & Vorsorge",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "%n documents match %c": {
+  "ru": "%n док. подходят к %c",
+  "de": "%n Dokumente passen zu %c",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "They are already in «Documents» – link them?": {
+  "ru": "Они уже в «Документах» – связать?",
+  "de": "Sie liegen schon in «Dokumente» – verknüpfen?",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Link %n": {
+  "ru": "Связать %n",
+  "de": "%n verknüpfen",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "Later": {
+  "ru": "Позже",
+  "de": "Später",
+  "files": [
+   "linkup.js",
+   "move-phone.js"
+  ]
+ },
+ "Linked: %n": {
+  "ru": "Связано: %n",
+  "de": "Verknüpft: %n",
+  "files": [
+   "linkup.js"
+  ]
+ },
+ "or": {
+  "ru": "или",
+  "de": "oder",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Move from the old phone": {
+  "ru": "Перенести со старого телефона",
+  "de": "Vom alten Telefon übernehmen",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Pick the backup file – all data comes along": {
+  "ru": "Выберите файл копии — все данные перейдут",
+  "de": "Sicherungsdatei wählen – alle Daten kommen mit",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "✓ Welcome back": {
+  "ru": "✓ С возвращением",
+  "de": "✓ Willkommen zurück",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Your data from the old phone is here:": {
+  "ru": "Ваши данные со старого телефона здесь:",
+  "de": "Ihre Daten vom alten Telefon sind da:",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Contracts": {
+  "ru": "Договоры",
+  "de": "Verträge",
+  "files": [
+   "move-phone.js",
+   "reliability.js"
+  ]
+ },
+ "Photos / pages": {
+  "ru": "Фото / страницы",
+  "de": "Fotos / Seiten",
+  "files": [
+   "move-phone.js",
+   "reliability.js"
+  ]
+ },
+ "Authorities & services": {
+  "ru": "Ведомства и службы",
+  "de": "Behörden & Dienste",
+  "files": [
+   "move-phone.js",
+   "notizen.js",
+   "reliability.js"
+  ]
+ },
+ "Appointments & deadlines": {
+  "ru": "Сроки и термины",
+  "de": "Termine & Fristen",
+  "files": [
+   "move-phone.js",
+   "reliability.js"
+  ]
+ },
+ "encrypted ✓": {
+  "ru": "зашифрован ✓",
+  "de": "verschlüsselt ✓",
+  "files": [
+   "move-phone.js",
+   "reliability.js"
+  ]
+ },
+ "Sign-in on this phone": {
+  "ru": "Вход на этом телефоне",
+  "de": "Anmeldung auf diesem Telefon",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "The old phone’s Face ID does not work here. Please set it up again:": {
+  "ru": "Face ID старого телефона здесь не действует. Настройте заново:",
+  "de": "Die Face ID des alten Telefons gilt hier nicht. Bitte neu einrichten:",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Protect the app on this phone with a password:": {
+  "ru": "Защитите приложение на этом телефоне паролем:",
+  "de": "Schützen Sie die App auf diesem Telefon mit einem Passwort:",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Set up Face ID": {
+  "ru": "Настроить Face ID",
+  "de": "Face ID einrichten",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Set a password": {
+  "ru": "Задать пароль",
+  "de": "Passwort festlegen",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "The vault opens with your previous vault password.": {
+  "ru": "Сейф открывается вашим прежним паролем сейфа.",
+  "de": "Der Tresor öffnet sich mit Ihrem bisherigen Tresor-Passwort.",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Move to a new phone": {
+  "ru": "Перенос на новый телефон",
+  "de": "Auf neues Telefon umziehen",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Here «Save a backup» (with a password) – put the file in iCloud Drive or send it by AirDrop.": {
+  "ru": "Здесь «Сохранить копию» (с паролем) — файл положите в iCloud Drive или отправьте по AirDrop.",
+  "de": "Hier «Sicherung speichern» (mit Passwort) – die Datei in iCloud Drive ablegen oder per AirDrop senden.",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "On the new phone open the link in Safari → Share → «Add to Home Screen».": {
+  "ru": "На новом телефоне откройте ссылку в Safari → «Поделиться» → «На экран Домой».",
+  "de": "Auf dem neuen Telefon den Link in Safari öffnen → Teilen → «Zum Home-Bildschirm».",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Open the app → «Move from the old phone» → pick the file → password.": {
+  "ru": "Откройте приложение → «Перенести со старого телефона» → файл → пароль.",
+  "de": "App öffnen → «Vom alten Telefon übernehmen» → Datei wählen → Passwort.",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Save a backup now": {
+  "ru": "Сохранить копию сейчас",
+  "de": "Sicherung jetzt speichern",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Share the app link": {
+  "ru": "Поделиться ссылкой на приложение",
+  "de": "Link zur App teilen",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "Link copied ✓": {
+  "ru": "Ссылка скопирована ✓",
+  "de": "Link kopiert ✓",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "The old phone keeps its data until you delete it there.": {
+  "ru": "На старом телефоне данные остаются, пока вы сами их не удалите.",
+  "de": "Das alte Telefon behält seine Daten, bis Sie sie dort löschen.",
+  "files": [
+   "move-phone.js"
+  ]
+ },
+ "This document is already there: “%t”": {
+  "ru": "Такой документ уже есть: «%t»",
+  "de": "Dieses Dokument gibt es schon: „%t“",
+  "files": [
+   "no-doubles.js"
+  ]
+ },
+ "View": {
+  "ru": "Посмотреть",
+  "de": "Ansehen",
+  "files": [
+   "no-doubles.js"
+  ]
+ },
+ "Keep both": {
+  "ru": "Оставить оба",
+  "de": "Beide behalten",
+  "files": [
+   "no-doubles.js"
+  ]
+ },
+ "Notes": {
+  "ru": "Заметки",
+  "de": "Notizen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Everything quick in one place": {
+  "ru": "Всё быстрое — в одном месте",
+  "de": "Alles Schnelle an einem Ort",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "New note": {
+  "ru": "Новая заметка",
+  "de": "Neue Notiz",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Dictate": {
+  "ru": "Диктовать",
+  "de": "Diktieren",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Scan": {
+  "ru": "Сканировать",
+  "de": "Scannen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Photo note": {
+  "ru": "Фото-заметка",
+  "de": "Foto-Notiz",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "All notes": {
+  "ru": "Все заметки",
+  "de": "Alle Notizen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Open points": {
+  "ru": "Открытые пункты",
+  "de": "Offene Punkte",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "With date → calendar": {
+  "ru": "С датой → календарь",
+  "de": "Mit Datum → Kalender",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Archive": {
+  "ru": "Архив",
+  "de": "Archiv",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Bin": {
+  "ru": "Корзина",
+  "de": "Papierkorb",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Folders": {
+  "ru": "Папки",
+  "de": "Ordner",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "all": {
+  "ru": "все",
+  "de": "alle",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "No folder": {
+  "ru": "Без папки",
+  "de": "Ohne Ordner",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "%n note": {
+  "ru": "%n заметка",
+  "de": "%n Notiz",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "%n notes": {
+  "ru": "%n заметок",
+  "de": "%n Notizen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Work": {
+  "ru": "Работа",
+  "de": "Arbeit",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Learning": {
+  "ru": "Учёба",
+  "de": "Lernen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Fitness": {
+  "ru": "Фитнес",
+  "de": "Fitness",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Travel": {
+  "ru": "Поездки",
+  "de": "Reisen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Family": {
+  "ru": "Семья",
+  "de": "Familie",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Ideas": {
+  "ru": "Идеи",
+  "de": "Ideen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Projects": {
+  "ru": "Проекты",
+  "de": "Projekte",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "＋ Folder": {
+  "ru": "＋ Папка",
+  "de": "＋ Ordner",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Folder": {
+  "ru": "Папка",
+  "de": "Ordner",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Colour": {
+  "ru": "Цвет",
+  "de": "Farbe",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Hide folder": {
+  "ru": "Скрыть папку",
+  "de": "Ordner ausblenden",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Show hidden": {
+  "ru": "Показать скрытые",
+  "de": "Ausgeblendete zeigen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Delete folder": {
+  "ru": "Удалить папку",
+  "de": "Ordner löschen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Sure? The notes stay “without folder”.": {
+  "ru": "Точно? Заметки останутся «без папки».",
+  "de": "Sicher? Die Notizen bleiben „ohne Ordner“.",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Folders are yours: rename, symbol, colour, hide. A note lives in one folder – no copies.": {
+  "ru": "Папки свои: переименовать, значок, цвет, скрыть. Заметка лежит в одной папке — без копий.",
+  "de": "Ordner sind frei: umbenennen, Symbol, Farbe, ausblenden. Eine Notiz liegt in einem Ordner – keine Kopien.",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Nothing here yet.": {
+  "ru": "Здесь пока пусто.",
+  "de": "Hier ist noch nichts.",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Tap “New note” – or dictate, scan, take a photo.": {
+  "ru": "Нажмите «Новая заметка» — или продиктуйте, отсканируйте, сфотографируйте.",
+  "de": "Tippen Sie auf „Neue Notiz“ – oder diktieren, scannen, fotografieren.",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Search notes …": {
+  "ru": "Поиск в заметках …",
+  "de": "In Notizen suchen …",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Text …": {
+  "ru": "Текст …",
+  "de": "Text …",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "＋ Point": {
+  "ru": "＋ Пункт",
+  "de": "＋ Punkt",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "New point": {
+  "ru": "Новый пункт",
+  "de": "Neuer Punkt",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "no date": {
+  "ru": "без даты",
+  "de": "ohne Datum",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Date for the point": {
+  "ru": "Дата пункта",
+  "de": "Datum für den Punkt",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Remove date": {
+  "ru": "Убрать дату",
+  "de": "Datum entfernen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "from a note": {
+  "ru": "из заметки",
+  "de": "aus Notiz",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "task": {
+  "ru": "задача",
+  "de": "Aufgabe",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Open calendar": {
+  "ru": "Открыть календарь",
+  "de": "Kalender öffnen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "A point with a date goes to the calendar by itself. «Into the iPhone calendar» in the profile – with sound.": {
+  "ru": "Пункт с датой сам попадает в календарь. «In den iPhone-Kalender» в профиле — со звуком.",
+  "de": "Ein Punkt mit Datum kommt von selbst in den Kalender. «In den iPhone-Kalender» im Profil – mit Ton.",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Tags": {
+  "ru": "Метки",
+  "de": "Tags",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "e.g. Business, doctor": {
+  "ru": "например Business, Arzt",
+  "de": "z. B. Business, Arzt",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Actions": {
+  "ru": "Действия",
+  "de": "Aktionen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Unarchive": {
+  "ru": "Из архива",
+  "de": "Aus dem Archiv",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Move to bin": {
+  "ru": "В корзину",
+  "de": "In den Papierkorb",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Delete for good?": {
+  "ru": "Удалить навсегда?",
+  "de": "Endgültig löschen?",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Delete for good": {
+  "ru": "Удалить навсегда",
+  "de": "Endgültig löschen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Empty the bin": {
+  "ru": "Очистить корзину",
+  "de": "Papierkorb leeren",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Notes in the bin are deleted after 30 days.": {
+  "ru": "Заметки в корзине удаляются сами через 30 дней.",
+  "de": "Notizen im Papierkorb werden nach 30 Tagen gelöscht.",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "In the bin ✓": {
+  "ru": "В корзине ✓",
+  "de": "Im Papierkorb ✓",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Share": {
+  "ru": "Поделиться",
+  "de": "Teilen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Large text": {
+  "ru": "Крупный текст",
+  "de": "Große Schrift",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Linked with": {
+  "ru": "Связано с",
+  "de": "Verknüpft mit",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Link with …": {
+  "ru": "Связать с …",
+  "de": "Verknüpfen mit …",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Nothing to link yet.": {
+  "ru": "Пока нечего связать.",
+  "de": "Noch nichts zum Verknüpfen.",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "employer": {
+  "ru": "работодатель",
+  "de": "Arbeitgeber",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "authority": {
+  "ru": "ведомство",
+  "de": "Behörde",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "document": {
+  "ru": "документ",
+  "de": "Dokument",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "From «Documents»": {
+  "ru": "Документ из «Документов»",
+  "de": "Aus «Dokumente»",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "from «Documents» · linked": {
+  "ru": "из «Документов» · связано",
+  "de": "aus «Dokumente» · verknüpft",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Attach": {
+  "ru": "Прикрепить",
+  "de": "Anhängen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Photo / scan": {
+  "ru": "Сфотографировать / сканировать",
+  "de": "Fotografieren / scannen",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "File (PDF or picture)": {
+  "ru": "Файл (PDF или фото)",
+  "de": "Datei (PDF oder Bild)",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Dictation is not available here. Tap 🎙 on the iPhone keyboard – it works in every field.": {
+  "ru": "Диктовка здесь недоступна. Нажмите 🎙 на клавиатуре iPhone — это работает в любом поле.",
+  "de": "Diktieren ist hier nicht verfügbar. Tippen Sie auf 🎙 der iPhone-Tastatur – das geht in jedem Feld.",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Speak … (🎙 again = stop)": {
+  "ru": "Говорите … (нажмите 🎙 ещё раз, чтобы остановить)",
+  "de": "Sprechen Sie … (🎙 nochmal = Stopp)",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Speech recognition is done by the iPhone (Apple), may need internet.": {
+  "ru": "Распознавание речи делает iPhone (Apple), может понадобиться интернет.",
+  "de": "Die Spracherkennung macht das iPhone (Apple), ggf. mit Internet.",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Scan %d": {
+  "ru": "Скан %d",
+  "de": "Scan %d",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "Photo %d": {
+  "ru": "Фото %d",
+  "de": "Foto %d",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "＋ Note": {
+  "ru": "＋ Заметка",
+  "de": "＋ Notiz",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "made %d": {
+  "ru": "создано %d",
+  "de": "erstellt %d",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "changed %d": {
+  "ru": "изменено %d",
+  "de": "geändert %d",
+  "files": [
+   "notizen.js"
+  ]
+ },
+ "sRout": {
+  "ru": "sMoney",
+  "de": "sShop",
+  "files": [
+   "only-docs.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"sc9\"": {
+  "ru": "scan",
+  "de": "scan",
+  "files": [
+   "only-docs.js"
+  ]
+ },
+ "data-act=\"go\" data-to=\"dsrok\"": {
+  "ru": "dl",
+  "de": "clock",
+  "files": [
+   "only-docs.js"
+  ]
+ },
+ "Check a backup": {
+  "ru": "Проверить копию",
+  "de": "Sicherung prüfen",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Which backup to check?": {
+  "ru": "Какую копию проверить?",
+  "de": "Welche Sicherung prüfen?",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Latest backup on this phone": {
+  "ru": "Последняя копия на этом телефоне",
+  "de": "Letzte Sicherung auf diesem Telefon",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Pick a file in Files …": {
+  "ru": "Выбрать файл в «Файлах» …",
+  "de": "Datei in «Dateien» wählen …",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Backup password": {
+  "ru": "Пароль копии",
+  "de": "Passwort der Sicherung",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Wrong password": {
+  "ru": "Пароль не подходит",
+  "de": "Passwort passt nicht",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Checking the backup …": {
+  "ru": "Проверяю копию …",
+  "de": "Sicherung wird geprüft …",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "✓ The backup is fine": {
+  "ru": "✓ Копия в порядке",
+  "de": "✓ Sicherung ist in Ordnung",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "⚠ The backup is incomplete": {
+  "ru": "⚠ Копия неполная",
+  "de": "⚠ Sicherung ist unvollständig",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "✕ Not a Butler Docs backup, or the file is damaged": {
+  "ru": "✕ Это не копия Butler Docs или файл повреждён",
+  "de": "✕ Keine Sicherung von Butler Docs oder Datei beschädigt",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Made on %d": {
+  "ru": "Создана %d",
+  "de": "Erstellt am %d",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "empty": {
+  "ru": "пуст",
+  "de": "leer",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "on the phone: %n": {
+  "ru": "на телефоне: %n",
+  "de": "auf dem Telefon: %n",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "%n photos are missing from the backup. Please save a new one.": {
+  "ru": "Не хватает %n фото — в копии их нет. Сохраните новую копию.",
+  "de": "%n Fotos fehlen in der Sicherung. Bitte neue Sicherung speichern.",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "%n photos are damaged.": {
+  "ru": "%n фото повреждены.",
+  "de": "%n Fotos sind beschädigt.",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "The backup has fewer documents than the phone – it is older. Please save a new one.": {
+  "ru": "В копии меньше документов, чем на телефоне — она старая. Сохраните новую.",
+  "de": "Die Sicherung hat weniger Dokumente als das Telefon – sie ist älter. Bitte neue speichern.",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Only checked – your data was not changed.": {
+  "ru": "Только проверено — ваши данные не изменены.",
+  "de": "Nur geprüft – Ihre Daten wurden nicht verändert.",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Save a new backup": {
+  "ru": "Сохранить новую копию",
+  "de": "Neue Sicherung speichern",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Error report": {
+  "ru": "Отчёт об ошибке",
+  "de": "Fehlerbericht",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Only technical details are sent – no documents, no names. You send it yourself, from your own mail.": {
+  "ru": "Будет отправлено только техническое — без документов и имён. Отправляете вы сами, через свою почту.",
+  "de": "Gesendet werden nur technische Angaben – keine Dokumente, keine Namen. Sie senden selbst, über Ihre E-Mail.",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "What happened? (optional)": {
+  "ru": "Что случилось? (по желанию)",
+  "de": "Was ist passiert? (optional)",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Screenshot: press the side button + volume up, then attach it to the mail.": {
+  "ru": "Снимок экрана: нажмите боковую кнопку и громкость вверх, потом приложите его в письме.",
+  "de": "Bildschirmfoto: Seitentaste + Lauter drücken und es dann an die E-Mail anhängen.",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Send by e-mail (your mail)": {
+  "ru": "Отправить по e-mail (ваша почта)",
+  "de": "Per E-Mail senden (Ihre E-Mail)",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Share …": {
+  "ru": "Поделиться …",
+  "de": "Teilen …",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Copied ✓": {
+  "ru": "Скопировано ✓",
+  "de": "Kopiert ✓",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Butler Docs – error report": {
+  "ru": "Butler Docs — отчёт об ошибке",
+  "de": "Butler Docs – Fehlerbericht",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Errors (last 7 days)": {
+  "ru": "Ошибки (7 дней)",
+  "de": "Fehler (letzte 7 Tage)",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Version": {
+  "ru": "Версия",
+  "de": "Version",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Screen": {
+  "ru": "Экран",
+  "de": "Ansicht",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Device": {
+  "ru": "Устройство",
+  "de": "Gerät",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Backup": {
+  "ru": "Копия",
+  "de": "Sicherung",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "Mode": {
+  "ru": "Запуск",
+  "de": "Start",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "from the Home Screen": {
+  "ru": "с экрана «Домой»",
+  "de": "vom Home-Bildschirm",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "in the browser": {
+  "ru": "в браузере",
+  "de": "im Browser",
+  "files": [
+   "reliability.js"
+  ]
+ },
+ "--h236vh": {
+  "ru": "--ssvh",
+  "de": "--h10vh",
+  "files": [
+   "steady-screen.js"
+  ]
+ },
+ "For the tax return %y": {
+  "ru": "Для декларации %y",
+  "de": "Für die Steuererklärung %y",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Work expenses": {
+  "ru": "Расходы на работу",
+  "de": "Werbungskosten",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "%a of 1,230 €": {
+  "ru": "%a из 1.230 €",
+  "de": "%a von 1.230 €",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Above 1,230 € – receipts pay off ✓": {
+  "ru": "Больше 1.230 € – чеки имеют смысл ✓",
+  "de": "Über 1.230 € – Belege lohnen sich ✓",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "%a more to 1,230 € – up to that the tax office counts it itself": {
+  "ru": "Ещё %a до 1.230 € – до этого Finanzamt считает сам",
+  "de": "Noch %a bis 1.230 € – bis dahin rechnet das Finanzamt selbst",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Way to work": {
+  "ru": "Дорога на работу",
+  "de": "Weg zur Arbeit",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Not entered – km, days, home office": {
+  "ru": "Не указано – км, дни, Homeoffice",
+  "de": "Noch nicht eingetragen – km, Tage, Homeoffice",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "%k km · %d days · %h home office days": {
+  "ru": "%k км · %d дн. · %h дн. дома",
+  "de": "%k km · %d Tage · %h Tage Homeoffice",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Km to work (one way)": {
+  "ru": "Км до работы (в одну сторону)",
+  "de": "Kilometer zur Arbeit (einfache Strecke)",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Days you travelled to work": {
+  "ru": "Дней с поездкой на работу",
+  "de": "Tage mit Fahrt zur Arbeit",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Home office days": {
+  "ru": "Дней работы дома (Homeoffice)",
+  "de": "Tage im Homeoffice",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Commuter allowance": {
+  "ru": "Pendlerpauschale",
+  "de": "Pendlerpauschale",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Home office allowance": {
+  "ru": "Homeoffice-Pauschale",
+  "de": "Homeoffice-Pauschale",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Together": {
+  "ru": "Итого",
+  "de": "Zusammen",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "From 2026: 0.38 € per km from km 1, one way only.": {
+  "ru": "С 2026: 0,38 € за км с первого км, только дорога в одну сторону.",
+  "de": "Ab 2026: 0,38 € je Kilometer ab dem 1. km, nur die einfache Strecke.",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Up to 2025: 0.30 € for km 1–20, 0.38 € from km 21.": {
+  "ru": "До 2025: 0,30 € за км 1–20, с 21-го км 0,38 €.",
+  "de": "Bis 2025: 0,30 € für km 1–20, ab dem 21. km 0,38 €.",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Home office: 6 € a day, at most 1,260 € a year. Per day either travel or home office.": {
+  "ru": "Homeoffice: 6 € в день, максимум 1.260 € в год. В один день – или дорога, или Homeoffice.",
+  "de": "Homeoffice: 6 € pro Tag, höchstens 1.260 € im Jahr. Pro Tag entweder Fahrt oder Homeoffice.",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Without your own car at most 4,500 € a year. Please check.": {
+  "ru": "Без своей машины максимум 4.500 € в год. Проверьте, пожалуйста.",
+  "de": "Ohne eigenes Auto höchstens 4.500 € im Jahr. Bitte prüfen.",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Wage tax certificate %y": {
+  "ru": "Lohnsteuerbescheinigung %y",
+  "de": "Lohnsteuerbescheinigung %y",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "there · %c": {
+  "ru": "есть · %c",
+  "de": "vorhanden · %c",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "The employer sends it by end of February %z": {
+  "ru": "Работодатель присылает до конца февраля %z",
+  "de": "Kommt vom Arbeitgeber bis Ende Februar %z",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Please add the employer in «Work & business» first – that is its place.": {
+  "ru": "Сначала добавьте работодателя в «Arbeit & Business» – там место для этого документа.",
+  "de": "Bitte zuerst den Arbeitgeber in «Arbeit & Business» eintragen – dort ist ihr Platz.",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Open «Work & business»": {
+  "ru": "Открыть «Arbeit & Business»",
+  "de": "«Arbeit & Business» öffnen",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Which employer?": {
+  "ru": "Какой работодатель?",
+  "de": "Welcher Arbeitgeber?",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Tax assessment %y": {
+  "ru": "Steuerbescheid %y",
+  "de": "Steuerbescheid %y",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Not received yet": {
+  "ru": "Ещё не пришёл",
+  "de": "Noch nicht erhalten",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Objection by %d": {
+  "ru": "Einspruch до %d",
+  "de": "Einspruch bis %d",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Objection period over (%d)": {
+  "ru": "Срок Einspruch прошёл (%d)",
+  "de": "Einspruchsfrist vorbei (%d)",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Date on the letter": {
+  "ru": "Дата на письме",
+  "de": "Datum auf dem Bescheid",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Deemed received: %a · objection by: %b": {
+  "ru": "Получен (по закону): %a · Einspruch до: %b",
+  "de": "Bekanntgabe: %a · Einspruch bis: %b",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "The letter counts as received 4 days after its date (since 2025), then 1 month to object. An objection is free – via ELSTER or letter. Please check.": {
+  "ru": "Письмо считается полученным через 4 дня после даты (с 2025), затем 1 месяц на Einspruch. Einspruch бесплатный – через ELSTER или письмом. Проверьте, пожалуйста.",
+  "de": "Der Bescheid gilt 4 Tage nach dem Datum als bekanntgegeben (seit 2025), dann 1 Monat für den Einspruch. Einspruch ist kostenlos – per ELSTER oder Brief. Bitte prüfen.",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Letter (photo or file)": {
+  "ru": "Письмо (фото или файл)",
+  "de": "Bescheid (Foto oder Datei)",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Check tax assessment %y – objection by %d": {
+  "ru": "Проверить Steuerbescheid %y – Einspruch до %d",
+  "de": "Steuerbescheid %y prüfen – Einspruch bis %d",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Scan wage tax certificate %y": {
+  "ru": "Отсканировать Lohnsteuerbescheinigung %y",
+  "de": "Lohnsteuerbescheinigung %y scannen",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Exemption orders": {
+  "ru": "Freistellungsaufträge",
+  "de": "Freistellungsaufträge",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Not entered – at most 1,000 € for all banks": {
+  "ru": "Не указано – максимум 1.000 € на все банки",
+  "de": "Noch nicht eingetragen – höchstens 1.000 € für alle Banken",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Joint assessment (married) – 2,000 €": {
+  "ru": "Вместе с супругом (2.000 €)",
+  "de": "Zusammen veranlagt (Ehe) – 2.000 €",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "＋ Bank": {
+  "ru": "＋ Банк",
+  "de": "＋ Bank",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "%a over the limit – please lower it at one bank": {
+  "ru": "Больше лимита на %a – уменьшите в одном из банков",
+  "de": "%a über der Grenze – bitte bei einer Bank verringern",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Saver’s allowance: 1,000 € a year per person. You change the order in online banking.": {
+  "ru": "Sparerpauschbetrag: 1.000 € в год на человека. Изменить Freistellungsauftrag можно в онлайн-банке.",
+  "de": "Sparerpauschbetrag: 1.000 € im Jahr pro Person. Den Freistellungsauftrag ändern Sie im Online-Banking.",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Tax ID & ELSTER": {
+  "ru": "Steuer-ID и ELSTER",
+  "de": "Steuer-ID & ELSTER",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Number in the vault, access via elster.de": {
+  "ru": "Номер – в Tresor, вход – на elster.de",
+  "de": "Nummer im Tresor, Zugang über elster.de",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Open ELSTER": {
+  "ru": "Открыть ELSTER",
+  "de": "ELSTER öffnen",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Tax ID in the vault": {
+  "ru": "Steuer-ID в Tresor",
+  "de": "Steuer-ID im Tresor",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "The tax ID is on the wage tax certificate and every assessment. No second copy is kept here.": {
+  "ru": "Steuer-ID есть на Lohnsteuerbescheinigung и на каждом Steuerbescheid. Здесь не хранится вторая копия.",
+  "de": "Die Steuer-ID steht auf der Lohnsteuerbescheinigung und jedem Steuerbescheid. Hier wird keine zweite Kopie gespeichert.",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "What is still missing for %y": {
+  "ru": "Чего ещё не хватает для %y",
+  "de": "Was fehlt noch für %y",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Way to work / home office": {
+  "ru": "Дорога на работу / Homeoffice",
+  "de": "Weg zur Arbeit / Homeoffice",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Donation receipts": {
+  "ru": "Справки о пожертвованиях",
+  "de": "Spendenquittungen",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "if you donated": {
+  "ru": "если жертвовали",
+  "de": "falls gespendet",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Service charges / craftsmen": {
+  "ru": "Nebenkostenabrechnung / мастера",
+  "de": "Nebenkostenabrechnung / Handwerker",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "labour share, by transfer": {
+  "ru": "доля работы, оплата переводом",
+  "de": "Arbeitsanteil, per Überweisung",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Health insurer / insurance statements": {
+  "ru": "Справка больничной кассы / страховки",
+  "de": "Bescheinigung Krankenkasse / Versicherungen",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Pension statement": {
+  "ru": "Renteninformation",
+  "de": "Renteninformation",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "yearly – check gaps": {
+  "ru": "раз в год – проверить пробелы",
+  "de": "jährlich – Lücken prüfen (Kontenklärung)",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "General rules, not tax advice. Please check.": {
+  "ru": "Общие правила, не налоговая консультация. Проверьте, пожалуйста.",
+  "de": "Allgemeine Regeln, keine Steuerberatung. Bitte prüfen.",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "✓ %n file(s)": {
+  "ru": "✓ %n файл(ов)",
+  "de": "✓ %n Datei(en)",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "✓ in «Documents»": {
+  "ru": "✓ в «Документах»",
+  "de": "✓ in «Dokumente»",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Please check the numbers": {
+  "ru": "Проверьте числа",
+  "de": "Bitte die Zahlen prüfen",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Please enter the date": {
+  "ru": "Укажите дату",
+  "de": "Bitte das Datum eintragen",
+  "files": [
+   "steuer-plus.js"
+  ]
+ },
+ "Self-check: all fine ✓": {
+  "ru": "Самопроверка: всё в порядке ✓",
+  "de": "Selbsttest: alles in Ordnung ✓",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "checked %d": {
+  "ru": "проверено %d",
+  "de": "geprüft %d",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "Check now": {
+  "ru": "Проверить сейчас",
+  "de": "Jetzt prüfen",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "The self-check found something": {
+  "ru": "Самопроверка нашла проблему",
+  "de": "Selbsttest hat etwas gefunden",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "Checking …": {
+  "ru": "Проверяю …",
+  "de": "Wird geprüft …",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "The app cannot save any more. Please free space on the phone and reopen the app.": {
+  "ru": "Приложение не может сохранять данные. Освободите место на телефоне и откройте приложение заново.",
+  "de": "Die App kann nicht mehr speichern. Bitte Platz auf dem Telefon schaffen und die App neu öffnen.",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "The phone may delete this app’s data. Please open it from the Home Screen, not in Safari – and save a backup.": {
+  "ru": "iPhone может удалить данные этого приложения. Откройте его с экрана «Домой», а не в Safari, и сохраните копию.",
+  "de": "Das iPhone darf die Daten dieser App löschen. Bitte vom Home-Bildschirm öffnen, nicht in Safari – und eine Sicherung speichern.",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "The app storage is almost full (%p %). Please save a backup and delete photos you do not need.": {
+  "ru": "Память приложения почти заполнена (%p %). Сохраните копию и удалите ненужные фото.",
+  "de": "Der Speicher der App ist fast voll (%p %). Bitte Sicherung speichern und unnötige Fotos löschen.",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "The photo store cannot be opened. Please restart the phone; if that does not help – restore from a backup.": {
+  "ru": "Хранилище фото не открывается. Перезапустите телефон; если не поможет — восстановите из копии.",
+  "de": "Der Fotospeicher lässt sich nicht öffnen. Bitte Telefon neu starten; hilft das nicht – aus der Sicherung wiederherstellen.",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "%n pages have no photo. If you have a backup – check it in «Profile».": {
+  "ru": "У %n стр. нет фото. Если у вас есть копия, проверьте её в «Профиле».",
+  "de": "Bei %n Seiten fehlt das Foto. Falls Sie eine Sicherung haben – in «Profil» prüfen.",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "Open profile": {
+  "ru": "Открыть «Профиль»",
+  "de": "Profil öffnen",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "Got it": {
+  "ru": "Понятно",
+  "de": "Verstanden",
+  "files": [
+   "tidy.js"
+  ]
+ },
+ "Will & provisions": {
+  "ru": "Завещание и распоряжения",
+  "de": "Testament & Vorsorge",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "Will": {
+  "ru": "Завещание",
+  "de": "Testament",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "Lasting power of attorney": {
+  "ru": "Генеральная доверенность (Vorsorgevollmacht)",
+  "de": "Vorsorgevollmacht",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "Living will": {
+  "ru": "Распоряжение пациента",
+  "de": "Patientenverfügung",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "Care directive": {
+  "ru": "Распоряжение об опеке",
+  "de": "Betreuungsverfügung",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "Funeral wishes": {
+  "ru": "Распоряжение о похоронах",
+  "de": "Bestattungsverfügung",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "handwritten or notarised": {
+  "ru": "собственноручное или у нотариуса",
+  "de": "handschriftlich oder notariell",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "who decides for you": {
+  "ru": "кто решает за вас",
+  "de": "wer für Sie entscheidet",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "wishes about treatment": {
+  "ru": "пожелания о лечении",
+  "de": "Wünsche zur Behandlung",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "who should be your carer": {
+  "ru": "кто будет опекуном",
+  "de": "wer betreuen soll",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "wishes for the funeral": {
+  "ru": "пожелания о похоронах",
+  "de": "Wünsche zur Bestattung",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "Where is the original?": {
+  "ru": "Где лежит оригинал?",
+  "de": "Wo liegt das Original?",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "Original: %o": {
+  "ru": "Оригинал: %o",
+  "de": "Original: %o",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "e.g. folder in the cupboard, living room": {
+  "ru": "например папка в шкафу, гостиная",
+  "de": "z. B. Ordner im Schrank, Wohnzimmer",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "at home": {
+  "ru": "дома",
+  "de": "zu Hause",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "with the notary": {
+  "ru": "у нотариуса",
+  "de": "beim Notar",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "local court": {
+  "ru": "Amtsgericht",
+  "de": "Amtsgericht",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "safe deposit box": {
+  "ru": "банковская ячейка",
+  "de": "Bankschließfach",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "Named person / note": {
+  "ru": "Кому доверено / заметка",
+  "de": "Bevollmächtigt / Hinweis",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "e.g. wife; son has a copy": {
+  "ru": "например жена; копия у сына",
+  "de": "z. B. Ehefrau; Kopie hat Sohn",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "＋ Document": {
+  "ru": "＋ Документ",
+  "de": "＋ Dokument",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "A will can be deposited at the local court; a power of attorney registered in the Central Register. General hints – not legal advice, please check.": {
+  "ru": "Завещание можно сдать на хранение в Amtsgericht; Vorsorgevollmacht — зарегистрировать в Zentrales Vorsorgeregister. Общие правила — не юридическая консультация, проверьте, пожалуйста.",
+  "de": "Ein Testament kann beim Amtsgericht verwahrt werden; eine Vorsorgevollmacht im Zentralen Vorsorgeregister eingetragen werden. Allgemeine Hinweise – keine Rechtsberatung, bitte prüfen.",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "All documents in “Finance and law” ›": {
+  "ru": "Все документы папки «Финансы и право» ›",
+  "de": "Alle Dokumente im Ordner „Finanzen und Recht“ ›",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "Overview for the family (PDF)": {
+  "ru": "Обзор для родственников (PDF)",
+  "de": "Übersicht für Angehörige (PDF)",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "Will & provisions – overview": {
+  "ru": "Завещание и распоряжения — обзор",
+  "de": "Testament & Vorsorge – Übersicht",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "missing": {
+  "ru": "нет",
+  "de": "fehlt",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "there": {
+  "ru": "есть",
+  "de": "vorhanden",
+  "files": [
+   "vorsorge.js"
+  ]
+ },
+ "%a of %b · where the originals are": {
+  "ru": "%a из %b · где лежат оригиналы",
+  "de": "%a von %b · wo die Originale liegen",
+  "files": [
+   "vorsorge.js"
+  ]
+ }
+}

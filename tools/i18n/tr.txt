@@ -1,0 +1,889 @@
+0	Resmi daireden mektup
+1	Şuradan gelen bir mektup gibi görünüyor: %o
+2	%k / %d
+3	%e – yaklaşık %f tarihine kadar: mektup tarihi + 4 gün teslim + 1 ay. Lütfen mektubu kontrol edin.
+4	Mektuptaki son tarih: %f
+5	Son tarihi takvime ekle
+6	Son tarih takvimde ✓
+7	“%o” kurumuna
+8	“%o” ile bağlantılı
+9	Bir hafta sonra son tarih: %e – %o
+10	Mektuplar ve kararlar
+11	Mektup
+12	Şablon
+13	Karar / mektup tarihi
+14	Dosya numarası
+15	Mektup metni
+16	Nasıl gönderilsin
+17	Posta
+18	Faks
+19	Şahsen
+20	PDF / yazdır
+21	Kopya
+22	Gönderildi
+23	Takip numarası
+24	Kayda ve “Mektuplar”a kaydedildi
+25	Adresinizi “Bilgilerim” bölümüne ekleyin – sonra mektuba girer.
+26	Bu kurum için e-posta yok – kartına ekleyin
+27	Başvurularım
+28	＋ başvuru
+29	Ne için başvuruldu
+30	Gönderildi
+31	Nasıl
+32	çevrim içi
+33	posta ile
+34	şahsen
+35	İşlemde
+36	Karar geldi
+37	Sonraki adım
+38	Durumu sor
+39	%d tarihine kadar bir şey gelmezse sor
+40	Durumu sor: %t – %o
+41	Aramalar ve kanıtlar
+42	Ara
+43	Teslim alındı
+44	Kim
+45	Ne konuşuldu / ne bu
+46	Makbuz veya mektup fotoğrafı
+47	Takip et
+48	Numara kopyalandı – Deutsche Post sayfasına yapıştırın
+49	“%o” kurumunu aradınız. Kiminle konuştunuz? Ne konuşuldu?
+50	Tüm kayıtlar: %n
+51	daha fazla
+52	Başvuru
+53	Mektupta bulundu
+54	Kurum
+55	Ne saklansın
+56	Bir şey bulunamadı – lütfen yazın
+57	Mektuptaki son tarih – karar sizin
+58	Görünüşe göre: %e, %f tarihine kadar
+59	Ekle
+60	Başka tarih
+61	Gerekli değil
+62	Kartı oluştur
+63	“%n” içine kaydet
+64	Adres değişti: önce “%a” idi
+65	Tamam – kart “%n”
+66	Adres değişti – güncelle
+67	%o kurumuna yaz
+68	Boş mektup
+69	Adres ve dosya numarası zaten içinde
+70	Gönderilen mektuplar
+71	Tarih
+72	Kaydet
+73	Sil
+74	Şimdilik boş
+75	fotoğraf
+76	Yaklaşan randevular
+77	Randevularım
+78	Randevu ekle
+79	Randevu
+80	Saat
+81	Ne için
+82	ör. oturma izninin uzatılması
+83	Yanınıza alın
+84	＋ öğe
+85	Başka ne götürülecek
+86	Uygulamadaki belgeler
+87	Belgeleri seç
+88	Henüz belge yok
+89	Lütfen bir tarih girin
+90	Randevu takvimde, bir gün önce hatırlatma
+91	Yarın: %n – evrakları hazırlayın
+92	Tamam
+93	Geri al
+94	Hazır: %a / %b
+95	%n gün içinde
+96	bugün
+97	yarın
+98	geçti
+99	%d – süresi doluyor %w
+100	Yenileyen: %o. Erken randevu alın – bekleme haftalar sürebilir.
+101	Randevu al
+102	Aç
+103	“%o” ekle
+104	Bende var
+105	Gizle
+106	Her yıl
+107	＋ yıllık görev
+108	Yıllık görev
+109	Kendi
+110	Ne yapılacak
+111	Sonraki tarih
+112	Tekrarla
+113	her yıl
+114	2 yılda bir
+115	Tamam – sonraki tarih %d
+116	Tarihler genel kurallara dayanır – lütfen kendiniz için kontrol edin.
+117	Gerçekten silinsin mi? Tekrar dokunun
+118	Kurumlar
+119	Kurumlar ve hizmetler
+120	Kime bildirilmeli: emeklilik kurumu, sağlık sigortası, vergi dairesi …
+121	%t kasada – “%n” açın ve “Göster”e dokunun.
+122	%n: telefon %v
+123	Sonraki randevu: %n, %d
+124	Randevu yok
+125	Randevular, numaralar, bağlantılar
+126	Sıra
+127	Ne eklensin?
+128	Kendiniz oluşturun
+129	Herhangi bir kurum, doktor veya dernek – kendi bağlantı ve düğmelerinizle
+130	Sabitlenmiş
+131	Tümü
+132	Kurumlarınız ve hizmetleriniz burada. Yalnızca kullandıklarınızı ekleyin.
+133	Acil durum
+134	Polis
+135	İtfaiye · ambulans
+136	Nöbetçi doktor
+137	Acil durum bilgilerim
+138	Telefonda ne söylenmeli
+139	Nerede? – adres, kat · Ne oldu? · Kaç yaralı var? · Kim arıyor? · Soruları bekleyin – telefonu kapatmayın.
+140	Adresim
+141	Kan grubu
+142	Alerjiler
+143	İlaçlar
+144	Acil durumda aranacak kişi
+145	Kişinin telefonu
+146	Bunu şimdi doldurun – acil durumda zaman olmaz.
+147	115 – kamu hizmet numarası: hangi kurumun yetkili olduğunu söyler
+148	%t saatine kadar açık
+149	Kapalı
+150	%d %t açılıyor
+151	Pzt Sal Çar Per Cum Cmt Paz
+152	Yol tarifi
+153	Numaralarım
+154	Kopyalandı
+155	Göster
+156	gizli – kasada
+157	Numara gizlenmiş. Kasa koduyla şifrelenir.
+158	Adres
+159	Çalışma saatleri
+160	Not
+161	Önceden dolduruldu – lütfen kontrol edin: adresler ve saatler değişir.
+162	Kontrol edildi
+163	Düzenle
+164	Silindi
+165	Ad
+166	ör. Yabancılar Dairesi
+167	Simge
+168	Grup
+169	Yeni grup
+170	Kimin için
+171	Telefon
+172	Randevu bağlantısı
+173	Randevu her zaman kurumun sitesinde alınır – bu yalnızca bağlantıdır.
+174	Yapıştır
+175	Yapıştırılamadı – alana basılı tutun ve “Yapıştır”ı seçin
+176	Düğmeler ve bağlantılar
+177	＋ kendi düğmem
+178	Etiket
+179	Bağlantı, telefon veya e-posta
+180	＋ numara
+181	Bu nedir
+182	Numara
+183	gizli
+184	En üste sabitle
+185	Ana ekranda
+186	İptal
+187	Kaydedildi
+188	Lütfen bir ad girin
+189	Bu bağlantı geçerli değil
+190	Eklendi – lütfen bilgileri kontrol edin
+191	eklendi
+192	Sağlık
+193	Aile ve okul
+194	Dernekler ve diğerleri
+195	Ben
+196	Eşim
+197	Çocuk
+198	Kur
+199	Bir dakikada kurun
+200	Nerede yaşıyorsunuz?
+201	Posta kodu veya şehir – adresleri önceden doldurmak için (şimdilik 63741 Aschaffenburg için tam).
+202	Kimin için?
+203	Her kişinin kendi kurumları vardır – kimin olduğunu sonra işaretleyebilirsiniz.
+204	Neye ihtiyacınız var?
+205	İhtiyacınız olanı seçin. Gerisini sonra ekleyin.
+206	İleri
+207	Geri
+208	Atla
+209	Tamam: %n eklendi
+210	Burada
+211	Ara: ad, numara, dosya numarası …
+212	Mektuptan
+213	Tarayın → kurum, adres, dosya numarası – antetten
+214	Bağlantı yapıştır
+215	Randevu bağlantısını kopyaladınız – yapıştırın, bitti
+216	Elle
+217	Bir ad ve bir iletişim bilgisi – 10 saniye
+218	Hangi mektup?
+219	Mektup tara
+220	Taradıktan sonra buraya dönün ve mektubu seçin.
+221	Henüz tarama yok
+222	Telefon, e-posta veya bağlantı
+223	＋ başka iletişim
+224	✓ telefon
+225	✓ e-posta
+226	✓ bağlantı → “Randevu” düğmesi
+227	✓ bağlantı
+228	? tanınmadı – lütfen kontrol edin
+229	Daha fazla (isteğe bağlı)
+230	adres · saatler · numaralar · simge · grup · düğmeler · ana ekran
+231	Bağlantı
+232	Grup yok
+233	Yaz
+234	Zaten var mı?
+235	“%n” gibi görünüyor – %w. Mektuplar ve son tarihler tek yerde kalsın diye bilgileri oraya ekleyelim mi?
+236	aynı ad
+237	aynı e-posta
+238	aynı telefon
+239	aynı web sitesi
+240	benzer ad
+241	“%n” içine ekle
+242	Başka bir kurum – yeni oluştur
+243	“%n” içine eklendi ✓
+244	İşim
+245	Eğitim
+246	💼 Kendi işim var
+247	Faturalar, makbuzlar, şirket evrakları, son tarihler – «İşim»
+248	Şirket bilgileri henüz girilmedi
+249	Doldurmak için dokunun
+250	Normal KDV
+251	DURUM
+252	Açık faturalar
+253	%d gündür gecikmiş
+254	1 gündür gecikmiş
+255	Tüm faturalar ödendi
+256	Vergi beyannamesi %y
+257	Fatura
+258	Makbuz
+259	Müşteri
+260	Evraklar
+261	%y · gelir ve giderler
+262	Gelir
+263	Giderler
+264	Kâr
+265	Basitleştirilmiş: gelir, ödendiği gün sayılır. Lütfen kontrol edin.
+266	📎 Mali müşavir için: liste + makbuzlar (PDF/CSV)
+267	Faturalar %y
+268	Giderler %y
+269	Henüz fatura yok
+270	Henüz makbuz yok
+271	ödendi
+272	açık
+273	gecikmiş
+274	iptal edildi
+275	2028'den itibaren şirketlere (B2B) kesilen faturalar e-fatura biçiminde olmalı – küçük işletmeler muaf, özel müşteriler etkilenmez. Lütfen kontrol edin.
+276	İşletme adı
+277	Sahibi (tam adı)
+278	Hukuki şekil
+279	KDV kimlik numarası (varsa)
+280	Küçük işletmeyim (§ 19 UStG, KDV yok)
+281	yok
+282	aylık
+283	üç aylık
+284	Mali müşavirim var
+285	Banka
+286	Fatura numarası ön eki
+287	«İşim» bölümünü gizle
+288	Veriler kalır; burada tekrar açabilirsiniz.
+289	Diğer
+290	Müşteriler
+291	＋ Yeni müşteri
+292	Ad / şirket
+293	Henüz müşteri yok
+294	%n fatura
+295	Müşterinin faturaları var – silinemez
+296	Yeni fatura
+297	— seçin —
+298	No. (otomatik)
+299	Fatura tarihi
+300	Hizmet tarihi
+301	Ödeme süresi
+302	%n gün
+303	Kalemler
+304	Açıklama
+305	Miktar
+306	Birim
+307	Fiyat €
+308	KDV
+309	＋ Kalem
+310	Net
+311	Toplam
+312	Metin kendiliğinden eklenir: «Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.» Zorunlu bilgiler (ad, adres, vergi no., tarih, no.) «İşim» bölümünden gelir.
+313	Net fiyatları girin; KDV hesaplanır. Zorunlu bilgiler «İşim» bölümünden gelir.
+314	Faturadaki not (isteğe bağlı)
+315	Ödeme tarihi
+316	Boş = henüz açık. Ödeme tarihi o yılın gelirine sayılır.
+317	PDF oluştur
+318	✉ E-postayla gönder (kendi postanız)
+319	Faturayı iptal et
+320	Kesilmiş bir fatura silinmez, iptal edilir – listede kalır.
+321	İptali geri al
+322	Fatura kaydedildi
+323	PDF «Belgeler»e kaydedildi
+324	Lütfen bir müşteri seçin
+325	Açıklaması ve fiyatı olan en az bir kalem
+326	Lütfen önce şirket adını, sahibini, adresi ve vergi numarasını girin
+327	Bu numara zaten var
+328	Fatura %n
+329	Merhaba,\n\n%s tutarındaki %n numaralı fatura ektedir.\n\nSaygılarımla\n%f
+330	PDF indirildi – lütfen e-postaya ekleyin.
+331	Ödemeyi kontrol et: %n · %c
+332	Vergi beyannamesi %y (EÜR) son tarih %d
+333	Makbuz / gider
+334	Tutar € (brüt)
+335	Kategori
+336	Makbuzun fotoğrafı veya dosyası
+337	📷 Tara
+338	📄 Dosya
+339	✓ %n dosya seçildi
+340	✓ «Belgeler»e kaydedildi
+341	Lütfen tutarı girin
+342	Makbuz kaydedildi
+343	resim yok
+344	Malzeme / mal
+345	Yazılım / hizmetler
+346	Yolculuk / araba
+347	Telefon / internet
+348	Sigorta
+349	Kira
+350	Reklam
+351	Evraklar ve son tarihler
+352	%a / %b
+353	Son tarihler
+354	Müşteri sözleşmeleri
+355	Kira / ofis
+356	esnaf dairesinden
+357	anket + yazı
+358	→ sözleşme ayrıca Finans › Masraflar içinde
+359	sözleşmeler, teklifler
+360	varsa
+361	%n belge
+362	%s ekle
+363	Belge «Belgeler»e bir kez kaydedilir ve burada yalnızca bağlanır.
+364	Tara / fotoğraf
+365	Dosya (PDF, fotoğraf)
+366	Zaten «Belgeler»de
+367	Ara …
+368	Başka belge yok
+369	Bağlandı
+370	buradan kaldır (belge kalır)
+371	＋ Daha fazla
+372	%n numaralı faturanın vadesi
+373	Vergi beyannamesi %y (EÜR)
+374	mali müşavir olmadan
+375	mali müşavirle
+376	%y makbuz ve faturalarını sakla
+377	8 yıl (2025'ten beri) – lütfen kontrol edin
+378	%d tarihine kadar
+379	Açık son tarih yok
+380	Genel kurallar, vergi danışmanlığı değildir. Lütfen vergi dairesi veya bir danışmanla kontrol edin.
+381	Mali müşavir için
+382	Yıl
+383	%a fatura · %b makbuz
+384	Liste (CSV, Excel için)
+385	Hepsi tek PDF'de (özet, faturalar, makbuzlar)
+386	Kendiniz gönderirsiniz – kendi postanızla veya «Paylaş» ile. Yalnızca PDF dosyası olan makbuzlar ortak PDF'e girmez – «Belgeler»dedir.
+387	Vergi ön ödemeleri
+388	Üç aylık tutar, €
+389	Gidilen km (gidiş ve dönüş)
+390	Nereden → nereye
+391	İş yolculuğu için kendi araba: km başına 0,30 €. Tutar kendiliğinden yazılır. Lütfen kontrol edin.
+392	Kendi işiniz – varsa
+393	Serbest çalışan veya yan işte bir şey satan herkes için.
+394	Tüm zorunlu bilgileriyle PDF faturalar
+395	Yıllık makbuzlar, gelir, giderler ve kâr
+396	Şirket evrakları ve son tarihler
+397	Mali müşavir için liste (PDF/CSV)
+398	«İşim» bölümünü aç
+399	İşiniz yok mu? Kapalı bırakın – hiçbir şey değişmez.
+400	hemen
+401	Hazırlanıyor …
+402	Özet %y
+403	Finans
+404	Vergi dosyası, masraflar
+405	Vergi dosyası %y
+406	%n makbuz · %a
+407	Vergi beyannamesi %y son tarih %z (danışmansız – lütfen kontrol edin)
+408	Bunun işçilik kısmı, €
+409	Banka havalesiyle ödendi
+410	Nakit ödendi – genellikle kabul edilmez. Malzeme sayılmaz.
+411	İşçilik: %a → en fazla %b daha az vergi (%20, sınırlar var – lütfen kontrol edin)
+412	Makbuzun fotoğrafını çek
+413	Fotoğrafsız ekle
+414	ELSTER / danışman için PDF
+415	Bu yıl için henüz makbuz yok
+416	İyi bilmek gerekir:
+417	Şimdilik boş – ilk makbuzun fotoğrafını çekin.
+418	Tutar, €
+419	Bu nedir
+420	ör. gözlük, gözlükçü
+421	Yeni makbuz
+422	Lütfen bir tutar girin
+423	Tüm kategoriler
+424	Bankalar artık “Kurumlar ve hizmetler” içinde
+425	İş (iş giderleri)
+426	Yol, iş araçları, kurslar
+427	Ustalar ve ev hizmetleri
+428	Yalnızca işçilik sayılır
+429	Katkı payları, gözlük, diş hekimi
+430	Çocuk bakımı
+431	Bağışlar
+432	Sigortalar ve emeklilik
+433	Vergi dairesi her yıl 1.230 €'yu kendiliğinden sayar (çalışan indirimi). Masraflarınız daha yüksekse makbuzlar yardımcı olur.
+434	Ustalar: işçilik masrafının %20'si, vergiden en fazla 1.200 € indirim. Malzeme sayılmaz. Nakit değil, havaleyle ödeyin.
+435	Sağlık masrafları yalnızca gelire bağlı “makul yük” sınırının üstünde sayılır. Makbuzları yine de saklayın.
+436	2025'ten itibaren: masrafların %80'i, 14 yaşına kadar çocuk başına en fazla 4.800 €.
+437	300 €'ya kadar çoğu zaman banka dökümü bağış makbuzunun yerini tutar.
+438	Çoğu zaten maaşınızla bildirilir. Özel sigortalar ayrıca girilir.
+439	Genel kurallar, vergi danışmanlığı değildir – lütfen kontrol edin.
+440	Kart
+441	Kartı bloke et
+442	Vergi dosyası
+443	Sözleşmeler ve masraflar
+444	Sözleşmeler için ödüyorum
+445	%a / ay
+446	Yılda %a · %n sözleşme
+447	%n – %d tarihine kadar feshedilebilir (%k gün içinde)
+448	%k: %n benzer sözleşme – mükerrer mi? Lütfen kontrol edin.
+449	Tutarsız: %n – toplam doğru olsun diye ekleyin
+450	%y'den beri · fiyatı kontrol et
+451	%d tarihine kadar fesih
+452	Henüz sözleşme yok. “＋ Sözleşme”ye dokunun – sigorta, elektrik, telefon, internet, spor salonu …
+453	＋ Sözleşme
+454	Fiyat artışından sonra genellikle erken fesih mümkündür – sağlayıcının mektubunda yazar.
+455	Genel kurallar, danışmanlık değildir – lütfen kontrol edin.
+456	İş ve kendi işim
+457	İş, kendi işim, eğitim
+458	İşverenlerinizi ekleyin – sözleşmeler, referanslar ve projeler yıllarca elinizin altında kalır.
+459	＋ İşveren
+460	Özgeçmiş listesi (PDF)
+461	Şirket
+462	Görev
+463	Başlangıç (ay)
+464	Bitiş (boş = şu an)
+465	şu an
+466	Belgeler
+467	＋ Uygulamadan belge
+468	Hangi belgeler?
+469	Muhtemelen uygun
+470	Tüm belgeler
+471	Projeler ve başarılar
+472	＋ Proje
+473	Başlık
+474	Ne yaptım
+475	Sonuç (rakamlar, süre, övgü)
+476	“%n” zaten listede
+477	Aç
+478	Orada tekrar çalıştım
+479	Lütfen şirketi girin
+480	Lütfen bir başlık girin
+481	Kariyer
+482	Sonuç
+483	Sözleşmeler ve sigortalar
+484	«Finans» içinde – tutarlar ve son tarihlerle
+485	İşverenler
+486	Eğitim ve diplomalar
+487	Diğer evraklar
+488	İş sözleşmesi
+489	Fesih
+490	Maaş bordroları
+491	imzalı sözleşme
+492	ara veya son
+493	ay ay
+494	vergi beyannamesi için
+495	«Belgeler»e bir kez kaydedilir ve buraya bağlanır – kopya yok.
+496	Tara / fotoğraf çek
+497	birden fazla sayfa olabilir
+498	Dosya seç
+499	Dosyalar'dan PDF veya resim
+500	dokun = bağla
+501	uygun
+502	Bağlandı ✓
+503	«Belgeler»e kaydedildi ve bağlandı ✓
+504	Bağlantıyı kaldır
+505	Belge «Belgeler»de kalır.
+506	＋ Başka belge
+507	＋ Yeterlilik ekle
+508	Okul, meslek eğitimi, diploma, kurslar, sertifikalar – başvurular için hepsi tek yerde.
+509	Okul diploması
+510	Üniversite diploması
+511	Kurs
+512	Sertifika / ehliyet
+513	Tür
+514	Okul / kurum
+515	Ülke
+516	Almanya'da denklik
+517	— (Alman diploması)
+518	Denklik var ✓
+519	Başvuruldu
+520	Henüz başvurulmadı
+521	Cevap / son tarih
+522	Denklik: %t
+523	Yabancı diplomalar: anerkennung-in-deutschland.de
+524	Sayfalar ve evraklar
+525	Kaydettikten sonra evrak ekleyebilirsiniz.
+526	Tarih AA.YYYY biçiminde, ör. 02.2026
+527	PDF'e ne girsin? Asıllar değişmez.
+528	Özgeçmiş (kariyer)
+529	%n s.
+530	PDF dosyası – eklenemez
+531	sayfa yok
+532	PDF oluştur · %n sayfa
+533	Lütfen en az birini işaretleyin
+534	PDF hazırlanıyor …
+535	Sonra: kendi e-postanızla gönderin veya Dosyalar'da saklayın
+536	Bonservis ifadeleri ne anlama gelir
+537	Alman bonservisi notu kibar ifadelerin içine gizler. Genel kurallar – hukuki danışmanlık değildir, lütfen kontrol edin.
+538	Bonservisinizde bulunanlar:
+539	Bonservis metni tanınmadı. Metin tanıma ile tarayın – ifadeler kendiliğinden bulunur.
+540	Metinde tipik ifade bulunamadı.
+541	Yaygın ifadeler
+542	Kapanış
+543	Teşekkür ve iyi dilekler var – iyi bir işaret.
+544	Sonunda teşekkür veya dilek yok – çoğu zaman zayıf değerlendirme işareti.
+545	1 – çok iyi
+546	2 – iyi
+547	3 – orta
+548	4 – yeterli
+549	5 – zayıf
+550	6 – yetersiz
+551	Sözleşme süreleri
+552	＋ Süreler: deneme, fesih, belirli süre
+553	Deneme süresi bitişi
+554	Belirli süre bitişi
+555	Fesih süresi
+556	Kendi ifadem
+557	– belirtilmedi
+558	2 hafta (deneme süresinde)
+559	Ayın 15'ine veya ay sonuna 4 hafta (yasal)
+560	Ay sonuna 1 ay
+561	Çeyrek sonuna 3 ay
+562	diğer
+563	deneme süresi bitti ✓
+564	İş arayan olarak kaydolun (İş Ajansı) – %d tarihine kadar
+565	İş arayan olarak kaydolun – şimdi (3 gün içinde)
+566	Genel kural: bitişten 3 ay önce; daha geç öğrenildiyse – 3 gün içinde. Lütfen kontrol edin.
+567	Sözleşme %m bitiyor mu? Kesin tarihi girin – zamanında hatırlatırım.
+568	Deneme süresi %d tarihinde bitiyor – %c
+569	İş arayan olarak kaydolun – %c sözleşmesi %d tarihinde bitiyor
+570	Ana sayfa
+571	Kutucukların sırası ↑↓ · göz = göster/gizle
+572	gizli
+573	Ana sayfadaki bloklar
+574	Hava durumu
+575	Bugün
+576	Kurumlar (randevular, son tarihler)
+577	Hızlı işlemler
+578	Düzeni sıfırla
+579	Düzen geri yüklendi ✓
+580	Kasa
+581	Tarayıcı
+582	Burada da gösterilsin mi? (kopya yok)
+583	«Belgeler»e bir kez kaydedildi
+584	«%n» işverenini ekle
+585	İşveren ekle
+586	Şirket adı
+587	Yalnızca Belgeler'de kalsın
+588	«%k» için artık sorma
+589	%n yerinde de gösteriliyor
+590	Geri al
+591	Ayrıca şurada görünür
+592	＋ Başka yer
+593	× oradan kaldırır – belge kalır.
+594	Şimdilik yalnızca «Belgeler»de
+595	→ ayrıca vergi dosyası %y içinde
+596	Başka nerede?
+597	İşveren
+598	Hangi yer?
+599	Uygun yer yok. «İş ve kendi işim» içinde bir işveren ekleyin.
+600	Vasiyet ve vekâletler
+601	%n belge %c ile eşleşiyor
+602	Zaten «Belgeler»de – bağlansın mı?
+603	%n bağla
+604	Sonra
+605	Bağlandı: %n
+606	veya
+607	Eski telefondan taşı
+608	Yedek dosyasını seçin – tüm veriler gelir
+609	✓ Tekrar hoş geldiniz
+610	Eski telefondaki verileriniz burada:
+611	Sözleşmeler
+612	Fotoğraflar / sayfalar
+613	Kurumlar ve hizmetler
+614	Randevular ve son tarihler
+615	şifreli ✓
+616	Bu telefonda giriş
+617	Eski telefonun Face ID'si burada çalışmaz. Lütfen yeniden kurun:
+618	Uygulamayı bu telefonda bir şifreyle koruyun:
+619	Face ID'yi kur
+620	Şifre belirle
+621	Kasa önceki kasa şifrenizle açılır.
+622	Yeni telefona taşı
+623	Burada «Yedek kaydet» (şifreyle) – dosyayı iCloud Drive'a koyun veya AirDrop ile gönderin.
+624	Yeni telefonda bağlantıyı Safari'de açın → Paylaş → «Ana Ekrana Ekle».
+625	Uygulamayı açın → «Eski telefondan taşı» → dosyayı seçin → şifre.
+626	Şimdi yedek kaydet
+627	Uygulama bağlantısını paylaş
+628	Bağlantı kopyalandı ✓
+629	Eski telefon, siz orada silene kadar verilerini korur.
+630	Bu belge zaten var: “%t”
+631	Görüntüle
+632	İkisini de tut
+633	Notlar
+634	Hızlı olan her şey tek yerde
+635	Yeni not
+636	Dikte et
+637	Tara
+638	Fotoğraf notu
+639	Tüm notlar
+640	Açık maddeler
+641	Tarihli → takvim
+642	Arşiv
+643	Çöp kutusu
+644	Klasörler
+645	tümü
+646	Klasör yok
+647	%n not
+648	%n not
+649	İş
+650	Öğrenme
+651	Spor
+652	Seyahat
+653	Aile
+654	Fikirler
+655	Projeler
+656	＋ Klasör
+657	Klasör
+658	Renk
+659	Klasörü gizle
+660	Gizlenenleri göster
+661	Klasörü sil
+662	Emin misiniz? Notlar “klasörsüz” kalır.
+663	Klasörler sizin: yeniden adlandırın, simge, renk, gizleyin. Bir not tek bir klasörde durur – kopya yok.
+664	Burada henüz bir şey yok.
+665	“Yeni not”a dokunun – veya dikte edin, tarayın, fotoğraf çekin.
+666	Notlarda ara …
+667	Metin …
+668	＋ Madde
+669	Yeni madde
+670	tarih yok
+671	Madde için tarih
+672	Tarihi kaldır
+673	bir nottan
+674	görev
+675	Takvimi aç
+676	Tarihli bir madde kendiliğinden takvime gider. Profildeki «iPhone takvimine» – sesli.
+677	Etiketler
+678	ör. İş, doktor
+679	İşlemler
+680	Arşivden çıkar
+681	Çöp kutusuna taşı
+682	Kalıcı olarak silinsin mi?
+683	Kalıcı olarak sil
+684	Çöp kutusunu boşalt
+685	Çöp kutusundaki notlar 30 gün sonra silinir.
+686	Çöp kutusunda ✓
+687	Paylaş
+688	Büyük yazı
+689	Bağlı olduğu
+690	Şununla bağla …
+691	Henüz bağlanacak bir şey yok.
+692	işveren
+693	kurum
+694	belge
+695	«Belgeler»den
+696	«Belgeler»den · bağlı
+697	Ekle
+698	Fotoğraf / tarama
+699	Dosya (PDF veya resim)
+700	Dikte burada kullanılamıyor. iPhone klavyesindeki 🎙'ye dokunun – her alanda çalışır.
+701	Konuşun … (🎙 tekrar = dur)
+702	Konuşma tanımayı iPhone (Apple) yapar, internet gerekebilir.
+703	Tarama %d
+704	Fotoğraf %d
+705	＋ Not
+706	oluşturuldu %d
+707	değiştirildi %d
+708	Yedeği kontrol et
+709	Hangi yedek kontrol edilsin?
+710	Bu telefondaki son yedek
+711	Dosyalar'dan bir dosya seç …
+712	Yedek şifresi
+713	Yanlış şifre
+714	Yedek kontrol ediliyor …
+715	✓ Yedek sağlam
+716	⚠ Yedek eksik
+717	✕ Butler Docs yedeği değil veya dosya bozuk
+718	%d tarihinde oluşturuldu
+719	boş
+720	telefonda: %n
+721	Yedekte %n fotoğraf eksik. Lütfen yeni bir yedek kaydedin.
+722	%n fotoğraf bozuk.
+723	Yedekte telefondakinden daha az belge var – daha eski. Lütfen yeni bir yedek kaydedin.
+724	Yalnızca kontrol edildi – verileriniz değişmedi.
+725	Yeni yedek kaydet
+726	Hata raporu
+727	Yalnızca teknik bilgiler gönderilir – belge yok, isim yok. Kendiniz, kendi postanızdan gönderirsiniz.
+728	Ne oldu? (isteğe bağlı)
+729	Ekran görüntüsü: yan tuş + ses açma tuşuna basın, sonra e-postaya ekleyin.
+730	E-postayla gönder (kendi postanız)
+731	Paylaş …
+732	Kopyalandı ✓
+733	Butler Docs – hata raporu
+734	Hatalar (son 7 gün)
+735	Sürüm
+736	Ekran
+737	Cihaz
+738	Yedek
+739	Mod
+740	Ana ekrandan
+741	tarayıcıda
+742	%y vergi beyannamesi için
+743	İş giderleri
+744	%a / 1.230 €
+745	1.230 €'nun üstünde – makbuzlar işe yarar ✓
+746	1.230 €'ya %a kaldı – o zamana kadar vergi dairesi kendisi sayar
+747	İşe yol
+748	Girilmedi – km, günler, evden çalışma
+749	%k km · %d gün · %h gün evden çalışma
+750	İşe km (tek yön)
+751	İşe gittiğiniz günler
+752	Evden çalışma günleri
+753	Toplam
+754	2026'dan itibaren: 1. km'den başlayarak km başına 0,38 €, yalnızca tek yön.
+755	2025'e kadar: 1–20. km için 0,30 €, 21. km'den itibaren 0,38 €.
+756	Evden çalışma: günde 6 €, yılda en fazla 1.260 €. Bir gün ya yol ya evden çalışma.
+757	Kendi arabanız yoksa yılda en fazla 4.500 €. Lütfen kontrol edin.
+758	var · %c
+759	İşveren bunu %z Şubat sonuna kadar gönderir
+760	Lütfen önce işvereni «İş ve kendi işim» içine ekleyin – onun yeri orası.
+761	«İş ve kendi işim»i aç
+762	Hangi işveren?
+763	Henüz gelmedi
+764	İtiraz son tarihi %d
+765	İtiraz süresi doldu (%d)
+766	Mektuptaki tarih
+767	Tebliğ sayılır: %a · itiraz son tarihi: %b
+768	Mektup, tarihinden 4 gün sonra tebliğ edilmiş sayılır (2025'ten beri), sonra itiraz için 1 ay. İtiraz ücretsizdir – ELSTER veya mektupla. Lütfen kontrol edin.
+769	Mektup (fotoğraf veya dosya)
+770	Vergi kararını %y kontrol et – itiraz son tarihi %d
+771	Ücret vergisi belgesini %y tara
+772	Girilmedi – tüm bankalar için en fazla 1.000 €
+773	Birlikte beyan (evli) – 2.000 €
+774	＋ Banka
+775	Sınırın %a üstünde – lütfen bir bankada azaltın
+776	Tasarruf indirimi: kişi başı yılda 1.000 €. Muafiyet talimatını çevrim içi bankacılıkta değiştirirsiniz.
+777	Vergi kimlik numarası ve ELSTER
+778	Numara kasada, erişim elster.de üzerinden
+779	ELSTER'i aç
+780	Kasadaki vergi kimlik numarası
+781	Vergi kimlik numarası ücret vergisi belgesinde ve her vergi kararında yazar. Burada ikinci bir kopya tutulmaz.
+782	%y için hâlâ eksik olanlar
+783	İşe yol / evden çalışma
+784	Bağış makbuzları
+785	bağış yaptıysanız
+786	Yan gider hesabı / ustalar
+787	işçilik payı, havaleyle
+788	Sağlık sigortası / sigorta belgeleri
+789	yıllık – boşlukları kontrol et
+790	Genel kurallar, vergi danışmanlığı değildir. Lütfen kontrol edin.
+791	✓ %n dosya
+792	✓ «Belgeler»de
+793	Lütfen rakamları kontrol edin
+794	Lütfen tarihi girin
+795	Kendi kendine kontrol: her şey yolunda ✓
+796	kontrol edildi %d
+797	Şimdi kontrol et
+798	Kendi kendine kontrol bir şey buldu
+799	Kontrol ediliyor …
+800	Uygulama artık kaydedemiyor. Lütfen telefonda yer açın ve uygulamayı yeniden açın.
+801	Telefon bu uygulamanın verilerini silebilir. Lütfen Safari'den değil, ana ekrandan açın – ve bir yedek kaydedin.
+802	Uygulama depolaması neredeyse dolu (%p %). Lütfen bir yedek kaydedin ve gereksiz fotoğrafları silin.
+803	Fotoğraf deposu açılamıyor. Lütfen telefonu yeniden başlatın; işe yaramazsa yedekten geri yükleyin.
+804	%n sayfanın fotoğrafı yok. Yedeğiniz varsa «Profil»de kontrol edin.
+805	Profili aç
+806	Anladım
+807	Vasiyet ve önlemler
+808	Vasiyet
+809	Önleyici vekâletname
+810	Hasta iradesi beyanı
+811	Bakım vekili talimatı
+812	Cenaze istekleri
+813	el yazısıyla veya noterde
+814	sizin yerinize kim karar verir
+815	tedaviyle ilgili istekler
+816	bakıcınız kim olmalı
+817	cenaze için istekler
+818	Aslı nerede?
+819	Aslı: %o
+820	ör. dolaptaki klasör, oturma odası
+821	evde
+822	noterde
+823	banka kiralık kasası
+824	Belirtilen kişi / not
+825	ör. eşim; oğlumda bir kopya var
+826	＋ Belge
+827	Vasiyet yerel mahkemeye bırakılabilir; vekâletname Merkezi Sicile kaydedilebilir. Genel bilgiler – hukuki danışmanlık değildir, lütfen kontrol edin.
+828	“Finans ve hukuk” içindeki tüm belgeler ›
+829	Aile için özet (PDF)
+830	Vasiyet ve önlemler – özet
+831	eksik
+832	var
+833	%a / %b · asıllar nerede
+834	Son tarih: %e – %o
+835	Kaydedildi
+836	E-posta
+837	Vatandaşlığa geçiş
+838	Makbuzlar
+839	İlaç listesi
+840	Yazılar / evraklar
+841	Pzt–Cum 8–12, Per 14–18
+842	Vergi kimlik no., müşteri no., dosya no. …
+843	data-act="go" data-to="bsv"
+844	<div class="dhcard dhq">
+845	Küçük işletme § 19 UStG
+846	KDV ön beyannamesi
+847	Vergi numarası
+848	E-posta
+849	Şahıs şirketi
+850	Serbest meslek
+851	UG (sınırlı sorumlu)
+852	KDV %r %
+853	İşyeri kaydı
+854	Vergi numarası (vergi dairesi)
+855	İşletme sorumluluk sigortası
+856	Ticaret sicili / Ticaret Odası
+857	Ön ödeme
+858	Vergi dairesine ön ödeme %s
+859	data-act="go" data-to="archive"
+860	data-act="dccat" data-v="personal"
+861	data-act="go" data-to="mycal"
+862	data-act="go" data-to="tasks"
+863	data-act="dhbank"
+864	data-act="dhvault"
+865	data-act="go" data-to="life"
+866	data-act="go" data-to="dnach"
+867	data-act="go" data-to="people"
+868	%y vergi beyannamesi için makbuzlar
+869	Kreş, gündüz bakıcısı, okul sonrası bakım
+870	Sağlık, sorumluluk, emeklilik
+871	data-act="go" data-to="fzm"
+872	data-act="go" data-to="kar"
+873	Bonservis
+874	Ücret vergisi belgesi
+875	Meslek eğitimi
+876	Başvuru dosyası (PDF)
+877	Başvuru dosyası
+878	sRout
+879	data-act="go" data-to="sc9"
+880	data-act="go" data-to="dsrok"
+881	--h236vh
+882	İşe gidiş indirimi
+883	Evden çalışma indirimi
+884	Ücret vergisi belgesi %y
+885	Vergi kararı %y
+886	Faiz muafiyet talimatları
+887	Emeklilik bilgilendirmesi
+888	sulh mahkemesi

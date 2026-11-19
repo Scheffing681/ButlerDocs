@@ -1,0 +1,889 @@
+0	List z urzędu
+1	Wygląda na list od: %o
+2	%k z %d
+3	%e – mniej więcej do %f: data listu + 4 dni doręczenia + 1 miesiąc. Proszę sprawdzić list.
+4	Termin w liście: do %f
+5	Termin do kalendarza
+6	Termin w kalendarzu ✓
+7	Do „%o”
+8	Powiązane z „%o”
+9	Termin za tydzień: %e – %o
+10	Listy i decyzje
+11	List
+12	Wzór
+13	Decyzja / list z dnia
+14	Sygnatura
+15	Treść listu
+16	Jak wysłać
+17	Poczta
+18	Faks
+19	Osobiście
+20	PDF / druk
+21	Kopia
+22	Wysłano
+23	Numer przesyłki
+24	Zapisano w dzienniku i w „Listach”
+25	Dodaj swój adres w „Moich danych” – wtedy trafi do listu.
+26	Brak e-maila tego urzędu – dodaj go na karcie
+27	Moje wnioski
+28	＋ wniosek
+29	O co wnioskowano
+30	Złożono
+31	Jak
+32	online
+33	pocztą
+34	osobiście
+35	W toku
+36	Decyzja otrzymana
+37	Następny krok
+38	Zapytaj o status
+39	zapytaj, jeśli do %d nic nie przyjdzie
+40	Zapytaj o status: %t – %o
+41	Rozmowy i dowody
+42	Rozmowa
+43	Otrzymano
+44	Kto
+45	Co powiedziano / co to jest
+46	Zdjęcie potwierdzenia lub listu
+47	Śledź
+48	Numer skopiowany – wklej go na stronie Deutsche Post
+49	Dzwoniłeś do „%o”. Z kim rozmawiałeś? Co powiedziano?
+50	Wszystkie wpisy: %n
+51	więcej
+52	Wniosek
+53	Znalezione w liście
+54	Urząd
+55	Co zachować
+56	Nic nie znaleziono – proszę wpisać
+57	Termin z listu – decydujesz ty
+58	Wygląda na: %e do %f
+59	Dodaj
+60	Inna data
+61	Niepotrzebne
+62	Utwórz kartę
+63	Zapisz w „%n”
+64	Adres zmieniony: był „%a”
+65	Gotowe – karta „%n”
+66	Adres zmieniony – zaktualizuj
+67	Napisz do %o
+68	Pusty list
+69	Adres i sygnatura są już w środku
+70	Wysłane listy
+71	Data
+72	Zapisz
+73	Usuń
+74	Na razie pusto
+75	zdjęcie
+76	Najbliższe wizyty
+77	Moje wizyty
+78	Dodaj wizytę
+79	Wizyta
+80	Godzina
+81	W jakiej sprawie
+82	np. przedłużenie karty pobytu
+83	Zabrać ze sobą
+84	＋ pozycja
+85	Co jeszcze zabrać
+86	Dokumenty z aplikacji
+87	Wybierz dokumenty
+88	Brak dokumentów
+89	Proszę podać datę
+90	Wizyta w kalendarzu, przypomnienie dzień wcześniej
+91	Jutro: %n – przygotuj dokumenty
+92	Gotowe
+93	Przywróć
+94	Gotowe: %a z %b
+95	za %n dni
+96	dziś
+97	jutro
+98	minęło
+99	%d – wygasa %w
+100	Odnawia: %o. Umów się wcześnie – czeka się nawet tygodnie.
+101	Umów
+102	Otwórz
+103	Dodaj „%o”
+104	Mam
+105	Ukryj
+106	Co roku
+107	＋ obowiązek roczny
+108	Obowiązek roczny
+109	Własny
+110	Co zrobić
+111	Następny termin
+112	Powtarzaj
+113	co roku
+114	co 2 lata
+115	Gotowe – następny termin %d
+116	Terminy według ogólnych zasad – sprawdź je dla siebie.
+117	Na pewno usunąć? Dotknij ponownie
+118	Urzędy
+119	Urzędy i usługi
+120	Kogo powiadomić: ZUS/emerytura, kasa chorych, urząd skarbowy …
+121	%t jest w sejfie – otwórz „%n” i dotknij „Pokaż”.
+122	%n: telefon %v
+123	Następna wizyta: %n, %d
+124	Brak wizyt
+125	Wizyty, numery, linki
+126	Kolejność
+127	Co dodać?
+128	Utwórz własne
+129	Dowolny urząd, lekarz lub klub – z własnymi linkami i przyciskami
+130	Przypięte
+131	Wszystko
+132	Tu są Twoje urzędy i usługi. Dodaj tylko to, z czego korzystasz.
+133	Nagły wypadek
+134	Policja
+135	Straż pożarna · pogotowie
+136	Dyżur lekarski
+137	Moje dane alarmowe
+138	Co powiedzieć przez telefon
+139	Gdzie? – adres, piętro · Co się stało? · Ilu rannych? · Kto dzwoni? · Czekaj na pytania – nie rozłączaj się.
+140	Mój adres
+141	Grupa krwi
+142	Alergie
+143	Leki
+144	Kontakt w nagłych wypadkach
+145	Telefon kontaktu
+146	Wypełnij to teraz – w nagłym wypadku nie ma czasu.
+147	115 – numer usług publicznych: mówi, który urząd jest właściwy
+148	Otwarte do %t
+149	Zamknięte
+150	otwiera %d %t
+151	Pon Wt Śr Czw Pt Sob Nd
+152	Trasa
+153	Moje numery
+154	Skopiowano
+155	Pokaż
+156	tajne – w sejfie
+157	Numer jest zamaskowany. Z kodem sejfu jest zaszyfrowany.
+158	Adres
+159	Godziny otwarcia
+160	Notatka
+161	Wypełnione wstępnie – sprawdź: adresy i godziny się zmieniają.
+162	Sprawdzono
+163	Edytuj
+164	Usunięto
+165	Nazwa
+166	np. urząd ds. cudzoziemców
+167	Symbol
+168	Grupa
+169	Nowa grupa
+170	Dla kogo
+171	Telefon
+172	Link do rezerwacji
+173	Rezerwacja zawsze odbywa się na stronie urzędu – to tylko link.
+174	Wklej
+175	Nie udało się wkleić – przytrzymaj pole i wybierz „Wklej”
+176	Przyciski i linki
+177	＋ własny przycisk
+178	Etykieta
+179	Link, telefon lub e-mail
+180	＋ numer
+181	Co to jest
+182	Numer
+183	tajne
+184	Przypnij na górze
+185	Na ekranie głównym
+186	Anuluj
+187	Zapisano
+188	Proszę podać nazwę
+189	Ten link jest nieprawidłowy
+190	Dodano – sprawdź dane
+191	dodano
+192	Zdrowie
+193	Rodzina i szkoła
+194	Kluby i inne
+195	Ja
+196	Żona
+197	Dziecko
+198	Skonfiguruj
+199	Konfiguracja w minutę
+200	Gdzie mieszkasz?
+201	Kod pocztowy lub miasto – do wstępnego wypełnienia adresów (na razie dokładnie dla 63741 Aschaffenburg).
+202	Dla kogo?
+203	Każda osoba ma swoje urzędy – czyje, zaznaczysz później.
+204	Czego potrzebujesz?
+205	Wybierz, czego potrzebujesz. Resztę dodasz później.
+206	Dalej
+207	Wstecz
+208	Pomiń
+209	Gotowe: dodano %n
+210	Tutaj
+211	Szukaj: nazwa, numer, sygnatura …
+212	Z listu
+213	Skanuj → urząd, adres, sygnatura – z nagłówka
+214	Wklej link
+215	Skopiowałeś link do rezerwacji – wklej, gotowe
+216	Ręcznie
+217	Nazwa i jeden kontakt – 10 sekund
+218	Który list?
+219	Skanuj list
+220	Po skanowaniu wróć tutaj i wybierz list.
+221	Brak skanów
+222	Telefon, e-mail lub link
+223	＋ kolejny kontakt
+224	✓ telefon
+225	✓ e-mail
+226	✓ link → przycisk „Termin”
+227	✓ link
+228	? nie rozpoznano – sprawdź
+229	Więcej (opcjonalnie)
+230	adres · godziny · numery · symbol · grupa · przyciski · ekran główny
+231	Link
+232	Bez grupy
+233	Napisz
+234	Już jest?
+235	Wygląda na „%n” – %w. Dodać dane tam, żeby listy i terminy były w jednym miejscu?
+236	ta sama nazwa
+237	ten sam e-mail
+238	ten sam telefon
+239	ta sama strona
+240	podobna nazwa
+241	Dodaj do „%n”
+242	Inny urząd – utwórz nowy
+243	Dodano do „%n” ✓
+244	Moja firma
+245	Wykształcenie
+246	💼 Mam własną firmę
+247	Faktury, paragony, dokumenty firmy, terminy – «Moja firma»
+248	Dane firmy jeszcze nie wpisane
+249	Dotknij, aby wpisać
+250	Zwykły VAT
+251	PULS
+252	Otwarte faktury
+253	Zaległe od %d dni
+254	Zaległe od 1 dnia
+255	Wszystkie faktury opłacone
+256	Zeznanie podatkowe %y
+257	Faktura
+258	Paragon
+259	Klient
+260	Dokumenty
+261	%y · przychody i wydatki
+262	Przychody
+263	Wydatki
+264	Zysk
+265	Uproszczone: przychód liczy się w dniu zapłaty. Proszę sprawdzić.
+266	📎 Dla doradcy podatkowego: lista + paragony (PDF/CSV)
+267	Faktury %y
+268	Wydatki %y
+269	Brak faktur
+270	Brak paragonów
+271	opłacona
+272	otwarta
+273	zaległa
+274	anulowana
+275	Od 2028 faktury dla firm (B2B) muszą mieć format e-faktury – małe firmy są zwolnione, klientów prywatnych to nie dotyczy. Proszę sprawdzić.
+276	Nazwa firmy
+277	Właściciel (pełne imię i nazwisko)
+278	Forma prawna
+279	Numer VAT UE (jeśli jest)
+280	Jestem małym przedsiębiorcą (§ 19 UStG, bez VAT)
+281	brak
+282	co miesiąc
+283	co kwartał
+284	Mam doradcę podatkowego
+285	Bank
+286	Prefiks numeru faktury
+287	Ukryj «Moja firma»
+288	Dane zostają; możesz to tu znów włączyć.
+289	Inne
+290	Klienci
+291	＋ Nowy klient
+292	Nazwa / firma
+293	Brak klientów
+294	%n faktur
+295	Klient ma faktury – nie można usunąć
+296	Nowa faktura
+297	— wybierz —
+298	Nr (automatycznie)
+299	Data faktury
+300	Data wykonania usługi
+301	Płatne w ciągu
+302	%n dni
+303	Pozycje
+304	Opis
+305	Ilość
+306	Jedn.
+307	Cena €
+308	VAT
+309	＋ Pozycja
+310	Netto
+311	Razem
+312	Tekst dodaje się sam: «Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.» Dane obowiązkowe (nazwa, adres, nr podatkowy, data, nr) pochodzą z «Moja firma».
+313	Wpisz ceny netto; VAT liczy się sam. Dane obowiązkowe pochodzą z «Moja firma».
+314	Uwaga na fakturze (opcjonalnie)
+315	Zapłacono dnia
+316	Puste = jeszcze otwarta. Data zapłaty liczy się do przychodów tego roku.
+317	Utwórz PDF
+318	✉ Wyślij e-mailem (Twoja poczta)
+319	Anuluj fakturę
+320	Wystawionej faktury się nie usuwa, tylko anuluje – zostaje na liście.
+321	Cofnij anulowanie
+322	Faktura zapisana
+323	PDF zapisany w «Dokumentach»
+324	Proszę wybrać klienta
+325	Co najmniej jedna pozycja z opisem i ceną
+326	Najpierw wpisz nazwę firmy, właściciela, adres i numer podatkowy
+327	Ten numer już istnieje
+328	Faktura %n
+329	Dzień dobry,\n\nw załączniku przesyłam fakturę %n na kwotę %s.\n\nZ poważaniem\n%f
+330	PDF pobrany – dołącz go do e-maila.
+331	Sprawdź płatność: %n · %c
+332	Zeznanie podatkowe %y (EÜR) do %d
+333	Paragon / wydatek
+334	Kwota € (brutto)
+335	Kategoria
+336	Zdjęcie lub plik paragonu
+337	📷 Skanuj
+338	📄 Plik
+339	✓ wybrano plików: %n
+340	✓ zapisano w «Dokumentach»
+341	Proszę podać kwotę
+342	Paragon zapisany
+343	bez zdjęcia
+344	Materiały / towar
+345	Oprogramowanie / usługi
+346	Podróże / auto
+347	Telefon / internet
+348	Ubezpieczenia
+349	Najem
+350	Reklama
+351	Dokumenty i terminy
+352	%a z %b
+353	Terminy
+354	Umowy z klientami
+355	Najem / biuro
+356	z urzędu ds. działalności
+357	ankieta + pismo
+358	→ umowa także w Finanse › Koszty
+359	umowy, oferty
+360	jeśli jest
+361	dokumentów: %n
+362	Dodaj: %s
+363	Dokument jest zapisany raz w «Dokumentach», a tutaj tylko połączony.
+364	Skan / zdjęcie
+365	Plik (PDF, zdjęcie)
+366	Już w «Dokumentach»
+367	Szukaj …
+368	Brak innych dokumentów
+369	Połączono
+370	usuń stąd (dokument zostaje)
+371	＋ Więcej
+372	Termin faktury %n
+373	Zeznanie podatkowe %y (EÜR)
+374	bez doradcy podatkowego
+375	z doradcą podatkowym
+376	Przechowuj paragony i faktury %y
+377	8 lat (od 2025) – proszę sprawdzić
+378	do %d
+379	Brak otwartych terminów
+380	Ogólne zasady, nie porada podatkowa. Sprawdź w urzędzie skarbowym lub u doradcy.
+381	Dla doradcy podatkowego
+382	Rok
+383	%a faktur · %b paragonów
+384	Lista (CSV, do Excela)
+385	Wszystko w jednym PDF (przegląd, faktury, paragony)
+386	Wysyłasz sam – swoją pocztą lub przez «Udostępnij». Paragony, które są tylko plikiem PDF, nie trafiają do wspólnego PDF – są w «Dokumentach».
+387	Zaliczki na podatek
+388	Kwota na kwartał, €
+389	Przejechane km (tam i z powrotem)
+390	Skąd → dokąd
+391	Własne auto w podróży służbowej: 0,30 € za km. Kwota wpisuje się sama. Proszę sprawdzić.
+392	Własna firma – jeśli masz
+393	Dla każdego, kto jest samozatrudniony lub coś sprzedaje dodatkowo.
+394	Faktury PDF ze wszystkimi danymi obowiązkowymi
+395	Paragony, przychody, wydatki i zysk za rok
+396	Dokumenty firmy i terminy
+397	Lista dla doradcy podatkowego (PDF/CSV)
+398	Włącz «Moja firma»
+399	Nie masz firmy? Po prostu nie włączaj – nic się nie zmieni.
+400	od razu
+401	Tworzę …
+402	Przegląd %y
+403	Finanse
+404	Teczka podatkowa, koszty
+405	Teczka podatkowa %y
+406	paragonów: %n · %a
+407	Zeznanie podatkowe %y do %z (bez doradcy – proszę sprawdzić)
+408	W tym robocizna, €
+409	Zapłacono przelewem
+410	Zapłacono gotówką – zwykle nie jest uznawane. Materiał się nie liczy.
+411	Robocizna: %a → do %b mniej podatku (20 %, są limity – proszę sprawdzić)
+412	Sfotografuj paragon
+413	Dodaj bez zdjęcia
+414	PDF dla ELSTER / doradcy
+415	Brak paragonów za ten rok
+416	Warto wiedzieć:
+417	Na razie pusto – sfotografuj pierwszy paragon.
+418	Kwota, €
+419	Co to jest
+420	np. okulary, optyk
+421	Nowy paragon
+422	Proszę podać kwotę
+423	Wszystkie kategorie
+424	Banki są teraz w „Urzędy i usługi”
+425	Praca (koszty uzyskania przychodu)
+426	Dojazdy, narzędzia pracy, kursy
+427	Rzemieślnicy i gospodarstwo domowe
+428	Liczy się tylko robocizna
+429	Dopłaty, okulary, dentysta
+430	Opieka nad dziećmi
+431	Darowizny
+432	Ubezpieczenia i emerytura
+433	Urząd skarbowy sam uwzględnia 1230 € rocznie (kwota ryczałtowa dla pracownika). Paragony pomagają, gdy koszty są wyższe.
+434	Rzemieślnicy: 20 % kosztów robocizny, maks. 1200 € mniej podatku. Materiał się nie liczy. Płać przelewem, nie gotówką.
+435	Koszty zdrowia liczą się dopiero powyżej „rozsądnego obciążenia”, zależnego od dochodu. Mimo to zachowaj paragony.
+436	Od 2025: 80 % kosztów, maks. 4800 € na dziecko do 14 lat.
+437	Do 300 € wyciąg bankowy często zastępuje pokwitowanie darowizny.
+438	Wiele jest już zgłaszane przez wynagrodzenie. Prywatne ubezpieczenia wpisuje się osobno.
+439	Ogólne zasady, nie porada podatkowa – proszę sprawdzić.
+440	Karta
+441	Zablokuj kartę
+442	Teczka podatkowa
+443	Umowy i koszty
+444	Płacę za umowy
+445	%a / miesiąc
+446	%a rocznie · umów: %n
+447	%n – można wypowiedzieć do %d (za %k dni)
+448	%k: %n podobnych umów – podwójnie? Proszę sprawdzić.
+449	Bez kwoty: %n – dodaj ją, żeby suma była prawidłowa
+450	od %y · sprawdź cenę
+451	wypowiedz do %d
+452	Brak umów. Dotknij „＋ Umowa” – ubezpieczenie, prąd, telefon, internet, siłownia …
+453	＋ Umowa
+454	Po podwyżce ceny często można wypowiedzieć wcześniej – jest to w liście od dostawcy.
+455	Ogólne zasady, nie porada – proszę sprawdzić.
+456	Praca i firma
+457	Praca, własna firma, wykształcenie
+458	Dodaj swoich pracodawców – umowy, świadectwa i projekty będą pod ręką przez lata.
+459	＋ Pracodawca
+460	Lista do CV (PDF)
+461	Firma
+462	Stanowisko
+463	Od (miesiąc)
+464	Do (puste = teraz)
+465	teraz
+466	Dokumenty
+467	＋ Dokument z aplikacji
+468	Które dokumenty?
+469	Prawdopodobnie pasują
+470	Wszystkie dokumenty
+471	Projekty i osiągnięcia
+472	＋ Projekt
+473	Tytuł
+474	Co robiłem
+475	Wynik (liczby, czas, pochwały)
+476	„%n” jest już na liście
+477	Otwórz
+478	Znowu tam pracowałem
+479	Proszę podać firmę
+480	Proszę podać tytuł
+481	Kariera
+482	Wynik
+483	Umowy i ubezpieczenia
+484	w «Finansach» – z kwotami i terminami
+485	Pracodawcy
+486	Wykształcenie i dyplomy
+487	Inne dokumenty
+488	Umowa o pracę
+489	Wypowiedzenie
+490	Paski płacowe
+491	podpisana umowa
+492	pośrednie lub końcowe
+493	miesiąc po miesiącu
+494	do zeznania podatkowego
+495	Zapisane raz w «Dokumentach» i połączone tutaj – bez kopii.
+496	Skanuj / zrób zdjęcie
+497	można kilka stron
+498	Wybierz plik
+499	PDF lub obraz z Plików
+500	dotknij = połącz
+501	pasuje
+502	Połączono ✓
+503	Zapisano w «Dokumentach» i połączono ✓
+504	Rozłącz
+505	Dokument zostaje w «Dokumentach».
+506	＋ Kolejny dokument
+507	＋ Dodaj kwalifikację
+508	Szkoła, zawód, studia, kursy, certyfikaty – wszystko w jednym miejscu na potrzeby aplikacji.
+509	Świadectwo szkolne
+510	Dyplom ukończenia studiów
+511	Kurs
+512	Certyfikat / uprawnienia
+513	Rodzaj
+514	Szkoła / instytucja
+515	Kraj
+516	Uznanie w Niemczech
+517	— (kwalifikacja niemiecka)
+518	Uznane ✓
+519	Złożono wniosek
+520	Jeszcze nie złożono
+521	Odpowiedź / termin do
+522	Uznanie: %t
+523	Kwalifikacje zagraniczne: anerkennung-in-deutschland.de
+524	Strony i dokumenty
+525	Dokumenty dodasz po zapisaniu.
+526	Data jako MM.RRRR, np. 02.2026
+527	Co ma trafić do PDF? Oryginały się nie zmieniają.
+528	CV (kariera)
+529	%n s.
+530	Plik PDF – nie można wstawić
+531	brak stron
+532	Utwórz PDF · stron: %n
+533	Zaznacz przynajmniej jeden
+534	Tworzę PDF …
+535	Potem: wyślij swoim e-mailem lub zachowaj w Plikach
+536	Co znaczą zwroty w świadectwie pracy
+537	Niemieckie świadectwo pracy ukrywa ocenę w uprzejmych zwrotach. Ogólne zasady – nie porada prawna, proszę sprawdzić.
+538	Znalezione w Twoim świadectwie:
+539	Tekst świadectwa nie został rozpoznany. Zeskanuj go z rozpoznawaniem tekstu – wtedy zwroty znajdą się same.
+540	W tekście nie znaleziono typowych zwrotów.
+541	Typowe zwroty
+542	Zakończenie
+543	Są podziękowania i życzenia – dobry znak.
+544	Brak podziękowań i życzeń na końcu – często znak słabej oceny.
+545	1 – bardzo dobra
+546	2 – dobra
+547	3 – dostateczna
+548	4 – wystarczająca
+549	5 – słaba
+550	6 – niedostateczna
+551	Terminy umowy
+552	＋ Terminy: okres próbny, wypowiedzenie, umowa na czas określony
+553	Okres próbny do
+554	Umowa na czas określony do
+555	Okres wypowiedzenia
+556	Własne sformułowanie
+557	– nie podano
+558	2 tygodnie (w okresie próbnym)
+559	4 tygodnie na 15. dzień lub koniec miesiąca (ustawowo)
+560	1 miesiąc na koniec miesiąca
+561	3 miesiące na koniec kwartału
+562	inne
+563	okres próbny minął ✓
+564	Zgłoś się jako szukający pracy (Agentur für Arbeit) – do %d
+565	Zgłoś się jako szukający pracy – teraz (w ciągu 3 dni)
+566	Ogólna zasada: 3 miesiące przed końcem; jeśli wiadomo później – w ciągu 3 dni. Proszę sprawdzić.
+567	Umowa kończy się %m? Wpisz dokładną datę – przypomnę na czas.
+568	Okres próbny kończy się %d – %c
+569	Zgłoś się jako szukający pracy – umowa %c kończy się %d
+570	Start
+571	Kolejność kafelków ↑↓ · oko = pokaż/ukryj
+572	ukryte
+573	Bloki na stronie głównej
+574	Pogoda
+575	Dziś
+576	Urzędy (wizyty, terminy)
+577	Szybkie działania
+578	Przywróć układ
+579	Układ przywrócony ✓
+580	Sejf
+581	Skaner
+582	Pokazać też tutaj? (bez kopii)
+583	Zapisano raz w «Dokumentach»
+584	Dodaj pracodawcę «%n»
+585	Dodaj pracodawcę
+586	Nazwa firmy
+587	Zostaw tylko w Dokumentach
+588	Nie pytaj więcej o «%k»
+589	Pokazano też u %n
+590	Cofnij
+591	Pokazano też w
+592	＋ Inne miejsce
+593	× usuwa stamtąd – dokument zostaje.
+594	Na razie tylko w «Dokumentach»
+595	→ także w teczce podatkowej %y
+596	Gdzie jeszcze?
+597	Pracodawca
+598	Które miejsce?
+599	Brak pasujących miejsc. Dodaj pracodawcę w «Praca i firma».
+600	Testament i pełnomocnictwa
+601	%n dokumentów pasuje do %c
+602	Są już w «Dokumentach» – połączyć?
+603	Połącz %n
+604	Później
+605	Połączono: %n
+606	lub
+607	Przenieś ze starego telefonu
+608	Wybierz plik kopii – wszystkie dane zostaną przeniesione
+609	✓ Witaj ponownie
+610	Twoje dane ze starego telefonu są tutaj:
+611	Umowy
+612	Zdjęcia / strony
+613	Urzędy i usługi
+614	Wizyty i terminy
+615	zaszyfrowano ✓
+616	Logowanie na tym telefonie
+617	Face ID starego telefonu tu nie działa. Skonfiguruj je ponownie:
+618	Zabezpiecz aplikację na tym telefonie hasłem:
+619	Skonfiguruj Face ID
+620	Ustaw hasło
+621	Sejf otwiera się Twoim dotychczasowym hasłem do sejfu.
+622	Przenieś na nowy telefon
+623	Tutaj «Zapisz kopię» (z hasłem) – umieść plik w iCloud Drive lub wyślij przez AirDrop.
+624	Na nowym telefonie otwórz link w Safari → Udostępnij → «Do ekranu początkowego».
+625	Otwórz aplikację → «Przenieś ze starego telefonu» → wybierz plik → hasło.
+626	Zapisz kopię teraz
+627	Udostępnij link do aplikacji
+628	Link skopiowany ✓
+629	Stary telefon zachowuje dane, dopóki ich tam nie usuniesz.
+630	Ten dokument już jest: „%t”
+631	Zobacz
+632	Zachowaj oba
+633	Notatki
+634	Wszystko szybkie w jednym miejscu
+635	Nowa notatka
+636	Dyktuj
+637	Skanuj
+638	Notatka ze zdjęciem
+639	Wszystkie notatki
+640	Otwarte punkty
+641	Z datą → kalendarz
+642	Archiwum
+643	Kosz
+644	Foldery
+645	wszystkie
+646	Bez folderu
+647	%n notatka
+648	notatek: %n
+649	Praca
+650	Nauka
+651	Fitness
+652	Podróże
+653	Rodzina
+654	Pomysły
+655	Projekty
+656	＋ Folder
+657	Folder
+658	Kolor
+659	Ukryj folder
+660	Pokaż ukryte
+661	Usuń folder
+662	Na pewno? Notatki zostaną „bez folderu”.
+663	Foldery są Twoje: zmień nazwę, symbol, kolor, ukryj. Notatka jest w jednym folderze – bez kopii.
+664	Na razie nic tu nie ma.
+665	Dotknij „Nowa notatka” – albo dyktuj, skanuj, zrób zdjęcie.
+666	Szukaj w notatkach …
+667	Tekst …
+668	＋ Punkt
+669	Nowy punkt
+670	bez daty
+671	Data punktu
+672	Usuń datę
+673	z notatki
+674	zadanie
+675	Otwórz kalendarz
+676	Punkt z datą sam trafia do kalendarza. «Do kalendarza iPhone» w profilu – z dźwiękiem.
+677	Tagi
+678	np. Firma, lekarz
+679	Działania
+680	Przywróć z archiwum
+681	Do kosza
+682	Usunąć na zawsze?
+683	Usuń na zawsze
+684	Opróżnij kosz
+685	Notatki w koszu są usuwane po 30 dniach.
+686	W koszu ✓
+687	Udostępnij
+688	Duży tekst
+689	Połączono z
+690	Połącz z …
+691	Na razie nie ma czego połączyć.
+692	pracodawca
+693	urząd
+694	dokument
+695	Z «Dokumentów»
+696	z «Dokumentów» · połączono
+697	Dołącz
+698	Zdjęcie / skan
+699	Plik (PDF lub obraz)
+700	Dyktowanie nie jest tu dostępne. Dotknij 🎙 na klawiaturze iPhone – działa w każdym polu.
+701	Mów … (🎙 ponownie = stop)
+702	Rozpoznawanie mowy wykonuje iPhone (Apple), może wymagać internetu.
+703	Skan %d
+704	Zdjęcie %d
+705	＋ Notatka
+706	utworzono %d
+707	zmieniono %d
+708	Sprawdź kopię
+709	Którą kopię sprawdzić?
+710	Ostatnia kopia na tym telefonie
+711	Wybierz plik w Plikach …
+712	Hasło kopii
+713	Złe hasło
+714	Sprawdzam kopię …
+715	✓ Kopia jest w porządku
+716	⚠ Kopia jest niekompletna
+717	✕ To nie jest kopia Butler Docs albo plik jest uszkodzony
+718	Utworzono %d
+719	pusto
+720	w telefonie: %n
+721	W kopii brakuje %n zdjęć. Zapisz nową.
+722	%n zdjęć jest uszkodzonych.
+723	Kopia ma mniej dokumentów niż telefon – jest starsza. Zapisz nową.
+724	Tylko sprawdzono – Twoje dane się nie zmieniły.
+725	Zapisz nową kopię
+726	Zgłoszenie błędu
+727	Wysyłane są tylko dane techniczne – bez dokumentów, bez nazwisk. Wysyłasz sam, ze swojej poczty.
+728	Co się stało? (opcjonalnie)
+729	Zrzut ekranu: naciśnij przycisk boczny + głośniej, potem dołącz go do e-maila.
+730	Wyślij e-mailem (Twoja poczta)
+731	Udostępnij …
+732	Skopiowano ✓
+733	Butler Docs – zgłoszenie błędu
+734	Błędy (ostatnie 7 dni)
+735	Wersja
+736	Ekran
+737	Urządzenie
+738	Kopia
+739	Tryb
+740	z ekranu początkowego
+741	w przeglądarce
+742	Do zeznania podatkowego %y
+743	Koszty pracy
+744	%a z 1230 €
+745	Powyżej 1230 € – paragony się opłacają ✓
+746	Jeszcze %a do 1230 € – do tej kwoty urząd skarbowy liczy sam
+747	Dojazd do pracy
+748	Nie wpisano – km, dni, praca z domu
+749	%k km · %d dni · %h dni pracy z domu
+750	Km do pracy (w jedną stronę)
+751	Dni dojazdu do pracy
+752	Dni pracy z domu
+753	Razem
+754	Od 2026: 0,38 € za km od 1. km, tylko w jedną stronę.
+755	Do 2025: 0,30 € za km 1–20, 0,38 € od 21. km.
+756	Praca z domu: 6 € dziennie, maks. 1260 € rocznie. Danego dnia albo dojazd, albo praca z domu.
+757	Bez własnego auta maks. 4500 € rocznie. Proszę sprawdzić.
+758	jest · %c
+759	Pracodawca przysyła ją do końca lutego %z
+760	Najpierw dodaj pracodawcę w «Praca i firma» – tam jest jej miejsce.
+761	Otwórz «Praca i firma»
+762	Który pracodawca?
+763	Jeszcze nie otrzymano
+764	Odwołanie do %d
+765	Termin na odwołanie minął (%d)
+766	Data na piśmie
+767	Uznane za doręczone: %a · odwołanie do: %b
+768	Pismo uznaje się za doręczone 4 dni po dacie (od 2025), potem jest 1 miesiąc na odwołanie. Odwołanie jest bezpłatne – przez ELSTER lub listownie. Proszę sprawdzić.
+769	Pismo (zdjęcie lub plik)
+770	Sprawdź decyzję podatkową %y – odwołanie do %d
+771	Zeskanuj zaświadczenie o podatku od wynagrodzenia %y
+772	Nie wpisano – maks. 1000 € dla wszystkich banków
+773	Wspólne rozliczenie (małżeństwo) – 2000 €
+774	＋ Bank
+775	%a ponad limit – zmniejsz w jednym banku
+776	Kwota wolna dla oszczędzających: 1000 € rocznie na osobę. Dyspozycję zmieniasz w bankowości internetowej.
+777	Numer podatkowy i ELSTER
+778	Numer w sejfie, dostęp przez elster.de
+779	Otwórz ELSTER
+780	Numer podatkowy w sejfie
+781	Numer podatkowy jest na zaświadczeniu o wynagrodzeniu i na każdej decyzji. Nie przechowujemy tu drugiej kopii.
+782	Czego jeszcze brakuje za %y
+783	Dojazd do pracy / praca z domu
+784	Pokwitowania darowizn
+785	jeśli przekazano darowizny
+786	Rozliczenie kosztów mieszkania / rzemieślnicy
+787	udział robocizny, przelewem
+788	Zaświadczenia kasy chorych / ubezpieczeń
+789	co roku – sprawdź luki
+790	Ogólne zasady, nie porada podatkowa. Proszę sprawdzić.
+791	✓ plików: %n
+792	✓ w «Dokumentach»
+793	Sprawdź liczby
+794	Proszę podać datę
+795	Autokontrola: wszystko w porządku ✓
+796	sprawdzono %d
+797	Sprawdź teraz
+798	Autokontrola coś znalazła
+799	Sprawdzam …
+800	Aplikacja nie może już zapisywać. Zwolnij miejsce w telefonie i otwórz aplikację ponownie.
+801	Telefon może usunąć dane tej aplikacji. Otwieraj ją z ekranu początkowego, nie w Safari – i zapisz kopię.
+802	Pamięć aplikacji jest prawie pełna (%p %). Zapisz kopię i usuń niepotrzebne zdjęcia.
+803	Nie można otworzyć magazynu zdjęć. Uruchom telefon ponownie; jeśli to nie pomoże – przywróć z kopii.
+804	%n stron nie ma zdjęcia. Jeśli masz kopię – sprawdź ją w «Profilu».
+805	Otwórz profil
+806	Rozumiem
+807	Testament i zabezpieczenia
+808	Testament
+809	Pełnomocnictwo na przyszłość
+810	Oświadczenie pacjenta
+811	Dyspozycja opiekuńcza
+812	Życzenia dotyczące pogrzebu
+813	własnoręczny lub notarialny
+814	kto decyduje za Ciebie
+815	życzenia co do leczenia
+816	kto ma być Twoim opiekunem
+817	życzenia dotyczące pogrzebu
+818	Gdzie jest oryginał?
+819	Oryginał: %o
+820	np. segregator w szafie, salon
+821	w domu
+822	u notariusza
+823	skrytka bankowa
+824	Wskazana osoba / notatka
+825	np. żona; syn ma kopię
+826	＋ Dokument
+827	Testament można złożyć w sądzie rejonowym; pełnomocnictwo zarejestrować w Rejestrze Centralnym. Ogólne wskazówki – nie porada prawna, proszę sprawdzić.
+828	Wszystkie dokumenty w „Finanse i prawo” ›
+829	Przegląd dla rodziny (PDF)
+830	Testament i zabezpieczenia – przegląd
+831	brak
+832	jest
+833	%a z %b · gdzie są oryginały
+834	Termin: %e – %o
+835	Wpisano
+836	E-mail
+837	Naturalizacja
+838	Paragony
+839	Lista leków
+840	Pisma / dokumenty
+841	Pon–Pt 8–12, Czw 14–18
+842	Numer podatkowy, numer klienta, sygnatura …
+843	data-act="go" data-to="bsv"
+844	<div class="dhcard dhq">
+845	Mały przedsiębiorca § 19 UStG
+846	Deklaracja VAT
+847	Numer podatkowy
+848	E-mail
+849	Jednoosobowa działalność
+850	Wolny zawód
+851	UG (spółka z o.o. uproszczona)
+852	VAT %r %
+853	Rejestracja działalności
+854	Numer podatkowy (urząd skarbowy)
+855	Ubezpieczenie OC działalności
+856	Rejestr handlowy / izba IHK
+857	Zaliczka
+858	Zaliczka na podatek %s
+859	data-act="go" data-to="archive"
+860	data-act="dccat" data-v="personal"
+861	data-act="go" data-to="mycal"
+862	data-act="go" data-to="tasks"
+863	data-act="dhbank"
+864	data-act="dhvault"
+865	data-act="go" data-to="life"
+866	data-act="go" data-to="dnach"
+867	data-act="go" data-to="people"
+868	Paragony do zeznania podatkowego %y
+869	Żłobek, opiekunka dzienna, świetlica
+870	Zdrowotne, OC, emerytalne
+871	data-act="go" data-to="fzm"
+872	data-act="go" data-to="kar"
+873	Świadectwo pracy
+874	Zaświadczenie o podatku od wynagrodzenia
+875	Kształcenie zawodowe
+876	Teczka aplikacyjna (PDF)
+877	Teczka aplikacyjna
+878	sRout
+879	data-act="go" data-to="sc9"
+880	data-act="go" data-to="dsrok"
+881	--h236vh
+882	Ulga na dojazdy
+883	Ryczałt za pracę z domu
+884	Zaświadczenie o podatku od wynagrodzenia %y
+885	Decyzja podatkowa %y
+886	Dyspozycje zwolnienia z podatku
+887	Informacja emerytalna
+888	sąd rejonowy

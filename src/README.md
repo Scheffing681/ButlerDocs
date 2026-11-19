@@ -38,3 +38,7 @@ New code does not wrap app functions any more. It plugs in through `Hooks` (`src
 - `Hooks.act('name', fn)` — a button action (`data-act`); `Hooks.css('id', css)` — styles
 Errors inside hooks never break the app; they are kept in `Hooks.errors` (localStorage `bh-errors`).
 The robot fails if the number of old wrapper layers grows (`tests/wrappers-baseline.txt`).
+
+
+## Translations
+`src/modules/i18n/<lang>.js` hold the tr/pl/fr/es texts of the Docs modules, keyed by the English text of each `[ru,de,en]` array. After adding or changing texts: `node tools/i18n-extract.js` (new texts are appended to `tools/i18n-keys.json`), add the lines to `tools/i18n/<lang>.txt`, then `node tools/i18n-build.js tr pl fr es` (checks placeholders and line breaks).

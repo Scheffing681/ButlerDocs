@@ -2,7 +2,9 @@
 /* v199: personal calendar — computations (faiths, state holidays, sky) */
 const cv5LG=['ru','de','en','pl','tr','fr','es'];
 const cv5i=()=>{const k=cv5LG.indexOf(g.lang);return k<0?2:k};
-const cv5n=a=>Array.isArray(a)?(a[cv5i()]||a[2]||a[0]):String(a||'');
+/* a 3-language array [ru,de,en] finds the other languages in I18N[lang], keyed by the English text (src/modules/i18n) */
+const cv5x=a=>{try{if(a.length>3||cv5i()<3)return'';const D=typeof I18N!=='undefined'&&I18N[g.lang];return D&&D[a[2]]||''}catch{return''}};
+const cv5n=a=>Array.isArray(a)?(a[cv5i()]||cv5x(a)||a[2]||a[0]):String(a||'');
 const cv5C=()=>{const c=g.cv5&&typeof g.cv5==='object'?g.cv5:(g.cv5={});c.show=c.show||{};return c};
 const cv5on=k=>{const c=cv5C();return c.show[k]!==!1};
 const cv5RD=d=>Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5)+719163;

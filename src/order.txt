@@ -1,5 +1,9 @@
 # Load order of src/modules — top to bottom. Moving a line changes the app: check with node tests/overlap.js first.
 hooks/registry.js
+i18n/tr.js
+i18n/pl.js
+i18n/fr.js
+i18n/es.js
 clocks/thirty-more-clocks.js
 seal/seal-and-signature.js
 today/tour-today-search-commands.js

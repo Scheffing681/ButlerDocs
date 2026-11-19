@@ -57,11 +57,11 @@ const krMon=k=>{if(!k)return'';const[y,mo]=String(k).split('-');return mo?`${mo}
 const krPer=j=>`${krMon(j.from)||'?'} – ${j.to?krMon(j.to):krt('now')}`;
 const krDocs=ids=>{try{return(ids||[]).map(id=>Ke().items.find(d=>d.id===id)).filter(Boolean)}catch{return[]}};
 let krSel=null;
-function krList(){if(krD().tab==='edu')return krEduList();if(krD().tab==='biz'&&bzxOn())return bzxHome();const J=krD().jobs.slice().sort((a,b)=>String(b.to||'9999').localeCompare(String(a.to||'9999'))||String(b.from||'').localeCompare(String(a.from||'')));
- return`<div class="screen dhome fz kar"><div class="sub-hdr"><button class="iconbtn" data-act="fzback" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(krt('kar'))}</h2></div><span></span></div>${krTabs()}
+function krList(){if(krD().tab==='edu')return krEduList();if(krD().tab==='biz')return bzxOn()?bzxHome():bzxIntro();const J=krD().jobs.slice().sort((a,b)=>String(b.to||'9999').localeCompare(String(a.to||'9999'))||String(b.from||'').localeCompare(String(a.from||'')));
+ return`<div class="screen dhome fz kar"><div class="sub-hdr"><button class="iconbtn" data-act="fzback" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(krt('kar'))}</h2></div><span></span></div>${krTabs()}${lnqBanner()}
  ${J.length?`<div class="krtl">${J.map(j=>{const D=krDocs(j.docs);return`<button type="button" class="krit" data-act="kropen" data-id="${i(j.id)}"><b>${i(j.co)}</b><small>${i([krPer(j),j.role].filter(Boolean).join(' · '))}</small>
   ${D.length||(j.proj||[]).length?`<span class="krch">${D.slice(0,3).map(d=>`<i>📄 ${i(d.title||'—')}</i>`).join('')}${D.length>3?`<i>+${D.length-3}</i>`:''}${(j.proj||[]).length?`<i>⭐ ${(j.proj||[]).length}</i>`:''}</span>`:''}</button>`}).join('')}</div>`:`<div class="dhcard"><p class="dhnone">${i(krt('kEmpty'))}</p></div>`}
- <button type="button" class="dcadd gold" data-act="krjobed">${i(krt('kAdd'))}</button>${krMappeBtn()}${bzxOffer()}</div>`}
+ <button type="button" class="dcadd gold" data-act="krjobed">${i(krt('kAdd'))}</button>${krMappeBtn()}</div>`}
 function krJobScreen(j){const D=krDocs(j.docs);
  return`<div class="screen dhome fz kar"><div class="sub-hdr"><button class="iconbtn" data-act="krlist" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(j.co)}</h2></div><button type="button" class="iconbtn" data-act="krjobed" data-id="${i(j.id)}" aria-label="${i(krt('edit'))}">${bsvi('edit')}</button></div>
  <p class="krper">${i([krPer(j),j.role].filter(Boolean).join(' · '))}</p>${j.note?`<div class="dhcard"><p class="vnote">${i(j.note)}</p></div>`:''}

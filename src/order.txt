@@ -62,3 +62,4 @@ docs/badge-place.js
 docs/home-edit.js
 docs/business.js
 docs/steuer-plus.js
+docs/linkup.js

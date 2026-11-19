@@ -33,13 +33,13 @@ const odt=k=>cv5n(odS[k]);
 const OD_OK=new Set(['home','search','profile','concierge','style','stylemy','styleic','stylecol','ly6','pv','dossier',
  'archive','arcf','dccat','lpage','bdoc','letters','envl','law','dcana','ins','insedit','sc9',
  'mycal','reminders','tasks','projects','project','ax5now','ax5week','td9today',
- 'fnacc','fnlost','life','lbooks','lbook','lsearch',
+ 'life','lbooks','lbook','lsearch',
  'dnach','assets','asset','axdet','axdata','axdocs','axsvc','axval','people','person','dall','dsrok']);
 const OD_CAT=new Set(['law','contacts']);
-const OD_TO={stats:'dsrok',fin:'fnacc',bd9all:'dall',areas:'dall'};
+const OD_TO={stats:'dsrok',fin:'fzm',fnacc:'fzm',fnlost:'fzm',bd9all:'dall',areas:'dall'};
 const odOn=()=>{try{return!g.dhOff}catch{return!0}};
 const odOk=(r,c)=>r==='cat'?OD_CAT.has(c):OD_OK.has(r);
-const odTo=(r,c)=>r==='cat'&&c==='bank'?'fnacc':OD_TO[r]||'home';
+const odTo=(r,c)=>r==='cat'&&c==='bank'?'fzm':OD_TO[r]||'home';
 ['dall','dsrok'].forEach(r=>{Te.includes(r)||Te.push(r)});
 Hooks.on('route',(r,a)=>{try{if(!m.logged||!odOn()||odOk(r,a&&a[1]))return;const to=odTo(r,a&&a[1]);setTimeout(()=>{try{R(to)}catch{}},0);return!1}catch(e){Hooks.err('odroute',e)}});
 /* section tabs (Мой день · Документы · Люди …) show only parts that stay */
@@ -78,7 +78,7 @@ Hooks.on('render',odTidy);
 /* and the sign at the top is the original living sign from the sign-in screen (with DOCS) */
 Hooks.on('screen',h=>{if(typeof h!=='string'||m.route!=='home'||!odOn())return h;h=h.replace(/class="dhwx" data-act="go" data-to="wd"/,'class="dhwx" aria-disabled="true"');
  try{if(typeof hl9sign==='function')h=h.replace(/<div class="dhlogo">[\s\S]*?<\/div>/,`<div class="odlogo">${hl9sign('head')}</div>`)}catch(e){Hooks.err('odlogo',e)}return h});
-Hooks.act('dhbank',()=>{try{R(odOn()?'fnacc':'cat',odOn()?void 0:'bank')}catch{}},{replace:!0});
+Hooks.act('dhbank',()=>{try{R(odOn()?'fzm':'cat',odOn()?void 0:'bank')}catch{}},{replace:!0});
 
 /* --- the «+» sheet: Document · Scan · Task · Event · Reminder --- */
 new MutationObserver(()=>{try{if(!odOn())return;document.querySelectorAll('.bd8pm:not([data-od])').forEach(pm=>{pm.dataset.od=1;
@@ -135,3 +135,11 @@ Hooks.css('only-docs',`
 .odr em{flex:none;font-style:normal;font-size:13px;color:var(--muted)}.odr.r em{color:#d0453a;font-weight:600}.odr.y em{color:#a87a0c;font-weight:600}
 .odadd{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:600;color:var(--green)!important;margin-bottom:24px}
 `);
+
+/* v43: the money accounts of the old Butler («Meine Konten und Karten») are not part of Butler Docs.
+   Bank data (IBAN, Online-Banking, Sperrnummer) was already moved to «Behörden & Dienste» by fzBanks;
+   once, the accounts and their bookings are removed. Freistellungsaufträge (g.sqx), Steuer-Mappe (g.fzm) and
+   assets (g.fin.assets, used by Nachlass) are not touched. Default accounts that Butler may create again are removed too. */
+function odFinOff(){try{if(!m.logged||!g.fin)return;const F=g.fin;if(!g.odFin0){try{fzBanks()}catch{}F.accounts=[];F.tx=[];g.odFin0=1;try{bsvQuiet()}catch{}$();return}
+ if(Array.isArray(F.accounts)&&F.accounts.length&&!(F.tx||[]).length&&F.accounts.every(a=>a&&!a.bank&&!a.iban&&!a.last4&&!a.url&&!a.block&&!(+a.start))){F.accounts=[];try{bsvQuiet()}catch{}$()}}catch(e){Hooks.err('odfinoff',e)}}
+Hooks.on('render',()=>{if(!odFinOff.t){odFinOff.t=1;setTimeout(()=>{odFinOff.t=0;odFinOff()},400)}});

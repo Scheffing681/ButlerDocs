@@ -77,6 +77,7 @@ const BZX={
  xT:['Для налогового консультанта','Für den Steuerberater','For the tax adviser'],xYr:['Год','Jahr','Year'],xCnt:['%a счетов · %b чеков','%a Rechnungen · %b Belege','%a invoices · %b receipts'],
  xCsv:['Список (CSV, для Excel)','Liste (CSV, für Excel)','List (CSV, for Excel)'],xPdf:['Всё в одном PDF (обзор, счета, чеки)','Alles in einem PDF (Übersicht, Rechnungen, Belege)','All in one PDF (overview, invoices, receipts)'],
  xS:['Отправляете вы сами – через свою почту или «Поделиться». Чеки, которые есть только как PDF-файл, в общий PDF не попадают – они в «Документах».','Sie senden selbst – über Ihre E-Mail oder «Teilen». Belege, die nur als PDF-Datei vorliegen, kommen nicht ins Gesamt-PDF – sie liegen in «Dokumente».','You send it yourself – by your mail or «Share». Receipts that exist only as a PDF file are not put in the combined PDF – they are in «Documents».'],
+ vz:['Авансовые платежи налога (Vorauszahlungen)','Steuer-Vorauszahlungen vom Finanzamt','Tax prepayments'],vzA:['Сумма за квартал, €','Betrag je Quartal, €','Amount per quarter, €'],vzP:['Vorauszahlung','Vorauszahlung','Prepayment'],tVz:['Vorauszahlung Finanzamt %s','Vorauszahlung Finanzamt %s','Tax prepayment %s'],kmL:['Км (туда и обратно)','Gefahrene km (hin und zurück)','Km driven (there and back)'],kmFrom:['Откуда → куда','Von → Nach','From → to'],kmTip:['Своя машина по делам фирмы: 0,30 € за км. Сумма ставится сама. Проверьте, пожалуйста.','Eigenes Auto für Geschäftsfahrten: 0,30 € je km. Der Betrag wird selbst gesetzt. Bitte prüfen.','Own car for business trips: 0.30 € per km. The amount is set by itself. Please check.'],
  now:['сразу','sofort','immediately'],busy:['Собираю …','Wird erstellt …','Making …'],xOvT:['Обзор %y','Übersicht %y','Overview %y']
 };
 const bzxT=(k,o)=>{let s=cv5n(BZX[k]||[k]);if(o)for(const p in o)s=s.split('%'+p).join(o[p]);return s};
@@ -114,6 +115,7 @@ function bzxNextNo(y){const f=bzxD().firm,pre=String(f.pre||'RE').trim()||'RE';l
 function bzxWk(iso){const d=new Date(iso+'T12:00:00');while(d.getDay()===0||d.getDay()===6)d.setDate(d.getDate()+1);return x(d)}
 function bzxEst(){const f=bzxD().firm,td=bzxToday(),Y=+td.slice(0,4);
  const due=y=>f.sb?bzxWk(x(new Date(y+2,2,0,12))):bzxWk(`${y+1}-07-31`);for(const y of[Y-2,Y-1,Y]){const d=due(y);if(d>=td)return{y,d}}return{y:Y,d:due(Y)}}
+function bzxVz(){const f=bzxD().firm;if(!f.vz)return null;const td=bzxToday(),Y=+td.slice(0,4);for(const y of[Y,Y+1])for(const mo of['03','06','09','12']){const d=bzxWk(`${y}-${mo}-10`);if(d>=td)return d}return null}
 function bzxUva(){const f=bzxD().firm;if(f.klein||!f.uva)return null;const t=new Date(),y=t.getFullYear(),mo=t.getMonth();
  const nx=(yy,mm)=>bzxWk(x(new Date(yy,mm,10,12)));let d;if(f.uva==='q'){const q=Math.floor(mo/3);d=nx(y,(q+1)*3);if(d<bzxToday())d=nx(y,(q+2)*3)}else{d=nx(y,mo+1)}
  if(f.uva!=='q'){const prev=nx(y,mo);if(prev>=bzxToday())d=prev}return d}
@@ -122,6 +124,7 @@ function bzxSync(){try{const B=bzxD();g.tasks=g.tasks||[];const set=(k,on,t,due)
   if(on){if(!o){o={id:V(),t:'',due:'',time:'',prio:1,proj:'',done:!1};g.tasks.push(o);B.tk[k]=o.id}if(o.due!==due)o.done=!1;o.t=t;o.due=due}else{if(o&&!o.done)g.tasks=g.tasks.filter(z=>z!==o);else if(o)o.done=!0;delete B.tk[k]}};
  const ids=new Set(B.inv.map(v=>'i'+v.id));for(const k of Object.keys(B.tk))if(k[0]==='i'&&!ids.has(k))set(k,!1);
  for(const v of B.inv){const c=bzxCust(v.cust);set('i'+v.id,!!B.on&&!v.paid&&!v.storno&&!!v.due,bzxT('tPay',{n:v.no,c:c?c.n:''}),v.due||'')}
+ const vzd=bzxVz(),va=bzxParse(B.firm.vza);set('vz',!!B.on&&!!vzd,bzxT('tVz',{s:va?bzxEur(va):''}).trim(),vzd||'');
  const e=bzxEst(),ed=bzxAdd(e.d,-30)<bzxToday()?bzxToday():bzxAdd(e.d,-30);set('est',!!B.on&&!!(B.inv.length||B.exp.length),bzxT('tEst',{y:e.y,d:vA(e.d)}),ed)}catch(er){Hooks.err('bzxsync',er)}}
 /* year sums (simplified EÜR) */
 function bzxYear(y){const B=bzxD(),ys=String(y);let inc=0,ex=0;
@@ -139,7 +142,7 @@ function bzxHome(){const B=bzxD(),f=B.firm,td=bzxToday(),y=bzxYr(),S=bzxYear(y);
  const puls=`<div class="dhcard bzpuls"><h5>● ${i(bzxT('puls'))}</h5>
   ${O.length?`<div class="bzpl"><span>${i(bzxT('open'))}</span><b>${O.length} · ${i(bzxEur(osum))}</b></div>`:`<div class="bzpl"><span>${i(bzxT('nopen'))}</span><b>✓</b></div>`}
   ${ov.length?`<button type="button" class="bzpl w" data-act="bzxinv" data-id="${i(ov[0].id)}"><span>${i(d1===1?bzxT('over1'):bzxT('over',{d:d1}))}</span><b>${i(ov[0].no)}${ov.length>1?' +'+(ov.length-1):''}</b></button>`:''}
-  ${uva?`<div class="bzpl"><span>${i(bzxT('uva'))}</span><b>${i(vA(uva))}</b></div>`:''}
+  ${uva?`<div class="bzpl"><span>${i(bzxT('uva'))}</span><b>${i(vA(uva))}</b></div>`:''}${bzxVz()?`<div class="bzpl"><span>${i(bzxT('vzP'))}${bzxParse(f.vza)?' · '+i(bzxEur(bzxParse(f.vza))):''}</span><b>${i(vA(bzxVz()))}</b></div>`:''}
   <div class="bzpl"><span>${i(bzxT('est',{y:est.y}))}</span><b>${i(vA(est.d))}</b></div></div>`;
  const qa=`<div class="bzqa"><button type="button" data-act="bzxinv"><b>🧾</b>${i(bzxT('qInv'))}</button><button type="button" data-act="bzxexp"><b>📷</b>${i(bzxT('qExp'))}</button><button type="button" data-act="bzxcusts"><b>👤</b>${i(bzxT('qCust'))}</button><button type="button" data-act="bzxunt"><b>📁</b>${i(bzxT('qDocs'))}</button></div>`;
  const eur=`<div class="bzyh"><button type="button" class="bzyb" data-act="bzxyr" data-d="-1" aria-label="‹">‹</button><h3 class="odh">${i(bzxT('yr',{y}))}</h3><button type="button" class="bzyb" data-act="bzxyr" data-d="1" aria-label="›" ${y>=+td.slice(0,4)?'disabled':''}>›</button></div>
@@ -161,13 +164,14 @@ function bzxFirmSheet(){const B=bzxD(),f=Object.assign({},B.firm);let me={};try{
   ${inp('stnr',bzxT('fStnr'),' placeholder="045/123/45678"')}${inp('ust',bzxT('fUst'),' placeholder="DE123456789"')}
   <label class="bzck"><input type="checkbox" data-ff="klein" ${f.klein?'checked':''}><span>${i(bzxT('fKlein'))}</span></label>
   <div class="bzuva" ${f.klein?'hidden':''}><label class="bsvl">${i(bzxT('fUva'))}</label><select class="field" data-ff="uva">${['','m','q'].map(k=>`<option value="${k}" ${(f.uva||'')===k?'selected':''}>${i(bzxT('uva_'+k))}</option>`).join('')}</select></div>
+  <label class="bzck"><input type="checkbox" data-ff="vz" ${f.vz?'checked':''}><span>${i(bzxT('vz'))}</span></label><div class="bzvz" ${f.vz?'':'hidden'}>${inp('vza',bzxT('vzA'),' inputmode="decimal" placeholder="0,00"')}</div>
   <label class="bzck"><input type="checkbox" data-ff="sb" ${f.sb?'checked':''}><span>${i(bzxT('fSb'))}</span></label>
   ${inp('iban',bzxT('fIban'),' placeholder="DE00 0000 0000 0000 0000 00"')}${inp('bank',bzxT('fBank'))}
   <div class="bsv2c"><div>${inp('mail',bzxT('fMail'),' type="email" inputmode="email"')}</div><div>${inp('tel',bzxT('fTel'),' type="tel"')}</div></div>
   ${inp('pre',bzxT('fPre'),' placeholder="RE" maxlength="8"')}
   <small class="verr" data-ferr></small><button type="button" class="dcadd gold" data-fsave>${i(bzxT('save'))}</button>
   ${B.on?`<button type="button" class="bsvdel" data-foff>${i(bzxT('fOff'))}</button><p class="fdsmall">${i(bzxT('fOffS'))}</p>`:''}</div>`,
- sh=>{sh.classList.add('bsvsh','bzsh');const kl=sh.querySelector('[data-ff=klein]');kl.onchange=()=>{sh.querySelector('.bzuva').hidden=kl.checked};
+ sh=>{sh.classList.add('bsvsh','bzsh');const kl=sh.querySelector('[data-ff=klein]');kl.onchange=()=>{sh.querySelector('.bzuva').hidden=kl.checked};const vz=sh.querySelector('[data-ff=vz]');vz.onchange=()=>{sh.querySelector('.bzvz').hidden=!vz.checked};
   sh.querySelector('[data-fsave]').onclick=()=>{const o={};sh.querySelectorAll('[data-ff]').forEach(z=>{o[z.dataset.ff]=z.type==='checkbox'?z.checked:z.value.trim()});
    if(!o.n){sh.querySelector('[data-ferr]').textContent=bzxT('needN');return}if(o.klein)o.uva='';Object.assign(B.firm,o);B.on=!0;bzxSync();sh.remove();bzxSave();v()};
   const off=sh.querySelector('[data-foff]');off&&(off.onclick=()=>{B.on=!1;krD().tab='job';bzxSync();sh.remove();bzxSave();v()})})}
@@ -268,15 +272,18 @@ function bzxExpSheet(id,dr){const B=bzxD(),e0=id&&B.exp.find(z=>z.id===id),e=dr?
  H(e0?(e0.t||bzxT('bT')):bzxT('bT'),`<div class="bsvys"><div class="bsv2c"><div><label class="bsvl">${i(bzxT('bAmt'))}</label><input class="field" data-ef="amt" inputmode="decimal" placeholder="0,00" value="${i(bzxNum(e.amt))}"></div><div><label class="bsvl">${i(bzxT('bD'))}</label><input class="field" type="date" data-ef="d" value="${i(e.d||'')}"></div></div>
   <label class="bsvl">${i(bzxT('bWhat'))}</label><input class="field" data-ef="t" value="${i(e.t||'')}" autocomplete="off">
   <label class="bsvl">${i(bzxT('bCat'))}</label><select class="field" data-ef="cat">${BZX_CAT.map(k=>`<option value="${k}" ${e.cat===k?'selected':''}>${i(bzxT('cat_'+k))}</option>`).join('')}</select>
+  <div class="bzkm" ${e.cat==='fahrt'?'':'hidden'}><div class="bsv2c"><div><label class="bsvl">${i(bzxT('kmL'))}</label><input class="field" data-ef="km" inputmode="numeric" value="${i(e.km||'')}"></div><div><label class="bsvl">${i(bzxT('kmFrom'))}</label><input class="field" data-ef="rt" value="${i(e.rt||'')}" placeholder="Hanau → Frankfurt" autocomplete="off"></div></div><p class="fdsmall">${i(bzxT('kmTip'))}</p></div>
   <label class="bsvl">${i(bzxT('bPic'))}</label>${D.length?`<div class="dhcard odl">${D.map(d=>`<div class="odr krdr"><button type="button" class="bsvhit" data-kgo="dzopen" data-id="${i(d.id)}">📄<span><b>${i(d.title||'—')}</b><small>${i(bzxT('bLinked'))}</small></span></button></div>`).join('')}</div>`:''}
   <div class="bzpick"><button type="button" class="btn" data-ep="cam">${i(bzxT('bCam'))}</button><button type="button" class="btn" data-ep="file">${i(bzxT('bFile'))}</button></div><small class="fdsmall" data-ehas></small>
   <small class="verr" data-eerr></small><button type="button" class="dcadd gold" data-esave>${i(bzxT('save'))}</button>${e0?`<button type="button" class="bsvdel" data-edel>${i(bzxT('del'))}</button>`:''}</div>`,
  sh=>{sh.classList.add('bsvsh','bzsh');const has=()=>{sh.querySelector('[data-ehas]').textContent=files.length?bzxT('bHas',{n:files.length}):''};
-  has();const rd=()=>sh.querySelectorAll('[data-ef]').forEach(z=>{const k=z.dataset.ef;e[k]=k==='amt'?bzxParse(z.value):z.value.trim()});
+  has();const rd=()=>sh.querySelectorAll('[data-ef]').forEach(z=>{const k=z.dataset.ef;e[k]=k==='amt'?bzxParse(z.value):k==='km'?(Math.max(0,Math.round(+String(z.value).replace(',','.')||0))||''):z.value.trim()});
+  const cs=sh.querySelector('[data-ef=cat]'),km=sh.querySelector('[data-ef=km]'),am=sh.querySelector('[data-ef=amt]');cs.onchange=()=>{sh.querySelector('.bzkm').hidden=cs.value!=='fahrt'};
+  km.oninput=()=>{const n=Math.round(+String(km.value).replace(',','.')||0);if(n>0)am.value=bzxNum(n*30)};
   sh.querySelector('[data-ep=cam]').onclick=()=>{rd();sh.remove();try{scOpen({multi:!0,saveLabel:bzxT('save'),done:fs=>bzxExpSheet(id,{e,files:files.concat(fs||[])})})}catch(er){Hooks.err('bzxscan',er)}};
   sh.querySelector('[data-ep=file]').onclick=()=>{const f=document.createElement('input');f.type='file';f.multiple=!0;f.accept='image/*,application/pdf';f.onchange=()=>{files=files.concat([...(f.files||[])]);has()};f.click()};
   sh.querySelector('[data-esave]').onclick=async()=>{rd();
-   if(e.amt==null||e.amt<=0){sh.querySelector('[data-eerr]').textContent=bzxT('bEAmt');return}const b=sh.querySelector('[data-esave]');b.disabled=!0;
+   if(e.cat!=='fahrt'){delete e.km;delete e.rt}if(e.amt==null||e.amt<=0){sh.querySelector('[data-eerr]').textContent=bzxT('bEAmt');return}const b=sh.querySelector('[data-esave]');b.disabled=!0;
    let o=e0;if(o)Object.assign(o,e);else{o=Object.assign({id:V()},e);o.docs=[];B.exp.push(o)}
    if(files.length)try{const n=await krNewDoc(files,`Beleg ${vA(o.d)}${o.t?' · '+o.t:''}`,'');n.folder=bzxFolder();o.docs=(o.docs||[]).concat(n.id)}catch(er){Hooks.err('bzxbeleg',er)}
    sh.remove();bzxSave();v();T(bzxT('bOk'))};
@@ -287,6 +294,7 @@ function bzxFristen(){const B=bzxD(),td=bzxToday(),L2=[],lab={ok:bzxT('paid'),op
  for(const v of B.inv.filter(z=>!z.paid&&!z.storno).sort((a,b)=>String(a.due).localeCompare(String(b.due)))){const c=bzxCust(v.cust),st=bzxSt(v);
   L2.push(`<button type="button" class="bzfr ${st}" data-act="bzxinv" data-id="${i(v.id)}"><span><b>${i(bzxT('frDue',{n:v.no}))}</b><small>${i([c?c.n:'',bzxEur(bzxSum(v).gross)].filter(Boolean).join(' · '))}</small></span><em>${i(st==='ov'?lab.ov:vA(v.due))}</em></button>`)}
  const u=bzxUva();if(u)L2.push(`<div class="bzfr"><span><b>${i(bzxT('uva'))}</b><small>${i(bzxT('uva_'+B.firm.uva))}</small></span><em>${i(vA(u))}</em></div>`);
+ const vzd=bzxVz();if(vzd)L2.push(`<div class="bzfr"><span><b>${i(bzxT('vzP'))}</b><small>${i(bzxParse(B.firm.vza)?bzxEur(bzxParse(B.firm.vza)):'')}</small></span><em>${i(vA(vzd))}</em></div>`);
  const e=bzxEst();L2.push(`<div class="bzfr"><span><b>${i(bzxT('frEst',{y:e.y}))}</b><small>${i(B.firm.sb?bzxT('frEstSb'):bzxT('frEstS'))}</small></span><em>${i(vA(e.d))}</em></div>`);
  const ys=[...new Set(B.inv.map(v=>String(v.d||'').slice(0,4)).concat(B.exp.map(z=>String(z.d||'').slice(0,4))).filter(Boolean))].sort();const y0=ys[0]||td.slice(0,4);
  L2.push(`<div class="bzfr"><span><b>${i(bzxT('frKeep',{y:ys.length>1?ys[0]+'–'+ys[ys.length-1]:y0}))}</b><small>${i(bzxT('frKeepS'))}</small></span><em>${i(bzxT('bis',{d:'31.12.'+(+(ys[0]||y0)+8)}))}</em></div>`);

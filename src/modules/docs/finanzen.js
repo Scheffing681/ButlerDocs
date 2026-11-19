@@ -8,7 +8,7 @@
 const fzS={
  t:['Финансы','Finanzen','Finances'],tS:['Налоговая папка, расходы','Steuer-Mappe, Kosten','Tax folder, costs'],
  stm:['Налоговая папка %y','Steuer-Mappe %y','Tax folder %y'],sum:['Чеков: %n · %a','%n Belege · %a','%n receipts · %a'],
- due:['Декларация за %y — срок 31.07.%z (без консультанта, проверьте)','Steuererklärung %y fällig 31.07.%z (ohne Steuerberater – bitte prüfen)','Tax return %y due 31.07.%z (without adviser – please check)'],
+ due:['Декларация за %y — срок %z (без консультанта, проверьте)','Steuererklärung %y fällig %z (ohne Steuerberater – bitte prüfen)','Tax return %y due %z (without adviser – please check)'],lab:['Из них стоимость работы, €','Davon Arbeitskosten, €','Of which labour, €'],ueb:['Оплачено переводом','Per Überweisung bezahlt','Paid by bank transfer'],uebNo:['Наличными – Finanzamt обычно не признаёт. Материал не считается.','Bar bezahlt – erkennt das Finanzamt meist nicht an. Material zählt nicht.','Paid cash – usually not accepted. Material does not count.'],labSum:['Работа: %a → до %b меньше налога (20 %, есть лимиты – проверьте)','Arbeitskosten: %a → bis zu %b weniger Steuer (20 %, Höchstbeträge – bitte prüfen)','Labour: %a → up to %b less tax (20 %, limits apply – please check)'],
  photo:['Сфотографировать чек','Beleg fotografieren','Photograph a receipt'],noPhoto:['Внести без фото','Ohne Foto eintragen','Add without photo'],
  pdf:['PDF для ELSTER / консультанта','PDF für ELSTER / Steuerberater','PDF for ELSTER / adviser'],pdfNo:['Пока нет чеков за этот год','Noch keine Belege für dieses Jahr','No receipts for this year yet'],
  tip:['Полезно знать:','Gut zu wissen:','Good to know:'],empty:['Здесь пока пусто — сфотографируйте первый чек.','Noch leer – fotografieren Sie den ersten Beleg.','Empty so far – photograph the first receipt.'],
@@ -49,17 +49,17 @@ let fzCat='',fzDel='';
 function fzScreen(){const y=fzYear(),L2=fzList(y),tot=L2.reduce((a,b)=>a+(b.amt||0),0);
  const hdr=`<div class="sub-hdr"><button class="iconbtn" data-act="fzback" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(fzt('t'))}</h2></div><span></span></div>`;
  const yr=`<div class="fzyr"><button type="button" data-act="fzy" data-d="-1" aria-label="‹">‹</button><b>${i(fzt('stm',{y}))}</b><button type="button" data-act="fzy" data-d="1" aria-label="›" ${+y>=new Date().getFullYear()?'disabled':''}>›</button></div>`;
- const sum=`<div class="fzsum"><b>${i(fzt('sum',{n:L2.length,a:fzEur(tot)}))}</b><small>${i(fzt('due',{y,z:+y+1}))}</small></div>`;
+ const sum=`<div class="fzsum"><b>${i(fzt('sum',{n:L2.length,a:fzEur(tot)}))}</b><small>${i(fzt('due',{y,z:sqxDe(sqxWk(`${+y+1}-07-31`))}))}</small></div>`;
  const add=`<label class="dcadd gold fzph">📷 ${i(fzt('photo'))}<input type="file" accept="image/*" capture="environment" data-fzph hidden></label><button type="button" class="fzplain" data-act="fzadd">${i(fzt('noPhoto'))}</button>`;
  if(fzCat){const c=FZ_CAT.find(z=>z[0]===fzCat)||FZ_CAT[6],R2=L2.filter(z=>z.cat===fzCat).sort((a,b)=>(b.d||'').localeCompare(a.d||'')),tp=fzt('t_'+fzCat);
   return`<div class="screen dhome fz">${hdr}<button type="button" class="fzallb" data-act="fzall">‹ ${i(fzt('back'))}</button>${yr}<h3 class="fzch">${c[1]} ${i(fzt('c_'+fzCat))} · ${i(fzEur(R2.reduce((a,b)=>a+(b.amt||0),0)))}</h3>
-  ${tp?`<div class="fztip"><b>ⓘ ${i(fzt('tip'))}</b> ${i(tp)}<small>${i(fzt('chk'))}</small></div>`:''}
+  ${fzCat==='hand'?(()=>{const a=R2.filter(z=>z.ueb!==!1).reduce((s2,z)=>s2+(z.lab!=null?z.lab:0),0);return a?`<div class="fztip"><b>${i(fzt('labSum',{a:fzEur(a),b:fzEur(Math.round(a*.2))}))}</b></div>`:''})():''}${tp?`<div class="fztip"><b>ⓘ ${i(fzt('tip'))}</b> ${i(tp)}<small>${i(fzt('chk'))}</small></div>`:''}
   ${R2.length?`<div class="dhcard odl">${R2.map(r=>`<button type="button" class="odr fzr" data-act="fzed" data-id="${i(r.id)}"><span class="fzth">${r.ph?`<img data-fzimg="${i(r.ph.id)}" alt="">`:'🧾'}</span><span><b>${i(r.t||fzt('c_'+r.cat))}</b><small>${i(r.d?vA(r.d):'')}</small></span><em>${i(fzEur(r.amt))}</em></button>`).join('')}</div>`:`<div class="dhcard"><p class="dhnone">${i(fzt('empty'))}</p></div>`}
   ${add}</div>`}
  const rows=FZ_CAT.map(([k,e])=>{const R2=L2.filter(z=>z.cat===k);if(!R2.length&&k==='sonst')return'';const s=R2.reduce((a,b)=>a+(b.amt||0),0),sub=fzt('c_'+k+'S');
   return`<button type="button" class="odr fzc" data-act="fzcat" data-k="${k}"><span class="fze">${e}</span><span><b>${i(fzt('c_'+k))}</b>${sub?`<small>${i(sub)}</small>`:''}</span><em>${R2.length?i(R2.length+' · '+fzEur(s)):'—'}</em></button>`}).join('');
  return`<div class="screen dhome fz">${hdr}${yr}${sum}<div class="dhcard odl">${rows}</div>${add}
- <button type="button" class="fzpdf" data-act="fzpdf">${i(fzt('pdf'))}</button></div>`}
+ ${sqxBlock(y)}<button type="button" class="fzpdf" data-act="fzpdf">${i(fzt('pdf'))}</button></div>`}
 /* receipt photos are drawn after the screen is there */
 async function fzImgs(){for(const im of document.querySelectorAll('img[data-fzimg]:not([src])')){try{const L2=fzList(fzYear()),r=L2.find(z=>z.ph&&z.ph.id===im.dataset.fzimg);if(!r)continue;const b=await ni(r.ph);if(b)im.src='data:'+(r.ph.type||'image/jpeg')+';base64,'+b}catch(e){Hooks.err('fzimg',e)}}}
 
@@ -68,13 +68,15 @@ function fzSheet(r){const isNew=!r.id,d=Object.assign({cat:fzCat||'',d:x(new Dat
  H(isNew?fzt('nb'):(d.t||fzt('c_'+d.cat)),`<div class="bsvys fzsh">${d.ph?`<img class="fzbig" data-fzimg="${i(d.ph.id)}" alt="">`:''}
   <label class="bsvl">${i(fzt('cat'))}</label><div class="bsvchips">${FZ_CAT.map(([k,e])=>`<button type="button" class="${d.cat===k?'on':''}" data-fzc="${k}">${e} ${i(fzt('c_'+k))}</button>`).join('')}</div>
   <div class="bsv2c"><div><label class="bsvl">${i(fzt('amt'))}</label><input class="field" data-fzf="amt" inputmode="decimal" value="${d.amt!=null?i(String((d.amt/100).toFixed(2)).replace('.',',')):''}" placeholder="0,00"></div><div><label class="bsvl">${i(fzt('date'))}</label><input class="field" type="date" data-fzf="d" value="${i(d.d||'')}"></div></div>
+  <div class="fzhand" ${d.cat==='hand'?'':'hidden'}><label class="bsvl">${i(fzt('lab'))}</label><input class="field" data-fzf="lab" inputmode="decimal" value="${d.lab!=null?i(String((d.lab/100).toFixed(2)).replace('.',',')):''}" placeholder="0,00"><label class="bzck"><input type="checkbox" data-fzf="ueb" ${d.ueb===!1?'':'checked'}><span>${i(fzt('ueb'))}</span></label><small class="verr fzueb" ${d.ueb===!1?'':'hidden'}>${i(fzt('uebNo'))}</small></div>
   <label class="bsvl">${i(fzt('what'))}</label><input class="field" data-fzf="t" value="${i(d.t||'')}" placeholder="${i(fzt('whatPh'))}" autocomplete="off">
   <small class="verr" data-fzerr></small><button type="button" class="dcadd gold" data-fzsave>${i(fzt('save'))}</button>${isNew?'':`<button type="button" class="bsvdel" data-fzdel>${i(fzt('del'))}</button>`}</div>`,
  el=>{el.classList.add('bsvsh');fzImgs();let arm=0;
-  const t=el.querySelector('[data-fzf=t]');t.addEventListener('input',()=>{if(!d.catSet){d.cat=fzGuess(t.value);el.querySelectorAll('[data-fzc]').forEach(b=>b.classList.toggle('on',b.dataset.fzc===d.cat))}});
-  el.addEventListener('click',e=>{const c=e.target.closest('[data-fzc]');if(c){d.cat=c.dataset.fzc;d.catSet=1;el.querySelectorAll('[data-fzc]').forEach(b=>b.classList.toggle('on',b===c));return}
+  const t=el.querySelector('[data-fzf=t]');t.addEventListener('input',()=>{if(!d.catSet){d.cat=fzGuess(t.value);el.querySelectorAll('[data-fzc]').forEach(b=>b.classList.toggle('on',b.dataset.fzc===d.cat));el.querySelector('.fzhand').hidden=d.cat!=='hand'}});
+  const ub=el.querySelector('[data-fzf=ueb]');ub.onchange=()=>{el.querySelector('.fzueb').hidden=ub.checked};
+  el.addEventListener('click',e=>{const c=e.target.closest('[data-fzc]');if(c){d.cat=c.dataset.fzc;d.catSet=1;el.querySelectorAll('[data-fzc]').forEach(b=>b.classList.toggle('on',b===c));el.querySelector('.fzhand').hidden=d.cat!=='hand';return}
    if(e.target.closest('[data-fzsave]')){const amt=fzCents(el.querySelector('[data-fzf=amt]').value),er=el.querySelector('[data-fzerr]');if(!amt){er.textContent=fzt('badAmt');return}
-    d.amt=amt;d.d=el.querySelector('[data-fzf=d]').value||x(new Date());d.t=t.value.trim();if(!d.cat)d.cat=fzGuess(d.t);delete d.catSet;
+    d.amt=amt;d.d=el.querySelector('[data-fzf=d]').value||x(new Date());d.t=t.value.trim();if(!d.cat)d.cat=fzGuess(d.t);delete d.catSet;if(d.cat==='hand'){const la=fzCents(el.querySelector('[data-fzf=lab]').value);if(la!=null)d.lab=Math.min(la,amt);else delete d.lab;d.ueb=ub.checked}else{delete d.lab;delete d.ueb}
     const y=String(d.d).slice(0,4),L2=fzList(y);if(isNew){d.id=V();L2.push(d)}else{for(const k of Object.keys(fzD().y)){const A=fzD().y[k],ix=A.findIndex(z=>z.id===d.id);if(ix>=0)A.splice(ix,1)}L2.push(d)}
     fzD().cur=y;$();el.remove();T(fzt('saved')+' ✓',2200);v();return}
    if(e.target.closest('[data-fzdel]')){if(!arm){arm=1;const b=e.target.closest('[data-fzdel]');b.textContent=fzt('delQ');b.classList.add('on');return}

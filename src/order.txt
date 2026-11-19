@@ -61,3 +61,4 @@ docs/vorsorge.js
 docs/badge-place.js
 docs/home-edit.js
 docs/business.js
+docs/steuer-plus.js

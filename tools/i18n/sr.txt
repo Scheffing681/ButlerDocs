@@ -1709,3 +1709,4 @@
 1708	Čip nije pročitan: %t
 1709	Podaci čipa se razlikuju od kartice: %t
 1710	Provera čipa pokazuje da su podaci potpisani od države i nepromenjeni. To nije zvanična identifikacija – za to postoji državni eID / EUDI novčanik.
+1711	Butler je dopunio: %t

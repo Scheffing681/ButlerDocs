@@ -77,3 +77,4 @@ docs/steuer-plus.js
 docs/linkup.js
 docs/mappen.js
 docs/chip.js
+docs/erkennung.js

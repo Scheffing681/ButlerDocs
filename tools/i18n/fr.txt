@@ -1022,3 +1022,4 @@
 1021	Puce non lue : %t
 1022	Les données de la puce diffèrent de la fiche : %t
 1023	La vérification de la puce montre que les données sont signées par l’État et inchangées. Ce n’est pas une identification officielle – pour cela il y a l’eID de l’État / le portefeuille EUDI.
+1024	Butler a complété : %t

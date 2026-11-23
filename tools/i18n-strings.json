@@ -3275,6 +3275,13 @@
    "docs-home.js"
   ]
  },
+ "Butler added: %t": {
+  "ru": "Butler дополнил: %t",
+  "de": "Butler hat ergänzt: %t",
+  "files": [
+   "erkennung.js"
+  ]
+ },
  "Finances": {
   "ru": "Финансы",
   "de": "Finanzen",

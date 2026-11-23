@@ -1022,3 +1022,4 @@
 1021	Çip okunamadı: %t
 1022	Çip verileri karttakinden farklı: %t
 1023	Çip kontrolü, verilerin devlet tarafından imzalandığını ve değişmediğini gösterir. Resmî kimlik doğrulama değildir – bunun için devletin eID’si / EUDI cüzdanı vardır.
+1024	Butler tamamladı: %t

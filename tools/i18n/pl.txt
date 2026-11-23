@@ -1022,3 +1022,4 @@
 1021	Nie odczytano chipu: %t
 1022	Dane z chipu różnią się od karty: %t
 1023	Sprawdzenie chipu pokazuje, że dane są podpisane przez państwo i niezmienione. To nie jest urzędowa identyfikacja – do tego służy państwowe eID / portfel EUDI.
+1024	Butler uzupełnił: %t

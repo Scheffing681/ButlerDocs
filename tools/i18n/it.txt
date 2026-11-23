@@ -1709,3 +1709,4 @@
 1708	Chip non letto: %t
 1709	I dati del chip differiscono dalla scheda: %t
 1710	La verifica del chip mostra che i dati sono firmati dallo Stato e invariati. Non è un’identificazione ufficiale – per quella c’è l’eID dello Stato / il portafoglio EUDI.
+1711	Butler ha completato: %t

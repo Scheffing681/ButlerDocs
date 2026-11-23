@@ -1709,3 +1709,4 @@
 1708	Cipul nu a fost citit: %t
 1709	Datele cipului diferă de fișă: %t
 1710	Verificarea cipului arată că datele sunt semnate de stat și nemodificate. Nu este o identificare oficială – pentru aceasta există eID-ul statului / portofelul EUDI.
+1711	Butler a completat: %t

@@ -82,7 +82,7 @@ function stArea(k){try{
  if(k==='dl'){const I=stImp(),late=I.filter(t=>stDays(t.k)<0).length,soon=I.filter(t=>{const n=stDays(t.k);return n>=0&&n<=30}).length;
   return late?{t:stt('late',{n:late}),c:'r'}:soon?{t:stt('soon',{n:soon}),c:'y'}:{t:'✓',c:'ok'}}
  if(k==='med'){const n=stDocs().filter(d=>{try{return ho(d)==='med'}catch{return!1}}).length;return n?{t:String(n),c:'ok'}:null}
- if(k==='fam'){const n=(typeof As==='function'?As():[]).length;return n?{t:String(n),c:'ok'}:null}
+ if(k==='fam'){const n=(typeof Va==='function'?Va():[]).length;return n?{t:String(n),c:'ok'}:null}
  if(k==='gov'){const n=(typeof bsvDl==='function'?bsvDl():[]).filter(t=>{const d=stDays(t.k);return d>=0&&d<=30}).length;return n?{t:stt('soon',{n}),c:'y'}:null}
  if(k==='vor'){const s=typeof vsgSub==='function'?vsgSub():'';return s&&s.length<22?{t:s,c:'ok'}:null}
  }catch{}return null}
@@ -132,10 +132,7 @@ try{ly6EXT.fristen.on=r=>r==='dsrok';ly6EXT.butler.on=r=>r==='concierge';if(ly6E
 /* once: the new bar for everybody (a bar set by hand later stays as it is) */
 function stNav(){try{if(!m.logged||g.st50nav||!stOn())return;g.st50nav=1;g.nav6=['home','archive','fristen','butler'];$()}catch(e){Hooks.err('stnav1',e)}}
 Hooks.on('render',stNav);
-/* the menu (Alle Bereiche) also gets Notizen, Meine Mappen and Profil, which left the bar */
-Hooks.on('screen',h=>{try{if(m.route!=='dall'||typeof h!=='string'||!stOn()||h.includes('stdall'))return h;const k=h.lastIndexOf('</div></div>');if(k<0)return h;
- const t=(ic,lab,a)=>`<button type="button" class="dht stdall" ${a}>${ic}<b>${i(lab)}</b></button>`;
- return h.slice(0,k)+t(sti('file','big'),stt('n_notes'),'data-act="go" data-to="notiz"')+t(sti('mpx','big'),stt('mpx'),'data-act="go" data-to="mpx"')+t(dhi('users','big'),stt('n_prof'),'data-act="go" data-to="profile"')+h.slice(k)}catch(e){Hooks.err('stdall',e);return h}});
+/* the menu (Alle Bereiche) is drawn by bereiche.js (v53) */
 Hooks.css('docs-start',`
 .stn{padding-bottom:110px!important}
 .stn .bsvhm2{display:none}

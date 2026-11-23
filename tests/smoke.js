@@ -743,7 +743,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>window.__T.R('home'));await p.waitForTimeout(300);await T(()=>document.querySelector('[data-act=stfull]').click());await p.waitForTimeout(300);
  check('«Vollständig» lists 8 papers, 2 ticked, the others with «scan»',await T(()=>document.querySelectorAll('.dtsheet .strow').length===8&&document.querySelectorAll('.dtsheet .strow.ok').length===2&&document.querySelectorAll('.dtsheet [data-sts]').length===6));
  await T(()=>document.querySelectorAll('.dtsheet').forEach(x=>x.remove()));
- check('the menu also holds Notizen, Meine Mappen and Profil',(await T(()=>{window.__T.R('dall');return[...document.querySelectorAll('.stdall')].map(b=>b.dataset.to).join(',')}))==='notiz,mpx,profile');
+ check('the menu also holds Notizen, Meine Mappen and Profil',/notiz,mpx,profile/.test(await T(()=>{window.__T.R('dall');return[...document.querySelectorAll('.stdall')].map(b=>b.dataset.to).join(',')})));
  await T(()=>{const G=window.__T.g();G.st50Off=1;window.__T.R('home');window.__T.v()});await p.waitForTimeout(300);check('g.st50Off brings the old home back',await T(()=>!!document.querySelector('.dhgrid')&&!document.querySelector('.stn')));
  await T(()=>{const W=window.__T,G=W.g();G.st50Off=0;G.nav6=G.navBak;delete G.navBak;W.Ke().items=W.Ke().items.filter(d=>!/^st\d$/.test(d.id));W.save();W.R('home')})}
  where='eingang fristen';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.ndbar').forEach(x=>x.remove());const W=window.__T,G=W.g();G.st50Off=0;G.dhOff=0;if(!G.st51t)G.st51t=Date.now()-1000;
@@ -782,6 +782,19 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('«Bank» answer offers the set «Kredit / Bank»',await T(()=>!!document.querySelector('.btm .btc[data-act=mpxnew][data-t=kredit]')));
  await T(()=>{const W=window.__T;W.g().st50Off=1;W.R('archive')});await p.waitForTimeout(300);check('g.st50Off brings the old Dokumente and chat back',await T(()=>!document.querySelector('.ddw')&&(window.__T.R('concierge'),!document.querySelector('.btw'))));
  await T(()=>{const W=window.__T,G=W.g();G.st50Off=0;G.chat=G.chatBak||[];delete G.chatBak;W.Ke().items=W.Ke().items.filter(x=>!/^dd\d$/.test(x.id));W.m().ddq='';W.save();W.R('home')})}
+ where='bereiche';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.ndbar').forEach(x=>x.remove());const W=window.__T,G=W.g();G.st50Off=0;G.dhOff=0;G.ctBak=G.contacts;
+  G.contacts=[{id:'bc1',first:'Anna',last:'Test',cat:'family',v2:1,notes:[],hist:[],files:[]},{id:'bc2',first:'Petra',last:'Arzt',cat:'law',v2:1,notes:[],hist:[],files:[]}];W.m().pf='all';W.m().pq='';W.m().pid=null;W.R('dall')});await p.waitForTimeout(400);
+ const d1=await T(()=>({main:document.querySelectorAll('.brall .brg .brt').length,more:[...document.querySelectorAll('.brall .brw')].map(b=>b.dataset.to||b.dataset.act).join(','),txt:document.querySelector('.brall .brg').textContent}));
+ check('Alle Bereiche: the 9 areas of Start; Kalender, Aufgaben, Lebensbuch, Tresor … under «Weitere»',d1.main===9&&d1.more==='mycal,tasks,life,dhvault,notiz,mpx,profile,sc9',JSON.stringify(d1));
+ await T(()=>window.__T.R('people'));await p.waitForTimeout(400);
+ const p1=await T(()=>({h:[...document.querySelectorAll('#plist .brh')].length,fam:document.querySelectorAll('#plist .brh')[0]&&document.querySelectorAll('#plist .brh')[0].nextElementSibling.textContent.includes('Anna'),imp:document.querySelectorAll('#plist .brh')[1]&&document.querySelectorAll('#plist .xpcard')[1].textContent.includes('Petra'),cls:document.querySelector('.screen.people').classList.contains('brppl')}));
+ check('Familie: «Familie & Nahestehende» and «Wichtige Menschen»',p1.h===2&&p1.fam&&p1.imp&&p1.cls,JSON.stringify(p1));
+ await p.fill('#pq','petra');await p.waitForTimeout(500);check('search shows the plain list',await T(()=>!document.querySelector('#plist .brh')&&document.querySelectorAll('#plist .xpcard').length===1));
+ await p.fill('#pq','');await p.waitForTimeout(500);check('…an empty search brings the two blocks back',await T(()=>document.querySelectorAll('#plist .brh').length===2));
+ await T(()=>{window.__T.g().contacts=[];window.__T.m().pq='';window.__T.R('people')});await p.waitForTimeout(300);check('empty Familie shows two first steps',await T(()=>document.querySelectorAll('#plist .brempty [data-act=pnew]').length===2));
+ await T(()=>{window.__T.m().dntab='v';window.__T.R('dnach')});await p.waitForTimeout(300);check('Vorsorge: the Tresor is a row under «Verfügungen»',await T(()=>!!document.querySelector('.dnl .brvault[data-act=dhvault]')));
+ await T(()=>{const W=window.__T;W.g().st50Off=1;W.R('dall')});await p.waitForTimeout(300);check('g.st50Off brings the old «Alle Bereiche» back',await T(()=>!document.querySelector('.brall')&&!!document.querySelector('.odall')));
+ await T(()=>{const W=window.__T,G=W.g();G.st50Off=0;G.contacts=G.ctBak||[];delete G.ctBak;W.save();W.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

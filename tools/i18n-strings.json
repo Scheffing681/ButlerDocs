@@ -1850,6 +1850,164 @@
    "behoerden.js"
   ]
  },
+ "All folders, search, scanner": {
+  "ru": "Все папки, поиск, сканер",
+  "de": "Alle Ordner, Suche, Scanner",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Passport, ID, licence, cards": {
+  "ru": "Паспорт, ID, права, карты",
+  "de": "Pass, Ausweis, Führerschein, Karten",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "All deadlines in one place": {
+  "ru": "Все сроки в одном месте",
+  "de": "Alle Fristen an einem Ort",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Appointments, numbers, letters": {
+  "ru": "Термины, номера, письма",
+  "de": "Termine, Nummern, Briefe",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Tax, contracts, costs": {
+  "ru": "Налоги, договоры, расходы",
+  "de": "Steuer, Verträge, Kosten",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Job, own business, training": {
+  "ru": "Работа, своё дело, учёба",
+  "de": "Job, eigenes Geschäft, Ausbildung",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Card, vaccinations, findings": {
+  "ru": "Карта, прививки, заключения",
+  "de": "Karte, Impfungen, Befunde",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Family and important people": {
+  "ru": "Семья и важные люди",
+  "de": "Familie und wichtige Menschen",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Wills, assets, safe": {
+  "ru": "Распоряжения, имущество, сейф",
+  "de": "Verfügungen, Vermögen, Tresor",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "All areas": {
+  "ru": "Все разделы",
+  "de": "Alle Bereiche",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "More": {
+  "ru": "Ещё",
+  "de": "Weitere",
+  "files": [
+   "bereiche.js",
+   "dokumente-butler.js"
+  ]
+ },
+ "Calendar": {
+  "ru": "Календарь",
+  "de": "Kalender",
+  "files": [
+   "bereiche.js",
+   "eingang-fristen.js"
+  ]
+ },
+ "Tasks": {
+  "ru": "Задачи",
+  "de": "Aufgaben",
+  "files": [
+   "bereiche.js",
+   "eingang-fristen.js"
+  ]
+ },
+ "Book of life": {
+  "ru": "Книга жизни",
+  "de": "Lebensbuch",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Safe": {
+  "ru": "Сейф",
+  "de": "Tresor",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Scanner": {
+  "ru": "Сканер",
+  "de": "Scanner",
+  "files": [
+   "bereiche.js",
+   "layout-docs.js"
+  ]
+ },
+ "Family & close ones": {
+  "ru": "Семья и близкие",
+  "de": "Familie & Nahestehende",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Important people": {
+  "ru": "Важные люди",
+  "de": "Wichtige Menschen",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Add partner, children, parents – Butler reminds you of birthdays and knows whom to call in an emergency.": {
+  "ru": "Впишите партнёра, детей, родителей — Батлер напомнит о днях рождения и будет знать, кого звать в беде.",
+  "de": "Tragen Sie Partner, Kinder, Eltern ein – Butler erinnert an Geburtstage und weiß, wen er im Notfall ruft.",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Doctor, notary, tax adviser, bank, landlord – everyone you need for your affairs.": {
+  "ru": "Врач, нотариус, налоговый консультант, банк, арендодатель — все, кто нужен в делах.",
+  "de": "Hausärztin, Notar, Steuerberater, Bank, Vermieter – alle, die man für Erledigungen braucht.",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Add a person": {
+  "ru": "Добавить человека",
+  "de": "Person hinzufügen",
+  "files": [
+   "bereiche.js"
+  ]
+ },
+ "Passwords, PINs, access – encrypted": {
+  "ru": "Пароли, PIN-коды, доступы — зашифровано",
+  "de": "Passwörter, PINs, Zugänge – verschlüsselt",
+  "files": [
+   "bereiche.js"
+  ]
+ },
  "My business": {
   "ru": "Мой бизнес",
   "de": "Mein Business",
@@ -3384,13 +3542,6 @@
    "dokumente-butler.js"
   ]
  },
- "More": {
-  "ru": "Ещё",
-  "de": "Mehr",
-  "files": [
-   "dokumente-butler.js"
-  ]
- },
  "Incoming letters": {
   "ru": "Входящие письма",
   "de": "Eingegangene Briefe",
@@ -3673,13 +3824,6 @@
    "eingang-fristen.js"
   ]
  },
- "Tasks": {
-  "ru": "Задачи",
-  "de": "Aufgaben",
-  "files": [
-   "eingang-fristen.js"
-  ]
- },
  "Overdue": {
   "ru": "Просрочено",
   "de": "Überfällig",
@@ -3720,13 +3864,6 @@
  "Deadline or task": {
   "ru": "Срок или задача",
   "de": "Frist oder Aufgabe",
-  "files": [
-   "eingang-fristen.js"
-  ]
- },
- "Calendar": {
-  "ru": "Календарь",
-  "de": "Kalender",
   "files": [
    "eingang-fristen.js"
   ]
@@ -5090,13 +5227,6 @@
    "layout-docs.js",
    "move-phone.js",
    "reliability.js"
-  ]
- },
- "Scanner": {
-  "ru": "Сканер",
-  "de": "Scanner",
-  "files": [
-   "layout-docs.js"
   ]
  },
  "Show here too? (no copy)": {

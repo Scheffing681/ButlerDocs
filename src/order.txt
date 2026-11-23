@@ -82,3 +82,4 @@ docs/languages-start.js
 docs/start.js
 docs/eingang-fristen.js
 docs/dokumente-butler.js
+docs/bereiche.js

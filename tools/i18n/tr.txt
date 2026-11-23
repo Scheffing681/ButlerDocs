@@ -1118,3 +1118,21 @@
 1117	«Kredi / banka» setini oluştur
 1118	Mektubun fotoğrafını çekin: Butler gönderen, tarih ve süreyi bulur – internetsiz. Mektubu kendi sözleriyle açıklamak için çevrimiçi YZ gerekir; bu daha sonra ve yalnızca sizin onayınızla gelir.
 1119	Mektubu fotoğrafla
+1120	Tüm klasörler, arama, tarayıcı
+1121	Pasaport, kimlik, ehliyet, kartlar
+1122	Tüm süreler tek yerde
+1123	Randevular, numaralar, mektuplar
+1124	Vergi, sözleşmeler, giderler
+1125	İş, kendi işiniz, eğitim
+1126	Kart, aşılar, raporlar
+1127	Aile ve önemli kişiler
+1128	Vasiyetler, varlıklar, kasa
+1129	Tüm alanlar
+1130	Hayat kitabı
+1131	Kasa
+1132	Aile ve yakınlar
+1133	Önemli kişiler
+1134	Eşinizi, çocuklarınızı, ebeveynlerinizi ekleyin – Butler doğum günlerini hatırlatır ve acil durumda kimi arayacağını bilir.
+1135	Doktor, noter, vergi danışmanı, banka, ev sahibi – işleriniz için gereken herkes.
+1136	Kişi ekle
+1137	Şifreler, PIN’ler, erişimler – şifreli

@@ -3857,7 +3857,8 @@
    "eingang-fristen.js",
    "linkup.js",
    "move-phone.js",
-   "seiten.js"
+   "seiten.js",
+   "sicherung.js"
   ]
  },
  "No deadlines": {
@@ -7333,6 +7334,153 @@
   "de": "Für Scans und Fotos. Fertige PDF-Dateien zerteilen – später.",
   "files": [
    "seiten.js"
+  ]
+ },
+ "Protect your backup": {
+  "ru": "Защитите резервную копию",
+  "de": "Ihre Sicherung schützen",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Everything is only on this phone. A backup brings it all back – after loss, damage or on a new phone.": {
+  "ru": "Всё хранится только на этом телефоне. Резервная копия вернёт всё — при потере, поломке или на новом телефоне.",
+  "de": "Alles liegt nur auf diesem Telefon. Eine Sicherung holt alles zurück – bei Verlust, Defekt oder einem neuen Telefon.",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Butler encrypts every backup with your password: without it nobody can open the file – not even we.": {
+  "ru": "Батлер шифрует каждую копию Вашим паролем: без него файл не откроет никто, даже мы.",
+  "de": "Butler verschlüsselt jede Sicherung mit Ihrem Passwort: Ohne es kann niemand die Datei öffnen – auch wir nicht.",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Write the password on paper and keep it with your important papers. Password forgotten = backup lost.": {
+  "ru": "Запишите пароль на бумаге и положите к важным документам. Забыли пароль — копия потеряна.",
+  "de": "Schreiben Sie das Passwort auf Papier und legen Sie es zu Ihren wichtigen Unterlagen. Passwort vergessen = Sicherung verloren.",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Password (at least 8 characters)": {
+  "ru": "Пароль (не меньше 8 знаков)",
+  "de": "Passwort (mindestens 8 Zeichen)",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Repeat the password": {
+  "ru": "Повторите пароль",
+  "de": "Passwort wiederholen",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "For example three words: Linden-Harbour-Coffee": {
+  "ru": "Например, три слова: Липа-Гавань-Кофе",
+  "de": "Zum Beispiel drei Wörter: Linde-Hafen-Kaffee",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "I have written the password down": {
+  "ru": "Я записал(а) пароль",
+  "de": "Ich habe das Passwort aufgeschrieben",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Set the password": {
+  "ru": "Установить пароль",
+  "de": "Passwort festlegen",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "At least 8 characters": {
+  "ru": "Нужно не меньше 8 знаков",
+  "de": "Mindestens 8 Zeichen",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "The passwords differ": {
+  "ru": "Пароли не совпадают",
+  "de": "Die Passwörter sind verschieden",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Please write the password down first": {
+  "ru": "Пожалуйста, сначала запишите пароль",
+  "de": "Bitte schreiben Sie das Passwort zuerst auf",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Password set": {
+  "ru": "Пароль установлен",
+  "de": "Passwort festgelegt",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Save the first backup now? It goes to «Files» – best into iCloud Drive.": {
+  "ru": "Сохранить первую копию сейчас? Она попадёт в «Файлы» — лучше всего в iCloud Drive.",
+  "de": "Jetzt die erste Sicherung speichern? Sie landet in «Dateien» – am besten in iCloud Drive.",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Save the first backup": {
+  "ru": "Сохранить первую копию",
+  "de": "Erste Sicherung speichern",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "The password stays on this phone so a backup takes one tap.": {
+  "ru": "Пароль хранится на этом телефоне, чтобы копия делалась одним нажатием.",
+  "de": "Das Passwort bleibt auf diesem Telefon, damit eine Sicherung mit einem Tipp geht.",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Change the backup password": {
+  "ru": "Изменить пароль копии",
+  "de": "Passwort der Sicherung ändern",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Current password": {
+  "ru": "Текущий пароль",
+  "de": "Aktuelles Passwort",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "The current password is wrong": {
+  "ru": "Текущий пароль неверен",
+  "de": "Das aktuelle Passwort stimmt nicht",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Password changed. Older backups open with the old password.": {
+  "ru": "Пароль изменён. Старые копии открываются старым паролем.",
+  "de": "Passwort geändert. Ältere Sicherungen öffnen sich mit dem alten Passwort.",
+  "files": [
+   "sicherung.js"
+  ]
+ },
+ "Backups are encrypted with your password": {
+  "ru": "Копии шифруются Вашим паролем",
+  "de": "Sicherungen werden mit Ihrem Passwort verschlüsselt",
+  "files": [
+   "sicherung.js"
   ]
  },
  "Ask Butler or search …": {

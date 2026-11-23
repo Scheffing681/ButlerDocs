@@ -35,6 +35,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  p.on('pageerror',e=>errs.push(where+': '+e.message.slice(0,160)));
  p.on('console',m=>{if(m.type()==='error'&&!/Failed to load resource|ERR_|net::/.test(m.text()))errs.push(where+': console '+m.text().slice(0,160))});
  await p.addInitScript(()=>{navigator.canShare=()=>true;navigator.share=async()=>{}});
+ await p.addInitScript(()=>{try{if(!sessionStorage.getItem('bkpT'))localStorage.setItem('bdocs:bd.bkpw','smoke-pass-1')}catch{}}); /* the app prefixes its keys with «bdocs:» */
  const T=(fn,arg)=>p.evaluate(fn,arg);
  const login=async()=>{for(let k=0;k<12;k++){let ok=false;try{ok=await T(()=>!!(window.__T&&window.__T.m().logged))}catch{await p.waitForTimeout(1200);continue}if(ok)break;try{await T(()=>document.querySelector('[data-act=face]')?.click())}catch{}await p.waitForTimeout(1600)}await T(()=>document.querySelectorAll('#td9tour').forEach(t=>t.remove()))};
  const kind=()=>T(()=>document.querySelector('.screen.bd8s')?'design':document.querySelector('.screen.home2')?'old-home':'screen');
@@ -84,6 +85,8 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.card.st53 [data-act=bkrestore]').click());await p.waitForTimeout(800);
  const hasIn=await T(()=>!!document.querySelector('.dtsheet [data-x=in]'));check('restore offers the copy kept on the phone',hasIn);
  if(hasIn){await T(()=>document.querySelector('.dtsheet [data-x=in]').click());await p.waitForTimeout(800);
+  /* v55: copies are encrypted with the backup password — the restore asks for it */
+  if(await T(()=>!!document.querySelector('.dtsheet form input[type=password]'))){await T(()=>{const f=document.querySelector('.dtsheet form');f.a.value='smoke-pass-1';f.requestSubmit()});await p.waitForTimeout(1200)}
   await Promise.all([p.waitForEvent('load',{timeout:15000}).catch(()=>null),T(()=>document.querySelector('.dtsheet [data-x=go]')?.click())]);await p.waitForTimeout(2200);await login();
   const t=await T(()=>window.__T.g().tasks.map(x=>x.t));check('restore brings the copy back',t.includes('Смоук: задача')&&!t.includes('Смоук: после копии'),t.join(' | '));
   await T(()=>window.__T.R('profile'));await p.waitForTimeout(600);
@@ -472,7 +475,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('…a missing photo is found, a complete one is fine, a foreign file is refused',ra[3]===1&&ra[7]===0&&ra[8]===1,JSON.stringify(ra));
  await T(()=>{const G=JSON.parse(JSON.stringify(window.__T.g()));G.v=1;G._ph={};window.__rlOpen(JSON.stringify(G),'silentium-test.json')});await p.waitForTimeout(400);
  check('the result says «nur geprüft» and changes nothing',await T(()=>!!document.querySelector('.dtsheet .rlres')&&/geprüft|проверено|checked/i.test(document.querySelector('.dtsheet').innerText)));await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));
- await T(()=>window.__rlOpen('not json','x.json'));await p.waitForTimeout(300);check('a broken file is said plainly',await T(()=>!!document.querySelector('.dtsheet .rlres.bad')));await T(()=>document.querySelector('.dtsheet [data-kgo=st53bk]').click());await p.waitForTimeout(400);check('…its «Neue Sicherung speichern» really starts a backup (v31: taps inside sheets)',await T(()=>!!document.querySelector('.dtsheet input[type=password]')));await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));
+ await T(()=>window.__rlOpen('not json','x.json'));await p.waitForTimeout(300);check('a broken file is said plainly',await T(()=>!!document.querySelector('.dtsheet .rlres.bad')));await T(()=>document.querySelector('.dtsheet [data-kgo=st53bk]').click());await p.waitForTimeout(400);await p.waitForTimeout(1800);check('…its «Neue Sicherung speichern» really starts a backup (v31: taps inside sheets; v55: with the stored password, no question)',await T(()=>new Promise(res=>{const r=indexedDB.open('bdocs-core',1);r.onsuccess=()=>{try{const q=r.result.transaction('kv').objectStore('kv').get('K');q.onsuccess=()=>res(!!q.result&&q.result.enc===true&&Date.now()-q.result.ts<20000);q.onerror=()=>res(false)}catch{res(false)}};r.onerror=()=>res(false)})));await T(()=>document.querySelectorAll('.dtsheet').forEach(s=>s.remove()));
  check('only one «report» button in the profile',await T(()=>!document.querySelector('.screen .td9rep')&&!!document.querySelector('[data-act=st1rep]')));
  await T(()=>document.querySelector('[data-act=st1rep]').click());await p.waitForTimeout(400);
  check('the error report shows version, screen and backup — and opens the own mail, share or copy',await T(()=>{const s=document.querySelector('.dtsheet');return!!s&&/Butler Docs · \S+ \d+/.test(s.querySelector('.rlpre').innerText)&&!!s.querySelector('[data-rr=mail]')&&!!s.querySelector('[data-rr=share]')}));
@@ -824,6 +827,23 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  const v1=await T(()=>{const I=window.__T.Ke().items;return{ver:I.filter(x=>/^Seitentest neu \(/.test(x.title)).map(x=>x.pages.length),part:I.filter(x=>/^Seitentest neu [–—] /.test(x.title)).map(x=>x.pages.length)}});
  check('«Neue Version» + «Teilen»: the original stays, a new version with 2 pages, a part with 1 page',(await T(()=>JSON.stringify(window.__T.Ke().items.find(x=>x.id==='sp1').pages)))===before&&JSON.stringify(v1.ver)==='[2]'&&JSON.stringify(v1.part)==='[1]',JSON.stringify(v1));
  await T(()=>{const W=window.__T;document.querySelectorAll('.spov,.dtsheet').forEach(x=>x.remove());W.Ke().items=W.Ke().items.filter(x=>!/^Seitentest|^Quelltest/.test(x.title||''));W.save();W.R('home')})}
+ where='sicherung';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.ndbar,.bkpov').forEach(x=>x.remove());sessionStorage.setItem('bkpT','1');localStorage.removeItem('bd.bkpw');window.__T.R('home');window.__T.v()});await p.waitForTimeout(400);
+ check('first start: without a password the full screen asks for one (no way to skip)',await T(()=>!!document.querySelector('.bkpov form')&&!document.querySelector('.bkpov [data-bkp=later]')&&!/close|×/.test(document.querySelector('.bkpov').innerText.slice(0,5))));
+ const sub=async(a,b,pp)=>{await T(([a,b,pp])=>{const f=document.querySelector('.bkpov form');f.a.value=a;f.b.value=b;f.p.checked=pp;f.requestSubmit()},[a,b,pp]);await p.waitForTimeout(200);return T(()=>{const e=document.querySelector('.bkpov .bkperr');return e&&!e.hidden?e.textContent:''})};
+ const e1=await sub('kurz','kurz',true),e2=await sub('linde-hafen','linde-hafe',true),e3=await sub('linde-hafen','linde-hafen',false);
+ check('it checks length, repetition and «aufgeschrieben»',!!e1&&!!e2&&!!e3&&e1!==e2&&e2!==e3,JSON.stringify([e1,e2,e3]));
+ await sub('linde-hafen','linde-hafen',true);await p.waitForTimeout(200);
+ check('…then «Passwort festgelegt» with «Erste Sicherung speichern» / «Später»',await T(()=>localStorage.getItem('bd.bkpw')==='linde-hafen'&&!!document.querySelector('.bkpov [data-bkp=go]')&&!!document.querySelector('.bkpov [data-bkp=later]')));
+ await T(()=>document.querySelector('.bkpov [data-bkp=go]').click());await p.waitForTimeout(2500);
+ const k=await T(()=>new Promise(res=>{const r=indexedDB.open('bdocs-core',1);r.onsuccess=()=>{try{const g=r.result.transaction('kv').objectStore('kv').get('K');g.onsuccess=()=>res(g.result?{enc:g.result.enc,ts:g.result.ts}:null);g.onerror=()=>res(null)}catch{res(null)}};r.onerror=()=>res(null)}));
+ check('the first backup is saved encrypted, without asking again',!!k&&k.enc===true&&Date.now()-k.ts<60000&&!(await T(()=>!!document.querySelector('.dtsheet #pvpwf'))),JSON.stringify(k));
+ await T(()=>{window.__T.R('pv')});await p.waitForTimeout(300);check('Datenschutz: «Passwort der Sicherung ändern» under the backup',await T(()=>!!document.querySelector('[data-act=bkpchg]')));
+ await T(()=>document.querySelector('[data-act=bkpchg]').click());await p.waitForTimeout(300);
+ const c1=await T(()=>{const f=document.querySelector('.dtsheet .bkpf');f.c.value='falsch';f.a.value='neues-pass-1';f.b.value='neues-pass-1';f.p.checked=true;f.requestSubmit();const e=f.querySelector('.bkperr');return!e.hidden});
+ const c2=await T(()=>{const f=document.querySelector('.dtsheet .bkpf');f.c.value='linde-hafen';f.requestSubmit();return localStorage.getItem('bd.bkpw')});
+ check('changing needs the current password',c1&&c2==='neues-pass-1',JSON.stringify([c1,c2]));
+ check('the password is not inside the app data (so never inside a backup)',await T(()=>!JSON.stringify(window.__T.g()).includes('neues-pass-1')));
+ await T(()=>{document.querySelectorAll('.dtsheet,.bkpov').forEach(x=>x.remove());sessionStorage.removeItem('bkpT');localStorage.setItem('bd.bkpw','smoke-pass-1');window.__T.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

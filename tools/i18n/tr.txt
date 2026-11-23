@@ -1157,3 +1157,24 @@
 1156	En az bir sayfa kalmalı
 1157	Bir saniye …
 1158	Taramalar ve fotoğraflar için. Hazır PDF dosyalarını bölmek – daha sonra.
+1159	Yedeğinizi koruyun
+1160	Her şey yalnızca bu telefonda. Bir yedek her şeyi geri getirir – kayıp, arıza veya yeni telefonda.
+1161	Butler her yedeği şifrenizle şifreler: o olmadan dosyayı kimse açamaz – biz bile.
+1162	Şifreyi kâğıda yazın ve önemli belgelerinizin yanında saklayın. Şifre unutuldu = yedek kayboldu.
+1163	Şifre (en az 8 karakter)
+1164	Şifreyi tekrarlayın
+1165	Örneğin üç kelime: Ihlamur-Liman-Kahve
+1166	Şifreyi yazdım
+1167	Şifreyi belirle
+1168	En az 8 karakter
+1169	Şifreler farklı
+1170	Lütfen önce şifreyi yazın
+1171	Şifre belirlendi
+1172	İlk yedek şimdi kaydedilsin mi? «Dosyalar»a gider – en iyisi iCloud Drive’a.
+1173	İlk yedeği kaydet
+1174	Şifre bu telefonda kalır, böylece yedek tek dokunuşla alınır.
+1175	Yedek şifresini değiştir
+1176	Mevcut şifre
+1177	Mevcut şifre yanlış
+1178	Şifre değiştirildi. Eski yedekler eski şifreyle açılır.
+1179	Yedekler şifrenizle şifrelenir

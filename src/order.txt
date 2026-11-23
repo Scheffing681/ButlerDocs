@@ -84,3 +84,4 @@ docs/eingang-fristen.js
 docs/dokumente-butler.js
 docs/bereiche.js
 docs/seiten.js
+docs/sicherung.js

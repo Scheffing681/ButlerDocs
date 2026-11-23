@@ -56,9 +56,10 @@ const STI={spark:'<path d="M12 3l1.9 6.1L20 11l-6.1 1.9L12 19l-1.9-6.1L4 11l6.1-
 const sti=(n,c)=>`<svg class="dhi${c?' '+c:''}" viewBox="0 0 24 24" aria-hidden="true">${STI[n]||(typeof DH_I!=='undefined'&&DH_I[n])||''}</svg>`;
 const stDays=k=>{try{const a=new Date();a.setHours(0,0,0,0);return Math.round((new Date(k+'T00:00:00')-a)/864e5)}catch{return 999}};
 /* every deadline the app knows: the sources of «Fristen» (documents, contracts, car, offices) plus open tasks with a date */
-function stDlAll(){let L2=[];try{if(typeof IZ==='function')L2=IZ()}catch{}
- try{if(typeof vDl==='function')L2=L2.concat(vDl())}catch{}try{if(typeof bsvDl==='function')L2=L2.concat(bsvDl())}catch{}try{if(typeof bsvDl3==='function')L2=L2.concat(bsvDl3())}catch{}
- try{(g.tasks||[]).forEach(t=>{if(!t||t.done||t.knd==='w'||!t.due||!/^\d{4}-\d\d-\d\d$/.test(t.due))return;L2.push({k:t.due,t:t.t||'—',w:'',act:'data-act="go" data-to="tasks"'})})}catch{}
+function stDlAll(){let L2=[];const tag=(A,src)=>(A||[]).map(t=>Object.assign({src},t));
+ try{if(typeof IZ==='function')L2=tag(IZ(),'doc')}catch{}
+ try{if(typeof vDl==='function')L2=L2.concat(tag(vDl(),'doc'))}catch{}try{if(typeof bsvDl==='function')L2=L2.concat(tag(bsvDl(),'gov'))}catch{}try{if(typeof bsvDl3==='function')L2=L2.concat(tag(bsvDl3(),'gov'))}catch{}
+ try{(g.tasks||[]).forEach(t=>{if(!t||t.done||t.knd==='w'||!t.due||!/^\d{4}-\d\d-\d\d$/.test(t.due))return;L2.push({src:'task',tid:t.id,k:t.due,t:t.t||'—',w:t.time||'',act:'data-act="go" data-to="tasks"'})})}catch{}
  const seen=new Set();return L2.filter(t=>t&&/^\d{4}-\d\d-\d\d$/.test(t.k||'')).filter(t=>{const key=t.k+'|'+t.t;if(seen.has(key))return!1;seen.add(key);return!0}).sort((a,b)=>a.k<b.k?-1:a.k>b.k?1:0)}
 /* «important»: overdue up to 60 days back and everything in the next 60 days */
 const stImp=()=>stDlAll().filter(t=>{const n=stDays(t.k);return n>=-60&&n<=60});
@@ -103,7 +104,7 @@ function stHome(){const I=stImp(),F=stFull(),ok=F.filter(x=>x.ok).length,p=Math.
   <button type="button" class="stai" data-act="go" data-to="concierge">${sti('spark','gold')}<b>${i(stt('ai'))}</b><small>${i(stt('aiS'))}</small></button></div>
  <div class="stduo"><div class="stcard stimp"><button type="button" class="sth" data-act="go" data-to="dsrok">${dhi('bell')}<b>${i(stt('imp'))}</b>${I.length?`<em>${I.length}</em>`:''}</button>${imp}</div>
   <div class="stov"><button type="button" class="stcard stfull" data-act="stfull"><small>${i(stt('full'))}</small><span class="string" style="--p:${p}%"><i><b>${p}%</b><small>${i(stt('fullS'))}</small></i></span></button>
-  <button type="button" class="stcard stmp" data-act="go" data-to="mpx">${sti('mpx')}<b>${i(stt('mpx'))}</b>${nm?`<em>${nm}</em>`:''}</button></div></div>
+  ${typeof egList==='function'?`<button type="button" class="stcard stmp" data-act="go" data-to="eing">${sti('mpx')}<b>${i(egt('t'))}</b>${(n=>n?`<em>${n}</em>`:'')(egList().length)}</button>`:`<button type="button" class="stcard stmp" data-act="go" data-to="mpx">${sti('mpx')}<b>${i(stt('mpx'))}</b>${nm?`<em>${nm}</em>`:''}</button>`}</div></div>
  <div class="star">${ST_A.map(([k,ic,a])=>{const s=stArea(k);return`<button type="button" class="sta${k==='docs'?' hl':''}" data-k="${k}" ${a}>${sti(ic)}<b>${i(stt('a_'+k))}</b>${s?`<small class="${s.c}">${i(s.t)}</small>`:'<small>&nbsp;</small>'}</button>`}).join('')}</div>
  </div>`}
 /* the screen itself: docs-home.js hands the home over to stHome() (the hooks that add cards — backup reminder, offices — keep working) */

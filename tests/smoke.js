@@ -746,6 +746,22 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('the menu also holds Notizen, Meine Mappen and Profil',(await T(()=>{window.__T.R('dall');return[...document.querySelectorAll('.stdall')].map(b=>b.dataset.to).join(',')}))==='notiz,mpx,profile');
  await T(()=>{const G=window.__T.g();G.st50Off=1;window.__T.R('home');window.__T.v()});await p.waitForTimeout(300);check('g.st50Off brings the old home back',await T(()=>!!document.querySelector('.dhgrid')&&!document.querySelector('.stn')));
  await T(()=>{const W=window.__T,G=W.g();G.st50Off=0;G.nav6=G.navBak;delete G.navBak;W.Ke().items=W.Ke().items.filter(d=>!/^st\d$/.test(d.id));W.save();W.R('home')})}
+ where='eingang fristen';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.ndbar').forEach(x=>x.remove());const W=window.__T,G=W.g();G.st50Off=0;G.dhOff=0;if(!G.st51t)G.st51t=Date.now()-1000;
+  const it=W.Ke().items,d=n=>{const x=new Date();x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)},b={kind:'other',files:[],pages:[],folder:'f1',f:{},who:'me'};
+  it.push(Object.assign({id:'eg0',title:'Altvertrag Eingangtest',ts:G.st51t-5000},b),Object.assign({id:'eg1',title:'Rechnung Eingangtest',dtype:'cert',ts:Date.now()+1000,end:d(5)},b),Object.assign({id:'eg2',title:'Scan_0042',ts:Date.now()+1000},b),Object.assign({id:'eg3',title:'Altvertrag Eingangtest',ts:Date.now()+1000},b));
+  G.tasks=G.tasks||[];G.tasks.push({id:'egt1',t:'Aufgabe Fristtest',due:d(-1),done:false,prio:2});W.save();W.R('eing')});await p.waitForTimeout(500);
+ const e1=await T(()=>[...document.querySelectorAll('.egw .egr')].map(r=>r.querySelector('b').textContent+'|'+r.querySelector('.egs').className.split(' ')[1]));
+ check('Eingang: only documents after the start line; ready / check / duplicate',e1.length===3&&e1.includes('Rechnung Eingangtest|ok')&&e1.includes('Scan_0042|chk')&&e1.includes('Altvertrag Eingangtest|dup'),JSON.stringify(e1));
+ await T(()=>document.querySelector('[data-act=egall]').click());await p.waitForTimeout(400);
+ check('«bereite bestätigen» confirms only the ready one; the bar can undo it',await T(()=>{const I=window.__T.Ke().items;return I.find(x=>x.id==='eg1').ok===1&&!I.find(x=>x.id==='eg2').ok&&document.querySelectorAll('.egw .egr').length===2&&!!document.querySelector('.lnqbar')}));
+ await T(()=>document.querySelector('.lnqbar button').click());await p.waitForTimeout(300);check('…undo brings it back into the Eingang',await T(()=>!window.__T.Ke().items.find(x=>x.id==='eg1').ok));
+ await T(()=>{window.__T.R('home')});await p.waitForTimeout(400);check('Start shows «Eingang 3» and it opens the Eingang',await T(()=>(document.querySelector('.stmp em')||{}).textContent==='3')&&await T(()=>{document.querySelector('.stmp').click();return window.__T.m().route})==='eing');
+ await T(()=>window.__T.R('dsrok'));await p.waitForTimeout(400);
+ const f1=await T(()=>({w:!!document.querySelector('.screen.frw'),t:[...document.querySelectorAll('.frw .frm b')].map(x=>x.textContent),ck:document.querySelectorAll('.frw [data-act=frdone]').length,h:[...document.querySelectorAll('.frw h3.odh')].map(x=>x.textContent)}));
+ check('Fristen: one list with the document deadline and the overdue task, grouped',f1.w&&f1.t.includes('Rechnung Eingangtest')&&f1.t.includes('Aufgabe Fristtest')&&f1.ck>=1&&f1.h.length>=2,JSON.stringify(f1));
+ await T(()=>document.querySelector('[data-act=frf][data-k=task]').click());await p.waitForTimeout(300);check('the filter «Aufgaben» shows only tasks',await T(()=>[...document.querySelectorAll('.frw .frm b')].every(x=>x.closest('.frr').querySelector('[data-act=frdone]'))));
+ await T(()=>document.querySelector('.frw [data-act=frdone][data-id=egt1]').click());await p.waitForTimeout(300);check('a task is ticked off right in Fristen',await T(()=>window.__T.g().tasks.find(x=>x.id==='egt1').done===true));
+ await T(()=>{const W=window.__T,G=W.g();W.m().frF='all';W.Ke().items=W.Ke().items.filter(x=>!/^eg\d$/.test(x.id));G.tasks=G.tasks.filter(x=>x.id!=='egt1');W.save();document.querySelectorAll('.lnqbar,.ndbar').forEach(x=>x.remove());W.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

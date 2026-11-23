@@ -105,7 +105,7 @@ function odSrok(){let L2=[];try{L2=typeof IZ==='function'?IZ():[]}catch(e){Hooks
  <p class="odin">${i(odt('dlIn'))}</p>
  ${L2.length?grp('gPast',t=>odDays(t.k)<0)+grp('gSoon',t=>{const n=odDays(t.k);return n>=0&&n<=90})+grp('gLater',t=>odDays(t.k)>90):`<div class="dhcard"><p class="dhnone">${i(odt('none'))}</p></div>`}
  <button type="button" class="dhcard odadd" data-act="dcaddq">${dhi('add')}<span>${i(odt('add'))}</span></button></div>`}
-(Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='dall')return odAll();if(m.route==='dsrok')return odSrok()}catch(e){Hooks.err('odscreen',e)}});
+(Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='dall')return odAll();if(m.route==='dsrok')return typeof frScreen==='function'&&stOn()?frScreen():odSrok()}catch(e){Hooks.err('odscreen',e)}});
 Hooks.act('odback',()=>R('home',void 0,!0));
 
 /* --- the welcome tour speaks about documents --- */

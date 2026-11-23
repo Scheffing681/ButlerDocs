@@ -1057,3 +1057,25 @@
 1056	Kira sözleşmesi
 1057	Profil
 1058	Butler
+1059	Gelen kutusu
+1060	Yeni belgeler önce buraya gelir. Butler'ın neyi tanıdığını kontrol edin ve onaylayın.
+1061	Kontrol et
+1062	Hazır
+1063	kontrol et
+1064	hazır
+1065	kopya mı?
+1066	Tür tanınmadı – lütfen ad verin
+1067	«%t» ile benzer
+1068	Onayla
+1069	%n hazır belgeyi onayla
+1070	Onaylandı: %n
+1071	Gelen kutusu boş. Eklediğiniz her şey önce burada görünür.
+1072	Tüm süreler tek yerde: belgeler, sözleşmeler, kurumlar ve görevler.
+1073	Görevler
+1074	Gecikmiş
+1075	Bu hafta
+1076	Bu ay
+1077	Süre yok
+1078	Süre veya görev
+1079	Takvim
+1080	Tamamlandı ✓

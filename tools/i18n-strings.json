@@ -1019,7 +1019,8 @@
   "ru": "Все",
   "de": "Alle",
   "files": [
-   "behoerden.js"
+   "behoerden.js",
+   "eingang-fristen.js"
   ]
  },
  "Your offices and services go here. Add only what you use.": {
@@ -3281,6 +3282,169 @@
    "docs-home.js"
   ]
  },
+ "Inbox": {
+  "ru": "Входящие",
+  "de": "Eingang",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "New documents land here first. Check what Butler recognised and confirm.": {
+  "ru": "Новые документы сначала попадают сюда. Проверьте, что Батлер распознал, и подтвердите.",
+  "de": "Neue Dokumente landen zuerst hier. Prüfen Sie, was Butler erkannt hat, und bestätigen Sie.",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Check": {
+  "ru": "Проверить",
+  "de": "Prüfen",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Ready": {
+  "ru": "Готово",
+  "de": "Bereit",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "check": {
+  "ru": "проверить",
+  "de": "prüfen",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "ready": {
+  "ru": "готово",
+  "de": "bereit",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "duplicate?": {
+  "ru": "дубликат?",
+  "de": "Duplikat?",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Kind not recognised – please name it": {
+  "ru": "Вид не распознан — дайте название",
+  "de": "Art nicht erkannt – bitte benennen",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Similar to «%t»": {
+  "ru": "Похож на «%t»",
+  "de": "Ähnlich wie «%t»",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Confirm": {
+  "ru": "Подтвердить",
+  "de": "Bestätigen",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Confirm %n ready ones": {
+  "ru": "Подтвердить готовые: %n",
+  "de": "%n bereite bestätigen",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Confirmed: %n": {
+  "ru": "Подтверждено: %n",
+  "de": "Bestätigt: %n",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "The inbox is empty. Everything you capture shows up here first.": {
+  "ru": "Входящие пусты. Всё, что Вы добавите, сначала появится здесь.",
+  "de": "Der Eingang ist leer. Alles, was Sie erfassen, erscheint zuerst hier.",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "All deadlines in one place: documents, contracts, offices and tasks.": {
+  "ru": "Все сроки в одном месте: документы, договоры, ведомства и задачи.",
+  "de": "Alle Fristen an einem Ort: Dokumente, Verträge, Behörden und Aufgaben.",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Tasks": {
+  "ru": "Задачи",
+  "de": "Aufgaben",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Overdue": {
+  "ru": "Просрочено",
+  "de": "Überfällig",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "This week": {
+  "ru": "На этой неделе",
+  "de": "Diese Woche",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "This month": {
+  "ru": "В этом месяце",
+  "de": "Dieser Monat",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Later": {
+  "ru": "Позже",
+  "de": "Später",
+  "files": [
+   "eingang-fristen.js",
+   "linkup.js",
+   "move-phone.js"
+  ]
+ },
+ "No deadlines": {
+  "ru": "Сроков нет",
+  "de": "Keine Fristen",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Deadline or task": {
+  "ru": "Срок или задача",
+  "de": "Frist oder Aufgabe",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Calendar": {
+  "ru": "Календарь",
+  "de": "Kalender",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
+ "Done ✓": {
+  "ru": "Выполнено ✓",
+  "de": "Erledigt ✓",
+  "files": [
+   "eingang-fristen.js"
+  ]
+ },
  "Butler added: %t": {
   "ru": "Butler дополнил: %t",
   "de": "Butler hat ergänzt: %t",
@@ -4795,14 +4959,6 @@
   "de": "%n verknüpfen",
   "files": [
    "linkup.js"
-  ]
- },
- "Later": {
-  "ru": "Позже",
-  "de": "Später",
-  "files": [
-   "linkup.js",
-   "move-phone.js"
   ]
  },
  "Linked: %n": {

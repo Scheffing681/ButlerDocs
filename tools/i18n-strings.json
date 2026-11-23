@@ -1930,6 +1930,7 @@
   "de": "Weitere",
   "files": [
    "bereiche.js",
+   "design.js",
    "dokumente-butler.js"
   ]
  },
@@ -3384,6 +3385,175 @@
    "chip.js"
   ]
  },
+ "Light": {
+  "ru": "Светлое",
+  "de": "Hell",
+  "files": [
+   "design.js",
+   "smaragd.js"
+  ]
+ },
+ "Dark": {
+  "ru": "Тёмное",
+  "de": "Dunkel",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Auto": {
+  "ru": "Авто",
+  "de": "Auto",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Like the phone": {
+  "ru": "Как на телефоне",
+  "de": "Wie am Telefon",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Appearance": {
+  "ru": "Оформление",
+  "de": "Erscheinungsbild",
+  "files": [
+   "design.js",
+   "smaragd.js"
+  ]
+ },
+ "Accent colour": {
+  "ru": "Цвет акцента",
+  "de": "Akzentfarbe",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Turquoise": {
+  "ru": "Бирюза",
+  "de": "Türkis",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Green": {
+  "ru": "Зелёный",
+  "de": "Grün",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Blue": {
+  "ru": "Синий",
+  "de": "Blau",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Gold": {
+  "ru": "Золото",
+  "de": "Gold",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Previous look": {
+  "ru": "Прежний вид",
+  "de": "Bisheriges Aussehen",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Bring back the old look of the app": {
+  "ru": "Вернуть старое оформление приложения",
+  "de": "Das alte Aussehen der App wiederherstellen",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Butler": {
+  "ru": "Батлер",
+  "de": "Butler",
+  "files": [
+   "design.js",
+   "start.js"
+  ]
+ },
+ "Speak": {
+  "ru": "Сказать",
+  "de": "Sprechen",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Scan": {
+  "ru": "Сканировать",
+  "de": "Scannen",
+  "files": [
+   "design.js",
+   "dokumente-butler.js",
+   "notizen.js",
+   "start.js"
+  ]
+ },
+ "Deadline / note": {
+  "ru": "Срок / заметка",
+  "de": "Frist / Notiz",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Explain a letter": {
+  "ru": "Объяснить письмо",
+  "de": "Brief erklären",
+  "files": [
+   "design.js",
+   "dokumente-butler.js"
+  ]
+ },
+ "Ask Butler…": {
+  "ru": "Спросите Батлера…",
+  "de": "Fragen Sie Butler…",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Send": {
+  "ru": "Отправить",
+  "de": "Senden",
+  "files": [
+   "design.js"
+  ]
+ },
+ "For example": {
+  "ru": "Например",
+  "de": "Zum Beispiel",
+  "files": [
+   "design.js"
+  ]
+ },
+ "This is Butler": {
+  "ru": "Это Батлер",
+  "de": "Das ist Butler",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Tap: ask or add. Hold: scan right away.": {
+  "ru": "Нажмите — спросить или добавить. Удерживайте — сразу скан.",
+  "de": "Tippen: fragen oder erfassen. Gedrückt halten: sofort scannen.",
+  "files": [
+   "design.js"
+  ]
+ },
+ "Got it": {
+  "ru": "Понятно",
+  "de": "Verstanden",
+  "files": [
+   "design.js",
+   "tidy.js"
+  ]
+ },
  "data-act=\"go\" data-to=\"archive\"": {
   "ru": "docs",
   "de": "fld",
@@ -3480,15 +3650,6 @@
   "de": "Suchen: Name, Text, Nummer …",
   "files": [
    "dokumente-butler.js"
-  ]
- },
- "Scan": {
-  "ru": "Скан",
-  "de": "Scannen",
-  "files": [
-   "dokumente-butler.js",
-   "notizen.js",
-   "start.js"
   ]
  },
  "File": {
@@ -3592,13 +3753,6 @@
  "Or ask below in your own words.": {
   "ru": "Или спросите своими словами внизу.",
   "de": "Oder fragen Sie unten mit eigenen Worten.",
-  "files": [
-   "dokumente-butler.js"
-  ]
- },
- "Explain a letter": {
-  "ru": "Объяснить письмо",
-  "de": "Ein Schreiben erklären",
   "files": [
    "dokumente-butler.js"
   ]
@@ -7483,20 +7637,6 @@
    "sicherung.js"
   ]
  },
- "Appearance": {
-  "ru": "Оформление",
-  "de": "Erscheinungsbild",
-  "files": [
-   "smaragd.js"
-  ]
- },
- "Light": {
-  "ru": "Светлое",
-  "de": "Hell",
-  "files": [
-   "smaragd.js"
-  ]
- },
  "Ivory and green": {
   "ru": "Слоновая кость и зелень",
   "de": "Elfenbein und Grün",
@@ -7738,13 +7878,6 @@
  "Profile": {
   "ru": "Профиль",
   "de": "Profil",
-  "files": [
-   "start.js"
-  ]
- },
- "Butler": {
-  "ru": "Батлер",
-  "de": "Butler",
   "files": [
    "start.js"
   ]
@@ -8242,13 +8375,6 @@
  "Open profile": {
   "ru": "Открыть «Профиль»",
   "de": "Profil öffnen",
-  "files": [
-   "tidy.js"
-  ]
- },
- "Got it": {
-  "ru": "Понятно",
-  "de": "Verstanden",
   "files": [
    "tidy.js"
   ]

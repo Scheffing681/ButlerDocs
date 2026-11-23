@@ -1183,3 +1183,20 @@
 1182	Fildişi ve yeşil
 1183	Zümrüt
 1184	Parıltılı koyu yeşil
+1185	Koyu
+1186	Otomatik
+1187	Telefondaki gibi
+1188	Vurgu rengi
+1189	Turkuaz
+1190	Yeşil
+1191	Mavi
+1192	Altın
+1193	Önceki görünüm
+1194	Uygulamanın eski görünümünü geri getir
+1195	Konuş
+1196	Süre / not
+1197	Butler'a sorun…
+1198	Gönder
+1199	Örneğin
+1200	Bu Butler
+1201	Dokunun: sorun veya ekleyin. Basılı tutun: hemen tarayın.

@@ -43,6 +43,8 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await p.goto(URL0);await p.waitForTimeout(2000);
  await p.locator('input:visible').last().fill('Тест');await p.getByText('Начать',{exact:true}).click();await p.waitForTimeout(1000);await login();
  check('sign in',await T(()=>window.__T.m().logged));
+ /* the older blocks test the previous look; the new look «Glas» has its own block at the end */
+ await T(()=>{window.__T.g().bd57Off=1});
 
  /* version numbers agree, so the «new version» banner cannot loop */
  const sw=fs.readFileSync(path.join(ROOT,'sw.js'),'utf8').match(/bdocs-v(\d+)/)[1],idx=fs.readFileSync(path.join(ROOT,'index.html'),'utf8').match(/app\.js\?v=(\d+)/)[1],nt=String(await T(()=>window.__T.NT)).split(' ')[0];
@@ -844,7 +846,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('changing needs the current password',c1&&c2==='neues-pass-1',JSON.stringify([c1,c2]));
  check('the password is not inside the app data (so never inside a backup)',await T(()=>!JSON.stringify(window.__T.g()).includes('neues-pass-1')));
  await T(()=>{document.querySelectorAll('.dtsheet,.bkpov').forEach(x=>x.remove());sessionStorage.removeItem('bkpT');localStorage.setItem('bd.bkpw','smoke-pass-1');window.__T.R('home')})}
- where='smaragd';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.ndbar').forEach(x=>x.remove());window.__T.g().stPrevTest=window.__T.g().style;window.__T.R('style')});await p.waitForTimeout(400);
+ where='smaragd';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.ndbar').forEach(x=>x.remove());window.__T.g().bd57Off=1;window.__T.g().stPrevTest=window.__T.g().style;window.__T.R('style')});await p.waitForTimeout(400);
  check('Stil: «Erscheinungsbild» Hell / Smaragd on top',await T(()=>document.querySelectorAll('.smpick .smo').length===2));
  await T(()=>document.querySelector('.smo.sms').click());await p.waitForTimeout(400);
  const s1=await T(()=>{const r=document.documentElement;return{st:window.__T.g().style,ds:r.dataset.style,sm:r.dataset.sm,bg:getComputedStyle(r).getPropertyValue('--bg').trim().toLowerCase(),on:!!document.querySelector('.smo.sms.on')}});
@@ -852,7 +854,31 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>{window.__T.R('home');window.__T.v()});await p.waitForTimeout(300);check('…it stays when the screen changes',await T(()=>document.documentElement.dataset.sm==='1'&&document.documentElement.dataset.style==='glanz'));
  await T(()=>window.__T.R('style'));await p.waitForTimeout(300);await T(()=>document.querySelector('.smo.smh').click());await p.waitForTimeout(400);
  check('«Hell» brings the previous look back',await T(()=>{const G=window.__T.g();return G.style===G.stPrevTest&&!document.documentElement.dataset.sm}));
- await T(()=>{delete window.__T.g().stPrevTest;window.__T.R('home')})}
+ await T(()=>{delete window.__T.g().stPrevTest;delete window.__T.g().bd57Off;window.__T.R('home')})}
+ where='design';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.ndbar,.bdtip').forEach(x=>x.remove());const G=window.__T.g();G.bdTheme='hell';window.__T.R('home');window.__T.v()});await p.waitForTimeout(400);
+ const d1=await T(()=>{const r=document.documentElement,n=document.querySelector('.nav.bdnav');return{bd:r.dataset.bd,bg:getComputedStyle(r).getPropertyValue('--bg').trim().toUpperCase(),keys:n?[...n.querySelectorAll('[data-act=ly6go]')].map(b=>b.dataset.k).join(','):'',orb:!!(n&&n.querySelector('.bdorb')),on:n&&n.querySelector('.on')&&n.querySelector('.on').dataset.k}});
+ check('Glas: light palette on <html data-bd="hell">',d1.bd==='hell'&&d1.bg==='#F6F4EE',JSON.stringify(d1));
+ check('Glas: fixed bar Start · Dokumente · Butler orb · Fristen · Mehr',d1.keys==='home,archive,fristen,mehr'&&d1.orb&&d1.on==='home',JSON.stringify(d1));
+ await T(()=>{window.__T.g().nav6=['home','search','stats','profile'];window.__T.v()});await p.waitForTimeout(200);
+ check('…a saved old bar does not change it',await T(()=>[...document.querySelectorAll('.nav.bdnav [data-act=ly6go]')].map(b=>b.dataset.k).join(',')==='home,archive,fristen,mehr'));
+ await T(()=>document.querySelector('.bdorb').click());await p.waitForTimeout(300);
+ check('Tap on the orb opens the Butler sheet (4 actions, suggestions, input)',await T(()=>{const s=document.querySelector('.bdsheet');return!!s&&s.querySelectorAll('[data-bq]').length===4&&s.querySelectorAll('[data-bk]').length===4&&!!s.querySelector('.bdin input')}));
+ await T(()=>{const s=document.querySelector('.bdsheet');s.querySelector('[data-bk=dl]').click()});await p.waitForTimeout(500);
+ check('…a suggestion goes to the Butler conversation',await T(()=>window.__T.m().route==='concierge'&&!document.querySelector('.bdsheet')&&!!document.querySelector('.nav.bdnav .bdorb.on')));
+ await T(()=>{window.__T.g().bdTheme='dunkel';window.__T.R('dall')});await p.waitForTimeout(300);
+ const d2=await T(()=>({bd:document.documentElement.dataset.bd,pick:document.querySelectorAll('.bdpick [data-act=bdtheme]').length,on:document.querySelector('.nav.bdnav .on')&&document.querySelector('.nav.bdnav .on').dataset.k}));
+ check('Dunkel + switch on top of «Mehr», Mehr lit',d2.bd==='dunkel'&&d2.pick===3&&d2.on==='mehr',JSON.stringify(d2));
+ await T(()=>document.querySelector('.bdpick [data-v=auto]').click());await p.waitForTimeout(300);
+ check('Auto follows the phone',await T(()=>window.__T.g().bdTheme==='auto'&&document.documentElement.dataset.bd===(matchMedia('(prefers-color-scheme: dark)').matches?'dunkel':'hell')));
+ await T(()=>window.__T.R('style'));await p.waitForTimeout(300);
+ check('Stil: Hell/Dunkel/Auto, 4 accent colours, way back to the old look',await T(()=>document.querySelectorAll('.bdpick [data-act=bdacc]').length===4&&!!document.querySelector('[data-act=bdold]')));
+ await T(()=>document.querySelector('[data-act=bdacc][data-v=blau]').click());await p.waitForTimeout(200);
+ check('…accent colour changes',await T(()=>getComputedStyle(document.documentElement).getPropertyValue('--bd-acc').trim().toUpperCase()==='#2F62C8'||getComputedStyle(document.documentElement).getPropertyValue('--bd-acc').trim().toUpperCase()==='#86AEFF'));
+ await T(()=>document.querySelector('[data-act=bdold]').click());await p.waitForTimeout(300);
+ check('«Bisheriges Aussehen» brings the old bar back, and the way back is offered',await T(()=>!document.documentElement.dataset.bd&&!document.querySelector('.nav.bdnav')&&!!document.querySelector('.bdback')));
+ await T(()=>document.querySelector('.bdback').click());await p.waitForTimeout(300);
+ check('…and «Glas» again',await T(()=>!!document.documentElement.dataset.bd&&!!document.querySelector('.nav.bdnav')));
+ await T(()=>{const G=window.__T.g();G.bdAcc='tuerkis';G.bdTheme='auto';window.__T.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

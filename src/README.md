@@ -41,5 +41,7 @@ The robot fails if the number of old wrapper layers grows (`tests/wrappers-basel
 
 
 ## Translations
+
+Shown languages (v49): de, en, ru (in the source arrays) + the dictionaries in `tools/i18n-active.json` (tr, uk). Only these must be complete; `node tools/i18n-build.js tr uk`. The hidden ones (pl fr es it ro bg sr hr) keep their last dictionaries; before showing one again, translate the texts added since and add it to `LGS_ON` in `docs/languages-start.js`.
 `src/modules/i18n/<lang>.js` hold the tr/pl/fr/es texts of the Docs modules, keyed by the English text of each `[ru,de,en]` array. After adding or changing texts: `node tools/i18n-extract.js` (new texts are appended to `tools/i18n-keys.json`), add the lines to `tools/i18n/<lang>.txt`, then `node tools/i18n-build.js tr pl fr es` (checks placeholders and line breaks).
 The new languages it/uk/ro/bg/sr/hr (v45) use `tools/i18n-keys-new.json` (Docs texts + visible core texts, same indices in every `.txt`). They are shown by the DOM translator `i18n/dom.js`; after a build run `node tools/i18n-alias.js` (German/Russian → English twin, ties dropped) and build again. Serbian is written in Latin script. New Docs texts: run `node tools/i18n-extract.js`, append the new keys also to the end of `tools/i18n-keys-new.json` (same order), then add lines to every `.txt` (old languages from index 889+, new ones from the end of keys-new).

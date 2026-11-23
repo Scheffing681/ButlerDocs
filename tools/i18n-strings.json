@@ -4540,6 +4540,13 @@
    "karriere2.js"
   ]
  },
+ "This language is not in the app yet – it is in English for now. You can change the language in the profile.": {
+  "ru": "Этот язык пока не входит в приложение – оно открыто на английском. Язык можно сменить в профиле.",
+  "de": "Diese Sprache ist noch nicht in der App – sie ist jetzt auf Englisch. Die Sprache ändern Sie im Profil.",
+  "files": [
+   "languages-start.js"
+  ]
+ },
  "Home": {
   "ru": "Главная",
   "de": "Startseite",

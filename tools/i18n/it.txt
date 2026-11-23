@@ -1,0 +1,1580 @@
+0	Lettera da un ufficio
+1	Sembra una lettera di: %o
+2	%k di %d
+3	%e – circa fino al %f: data della lettera + 4 giorni di consegna + 1 mese. Controlli la lettera.
+4	Scadenza nella lettera: entro il %f
+5	Scadenza nel calendario
+6	Scadenza nel calendario ✓
+7	A «%o»
+8	Collegato a «%o»
+9	Scadenza tra una settimana: %e – %o
+10	Lettere e decisioni
+11	Lettera
+12	Modello
+13	Decisione / lettera del
+14	Riferimento
+15	Testo della lettera
+16	Come inviare
+17	Posta
+18	Fax
+19	Di persona
+20	PDF / stampa
+21	Copia
+22	Inviato
+23	Numero di tracciamento
+24	Salvato nel registro e in «Lettere»
+25	Aggiunga il suo indirizzo in «I miei dati» – così entra nella lettera.
+26	Nessuna e-mail per questo ufficio – la aggiunga nella scheda
+27	Le mie domande
+28	＋ domanda
+29	Cosa è stato richiesto
+30	Presentata
+31	Come
+32	online
+33	per posta
+34	di persona
+35	In corso
+36	Decisione ricevuta
+37	Prossimo passo
+38	Chiedere lo stato
+39	chiedere se entro il %d non arriva nulla
+40	Chiedere lo stato: %t – %o
+41	Chiamate e prove
+42	Chiamata
+43	Ricevuto
+44	Chi
+45	Cosa è stato detto / cos’è
+46	Foto della ricevuta o della lettera
+47	Traccia
+48	Numero copiato – lo incolli sulla pagina di Deutsche Post
+49	Ha chiamato «%o». Con chi ha parlato? Cosa è stato detto?
+50	Tutte le voci: %n
+51	altro
+52	Domanda
+53	Trovato nella lettera
+54	Ufficio
+55	Cosa conservare
+56	Non trovato nulla – lo scriva lei
+57	Scadenza dalla lettera – decide lei
+58	Sembra: %e entro il %f
+59	Aggiungi
+60	Altra data
+61	Non serve
+62	Crea la scheda
+63	Salva in «%n»
+64	Indirizzo cambiato: era «%a»
+65	Fatto – scheda «%n»
+66	Indirizzo cambiato – aggiorna
+67	Scrivi a %o
+68	Lettera vuota
+69	Indirizzo e riferimento sono già dentro
+70	Lettere inviate
+71	Data
+72	Salva
+73	Elimina
+74	Vuoto per ora
+75	foto
+76	Prossimi appuntamenti
+77	I miei appuntamenti
+78	Aggiungi appuntamento
+79	Appuntamento
+80	Ora
+81	Per cosa
+82	ad es. rinnovo del permesso di soggiorno
+83	Da portare
+84	＋ voce
+85	Cos’altro portare
+86	Documenti dall’app
+87	Scegli documenti
+88	Ancora nessun documento
+89	Inserisca una data
+90	Appuntamento nel calendario, promemoria il giorno prima
+91	Domani: %n – prepari i documenti
+92	Fatto
+93	Ripristina
+94	Pronto: %a di %b
+95	tra %n giorni
+96	oggi
+97	domani
+98	passato
+99	%d – scade %w
+100	Rinnovato da: %o. Prenoti presto – l’attesa può durare settimane.
+101	Prenota
+102	Apri
+103	Aggiungi «%o»
+104	Ce l’ho
+105	Nascondi
+106	Ogni anno
+107	＋ obbligo annuale
+108	Obbligo annuale
+109	Personale
+110	Cosa fare
+111	Prossima data
+112	Ripeti
+113	ogni anno
+114	ogni 2 anni
+115	Fatto – prossima data %d
+116	Le date seguono regole generali – le verifichi per il suo caso.
+117	Eliminare davvero? Tocchi di nuovo
+118	Uffici
+119	Uffici e servizi
+120	Chi avvisare: pensione, cassa malattia, ufficio delle imposte …
+121	%t è nella cassaforte – apra «%n» e tocchi «Mostra».
+122	%n: telefono %v
+123	Prossimo appuntamento: %n, %d
+124	Nessun appuntamento
+125	Appuntamenti, numeri, link
+126	Ordine
+127	Cosa aggiungere?
+128	Crea il tuo
+129	Qualsiasi ufficio, medico o associazione – con i propri link e pulsanti
+130	Fissati
+131	Tutti
+132	Qui ci sono i suoi uffici e servizi. Aggiunga solo ciò che usa.
+133	Emergenza
+134	Polizia
+135	Vigili del fuoco · ambulanza
+136	Guardia medica
+137	I miei dati d’emergenza
+138	Cosa dire al telefono
+139	Dove? – indirizzo, piano · Cosa è successo? · Quanti feriti? · Chi chiama? · Aspetti le domande – non riattacchi.
+140	Il mio indirizzo
+141	Gruppo sanguigno
+142	Allergie
+143	Farmaci
+144	Contatto d’emergenza
+145	Telefono del contatto
+146	Lo compili adesso – in un’emergenza non c’è tempo.
+147	115 – il numero dei servizi pubblici: dice quale ufficio è competente
+148	Aperto fino alle %t
+149	Chiuso
+150	apre %d %t
+151	Lun Mar Mer Gio Ven Sab Dom
+152	Percorso
+153	I miei numeri
+154	Copiato
+155	Mostra
+156	segreto – nella cassaforte
+157	Il numero è nascosto. Con un codice della cassaforte è cifrato.
+158	Indirizzo
+159	Orari
+160	Nota
+161	Precompilato – controlli: indirizzi e orari cambiano.
+162	Controllato
+163	Modifica
+164	Eliminato
+165	Nome
+166	ad es. Ufficio stranieri
+167	Simbolo
+168	Gruppo
+169	Nuovo gruppo
+170	Per chi
+171	Telefono
+172	Link per prenotare
+173	La prenotazione avviene sempre sul sito dell’ufficio – questo è solo il link.
+174	Incolla
+175	Impossibile incollare – tenga premuto il campo e scelga «Incolla»
+176	Pulsanti e link
+177	＋ pulsante personale
+178	Etichetta
+179	Link, telefono o e-mail
+180	＋ numero
+181	Cos’è
+182	Numero
+183	segreto
+184	Fissa in alto
+185	Nella schermata iniziale
+186	Annulla
+187	Salvato
+188	Inserisca un nome
+189	Questo link non è valido
+190	Aggiunto – controlli i dati
+191	aggiunto
+192	Salute
+193	Famiglia e scuola
+194	Associazioni e altro
+195	Io
+196	Moglie
+197	Figlio/a
+198	Configura
+199	Configurazione in un minuto
+200	Dove abita?
+201	CAP o città – per precompilare gli indirizzi (per ora preciso per 63741 Aschaffenburg).
+202	Per chi?
+203	Ogni persona ha i propri uffici – potrà indicare di chi più tardi.
+204	Di cosa ha bisogno?
+205	Scelga ciò che le serve. Il resto più tardi.
+206	Avanti
+207	Indietro
+208	Salta
+209	Fatto: aggiunti %n
+210	Qui
+211	Cerca: nome, numero, riferimento …
+212	Da una lettera
+213	Scansiona → ufficio, indirizzo, riferimento – dall’intestazione
+214	Incolla un link
+215	Ha copiato un link di prenotazione – lo incolli, fatto
+216	A mano
+217	Un nome e un contatto – 10 secondi
+218	Quale lettera?
+219	Scansiona una lettera
+220	Dopo la scansione torni qui e scelga la lettera.
+221	Ancora nessuna scansione
+222	Telefono, e-mail o link
+223	＋ altro contatto
+224	✓ telefono
+225	✓ e-mail
+226	✓ link → pulsante «Appuntamento»
+227	✓ link
+228	? non riconosciuto – controlli
+229	Altro (facoltativo)
+230	indirizzo · orari · numeri · simbolo · gruppo · pulsanti · home
+231	Link
+232	Nessun gruppo
+233	Scrivi
+234	Esiste già?
+235	Sembra «%n» – %w. Aggiungere i dati lì, così lettere e scadenze restano in un posto?
+236	stesso nome
+237	stessa e-mail
+238	stesso telefono
+239	stesso sito
+240	nome simile
+241	Aggiungi a «%n»
+242	Un altro ufficio – crea nuovo
+243	Aggiunto a «%n» ✓
+244	La mia attività
+245	Istruzione
+246	💼 Ho una mia attività
+247	Fatture, ricevute, documenti dell’azienda, scadenze – «La mia attività»
+248	Dati dell’azienda non ancora inseriti
+249	Tocchi per compilare
+250	IVA ordinaria
+251	POLSO
+252	Fatture aperte
+253	Scaduta da %d giorni
+254	Scaduta da 1 giorno
+255	Tutte le fatture pagate
+256	Dichiarazione dei redditi %y
+257	Fattura
+258	Ricevuta
+259	Cliente
+260	Documenti
+261	%y · entrate e uscite
+262	Entrate
+263	Uscite
+264	Utile
+265	Semplificato: l’entrata conta il giorno del pagamento. Verifichi.
+266	📎 Per il commercialista: elenco + ricevute (PDF/CSV)
+267	Fatture %y
+268	Uscite %y
+269	Ancora nessuna fattura
+270	Ancora nessuna ricevuta
+271	pagata
+272	aperta
+273	scaduta
+274	annullata
+275	Dal 2028 le fatture alle aziende (B2B) devono essere in formato elettronico – le piccole imprese sono esenti, i clienti privati non sono interessati. Verifichi.
+276	Nome dell’attività
+277	Titolare (nome completo)
+278	Forma giuridica
+279	Partita IVA UE (se presente)
+280	Sono una piccola impresa (§ 19 UStG, senza IVA)
+281	nessuna
+282	mensile
+283	trimestrale
+284	Ho un commercialista
+285	Banca
+286	Prefisso del numero di fattura
+287	Nascondi «La mia attività»
+288	I dati restano; può riattivarla qui.
+289	Altro
+290	Clienti
+291	＋ Nuovo cliente
+292	Nome / azienda
+293	Ancora nessun cliente
+294	%n fatture
+295	Il cliente ha fatture – non si può eliminare
+296	Nuova fattura
+297	— scegliere —
+298	N. (automatico)
+299	Data fattura
+300	Data della prestazione
+301	Pagabile entro
+302	%n giorni
+303	Voci
+304	Descrizione
+305	Qtà
+306	Unità
+307	Prezzo €
+308	IVA
+309	＋ Voce
+310	Netto
+311	Totale
+312	Il testo si inserisce da solo: «Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.» I dati obbligatori (nome, indirizzo, n. fiscale, data, n.) vengono da «La mia attività».
+313	Inserisca prezzi netti; l’IVA viene calcolata. I dati obbligatori vengono da «La mia attività».
+314	Nota sulla fattura (facoltativa)
+315	Pagata il
+316	Vuoto = ancora aperta. La data di pagamento conta per le entrate di quell’anno.
+317	Crea PDF
+318	✉ Invia per e-mail (la sua posta)
+319	Annulla fattura
+320	Una fattura emessa non si elimina, si annulla – resta nell’elenco.
+321	Ripristina fattura
+322	Fattura salvata
+323	PDF salvato in «Documenti»
+324	Scelga un cliente
+325	Almeno una voce con descrizione e prezzo
+326	Inserisca prima nome dell’azienda, titolare, indirizzo e numero fiscale
+327	Questo numero esiste già
+328	Fattura %n
+329	Buongiorno,\n\nin allegato la fattura %n di %s.\n\nCordiali saluti\n%f
+330	PDF scaricato – lo alleghi all’e-mail.
+331	Controlla pagamento: %n · %c
+332	Dichiarazione dei redditi %y (EÜR) entro il %d
+333	Ricevuta / spesa
+334	Importo € (lordo)
+335	Categoria
+336	Foto o file della ricevuta
+337	📷 Scansiona
+338	📄 File
+339	✓ %n file scelti
+340	✓ salvato in «Documenti»
+341	Inserisca l’importo
+342	Ricevuta salvata
+343	senza immagine
+344	Materiali / merci
+345	Software / servizi
+346	Viaggi / auto
+347	Telefono / internet
+348	Assicurazioni
+349	Affitto
+350	Pubblicità
+351	Documenti e scadenze
+352	%a di %b
+353	Scadenze
+354	Contratti con clienti
+355	Affitto / ufficio
+356	dall’ufficio attività commerciali
+357	questionario + lettera
+358	→ contratto anche in Finanze › Costi
+359	contratti, offerte
+360	se presente
+361	%n documenti
+362	Aggiungi: %s
+363	Il documento è salvato una volta in «Documenti» e qui solo collegato.
+364	Scansione / foto
+365	File (PDF, foto)
+366	Già in «Documenti»
+367	Cerca …
+368	Nessun altro documento
+369	Collegato
+370	rimuovi da qui (il documento resta)
+371	＋ Altro
+372	Fattura %n in scadenza
+373	Dichiarazione dei redditi %y (EÜR)
+374	senza commercialista
+375	con commercialista
+376	Conservare ricevute e fatture %y
+377	8 anni (dal 2025) – verifichi
+378	fino al %d
+379	Nessuna scadenza aperta
+380	Regole generali, non consulenza fiscale. Verifichi con l’ufficio delle imposte o un consulente.
+381	Per il commercialista
+382	Anno
+383	%a fatture · %b ricevute
+384	Elenco (CSV, per Excel)
+385	Tutto in un PDF (riepilogo, fatture, ricevute)
+386	Lo invia lei – con la sua posta o «Condividi». Le ricevute che esistono solo come file PDF non entrano nel PDF unico – sono in «Documenti».
+387	Acconti d’imposta
+388	Importo per trimestre, €
+389	Km percorsi (andata e ritorno)
+390	Da → a
+391	Auto propria per viaggi di lavoro: 0,30 € al km. L’importo si inserisce da solo. Verifichi.
+392	La sua attività – se ne ha una
+393	Per chi lavora in proprio o vende qualcosa come secondo lavoro.
+394	Fatture PDF con tutti i dati obbligatori
+395	Ricevute, entrate, uscite e utile per anno
+396	Documenti dell’azienda e scadenze
+397	Elenco per il commercialista (PDF/CSV)
+398	Attiva «La mia attività»
+399	Nessuna attività? La lasci spenta – non cambia nulla.
+400	subito
+401	Creazione …
+402	Riepilogo %y
+403	Finanze
+404	Cartella fiscale, costi
+405	Cartella fiscale %y
+406	%n ricevute · %a
+407	Dichiarazione dei redditi %y entro il %z (senza consulente – verifichi)
+408	Di cui manodopera, €
+409	Pagato con bonifico
+410	Pagato in contanti – di solito non accettato. Il materiale non conta.
+411	Manodopera: %a → fino a %b di imposte in meno (20 %, con limiti – verifichi)
+412	Fotografa una ricevuta
+413	Aggiungi senza foto
+414	PDF per ELSTER / consulente
+415	Ancora nessuna ricevuta per quest’anno
+416	Buono a sapersi:
+417	Vuoto per ora – fotografi la prima ricevuta.
+418	Importo, €
+419	Che cos’è
+420	ad es. occhiali, ottico
+421	Nuova ricevuta
+422	Inserisca un importo
+423	Tutte le categorie
+424	Le banche ora sono in «Uffici e servizi»
+425	Lavoro (spese professionali)
+426	Viaggi, strumenti di lavoro, corsi
+427	Artigiani e casa
+428	Conta solo la manodopera
+429	Ticket, occhiali, dentista
+430	Assistenza ai figli
+431	Donazioni
+432	Assicurazioni e previdenza
+433	L’ufficio delle imposte conta da solo 1.230 € l’anno (forfait per dipendenti). Le ricevute aiutano se le spese sono più alte.
+434	Artigiani: il 20 % della manodopera, al massimo 1.200 € di imposte in meno. Il materiale non conta. Paghi con bonifico, non in contanti.
+435	Le spese mediche contano solo oltre un «onere ragionevole» che dipende dal reddito. Conservi comunque le ricevute.
+436	Dal 2025: l’80 % dei costi, al massimo 4.800 € per figlio fino a 14 anni.
+437	Fino a 300 € spesso l’estratto conto sostituisce la ricevuta della donazione.
+438	Molto è già dichiarato con lo stipendio. Le assicurazioni private si inseriscono a parte.
+439	Regole generali, non consulenza fiscale – verifichi.
+440	Carta
+441	Blocca la carta
+442	Cartella fiscale
+443	Contratti e costi
+444	Pago per contratti
+445	%a / mese
+446	%a l’anno · %n contratti
+447	%n – disdicibile entro il %d (tra %k giorni)
+448	%k: %n contratti simili – doppi? Verifichi.
+449	Senza importo: %n – lo aggiunga perché il totale sia giusto
+450	dal %y · controlla il prezzo
+451	disdire entro il %d
+452	Ancora nessun contratto. Tocchi «＋ Contratto» – assicurazione, luce, telefono, internet, palestra …
+453	＋ Contratto
+454	Dopo un aumento di prezzo spesso si può disdire prima – lo dice la lettera del fornitore.
+455	Regole generali, non consulenza – verifichi.
+456	Lavoro e attività
+457	Lavoro, attività propria, istruzione
+458	Aggiunga i suoi datori di lavoro – contratti, referenze e progetti restano a portata di mano per anni.
+459	＋ Datore di lavoro
+460	Elenco per il CV (PDF)
+461	Azienda
+462	Ruolo
+463	Da (mese)
+464	A (vuoto = ora)
+465	ora
+466	Documenti
+467	＋ Documento dall’app
+468	Quali documenti?
+469	Probabilmente adatti
+470	Tutti i documenti
+471	Progetti e risultati
+472	＋ Progetto
+473	Titolo
+474	Cosa ho fatto
+475	Risultato (numeri, tempi, elogi)
+476	«%n» è già nell’elenco
+477	Aprilo
+478	Ci ho lavorato di nuovo
+479	Inserisca l’azienda
+480	Inserisca un titolo
+481	Carriera
+482	Risultato
+483	Contratti e assicurazioni
+484	in «Finanze» – con importi e scadenze
+485	Datori di lavoro
+486	Istruzione e titoli
+487	Altri documenti
+488	Contratto di lavoro
+489	Licenziamento / dimissioni
+490	Buste paga
+491	contratto firmato
+492	intermedio o finale
+493	mese per mese
+494	per la dichiarazione dei redditi
+495	Salvato una volta in «Documenti» e collegato qui – nessuna copia.
+496	Scansiona / scatta una foto
+497	anche più pagine
+498	Scegli un file
+499	PDF o immagine da File
+500	tocca = collega
+501	adatto
+502	Collegato ✓
+503	Salvato in «Documenti» e collegato ✓
+504	Scollega
+505	Il documento resta in «Documenti».
+506	＋ Un altro documento
+507	＋ Aggiungi un titolo di studio
+508	Scuola, formazione, laurea, corsi, certificati – tutto in un posto per le candidature.
+509	Diploma scolastico
+510	Laurea
+511	Corso
+512	Certificato / patente
+513	Tipo
+514	Scuola / istituto
+515	Paese
+516	Riconoscimento in Germania
+517	— (titolo tedesco)
+518	Riconosciuto ✓
+519	Richiesto
+520	Non ancora richiesto
+521	Risposta / scadenza entro
+522	Riconoscimento: %t
+523	Titoli esteri: anerkennung-in-deutschland.de
+524	Pagine e documenti
+525	Potrà aggiungere documenti dopo aver salvato.
+526	Data come MM.AAAA, ad es. 02.2026
+527	Cosa va nel PDF? Gli originali non cambiano.
+528	CV (carriera)
+529	%n pag.
+530	File PDF – non si può inserire
+531	nessuna pagina
+532	Crea il PDF · %n pagine
+533	Selezioni almeno uno
+534	Creazione del PDF …
+535	Poi: lo invii con la sua e-mail o lo conservi in File
+536	Cosa significano le frasi del certificato di lavoro
+537	Un certificato di lavoro tedesco nasconde il voto in frasi cortesi. Regole generali – non consulenza legale, verifichi.
+538	Trovato nel suo certificato:
+539	Il testo del certificato non è riconosciuto. Lo scansioni con il riconoscimento del testo – così le frasi si trovano da sole.
+540	Nessuna frase tipica trovata nel testo.
+541	Frasi usuali
+542	Chiusura
+543	Ci sono ringraziamenti e auguri – buon segno.
+544	Niente ringraziamenti né auguri alla fine – spesso segno di una valutazione scarsa.
+545	1 – ottimo
+546	2 – buono
+547	3 – soddisfacente
+548	4 – sufficiente
+549	5 – scarso
+550	6 – insufficiente
+551	Scadenze del contratto
+552	＋ Scadenze: prova, preavviso, tempo determinato
+553	Prova fino al
+554	Tempo determinato fino al
+555	Preavviso
+556	Formulazione propria
+557	– non indicato
+558	2 settimane (durante la prova)
+559	4 settimane al 15 o a fine mese (per legge)
+560	1 mese a fine mese
+561	3 mesi a fine trimestre
+562	altro
+563	prova terminata ✓
+564	Iscriversi come persona in cerca di lavoro (Agentur für Arbeit) – entro il %d
+565	Iscriversi come persona in cerca di lavoro – ora (entro 3 giorni)
+566	Regola generale: 3 mesi prima della fine; se lo si sa dopo – entro 3 giorni. Verifichi.
+567	Il contratto finisce %m? Inserisca la data esatta – glielo ricorderò in tempo.
+568	La prova finisce il %d – %c
+569	Iscriversi come persona in cerca di lavoro – il contratto %c finisce il %d
+570	Home
+571	Ordine delle caselle ↑↓ · occhio = mostra/nascondi
+572	nascosto
+573	Blocchi nella home
+574	Meteo
+575	Oggi
+576	Uffici (appuntamenti, scadenze)
+577	Azioni rapide
+578	Ripristina disposizione
+579	Disposizione ripristinata ✓
+580	Cassaforte
+581	Scanner
+582	Mostrare anche qui? (nessuna copia)
+583	Salvato una volta in «Documenti»
+584	Aggiungi datore di lavoro «%n»
+585	Aggiungi un datore di lavoro
+586	Nome dell’azienda
+587	Lascia solo in Documenti
+588	Non chiedere più per «%k»
+589	Mostrato anche presso %n
+590	Annulla
+591	Mostrato anche in
+592	＋ Un altro posto
+593	× lo toglie da lì – il documento resta.
+594	Per ora solo in «Documenti»
+595	→ anche nella cartella fiscale %y
+596	Dove ancora?
+597	Datore di lavoro
+598	Quale posto?
+599	Nessun posto adatto. Aggiunga un datore di lavoro in «Lavoro e attività».
+600	Testamento e procure
+601	%n documenti corrispondono a %c
+602	Sono già in «Documenti» – collegarli?
+603	Collega %n
+604	Più tardi
+605	Collegati: %n
+606	oppure
+607	Trasferisci dal vecchio telefono
+608	Scelga il file di backup – arrivano tutti i dati
+609	✓ Bentornato
+610	I suoi dati dal vecchio telefono sono qui:
+611	Contratti
+612	Foto / pagine
+613	Uffici e servizi
+614	Appuntamenti e scadenze
+615	cifrato ✓
+616	Accesso su questo telefono
+617	Il Face ID del vecchio telefono qui non funziona. Lo configuri di nuovo:
+618	Protegga l’app su questo telefono con una password:
+619	Configura Face ID
+620	Imposta una password
+621	La cassaforte si apre con la sua password di prima.
+622	Trasferisci su un nuovo telefono
+623	Qui «Salva un backup» (con password) – metta il file in iCloud Drive o lo invii con AirDrop.
+624	Sul nuovo telefono apra il link in Safari → Condividi → «Aggiungi a Home».
+625	Apra l’app → «Trasferisci dal vecchio telefono» → scelga il file → password.
+626	Salva un backup ora
+627	Condividi il link dell’app
+628	Link copiato ✓
+629	Il vecchio telefono conserva i dati finché non li elimina lì.
+630	Questo documento c’è già: «%t»
+631	Vedi
+632	Tieni entrambi
+633	Note
+634	Tutto ciò che è veloce in un posto
+635	Nuova nota
+636	Detta
+637	Scansiona
+638	Nota con foto
+639	Tutte le note
+640	Punti aperti
+641	Con data → calendario
+642	Archivio
+643	Cestino
+644	Cartelle
+645	tutte
+646	Senza cartella
+647	%n nota
+648	%n note
+649	Lavoro
+650	Studio
+651	Fitness
+652	Viaggi
+653	Famiglia
+654	Idee
+655	Progetti
+656	＋ Cartella
+657	Cartella
+658	Colore
+659	Nascondi cartella
+660	Mostra nascoste
+661	Elimina cartella
+662	Sicuro? Le note restano «senza cartella».
+663	Le cartelle sono sue: rinomini, simbolo, colore, nascondi. Una nota sta in una sola cartella – nessuna copia.
+664	Ancora niente qui.
+665	Tocchi «Nuova nota» – oppure detti, scansioni, scatti una foto.
+666	Cerca nelle note …
+667	Testo …
+668	＋ Punto
+669	Nuovo punto
+670	senza data
+671	Data del punto
+672	Rimuovi data
+673	da una nota
+674	attività
+675	Apri calendario
+676	Un punto con data va da solo nel calendario. «Nel calendario dell’iPhone» nel profilo – con suono.
+677	Etichette
+678	ad es. Attività, medico
+679	Azioni
+680	Ripristina dall’archivio
+681	Sposta nel cestino
+682	Eliminare per sempre?
+683	Elimina per sempre
+684	Svuota il cestino
+685	Le note nel cestino vengono eliminate dopo 30 giorni.
+686	Nel cestino ✓
+687	Condividi
+688	Testo grande
+689	Collegato con
+690	Collega con …
+691	Ancora niente da collegare.
+692	datore di lavoro
+693	ufficio
+694	documento
+695	Da «Documenti»
+696	da «Documenti» · collegato
+697	Allega
+698	Foto / scansione
+699	File (PDF o immagine)
+700	La dettatura qui non è disponibile. Tocchi 🎙 sulla tastiera dell’iPhone – funziona in ogni campo.
+701	Parli … (🎙 di nuovo = stop)
+702	Il riconoscimento vocale lo fa l’iPhone (Apple), può servire internet.
+703	Scansione %d
+704	Foto %d
+705	＋ Nota
+706	creata %d
+707	modificata %d
+708	Controlla un backup
+709	Quale backup controllare?
+710	Ultimo backup su questo telefono
+711	Scegli un file in File …
+712	Password del backup
+713	Password errata
+714	Controllo del backup …
+715	✓ Il backup è a posto
+716	⚠ Il backup è incompleto
+717	✕ Non è un backup di Butler Docs oppure il file è danneggiato
+718	Creato il %d
+719	vuoto
+720	sul telefono: %n
+721	Nel backup mancano %n foto. Ne salvi uno nuovo.
+722	%n foto sono danneggiate.
+723	Il backup ha meno documenti del telefono – è più vecchio. Ne salvi uno nuovo.
+724	Solo controllato – i suoi dati non sono cambiati.
+725	Salva un nuovo backup
+726	Segnalazione di errore
+727	Vengono inviati solo dati tecnici – nessun documento, nessun nome. La invia lei, dalla sua posta.
+728	Cosa è successo? (facoltativo)
+729	Screenshot: prema il tasto laterale + volume su, poi lo alleghi all’e-mail.
+730	Invia per e-mail (la sua posta)
+731	Condividi …
+732	Copiato ✓
+733	Butler Docs – segnalazione di errore
+734	Errori (ultimi 7 giorni)
+735	Versione
+736	Schermo
+737	Dispositivo
+738	Backup
+739	Modalità
+740	dalla schermata Home
+741	nel browser
+742	Per la dichiarazione dei redditi %y
+743	Spese professionali
+744	%a di 1.230 €
+745	Oltre 1.230 € – le ricevute convengono ✓
+746	Mancano %a a 1.230 € – fin lì l’ufficio delle imposte conta da solo
+747	Tragitto casa-lavoro
+748	Non inserito – km, giorni, lavoro da casa
+749	%k km · %d giorni · %h giorni da casa
+750	Km fino al lavoro (sola andata)
+751	Giorni in cui è andato al lavoro
+752	Giorni di lavoro da casa
+753	Insieme
+754	Dal 2026: 0,38 € al km dal 1° km, solo andata.
+755	Fino al 2025: 0,30 € per i km 1–20, 0,38 € dal 21° km.
+756	Lavoro da casa: 6 € al giorno, al massimo 1.260 € l’anno. Per giorno o tragitto o lavoro da casa.
+757	Senza auto propria al massimo 4.500 € l’anno. Verifichi.
+758	presente · %c
+759	Il datore di lavoro lo invia entro fine febbraio %z
+760	Aggiunga prima il datore di lavoro in «Lavoro e attività» – è il suo posto.
+761	Apri «Lavoro e attività»
+762	Quale datore di lavoro?
+763	Non ancora ricevuto
+764	Ricorso entro il %d
+765	Termine per il ricorso scaduto (%d)
+766	Data sulla lettera
+767	Considerato ricevuto: %a · ricorso entro: %b
+768	La lettera si considera ricevuta 4 giorni dopo la data (dal 2025), poi c’è 1 mese per il ricorso. Il ricorso è gratuito – tramite ELSTER o per lettera. Verifichi.
+769	Lettera (foto o file)
+770	Controlla l’avviso di accertamento %y – ricorso entro il %d
+771	Scansiona la certificazione dei redditi da lavoro %y
+772	Non inserito – al massimo 1.000 € per tutte le banche
+773	Dichiarazione congiunta (coniugi) – 2.000 €
+774	＋ Banca
+775	%a oltre il limite – lo riduca in una banca
+776	Franchigia per risparmiatori: 1.000 € l’anno a persona. L’ordine si cambia nell’home banking.
+777	Codice fiscale ed ELSTER
+778	Numero nella cassaforte, accesso tramite elster.de
+779	Apri ELSTER
+780	Codice fiscale nella cassaforte
+781	Il codice fiscale è sulla certificazione dei redditi e su ogni avviso. Qui non si conserva una seconda copia.
+782	Cosa manca ancora per il %y
+783	Tragitto / lavoro da casa
+784	Ricevute delle donazioni
+785	se ha fatto donazioni
+786	Rendiconto spese condominiali / artigiani
+787	quota di manodopera, con bonifico
+788	Certificati della cassa malattia / assicurazioni
+789	ogni anno – controllare le lacune
+790	Regole generali, non consulenza fiscale. Verifichi.
+791	✓ %n file
+792	✓ in «Documenti»
+793	Controlli i numeri
+794	Inserisca la data
+795	Autocontrollo: tutto a posto ✓
+796	controllato %d
+797	Controlla ora
+798	L’autocontrollo ha trovato qualcosa
+799	Controllo …
+800	L’app non riesce più a salvare. Liberi spazio sul telefono e riapra l’app.
+801	Il telefono può cancellare i dati di questa app. La apra dalla schermata Home, non in Safari – e salvi un backup.
+802	La memoria dell’app è quasi piena (%p %). Salvi un backup ed elimini le foto inutili.
+803	L’archivio foto non si apre. Riavvii il telefono; se non basta – ripristini da un backup.
+804	%n pagine non hanno foto. Se ha un backup – lo controlli in «Profilo».
+805	Apri profilo
+806	Capito
+807	Testamento e disposizioni
+808	Testamento
+809	Procura preventiva
+810	Disposizioni anticipate di trattamento
+811	Disposizione per l’amministratore di sostegno
+812	Desideri per il funerale
+813	olografo o notarile
+814	chi decide per lei
+815	desideri sulle cure
+816	chi deve essere il suo amministratore
+817	desideri per il funerale
+818	Dov’è l’originale?
+819	Originale: %o
+820	ad es. raccoglitore nell’armadio, soggiorno
+821	a casa
+822	dal notaio
+823	cassetta di sicurezza
+824	Persona indicata / nota
+825	ad es. moglie; il figlio ha una copia
+826	＋ Documento
+827	Il testamento si può depositare presso il tribunale locale; la procura registrare nel Registro centrale. Indicazioni generali – non consulenza legale, verifichi.
+828	Tutti i documenti in «Finanze e diritto» ›
+829	Riepilogo per la famiglia (PDF)
+830	Testamento e disposizioni – riepilogo
+831	manca
+832	presente
+833	%a di %b · dove sono gli originali
+834	Scadenza: %e – %o
+835	Registrato
+836	E-mail
+837	Naturalizzazione
+838	Ricevute
+839	Elenco dei farmaci
+840	Lettere / documenti
+841	Lun–Ven 8–12, Gio 14–18
+842	Codice fiscale, numero cliente, riferimento …
+843	data-act="go" data-to="bsv"
+844	<div class="dhcard dhq">
+845	Piccola impresa § 19 UStG
+846	Dichiarazione IVA anticipata
+847	Numero fiscale
+848	E-mail
+849	Ditta individuale
+850	Libero professionista
+851	UG (srl semplificata)
+852	IVA %r %
+853	Iscrizione dell’attività
+854	Numero fiscale (ufficio delle imposte)
+855	Assicurazione di responsabilità aziendale
+856	Registro delle imprese / Camera di commercio
+857	Acconto
+858	Acconto d’imposta %s
+859	data-act="go" data-to="archive"
+860	data-act="dccat" data-v="personal"
+861	data-act="go" data-to="mycal"
+862	data-act="go" data-to="tasks"
+863	data-act="dhbank"
+864	data-act="dhvault"
+865	data-act="go" data-to="life"
+866	data-act="go" data-to="dnach"
+867	data-act="go" data-to="people"
+868	Ricevute per la dichiarazione dei redditi %y
+869	Asilo nido, tata, doposcuola
+870	Salute, responsabilità civile, pensione
+871	data-act="go" data-to="fzm"
+872	data-act="go" data-to="kar"
+873	Certificato di lavoro
+874	Certificazione dei redditi da lavoro
+875	Formazione professionale
+876	Cartella di candidatura (PDF)
+877	Cartella di candidatura
+878	sRout
+879	data-act="go" data-to="sc9"
+880	data-act="go" data-to="dsrok"
+881	--h236vh
+882	Detrazione per il tragitto
+883	Forfait per il lavoro da casa
+884	Certificazione dei redditi da lavoro %y
+885	Avviso di accertamento %y
+886	Ordini di esenzione
+887	Estratto contributivo pensione
+888	tribunale locale
+889	+ Aggiungi area
+890	1 anno
+891	1.230,00 € mancanti a 1.230 € – fin lì l’ufficio delle imposte conta da solo
+892	10 anni
+893	3 mesi
+894	5 anni
+895	6 mesi
+896	Un suggerimento, non consulenza finanziaria. Le foto restano solo su questo dispositivo e non sono nella copia dei dati.
+897	È arrivata una lettera
+898	Una normale cartella di PDF e foto – si apre senza l’app su qualsiasi computer.
+899	Un PDF protetto da password: si apre con qualsiasi programma, ma solo con la password.
+900	Maggiordomo IA se vuole: 2,99 € al mese
+901	Maggiordomo IA: chat, voce, foto e PDF, lettere, consigli
+902	Aa Latino semplice
+903	Accento
+904	Aggiungi un documento
+905	Aggiungi un bene
+906	Aggiungi contatto
+907	Aggiungi documento
+908	Aggiungi il mio telefono sotto la firma
+909	Aggiungi firma
+910	Ricerca indirizzi — solo ciò che ha scritto (OpenStreetMap)
+911	Indirizzi
+912	Tutte le lingue
+913	Tutti i beni con foto, valore, documenti ed eredi – per l’assicurazione, un notaio o una successione.
+914	Tutti i dati restano in questo browser, solo su questo dispositivo. Nulla viene condiviso con terzi e non c’è pubblicità.
+915	Tutte le scadenze nel calendario dell’iPhone
+916	Tutti i documenti in una cartella (ZIP)
+917	Tutti i documenti in un PDF
+918	Tutto fatto. Nessun promemoria.
+919	Tutti i documenti importanti in un posto.
+920	Tutte le sezioni
+921	Tutti gli aggiornamenti insieme
+922	Almaty
+923	Sempre uno
+924	Amsterdam
+925	Velocità dell’app
+926	Aspetto
+927	Appuntamenti, scadenze, promemoria
+928	Archivio fino a 20 documenti
+929	Aree, link, note …
+930	Armenia
+931	Art déco
+932	Come nello stile
+933	Chiedi
+934	Chiedi al Butler
+935	Chieda al suo maggiordomo …
+936	Beni
+937	Beni, disposizioni, ultime volontà
+938	Astana
+939	Atene
+940	Australia
+941	Austria
+942	Auto: giorno e notte
+943	Sfondo
+944	Baden-Württemberg
+945	Bangkok
+946	Barcellona
+947	Colore di base — tutta l’app si adatta
+948	Base
+949	Fondamenti
+950	Baviera
+951	Pechino
+952	Bielorussia
+953	Berlino
+954	Nero
+955	Oscuri ciò che non serve prima di inviare
+956	Foglio bianco
+957	Bacheca
+958	Libro della mia vita
+959	Libro della mia vita e momenti di famiglia
+960	Libro della vita
+961	Libro, voce o una parola del testo
+962	Bordeaux
+963	Fronte e retro delle carte d’identità su una pagina
+964	Brandeburgo
+965	Brasile
+966	Brema
+967	Ripristina lo stile Butler
+968	Crea pacchetto
+969	Componga il suo set – l’anteprima sopra lo mostra subito.
+970	Costruttore
+971	Borgogna
+972	Attività
+973	Biglietto da visita
+974	Piani aziendali, studio, decisioni, domande
+975	Butler IA
+976	Orologio Butler
+977	Butler in modalità base
+978	Registro Butler
+979	Butler scrive la lettera
+980	Pulsanti
+981	Si compra una volta – funziona per sempre
+982	Il Cairo
+983	Calendario
+984	Calendario e attività
+985	Impostazioni del calendario
+986	Chiamare in caso di emergenza
+987	Canada
+988	Acquisisci un documento
+989	Auto
+990	Schede
+991	Tessere, note, esami
+992	Certificati, attestati
+993	Champagne
+994	Cambi qualsiasi parte – l’anteprima sopra cambia subito.
+995	Cambia password
+996	Modifiche
+997	Cerca aggiornamenti
+998	Chicago
+999	Cina
+1000	Cioccolato
+1001	Scegli (test)
+1002	Scegli un Land
+1003	Scegli dai contatti
+1004	Solennità religiose
+1005	Cittadinanza
+1006	Città
+1007	Città (alba e tramonto)
+1008	Città o CAP
+1009	Classico
+1010	Classico · Astronomico
+1011	Classico · Sala di marmo
+1012	Classico · Studio
+1013	Orologio
+1014	Orologio al centro
+1015	Colonia
+1016	Colori
+1017	Colori, icone, orologio e motivo – con un tocco.
+1018	Comfort: dimensione di testo e caselle
+1019	Condizioni
+1020	Contatto
+1021	Contatti
+1022	Continua a leggere
+1023	Contratti, atti, documenti
+1024	Contratti, lettere, prove
+1025	Contratti, procure, fatture
+1026	Copia testo
+1027	Correggi tutto
+1028	Cosmo
+1029	Lettera di accompagnamento in tedesco
+1030	Crea una nota per domani
+1031	Attuale
+1032	Personalizza la home
+1033	Calendario del ciclo: 1 profilo
+1034	Calendario del ciclo: più profili e «Salute femminile»
+1035	Cechia
+1036	Protezione dei dati
+1037	Data di nascita
+1038	Le scadenze dei documenti diventano attività da sole
+1039	Scadenze nei prossimi 30 giorni
+1040	Elimina tutti i dati
+1041	Delhi
+1042	Depositi, ETF e azioni – in dettaglio
+1043	Design e impostazioni
+1044	Deutsch
+1045	Diplomi, certificati
+1046	Disposizioni
+1047	Da fare ora
+1048	Scadenze dei documenti
+1049	Documenti e le loro foto, note, attività, calendario, finanze, beni, salute, fitness, guardaroba, luoghi — nulla viene inviato da nessuna parte.
+1050	Documenti nel pacchetto
+1051	Dresda
+1052	Patente, auto
+1053	Dubai
+1054	In scadenza
+1055	Düsseldorf
+1056	Est
+1057	Bordo e bagliore
+1058	Egitto
+1059	Smeraldo
+1060	Smeraldo e oro · orologio Butler · icone «Oro 3D»
+1061	Lavoro, referenze, certificati
+1062	Vuoto — bene
+1063	English
+1064	Inserisca una volta – da allora vengono compilati da soli: in lettere, dossier e nel «Libro della mia vita».
+1065	Protezione d’accesso
+1066	Español
+1067	Tutto il Premium tranne il maggiordomo IA
+1068	Tutto senza limiti
+1069	Tutto ciò che possiede · valore · crescita
+1070	Tutto ciò di cui la sua famiglia avrà bisogno: disposizioni, beni e le sue istruzioni. Solo su questo telefono.
+1071	Tassi di cambio — nulla di personale
+1072	Colore degli occhi
+1073	Scadenze dei documenti di famiglia
+1074	Famiglia, notaio, assicurazione
+1075	Le lettere decorative esistono solo per l’alfabeto latino (A–Z). Il cirillico resta normale.
+1076	Padre
+1077	Numero di pratica
+1078	File
+1079	Riempimento
+1080	Finanze
+1081	Finanze: 2 conti, movimenti, budget, pagamenti
+1082	Finanze e diritto
+1083	Trova
+1084	Trova i miei contatti
+1085	Primi 1000 – sconto a vita (test)
+1086	Nome Cognome\nVia N.\nCAP Città
+1087	Nome
+1088	Nome per il saluto
+1089	Cartelle e blocco con PIN
+1090	Carattere
+1091	Ad esempio: ufficio delle imposte di Francoforte
+1092	Ad esempio: il mio datore di lavoro non paga gli straordinari – cosa posso fare?
+1093	Per le tasse
+1094	Foresta
+1095	Per sempre
+1096	Forma
+1097	Forma di cortesia
+1098	Francia
+1099	Français
+1100	Gratis
+1101	Da
+1102	Accesso completo gratis. Dopo l’app passa da sola a Base – non si paga nulla e i dati restano.
+1103	Finanze complete: pagamenti automatici, stipendio, investimenti, Specchio
+1104	Completamente offline
+1105	Futuro
+1106	Galassia · Orbita
+1107	Galassia · Anello
+1108	Ginevra
+1109	Georgia
+1110	Germania
+1111	Obiettivi
+1112	Oro 3D
+1113	Buongiorno,
+1114	Grecia
+1115	Saluto
+1116	Colore dei capelli
+1117	Amburgo
+1118	Hannover
+1119	Intestazione
+1120	Altezza, cm
+1121	Assia
+1122	Nascosto
+1123	Alta
+1124	Storia per persona
+1125	Ologramma
+1126	Modelli della home, blocchi, colonne, icone
+1127	Home, calendario, attività, progetti, obiettivi, note
+1128	Abitazione
+1129	Come mi descrivo
+1130	Quante cose urgenti ci sono – visibile sulla schermata Home senza aprire l’app. Si aggiorna quando apre Butler. L’iPhone chiede il permesso per le notifiche – così consente il numero sull’icona.
+1131	Ho promesso
+1132	Carta d’identità
+1133	Icone
+1134	Icone e accento
+1135	Identità
+1136	In lettere latine, come nel passaporto
+1137	In caso di emergenza
+1138	In una busta
+1139	Nell’app la firma appare nello stile scelto. Nell’e-mail inviata l’app di posta mostra il testo in un carattere normale.
+1140	Lettere in arrivo
+1141	India
+1142	Assicurazioni e contratti
+1143	Analisi dei costi assicurativi
+1144	Portafoglio d’investimento
+1145	Investimenti
+1146	Israele
+1147	Istanbul
+1148	Italia
+1149	Avorio
+1150	Giappone
+1151	Giapponese
+1152	Gerusalemme
+1153	Kaliningrad
+1154	Kazakistan
+1155	Kazan
+1156	Kiev
+1157	Lingua
+1158	Lingua: Italiano
+1159	Lingue
+1160	Ultimo backup: ancora nessuno. Un backup con password salva i suoi dati se succede qualcosa al telefono.
+1161	Ultima copia
+1162	Cognome
+1163	Diritto
+1164	Diritto e diritti
+1165	Disposizione e colore
+1166	Disposizione, costruttore, il suo stile
+1167	Lipsia
+1168	Firme delle lettere
+1169	Lettere
+1170	Catene di vita
+1171	Chiaro · Avorio
+1172	Chiaro · Perla
+1173	Lisbona
+1174	Londra
+1175	Si guardi: stato, patrimonio, anno
+1176	Los Angeles
+1177	Bassa
+1178	Bassa Sassonia
+1179	Madrid
+1180	Fai una copia
+1181	Marmo
+1182	Indichi dove deve stare ogni voce: ⚡ – una casella di accesso rapido (fino a 8), ▤ – una riga in «Le mie sezioni». Vanno bene entrambi. Le frecce cambiano l’ordine.
+1183	Meclemburgo-Pomerania Anteriore
+1184	Medico
+1185	Menu
+1186	Messaggio …
+1187	Miami
+1188	Microfono
+1189	Pulsante centrale: solo depositare, non vedere
+1190	Blu notte
+1191	Milano
+1192	Minimale
+1193	Minsk
+1194	Specchio
+1195	Moderno
+1196	Lunedì
+1197	Soldi e debiti
+1198	Altro
+1199	Altro nell’archivio
+1200	Mosca
+1201	Madre
+1202	Sposta un documento nella cassaforte
+1203	Monaco di Baviera
+1204	I miei beni
+1205	I miei libri
+1206	I miei contatti
+1207	La mia giornata
+1208	I miei dati per le lettere
+1209	I miei dati per lettere e firme
+1210	La mia e-mail (mittente)
+1211	Le mie icone
+1212	Le mie istruzioni per la famiglia
+1213	Le mie lettere
+1214	Il mio telefono
+1215	Il mio piano
+1216	Le mie firme
+1217	Le mie situazioni
+1218	La mia storia, eventi, documenti
+1219	Il mio stile
+1220	Nome nell’indirizzo
+1221	Natura
+1222	Richiede attenzione
+1223	Città al neon
+1224	Patrimonio netto
+1225	Paesi Bassi
+1226	Mai inviati: documenti, foto, testi, importi, dati sanitari, nomi.
+1227	New York
+1228	Nuovo libro
+1229	Nuovo contratto
+1230	Nuova password
+1231	Nuovo progetto
+1232	Nuovo promemoria
+1233	Nuovo passo …
+1234	Nuova attività
+1235	Nizza
+1236	Notte
+1237	Ancora nessun progetto attivo. Tocchi «Nuovo progetto» – un modello aiuta a iniziare.
+1238	Ancora nessun contratto. Aggiunga il primo – fotografi il contratto, il maggiordomo compila il resto.
+1239	Ancora nessuna scadenza. Aggiunga una data di scadenza a un documento o a una polizza e comparirà qui.
+1240	Ancora nessuna lettera
+1241	Nessun motivo
+1242	Ancora nessuna richiesta.
+1243	Nessuna firma
+1244	Ancora nessuna firma. Aggiunga la prima qui sotto.
+1245	Nessuna attività qui.
+1246	Nessuna pagina trovata per l’indirizzo web:
+1247	Normale
+1248	Renania Settentrionale-Vestfalia
+1249	Non è consulenza legale. Un testamento è valido solo nella forma prevista – in Germania olografo o dal notaio.
+1250	Ancora niente. Aggiunga un appartamento, un’auto, un orologio o oro.
+1251	Ancora niente qui — tocchi «Aggiungi documento».
+1252	Niente in programma per oggi
+1253	Niente in programma per oggi.
+1254	Ancora niente da calcolare — aggiunga un’assicurazione con data di inizio e premio.
+1255	Ancora niente da continuare
+1256	Niente di urgente. Tempo per ciò che conta ma non brucia.
+1257	Novosibirsk
+1258	Ora:
+1259	Norimberga
+1260	Oceano
+1261	Spento: chiunque abbia il telefono può entrare
+1262	Ufficiale
+1263	Lettera ufficiale (PDF)
+1264	La domenica nel resoconto – una breve nota per ogni progetto
+1265	Una volta a settimana: cosa è fatto, cosa è fermo, cosa viene
+1266	Quando l’app avrà un proprio server, questa sezione si collegherà direttamente alle banche dati ufficiali delle leggi.
+1267	Un file con tutte le voci. Foto e scansioni sono conservate a parte nell’archivio.
+1268	Online
+1269	Solo lei vede questi dati, nel suo account. Alimentazione, calendario del ciclo, lettere e cartella d’emergenza li prendono da qui.
+1270	Apri il mio calendario
+1271	Origine
+1272	Altri documenti
+1273	Devo
+1274	Personale …
+1275	Pacchetto in caso di decesso
+1276	Parigi
+1277	Parti dell’app
+1278	Passaporto, carta d’identità, patente, prove
+1279	Passaporto, carta d’identità, polizze, contratti – tutto ciò che ha una scadenza o un ultimo giorno per disdire.
+1280	Passaporto, patente, tessera sanitaria, certificati, pagelle
+1281	Qui vanno passaporti, patenti, tessere sanitarie, certificati e pagelle di tutta la famiglia.
+1282	Motivo
+1283	Documenti personali
+1284	Fascicolo personale
+1285	Fotografi un documento — dritto e pulito
+1286	Luogo di nascita
+1287	Semplice
+1288	Piano: Base
+1289	Piano: Per sempre
+1290	Piano: Premium
+1291	Piani
+1292	Piani e confronto ›
+1293	Mano del poeta
+1294	Polonia
+1295	Polski
+1296	Portogallo
+1297	Praga
+1298	Premium
+1299	Precedente
+1300	Priorità
+1301	Privacy e sicurezza
+1302	Modalità privata
+1303	Profilo
+1304	Moduli del programma (visore PDF, fotocamera fitness) — una volta, poi restano sul telefono
+1305	Progetto
+1306	Immobile
+1307	Scheda dei beni (PDF)
+1308	Previdenza e successione
+1309	Accesso rapido e sezioni
+1310	Deposito rapido nella schermata d’accesso
+1311	Inserimento rapido
+1312	RUB 0
+1313	Set pronti
+1314	Ricevute e documenti dell’anno
+1315	Recenti
+1316	Richieste recenti: detto → capito → salvato
+1317	Telefono del destinatario
+1318	Regione
+1319	Ricarica
+1320	Promemoria
+1321	Promemoria
+1322	Rimuovi
+1323	Segnala un problema
+1324	Azzera acquisti di prova
+1325	Ripristina da una copia
+1326	Ripristina dal backup
+1327	Revisione completata ✓
+1328	Renania-Palatinato
+1329	Rio de Janeiro
+1330	Roma
+1331	Russia
+1332	SAGITTARIO
+1333	SMS
+1334	Saarland
+1335	Luogo sicuro per i dati importanti
+1336	San Pietroburgo
+1337	Saluto
+1338	Saluto e nome
+1339	Saluto e nome
+1340	Salisburgo
+1341	Salva un backup
+1342	Salva come «Il mio stile»
+1343	Salvato solo su questo dispositivo
+1344	Sassonia
+1345	Sassonia-Anhalt
+1346	Scansiona un documento
+1347	Scandinavo
+1348	Schleswig-Holstein
+1349	Cerca
+1350	Cerca contatti…
+1351	Cerca documenti
+1352	Cerchi un’area, un link o una nota.
+1353	Cerca nel testo di tutti i documenti
+1354	Cerca, organizza, prepara
+1355	Sezione
+1356	Invia
+1357	Invia di nuovo tutto
+1358	Invia come libro vivente
+1359	Invia in modo sicuro
+1360	Invia la lettera…
+1361	Invia con Mail
+1362	Imposta un codice
+1363	Imposti un codice e i documenti nella cassaforte saranno cifrati.
+1364	Imposta un obiettivo
+1365	Imposta un codice d’accesso
+1366	Imposta la tua e-mail
+1367	Shanghai
+1368	Forma
+1369	Condividi il file del calendario
+1370	Acquisti e resi
+1371	Forma breve per la home
+1372	Mostrami i miei documenti di viaggio
+1373	Riduci per e-mail (fino a 5 MB)
+1374	Esci
+1375	Firma
+1376	Stile della firma
+1377	Testo della firma
+1378	Firma · il nostro originale
+1379	E-mail semplice
+1380	Soči
+1381	Prestazioni sociali
+1382	Spagna
+1383	Sport, diritto, contratti, alimentazione
+1384	Inizia la prova gratuita (test)
+1385	Land
+1386	Passo 1 di 5
+1387	Passi
+1388	Memoria
+1389	Stoccarda
+1390	Stile
+1391	Oggetto
+1392	Oggetto (in tedesco)
+1393	Cognome
+1394	Cambi piano e guardi l’app con gli occhi di un acquirente. Non si paga nulla e i dati restano invariati.
+1395	Svizzera
+1396	Sydney
+1397	Scatti una foto — il maggiordomo trova la scadenza
+1398	Tocchi una parte dell’anteprima e scelga un colore. Tutto cambia subito.
+1399	Tocchi «Butler IA» – trova un documento, annota un’attività o ricorda una scadenza.
+1400	Tocchi ✦
+1401	Attività
+1402	Attività
+1403	Tbilisi
+1404	Terminale
+1405	Thailandia
+1406	The Silentium’s
+1407	The Silentium’s Butler
+1408	La lingua dell’app si cambia nel profilo.
+1409	Il maggiordomo raccoglie qui tutto ciò che si avvicina: attività, date di famiglia, solennità religiose e scadenze dei progetti. Fatto? Tocchi il cerchio e il promemoria sparisce.
+1410	Il grafico appare quando i beni hanno una data d’acquisto.
+1411	La copia contiene ogni voce, foto e documento. Con una password è cifrata (AES-256).
+1412	Il paese stabilisce i giorni festivi, la città alba, tramonto e orari di preghiera.
+1413	I quattro posti laterali sono suoi. Il Butler resta sempre al centro. Tocchi un posto, poi cosa deve andarci.
+1414	La cosa più importante adesso è in alto
+1415	I prossimi 7 giorni
+1416	Il telefono non ha ancora garantito la memoria permanente — apra dall’icona e salvi backup
+1417	Il telefono cronometra da solo ogni tocco
+1418	L’app Mail del telefono si apre con la lettera pronta.
+1419	Lo schermo resta fermo: orologio, accesso rapido e sezioni subito. Schede e consigli sono in «Cosa fare ora».
+1420	La forma dello stile resta — il colore lo sceglie lei.
+1421	La voce Google dell’allenatore, se è impostata una chiave — solo le frasi dell’allenatore
+1422	La cassaforte è vuota. Apra un documento e tocchi «Nella cassaforte» – oppure lo scelga qui.
+1423	La cassaforte non è protetta
+1424	Ancora nessun documento nell’archivio – li scansioni in «Documenti».
+1425	Questi punti sono il numero sull’icona dell’app.
+1426	Questo
+1427	È un’informazione, non una consulenza legale. Le leggi cambiano spesso – verifichi sempre le questioni importanti con un avvocato.
+1428	Turingia
+1429	Casella
+1430	Ora (facoltativa)
+1431	È ora della revisione settimanale
+1432	A (ufficio, autorità)
+1433	A chi
+1434	Tokyo
+1435	Toronto
+1436	Tour dell’app
+1437	Trasporti
+1438	Turchia
+1439	USA
+1440	Ucraina
+1441	Emirati Arabi Uniti
+1442	Regno Unito
+1443	Fino a 50 contatti, famiglia: cerchio e albero
+1444	Aggiornamenti quando vuole: 5,99 € per aggiornamento
+1445	Oggetti di valore
+1446	Valore dei beni
+1447	Veicoli
+1448	Tramite l’app di posta del telefono (come testo)
+1449	Vienna
+1450	Vladivostok
+1451	Risposte vocali attive
+1452	In attesa di risposta
+1453	Varsavia
+1454	Meteo — la città, nessun nome (Open-Meteo)
+1455	Meteo, ricerca indirizzi, voce Google e tassi di cambio funzionano.
+1456	Revisione settimanale
+1457	Peso, kg
+1458	Cosa c’è da fare?
+1459	Cosa scade presto
+1460	Cosa fare ora
+1461	Cosa può posizionare
+1462	Bianco
+1463	Chi (persona)
+1464	Senza password il backup non si può leggere — anche se il file finisce in un cloud o in mani sbagliate.
+1465	XII
+1466	Ekaterinburg
+1467	Erevan
+1468	Ha la versione più recente ✓
+1469	I suoi libri appariranno qui. Inizi con «Nuovo libro».
+1470	I suoi dati
+1471	I suoi dati e la privacy
+1472	I suoi dati non vengono mai eliminati per un pagamento. Se un abbonamento finisce o un aggiornamento non viene comprato, tutto resta e si apre ancora. Può esportare tutto gratis in qualsiasi momento.
+1473	Il suo mondo digitale. Il suo ordine. Il suo tempo.
+1474	Le persone importanti appariranno qui. Tocchi «Aggiungi contatto».
+1475	La sua lettera – scriva direttamente sul foglio
+1476	La sua app di posta si apre con il messaggio pronto – tocchi solo Invia. Se non si apre, copi il testo.
+1477	Il suo nome e indirizzo
+1478	La sua biblioteca personale: pensieri, desideri, regole, piani e ricordi
+1479	Le sue scansioni appariranno qui
+1480	Zurigo
+1481	tutti ›
+1482	sfondo · schede · accento · pulsanti
+1483	campana
+1484	barra inferiore, ordine delle caselle, colore dello stile
+1485	cerchio
+1486	colore
+1487	rame
+1488	scuro
+1489	design
+1490	diamante
+1491	non ripetere
+1492	ad es. 60311 Frankfurt
+1493	ad es. dove sono gli originali, chi chiamare per primo, cosa fare con abbonamenti e conti, desideri…
+1494	ad es. «Cordiali saluti, Mario Rossi»
+1495	ogni giorno
+1496	ogni mese
+1497	ogni settimana
+1498	quaranta
+1499	vetro
+1500	bagliore
+1501	oro
+1502	dorato
+1503	sfumatura
+1504	hex
+1505	signora
+1506	metallo
+1507	la mia attività
+1508	nome@esempio.it
+1509	ancora nessuno
+1510	proprio
+1511	pagina non trovata
+1512	arrotondato
+1513	sette
+1514	argento
+1515	signore
+1516	quadrato
+1517	la fotocamera trova il foglio
+1518	l’iPhone non ha ancora confermato la protezione — continui a fare copie
+1519	colore del tema
+1520	sottile
+1521	in attesa di risposta
+1522	bianco
+1523	— nessun progetto —
+1524	Marchio «Kopie» su ogni pagina
+1525	119 € una tantum
+1526	5,99 € al mese · 49 € l’anno
+1527	↺ Ripristina disposizione
+1528	⋯ Altro
+1529	⏳ Prova gratuita
+1530	ⓘ Il testamento si può depositare presso il tribunale locale; la procura registrare nel Registro centrale. Indicazioni generali – non consulenza legale, verifichi.
+1531	ⓘ Buono a sapersi:
+1532	▣ Home su una schermata
+1533	▦ Barra inferiore
+1534	▦ Home
+1535	◐ Colore dello stile
+1536	☰ Blocchi nella home
+1537	⚠ L’autocontrollo ha trovato qualcosa
+1538	✉ Invia in modo sicuro
+1539	✎ Le mie firme
+1540	✎ Nuova nota
+1541	✓ Correzione automatica
+1542	✓ Controlla un backup
+1543	✦ Crea il tuo stile
+1544	⬆ Ripristina dal backup
+1545	⬇ Esporta i miei dati
+1546	🇦🇹 Austria
+1547	🇨🇭 Svizzera
+1548	🇨🇿 Cechia
+1549	🇩🇪 Germania
+1550	🇪🇸 Spagna
+1551	🇫🇷 Francia
+1552	🇬🇧 Regno Unito
+1553	🇬🇷 Grecia
+1554	🇭🇷 Croazia
+1555	🇮🇹 Italia
+1556	🇳🇱 Paesi Bassi
+1557	🇵🇱 Polonia
+1558	🇵🇹 Portogallo
+1559	🇷🇺 Russia
+1560	🇹🇷 Turchia
+1561	🇺🇸 Stati Uniti
+1562	🌐 Online
+1563	🌐 Cosa va online — solo in modalità «Online»
+1564	📄 Crea PDF
+1565	📦 Crea un pacchetto
+1566	📱 Sicurezza della memoria
+1567	📷 Fotografa una ricevuta
+1568	🔒 Disposizione e colore restano solo su questo telefono.
+1569	🔒 Resta solo su questo telefono
+1570	🔒 La sua scelta resta solo su questo telefono
+1571	🔴 Numero sull’icona Butler
+1572	🗂 Tutti i documenti in una cartella (ZIP)
+1573	🗓 Revisione settimanale
+1574	🗝 Backup con password
+1575	🛡 Garanzia dei dati
+1576	🧪 Modalità test
+1577	＋ Aggiungi
+1578	＋ Aggiungi un’attività
+1579	＋ Nuovo progetto

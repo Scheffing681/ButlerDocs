@@ -4,6 +4,14 @@ i18n/tr.js
 i18n/pl.js
 i18n/fr.js
 i18n/es.js
+i18n/it.js
+i18n/uk.js
+i18n/ro.js
+i18n/bg.js
+i18n/sr.js
+i18n/hr.js
+i18n/alias.js
+i18n/dom.js
 clocks/thirty-more-clocks.js
 seal/seal-and-signature.js
 today/tour-today-search-commands.js

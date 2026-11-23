@@ -1,0 +1,1580 @@
+0	Scrisoare de la o autoritate
+1	Pare o scrisoare de la: %o
+2	%k din %d
+3	%e – aproximativ până la %f: data scrisorii + 4 zile livrare + 1 lună. Verificați scrisoarea.
+4	Termen în scrisoare: până la %f
+5	Termen în calendar
+6	Termen în calendar ✓
+7	Către „%o”
+8	Legat de „%o”
+9	Termen peste o săptămână: %e – %o
+10	Scrisori și decizii
+11	Scrisoare
+12	Model
+13	Decizie / scrisoare din
+14	Număr de dosar
+15	Textul scrisorii
+16	Cum se trimite
+17	Poștă
+18	Fax
+19	Personal
+20	PDF / tipărire
+21	Copie
+22	Trimis
+23	Număr de urmărire
+24	Salvat în jurnal și în „Scrisori”
+25	Adăugați adresa dvs. în „Datele mele” – atunci apare în scrisoare.
+26	Nu există e-mail pentru această autoritate – adăugați-l pe fișă
+27	Cererile mele
+28	＋ cerere
+29	Ce s-a cerut
+30	Depusă
+31	Cum
+32	online
+33	prin poștă
+34	personal
+35	În lucru
+36	Decizie primită
+37	Pasul următor
+38	Întrebați de stadiu
+39	întrebați dacă până la %d nu vine nimic
+40	Întrebați de stadiu: %t – %o
+41	Apeluri și dovezi
+42	Apel
+43	Primit
+44	Cine
+45	Ce s-a spus / ce este
+46	Foto cu chitanța sau scrisoarea
+47	Urmărire
+48	Număr copiat – lipiți-l pe pagina Deutsche Post
+49	Ați sunat la „%o”. Cu cine ați vorbit? Ce s-a spus?
+50	Toate intrările: %n
+51	mai mult
+52	Cerere
+53	Găsit în scrisoare
+54	Autoritate
+55	Ce se păstrează
+56	Nu s-a găsit nimic – scrieți dvs.
+57	Termen din scrisoare – decideți dvs.
+58	Pare: %e până la %f
+59	Adaugă
+60	Altă dată
+61	Nu e nevoie
+62	Creează fișa
+63	Salvează în „%n”
+64	Adresa s-a schimbat: era „%a”
+65	Gata – fișa „%n”
+66	Adresa s-a schimbat – actualizează
+67	Scrie către %o
+68	Scrisoare goală
+69	Adresa și numărul de dosar sunt deja incluse
+70	Scrisori trimise
+71	Data
+72	Salvează
+73	Șterge
+74	Deocamdată gol
+75	foto
+76	Programări apropiate
+77	Programările mele
+78	Adaugă programare
+79	Programare
+80	Ora
+81	Pentru ce
+82	de ex. prelungirea permisului de ședere
+83	De luat
+84	＋ element
+85	Ce altceva de luat
+86	Documente din aplicație
+87	Alege documente
+88	Încă nu există documente
+89	Introduceți o dată
+90	Programare în calendar, memento cu o zi înainte
+91	Mâine: %n – pregătiți actele
+92	Gata
+93	Restabilește
+94	Gata: %a din %b
+95	peste %n zile
+96	azi
+97	mâine
+98	trecut
+99	%d – expiră %w
+100	Prelungește: %o. Programați-vă din timp – așteptarea poate dura săptămâni.
+101	Programare
+102	Deschide
+103	Adaugă „%o”
+104	Am deja
+105	Ascunde
+106	În fiecare an
+107	＋ obligație anuală
+108	Obligație anuală
+109	Propriu
+110	Ce trebuie făcut
+111	Data următoare
+112	Repetă
+113	în fiecare an
+114	la 2 ani
+115	Gata – data următoare %d
+116	Datele urmează reguli generale – verificați-le pentru cazul dvs.
+117	Ștergeți sigur? Atingeți din nou
+118	Autorități
+119	Autorități și servicii
+120	Pe cine să anunțați: pensie, casa de sănătate, fisc …
+121	%t este în seif – deschideți „%n” și atingeți „Arată”.
+122	%n: telefon %v
+123	Următoarea programare: %n, %d
+124	Nicio programare
+125	Programări, numere, linkuri
+126	Ordine
+127	Ce adăugăm?
+128	Creează propriu
+129	Orice autoritate, medic sau club – cu linkurile și butoanele dvs.
+130	Fixate
+131	Toate
+132	Aici sunt autoritățile și serviciile dvs. Adăugați doar ce folosiți.
+133	Urgență
+134	Poliție
+135	Pompieri · ambulanță
+136	Medic de gardă
+137	Datele mele de urgență
+138	Ce spuneți la telefon
+139	Unde? – adresă, etaj · Ce s-a întâmplat? · Câți răniți? · Cine sună? · Așteptați întrebările – nu închideți.
+140	Adresa mea
+141	Grupa sanguină
+142	Alergii
+143	Medicamente
+144	Contact de urgență
+145	Telefonul contactului
+146	Completați acum – în urgență nu e timp.
+147	115 – numărul serviciilor publice: vă spune ce autoritate este competentă
+148	Deschis până la %t
+149	Închis
+150	se deschide %d %t
+151	Lun Mar Mie Joi Vin Sâm Dum
+152	Traseu
+153	Numerele mele
+154	Copiat
+155	Arată
+156	secret – în seif
+157	Numărul este ascuns. Cu un cod de seif este criptat.
+158	Adresă
+159	Program
+160	Notă
+161	Completat dinainte – verificați: adresele și programul se schimbă.
+162	Verificat
+163	Editează
+164	Șters
+165	Nume
+166	de ex. oficiul pentru străini
+167	Simbol
+168	Grup
+169	Grup nou
+170	Pentru cine
+171	Telefon
+172	Link de programare
+173	Programarea se face mereu pe site-ul autorității – aici e doar linkul.
+174	Lipește
+175	Nu s-a putut lipi – țineți apăsat câmpul și alegeți „Lipește”
+176	Butoane și linkuri
+177	＋ buton propriu
+178	Etichetă
+179	Link, telefon sau e-mail
+180	＋ număr
+181	Ce este
+182	Număr
+183	secret
+184	Fixează sus
+185	Pe ecranul principal
+186	Anulează
+187	Salvat
+188	Introduceți un nume
+189	Acest link nu este valid
+190	Adăugat – verificați datele
+191	adăugat
+192	Sănătate
+193	Familie și școală
+194	Cluburi și altele
+195	Eu
+196	Soție
+197	Copil
+198	Configurează
+199	Configurare într-un minut
+200	Unde locuiți?
+201	Cod poștal sau oraș – pentru completarea adreselor (deocamdată exact pentru 63741 Aschaffenburg).
+202	Pentru cine?
+203	Fiecare persoană are autoritățile sale – marcați mai târziu ale cui sunt.
+204	De ce aveți nevoie?
+205	Alegeți ce vă trebuie. Restul mai târziu.
+206	Înainte
+207	Înapoi
+208	Sari
+209	Gata: %n adăugate
+210	Aici
+211	Căutare: nume, număr, nr. dosar …
+212	Dintr-o scrisoare
+213	Scanare → autoritate, adresă, nr. dosar – din antet
+214	Lipește un link
+215	Ați copiat un link de programare – lipiți-l, gata
+216	Manual
+217	Un nume și un contact – 10 secunde
+218	Ce scrisoare?
+219	Scanează o scrisoare
+220	După scanare reveniți aici și alegeți scrisoarea.
+221	Încă nu există scanări
+222	Telefon, e-mail sau link
+223	＋ alt contact
+224	✓ telefon
+225	✓ e-mail
+226	✓ link → butonul „Programare”
+227	✓ link
+228	? nerecunoscut – verificați
+229	Mai mult (opțional)
+230	adresă · program · numere · simbol · grup · butoane · ecran principal
+231	Link
+232	Fără grup
+233	Scrie
+234	Există deja?
+235	Pare „%n” – %w. Adăugăm datele acolo, ca scrisorile și termenele să fie într-un loc?
+236	același nume
+237	același e-mail
+238	același telefon
+239	același site
+240	nume asemănător
+241	Adaugă la „%n”
+242	Altă autoritate – creează nouă
+243	Adăugat la „%n” ✓
+244	Afacerea mea
+245	Educație
+246	💼 Am propria afacere
+247	Facturi, bonuri, acte ale firmei, termene – «Afacerea mea»
+248	Datele firmei încă necompletate
+249	Atingeți pentru a completa
+250	TVA normal
+251	PULS
+252	Facturi neachitate
+253	Restantă de %d zile
+254	Restantă de 1 zi
+255	Toate facturile achitate
+256	Declarație fiscală %y
+257	Factură
+258	Bon
+259	Client
+260	Acte
+261	%y · venituri și cheltuieli
+262	Venituri
+263	Cheltuieli
+264	Profit
+265	Simplificat: venitul contează în ziua plății. Verificați.
+266	📎 Pentru consultantul fiscal: listă + bonuri (PDF/CSV)
+267	Facturi %y
+268	Cheltuieli %y
+269	Încă nu există facturi
+270	Încă nu există bonuri
+271	achitată
+272	deschisă
+273	restantă
+274	anulată
+275	Din 2028 facturile către firme (B2B) trebuie să fie electronice – micile afaceri sunt scutite, clienții privați nu sunt afectați. Verificați.
+276	Numele afacerii
+277	Proprietar (nume complet)
+278	Forma juridică
+279	Cod TVA UE (dacă există)
+280	Sunt mică afacere (§ 19 UStG, fără TVA)
+281	niciuna
+282	lunar
+283	trimestrial
+284	Am un consultant fiscal
+285	Bancă
+286	Prefixul numărului de factură
+287	Ascunde «Afacerea mea»
+288	Datele rămân; o puteți reactiva aici.
+289	Altele
+290	Clienți
+291	＋ Client nou
+292	Nume / firmă
+293	Încă nu există clienți
+294	%n facturi
+295	Clientul are facturi – nu poate fi șters
+296	Factură nouă
+297	— alegeți —
+298	Nr. (automat)
+299	Data facturii
+300	Data prestării
+301	Plătibil în
+302	%n zile
+303	Poziții
+304	Descriere
+305	Cant.
+306	Unitate
+307	Preț €
+308	TVA
+309	＋ Poziție
+310	Net
+311	Total
+312	Textul se pune singur: «Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.» Datele obligatorii (nume, adresă, nr. fiscal, dată, nr.) vin din «Afacerea mea».
+313	Introduceți prețuri nete; TVA se calculează. Datele obligatorii vin din «Afacerea mea».
+314	Mențiune pe factură (opțional)
+315	Achitată la
+316	Gol = încă deschisă. Data plății contează pentru veniturile acelui an.
+317	Creează PDF
+318	✉ Trimite pe e-mail (poșta dvs.)
+319	Anulează factura
+320	O factură emisă nu se șterge, se anulează – rămâne în listă.
+321	Anulează stornarea
+322	Factură salvată
+323	PDF salvat în «Documente»
+324	Alegeți un client
+325	Cel puțin o poziție cu descriere și preț
+326	Completați mai întâi numele firmei, proprietarul, adresa și numărul fiscal
+327	Acest număr există deja
+328	Factura %n
+329	Bună ziua,\n\nvă trimit atașat factura %n în valoare de %s.\n\nCu stimă\n%f
+330	PDF descărcat – atașați-l la e-mail.
+331	Verifică plata: %n · %c
+332	Declarație fiscală %y (EÜR) până la %d
+333	Bon / cheltuială
+334	Sumă € (brut)
+335	Categorie
+336	Foto sau fișier al bonului
+337	📷 Scanează
+338	📄 Fișier
+339	✓ %n fișier(e) ales(e)
+340	✓ salvat în «Documente»
+341	Introduceți suma
+342	Bon salvat
+343	fără imagine
+344	Materiale / mărfuri
+345	Software / servicii
+346	Deplasări / mașină
+347	Telefon / internet
+348	Asigurări
+349	Chirie
+350	Publicitate
+351	Acte și termene
+352	%a din %b
+353	Termene
+354	Contracte cu clienți
+355	Chirie / birou
+356	de la oficiul de comerț
+357	chestionar + scrisoare
+358	→ contractul și în Finanțe › Costuri
+359	contracte, oferte
+360	dacă există
+361	%n documente
+362	Adaugă: %s
+363	Documentul se salvează o dată în «Documente» și aici doar se leagă.
+364	Scanare / foto
+365	Fișier (PDF, foto)
+366	Deja în «Documente»
+367	Caută …
+368	Alte documente nu există
+369	Legat
+370	scoate de aici (documentul rămâne)
+371	＋ Mai mult
+372	Factura %n scadentă
+373	Declarație fiscală %y (EÜR)
+374	fără consultant fiscal
+375	cu consultant fiscal
+376	Păstrați bonurile și facturile %y
+377	8 ani (din 2025) – verificați
+378	până la %d
+379	Niciun termen deschis
+380	Reguli generale, nu consultanță fiscală. Verificați la fisc sau cu un consultant.
+381	Pentru consultantul fiscal
+382	An
+383	%a facturi · %b bonuri
+384	Listă (CSV, pentru Excel)
+385	Totul într-un PDF (rezumat, facturi, bonuri)
+386	Trimiteți dvs. – cu poșta dvs. sau „Partajează”. Bonurile care există doar ca fișier PDF nu intră în PDF-ul comun – sunt în «Documente».
+387	Plăți anticipate de impozit
+388	Sumă pe trimestru, €
+389	Km parcurși (dus-întors)
+390	De la → la
+391	Mașina proprie pentru deplasări de serviciu: 0,30 € pe km. Suma se pune singură. Verificați.
+392	Afacerea dvs. – dacă aveți
+393	Pentru cei care lucrează pe cont propriu sau vând ceva în paralel.
+394	Facturi PDF cu toate datele obligatorii
+395	Bonuri, venituri, cheltuieli și profit pe an
+396	Actele firmei și termene
+397	Listă pentru consultantul fiscal (PDF/CSV)
+398	Activează «Afacerea mea»
+399	Nu aveți afacere? Lăsați oprit – nu se schimbă nimic.
+400	imediat
+401	Se creează …
+402	Rezumat %y
+403	Finanțe
+404	Dosar fiscal, costuri
+405	Dosar fiscal %y
+406	%n bonuri · %a
+407	Declarație fiscală %y până la %z (fără consultant – verificați)
+408	Din care manoperă, €
+409	Plătit prin transfer
+410	Plătit cash – de obicei nu se acceptă. Materialul nu contează.
+411	Manoperă: %a → până la %b impozit mai puțin (20 %, cu limite – verificați)
+412	Fotografiază un bon
+413	Adaugă fără foto
+414	PDF pentru ELSTER / consultant
+415	Încă nu există bonuri pentru acest an
+416	Bine de știut:
+417	Deocamdată gol – fotografiați primul bon.
+418	Sumă, €
+419	Ce este
+420	de ex. ochelari, optician
+421	Bon nou
+422	Introduceți o sumă
+423	Toate categoriile
+424	Băncile sunt acum în „Autorități și servicii”
+425	Muncă (cheltuieli profesionale)
+426	Drum, unelte de lucru, cursuri
+427	Meșteri și gospodărie
+428	Contează doar manopera
+429	Coplăți, ochelari, dentist
+430	Îngrijirea copiilor
+431	Donații
+432	Asigurări și pensie
+433	Fiscul socotește singur 1.230 € pe an (deducere forfetară pentru angajați). Bonurile ajută dacă cheltuielile sunt mai mari.
+434	Meșteri: 20 % din manoperă, cel mult 1.200 € impozit mai puțin. Materialul nu contează. Plătiți prin transfer, nu cash.
+435	Cheltuielile medicale contează doar peste o „povară rezonabilă” care depinde de venit. Păstrați totuși bonurile.
+436	Din 2025: 80 % din costuri, cel mult 4.800 € pe copil până la 14 ani.
+437	Până la 300 € extrasul de cont înlocuiește adesea chitanța de donație.
+438	Multe sunt deja declarate prin salariu. Asigurările private se trec separat.
+439	Reguli generale, nu consultanță fiscală – verificați.
+440	Card
+441	Blochează cardul
+442	Dosar fiscal
+443	Contracte și costuri
+444	Plătesc pentru contracte
+445	%a / lună
+446	%a pe an · %n contracte
+447	%n – se poate rezilia până la %d (peste %k zile)
+448	%k: %n contracte asemănătoare – dublură? Verificați.
+449	Fără sumă: %n – adăugați-o ca totalul să fie corect
+450	din %y · verificați prețul
+451	reziliere până la %d
+452	Încă nu există contracte. Atingeți „＋ Contract” – asigurare, curent, telefon, internet, sală de sport …
+453	＋ Contract
+454	După o scumpire, adesea se poate rezilia mai devreme – scrie în scrisoarea furnizorului.
+455	Reguli generale, nu consultanță – verificați.
+456	Muncă și afacere
+457	Loc de muncă, afacere proprie, educație
+458	Adăugați angajatorii – contractele, recomandările și proiectele rămân la îndemână ani de zile.
+459	＋ Angajator
+460	Listă pentru CV (PDF)
+461	Firmă
+462	Funcție
+463	De la (lună)
+464	Până la (gol = acum)
+465	acum
+466	Documente
+467	＋ Document din aplicație
+468	Ce documente?
+469	Probabil potrivite
+470	Toate documentele
+471	Proiecte și realizări
+472	＋ Proiect
+473	Titlu
+474	Ce am făcut
+475	Rezultat (cifre, timp, aprecieri)
+476	„%n” este deja în listă
+477	Deschide-l
+478	Am lucrat din nou acolo
+479	Introduceți firma
+480	Introduceți un titlu
+481	Carieră
+482	Rezultat
+483	Contracte și asigurări
+484	în «Finanțe» – cu sume și termene
+485	Angajatori
+486	Educație și diplome
+487	Alte acte
+488	Contract de muncă
+489	Concediere / demisie
+490	Fluturași de salariu
+491	contract semnat
+492	intermediar sau final
+493	lună de lună
+494	pentru declarația fiscală
+495	Salvat o dată în «Documente» și legat aici – fără copie.
+496	Scanează / fă o fotografie
+497	se pot mai multe pagini
+498	Alege un fișier
+499	PDF sau imagine din Fișiere
+500	atinge = leagă
+501	se potrivește
+502	Legat ✓
+503	Salvat în «Documente» și legat ✓
+504	Dezleagă
+505	Documentul rămâne în «Documente».
+506	＋ Alt document
+507	＋ Adaugă o calificare
+508	Școală, formare profesională, studii, cursuri, certificate – totul într-un loc pentru candidaturi.
+509	Diplomă școlară
+510	Diplomă universitară
+511	Curs
+512	Certificat / permis
+513	Tip
+514	Școală / instituție
+515	Țară
+516	Recunoaștere în Germania
+517	— (calificare germană)
+518	Recunoscut ✓
+519	Cerere depusă
+520	Cerere nedepusă încă
+521	Răspuns / termen până la
+522	Recunoaștere: %t
+523	Calificări străine: anerkennung-in-deutschland.de
+524	Pagini și acte
+525	Puteți adăuga acte după salvare.
+526	Data ca LL.AAAA, de ex. 02.2026
+527	Ce intră în PDF? Originalele nu se schimbă.
+528	CV (carieră)
+529	%n pag.
+530	Fișier PDF – nu se poate insera
+531	fără pagini
+532	Creează PDF · %n pagini
+533	Bifați cel puțin unul
+534	Se creează PDF-ul …
+535	Apoi: trimiteți cu e-mailul dvs. sau păstrați în Fișiere
+536	Ce înseamnă frazele din recomandarea de la muncă
+537	O recomandare germană ascunde nota în fraze politicoase. Reguli generale – nu consultanță juridică, verificați.
+538	Găsit în recomandarea dvs.:
+539	Textul recomandării nu este recunoscut. Scanați-l cu recunoașterea textului – atunci frazele se găsesc singure.
+540	Nu s-au găsit fraze tipice în text.
+541	Fraze obișnuite
+542	Încheiere
+543	Există mulțumiri și urări – semn bun.
+544	Fără mulțumiri sau urări la final – adesea semn de apreciere slabă.
+545	1 – foarte bine
+546	2 – bine
+547	3 – satisfăcător
+548	4 – suficient
+549	5 – slab
+550	6 – insuficient
+551	Termene din contract
+552	＋ Termene: probă, preaviz, durată determinată
+553	Perioadă de probă până la
+554	Durată determinată până la
+555	Preaviz
+556	Formulare proprie
+557	– nespecificat
+558	2 săptămâni (în perioada de probă)
+559	4 săptămâni la 15 sau la sfârșit de lună (legal)
+560	1 lună la sfârșit de lună
+561	3 luni la sfârșit de trimestru
+562	altele
+563	perioada de probă s-a încheiat ✓
+564	Înscrieți-vă ca persoană în căutarea unui loc de muncă (Agentur für Arbeit) – până la %d
+565	Înscrieți-vă ca persoană în căutarea unui loc de muncă – acum (în 3 zile)
+566	Regulă generală: cu 3 luni înainte de final; dacă aflați mai târziu – în 3 zile. Verificați.
+567	Contractul se încheie %m? Introduceți data exactă – vă amintesc la timp.
+568	Perioada de probă se încheie la %d – %c
+569	Înscrieți-vă ca persoană în căutarea unui loc de muncă – contractul %c se încheie la %d
+570	Acasă
+571	Ordinea plăcilor ↑↓ · ochi = arată/ascunde
+572	ascuns
+573	Blocuri pe ecranul principal
+574	Vremea
+575	Azi
+576	Autorități (programări, termene)
+577	Acțiuni rapide
+578	Resetează aspectul
+579	Aspect restabilit ✓
+580	Seif
+581	Scanner
+582	Să apară și aici? (fără copie)
+583	Salvat o dată în «Documente»
+584	Adaugă angajatorul «%n»
+585	Adaugă un angajator
+586	Numele firmei
+587	Păstrează doar în Documente
+588	Nu mai întreba pentru «%k»
+589	Apare și la %n
+590	Anulează
+591	Apare și în
+592	＋ Alt loc
+593	× îl scoate de acolo – documentul rămâne.
+594	Deocamdată doar în «Documente»
+595	→ și în dosarul fiscal %y
+596	Unde altundeva?
+597	Angajator
+598	Ce loc?
+599	Niciun loc potrivit. Adăugați un angajator în «Muncă și afacere».
+600	Testament și procuri
+601	%n documente se potrivesc cu %c
+602	Sunt deja în «Documente» – le legăm?
+603	Leagă %n
+604	Mai târziu
+605	Legate: %n
+606	sau
+607	Mută de pe telefonul vechi
+608	Alegeți fișierul de rezervă – vin toate datele
+609	✓ Bine ați revenit
+610	Datele dvs. de pe telefonul vechi sunt aici:
+611	Contracte
+612	Foto / pagini
+613	Autorități și servicii
+614	Programări și termene
+615	criptat ✓
+616	Conectare pe acest telefon
+617	Face ID-ul telefonului vechi nu funcționează aici. Configurați-l din nou:
+618	Protejați aplicația pe acest telefon cu o parolă:
+619	Configurează Face ID
+620	Setează o parolă
+621	Seiful se deschide cu parola dvs. de până acum.
+622	Mută pe un telefon nou
+623	Aici «Salvează o copie» (cu parolă) – puneți fișierul în iCloud Drive sau trimiteți-l prin AirDrop.
+624	Pe telefonul nou deschideți linkul în Safari → Partajează → «Adaugă pe ecranul principal».
+625	Deschideți aplicația → «Mută de pe telefonul vechi» → alegeți fișierul → parola.
+626	Salvează o copie acum
+627	Partajează linkul aplicației
+628	Link copiat ✓
+629	Telefonul vechi își păstrează datele până le ștergeți acolo.
+630	Acest document există deja: „%t”
+631	Vezi
+632	Păstrează ambele
+633	Notițe
+634	Tot ce e rapid într-un loc
+635	Notiță nouă
+636	Dictează
+637	Scanează
+638	Notiță foto
+639	Toate notițele
+640	Puncte deschise
+641	Cu dată → calendar
+642	Arhivă
+643	Coș
+644	Dosare
+645	toate
+646	Fără dosar
+647	%n notiță
+648	%n notițe
+649	Muncă
+650	Învățare
+651	Fitness
+652	Călătorii
+653	Familie
+654	Idei
+655	Proiecte
+656	＋ Dosar
+657	Dosar
+658	Culoare
+659	Ascunde dosarul
+660	Arată ascunsele
+661	Șterge dosarul
+662	Sigur? Notițele rămân „fără dosar”.
+663	Dosarele sunt ale dvs.: redenumiți, simbol, culoare, ascundeți. O notiță stă într-un singur dosar – fără copii.
+664	Deocamdată nimic aici.
+665	Atingeți „Notiță nouă” – sau dictați, scanați, fotografiați.
+666	Caută în notițe …
+667	Text …
+668	＋ Punct
+669	Punct nou
+670	fără dată
+671	Data punctului
+672	Elimină data
+673	dintr-o notiță
+674	sarcină
+675	Deschide calendarul
+676	Un punct cu dată ajunge singur în calendar. «În calendarul iPhone» din profil – cu sunet.
+677	Etichete
+678	de ex. Afacere, medic
+679	Acțiuni
+680	Scoate din arhivă
+681	Mută în coș
+682	Ștergeți definitiv?
+683	Șterge definitiv
+684	Golește coșul
+685	Notițele din coș se șterg după 30 de zile.
+686	În coș ✓
+687	Partajează
+688	Text mare
+689	Legat cu
+690	Leagă cu …
+691	Încă nu e nimic de legat.
+692	angajator
+693	autoritate
+694	document
+695	Din «Documente»
+696	din «Documente» · legat
+697	Atașează
+698	Foto / scanare
+699	Fișier (PDF sau imagine)
+700	Dictarea nu e disponibilă aici. Atingeți 🎙 pe tastatura iPhone – funcționează în orice câmp.
+701	Vorbiți … (🎙 din nou = stop)
+702	Recunoașterea vocală o face iPhone-ul (Apple), poate fi nevoie de internet.
+703	Scanare %d
+704	Foto %d
+705	＋ Notiță
+706	creată %d
+707	modificată %d
+708	Verifică o copie
+709	Ce copie verificăm?
+710	Ultima copie de pe acest telefon
+711	Alege un fișier din Fișiere …
+712	Parola copiei
+713	Parolă greșită
+714	Se verifică copia …
+715	✓ Copia este în regulă
+716	⚠ Copia este incompletă
+717	✕ Nu este o copie Butler Docs sau fișierul este deteriorat
+718	Creată la %d
+719	gol
+720	pe telefon: %n
+721	În copie lipsesc %n fotografii. Salvați una nouă.
+722	%n fotografii sunt deteriorate.
+723	Copia are mai puține documente decât telefonul – e mai veche. Salvați una nouă.
+724	Doar verificat – datele dvs. nu s-au schimbat.
+725	Salvează o copie nouă
+726	Raport de eroare
+727	Se trimit doar date tehnice – fără documente, fără nume. Îl trimiteți dvs., din poșta dvs.
+728	Ce s-a întâmplat? (opțional)
+729	Captură de ecran: apăsați butonul lateral + volum sus, apoi atașați-o la e-mail.
+730	Trimite pe e-mail (poșta dvs.)
+731	Partajează …
+732	Copiat ✓
+733	Butler Docs – raport de eroare
+734	Erori (ultimele 7 zile)
+735	Versiune
+736	Ecran
+737	Dispozitiv
+738	Copie
+739	Mod
+740	de pe ecranul principal
+741	în browser
+742	Pentru declarația fiscală %y
+743	Cheltuieli profesionale
+744	%a din 1.230 €
+745	Peste 1.230 € – bonurile merită ✓
+746	Mai sunt %a până la 1.230 € – până acolo fiscul socotește singur
+747	Drumul la muncă
+748	Necompletat – km, zile, lucru de acasă
+749	%k km · %d zile · %h zile de acasă
+750	Km până la muncă (un sens)
+751	Zile cu drum la muncă
+752	Zile de lucru de acasă
+753	Împreună
+754	Din 2026: 0,38 € pe km de la primul km, doar un sens.
+755	Până în 2025: 0,30 € pentru km 1–20, 0,38 € de la km 21.
+756	Lucru de acasă: 6 € pe zi, cel mult 1.260 € pe an. Pe zi fie drum, fie lucru de acasă.
+757	Fără mașină proprie cel mult 4.500 € pe an. Verificați.
+758	există · %c
+759	Angajatorul o trimite până la sfârșitul lui februarie %z
+760	Adăugați întâi angajatorul în «Muncă și afacere» – acolo îi e locul.
+761	Deschide «Muncă și afacere»
+762	Ce angajator?
+763	Încă neprimit
+764	Contestație până la %d
+765	Termenul de contestație a expirat (%d)
+766	Data de pe scrisoare
+767	Considerat primit: %a · contestație până la: %b
+768	Scrisoarea se consideră primită la 4 zile după dată (din 2025), apoi 1 lună pentru contestație. Contestația este gratuită – prin ELSTER sau prin scrisoare. Verificați.
+769	Scrisoare (foto sau fișier)
+770	Verifică decizia de impunere %y – contestație până la %d
+771	Scanează adeverința de impozit pe salariu %y
+772	Necompletat – cel mult 1.000 € pentru toate băncile
+773	Impunere comună (căsătoriți) – 2.000 €
+774	＋ Bancă
+775	%a peste limită – reduceți la o bancă
+776	Deducere pentru economisitori: 1.000 € pe an de persoană. Ordinul îl schimbați în online banking.
+777	Cod fiscal și ELSTER
+778	Numărul în seif, acces prin elster.de
+779	Deschide ELSTER
+780	Codul fiscal în seif
+781	Codul fiscal apare pe adeverința de salariu și pe fiecare decizie. Aici nu se păstrează o a doua copie.
+782	Ce mai lipsește pentru %y
+783	Drum la muncă / lucru de acasă
+784	Chitanțe de donații
+785	dacă ați donat
+786	Decontul cheltuielilor de întreținere / meșteri
+787	partea de manoperă, prin transfer
+788	Adeverințe de la casa de sănătate / asigurări
+789	anual – verificați golurile
+790	Reguli generale, nu consultanță fiscală. Verificați.
+791	✓ %n fișier(e)
+792	✓ în «Documente»
+793	Verificați cifrele
+794	Introduceți data
+795	Autoverificare: totul în regulă ✓
+796	verificat %d
+797	Verifică acum
+798	Autoverificarea a găsit ceva
+799	Se verifică …
+800	Aplicația nu mai poate salva. Eliberați spațiu pe telefon și redeschideți aplicația.
+801	Telefonul poate șterge datele acestei aplicații. Deschideți-o de pe ecranul principal, nu în Safari – și salvați o copie.
+802	Memoria aplicației e aproape plină (%p %). Salvați o copie și ștergeți fotografiile inutile.
+803	Depozitul de fotografii nu se deschide. Reporniți telefonul; dacă nu ajută – restaurați dintr-o copie.
+804	%n pagini nu au fotografie. Dacă aveți o copie – verificați-o în «Profil».
+805	Deschide profilul
+806	Am înțeles
+807	Testament și dispoziții
+808	Testament
+809	Mandat de protecție viitoare
+810	Directive anticipate medicale
+811	Dispoziție privind tutela
+812	Dorințe pentru înmormântare
+813	olograf sau notarial
+814	cine decide pentru dvs.
+815	dorințe privind tratamentul
+816	cine să vă fie tutore
+817	dorințe pentru înmormântare
+818	Unde este originalul?
+819	Original: %o
+820	de ex. dosar în dulap, sufragerie
+821	acasă
+822	la notar
+823	casetă de valori la bancă
+824	Persoana numită / notă
+825	de ex. soția; fiul are o copie
+826	＋ Document
+827	Testamentul poate fi depus la judecătoria locală; procura înregistrată în Registrul central. Indicații generale – nu consultanță juridică, verificați.
+828	Toate documentele în „Finanțe și drept” ›
+829	Rezumat pentru familie (PDF)
+830	Testament și dispoziții – rezumat
+831	lipsește
+832	există
+833	%a din %b · unde sunt originalele
+834	Termen: %e – %o
+835	Înregistrat
+836	E-mail
+837	Naturalizare
+838	Bonuri
+839	Lista de medicamente
+840	Scrisori / acte
+841	Lun–Vin 8–12, Joi 14–18
+842	Cod fiscal, număr de client, nr. dosar …
+843	data-act="go" data-to="bsv"
+844	<div class="dhcard dhq">
+845	Mică afacere § 19 UStG
+846	Declarație TVA anticipată
+847	Număr fiscal
+848	E-mail
+849	Persoană fizică autorizată
+850	Profesie liberală
+851	UG (SRL simplificat)
+852	TVA %r %
+853	Înregistrarea activității
+854	Număr fiscal (fisc)
+855	Asigurare de răspundere a firmei
+856	Registrul comerțului / CCI
+857	Plată anticipată
+858	Plată anticipată de impozit %s
+859	data-act="go" data-to="archive"
+860	data-act="dccat" data-v="personal"
+861	data-act="go" data-to="mycal"
+862	data-act="go" data-to="tasks"
+863	data-act="dhbank"
+864	data-act="dhvault"
+865	data-act="go" data-to="life"
+866	data-act="go" data-to="dnach"
+867	data-act="go" data-to="people"
+868	Bonuri pentru declarația fiscală %y
+869	Creșă, bonă, after-school
+870	Sănătate, răspundere civilă, pensie
+871	data-act="go" data-to="fzm"
+872	data-act="go" data-to="kar"
+873	Recomandare de la muncă
+874	Adeverință de impozit pe salariu
+875	Formare profesională
+876	Dosar de candidatură (PDF)
+877	Dosar de candidatură
+878	sRout
+879	data-act="go" data-to="sc9"
+880	data-act="go" data-to="dsrok"
+881	--h236vh
+882	Deducere pentru navetă
+883	Deducere pentru lucrul de acasă
+884	Adeverință de impozit pe salariu %y
+885	Decizie de impunere %y
+886	Ordine de scutire
+887	Informare privind pensia
+888	judecătoria locală
+889	+ Adaugă secțiune
+890	1 an
+891	Mai sunt 1.230,00 € până la 1.230 € – până acolo fiscul socotește singur
+892	10 ani
+893	3 luni
+894	5 ani
+895	6 luni
+896	O indicație, nu consultanță financiară. Fotografiile rămân doar pe acest dispozitiv și nu sunt în copia datelor.
+897	A sosit o scrisoare
+898	Un dosar obișnuit cu PDF-uri și fotografii – se deschide fără aplicație pe orice calculator.
+899	Un PDF protejat cu parolă: se deschide în orice program, dar doar cu parola.
+900	Majordom AI dacă doriți: 2,99 € pe lună
+901	Majordom AI: chat, voce, foto și PDF, scrisori, sfaturi
+902	Aa Latină simplă
+903	Accent
+904	Adaugă un document
+905	Adaugă un bun
+906	Adaugă contact
+907	Adaugă document
+908	Adaugă telefonul meu sub semnătură
+909	Adaugă semnătură
+910	Căutare adrese — doar ce ați scris (OpenStreetMap)
+911	Adrese
+912	Toate limbile
+913	Toate bunurile cu foto, valoare, documente și moștenitori – pentru asigurator, notar sau succesiune.
+914	Toate datele rămân în acest browser, doar pe acest dispozitiv. Nimic nu se transmite terților și nu există reclame.
+915	Toate termenele în calendarul iPhone
+916	Toate documentele într-un dosar (ZIP)
+917	Toate documentele într-un PDF
+918	Totul gata. Niciun memento.
+919	Toate documentele importante într-un loc.
+920	Toate secțiunile
+921	Toate actualizările deodată
+922	Almaty
+923	Mereu unul
+924	Amsterdam
+925	Viteza aplicației
+926	Aspect
+927	Programări, termene, mementouri
+928	Arhivă până la 20 de documente
+929	Secțiuni, linkuri, notițe …
+930	Armenia
+931	Art deco
+932	Ca în stil
+933	Întreabă
+934	Întreabă-l pe Butler
+935	Întrebați-vă majordomul …
+936	Bunuri
+937	Bunuri, dispoziții, ultima voință
+938	Astana
+939	Atena
+940	Australia
+941	Austria
+942	Auto: zi și noapte
+943	Fundal
+944	Baden-Württemberg
+945	Bangkok
+946	Barcelona
+947	Culoarea de bază — toată aplicația se adaptează
+948	De bază
+949	Elemente de bază
+950	Bavaria
+951	Beijing
+952	Belarus
+953	Berlin
+954	Negru
+955	Acoperiți ce nu e necesar înainte de trimitere
+956	Foaie albă
+957	Tablă
+958	Cartea vieții mele
+959	Cartea vieții mele și momente de familie
+960	Cartea vieții
+961	Carte, însemnare sau un cuvânt din text
+962	Bordeaux
+963	Ambele fețe ale actelor de identitate pe o pagină
+964	Brandenburg
+965	Brazilia
+966	Bremen
+967	Readu stilul Butler
+968	Creează pachet
+969	Alcătuiți setul – previzualizarea de sus îl arată imediat.
+970	Constructor
+971	Burgundia
+972	Afacere
+973	Carte de vizită
+974	Planuri de afaceri, învățare, decizii, întrebări
+975	Butler AI
+976	Ceasul Butler
+977	Butler în modul de bază
+978	Jurnal Butler
+979	Butler scrie scrisoarea
+980	Butoane
+981	Cumpărați o dată – merge pentru totdeauna
+982	Cairo
+983	Calendar
+984	Calendar și sarcini
+985	Setări calendar
+986	Sunați în caz de urgență
+987	Canada
+988	Preia un document
+989	Mașină
+990	Carduri
+991	Carduri, notițe, analize
+992	Adeverințe, extrase
+993	Șampanie
+994	Schimbați orice parte – previzualizarea de sus se schimbă imediat.
+995	Schimbă parola
+996	Modificări
+997	Caută actualizări
+998	Chicago
+999	China
+1000	Ciocolată
+1001	Alege (test)
+1002	Alegeți un land
+1003	Alege din contacte
+1004	Sărbători bisericești
+1005	Cetățenie
+1006	Oraș
+1007	Oraș (răsărit și apus)
+1008	Oraș sau cod poștal
+1009	Clasic
+1010	Clasic · Astronomic
+1011	Clasic · Sala de marmură
+1012	Clasic · Birou
+1013	Ceas
+1014	Ceas în centru
+1015	Köln
+1016	Culori
+1017	Culori, pictograme, ceas și model – dintr-o atingere.
+1018	Confort: mărimea textului și a plăcilor
+1019	Condiții
+1020	Contact
+1021	Contacte
+1022	Continuă lectura
+1023	Contracte, acte, documente
+1024	Contracte, scrisori, dovezi
+1025	Contracte, procuri, facturi
+1026	Copiază textul
+1027	Corectează tot
+1028	Cosmos
+1029	Scrisoare de intenție în germană
+1030	Creează o notiță pentru mâine
+1031	Actual
+1032	Personalizează ecranul principal
+1033	Calendarul ciclului: 1 profil
+1034	Calendarul ciclului: mai multe profiluri și „Sănătatea femeii”
+1035	Cehia
+1036	Protecția datelor
+1037	Data nașterii
+1038	Termenele din documente devin singure sarcini
+1039	Termene în 30 de zile
+1040	Șterge toate datele
+1041	Delhi
+1042	Depozite, ETF-uri și acțiuni – în detaliu
+1043	Design și setări
+1044	Deutsch
+1045	Diplome, certificate
+1046	Dispoziții
+1047	De făcut acum
+1048	Termenele documentelor
+1049	Documentele și fotografiile lor, notițe, sarcini, calendar, finanțe, bunuri, sănătate, fitness, garderobă, locuri — nimic din acestea nu se trimite nicăieri.
+1050	Documente în pachet
+1051	Dresda
+1052	Permis de conducere, mașină
+1053	Dubai
+1054	Scadent
+1055	Düsseldorf
+1056	Est
+1057	Margine și strălucire
+1058	Egipt
+1059	Smarald
+1060	Smarald și aur · ceasul Butler · pictograme «Aur 3D»
+1061	Muncă, recomandări, adeverințe
+1062	Gol — bine
+1063	English
+1064	Introduceți o dată – apoi se completează singure: în scrisori, dosare și în „Cartea vieții mele”.
+1065	Protecția accesului
+1066	Español
+1067	Tot din Premium, fără majordomul AI
+1068	Totul fără limite
+1069	Tot ce dețineți · valoare · creștere
+1070	Tot ce va avea nevoie familia: dispoziții, bunuri și instrucțiunile dvs. Doar pe acest telefon.
+1071	Cursuri valutare — nimic personal
+1072	Culoarea ochilor
+1073	Termenele documentelor familiei
+1074	Familie, notar, asigurator
+1075	Literele decorative există doar pentru alfabetul latin (A–Z). Chirilica rămâne normală.
+1076	Tată
+1077	Număr de dosar
+1078	Fișiere
+1079	Umplere
+1080	Finanțe
+1081	Finanțe: 2 conturi, tranzacții, buget, plăți
+1082	Finanțe și drept
+1083	Găsește
+1084	Găsește-mi contactele
+1085	Primii 1000 – reducere pe viață (test)
+1086	Prenume Nume\nStrada Nr.\nCod Oraș
+1087	Prenume
+1088	Prenume pentru salut
+1089	Dosare și blocare cu PIN
+1090	Font
+1091	De exemplu: fiscul din Frankfurt
+1092	De exemplu: angajatorul nu plătește orele suplimentare – ce pot face?
+1093	Pentru impozite
+1094	Pădure
+1095	Pentru totdeauna
+1096	Formă
+1097	Formulă de adresare
+1098	Franța
+1099	Français
+1100	Gratuit
+1101	De la
+1102	Acces complet gratuit. Apoi aplicația trece singură la De bază – nu se plătește nimic, datele rămân.
+1103	Finanțe complete: plăți automate, salariu, investiții, Oglindă
+1104	Complet offline
+1105	Viitor
+1106	Galaxie · Orbită
+1107	Galaxie · Inel
+1108	Geneva
+1109	Georgia
+1110	Germania
+1111	Obiective
+1112	Aur 3D
+1113	Bună dimineața,
+1114	Grecia
+1115	Salut
+1116	Culoarea părului
+1117	Hamburg
+1118	Hanovra
+1119	Antet
+1120	Înălțime, cm
+1121	Hessa
+1122	Ascuns
+1123	Ridicată
+1124	Istoric pe persoană
+1125	Hologramă
+1126	Șabloane pentru ecranul principal, blocuri, coloane, pictograme
+1127	Acasă, calendar, sarcini, proiecte, obiective, notițe
+1128	Locuință
+1129	Cum mă descriu
+1130	Câte lucruri urgente sunt – se vede pe ecranul principal fără a deschide aplicația. Se actualizează când deschideți Butler. iPhone-ul cere permisiunea pentru notificări – așa permite numărul de pe pictogramă.
+1131	Am promis
+1132	Carte de identitate
+1133	Pictograme
+1134	Pictograme și accent
+1135	Identitate
+1136	Cu litere latine, ca în pașaport
+1137	În caz de urgență
+1138	Într-un plic
+1139	În aplicație semnătura apare în stilul ales. În e-mailul trimis aplicația de poștă arată textul cu un font normal.
+1140	Scrisori primite
+1141	India
+1142	Asigurări și contracte
+1143	Analiza costurilor de asigurare
+1144	Portofoliu de investiții
+1145	Investiții
+1146	Israel
+1147	Istanbul
+1148	Italia
+1149	Fildeș
+1150	Japonia
+1151	Japoneză
+1152	Ierusalim
+1153	Kaliningrad
+1154	Kazahstan
+1155	Kazan
+1156	Kiev
+1157	Limbă
+1158	Limbă: Română
+1159	Limbi
+1160	Ultima copie: încă niciuna. O copie cu parolă vă salvează datele dacă se întâmplă ceva cu telefonul.
+1161	Ultima copie
+1162	Nume de familie
+1163	Drept
+1164	Drept și drepturi
+1165	Aspect și culoare
+1166	Aspect, constructor, stilul dvs.
+1167	Leipzig
+1168	Semnături pentru scrisori
+1169	Scrisori
+1170	Lanțuri ale vieții
+1171	Luminos · Fildeș
+1172	Luminos · Perlă
+1173	Lisabona
+1174	Londra
+1175	Priviți-vă: stare, avere, an
+1176	Los Angeles
+1177	Scăzută
+1178	Saxonia Inferioară
+1179	Madrid
+1180	Fă o copie
+1181	Marmură
+1182	Marcați unde să stea fiecare element: ⚡ – o placă de acces rapid (până la 8), ▤ – un rând în «Secțiunile mele». Ambele sunt în regulă. Săgețile schimbă ordinea.
+1183	Mecklenburg-Pomerania Occidentală
+1184	Medical
+1185	Meniu
+1186	Mesaj …
+1187	Miami
+1188	Microfon
+1189	Butonul din mijloc: doar depunere, fără vizualizare
+1190	Albastru de miezul nopții
+1191	Milano
+1192	Minimal
+1193	Minsk
+1194	Oglindă
+1195	Modern
+1196	Luni
+1197	Bani și datorii
+1198	Mai mult
+1199	Mai mult în arhivă
+1200	Moscova
+1201	Mamă
+1202	Mută un document în seif
+1203	München
+1204	Bunurile mele
+1205	Cărțile mele
+1206	Contactele mele
+1207	Ziua mea
+1208	Datele mele pentru scrisori
+1209	Datele mele pentru scrisori și semnături
+1210	E-mailul meu (expeditor)
+1211	Pictogramele mele
+1212	Instrucțiunile mele pentru familie
+1213	Scrisorile mele
+1214	Telefonul meu
+1215	Planul meu
+1216	Semnăturile mele
+1217	Situațiile mele
+1218	Povestea mea, evenimente, documente
+1219	Stilul meu
+1220	Numele în adresă
+1221	Natură
+1222	Necesită atenție
+1223	Oraș neon
+1224	Avere netă
+1225	Țările de Jos
+1226	Nu se trimit niciodată: documente, fotografii, texte, sume, date medicale, nume.
+1227	New York
+1228	Carte nouă
+1229	Contract nou
+1230	Parolă nouă
+1231	Proiect nou
+1232	Memento nou
+1233	Pas nou …
+1234	Sarcină nouă
+1235	Nisa
+1236	Noapte
+1237	Încă nu există proiecte active. Atingeți „Proiect nou” – un șablon vă ajută să începeți.
+1238	Încă nu există contracte. Adăugați primul – fotografiați contractul, majordomul completează restul.
+1239	Încă nu există termene. Adăugați o dată de expirare unui document sau unei polițe și va apărea aici.
+1240	Încă nu există scrisori
+1241	Fără model
+1242	Încă nu există cereri.
+1243	Fără semnătură
+1244	Încă nu există semnături. Adăugați-o pe prima mai jos.
+1245	Nu sunt sarcini aici.
+1246	Nu s-a găsit nicio pagină pentru adresa web:
+1247	Normal
+1248	Renania de Nord-Westfalia
+1249	Nu este consultanță juridică. Un testament e valabil doar în formă legală – în Germania olograf sau la notar.
+1250	Încă nimic adăugat. Adăugați o locuință, o mașină, un ceas sau aur.
+1251	Încă nimic aici — atingeți „Adaugă document”.
+1252	Nimic planificat pentru azi
+1253	Nimic planificat pentru azi.
+1254	Încă nimic de calculat — adăugați o asigurare cu dată de început și primă.
+1255	Încă nimic de continuat
+1256	Nimic urgent. Timp pentru ce contează, dar nu arde.
+1257	Novosibirsk
+1258	Acum:
+1259	Nürnberg
+1260	Ocean
+1261	Oprit: oricine are telefonul poate intra
+1262	Oficial
+1263	Scrisoare oficială (PDF)
+1264	Duminica în raport – o scurtă notă despre fiecare proiect
+1265	O dată pe săptămână: ce e gata, ce s-a blocat, ce urmează
+1266	Când aplicația va avea propriul server, această secțiune se va conecta direct la bazele de date oficiale ale legilor.
+1267	Un fișier cu toate intrările. Fotografiile și scanările se păstrează separat în arhivă.
+1268	Online
+1269	Doar dvs. vedeți aceste date, în contul dvs. Alimentația, calendarul ciclului, scrisorile și dosarul de urgență le iau de aici.
+1270	Deschide-mi calendarul
+1271	Origine
+1272	Alte documente
+1273	Datorez
+1274	Propriu …
+1275	Pachet pentru caz de deces
+1276	Paris
+1277	Părțile aplicației
+1278	Pașaport, buletin, permis, dovezi
+1279	Pașaport, buletin, polițe, contracte – tot ce are dată de expirare sau ultima zi de reziliere.
+1280	Pașaport, permis, card de sănătate, certificate, foi matricole
+1281	Aici intră pașapoartele, permisele, cardurile de sănătate, certificatele și foile matricole ale întregii familii.
+1282	Model
+1283	Documente personale
+1284	Dosar personal
+1285	Fotografiați un document — drept și curat
+1286	Locul nașterii
+1287	Simplu
+1288	Plan: De bază
+1289	Plan: Pentru totdeauna
+1290	Plan: Premium
+1291	Planuri
+1292	Planuri și comparație ›
+1293	Mâna poetului
+1294	Polonia
+1295	Polski
+1296	Portugalia
+1297	Praga
+1298	Premium
+1299	Anterior
+1300	Prioritate
+1301	Confidențialitate și securitate
+1302	Mod privat
+1303	Profil
+1304	Module de program (vizualizator PDF, cameră fitness) — o dată, apoi rămân pe telefon
+1305	Proiect
+1306	Imobil
+1307	Fișa bunurilor (PDF)
+1308	Prevederi și moștenire
+1309	Acces rapid și secțiuni
+1310	Depunere rapidă pe ecranul de conectare
+1311	Introducere rapidă
+1312	RUB 0
+1313	Seturi gata
+1314	Bonuri și documente ale anului
+1315	Recente
+1316	Cereri recente: spus → înțeles → salvat
+1317	Telefonul destinatarului
+1318	Regiune
+1319	Reîncarcă
+1320	Memento
+1321	Mementouri
+1322	Elimină
+1323	Raportează o problemă
+1324	Resetează cumpărăturile de test
+1325	Restaurează dintr-o copie
+1326	Restaurează din copie de rezervă
+1327	Revizuire încheiată ✓
+1328	Renania-Palatinat
+1329	Rio de Janeiro
+1330	Roma
+1331	Rusia
+1332	SĂGETĂTOR
+1333	SMS
+1334	Saarland
+1335	Loc sigur pentru datele importante
+1336	Sankt Petersburg
+1337	Formulă de salut
+1338	Salut și nume
+1339	Salut și nume
+1340	Salzburg
+1341	Salvează o copie
+1342	Salvează ca «Stilul meu»
+1343	Salvat doar pe acest dispozitiv
+1344	Saxonia
+1345	Saxonia-Anhalt
+1346	Scanează un document
+1347	Scandinav
+1348	Schleswig-Holstein
+1349	Caută
+1350	Caută contacte…
+1351	Caută documente
+1352	Căutați o secțiune, un link sau o notiță.
+1353	Caută în textul tuturor documentelor
+1354	Caută, organizează, pregătește
+1355	Secțiune
+1356	Trimite
+1357	Trimite din nou tot
+1358	Trimite ca o carte vie
+1359	Trimite în siguranță
+1360	Trimite scrisoarea…
+1361	Trimite prin Mail
+1362	Setează un cod
+1363	Setați un cod și documentele din seif vor fi criptate.
+1364	Stabilește un obiectiv
+1365	Setează un cod de acces
+1366	Setați e-mailul dvs.
+1367	Shanghai
+1368	Formă
+1369	Partajează fișierul calendarului
+1370	Cumpărături și returnări
+1371	Formă scurtă pentru ecranul principal
+1372	Arată-mi documentele de călătorie
+1373	Micșorează pentru e-mail (până la 5 MB)
+1374	Deconectare
+1375	Semnătură
+1376	Stilul semnăturii
+1377	Textul semnăturii
+1378	Semnătură · originalul nostru
+1379	E-mail simplu
+1380	Soci
+1381	Prestații sociale
+1382	Spania
+1383	Sport, drept, contracte, alimentație
+1384	Începe perioada gratuită (test)
+1385	Land
+1386	Pasul 1 din 5
+1387	Pași
+1388	Memorie
+1389	Stuttgart
+1390	Stil
+1391	Subiect
+1392	Subiect (în germană)
+1393	Nume de familie
+1394	Schimbați planurile și vedeți aplicația prin ochii unui cumpărător. Nu se plătește nimic și datele rămân neschimbate.
+1395	Elveția
+1396	Sydney
+1397	Faceți o fotografie — majordomul găsește termenul
+1398	Atingeți orice parte a previzualizării și alegeți o culoare. Totul se schimbă imediat.
+1399	Atingeți „Butler AI” – găsește un document, notează o sarcină sau vă amintește de un termen.
+1400	Atingeți ✦
+1401	Sarcină
+1402	Sarcini
+1403	Tbilisi
+1404	Terminal
+1405	Thailanda
+1406	The Silentium’s
+1407	The Silentium’s Butler
+1408	Limba aplicației se schimbă în profil.
+1409	Majordomul adună aici tot ce se apropie: sarcini, date de familie, sărbători bisericești și termene de proiect. Gata? Atingeți cercul și mementoul dispare.
+1410	Graficul apare când bunurile au o dată de cumpărare.
+1411	Copia conține fiecare intrare, fotografie și document. Cu parolă este criptată (AES-256).
+1412	Țara stabilește sărbătorile legale, orașul răsăritul, apusul și orele de rugăciune.
+1413	Cele patru locuri laterale sunt ale dvs. Butler rămâne mereu în centru. Atingeți un loc, apoi ce să fie acolo.
+1414	Cel mai important lucru acum este sus
+1415	Următoarele 7 zile
+1416	Telefonul încă nu a promis stocare permanentă — deschideți de pe pictogramă și salvați copii
+1417	Telefonul cronometrează singur fiecare atingere
+1418	Aplicația Mail a telefonului se deschide cu scrisoarea gata.
+1419	Ecranul rămâne nemișcat: ceas, acces rapid și secțiuni imediat. Cardurile și sfaturile sunt în „Ce e de făcut acum”.
+1420	Forma stilului rămâne — culoarea o alegeți dvs.
+1421	Vocea Google a antrenorului, dacă e setată o cheie — doar frazele antrenorului
+1422	Seiful este gol. Deschideți un document și atingeți „În seif” – sau alegeți-l aici.
+1423	Seiful nu este protejat
+1424	Încă nu există documente în arhivă – scanați-le în „Documente”.
+1425	Aceste puncte sunt numărul de pe pictograma aplicației.
+1426	Acesta
+1427	Aceasta este informare, nu consultanță juridică. Legile se schimbă des – verificați mereu lucrurile importante cu un avocat.
+1428	Turingia
+1429	Placă
+1430	Ora (opțional)
+1431	E timpul pentru revizuirea săptămânală
+1432	Către (birou, autoritate)
+1433	Către cine
+1434	Tokyo
+1435	Toronto
+1436	Turul aplicației
+1437	Transport
+1438	Turcia
+1439	SUA
+1440	Ucraina
+1441	Emiratele Arabe Unite
+1442	Regatul Unit
+1443	Până la 50 de contacte, familie: cerc și arbore
+1444	Actualizări când doriți: 5,99 € pe actualizare
+1445	Obiecte de valoare
+1446	Valoarea bunurilor
+1447	Vehicule
+1448	Prin aplicația de poștă a telefonului (ca text)
+1449	Viena
+1450	Vladivostok
+1451	Răspunsuri vocale pornite
+1452	Așteaptă răspuns
+1453	Varșovia
+1454	Vremea — orașul, fără nume (Open-Meteo)
+1455	Vremea, căutarea adreselor, vocea Google și cursurile valutare funcționează.
+1456	Revizuire săptămânală
+1457	Greutate, kg
+1458	Ce trebuie făcut?
+1459	Ce expiră curând
+1460	Ce e de făcut acum
+1461	Ce puteți plasa
+1462	Alb
+1463	Cine (persoană)
+1464	Fără parolă copia nu poate fi citită — nici dacă fișierul ajunge într-un cloud sau pe mâini greșite.
+1465	XII
+1466	Ekaterinburg
+1467	Erevan
+1468	Aveți ultima versiune ✓
+1469	Cărțile dvs. vor apărea aici. Începeți cu „Carte nouă”.
+1470	Datele dvs.
+1471	Datele dvs. și confidențialitatea
+1472	Datele dvs. nu se șterg niciodată din cauza plății. Dacă un abonament se încheie sau o actualizare nu e cumpărată, totul rămâne și se deschide. Puteți exporta totul gratuit oricând.
+1473	Lumea dvs. digitală. Ordinea dvs. Timpul dvs.
+1474	Oamenii importanți pentru dvs. vor apărea aici. Atingeți „Adaugă contact”.
+1475	Scrisoarea dvs. – scrieți direct pe foaie
+1476	Aplicația dvs. de poștă se deschide cu mesajul gata – atingeți doar Trimite. Dacă nu se deschide, copiați textul.
+1477	Numele și adresa dvs.
+1478	Biblioteca dvs. personală: gânduri, dorințe, reguli, planuri și amintiri
+1479	Scanările dvs. vor apărea aici
+1480	Zürich
+1481	toate ›
+1482	fundal · carduri · accent · butoane
+1483	clopoțel
+1484	bara de jos, ordinea plăcilor, culoarea stilului
+1485	cerc
+1486	culoare
+1487	cupru
+1488	întunecat
+1489	design
+1490	diamant
+1491	nu repeta
+1492	de ex. 60311 Frankfurt
+1493	de ex. unde sunt originalele, pe cine să sune primul, ce să facă cu abonamentele și conturile, dorințe…
+1494	de ex. „Cu stimă, Ion Popescu”
+1495	zilnic
+1496	lunar
+1497	săptămânal
+1498	patruzeci
+1499	sticlă
+1500	strălucire
+1501	aur
+1502	auriu
+1503	degrade
+1504	hex
+1505	doamnă
+1506	metal
+1507	sarcina mea
+1508	nume@exemplu.ro
+1509	încă niciuna
+1510	propriu
+1511	pagina nu a fost găsită
+1512	rotunjit
+1513	șapte
+1514	argint
+1515	domn
+1516	pătrat
+1517	camera găsește foaia
+1518	iPhone-ul încă nu a confirmat protecția — continuați să faceți copii
+1519	culoarea temei
+1520	subțire
+1521	așteaptă răspuns
+1522	alb
+1523	— fără proiect —
+1524	Marcaj „Kopie” pe fiecare pagină
+1525	119 € o singură dată
+1526	5,99 € pe lună · 49 € pe an
+1527	↺ Resetează aspectul
+1528	⋯ Mai mult
+1529	⏳ Perioadă gratuită
+1530	ⓘ Testamentul poate fi depus la judecătoria locală; procura înregistrată în Registrul central. Indicații generale – nu consultanță juridică, verificați.
+1531	ⓘ Bine de știut:
+1532	▣ Ecranul principal pe un ecran
+1533	▦ Bara de jos
+1534	▦ Acasă
+1535	◐ Culoarea stilului
+1536	☰ Blocuri pe ecranul principal
+1537	⚠ Autoverificarea a găsit ceva
+1538	✉ Trimite în siguranță
+1539	✎ Semnăturile mele
+1540	✎ Notiță nouă
+1541	✓ Corectare automată
+1542	✓ Verifică o copie
+1543	✦ Creează-ți stilul
+1544	⬆ Restaurează din copie
+1545	⬇ Exportă datele mele
+1546	🇦🇹 Austria
+1547	🇨🇭 Elveția
+1548	🇨🇿 Cehia
+1549	🇩🇪 Germania
+1550	🇪🇸 Spania
+1551	🇫🇷 Franța
+1552	🇬🇧 Regatul Unit
+1553	🇬🇷 Grecia
+1554	🇭🇷 Croația
+1555	🇮🇹 Italia
+1556	🇳🇱 Țările de Jos
+1557	🇵🇱 Polonia
+1558	🇵🇹 Portugalia
+1559	🇷🇺 Rusia
+1560	🇹🇷 Turcia
+1561	🇺🇸 Statele Unite
+1562	🌐 Online
+1563	🌐 Ce ajunge online — doar în modul «Online»
+1564	📄 Creează PDF
+1565	📦 Creează un pachet
+1566	📱 Siguranța stocării
+1567	📷 Fotografiază un bon
+1568	🔒 Aspectul și culoarea rămân doar pe acest telefon.
+1569	🔒 Rămâne doar pe acest telefon
+1570	🔒 Alegerea dvs. rămâne doar pe acest telefon
+1571	🔴 Număr pe pictograma Butler
+1572	🗂 Toate documentele într-un dosar (ZIP)
+1573	🗓 Revizuire săptămânală
+1574	🗝 Copie cu parolă
+1575	🛡 Garanția datelor
+1576	🧪 Mod de test
+1577	＋ Adaugă
+1578	＋ Adaugă o sarcină
+1579	＋ Proiect nou

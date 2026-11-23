@@ -1,6 +1,6 @@
 /* ===== Personal calendar: computations, screens, setup — one module (was updates v199) ===== */
 /* v199: personal calendar — computations (faiths, state holidays, sky) */
-const cv5LG=['ru','de','en','pl','tr','fr','es'];
+const cv5LG=['ru','de','en','pl','tr','fr','es','it','uk','ro','bg','sr','hr'];
 const cv5i=()=>{const k=cv5LG.indexOf(g.lang);return k<0?2:k};
 /* a 3-language array [ru,de,en] finds the other languages in I18N[lang], keyed by the English text (src/modules/i18n) */
 const cv5x=a=>{try{if(a.length>3||cv5i()<3)return'';const D=typeof I18N!=='undefined'&&I18N[g.lang];return D&&D[a[2]]||''}catch{return''}};

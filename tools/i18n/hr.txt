@@ -1,0 +1,1580 @@
+0	Pismo od institucije
+1	Izgleda kao pismo od: %o
+2	%k od %d
+3	%e – otprilike do %f: datum pisma + 4 dana dostave + 1 mjesec. Provjerite pismo.
+4	Rok u pismu: do %f
+5	Rok u kalendar
+6	Rok je u kalendaru ✓
+7	Za „%o“
+8	Povezano s „%o“
+9	Rok za tjedan dana: %e – %o
+10	Pisma i rješenja
+11	Pismo
+12	Predložak
+13	Rješenje / pismo od
+14	Broj predmeta
+15	Tekst pisma
+16	Kako poslati
+17	Pošta
+18	Faks
+19	Osobno
+20	PDF / ispis
+21	Kopija
+22	Poslano
+23	Broj za praćenje
+24	Spremljeno u dnevnik i u „Pisma“
+25	Dodajte svoju adresu u „Moji podaci“ – tada ide u pismo.
+26	Nema e-pošte za ovu instituciju – dodajte je u karticu
+27	Moji zahtjevi
+28	＋ zahtjev
+29	Što je traženo
+30	Predano
+31	Kako
+32	online
+33	poštom
+34	osobno
+35	U obradi
+36	Rješenje je stiglo
+37	Sljedeći korak
+38	Pitaj za status
+39	pitajte ako do %d ništa ne stigne
+40	Pitaj za status: %t – %o
+41	Pozivi i dokazi
+42	Poziv
+43	Primljeno
+44	Tko
+45	Što je rečeno / što je to
+46	Fotografija potvrde ili pisma
+47	Prati
+48	Broj je kopiran – zalijepite ga na stranici Deutsche Post
+49	Zvali ste „%o“. S kim ste razgovarali? Što je rečeno?
+50	Svi unosi: %n
+51	još
+52	Zahtjev
+53	Pronađeno u pismu
+54	Institucija
+55	Što spremiti
+56	Ništa nije pronađeno – unesite ručno
+57	Rok iz pisma – vi odlučujete
+58	Izgleda: %e do %f
+59	Dodaj
+60	Drugi datum
+61	Nije potrebno
+62	Izradi karticu
+63	Spremi u „%n“
+64	Adresa je promijenjena: bila je „%a“
+65	Gotovo – kartica „%n“
+66	Adresa je promijenjena – ažuriraj
+67	Piši instituciji %o
+68	Prazno pismo
+69	Adresa i broj predmeta već su unutra
+70	Poslana pisma
+71	Datum
+72	Spremi
+73	Izbriši
+74	Zasad prazno
+75	fotografija
+76	Nadolazeći termini
+77	Moji termini
+78	Dodaj termin
+79	Termin kod institucije
+80	Vrijeme
+81	Za što
+82	npr. produljenje boravišne dozvole
+83	Ponijeti
+84	＋ stavka
+85	Što još ponijeti
+86	Dokumenti iz aplikacije
+87	Odaberi dokumente
+88	Još nema dokumenata
+89	Unesite datum
+90	Termin je u kalendaru, podsjetnik dan ranije
+91	Sutra: %n – pripremite dokumente
+92	Gotovo
+93	Vrati
+94	Gotovo: %a od %b
+95	za %n dana
+96	danas
+97	sutra
+98	prošlo
+99	%d – istječe %w
+100	Produljuje: %o. Naručite se rano – čeka se i tjednima.
+101	Naruči se
+102	Otvori
+103	Dodaj „%o“
+104	Imam
+105	Sakrij
+106	Svake godine
+107	＋ godišnja obveza
+108	Godišnja obveza
+109	Vlastito
+110	Što treba napraviti
+111	Sljedeći datum
+112	Ponavljaj
+113	svake godine
+114	svake 2 godine
+115	Gotovo – sljedeći datum %d
+116	Datumi slijede opća pravila – provjerite za sebe.
+117	Stvarno izbrisati? Dodirnite ponovno
+118	Institucije
+119	Institucije i usluge
+120	Koga obavijestiti: mirovina, zdravstveno osiguranje, porezna uprava …
+121	%t je u sefu – otvorite „%n“ i dodirnite „Prikaži“.
+122	%n: telefon %v
+123	Sljedeći termin: %n, %d
+124	Nema termina
+125	Termini, brojevi, poveznice
+126	Redoslijed
+127	Što dodati?
+128	Izradi vlastito
+129	Bilo koja institucija, liječnik ili klub – sa svojim poveznicama i gumbima
+130	Prikvačeno
+131	Sve
+132	Ovdje su vaše institucije i usluge. Dodajte samo ono što koristite.
+133	Hitan slučaj
+134	Policija
+135	Vatrogasci · hitna pomoć
+136	Dežurni liječnik
+137	Moji hitni podaci
+138	Što reći na telefonu
+139	Gdje? – adresa, kat · Što se dogodilo? · Koliko ozlijeđenih? · Tko zove? · Pričekajte pitanja – ne prekidajte.
+140	Moja adresa
+141	Krvna grupa
+142	Alergije
+143	Lijekovi
+144	Kontakt za hitne slučajeve
+145	Telefon kontakta
+146	Ispunite sada – u hitnom slučaju nema vremena.
+147	115 – broj javnih službi: kaže koja je institucija nadležna
+148	Otvoreno do %t
+149	Zatvoreno
+150	otvara %d %t
+151	Pon Uto Sri Čet Pet Sub Ned
+152	Ruta
+153	Moji brojevi
+154	Kopirano
+155	Prikaži
+156	tajno – u sefu
+157	Broj je skriven. Sa šifrom sefa je šifriran.
+158	Adresa
+159	Radno vrijeme
+160	Bilješka
+161	Unaprijed ispunjeno – provjerite: adrese i radno vrijeme se mijenjaju.
+162	Provjereno
+163	Uredi
+164	Izbrisano
+165	Ime
+166	npr. služba za strance
+167	Simbol
+168	Grupa
+169	Nova grupa
+170	Za koga
+171	Telefon
+172	Poveznica za naručivanje
+173	Naručivanje se uvijek obavlja na stranici institucije – ovdje je samo poveznica.
+174	Zalijepi
+175	Lijepljenje nije uspjelo – zadržite prst na polju i odaberite „Zalijepi“
+176	Gumbi i poveznice
+177	＋ vlastiti gumb
+178	Natpis
+179	Poveznica, telefon ili e-pošta
+180	＋ broj
+181	Što je to
+182	Broj
+183	tajno
+184	Prikvači gore
+185	Na početnom zaslonu
+186	Odustani
+187	Spremljeno
+188	Unesite ime
+189	Ova poveznica nije ispravna
+190	Dodano – provjerite podatke
+191	dodano
+192	Zdravlje
+193	Obitelj i škola
+194	Klubovi i ostalo
+195	Ja
+196	Supruga
+197	Dijete
+198	Postavi
+199	Postavljanje za minutu
+200	Gdje živite?
+201	Poštanski broj ili grad – za ispunjavanje adresa (zasad točno za 63741 Aschaffenburg).
+202	Za koga?
+203	Svatko ima svoje institucije – čije su, označavate kasnije.
+204	Što vam treba?
+205	Odaberite što vam treba. Ostalo kasnije.
+206	Dalje
+207	Natrag
+208	Preskoči
+209	Gotovo: dodano %n
+210	Ovdje
+211	Pretraga: ime, broj, predmet …
+212	Iz pisma
+213	Skeniraj → institucija, adresa, predmet – iz zaglavlja
+214	Zalijepi poveznicu
+215	Kopirali ste poveznicu za naručivanje – zalijepite je, gotovo
+216	Ručno
+217	Ime i jedan kontakt – 10 sekundi
+218	Koje pismo?
+219	Skeniraj pismo
+220	Nakon skeniranja vratite se ovdje i odaberite pismo.
+221	Još nema skeniranja
+222	Telefon, e-pošta ili poveznica
+223	＋ još kontakt
+224	✓ telefon
+225	✓ e-pošta
+226	✓ poveznica → gumb „Termin“
+227	✓ poveznica
+228	? nije prepoznato – provjerite
+229	Još (po želji)
+230	adresa · radno vrijeme · brojevi · simbol · grupa · gumbi · početni zaslon
+231	Poveznica
+232	Bez grupe
+233	Piši
+234	Već postoji?
+235	Izgleda kao „%n“ – %w. Da dodamo podatke tamo, da pisma i rokovi budu na jednom mjestu?
+236	isto ime
+237	ista e-pošta
+238	isti telefon
+239	ista web-stranica
+240	slično ime
+241	Dodaj u „%n“
+242	Druga institucija – izradi novu
+243	Dodano u „%n“ ✓
+244	Moj posao
+245	Obrazovanje
+246	💼 Imam vlastiti posao
+247	Računi, primici, dokumenti tvrtke, rokovi – «Moj posao»
+248	Podaci tvrtke još nisu uneseni
+249	Dodirnite za ispunjavanje
+250	Redovni PDV
+251	PAUŠAL
+252	Neplaćeni računi
+253	Kasni %d dana
+254	Kasni 1 dan
+255	Svi računi su plaćeni
+256	Porezna prijava %y
+257	Račun
+258	Primitak
+259	Klijent
+260	Dokumenti
+261	%y · prihodi i rashodi
+262	Prihodi
+263	Rashodi
+264	Dobit
+265	Pojednostavljeno: prihod se računa na dan uplate. Provjerite.
+266	📎 Za poreznog savjetnika: popis + primici (PDF/CSV)
+267	Računi %y
+268	Rashodi %y
+269	Još nema računa
+270	Još nema primitaka
+271	plaćeno
+272	otvoreno
+273	kasni
+274	stornirano
+275	Od 2028. računi tvrtkama (B2B) moraju biti elektronički – mali poduzetnici su izuzeti, privatni kupci nisu pogođeni. Provjerite.
+276	Naziv posla
+277	Vlasnik (puno ime)
+278	Pravni oblik
+279	PDV broj u EU (ako postoji)
+280	Ja sam mali poduzetnik (§ 19 UStG, bez PDV-a)
+281	nema
+282	mjesečno
+283	tromjesečno
+284	Imam poreznog savjetnika
+285	Banka
+286	Prefiks broja računa
+287	Sakrij «Moj posao»
+288	Podaci ostaju; ovdje ga možete ponovno uključiti.
+289	Ostalo
+290	Klijenti
+291	＋ Novi klijent
+292	Ime / tvrtka
+293	Još nema klijenata
+294	%n računa
+295	Klijent ima račune – ne može se izbrisati
+296	Novi račun
+297	— odaberite —
+298	Br. (automatski)
+299	Datum računa
+300	Datum usluge
+301	Plativo u roku od
+302	%n dana
+303	Stavke
+304	Opis
+305	Kol.
+306	Jed.
+307	Cijena €
+308	PDV
+309	＋ Stavka
+310	Neto
+311	Ukupno
+312	Tekst se dodaje sam: «Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.» Obvezni podaci (ime, adresa, porezni br., datum, br.) dolaze iz «Moj posao».
+313	Unesite neto cijene; PDV se računa. Obvezni podaci dolaze iz «Moj posao».
+314	Napomena na računu (po želji)
+315	Plaćeno dana
+316	Prazno = još nije plaćeno. Datum uplate računa se u prihode godine.
+317	Izradi PDF
+318	✉ Pošalji e-poštom (vaša pošta)
+319	Storniraj račun
+320	Izdani račun se ne briše nego stornira – ostaje na popisu.
+321	Poništi storniranje
+322	Račun je spremljen
+323	PDF je spremljen u «Dokumenti»
+324	Odaberite klijenta
+325	Barem jedna stavka s opisom i cijenom
+326	Najprije unesite naziv tvrtke, vlasnika, adresu i porezni broj
+327	Ovaj broj već postoji
+328	Račun %n
+329	Poštovani,\n\nu prilogu je račun %n na iznos od %s.\n\nS poštovanjem\n%f
+330	PDF je preuzet – priložite ga e-pošti.
+331	Provjeri uplatu: %n · %c
+332	Porezna prijava %y (EÜR) do %d
+333	Primitak / trošak
+334	Iznos € (bruto)
+335	Kategorija
+336	Fotografija ili datoteka primitka
+337	📷 Skeniraj
+338	📄 Datoteka
+339	✓ odabrano datoteka: %n
+340	✓ spremljeno u «Dokumenti»
+341	Unesite iznos
+342	Primitak je spremljen
+343	bez fotografije
+344	Materijal / roba
+345	Softver / usluge
+346	Putovanja / auto
+347	Telefon / internet
+348	Osiguranja
+349	Najam
+350	Oglašavanje
+351	Dokumenti i rokovi
+352	%a od %b
+353	Rokovi
+354	Ugovori s klijentima
+355	Najam / ured
+356	od obrtnog ureda
+357	upitnik + pismo
+358	→ ugovor je i u Financije › Troškovi
+359	ugovori, ponude
+360	ako postoji
+361	dokumenata: %n
+362	Dodaj: %s
+363	Dokument se sprema jednom u «Dokumenti», a ovdje se samo povezuje.
+364	Skeniranje / fotografija
+365	Datoteka (PDF, slika)
+366	Već u «Dokumenti»
+367	Pretraga …
+368	Nema drugih dokumenata
+369	Povezano
+370	ukloni odavde (dokument ostaje)
+371	＋ Još
+372	Dospijeće računa %n
+373	Porezna prijava %y (EÜR)
+374	bez poreznog savjetnika
+375	s poreznim savjetnikom
+376	Čuvajte primitke i račune za %y
+377	8 godina (od 2025.) – provjerite
+378	do %d
+379	Nema otvorenih rokova
+380	Opća pravila, ne porezni savjet. Provjerite u poreznoj upravi ili kod savjetnika.
+381	Za poreznog savjetnika
+382	Godina
+383	%a računa · %b primitaka
+384	Popis (CSV, za Excel)
+385	Sve u jednom PDF-u (pregled, računi, primici)
+386	Šaljete sami – svojom poštom ili „Podijeli“. Primici koji su samo PDF datoteka ne ulaze u zajednički PDF – oni su u «Dokumenti».
+387	Predujmovi poreza
+388	Iznos po tromjesečju, €
+389	Prijeđeni km (tamo i natrag)
+390	Od → do
+391	Vlastiti auto za poslovne vožnje: 0,30 € po km. Iznos se ispunjava sam. Provjerite.
+392	Vlastiti posao – ako ga imate
+393	Za sve koji rade za sebe ili nešto prodaju sa strane.
+394	Računi u PDF-u sa svim obveznim podacima
+395	Primici, prihodi, rashodi i dobit za godinu
+396	Dokumenti tvrtke i rokovi
+397	Popis za poreznog savjetnika (PDF/CSV)
+398	Uključi «Moj posao»
+399	Nemate posao? Jednostavno ga ne uključujte – ništa se ne mijenja.
+400	odmah
+401	Izrada …
+402	Pregled %y
+403	Financije
+404	Porezna mapa, troškovi
+405	Porezna mapa %y
+406	primitaka: %n · %a
+407	Porezna prijava %y do %z (bez savjetnika – provjerite)
+408	Od toga rad, €
+409	Plaćeno prijenosom
+410	Plaćeno gotovinom – obično se ne priznaje. Materijal se ne računa.
+411	Rad: %a → do %b manje poreza (20 %, ima ograničenja – provjerite)
+412	Fotografiraj primitak
+413	Dodaj bez fotografije
+414	PDF za ELSTER / savjetnika
+415	Još nema primitaka za ovu godinu
+416	Dobro je znati:
+417	Zasad prazno – fotografirajte prvi primitak.
+418	Iznos, €
+419	Što je to
+420	npr. naočale, optika
+421	Novi primitak
+422	Unesite iznos
+423	Sve kategorije
+424	Banke su sada u „Institucije i usluge“
+425	Posao (troškovi rada)
+426	Put, radna sredstva, tečajevi
+427	Majstori i kućanstvo
+428	Računa se samo rad
+429	Participacije, naočale, zubar
+430	Čuvanje djece
+431	Donacije
+432	Osiguranja i mirovina
+433	Porezna sama priznaje 1230 € godišnje (paušal za zaposlene). Primici pomažu ako su vaši troškovi veći.
+434	Majstori: 20 % rada, najviše 1200 € manje poreza. Materijal se ne računa. Plaćajte prijenosom, ne gotovinom.
+435	Troškovi liječenja računaju se tek iznad „razumnog opterećenja“, koje ovisi o prihodu. Ipak čuvajte primitke.
+436	Od 2025.: 80 % troškova, najviše 4800 € po djetetu do 14 godina.
+437	Do 300 € bankovni izvod često zamjenjuje potvrdu o donaciji.
+438	Mnogo toga se već prijavljuje kroz plaću. Privatna osiguranja unose se posebno.
+439	Opća pravila, ne porezni savjet – provjerite.
+440	Kartica
+441	Blokiraj karticu
+442	Porezna mapa
+443	Ugovori i troškovi
+444	Plaćam po ugovorima
+445	%a / mjesečno
+446	%a godišnje · ugovora: %n
+447	%n – može se otkazati do %d (za %k dana)
+448	%k: %n sličnih ugovora – dvostruko? Provjerite.
+449	Bez iznosa: %n – dodajte ga da zbroj bude točan
+450	od %y · provjerite cijenu
+451	otkažite do %d
+452	Još nema ugovora. Dodirnite „＋ Ugovor“ – osiguranje, struja, telefon, internet, teretana …
+453	＋ Ugovor
+454	Nakon poskupljenja često se može otkazati ranije – piše u pismu pružatelja.
+455	Opća pravila, ne savjet – provjerite.
+456	Posao i poduzetništvo
+457	Posao, vlastiti posao, obrazovanje
+458	Dodajte poslodavce – ugovori, preporuke i projekti ostaju pri ruci godinama.
+459	＋ Poslodavac
+460	Popis za životopis (PDF)
+461	Tvrtka
+462	Pozicija
+463	Od (mjesec)
+464	Do (prazno = sada)
+465	sada
+466	Dokumenti
+467	＋ Dokument iz aplikacije
+468	Koji dokumenti?
+469	Vjerojatno odgovaraju
+470	Svi dokumenti
+471	Projekti i uspjesi
+472	＋ Projekt
+473	Naslov
+474	Što sam napravio
+475	Rezultat (brojke, rokovi, pohvale)
+476	„%n“ je već na popisu
+477	Otvori ga
+478	Opet sam radio tamo
+479	Unesite tvrtku
+480	Unesite naslov
+481	Karijera
+482	Rezultat
+483	Ugovori i osiguranja
+484	u «Financije» – s iznosima i rokovima
+485	Poslodavci
+486	Obrazovanje i diplome
+487	Ostali dokumenti
+488	Ugovor o radu
+489	Otkaz
+490	Platne liste
+491	potpisan ugovor
+492	privremena ili konačna
+493	mjesec po mjesec
+494	za poreznu prijavu
+495	Spremljeno jednom u «Dokumenti» i povezano ovdje – bez kopije.
+496	Skeniraj / fotografiraj
+497	može više stranica
+498	Odaberi datoteku
+499	PDF ili slika iz „Datoteke“
+500	dodir = poveži
+501	odgovara
+502	Povezano ✓
+503	Spremljeno u «Dokumenti» i povezano ✓
+504	Odveži
+505	Dokument ostaje u «Dokumenti».
+506	＋ Još dokument
+507	＋ Dodaj kvalifikaciju
+508	Škola, strukovno obrazovanje, fakultet, tečajevi, certifikati – sve na jednom mjestu za prijave.
+509	Školska svjedodžba
+510	Fakultet
+511	Tečaj
+512	Certifikat / potvrda
+513	Vrsta
+514	Škola / ustanova
+515	Država
+516	Priznavanje u Njemačkoj
+517	— (njemačka kvalifikacija)
+518	Priznato ✓
+519	Zahtjev predan
+520	Još nije predan
+521	Odgovor / rok do
+522	Priznavanje: %t
+523	Strane kvalifikacije: anerkennung-in-deutschland.de
+524	Stranice i dokumenti
+525	Dokumente možete dodati nakon spremanja.
+526	Datum kao MM.GGGG, npr. 02.2026
+527	Što ide u PDF? Originali se ne mijenjaju.
+528	Životopis (karijera)
+529	%n str.
+530	PDF datoteka – ne može se umetnuti
+531	nema stranica
+532	Izradi PDF · stranica: %n
+533	Označite barem jedno
+534	Izrada PDF-a …
+535	Zatim: pošaljite svojom e-poštom ili spremite u „Datoteke“
+536	Što znače fraze u svjedodžbi poslodavca
+537	Njemačka svjedodžba poslodavca skriva ocjenu u uljudnim frazama. Opća pravila – ne pravni savjet, provjerite.
+538	Pronađeno u vašoj svjedodžbi:
+539	Tekst svjedodžbe nije prepoznat. Skenirajte je s prepoznavanjem teksta – tada se fraze pronalaze same.
+540	U tekstu nisu pronađene tipične fraze.
+541	Uobičajene fraze
+542	Zaključak
+543	Ima zahvale i lijepih želja – dobar znak.
+544	Na kraju nema zahvale ni želja – često znak slabe ocjene.
+545	1 – izvrsno
+546	2 – vrlo dobro
+547	3 – dobro
+548	4 – dovoljno
+549	5 – slabo
+550	6 – nedovoljno
+551	Rokovi iz ugovora
+552	＋ Rokovi: probni rad, otkazni rok, na određeno
+553	Probni rad do
+554	Ugovor na određeno do
+555	Otkazni rok
+556	Vlastita formulacija
+557	– nije navedeno
+558	2 tjedna (tijekom probnog rada)
+559	4 tjedna do 15. ili kraja mjeseca (po zakonu)
+560	1 mjesec do kraja mjeseca
+561	3 mjeseca do kraja tromjesečja
+562	drugo
+563	probni rad je prošao ✓
+564	Prijavite se kao tražitelj posla (Agentur für Arbeit) – do %d
+565	Prijavite se kao tražitelj posla – sada (u roku od 3 dana)
+566	Opće pravilo: 3 mjeseca prije kraja; ako saznate kasnije – u roku od 3 dana. Provjerite.
+567	Ugovor istječe %m? Unesite točan datum – podsjetit ću vas na vrijeme.
+568	Probni rad istječe %d – %c
+569	Prijavite se kao tražitelj posla – ugovor %c istječe %d
+570	Početna
+571	Redoslijed pločica ↑↓ · oko = prikaži/sakrij
+572	skriveno
+573	Blokovi na početnom zaslonu
+574	Vrijeme
+575	Danas
+576	Institucije (termini, rokovi)
+577	Brze radnje
+578	Vrati raspored
+579	Raspored je vraćen ✓
+580	Sef
+581	Skener
+582	Prikazati i ovdje? (bez kopije)
+583	Spremljeno jednom u «Dokumenti»
+584	Dodaj poslodavca «%n»
+585	Dodaj poslodavca
+586	Naziv tvrtke
+587	Ostavi samo u Dokumentima
+588	Ne pitaj više za «%k»
+589	Prikazuje se i kod %n
+590	Poništi
+591	Prikazuje se i u
+592	＋ Drugo mjesto
+593	× ga uklanja odande – dokument ostaje.
+594	Zasad samo u «Dokumenti»
+595	→ i u poreznu mapu %y
+596	Gdje još?
+597	Poslodavac
+598	Koje mjesto?
+599	Nema odgovarajućih mjesta. Dodajte poslodavca u «Posao i poduzetništvo».
+600	Oporuka i punomoći
+601	%n dokumenta odgovara: %c
+602	Već su u «Dokumenti» – da ih povežemo?
+603	Poveži %n
+604	Kasnije
+605	Povezano: %n
+606	ili
+607	Prenesi sa starog telefona
+608	Odaberite datoteku kopije – stižu svi podaci
+609	✓ Dobro došli natrag
+610	Vaši podaci sa starog telefona su ovdje:
+611	Ugovori
+612	Fotografije / stranice
+613	Institucije i usluge
+614	Termini i rokovi
+615	šifrirano ✓
+616	Prijava na ovom telefonu
+617	Face ID sa starog telefona ovdje ne radi. Postavite ga ponovno:
+618	Zaštitite aplikaciju na ovom telefonu lozinkom:
+619	Postavi Face ID
+620	Postavi lozinku
+621	Sef se otvara dosadašnjom lozinkom sefa.
+622	Prenesi na novi telefon
+623	Ovdje «Spremi kopiju» (s lozinkom) – stavite datoteku u iCloud Drive ili je pošaljite AirDropom.
+624	Na novom telefonu otvorite poveznicu u Safariju → Podijeli → «Dodaj na početni zaslon».
+625	Otvorite aplikaciju → «Prenesi sa starog telefona» → odaberite datoteku → lozinka.
+626	Spremi kopiju sada
+627	Podijeli poveznicu aplikacije
+628	Poveznica je kopirana ✓
+629	Stari telefon čuva svoje podatke dok ih tamo ne izbrišete.
+630	Ovaj dokument već postoji: „%t“
+631	Pogledaj
+632	Spremi oba
+633	Bilješke
+634	Sve brzo na jednom mjestu
+635	Nova bilješka
+636	Diktiraj
+637	Skeniraj
+638	Bilješka s fotografijom
+639	Sve bilješke
+640	Otvorene stavke
+641	S datumom → kalendar
+642	Arhiva
+643	Koš
+644	Mape
+645	sve
+646	Bez mape
+647	%n bilješka
+648	bilješki: %n
+649	Posao
+650	Učenje
+651	Fitness
+652	Putovanja
+653	Obitelj
+654	Ideje
+655	Projekti
+656	＋ Mapa
+657	Mapa
+658	Boja
+659	Sakrij mapu
+660	Prikaži skrivene
+661	Izbriši mapu
+662	Sigurno? Bilješke ostaju „bez mape“.
+663	Mape su vaše: preimenujte, simbol, boja, sakrijte. Bilješka je u jednoj mapi – bez kopija.
+664	Ovdje još nema ničega.
+665	Dodirnite „Nova bilješka“ – ili diktirajte, skenirajte, fotografirajte.
+666	Pretraži bilješke …
+667	Tekst …
+668	＋ Stavka
+669	Nova stavka
+670	bez datuma
+671	Datum za stavku
+672	Ukloni datum
+673	iz bilješke
+674	zadatak
+675	Otvori kalendar
+676	Stavka s datumom sama ide u kalendar. «U kalendar iPhonea» u profilu – sa zvukom.
+677	Oznake
+678	npr. Posao, liječnik
+679	Radnje
+680	Izvadi iz arhive
+681	Premjesti u koš
+682	Izbrisati zauvijek?
+683	Izbriši zauvijek
+684	Isprazni koš
+685	Bilješke u košu brišu se nakon 30 dana.
+686	U košu ✓
+687	Podijeli
+688	Veliki tekst
+689	Povezano s
+690	Poveži s …
+691	Još nema što povezati.
+692	poslodavac
+693	institucija
+694	dokument
+695	Iz «Dokumenti»
+696	iz «Dokumenti» · povezano
+697	Priloži
+698	Fotografija / skeniranje
+699	Datoteka (PDF ili slika)
+700	Diktiranje ovdje nije dostupno. Dodirnite 🎙 na tipkovnici iPhonea – radi u svakom polju.
+701	Govorite … (🎙 ponovno = stop)
+702	Prepoznavanje govora obavlja iPhone (Apple), možda treba internet.
+703	Skeniranje %d
+704	Fotografija %d
+705	＋ Bilješka
+706	izrađeno %d
+707	izmijenjeno %d
+708	Provjeri kopiju
+709	Koju kopiju provjeriti?
+710	Zadnja kopija na ovom telefonu
+711	Odaberi datoteku iz „Datoteke“ …
+712	Lozinka kopije
+713	Pogrešna lozinka
+714	Provjera kopije …
+715	✓ Kopija je u redu
+716	⚠ Kopija je nepotpuna
+717	✕ Ovo nije kopija Butler Docs ili je datoteka oštećena
+718	Izrađeno %d
+719	prazno
+720	na telefonu: %n
+721	U kopiji nedostaje %n fotografija. Spremite novu.
+722	%n fotografija je oštećeno.
+723	U kopiji ima manje dokumenata nego na telefonu – starija je. Spremite novu.
+724	Samo provjereno – vaši podaci nisu mijenjani.
+725	Spremi novu kopiju
+726	Prijava pogreške
+727	Šalju se samo tehnički podaci – bez dokumenata, bez imena. Šaljete sami, svojom poštom.
+728	Što se dogodilo? (po želji)
+729	Snimka zaslona: pritisnite bočnu tipku + pojačavanje, zatim je priložite e-pošti.
+730	Pošalji e-poštom (vaša pošta)
+731	Podijeli …
+732	Kopirano ✓
+733	Butler Docs – prijava pogreške
+734	Pogreške (zadnjih 7 dana)
+735	Verzija
+736	Zaslon
+737	Uređaj
+738	Kopija
+739	Način
+740	s početnog zaslona
+741	u pregledniku
+742	Za poreznu prijavu %y
+743	Troškovi rada
+744	%a od 1230 €
+745	Iznad 1230 € – primici se isplate ✓
+746	Još %a do 1230 € – do tada porezna računa sama
+747	Put do posla
+748	Nije uneseno – km, dani, rad od kuće
+749	%k km · %d dana · %h dana od kuće
+750	Km do posla (u jednom smjeru)
+751	Dani s putovanjem na posao
+752	Dani rada od kuće
+753	Ukupno
+754	Od 2026.: 0,38 € po km od prvog km, samo u jednom smjeru.
+755	Do 2025.: 0,30 € za km 1–20, od 21. km 0,38 €.
+756	Rad od kuće: 6 € dnevno, najviše 1260 € godišnje. Za jedan dan ili put ili rad od kuće.
+757	Bez vlastitog auta najviše 4500 € godišnje. Provjerite.
+758	postoji · %c
+759	Poslodavac je šalje do kraja veljače %z
+760	Najprije dodajte poslodavca u «Posao i poduzetništvo» – tamo joj je mjesto.
+761	Otvori «Posao i poduzetništvo»
+762	Koji poslodavac?
+763	Još nije stiglo
+764	Žalba do %d
+765	Rok za žalbu je istekao (%d)
+766	Datum pisma
+767	Smatra se primljenim: %a · žalba do: %b
+768	Pismo se smatra primljenim 4 dana nakon datuma (od 2025.), zatim postoji 1 mjesec za žalbu. Žalba je besplatna – preko ELSTER-a ili pismom. Provjerite.
+769	Pismo (fotografija ili datoteka)
+770	Provjeri porezno rješenje %y – žalba do %d
+771	Skeniraj potvrdu o porezu na plaću %y
+772	Nije uneseno – najviše 1000 € za sve banke
+773	Zajedničko oporezivanje (brak) – 2000 €
+774	＋ Banka
+775	%a iznad ograničenja – smanjite u jednoj banci
+776	Olakšica za štediše: 1000 € godišnje po osobi. Nalog se mijenja u internetskom bankarstvu.
+777	Porezni broj i ELSTER
+778	Broj je u sefu, pristup preko elster.de
+779	Otvori ELSTER
+780	Porezni broj u sefu
+781	Porezni broj je na potvrdi o plaći i na svakom rješenju. Ovdje se ne čuva druga kopija.
+782	Što još nedostaje za %y
+783	Put do posla / rad od kuće
+784	Potvrde o donacijama
+785	ako ste donirali
+786	Obračun zajedničkih troškova / majstori
+787	udio rada, prijenosom
+788	Potvrde zdravstvenog osiguranja / osiguranja
+789	svake godine – provjerite praznine
+790	Opća pravila, ne porezni savjet. Provjerite.
+791	✓ datoteka: %n
+792	✓ u «Dokumenti»
+793	Provjerite brojeve
+794	Unesite datum
+795	Samoprovjera: sve je u redu ✓
+796	provjereno %d
+797	Provjeri sada
+798	Samoprovjera je nešto pronašla
+799	Provjera …
+800	Aplikacija više ne može spremati. Oslobodite prostor na telefonu i ponovno otvorite aplikaciju.
+801	Telefon može izbrisati podatke ove aplikacije. Otvarajte je s početnog zaslona, ne u Safariju – i spremite kopiju.
+802	Memorija aplikacije je gotovo puna (%p %). Spremite kopiju i izbrišite nepotrebne fotografije.
+803	Spremište fotografija se ne otvara. Ponovno pokrenite telefon; ako ne pomogne – vratite iz kopije.
+804	%n stranica nema fotografiju. Ako imate kopiju – provjerite je u «Profil».
+805	Otvori profil
+806	Razumijem
+807	Oporuka i odredbe
+808	Oporuka
+809	Punomoć za budućnost
+810	Unaprijed dane medicinske upute
+811	Odredba o skrbniku
+812	Želje za pogreb
+813	vlastoručno ili kod javnog bilježnika
+814	tko odlučuje umjesto vas
+815	želje za liječenje
+816	tko vam treba biti skrbnik
+817	želje za pogreb
+818	Gdje je original?
+819	Original: %o
+820	npr. registrator u ormaru, dnevni boravak
+821	kod kuće
+822	kod javnog bilježnika
+823	sef u banci
+824	Imenovana osoba / bilješka
+825	npr. supruga; sin ima kopiju
+826	＋ Dokument
+827	Oporuka se može pohraniti kod općinskog suda; punomoć upisati u Središnji registar. Opće upute – ne pravni savjet, provjerite.
+828	Svi dokumenti u „Financije i pravo“ ›
+829	Pregled za obitelj (PDF)
+830	Oporuka i odredbe – pregled
+831	nedostaje
+832	postoji
+833	%a od %b · gdje su originali
+834	Rok: %e – %o
+835	Registrirano
+836	E-pošta
+837	Naturalizacija
+838	Primici
+839	Popis lijekova
+840	Pisma / dokumenti
+841	Pon–Pet 8–12, Čet 14–18
+842	Porezni broj, broj klijenta, predmet …
+843	data-act="go" data-to="bsv"
+844	<div class="dhcard dhq">
+845	Mali poduzetnik § 19 UStG
+846	Prethodna prijava PDV-a
+847	Porezni broj
+848	E-pošta
+849	Obrtnik
+850	Slobodno zanimanje
+851	UG (pojednostavljeni d.o.o.)
+852	PDV %r %
+853	Prijava djelatnosti
+854	Porezni broj (porezna uprava)
+855	Osiguranje od odgovornosti tvrtke
+856	Trgovački registar / gospodarska komora
+857	Predujam
+858	Predujam poreza %s
+859	data-act="go" data-to="archive"
+860	data-act="dccat" data-v="personal"
+861	data-act="go" data-to="mycal"
+862	data-act="go" data-to="tasks"
+863	data-act="dhbank"
+864	data-act="dhvault"
+865	data-act="go" data-to="life"
+866	data-act="go" data-to="dnach"
+867	data-act="go" data-to="people"
+868	Primici za poreznu prijavu %y
+869	Jaslice, dadilja, produženi boravak
+870	Zdravstveno, od odgovornosti, mirovinsko
+871	data-act="go" data-to="fzm"
+872	data-act="go" data-to="kar"
+873	Svjedodžba poslodavca
+874	Potvrda o porezu na plaću
+875	Strukovno obrazovanje
+876	Mapa za prijavu (PDF)
+877	Mapa za prijavu
+878	sRout
+879	data-act="go" data-to="sc9"
+880	data-act="go" data-to="dsrok"
+881	--h236vh
+882	Paušal za putovanje
+883	Paušal za rad od kuće
+884	Potvrda o porezu na plaću %y
+885	Porezno rješenje %y
+886	Nalozi za oslobođenje
+887	Mirovinsko izvješće
+888	općinski sud
+889	+ Dodaj područje
+890	1 godina
+891	Još 1230,00 € do 1230 € – do tada porezna računa sama
+892	10 godina
+893	3 mjeseca
+894	5 godina
+895	6 mjeseci
+896	Savjet, ne financijski savjet. Fotografije ostaju samo na ovom uređaju i nisu u kopiji podataka.
+897	Stiglo je pismo
+898	Obična mapa s PDF-ovima i fotografijama – otvara se bez aplikacije na svakom računalu.
+899	PDF zaštićen lozinkom: otvara se u svakom programu, ali samo s lozinkom.
+900	AI batler, ako želite: 2,99 € mjesečno
+901	AI batler: chat, glas, fotografije i PDF, pisma, savjeti
+902	Aa Obična latinica
+903	Naglasak
+904	Dodaj dokument
+905	Dodaj imovinu
+906	Dodaj kontakt
+907	Dodaj dokument
+908	Dodaj moj telefon ispod potpisa
+909	Dodaj potpis
+910	Pretraga adresa — samo ono što ste unijeli (OpenStreetMap)
+911	Adrese
+912	Svi jezici
+913	Sva imovina s fotografijama, vrijednošću, dokumentima i nasljednicima – za osiguranje, javnog bilježnika ili nasljedstvo.
+914	Svi podaci ostaju u ovom pregledniku samo na ovom uređaju. Ništa se ne dijeli s trećim stranama i nema oglasa.
+915	Svi rokovi u kalendar iPhonea
+916	Svi dokumenti u jednoj mapi (ZIP)
+917	Svi dokumenti u jednom PDF-u
+918	Sve je sređeno. Nema podsjetnika.
+919	Svi važni dokumenti na jednom mjestu.
+920	Sva područja
+921	Sva ažuriranja odjednom
+922	Almati
+923	Uvijek jedan
+924	Amsterdam
+925	Brzina aplikacije
+926	Izgled
+927	Termini, rokovi, podsjetnici
+928	Arhiva do 20 dokumenata
+929	Područja, poveznice, bilješke …
+930	Armenija
+931	Art deco
+932	Kao u stilu
+933	Pitaj
+934	Pitaj Butler
+935	Pitajte svog batlera …
+936	Imovina
+937	Imovina, odredbe, posljednja volja
+938	Astana
+939	Atena
+940	Australija
+941	Austrija
+942	Auto: dan i noć
+943	Pozadina
+944	Baden-Württemberg
+945	Bangkok
+946	Barcelona
+947	Osnovna boja — cijela se aplikacija prilagođava
+948	Osnovni
+949	Osnove
+950	Bavarska
+951	Peking
+952	Bjelorusija
+953	Berlin
+954	Crna
+955	Zacrnite nepotrebno prije slanja
+956	Prazan list
+957	Nadzorna ploča
+958	Knjiga mog života
+959	Knjiga mog života i obiteljski trenuci
+960	Knjiga života
+961	Knjiga, unos ili riječ iz teksta
+962	Bordo
+963	Obje strane osobnih iskaznica na jednoj stranici
+964	Brandenburg
+965	Brazil
+966	Bremen
+967	Vrati Butler stil
+968	Složi paket
+969	Složite svoj komplet – pregled gore ga odmah prikazuje.
+970	Konstruktor
+971	Burgundija
+972	Posao
+973	Posjetnica
+974	Poslovni planovi, učenje, odluke, pitanja
+975	Butler AI
+976	Butler sat
+977	Butler u osnovnom načinu
+978	Butler dnevnik
+979	Butler piše pismo
+980	Gumbi
+981	Kupite jednom – radi zauvijek
+982	Kairo
+983	Kalendar
+984	Kalendar i zadaci
+985	Postavke kalendara
+986	Nazovite u hitnom slučaju
+987	Kanada
+988	Fotografiraj dokument
+989	Auto
+990	Kartice
+991	Kartoni, nalazi, pregledi
+992	Potvrde, izvodi
+993	Šampanjac
+994	Promijenite bilo koji dio – pregled gore se odmah mijenja.
+995	Promijeni lozinku
+996	Promijeni
+997	Provjeri ažuriranja
+998	Chicago
+999	Kina
+1000	Čokolada
+1001	Odaberi (test)
+1002	Odaberite saveznu zemlju
+1003	Odaberi iz kontakata
+1004	Crkveni blagdani
+1005	Državljanstvo
+1006	Grad
+1007	Grad (izlazak i zalazak sunca)
+1008	Grad ili poštanski broj
+1009	Klasika
+1010	Klasika · Astronomski
+1011	Klasika · Mramorna dvorana
+1012	Klasika · Kabinet
+1013	Sat
+1014	Sat u sredini
+1015	Köln
+1016	Boje
+1017	Boje, ikone, sat i uzorak – jednim dodirom.
+1018	Udobnost: veličina teksta i pločica
+1019	Uvjeti
+1020	Kontakt
+1021	Kontakti
+1022	Nastavi čitanje
+1023	Ugovori, isprave, dokumenti
+1024	Ugovori, pisma, dokazi
+1025	Ugovori, punomoći, računi
+1026	Kopiraj tekst
+1027	Ispravi sve
+1028	Svemir
+1029	Motivacijsko pismo na njemačkom
+1030	Izradi bilješku za sutra
+1031	Trenutačni
+1032	Prilagodi početni zaslon
+1033	Kalendar ciklusa: 1 profil
+1034	Kalendar ciklusa: više profila i „Žensko zdravlje“
+1035	Češka
+1036	Zaštita podataka
+1037	Datum rođenja
+1038	Rokovi iz dokumenata sami postaju zadaci
+1039	Rokovi za 30 dana
+1040	Izbriši sve podatke
+1041	Delhi
+1042	Depoziti, ETF-ovi i dionice – detaljno
+1043	Dizajn i postavke
+1044	Deutsch
+1045	Diplome, certifikati
+1046	Odredbe
+1047	Napravi sada
+1048	Rokovi dokumenata
+1049	Dokumenti i njihove fotografije, bilješke, zadaci, kalendar, financije, imovina, zdravlje, fitness, garderoba, mjesta — ništa od toga se nikamo ne šalje.
+1050	Dokumenti u paketu
+1051	Dresden
+1052	Vozačka dozvola, auto
+1053	Dubai
+1054	Dospijeće
+1055	Düsseldorf
+1056	Istok
+1057	Rub i sjaj
+1058	Egipat
+1059	Smaragd
+1060	Smaragd i zlato · Butler sat · ikone «Zlato 3D»
+1061	Posao, svjedodžbe, potvrde
+1062	Prazno — dobro
+1063	English
+1064	Unesite jednom – poslije se ispunjava samo: u pismima, dosjeima i u „Knjiga mog života“.
+1065	Zaštita pristupa
+1066	Español
+1067	Sve iz Premium bez AI batlera
+1068	Sve bez ograničenja
+1069	Sve što posjedujete · vrijednost · rast
+1070	Sve što će vašoj obitelji trebati: odredbe, imovina i vaše upute. Samo na ovom telefonu.
+1071	Tečajevi valuta — ništa osobno
+1072	Boja očiju
+1073	Rokovi obiteljskih dokumenata
+1074	Obitelj, javni bilježnik, osiguranje
+1075	Ukrasna slova postoje samo za latinicu (A–Z). Ćirilica ostaje normalna.
+1076	Otac
+1077	Broj predmeta
+1078	Datoteke
+1079	Ispuna
+1080	Financije
+1081	Financije: 2 računa, transakcije, proračun, plaćanja
+1082	Financije i pravo
+1083	Pronađi
+1084	Pronađi moje kontakte
+1085	Prvih 1000 – popust zauvijek (test)
+1086	Ime Prezime\nUlica br.\nPB Grad
+1087	Ime
+1088	Ime za obraćanje
+1089	Mape i zaključavanje PIN-om
+1090	Font
+1091	Na primjer: porezna uprava Frankfurt
+1092	Na primjer: poslodavac ne plaća prekovremeni rad – što da radim?
+1093	Za poreze
+1094	Šuma
+1095	Zauvijek
+1096	Oblik
+1097	Obraćanje
+1098	Francuska
+1099	Français
+1100	Besplatno
+1101	Od
+1102	Puni pristup besplatno. Zatim aplikacija sama prelazi na Osnovni – ništa se ne naplaćuje i podaci ostaju.
+1103	Pune financije: automatska plaćanja, plaća, investicije, Ogledalo
+1104	Potpuno offline
+1105	Budućnost
+1106	Galaksija · Orbita
+1107	Galaksija · Prsten
+1108	Ženeva
+1109	Gruzija
+1110	Njemačka
+1111	Ciljevi
+1112	Zlato 3D
+1113	Dobro jutro,
+1114	Grčka
+1115	Pozdrav
+1116	Boja kose
+1117	Hamburg
+1118	Hannover
+1119	Naslov
+1120	Visina, cm
+1121	Hessen
+1122	Skriveno
+1123	Visok
+1124	Povijest po osobama
+1125	Hologram
+1126	Predlošci početnog zaslona, blokovi, stupci, ikone
+1127	Početna, kalendar, zadaci, projekti, ciljevi, bilješke
+1128	Stan
+1129	Kako se opisujem
+1130	Koliko hitnih stvari ima – vidi se na početnom zaslonu bez otvaranja aplikacije. Ažurira se kad otvorite Butler. iPhone traži dopuštenje za obavijesti – tako dopušta broj na ikoni.
+1131	Obećao sam
+1132	Osobna iskaznica
+1133	Ikone
+1134	Ikone i naglasak
+1135	Identitet
+1136	Latiničnim slovima, kao u putovnici
+1137	U hitnom slučaju
+1138	U omotnicu
+1139	U aplikaciji se potpis prikazuje u odabranom stilu. U poslanoj e-pošti aplikacija za poštu prikazuje tekst običnim fontom.
+1140	Dolazna pisma
+1141	Indija
+1142	Osiguranja i ugovori
+1143	Analiza troškova osiguranja
+1144	Investicijski portfelj
+1145	Investicije
+1146	Izrael
+1147	Istanbul
+1148	Italija
+1149	Bjelokost
+1150	Japan
+1151	Japanski
+1152	Jeruzalem
+1153	Kalinjingrad
+1154	Kazahstan
+1155	Kazan
+1156	Kijev
+1157	Jezik
+1158	Jezik: Hrvatski
+1159	Jezici
+1160	Zadnja kopija: još nema. Kopija s lozinkom čuva vaše podatke ako se nešto dogodi telefonu.
+1161	Zadnja kopija
+1162	Prezime
+1163	Pravo
+1164	Pravo i prava
+1165	Raspored i boja
+1166	Raspored, konstruktor, vaš stil
+1167	Leipzig
+1168	Potpisi za pisma
+1169	Pisma
+1170	Lanci života
+1171	Svijetla · Bjelokost
+1172	Svijetla · Biser
+1173	Lisabon
+1174	London
+1175	Pogledajte se: stanje, imovina, godina
+1176	Los Angeles
+1177	Nizak
+1178	Donja Saska
+1179	Madrid
+1180	Izradi kopiju
+1181	Mramor
+1182	Označite gdje ide svaki element: ⚡ – pločica brzog pristupa (do 8), ▤ – red u «Moja područja». Može oboje. Strelice mijenjaju redoslijed.
+1183	Mecklenburg-Zapadno Pomorje
+1184	Medicinsko
+1185	Izbornik
+1186	Poruka …
+1187	Miami
+1188	Mikrofon
+1189	Srednji gumb: samo odlaganje, bez pregleda
+1190	Ponoćno plava
+1191	Milano
+1192	Minimalizam
+1193	Minsk
+1194	Ogledalo
+1195	Moderno
+1196	Ponedjeljak
+1197	Novac i dugovi
+1198	Više
+1199	Više u arhivi
+1200	Moskva
+1201	Majka
+1202	Premjesti dokument u sef
+1203	München
+1204	Moja imovina
+1205	Moje knjige
+1206	Moji kontakti
+1207	Moj dan
+1208	Moji podaci za pisma
+1209	Moji podaci za pisma i potpisi
+1210	Moja e-pošta (pošiljatelj)
+1211	Moje ikone
+1212	Moje upute za obitelj
+1213	Moja pisma
+1214	Moj telefon
+1215	Moj plan
+1216	Moji potpisi
+1217	Moje situacije
+1218	Moja priča, događaji, dokumenti
+1219	Moj stil
+1220	Ime u adresi
+1221	Priroda
+1222	Traži pažnju
+1223	Neonski grad
+1224	Neto imovina
+1225	Nizozemska
+1226	Nikad se ne šalje: dokumenti, fotografije, tekstovi, iznosi, zdravstveni podaci, imena.
+1227	New York
+1228	Nova knjiga
+1229	Novi ugovor
+1230	Nova lozinka
+1231	Novi projekt
+1232	Novi podsjetnik
+1233	Novi korak …
+1234	Novi zadatak
+1235	Nica
+1236	Noć
+1237	Još nema aktivnih projekata. Dodirnite „Novi projekt“ – predložak pomaže da počnete.
+1238	Još nema ugovora. Dodajte prvi – fotografirajte ugovor, batler ispunjava ostalo.
+1239	Još nema rokova. Dodajte datum isteka dokumentu ili polici i pojavit će se ovdje.
+1240	Još nema pisama
+1241	Bez uzorka
+1242	Još nema zahtjeva.
+1243	Bez potpisa
+1244	Još nema potpisa. Dodajte prvi ispod.
+1245	Ovdje nema zadataka.
+1246	Nije pronađena stranica za web-adresu:
+1247	Normalan
+1248	Sjeverna Rajna-Vestfalija
+1249	Nije pravni savjet. Oporuka vrijedi samo u zakonskom obliku – u Njemačkoj vlastoručno ili kod javnog bilježnika.
+1250	Još ništa nije dodano. Dodajte stan, auto, sat ili zlato.
+1251	Ovdje još nema ničega — dodirnite „Dodaj dokument“.
+1252	Ništa nije planirano za danas
+1253	Ništa nije planirano za danas.
+1254	Još nema što izračunati — dodajte osiguranje s datumom početka i premijom.
+1255	Još nema što nastaviti
+1256	Ništa hitno. Vrijeme za važno što ne gori.
+1257	Novosibirsk
+1258	Sada:
+1259	Nürnberg
+1260	Ocean
+1261	Isključeno: svatko s telefonom može ući
+1262	Službeno
+1263	Službeno pismo (PDF)
+1264	Nedjeljom u izvješću – kratka bilješka za svaki projekt
+1265	Jednom tjedno: što je gotovo, što je zapelo, što slijedi
+1266	Kad aplikacija dobije vlastiti poslužitelj, ovo područje izravno će se povezati sa službenim bazama zakona.
+1267	Jedna datoteka sa svim unosima. Fotografije i skeniranja čuvaju se posebno u arhivi.
+1268	Online
+1269	Samo vi vidite ove podatke, na svom računu. Prehrana, kalendar ciklusa, pisma i hitna mapa uzimaju ih odavde.
+1270	Otvori moj kalendar
+1271	Podrijetlo
+1272	Ostali dokumenti
+1273	Dugujem
+1274	Vlastito …
+1275	Paket za slučaj smrti
+1276	Pariz
+1277	Dijelovi aplikacije
+1278	Putovnica, osobna, dozvola, dokazi
+1279	Putovnica, osobna, police, ugovori – sve s rokom valjanosti ili zadnjim danom za otkaz.
+1280	Putovnica, dozvola, zdravstvena iskaznica, potvrde, knjižice
+1281	Ovdje idu putovnice, dozvole, zdravstvene iskaznice, potvrde i knjižice cijele obitelji.
+1282	Uzorak
+1283	Osobni dokumenti
+1284	Osobni dosje
+1285	Fotografirajte dokument — ravno i čisto
+1286	Mjesto rođenja
+1287	Običan
+1288	Plan: Osnovni
+1289	Plan: Zauvijek
+1290	Plan: Premium
+1291	Planovi
+1292	Planovi i usporedba ›
+1293	Pjesnikova ruka
+1294	Poljska
+1295	Polski
+1296	Portugal
+1297	Prag
+1298	Premium
+1299	Prethodni
+1300	Prioritet
+1301	Privatnost i sigurnost
+1302	Privatni način
+1303	Profil
+1304	Programski moduli (PDF prikaz, fitness kamera) — jednom, zatim ostaju na telefonu
+1305	Projekt
+1306	Nekretnina
+1307	Putovnica imovine (PDF)
+1308	Osiguranje i nasljedstvo
+1309	Brzi pristup i područja
+1310	Brzo odlaganje na zaslonu za prijavu
+1311	Brzi unos
+1312	RUB 0
+1313	Gotovi kompleti
+1314	Primici i dokumenti za godinu
+1315	Nedavno
+1316	Nedavni zahtjevi: rečeno → shvaćeno → spremljeno
+1317	Telefon primatelja
+1318	Regija
+1319	Učitaj ponovno
+1320	Podsjetnik
+1321	Podsjetnici
+1322	Ukloni
+1323	Prijavi problem
+1324	Poništi probne kupnje
+1325	Vrati iz kopije
+1326	Vrati iz sigurnosne kopije
+1327	Pregled je završen ✓
+1328	Porajnje-Falačka
+1329	Rio de Janeiro
+1330	Rim
+1331	Rusija
+1332	STRIJELAC
+1333	SMS
+1334	Saarland
+1335	Sigurno mjesto za važne podatke
+1336	Sankt Peterburg
+1337	Obraćanje
+1338	Obraćanje i ime
+1339	Obraćanje i ime
+1340	Salzburg
+1341	Spremi kopiju
+1342	Spremi kao «Moj stil»
+1343	Spremljeno samo na ovom uređaju
+1344	Saska
+1345	Saska-Anhalt
+1346	Skeniraj dokument
+1347	Skandinavski
+1348	Schleswig-Holstein
+1349	Pretraga
+1350	Pretraži kontakte…
+1351	Pretraži dokumente
+1352	Tražite područje, poveznicu ili bilješku.
+1353	Pretraži tekst svih dokumenata
+1354	Pretraga, sređivanje, priprema
+1355	Područje
+1356	Pošalji
+1357	Pošalji sve ponovno
+1358	Pošalji kao živu knjigu
+1359	Pošalji sigurno
+1360	Pošalji pismo…
+1361	Pošalji putem Maila
+1362	Postavi šifru
+1363	Postavite šifru i dokumenti u sefu bit će šifrirani.
+1364	Postavi cilj
+1365	Postavi šifru za pristup
+1366	Unesite svoju e-poštu
+1367	Šangaj
+1368	Oblik
+1369	Podijeli datoteku kalendara
+1370	Kupnja i povrati
+1371	Kratki oblik za početni zaslon
+1372	Prikaži moje putne dokumente
+1373	Smanji za e-poštu (do 5 MB)
+1374	Odjava
+1375	Potpis
+1376	Stil potpisa
+1377	Tekst potpisa
+1378	Potpis · naš original
+1379	Obična e-pošta
+1380	Soči
+1381	Socijalna pomoć
+1382	Španjolska
+1383	Sport, pravo, ugovori, prehrana
+1384	Pokreni besplatno razdoblje (test)
+1385	Savezna zemlja
+1386	Korak 1 od 5
+1387	Koraci
+1388	Memorija
+1389	Stuttgart
+1390	Stil
+1391	Tema
+1392	Tema (na njemačkom)
+1393	Prezime
+1394	Mijenjajte planove i pogledajte aplikaciju očima kupca. Ništa se ne naplaćuje i podaci ostaju nepromijenjeni.
+1395	Švicarska
+1396	Sydney
+1397	Fotografirajte — batler pronalazi rok
+1398	Dodirnite bilo koji dio pregleda i odaberite boju. Sve se mijenja odmah.
+1399	Dodirnite „Butler AI“ – pronalazi dokument, bilježi zadatak ili podsjeća na rok.
+1400	Dodirnite ✦
+1401	Zadatak
+1402	Zadaci
+1403	Tbilisi
+1404	Termin
+1405	Tajland
+1406	The Silentium’s
+1407	The Silentium’s Butler
+1408	Jezik aplikacije mijenja se u profilu.
+1409	Batler ovdje skuplja sve što se približava: zadatke, obiteljske datume, crkvene blagdane i rokove projekata. Gotovo? Dodirnite kružić i podsjetnik nestaje.
+1410	Grafikon se pojavljuje kad imovina ima datum kupnje.
+1411	Kopija sadrži svaki unos, fotografiju i dokument. S lozinkom je šifrirana (AES-256).
+1412	Država određuje blagdane, grad – izlazak, zalazak i vrijeme molitve.
+1413	Četiri bočna mjesta su vaša. Butler je uvijek u sredini. Dodirnite mjesto, zatim što treba biti tamo.
+1414	Najvažnije sada je na vrhu
+1415	Sljedećih 7 dana
+1416	Telefon još nije obećao trajno spremište — otvarajte s ikone i izrađujte kopije
+1417	Telefon sam mjeri svaki dodir
+1418	Aplikacija Mail na telefonu otvara se s gotovim pismom.
+1419	Zaslon miruje: sat, brzi pristup i područja odmah. Kartice i savjeti su u „Napravi sada“.
+1420	Oblik stila ostaje — boju birate vi.
+1421	Google glas trenera, ako je postavljen ključ — samo fraze trenera
+1422	Sef je prazan. Otvorite dokument i dodirnite „U sef“ – ili ga odaberite ovdje.
+1423	Sef nije zaštićen
+1424	U arhivi još nema dokumenata – skenirajte ih u „Dokumenti“.
+1425	Ove stavke su broj na ikoni aplikacije.
+1426	Ovo
+1427	Ovo je informacija, ne pravni savjet. Zakoni se često mijenjaju – važno uvijek provjerite s odvjetnikom.
+1428	Tiringija
+1429	Pločica
+1430	Vrijeme (po želji)
+1431	Vrijeme je za tjedni pregled
+1432	Za (služba, institucija)
+1433	Kome
+1434	Tokio
+1435	Toronto
+1436	Obilazak aplikacije
+1437	Prijevoz
+1438	Turska
+1439	SAD
+1440	Ukrajina
+1441	Ujedinjeni Arapski Emirati
+1442	Ujedinjeno Kraljevstvo
+1443	Do 50 kontakata, obitelj: krug i stablo
+1444	Ažuriranja kad želite: 5,99 € po ažuriranju
+1445	Dragocjenosti
+1446	Vrijednost imovine
+1447	Vozila
+1448	Putem aplikacije za poštu na telefonu (kao tekst)
+1449	Beč
+1450	Vladivostok
+1451	Glasovni odgovori su uključeni
+1452	Čeka odgovor
+1453	Varšava
+1454	Vrijeme — grad, bez imena (Open-Meteo)
+1455	Vrijeme, pretraga adresa, Google glas i tečajevi valuta rade.
+1456	Tjedni pregled
+1457	Težina, kg
+1458	Što treba napraviti?
+1459	Što uskoro istječe
+1460	Napravi sada
+1461	Što možete umetnuti
+1462	Bijela
+1463	Tko (osoba)
+1464	Bez lozinke kopija se ne može pročitati — čak ni ako datoteka dospije u oblak ili u tuđe ruke.
+1465	XII
+1466	Jekaterinburg
+1467	Erevan
+1468	Imate najnoviju verziju ✓
+1469	Vaše knjige pojavit će se ovdje. Počnite s „Nova knjiga“.
+1470	Vaši podaci
+1471	Vaši podaci i privatnost
+1472	Vaši podaci se nikad ne brišu zbog plaćanja. Ako pretplata istekne ili ažuriranje nije kupljeno, sve ostaje i otvara se. Sve možete besplatno izvesti u bilo kojem trenutku.
+1473	Vaš digitalni svijet. Vaš red. Vaše vrijeme.
+1474	Ljudi važni za vas pojavit će se ovdje. Dodirnite „Dodaj kontakt“.
+1475	Vaše pismo – pišite izravno na list
+1476	Vaša aplikacija za poštu otvara se s gotovom porukom – samo dodirnite „Pošalji“. Ako se ne otvori, kopirajte tekst.
+1477	Vaše ime i adresa
+1478	Vaša osobna knjižnica: misli, želje, pravila, planovi i sjećanja
+1479	Vaša skeniranja pojavit će se ovdje
+1480	Zürich
+1481	sve ›
+1482	pozadina · kartice · naglasak · gumbi
+1483	zvonce
+1484	donja traka, redoslijed pločica, boja stila
+1485	krug
+1486	boja
+1487	bakar
+1488	tamno
+1489	dizajn
+1490	dijamant
+1491	ne ponavljaj
+1492	npr. 60311 Frankfurt
+1493	npr. gdje su originali, koga prvo nazvati, što s pretplatama i računima, želje…
+1494	npr. „S poštovanjem, Ivan Horvat“
+1495	svaki dan
+1496	svaki mjesec
+1497	svaki tjedan
+1498	četrdeset
+1499	staklo
+1500	sjaj
+1501	zlato
+1502	zlatno
+1503	prijelaz
+1504	hex
+1505	gospođo
+1506	metal
+1507	moj zadatak
+1508	name@example.com
+1509	još nema
+1510	vlastito
+1511	stranica nije pronađena
+1512	zaobljeno
+1513	sedam
+1514	srebro
+1515	gospodine
+1516	kvadrat
+1517	kamera pronalazi list
+1518	iPhone još nije potvrdio zaštitu — nastavite izrađivati kopije
+1519	boja teme
+1520	tanko
+1521	čeka odgovor
+1522	bijela
+1523	— bez projekta —
+1524	Oznaka „Kopie“ na svakoj stranici
+1525	119 € jednokratno
+1526	5,99 € mjesečno · 49 € godišnje
+1527	↺ Vrati raspored
+1528	⋯ Više
+1529	⏳ Besplatno razdoblje
+1530	ⓘ Oporuka se može pohraniti kod općinskog suda; punomoć upisati u Središnji registar. Opće upute – ne pravni savjet, provjerite.
+1531	ⓘ Dobro je znati:
+1532	▣ Početna na jednom zaslonu
+1533	▦ Donja traka
+1534	▦ Početna
+1535	◐ Boja stila
+1536	☰ Blokovi na početnom zaslonu
+1537	⚠ Samoprovjera je nešto pronašla
+1538	✉ Pošalji sigurno
+1539	✎ Moji potpisi
+1540	✎ Nova bilješka
+1541	✓ Automatski ispravak
+1542	✓ Provjeri kopiju
+1543	✦ Izradi vlastiti stil
+1544	⬆ Vrati iz kopije
+1545	⬇ Izvezi moje podatke
+1546	🇦🇹 Austrija
+1547	🇨🇭 Švicarska
+1548	🇨🇿 Češka
+1549	🇩🇪 Njemačka
+1550	🇪🇸 Španjolska
+1551	🇫🇷 Francuska
+1552	🇬🇧 Ujedinjeno Kraljevstvo
+1553	🇬🇷 Grčka
+1554	🇭🇷 Hrvatska
+1555	🇮🇹 Italija
+1556	🇳🇱 Nizozemska
+1557	🇵🇱 Poljska
+1558	🇵🇹 Portugal
+1559	🇷🇺 Rusija
+1560	🇹🇷 Turska
+1561	🇺🇸 SAD
+1562	🌐 Online
+1563	🌐 Što ide online — samo u načinu «Online»
+1564	📄 Izradi PDF
+1565	📦 Složi paket
+1566	📱 Sigurnost spremišta
+1567	📷 Fotografiraj primitak
+1568	🔒 Raspored i boja čuvaju se samo na ovom telefonu.
+1569	🔒 Ostaje samo na ovom telefonu
+1570	🔒 Vaš odabir čuva se samo na ovom telefonu
+1571	🔴 Broj na ikoni Butlera
+1572	🗂 Svi dokumenti u jednoj mapi (ZIP)
+1573	🗓 Tjedni pregled
+1574	🗝 Kopija s lozinkom
+1575	🛡 Jamstvo podataka
+1576	🧪 Testni način
+1577	＋ Dodaj
+1578	＋ Dodaj zadatak
+1579	＋ Novi projekt

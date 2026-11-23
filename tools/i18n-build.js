@@ -1,9 +1,11 @@
 /* Builds src/modules/i18n/<lang>.js from tools/i18n/<lang>.txt («index<TAB>text», \n = line break).
    Checks: every key translated, the same %placeholders, the same number of line breaks, the weekday list has 7 words.
-   Usage: node tools/i18n-build.js tr pl fr es */
-const fs=require('fs'),path=require('path');const keys=require('./i18n-keys.json');let bad=0;
+   Usage: node tools/i18n-build.js tr pl fr es it uk ro bg sr hr */
+const fs=require('fs'),path=require('path');const keys1=require('./i18n-keys.json'),keysN=require('./i18n-keys-new.json');let bad=0;
+/* the new languages (no own texts in the old core) also need the visible core texts: tools/i18n-keys-new.json */
+const NEW=['it','uk','ro','bg','sr','hr'];
 const ph=s=>(s.match(/%[a-z]/g)||[]).sort().join(',');
-for(const lg of process.argv.slice(2)){const f=path.join(__dirname,'i18n',lg+'.txt');const L=fs.readFileSync(f,'utf8').split('\n').filter(l=>l.trim());const T={};
+for(const lg of process.argv.slice(2)){const keys=NEW.includes(lg)?keysN:keys1;const f=path.join(__dirname,'i18n',lg+'.txt');const L=fs.readFileSync(f,'utf8').split('\n').filter(l=>l.trim());const T={};
  for(const l of L){const m=l.match(/^(\d+)\t(.*)$/);if(!m){console.log(lg,'bad line',l.slice(0,60));bad++;continue}T[+m[1]]=m[2].replace(/\\n/g,'\n')}
  const D={};keys.forEach((k,i)=>{const t=T[i];if(t==null||!t.trim()){console.log(lg,'missing',i,k);bad++;return}
   if(ph(t)!==ph(k)){console.log(lg,'placeholders',i,JSON.stringify(k),'→',JSON.stringify(t));bad++}

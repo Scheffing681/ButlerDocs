@@ -562,6 +562,7 @@
    "business.js",
    "finanzen.js",
    "finanzen2.js",
+   "seiten.js",
    "steuer-plus.js"
   ]
  },
@@ -711,7 +712,8 @@
    "behoerden.js",
    "linkup.js",
    "mappen.js",
-   "reliability.js"
+   "reliability.js",
+   "seiten.js"
   ]
  },
  "Restore": {
@@ -1264,7 +1266,8 @@
   "files": [
    "behoerden.js",
    "mappen.js",
-   "notizen.js"
+   "notizen.js",
+   "seiten.js"
   ]
  },
  "e.g. Ausländerbehörde": {
@@ -1428,7 +1431,8 @@
   "ru": "Отмена",
   "de": "Abbrechen",
   "files": [
-   "behoerden.js"
+   "behoerden.js",
+   "seiten.js"
   ]
  },
  "Saved": {
@@ -1437,6 +1441,7 @@
   "files": [
    "behoerden.js",
    "business.js",
+   "seiten.js",
    "steuer-plus.js"
   ]
  },
@@ -3851,7 +3856,8 @@
   "files": [
    "eingang-fristen.js",
    "linkup.js",
-   "move-phone.js"
+   "move-phone.js",
+   "seiten.js"
   ]
  },
  "No deadlines": {
@@ -7180,6 +7186,153 @@
   "de": "im Browser",
   "files": [
    "reliability.js"
+  ]
+ },
+ "Edit pages": {
+  "ru": "Редактировать страницы",
+  "de": "Seiten bearbeiten",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "%n pages · the original changes only on «Done»": {
+  "ru": "Стр.: %n · оригинал меняется только по «Готово»",
+  "de": "%n Seiten · das Original ändert sich erst bei «Fertig»",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "%n pages · the original stays unchanged": {
+  "ru": "Стр.: %n · оригинал останется без изменений",
+  "de": "%n Seiten · das Original bleibt unverändert",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "Tap pages to select them.": {
+  "ru": "Нажмите на страницы, чтобы выбрать.",
+  "de": "Tippen Sie Seiten an, um sie auszuwählen.",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "%n selected": {
+  "ru": "Выбрано: %n",
+  "de": "%n ausgewählt",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "Earlier": {
+  "ru": "Раньше",
+  "de": "Früher",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "Rotate": {
+  "ru": "Повернуть",
+  "de": "Drehen",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "Split": {
+  "ru": "Разделить",
+  "de": "Teilen",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "Merge": {
+  "ru": "Добавить",
+  "de": "Zusammenführen",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "New version": {
+  "ru": "Новая версия",
+  "de": "Neue Version",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "%n pages become a document of their own on «Done»": {
+  "ru": "Стр.: %n — станут отдельным документом по «Готово»",
+  "de": "%n Seiten werden bei «Fertig» ein eigenes Dokument",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "Own document: %n pages": {
+  "ru": "Отдельный документ: %n стр.",
+  "de": "Eigenes Dokument: %n Seiten",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "bring back": {
+  "ru": "вернуть",
+  "de": "zurückholen",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "Add pages from a document": {
+  "ru": "Добавить страницы из документа",
+  "de": "Seiten aus Dokument anfügen",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "The other document stays unchanged.": {
+  "ru": "Другой документ не изменится.",
+  "de": "Das andere Dokument bleibt unverändert.",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "%t – part %n": {
+  "ru": "%t — часть %n",
+  "de": "%t – Teil %n",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "%t (new version)": {
+  "ru": "%t (новая версия)",
+  "de": "%t (neue Version)",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "Saved as a new version": {
+  "ru": "Сохранено как новая версия",
+  "de": "Als neue Version gespeichert",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "At least one page must stay": {
+  "ru": "Должна остаться хотя бы одна страница",
+  "de": "Mindestens eine Seite muss bleiben",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "One moment …": {
+  "ru": "Подождите …",
+  "de": "Einen Moment …",
+  "files": [
+   "seiten.js"
+  ]
+ },
+ "For scans and photos. Cutting finished PDF files – later.": {
+  "ru": "Для сканов и фото. Резать готовые PDF-файлы — позже.",
+  "de": "Für Scans und Fotos. Fertige PDF-Dateien zerteilen – später.",
+  "files": [
+   "seiten.js"
   ]
  },
  "Ask Butler or search …": {

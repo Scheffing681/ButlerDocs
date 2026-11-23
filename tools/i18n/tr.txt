@@ -1136,3 +1136,24 @@
 1135	Doktor, noter, vergi danışmanı, banka, ev sahibi – işleriniz için gereken herkes.
 1136	Kişi ekle
 1137	Şifreler, PIN’ler, erişimler – şifreli
+1138	Sayfaları düzenle
+1139	%n sayfa · orijinal yalnızca «Bitti» ile değişir
+1140	%n sayfa · orijinal değişmeden kalır
+1141	Seçmek için sayfalara dokunun.
+1142	%n seçildi
+1143	Önce
+1144	Döndür
+1145	Böl
+1146	Birleştir
+1147	Yeni sürüm
+1148	%n sayfa «Bitti» ile ayrı bir belge olur
+1149	Ayrı belge: %n sayfa
+1150	geri al
+1151	Bir belgeden sayfa ekle
+1152	Diğer belge değişmez.
+1153	%t – bölüm %n
+1154	%t (yeni sürüm)
+1155	Yeni sürüm olarak kaydedildi
+1156	En az bir sayfa kalmalı
+1157	Bir saniye …
+1158	Taramalar ve fotoğraflar için. Hazır PDF dosyalarını bölmek – daha sonra.

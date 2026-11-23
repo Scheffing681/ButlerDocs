@@ -7483,6 +7483,41 @@
    "sicherung.js"
   ]
  },
+ "Appearance": {
+  "ru": "Оформление",
+  "de": "Erscheinungsbild",
+  "files": [
+   "smaragd.js"
+  ]
+ },
+ "Light": {
+  "ru": "Светлое",
+  "de": "Hell",
+  "files": [
+   "smaragd.js"
+  ]
+ },
+ "Ivory and green": {
+  "ru": "Слоновая кость и зелень",
+  "de": "Elfenbein und Grün",
+  "files": [
+   "smaragd.js"
+  ]
+ },
+ "Emerald": {
+  "ru": "Изумруд",
+  "de": "Smaragd",
+  "files": [
+   "smaragd.js"
+  ]
+ },
+ "Dark green with a glow": {
+  "ru": "Тёмно-зелёный со свечением",
+  "de": "Dunkles Grün mit Leuchten",
+  "files": [
+   "smaragd.js"
+  ]
+ },
  "Ask Butler or search …": {
   "ru": "Спросить Батлера или найти …",
   "de": "Butler fragen oder suchen …",

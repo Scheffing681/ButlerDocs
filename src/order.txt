@@ -85,3 +85,4 @@ docs/dokumente-butler.js
 docs/bereiche.js
 docs/seiten.js
 docs/sicherung.js
+docs/smaragd.js

@@ -844,6 +844,15 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('changing needs the current password',c1&&c2==='neues-pass-1',JSON.stringify([c1,c2]));
  check('the password is not inside the app data (so never inside a backup)',await T(()=>!JSON.stringify(window.__T.g()).includes('neues-pass-1')));
  await T(()=>{document.querySelectorAll('.dtsheet,.bkpov').forEach(x=>x.remove());sessionStorage.removeItem('bkpT');localStorage.setItem('bd.bkpw','smoke-pass-1');window.__T.R('home')})}
+ where='smaragd';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.ndbar').forEach(x=>x.remove());window.__T.g().stPrevTest=window.__T.g().style;window.__T.R('style')});await p.waitForTimeout(400);
+ check('Stil: «Erscheinungsbild» Hell / Smaragd on top',await T(()=>document.querySelectorAll('.smpick .smo').length===2));
+ await T(()=>document.querySelector('.smo.sms').click());await p.waitForTimeout(400);
+ const s1=await T(()=>{const r=document.documentElement;return{st:window.__T.g().style,ds:r.dataset.style,sm:r.dataset.sm,bg:getComputedStyle(r).getPropertyValue('--bg').trim().toLowerCase(),on:!!document.querySelector('.smo.sms.on')}});
+ check('Smaragd: dark emerald colours over the palette, on top of «Glanz»',s1.st==='smaragd'&&s1.ds==='glanz'&&s1.sm==='1'&&s1.bg==='#07140d'&&s1.on,JSON.stringify(s1));
+ await T(()=>{window.__T.R('home');window.__T.v()});await p.waitForTimeout(300);check('…it stays when the screen changes',await T(()=>document.documentElement.dataset.sm==='1'&&document.documentElement.dataset.style==='glanz'));
+ await T(()=>window.__T.R('style'));await p.waitForTimeout(300);await T(()=>document.querySelector('.smo.smh').click());await p.waitForTimeout(400);
+ check('«Hell» brings the previous look back',await T(()=>{const G=window.__T.g();return G.style===G.stPrevTest&&!document.documentElement.dataset.sm}));
+ await T(()=>{delete window.__T.g().stPrevTest;window.__T.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

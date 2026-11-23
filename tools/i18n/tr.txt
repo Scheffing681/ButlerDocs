@@ -1178,3 +1178,8 @@
 1177	Mevcut şifre yanlış
 1178	Şifre değiştirildi. Eski yedekler eski şifreyle açılır.
 1179	Yedekler şifrenizle şifrelenir
+1180	Görünüm
+1181	Açık
+1182	Fildişi ve yeşil
+1183	Zümrüt
+1184	Parıltılı koyu yeşil

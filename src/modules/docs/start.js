@@ -149,7 +149,7 @@ Hooks.css('docs-start',`
 .stai{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:0;border-radius:22px;padding:12px 8px;background:var(--surface);box-shadow:0 4px 14px rgba(20,60,30,.07);text-align:center}
 .stai .dhi.gold{width:28px;height:28px;color:#c99a3e;fill:color-mix(in srgb,#c99a3e 22%,transparent)}.stai b{font-size:15.5px}.stai small{font-size:11.5px;color:var(--muted);line-height:1.25}
 .stduo{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:10px;margin-bottom:12px;align-items:stretch}
-.stcard{display:block;border:0;border-radius:22px;background:var(--surface);box-shadow:0 4px 14px rgba(20,60,30,.07);padding:12px 14px;text-align:left;width:100%}
+.stcard{display:block;box-sizing:border-box;border:0;border-radius:22px;background:var(--surface);box-shadow:0 4px 14px rgba(20,60,30,.07);padding:12px 14px;text-align:left;width:100%}
 .sth{display:flex;align-items:center;gap:7px;width:100%;border:0;background:none;padding:0 0 4px;text-align:left}.sth .dhi{width:19px;height:19px;color:#c99a3e}.sth b{font-size:15.5px}
 .sth em,.stmp em{margin-left:auto;font-style:normal;background:var(--green);color:#fff;border-radius:11px;min-width:22px;height:22px;padding:0 6px;display:inline-flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700}
 .stwi{display:flex;gap:9px;align-items:flex-start;width:100%;border:0;background:none;padding:6px 0;text-align:left}.stwi+.stwi{border-top:1px solid var(--line)}

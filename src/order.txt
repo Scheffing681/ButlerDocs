@@ -81,3 +81,4 @@ docs/erkennung.js
 docs/languages-start.js
 docs/start.js
 docs/eingang-fristen.js
+docs/dokumente-butler.js

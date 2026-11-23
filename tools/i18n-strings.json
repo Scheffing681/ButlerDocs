@@ -87,7 +87,8 @@
   "ru": "Письмо",
   "de": "Brief",
   "files": [
-   "behoerden-briefe.js"
+   "behoerden-briefe.js",
+   "dokumente-butler.js"
   ]
  },
  "Template": {
@@ -2776,6 +2777,7 @@
   "de": "%n Dokumente",
   "files": [
    "business.js",
+   "dokumente-butler.js",
    "mappen.js"
   ]
  },
@@ -3280,6 +3282,297 @@
   "de": "users",
   "files": [
    "docs-home.js"
+  ]
+ },
+ "Backed up %n days ago": {
+  "ru": "Сохранено %n дн. назад",
+  "de": "Gesichert vor %n Tagen",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Backed up today": {
+  "ru": "Сохранено сегодня",
+  "de": "Heute gesichert",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "%n docs": {
+  "ru": "%n док.",
+  "de": "%n Dok.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "No backup yet": {
+  "ru": "Резервной копии ещё нет",
+  "de": "Noch keine Sicherung",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Search: name, text, number …": {
+  "ru": "Поиск: название, текст, номер …",
+  "de": "Suchen: Name, Text, Nummer …",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Scan": {
+  "ru": "Скан",
+  "de": "Scannen",
+  "files": [
+   "dokumente-butler.js",
+   "notizen.js",
+   "start.js"
+  ]
+ },
+ "File": {
+  "ru": "Файл",
+  "de": "Datei",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Sets": {
+  "ru": "Подборки",
+  "de": "Mappen",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Due soon": {
+  "ru": "Скоро срок",
+  "de": "Bald fällig",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "all %n": {
+  "ru": "все %n",
+  "de": "alle %n",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "%n runs out": {
+  "ru": "%n истекает",
+  "de": "%n läuft ab",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "%n expired": {
+  "ru": "%n истёк",
+  "de": "%n abgelaufen",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Let’s start – the 3 most important": {
+  "ru": "Начнём — 3 самых важных",
+  "de": "Los geht’s – die 3 wichtigsten",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "So Butler knows the deadlines and everything is there in an emergency.": {
+  "ru": "Тогда Батлер знает сроки, и в беде всё под рукой.",
+  "de": "Damit Butler Fristen kennt und im Notfall alles da ist.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "More": {
+  "ru": "Ещё",
+  "de": "Mehr",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Incoming letters": {
+  "ru": "Входящие письма",
+  "de": "Eingegangene Briefe",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Tax": {
+  "ru": "Налоги",
+  "de": "Steuer",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Contracts & insurances": {
+  "ru": "Договоры и страховки",
+  "de": "Verträge & Versicherungen",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Manage folders": {
+  "ru": "Настройка папок",
+  "de": "Ordner verwalten",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Hello, I am Butler.": {
+  "ru": "Здравствуйте, я Батлер.",
+  "de": "Hallo, ich bin Butler.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "I know your documents and deadlines – and answer without internet.": {
+  "ru": "Я знаю Ваши документы и сроки — и отвечаю без интернета.",
+  "de": "Ich kenne Ihre Dokumente und Fristen – und antworte ohne Internet.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Or ask below in your own words.": {
+  "ru": "Или спросите своими словами внизу.",
+  "de": "Oder fragen Sie unten mit eigenen Worten.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Explain a letter": {
+  "ru": "Объяснить письмо",
+  "de": "Ein Schreiben erklären",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Which deadlines are coming?": {
+  "ru": "Какие сроки скоро?",
+  "de": "Welche Fristen stehen an?",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Prepare papers for the bank": {
+  "ru": "Подготовить документы для банка",
+  "de": "Unterlagen für die Bank vorbereiten",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Find missing documents": {
+  "ru": "Найти недостающие документы",
+  "de": "Fehlende Dokumente finden",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "without internet": {
+  "ru": "без интернета",
+  "de": "ohne Internet",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "AI · later": {
+  "ru": "ИИ · позже",
+  "de": "KI · später",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "In the next 30 days: %n deadlines.": {
+  "ru": "В ближайшие 30 дней сроков: %n.",
+  "de": "In den nächsten 30 Tagen: %n Fristen.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "In the next 30 days: %n deadlines, %l of them overdue.": {
+  "ru": "В ближайшие 30 дней сроков: %n, из них просрочено: %l.",
+  "de": "In den nächsten 30 Tagen: %n Fristen, davon %l überfällig.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "No deadline in the next 30 days. All in hand.": {
+  "ru": "В ближайшие 30 дней сроков нет. Всё под контролем.",
+  "de": "In den nächsten 30 Tagen steht keine Frist an. Alles im Griff.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "All deadlines": {
+  "ru": "Все сроки",
+  "de": "Alle Fristen",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Of 8 key papers you have %k.": {
+  "ru": "Из 8 важных документов у Вас есть %k.",
+  "de": "Von 8 wichtigen Unterlagen haben Sie %k.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "All 8 key papers are there.": {
+  "ru": "Все 8 важных документов на месте.",
+  "de": "Alle 8 wichtigen Unterlagen sind da.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Whole list": {
+  "ru": "Весь список",
+  "de": "Ganze Liste",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "scan": {
+  "ru": "сканировать",
+  "de": "scannen",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "missing": {
+  "ru": "нет",
+  "de": "fehlt",
+  "files": [
+   "dokumente-butler.js",
+   "mappen.js",
+   "vorsorge.js"
+  ]
+ },
+ "For a loan the bank usually needs %n papers. You have %k of them.": {
+  "ru": "Для кредита банк обычно просит %n документов. У Вас готово: %k.",
+  "de": "Für einen Kredit braucht die Bank meist %n Unterlagen. Sie haben %k davon.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Create the set «Loan / bank»": {
+  "ru": "Собрать подборку «Кредит / банк»",
+  "de": "Mappe «Kredit / Bank» anlegen",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Take a photo of the letter: Butler finds sender, date and deadline – without internet. Explaining a letter in its own words needs the online AI; that comes later and only with your consent.": {
+  "ru": "Сфотографируйте письмо: Батлер найдёт отправителя, дату и срок — без интернета. Объяснить письмо своими словами Батлер сможет с онлайн-ИИ: это будет позже и только с Вашего согласия.",
+  "de": "Fotografieren Sie den Brief: Butler findet Absender, Datum und Frist – ohne Internet. Einen Brief in eigenen Worten erklären kann Butler erst mit der Online-KI; die kommt später und nur mit Ihrer Zustimmung.",
+  "files": [
+   "dokumente-butler.js"
+  ]
+ },
+ "Photograph the letter": {
+  "ru": "Сфотографировать письмо",
+  "de": "Brief fotografieren",
+  "files": [
+   "dokumente-butler.js"
   ]
  },
  "Inbox": {
@@ -5080,14 +5373,6 @@
    "mappen.js"
   ]
  },
- "missing": {
-  "ru": "нет",
-  "de": "fehlt",
-  "files": [
-   "mappen.js",
-   "vorsorge.js"
-  ]
- },
  "%a of %b – please add more": {
   "ru": "%a из %b – добавьте ещё",
   "de": "%a von %b – bitte ergänzen",
@@ -6014,14 +6299,6 @@
   "de": "Diktieren",
   "files": [
    "notizen.js"
-  ]
- },
- "Scan": {
-  "ru": "Сканировать",
-  "de": "Scannen",
-  "files": [
-   "notizen.js",
-   "start.js"
   ]
  },
  "Photo note": {

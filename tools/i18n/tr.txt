@@ -1079,3 +1079,42 @@
 1078	Süre veya görev
 1079	Takvim
 1080	Tamamlandı ✓
+1081	%n gün önce yedeklendi
+1082	Bugün yedeklendi
+1083	%n belge
+1084	Henüz yedek yok
+1085	Ara: ad, metin, numara …
+1086	Dosya
+1087	Setler
+1088	Yakında süresi doluyor
+1089	tümü %n
+1090	%n süresi doluyor
+1091	%n süresi doldu
+1092	Başlayalım – en önemli 3 belge
+1093	Böylece Butler süreleri bilir ve acil durumda her şey hazır olur.
+1094	Daha fazla
+1095	Gelen mektuplar
+1096	Vergi
+1097	Sözleşmeler ve sigortalar
+1098	Klasörleri yönet
+1099	Merhaba, ben Butler.
+1100	Belgelerinizi ve sürelerinizi biliyorum – ve internetsiz yanıt veriyorum.
+1101	Ya da aşağıda kendi sözlerinizle sorun.
+1102	Bir mektubu açıkla
+1103	Hangi süreler yaklaşıyor?
+1104	Banka için belgeleri hazırla
+1105	Eksik belgeleri bul
+1106	internetsiz
+1107	YZ · sonra
+1108	Önümüzdeki 30 günde: %n süre.
+1109	Önümüzdeki 30 günde: %n süre, %l tanesi gecikmiş.
+1110	Önümüzdeki 30 günde süre yok. Her şey yolunda.
+1111	Tüm süreler
+1112	8 önemli belgeden %k tanesi sizde var.
+1113	8 önemli belgenin hepsi var.
+1114	Tüm liste
+1115	tara
+1116	Kredi için banka genellikle %n belge ister. Bunların %k tanesi sizde var.
+1117	«Kredi / banka» setini oluştur
+1118	Mektubun fotoğrafını çekin: Butler gönderen, tarih ve süreyi bulur – internetsiz. Mektubu kendi sözleriyle açıklamak için çevrimiçi YZ gerekir; bu daha sonra ve yalnızca sizin onayınızla gelir.
+1119	Mektubu fotoğrafla

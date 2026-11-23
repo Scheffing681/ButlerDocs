@@ -762,6 +762,26 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('[data-act=frf][data-k=task]').click());await p.waitForTimeout(300);check('the filter «Aufgaben» shows only tasks',await T(()=>[...document.querySelectorAll('.frw .frm b')].every(x=>x.closest('.frr').querySelector('[data-act=frdone]'))));
  await T(()=>document.querySelector('.frw [data-act=frdone][data-id=egt1]').click());await p.waitForTimeout(300);check('a task is ticked off right in Fristen',await T(()=>window.__T.g().tasks.find(x=>x.id==='egt1').done===true));
  await T(()=>{const W=window.__T,G=W.g();W.m().frF='all';W.Ke().items=W.Ke().items.filter(x=>!/^eg\d$/.test(x.id));G.tasks=G.tasks.filter(x=>x.id!=='egt1');W.save();document.querySelectorAll('.lnqbar,.ndbar').forEach(x=>x.remove());W.R('home')})}
+ where='dokumente butler';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.ndbar').forEach(x=>x.remove());const W=window.__T,G=W.g();G.st50Off=0;G.dhOff=0;W.m().dcTab='docs';W.m().ddq='';
+  const d=n=>{const x=new Date();x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};W.Ke().items.push({id:'dd1',title:'Reisepass Ddtest',dtype:'passport',kind:'other',files:[],pages:[],folder:'f1',f:{},who:'me',ts:Date.now()-9e9,end:d(20),ok:1});['dd2','dd3'].forEach(id=>W.Ke().items.push({id,title:'Beleg '+id,kind:'other',files:[],pages:[],folder:'f1',f:{},who:'me',ts:Date.now()-9e9,ok:1}));
+  W.save();W.R('archive')});await p.waitForTimeout(500);
+ const a1=await T(()=>({w:!!document.querySelector('.screen.ddw'),f:document.querySelectorAll('.ddg .ddt').length,qa:document.querySelectorAll('.ddqa button').length,soon:[...document.querySelectorAll('.ddsoon .ddsr b')].map(x=>x.textContent),chip:[...document.querySelectorAll('.ddt em')].map(x=>x.textContent).length,bk:!!document.querySelector('.ddbk')}));
+ check('Dokumente D: backup line, search, 4 quick ways, «Bald fällig», 9 folders with a warning chip',a1.w&&a1.f===9&&a1.qa===4&&a1.soon.length>0&&a1.chip>=1&&a1.bk,JSON.stringify(a1));
+ await p.fill('#ddq','ddtest');await p.waitForTimeout(900);check('search finds the document as you type, folders step aside',await T(()=>!!document.querySelector('#ddres [data-id=dd1]')&&document.querySelector('.ddbody').hidden));
+ await p.fill('#ddq','');await p.waitForTimeout(600);check('…empty search brings the folders back',await T(()=>!document.querySelector('.ddbody').hidden));
+ await T(()=>document.querySelector('.ddg .ddt[data-v=personal]').click());await p.waitForTimeout(400);check('a folder opens its category',await T(()=>window.__T.m().route)==='dccat');
+ await T(()=>window.__T.R('archive'));await p.waitForTimeout(300);await T(()=>document.querySelector('[data-act=ddmore]').click());await p.waitForTimeout(300);
+ check('«⋯» keeps letters, tax, contracts, deadlines, folders',await T(()=>[...document.querySelectorAll('.dtsheet [data-ddm]')].map(b=>b.dataset.ddm).join(','))==='mllist,taxopen,fzkost,ddalldl,dcold');
+ await T(()=>document.querySelector('.dtsheet [data-ddm=ddalldl]').click());await p.waitForTimeout(400);check('…«Alle Fristen» opens Fristen filtered to documents',await T(()=>window.__T.m().route==='dsrok'&&window.__T.m().frF==='doc'));
+ await T(()=>{const W=window.__T;W.m().frF='all';W.g().chatBak=W.g().chat;W.g().chat=[];W.R('concierge')});await p.waitForTimeout(400);
+ check('Butler: an empty chat starts with the orb and 4 questions',await T(()=>!!document.querySelector('.btw .btorb')&&document.querySelectorAll('.btq').length===4));
+ await T(()=>document.querySelector('.btq[data-k=dl]').click());await p.waitForTimeout(400);
+ const b1=await T(()=>({n:window.__T.g().chat.length,c:document.querySelectorAll('.btm .btc').length,tag:!!document.querySelector('.btm .tg.off'),me:!!document.querySelector('.btmsgs .msg.me,.btmsgs .msg.user')}));
+ check('«Welche Fristen stehen an?» answers with cards (offline tag, «Alle Fristen»)',b1.n===2&&b1.c>=2&&b1.tag,JSON.stringify(b1));
+ await T(()=>{const W=window.__T,c=W.g().chat;c.push({r:'me',t:'x'},{r:'bot',t:'',bt:'bank'});W.R('concierge')});await p.waitForTimeout(300);
+ check('«Bank» answer offers the set «Kredit / Bank»',await T(()=>!!document.querySelector('.btm .btc[data-act=mpxnew][data-t=kredit]')));
+ await T(()=>{const W=window.__T;W.g().st50Off=1;W.R('archive')});await p.waitForTimeout(300);check('g.st50Off brings the old Dokumente and chat back',await T(()=>!document.querySelector('.ddw')&&(window.__T.R('concierge'),!document.querySelector('.btw'))));
+ await T(()=>{const W=window.__T,G=W.g();G.st50Off=0;G.chat=G.chatBak||[];delete G.chatBak;W.Ke().items=W.Ke().items.filter(x=>!/^dd\d$/.test(x.id));W.m().ddq='';W.save();W.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

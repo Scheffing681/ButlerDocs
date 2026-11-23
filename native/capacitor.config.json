@@ -1,0 +1,7 @@
+{
+  "appId": "de.silentium.butlerdocs",
+  "appName": "Butler Docs",
+  "webDir": "www",
+  "ios": { "contentInset": "never" },
+  "android": { "allowMixedContent": false }
+}

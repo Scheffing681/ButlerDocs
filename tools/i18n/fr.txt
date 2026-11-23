@@ -1003,3 +1003,22 @@
 1002	le vôtre et celui de l’enfant
 1003	Coordonnées bancaires
 1004	IBAN – relevé ou carte
+1005	Puce vérifiée
+1006	Puce (dans l’app)
+1007	La lecture de la puce (NFC) ne fonctionne que dans l’app de l’App Store / Google Play. Dans le navigateur, le téléphone n’autorise pas le NFC.
+1008	📡 Lire la puce (NFC)
+1009	Ce téléphone n’a pas de NFC ou il est désactivé.
+1010	Clé de la puce
+1011	La puce s’ouvre avec les données de la ligne machine ou le numéro d’accès à 6 chiffres (CAN, au recto de la carte d’identité allemande, en bas à droite).
+1012	Données de la ligne machine
+1013	Numéro d’accès CAN (6 chiffres)
+1014	Lire – tenez le téléphone contre le document
+1015	Tenez le téléphone contre le document, ne bougez pas …
+1016	Saisissez le numéro, la date de naissance et la date d’expiration – ou le CAN.
+1017	Puce lue : données inchangées, signature de l’État valide.
+1018	Puce lue, mais la vérification est incomplète : %t. Vérifiez le document vous-même.
+1019	les données ne correspondent pas à la signature
+1020	signature non confirmée
+1021	Puce non lue : %t
+1022	Les données de la puce diffèrent de la fiche : %t
+1023	La vérification de la puce montre que les données sont signées par l’État et inchangées. Ce n’est pas une identification officielle – pour cela il y a l’eID de l’État / le portefeuille EUDI.

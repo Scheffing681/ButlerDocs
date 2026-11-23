@@ -226,9 +226,9 @@ function mpxRecHtml(d){const up=!!((d.pages||[]).length||(d.files||[]).length),r
  const inM=mpxD().list.filter(M=>mpxOrder(M).includes(d.id)),sug=mpxD().list.filter(M=>!inM.includes(M)&&mpxSlots(M).some(s=>!M.skip[s.k]&&mpxFits(s,d)&&mpxPicked(M,s).length<(s.n||1)));
  const mp=inM.length||sug.length?`<div class="lnqchips mpxin">${inM.map(M=>`<button type="button" class="lnqchip" data-act="mpxopen" data-id="${i(M.id)}">📁 ${i(mpxName(M))}</button>`).join('')}${sug.map(M=>`<button type="button" class="lnqchip add" data-act="mpxaddto" data-m="${i(M.id)}" data-id="${i(d.id)}">${i(mpxT('addTo',{n:mpxName(M)}))}</button>`).join('')}</div>`:'';
  if(!up&&!mp)return'';
- return`<div class="dhcard mpxrec"><h5>${i(mpxT('recT'))}</h5><div class="mpxsts">${chip(up,'st_up')}${chip(rec||mz,'st_rec')}${mrzOn?chip(mz,'st_mrz'):''}${mrzOn?chip(0,'st_chip',1):''}</div>
+ return`<div class="dhcard mpxrec"><h5>${i(mpxT('recT'))}</h5><div class="mpxsts">${chip(up,'st_up')}${chip(rec||mz,'st_rec')}${mrzOn?chip(mz,'st_mrz'):''}${mrzOn?cpxStatusHtml(d):''}</div>
   ${mrzOn&&up&&(d.pages||[]).length&&R0!=='busy'&&!(R0&&typeof R0==='object')?`<button type="button" class="mpxmrz" data-act="mpxmrz" data-id="${i(d.id)}">${i(mpxT('mrzBtn'))}</button>`:''}${body}
-  ${mrzOn?`<small class="lnqx">${i(mpxT('mrzNote'))}</small>`:''}${mp?`<h5 style="margin-top:12px">${i(mpxT('inMappe'))}</h5>${mp}`:''}</div>`}
+  ${mrzOn&&!cpxPlug()?`<small class="lnqx">${i(mpxT('mrzNote'))}</small>`:''}${mrzOn?cpxBodyHtml(d):''}${mp?`<h5 style="margin-top:12px">${i(mpxT('inMappe'))}</h5>${mp}`:''}</div>`}
 function mpxRecPut(){try{if(m.route!=='bdoc'||!m.bdid)return;const sc=document.querySelector('.screen');if(!sc||sc.querySelector('.mpxrec'))return;const d=mpxDoc(m.bdid);if(!d)return;const h=mpxRecHtml(d);if(!h)return;
  const ln=sc.querySelector('.lnqcard:not(.mpxrec)');if(ln){ln.insertAdjacentHTML('beforebegin',h);return}let pb=sc.querySelector('[data-act=dzprint]');while(pb&&pb.parentElement&&pb.parentElement!==sc)pb=pb.parentElement;
  if(pb&&pb.parentElement===sc){const hr=pb.previousElementSibling&&pb.previousElementSibling.tagName==='HR'?pb.previousElementSibling:pb;hr.insertAdjacentHTML('beforebegin',h)}else sc.insertAdjacentHTML('beforeend',h)}catch(er){Hooks.err('mpxrec',er)}}
@@ -250,9 +250,9 @@ let mpxDelArm=0;Hooks.act('mpxdel',()=>{const D=mpxD(),M=D.list.find(z=>z.id===m
 Hooks.act('mpxaddto',d=>{const M=mpxD().list.find(z=>z.id===d.m),doc=mpxDoc(d.id);if(!M||!doc)return;const s=mpxSlots(M).find(z=>!M.skip[z.k]&&mpxFits(z,doc)&&mpxPicked(M,z).length<(z.n||1));
  if(s){const P=mpxPicked(M,s).map(z=>z.id);if(!P.includes(doc.id))P.unshift(doc.id);M.pk[s.k]=P.slice(0,Math.max(s.n||1,P.length))}else if(!M.extra.includes(doc.id))M.extra.push(doc.id);mpxSave();T(mpxT('added',{n:mpxName(M)}));mpxRecRe()});
 Hooks.act('mpxmrz',async d=>{const doc=mpxDoc(d.id);if(!doc)return;mpxMrzRes[doc.id]='busy';mpxRecRe();let r=null;try{r=await mpxMrzOcr(doc)}catch(e){Hooks.err('mpxmrz',e)}
- mpxMrzRes[doc.id]=r||'none';if(r&&r.ok){doc.mrz={ok:1,t:Date.now()};mpxSave()}if(m.route==='bdoc'&&m.bdid===doc.id)mpxRecRe()});
+ mpxMrzRes[doc.id]=r||'none';if(r&&r.ok){doc.mrz={ok:1,t:Date.now(),birth:r.birth,num:r.num,valid:r.valid};mpxSave()}if(m.route==='bdoc'&&m.bdid===doc.id)mpxRecRe()});
 Hooks.act('mpxtake',d=>{const doc=mpxDoc(d.id),r=mpxMrzRes[d.id];if(!doc||!r||typeof r!=='object')return;doc.f=doc.f||{};if(r.num&&!doc.f.number)doc.f.number=r.num;if(r.valid&&!doc.f.valid){doc.f.valid=r.valid;doc.end=r.valid}
- if(!doc.dtype||doc.dtype==='free')doc.dtype=r.kind==='P'?'passport':r.kind==='A'?'residence':'id';if(r.ok)doc.mrz={ok:1,t:Date.now()};mpxSave();T(mpxT('taken'));v()});
+ if(!doc.dtype||doc.dtype==='free')doc.dtype=r.kind==='P'?'passport':r.kind==='A'?'residence':'id';if(r.ok)doc.mrz={ok:1,t:Date.now(),birth:r.birth,num:r.num,valid:r.valid};mpxSave();T(mpxT('taken'));v()});
 Hooks.css('docs-mappen',`
 .mpx .odh{margin:16px 4px 8px}.mpxc{display:block!important;width:100%;text-align:left;margin:0 0 10px!important;padding:14px 16px!important}.mpxct{display:flex;justify-content:space-between;gap:10px;align-items:baseline}.mpxct b{font-size:16px}.mpxct em{font-style:normal;font-size:13px;color:#b7791f;white-space:nowrap}.mpxct em.ok{color:#2f6b3e}
 .mpxc small{display:block;color:var(--muted);font-size:12.5px;margin-top:3px}.mpxbar{display:block;height:5px;border-radius:4px;background:var(--line,#e3d6bc);margin-top:9px;overflow:hidden}.mpxbar i{display:block;height:100%;background:#2f6b3e;border-radius:4px}

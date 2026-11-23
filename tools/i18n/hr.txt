@@ -1690,3 +1690,22 @@
 1689	vaš i djetetov
 1690	Bankovni podaci
 1691	IBAN – izvod ili kartica
+1692	Čip provjeren
+1693	Čip (u aplikaciji)
+1694	Čitanje čipa (NFC) radi samo u aplikaciji iz App Storea / Google Playa. U pregledniku telefon ne dopušta NFC.
+1695	📡 Pročitaj čip (NFC)
+1696	Ovaj telefon nema NFC ili je isključen.
+1697	Ključ za čip
+1698	Čip se otvara podacima iz strojnog retka ili šesteroznamenkastim pristupnim brojem (CAN, na prednjoj strani njemačke osobne iskaznice, dolje desno).
+1699	Podaci strojnog retka
+1700	Pristupni broj CAN (6 znamenki)
+1701	Čitaj – prislonite telefon na dokument
+1702	Držite telefon uz dokument, ne pomičite …
+1703	Unesite broj, datum rođenja i datum isteka – ili CAN.
+1704	Čip pročitan: podaci nepromijenjeni, potpis države vrijedi.
+1705	Čip pročitan, ali provjera je nepotpuna: %t. Provjerite dokument sami.
+1706	podaci se ne slažu s potpisom
+1707	potpis nije potvrđen
+1708	Čip nije pročitan: %t
+1709	Podaci čipa razlikuju se od kartice: %t
+1710	Provjera čipa pokazuje da su podaci potpisani od države i nepromijenjeni. To nije službena identifikacija – za to postoji državni eID / EUDI novčanik.

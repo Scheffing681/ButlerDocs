@@ -3079,6 +3079,139 @@
    "business.js"
   ]
  },
+ "Chip checked": {
+  "ru": "Чип проверен",
+  "de": "Chip geprüft",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Chip (in the app)": {
+  "ru": "Чип (в приложении)",
+  "de": "Chip (in der App)",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Reading the chip (NFC) works only in the app from the App Store / Google Play. In the browser the phone allows no NFC.": {
+  "ru": "Чтение чипа (NFC) работает только в приложении из App Store / Google Play. В браузере телефон не даёт доступа к NFC.",
+  "de": "Das Lesen des Chips (NFC) geht nur in der App aus dem App Store / Google Play. Im Browser erlaubt das Telefon kein NFC.",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "📡 Read the chip (NFC)": {
+  "ru": "📡 Прочитать чип (NFC)",
+  "de": "📡 Chip lesen (NFC)",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "This phone has no NFC or it is switched off.": {
+  "ru": "На этом телефоне NFC нет или он выключен.",
+  "de": "Dieses Telefon hat kein NFC oder es ist ausgeschaltet.",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Key to the chip": {
+  "ru": "Ключ к чипу",
+  "de": "Schlüssel zum Chip",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "The chip opens with the data of the machine line or the 6-digit access number (CAN, on the front of the German ID card, bottom right).": {
+  "ru": "Чип открывается данными из машинной строки или 6-значным номером CAN (на лицевой стороне немецкого ID справа внизу).",
+  "de": "Der Chip öffnet sich mit den Daten der Maschinenzeile oder der 6-stelligen Zugangsnummer (CAN, beim deutschen Ausweis vorne rechts unten).",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Machine line data": {
+  "ru": "Данные машинной строки",
+  "de": "Daten der Maschinenzeile",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Access number CAN (6 digits)": {
+  "ru": "Номер CAN (6 цифр)",
+  "de": "Zugangsnummer CAN (6 Ziffern)",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Read – hold the phone to the document": {
+  "ru": "Читать – приложите телефон к документу",
+  "de": "Lesen – Telefon an das Dokument halten",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Hold the phone to the document, do not move …": {
+  "ru": "Держите телефон у документа, не двигайте …",
+  "de": "Telefon ans Dokument halten, nicht bewegen …",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Please fill in number, date of birth and expiry – or the CAN.": {
+  "ru": "Заполните номер, дату рождения и срок – или CAN.",
+  "de": "Bitte Nummer, Geburtsdatum und Ablaufdatum ausfüllen – oder die CAN.",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Chip read: data unchanged, the state’s signature is valid.": {
+  "ru": "Чип прочитан: данные не изменены, подпись государства верна.",
+  "de": "Chip gelesen: Daten unverändert, Signatur des Staates gültig.",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Chip read, but the check is incomplete: %t. Please check the document yourself.": {
+  "ru": "Чип прочитан, но проверка неполная: %t. Проверьте документ сами.",
+  "de": "Chip gelesen, aber die Prüfung ist unvollständig: %t. Bitte das Dokument selbst prüfen.",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "data do not match the signature": {
+  "ru": "данные не совпадают с подписью",
+  "de": "Daten passen nicht zur Signatur",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "signature not confirmed": {
+  "ru": "подпись не подтверждена",
+  "de": "Signatur nicht bestätigt",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Chip not read: %t": {
+  "ru": "Не удалось прочитать чип: %t",
+  "de": "Chip nicht gelesen: %t",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "Chip data differ from the card: %t": {
+  "ru": "Данные чипа отличаются от карточки: %t",
+  "de": "Chip-Daten weichen von der Karte ab: %t",
+  "files": [
+   "chip.js"
+  ]
+ },
+ "The chip check shows: the data are signed by the state and unchanged. It is not an official identification – that is the state eID / EUDI wallet.": {
+  "ru": "Проверка чипа подтверждает, что данные подписаны государством и не изменены. Это не официальная идентификация – для неё есть государственное eID / кошелёк EUDI.",
+  "de": "Die Chip-Prüfung zeigt: die Daten sind vom Staat signiert und unverändert. Eine amtliche Identifizierung ist das nicht – dafür gibt es die staatliche eID / EUDI-Wallet.",
+  "files": [
+   "chip.js"
+  ]
+ },
  "data-act=\"go\" data-to=\"archive\"": {
   "ru": "docs",
   "de": "fld",

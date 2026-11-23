@@ -1003,3 +1003,22 @@
 1002	el suyo y el del niño
 1003	Datos bancarios
 1004	IBAN – extracto o tarjeta
+1005	Chip comprobado
+1006	Chip (en la app)
+1007	Leer el chip (NFC) solo funciona en la app del App Store / Google Play. En el navegador el teléfono no permite NFC.
+1008	📡 Leer el chip (NFC)
+1009	Este teléfono no tiene NFC o está desactivado.
+1010	Clave del chip
+1011	El chip se abre con los datos de la línea de máquina o con el número de acceso de 6 cifras (CAN, en el anverso del DNI alemán, abajo a la derecha).
+1012	Datos de la línea de máquina
+1013	Número de acceso CAN (6 cifras)
+1014	Leer – acerque el teléfono al documento
+1015	Mantenga el teléfono junto al documento, no lo mueva …
+1016	Rellene número, fecha de nacimiento y caducidad – o el CAN.
+1017	Chip leído: datos sin cambios, firma del Estado válida.
+1018	Chip leído, pero la comprobación está incompleta: %t. Compruebe el documento usted mismo.
+1019	los datos no coinciden con la firma
+1020	firma no confirmada
+1021	Chip no leído: %t
+1022	Los datos del chip difieren de la ficha: %t
+1023	La comprobación del chip muestra que los datos están firmados por el Estado y sin cambios. No es una identificación oficial: para eso existe el eID del Estado / la cartera EUDI.

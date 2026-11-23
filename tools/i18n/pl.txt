@@ -1003,3 +1003,22 @@
 1002	Pana/Pani i dziecka
 1003	Dane bankowe
 1004	IBAN – wyciąg lub karta
+1005	Chip sprawdzony
+1006	Chip (w aplikacji)
+1007	Odczyt chipu (NFC) działa tylko w aplikacji z App Store / Google Play. W przeglądarce telefon nie pozwala na NFC.
+1008	📡 Odczytaj chip (NFC)
+1009	Ten telefon nie ma NFC lub jest ono wyłączone.
+1010	Klucz do chipu
+1011	Chip otwiera się danymi ze strefy maszynowej lub 6-cyfrowym numerem dostępu (CAN, na przodzie niemieckiego dowodu, w prawym dolnym rogu).
+1012	Dane ze strefy maszynowej
+1013	Numer dostępu CAN (6 cyfr)
+1014	Odczytaj – przyłóż telefon do dokumentu
+1015	Trzymaj telefon przy dokumencie, nie ruszaj …
+1016	Wpisz numer, datę urodzenia i datę ważności – albo CAN.
+1017	Chip odczytany: dane niezmienione, podpis państwa ważny.
+1018	Chip odczytany, ale sprawdzenie jest niepełne: %t. Sprawdź dokument samodzielnie.
+1019	dane nie pasują do podpisu
+1020	podpis niepotwierdzony
+1021	Nie odczytano chipu: %t
+1022	Dane z chipu różnią się od karty: %t
+1023	Sprawdzenie chipu pokazuje, że dane są podpisane przez państwo i niezmienione. To nie jest urzędowa identyfikacja – do tego służy państwowe eID / portfel EUDI.

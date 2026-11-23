@@ -1003,3 +1003,22 @@
 1002	sizin ve çocuğun
 1003	Banka bilgileri
 1004	IBAN – döküm veya kart
+1005	Çip kontrol edildi
+1006	Çip (uygulamada)
+1007	Çipi okumak (NFC) yalnızca App Store / Google Play uygulamasında çalışır. Tarayıcıda telefon NFC’ye izin vermez.
+1008	📡 Çipi oku (NFC)
+1009	Bu telefonda NFC yok veya kapalı.
+1010	Çipin anahtarı
+1011	Çip, makine satırındaki bilgilerle veya 6 haneli erişim numarasıyla (CAN, Alman kimliğinin önünde sağ altta) açılır.
+1012	Makine satırı bilgileri
+1013	Erişim numarası CAN (6 hane)
+1014	Oku – telefonu belgeye tutun
+1015	Telefonu belgeye tutun, oynatmayın …
+1016	Lütfen numara, doğum tarihi ve geçerlilik tarihini girin – ya da CAN’ı.
+1017	Çip okundu: veriler değişmemiş, devletin imzası geçerli.
+1018	Çip okundu ama kontrol eksik: %t. Lütfen belgeyi kendiniz kontrol edin.
+1019	veriler imzayla uyuşmuyor
+1020	imza doğrulanmadı
+1021	Çip okunamadı: %t
+1022	Çip verileri karttakinden farklı: %t
+1023	Çip kontrolü, verilerin devlet tarafından imzalandığını ve değişmediğini gösterir. Resmî kimlik doğrulama değildir – bunun için devletin eID’si / EUDI cüzdanı vardır.

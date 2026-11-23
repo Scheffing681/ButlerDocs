@@ -1690,3 +1690,22 @@
 1689	al dvs. și al copilului
 1690	Date bancare
 1691	IBAN – extras sau card
+1692	Cip verificat
+1693	Cip (în aplicație)
+1694	Citirea cipului (NFC) funcționează doar în aplicația din App Store / Google Play. În browser telefonul nu permite NFC.
+1695	📡 Citește cipul (NFC)
+1696	Acest telefon nu are NFC sau este oprit.
+1697	Cheia cipului
+1698	Cipul se deschide cu datele rândului mașină sau cu numărul de acces din 6 cifre (CAN, pe fața buletinului german, jos în dreapta).
+1699	Datele rândului mașină
+1700	Număr de acces CAN (6 cifre)
+1701	Citește – țineți telefonul pe document
+1702	Țineți telefonul pe document, nu-l mișcați …
+1703	Completați numărul, data nașterii și data expirării – sau CAN-ul.
+1704	Cip citit: date nemodificate, semnătura statului e valabilă.
+1705	Cip citit, dar verificarea e incompletă: %t. Verificați singur documentul.
+1706	datele nu se potrivesc cu semnătura
+1707	semnătură neconfirmată
+1708	Cipul nu a fost citit: %t
+1709	Datele cipului diferă de fișă: %t
+1710	Verificarea cipului arată că datele sunt semnate de stat și nemodificate. Nu este o identificare oficială – pentru aceasta există eID-ul statului / portofelul EUDI.

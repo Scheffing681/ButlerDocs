@@ -144,7 +144,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.he1f[data-k=goal] [data-he=rm]').click());await p.waitForTimeout(400);await T(()=>document.querySelector('[data-he=done]').click());await p.waitForTimeout(500);
  check('«Готово» keeps it as «Мой: …»',await T(()=>!window.__T.bd8C().cfg.blocks.includes('goal')&&window.__T.bd8C().saved.some(s=>s.he1&&/План/.test(s.n))))}
  /* Butler Docs: only the original plan (docs/only-docs.js) — the checks above run with the Butler shell (dhOff) */
- where='only docs';{await T(()=>{document.querySelectorAll('.he1sheet,.dtsheet').forEach(s=>s.remove());const g=window.__T.g();g.dhOff=0;window.__T.m().he1=null;window.__T.R('home');window.__T.v()});await p.waitForTimeout(500);
+ where='only docs';{await T(()=>{document.querySelectorAll('.he1sheet,.dtsheet').forEach(s=>s.remove());const g=window.__T.g();g.dhOff=0;g.st50Off=1;g.st50nav=1;g.nav6=['home','search','notiz','profile'];window.__T.m().he1=null;window.__T.R('home');window.__T.v()});await p.waitForTimeout(500);
  const go=async(r,c)=>{await T(([r,c])=>window.__T.R(r,c),[r,c]);await p.waitForTimeout(350);return T(()=>window.__T.m().route)};
  for(const r of ['wd','fin','body','kbshop','trv','mira','lib','routine','cycle','food']){const to=await go(r);check('closed screen '+r+' leads away',to!=='wd'&&to===({fin:'fzm'}[r]||'home'),to)}
  check('Банки open Finanzen (old money accounts are gone)',(await go('cat','bank'))==='fzm');check('Законы stay',(await go('cat','law'))==='cat');check('Здоровье is closed',(await go('cat','health'))==='home');
@@ -400,14 +400,14 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>{const W=window.__T;W.g().fin.accounts=W.g().fin.accounts.filter(a=>!/^fzacc/.test(a.id));W.bsv.D().items=W.bsv.D().items.filter(x=>x.n!=='Sparkasse ТЕСТ');W.save();W.R('home')});await p.waitForTimeout(300)}
  /* Butler Docs: «Anordnung und Farbe» for Docs (docs/layout-docs.js) */
  where='layout docs';{const rt=()=>T(()=>window.__T.m().route);await T(()=>{const W=window.__T,g=W.g();g.dhOff=0;g.nav6=['home','search','stats','notes'];delete g.dhOrd;delete g.dhHid;delete g.dhBlk;W.save();W.R('ly6')});await p.waitForTimeout(600);
- check('the bar keeps only Docs places (Прогресс → Notizen, old ones replaced)',await T(()=>JSON.stringify(window.__T.g().nav6))==='["home","search","notiz","profile"]',await T(()=>JSON.stringify(window.__T.g().nav6)));
+ check('the bar keeps only Docs places (Прогресс → Notizen, old ones replaced by the v50 places)',await T(()=>JSON.stringify(window.__T.g().nav6))==='["home","search","notiz","archive"]',await T(()=>JSON.stringify(window.__T.g().nav6)));
  check('no old quick access, no Butler sections, no «one screen»',await T(()=>{const t=document.querySelector('.screen.ly6').innerText;return!/Schnellzugriff|Быстрый доступ|Meine Bereiche|Мои разделы/.test(t)&&![...document.querySelectorAll('.ly7tg')].some(x=>x.offsetParent)}));
- check('the pool offers only Docs places',await T(()=>[...document.querySelectorAll('.ly6pool [data-k]')].map(b=>b.dataset.k).join(','))==='home,search,notiz,tasks,mycal,archive,letters,bsv,fzm,dsafe,sc9,kar,profile');
+ check('the pool offers only Docs places',await T(()=>[...document.querySelectorAll('.ly6pool [data-k]')].map(b=>b.dataset.k).join(','))==='home,search,notiz,tasks,mycal,archive,letters,bsv,fzm,dsafe,sc9,kar,profile,fristen,butler');
  await T(()=>{const L=window.__T.L;L.ly6sel({i:3});L.ly6put({k:'bsv'})});await p.waitForTimeout(300);await T(()=>window.__T.R('home'));await p.waitForTimeout(400);
  check('«Behörden» can be put into the bottom bar and opens',await T(()=>!!document.querySelector('nav.nav [data-k=bsv]'))&&await T(()=>{document.querySelector('nav.nav [data-k=bsv]').click();return 1})&&(await p.waitForTimeout(300),await rt())==='bsv');
  await T(()=>{const L=window.__T.L;L.lydhide({k:'life'});L.lydmv({k:'fin',d:'-1'});window.__T.g().dhBlk={quick:1};window.__T.R('home')});await p.waitForTimeout(400);
  check('home follows: tile hidden, order changed, block off',await T(()=>{const k=[...document.querySelectorAll('.dhgrid .dht')].map(b=>b.innerText.split('\n')[0]);return!document.querySelector('.dhgrid .dht[data-to=life]')&&k.indexOf(window.__T.g().lang==='ru'?'Финансы':'Finanzen')<k.findIndex(t=>/Ведомства|Behörden/.test(t))&&!document.querySelector('.dhq')}));
- await T(()=>window.__T.L.lydreset());await p.waitForTimeout(300);check('reset brings everything back',await T(()=>{const g=window.__T.g();return JSON.stringify(g.nav6)==='["home","search","notiz","profile"]'&&!g.dhOrd&&!g.dhHid&&!g.dhBlk}));await T(()=>window.__T.R('home'))}
+ await T(()=>window.__T.L.lydreset());await p.waitForTimeout(300);check('reset brings everything back (bar of v50: Start · Dokumente · Fristen · Butler)',await T(()=>{const g=window.__T.g();return JSON.stringify(g.nav6)==='["home","archive","fristen","butler"]'&&!g.dhOrd&&!g.dhHid&&!g.dhBlk}));await T(()=>window.__T.R('home'))}
  /* Finanzen stage 2 (docs/finanzen2.js): Verträge & Kosten, Arbeit & Karriere */
  where='finanzen 2';{const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||400)};
  await T(()=>{const W=window.__T,K=W.Ke().items,y=new Date().getFullYear(),s=new Date();s.setDate(s.getDate()+40);const md=String(s.getMonth()+1).padStart(2,'0')+'-'+String(s.getDate()).padStart(2,'0');
@@ -537,7 +537,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>{window.__T.fz.D().tab='stm';window.__T.R('home')});await p.waitForTimeout(300)}
  /* v33: Notizen instead of Aufgaben */
  where='notizen';{const rt=()=>T(()=>window.__T.m().route);const clk=async(sel,w)=>{await T(sel=>document.querySelector(sel).click(),sel);await p.waitForTimeout(w||350)};
- await T(()=>window.__T.R('home'));await p.waitForTimeout(400);
+ await T(()=>{window.__T.g().nav6=['home','search','notiz','profile'];window.__T.R('home')});await p.waitForTimeout(400);
  check('the bottom bar has «Notizen» in place of «Aufgaben»',await T(()=>!!document.querySelector('.nav [data-k=notiz]')&&!document.querySelector('.nav [data-k=tasks]')));
  await clk('.nav [data-k=notiz]',500);check('«Notizen» opens with quick actions, lists and folders',await rt()==='notiz'&&await T(()=>document.querySelectorAll('.nzqqa button').length===4&&document.querySelectorAll('.nzqli').length===6&&document.querySelectorAll('.nzqgrid .nzqf').length>=3));
  await clk('.nzqqa [data-act=nzqnew]',500);check('«Neue Notiz» opens an empty note',await rt()==='nzed');
@@ -725,6 +725,27 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('new languages: module and core texts translated, Serbian in Latin script',nw.sv==='Sačuvaj'&&nw.sd==='Sačuvaj'&&nw.hd==='Spremi'&&nw.bd==='Запази'&&nw.sl==='Jezik: Srpski',JSON.stringify(nw));
  const hid=await T(async()=>{const G=window.__T.g(),was=G.lang;G.lang='it';window.__T.R('home');await new Promise(r=>setTimeout(r,300));const now=G.lang;G.lang=was;window.__T.save();window.__T.R('home');return now});
  check('a hidden language (it) switches to English once',hid==='en',hid);
+ where='start';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar').forEach(x=>x.remove());const G=window.__T.g();G.st50Off=0;G.dhOff=0;delete G.st50nav;G.navBak=G.nav6;
+  const it=window.__T.Ke().items,d=n=>{const x=new Date();x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};
+  it.push({id:'st1',title:'Personalausweis',dtype:'id',kind:'other',files:[],pages:[],ts:Date.now(),folder:'f1',f:{},who:'me'},{id:'st2',title:'Mietvertrag Teststraße',kind:'contract',files:[],pages:[],ts:Date.now(),folder:'f1',f:{},who:'me'},{id:'st3',title:'Kfz-Versicherung kündigen',end:d(12),kind:'contract',files:[],pages:[],ts:Date.now(),folder:'f1',f:{},who:'me'});
+  window.__T.save();window.__T.R('home');window.__T.v()});await p.waitForTimeout(600);
+ const s1=await T(()=>{const q=x=>document.querySelector(x);return{stn:!!q('.screen.stn'),old:!!q('.dhgrid'),cap:!!q('[data-act=stcap]'),imp:[...document.querySelectorAll('.stimp .stwi b')].map(x=>x.textContent),ring:q('.string b')&&q('.string b').textContent,areas:document.querySelectorAll('.star .sta').length,
+  nav:[...document.querySelectorAll('nav.nav [data-k]')].filter(b=>!b.hidden).map(b=>b.dataset.k).join(','),av:q('.stav')&&q('.stav').dataset.to,menu:q('.sthd [data-to=dall]')?1:0}});
+ check('new Start: own screen in place of the old tiles',s1.stn&&!s1.old&&s1.cap,JSON.stringify(s1));
+ check('«Wichtig für Sie» shows a deadline in 12 days; «Vollständig» counts ID card and rental contract (2 of 8)',s1.imp.some(t=>/Kfz-Versicherung/.test(t))&&s1.ring==='25%',JSON.stringify([s1.imp,s1.ring]));
+ check('8 areas; bar: Start · Dokumente · Fristen · Butler; initials → Profil, ≡ → all areas',s1.areas===8&&s1.nav==='home,archive,fristen,butler'&&s1.av==='profile'&&s1.menu===1,JSON.stringify(s1));
+ for(const [n,want] of [[0,'archive'],[1,'dsrok'],[2,'fzm'],[3,'kar'],[4,'bsv'],[5,'dccat'],[6,'people'],[7,'dnach']]){await T(()=>window.__T.R('home'));await p.waitForTimeout(300);await T(n=>document.querySelectorAll('.star .sta')[n].click(),n);await p.waitForTimeout(400);const r=await T(()=>window.__T.m().route);check('area '+(n+1)+' opens '+want,r===want,r)}
+ await T(()=>window.__T.R('home'));await p.waitForTimeout(300);await T(()=>document.querySelector('nav.nav [data-k=fristen]').click());await p.waitForTimeout(400);check('bar «Fristen» opens the deadlines and is marked',await T(()=>window.__T.m().route==='dsrok'&&!!document.querySelector('nav.nav [data-k=fristen].on')));
+ await T(()=>document.querySelector('nav.nav [data-k=butler]').click());await p.waitForTimeout(400);check('bar «Butler» opens the assistant',await T(()=>window.__T.m().route)==='concierge');
+ await T(()=>window.__T.R('home'));await p.waitForTimeout(300);await T(()=>document.querySelector('[data-act=stcap]').click());await p.waitForTimeout(300);
+ const cp=await T(()=>{const r=[...document.querySelectorAll('.dtsheet [data-stc]')];return{n:r.length,app:r.filter(x=>x.dataset.stc==='app').length}});check('«Erfassen»: camera, photos, file; printer and chip marked «in der App»',cp.n===5&&cp.app===2,JSON.stringify(cp));
+ await T(()=>document.querySelector('.dtsheet [data-stc=cam]').click());await p.waitForTimeout(600);check('«Mit der Kamera scannen» opens the scanner',await T(()=>!!document.querySelector('.sc9')||window.__T.m().route==='sc9'));await T(()=>{document.querySelector('.sc9 [data-a=x]')?.click();document.querySelectorAll('.sc9').forEach(x=>x.remove())});
+ await T(()=>window.__T.R('home'));await p.waitForTimeout(300);await T(()=>document.querySelector('[data-act=stfull]').click());await p.waitForTimeout(300);
+ check('«Vollständig» lists 8 papers, 2 ticked, the others with «scan»',await T(()=>document.querySelectorAll('.dtsheet .strow').length===8&&document.querySelectorAll('.dtsheet .strow.ok').length===2&&document.querySelectorAll('.dtsheet [data-sts]').length===6));
+ await T(()=>document.querySelectorAll('.dtsheet').forEach(x=>x.remove()));
+ check('the menu also holds Notizen, Meine Mappen and Profil',(await T(()=>{window.__T.R('dall');return[...document.querySelectorAll('.stdall')].map(b=>b.dataset.to).join(',')}))==='notiz,mpx,profile');
+ await T(()=>{const G=window.__T.g();G.st50Off=1;window.__T.R('home');window.__T.v()});await p.waitForTimeout(300);check('g.st50Off brings the old home back',await T(()=>!!document.querySelector('.dhgrid')&&!document.querySelector('.stn')));
+ await T(()=>{const W=window.__T,G=W.g();G.st50Off=0;G.nav6=G.navBak;delete G.navBak;W.Ke().items=W.Ke().items.filter(d=>!/^st\d$/.test(d.id));W.save();W.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

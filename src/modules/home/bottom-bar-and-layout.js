@@ -40,7 +40,7 @@ const ly6EXT={};
 const ly6slots=()=>{const a=Array.isArray(g.nav6)&&g.nav6.length===4?g.nav6:ly6DEF;return a.map(k=>ly6POOL.includes(k)?k:'home')};
 function ly6lab(k){try{if(ly6EXT[k])return ly6EXT[k].lab();if(k==='home')return K('n_start');if(k==='search')return K('n_search');if(k==='stats')return ee('progress');if(k==='profile')return K('n_prof');if(k==='mycal')return cvt('title');if(k==='notes'){const c=nt('notes');return c?yt(c):ua('title')}if(k==='st20')return za('t').replace(/^⚡\s*/,'');if(k==='ax5now')return ax5t('now');if(k==='report')return Yn('report');return Yn(k)}catch{return k}}
 const ly6ic=k=>ly6EXT[k]?ly6EXT[k].ic():k==='st20'?_('plus'):($r(ly6IC[k]||'star','n')||_('star'));
-function ly6cur(){const r=m.route,S=ly6slots();if(r==='cat'&&m.cat==='notes'&&S.includes('notes'))return'notes';if(S.includes(r))return r;if(r==='cat'||r==='mycal'||Te.includes(r))return'home';return r}
+function ly6cur(){const r=m.route,S=ly6slots();const ex=S.find(k=>ly6EXT[k]&&ly6EXT[k].on&&ly6EXT[k].on(r));if(ex)return ex;if(r==='cat'&&m.cat==='notes'&&S.includes('notes'))return'notes';if(S.includes(r))return r;if(r==='cat'||r==='mycal'||Te.includes(r))return'home';return r}
 j0=function(){const S=ly6slots(),c=ly6cur(),b=k=>`<button data-act="ly6go" data-k="${k}" data-to="${k}" class="${c===k?'on':''}" ${c===k?'aria-current="page"':''}>${ly6ic(k)}<span>${i(ly6lab(k))}</span></button>`;
  return`<nav class="nav">${b(S[0])}${b(S[1])}
    <button class="mic" data-act="navmic" aria-label="${K('n_conc')}">${_('mic')}<span>${K('n_conc')}</span></button>

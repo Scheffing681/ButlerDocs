@@ -732,7 +732,8 @@
   "ru": "через %n дн.",
   "de": "in %n Tagen",
   "files": [
-   "behoerden-termine.js"
+   "behoerden-termine.js",
+   "start.js"
   ]
  },
  "today": {
@@ -740,7 +741,8 @@
   "de": "heute",
   "files": [
    "behoerden-termine.js",
-   "behoerden.js"
+   "behoerden.js",
+   "start.js"
   ]
  },
  "tomorrow": {
@@ -902,7 +904,8 @@
   "files": [
    "behoerden-termine.js",
    "behoerden.js",
-   "layout-docs.js"
+   "layout-docs.js",
+   "start.js"
   ]
  },
  "Offices & services": {
@@ -1470,7 +1473,8 @@
   "files": [
    "behoerden.js",
    "finanzen.js",
-   "notizen.js"
+   "notizen.js",
+   "start.js"
   ]
  },
  "Family & school": {
@@ -2067,7 +2071,8 @@
   "ru": "просрочен",
   "de": "überfällig",
   "files": [
-   "business.js"
+   "business.js",
+   "start.js"
   ]
  },
  "cancelled": {
@@ -2682,7 +2687,8 @@
   "ru": "Сроки",
   "de": "Fristen",
   "files": [
-   "business.js"
+   "business.js",
+   "start.js"
   ]
  },
  "Business registration": {
@@ -3288,7 +3294,8 @@
   "files": [
    "finanzen.js",
    "layout-docs.js",
-   "notizen.js"
+   "notizen.js",
+   "start.js"
   ]
  },
  "Tax folder, costs": {
@@ -3762,7 +3769,8 @@
    "layout-docs.js",
    "move-phone.js",
    "notizen.js",
-   "reliability.js"
+   "reliability.js",
+   "start.js"
   ]
  },
  "＋ Document from the app": {
@@ -3930,7 +3938,8 @@
   "de": "Arbeitsvertrag",
   "files": [
    "karriere2.js",
-   "mappen.js"
+   "mappen.js",
+   "start.js"
   ]
  },
  "Reference (Zeugnis)": {
@@ -5333,7 +5342,8 @@
   "ru": "Паспорт или ID",
   "de": "Ausweis oder Pass",
   "files": [
-   "mappen.js"
+   "mappen.js",
+   "start.js"
   ]
  },
  "Tenant self-disclosure": {
@@ -5487,7 +5497,8 @@
   "ru": "Свидетельство о рождении",
   "de": "Geburtsurkunde",
   "files": [
-   "mappen.js"
+   "mappen.js",
+   "start.js"
   ]
  },
  "with a translation if not German": {
@@ -5515,7 +5526,8 @@
   "ru": "Справка о регистрации",
   "de": "Meldebescheinigung",
   "files": [
-   "mappen.js"
+   "mappen.js",
+   "start.js"
   ]
  },
  "from the Bürgeramt": {
@@ -5599,7 +5611,8 @@
   "ru": "Налоговый номер (Steuer-ID)",
   "de": "Steuer-ID",
   "files": [
-   "mappen.js"
+   "mappen.js",
+   "start.js"
   ]
  },
  "yours and the child’s": {
@@ -5822,7 +5835,8 @@
   "ru": "Заметки",
   "de": "Notizen",
   "files": [
-   "notizen.js"
+   "notizen.js",
+   "start.js"
   ]
  },
  "Everything quick in one place": {
@@ -5850,7 +5864,8 @@
   "ru": "Сканировать",
   "de": "Scannen",
   "files": [
-   "notizen.js"
+   "notizen.js",
+   "start.js"
   ]
  },
  "Photo note": {
@@ -5934,7 +5949,8 @@
   "ru": "Работа",
   "de": "Arbeit",
   "files": [
-   "notizen.js"
+   "notizen.js",
+   "start.js"
   ]
  },
  "Learning": {
@@ -5962,7 +5978,8 @@
   "ru": "Семья",
   "de": "Familie",
   "files": [
-   "notizen.js"
+   "notizen.js",
+   "start.js"
   ]
  },
  "Ideas": {
@@ -6600,6 +6617,237 @@
   "de": "im Browser",
   "files": [
    "reliability.js"
+  ]
+ },
+ "Ask Butler or search …": {
+  "ru": "Спросить Батлера или найти …",
+  "de": "Butler fragen oder suchen …",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Capture": {
+  "ru": "Добавить",
+  "de": "Erfassen",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Scan · Photo · File · Printer": {
+  "ru": "Скан · Фото · Файл · Принтер",
+  "de": "Scannen · Foto · Datei · Drucker",
+  "files": [
+   "start.js"
+  ]
+ },
+ "AI help": {
+  "ru": "ИИ-помощь",
+  "de": "KI-Hilfe",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Explain a letter, find a deadline": {
+  "ru": "Объяснить письмо, найти срок",
+  "de": "Brief erklären, Frist finden",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Important for you": {
+  "ru": "Важно для Вас",
+  "de": "Wichtig für Sie",
+  "files": [
+   "start.js"
+  ]
+ },
+ "All in hand: no deadlines in the next 60 days": {
+  "ru": "Всё под контролем: в ближайшие 60 дней сроков нет",
+  "de": "Alles im Griff: keine Fristen in den nächsten 60 Tagen",
+  "files": [
+   "start.js"
+  ]
+ },
+ "%n more": {
+  "ru": "Ещё %n",
+  "de": "%n weitere",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Complete": {
+  "ru": "Полнота",
+  "de": "Vollständig",
+  "files": [
+   "start.js"
+  ]
+ },
+ "key documents": {
+  "ru": "важных документов",
+  "de": "wichtige Unterlagen",
+  "files": [
+   "start.js"
+  ]
+ },
+ "My sets": {
+  "ru": "Мои подборки",
+  "de": "Meine Mappen",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Provision": {
+  "ru": "Забота",
+  "de": "Vorsorge",
+  "files": [
+   "start.js"
+  ]
+ },
+ "%n soon": {
+  "ru": "%n скоро",
+  "de": "%n bald",
+  "files": [
+   "start.js"
+  ]
+ },
+ "%n overdue": {
+  "ru": "%n просрочено",
+  "de": "%n überfällig",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Add a document": {
+  "ru": "Добавить документ",
+  "de": "Dokument erfassen",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Scan with the camera": {
+  "ru": "Сканировать камерой",
+  "de": "Mit der Kamera scannen",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Edges, shadows, several pages → PDF": {
+  "ru": "Края, тени, несколько страниц → PDF",
+  "de": "Ränder, Schatten, mehrere Seiten → PDF",
+  "files": [
+   "start.js"
+  ]
+ },
+ "From photos": {
+  "ru": "Из фото",
+  "de": "Aus Fotos",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Pictures and screenshots": {
+  "ru": "Снимки и скриншоты",
+  "de": "Bilder und Screenshots",
+  "files": [
+   "start.js"
+  ]
+ },
+ "File or PDF": {
+  "ru": "Файл или PDF",
+  "de": "Datei oder PDF",
+  "files": [
+   "start.js"
+  ]
+ },
+ "From «Files» and iCloud": {
+  "ru": "Из «Файлов» и iCloud",
+  "de": "Aus «Dateien» und iCloud",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Printer & scanner (Wi-Fi)": {
+  "ru": "Принтер и сканер (Wi-Fi)",
+  "de": "Drucker & Scanner (WLAN)",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Read the ID chip": {
+  "ru": "Прочитать чип паспорта",
+  "de": "Chip im Ausweis lesen",
+  "files": [
+   "start.js"
+  ]
+ },
+ "in the app": {
+  "ru": "в приложении",
+  "de": "in der App",
+  "files": [
+   "start.js"
+  ]
+ },
+ "This comes with the app from the App Store and Google Play: a browser may not talk to the printer or the chip.": {
+  "ru": "Это появится в приложении из App Store и Google Play: браузер не может обращаться к принтеру и к чипу.",
+  "de": "Das kommt mit der App aus App Store und Google Play: Ein Browser darf weder den Drucker noch den Chip ansprechen.",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Butler recognises the kind, dates and deadlines itself – you only confirm.": {
+  "ru": "Butler сам распознаёт вид документа, даты и сроки — Вы только подтверждаете.",
+  "de": "Butler erkennt Art, Daten und Fristen selbst – Sie bestätigen nur.",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Key documents": {
+  "ru": "Важные документы",
+  "de": "Wichtige Unterlagen",
+  "files": [
+   "start.js"
+  ]
+ },
+ "What one usually needs in Germany. Tick = already in «Documents».": {
+  "ru": "Что обычно нужно в Германии. Галочка — документ уже есть в «Документах».",
+  "de": "Was man in Deutschland meist braucht. Haken = schon in «Dokumente».",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Health insurance card": {
+  "ru": "Карта больничной кассы",
+  "de": "Gesundheitskarte",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Social insurance card": {
+  "ru": "Номер социального страхования",
+  "de": "Sozialversicherungsausweis",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Rental contract": {
+  "ru": "Договор аренды",
+  "de": "Mietvertrag",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Profile": {
+  "ru": "Профиль",
+  "de": "Profil",
+  "files": [
+   "start.js"
+  ]
+ },
+ "Butler": {
+  "ru": "Батлер",
+  "de": "Butler",
+  "files": [
+   "start.js"
   ]
  },
  "--h236vh": {

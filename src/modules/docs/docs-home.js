@@ -75,7 +75,8 @@ function dhHome(){const d=new Date();let ds='';try{ds=d.toLocaleDateString(he(),
   <button type="button" data-act="remnew">${dhi('bell')}<span>${i(dht('q_rem'))}</span></button>
   <button type="button" data-act="go" data-to="letters">${dhi('mail')}<span>${i(dht('q_mail'))}</span></button></div></div>`}
  </div>`}
-(Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='home'&&!g.dhOff)return dhHome()}catch(e){Hooks.err('dhhome',e)}});
+/* v50: the new Start (start.js) takes the place of this home; g.st50Off=1 brings this one back */
+(Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='home'&&!g.dhOff)return typeof stHome==='function'&&stOn()?stHome():dhHome()}catch(e){Hooks.err('dhhome',e)}});
 Hooks.act('dhbank',()=>{try{R('cat','bank')}catch{}});
 Hooks.act('dhvault',()=>{try{R('archive');setTimeout(()=>{const b=document.querySelector('[data-act=dcold]');b&&b.click()},60)}catch{}});
 Hooks.css('docs-home',`

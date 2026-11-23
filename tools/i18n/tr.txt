@@ -1024,3 +1024,36 @@
 1023	Çip kontrolü, verilerin devlet tarafından imzalandığını ve değişmediğini gösterir. Resmî kimlik doğrulama değildir – bunun için devletin eID’si / EUDI cüzdanı vardır.
 1024	Butler tamamladı: %t
 1025	Bu dil henüz uygulamada yok – şimdilik İngilizce açıldı. Dili profilden değiştirebilirsiniz.
+1026	Butler'a sor veya ara …
+1027	Ekle
+1028	Tara · Fotoğraf · Dosya · Yazıcı
+1029	Yapay zekâ yardımı
+1030	Mektubu açıkla, süre bul
+1031	Sizin için önemli
+1032	Her şey yolunda: önümüzdeki 60 günde süre yok
+1033	%n tane daha
+1034	Tamamlanma
+1035	önemli belgeler
+1036	Belge setlerim
+1037	Önlem
+1038	%n yakında
+1039	%n gecikmiş
+1040	Belge ekle
+1041	Kamerayla tara
+1042	Kenarlar, gölgeler, birden çok sayfa → PDF
+1043	Fotoğraflardan
+1044	Resimler ve ekran görüntüleri
+1045	Dosya veya PDF
+1046	«Dosyalar» ve iCloud’dan
+1047	Yazıcı ve tarayıcı (Wi-Fi)
+1048	Kimlik çipini oku
+1049	uygulamada
+1050	Bu, App Store ve Google Play’deki uygulamayla gelir: tarayıcı yazıcıya ve çipe erişemez.
+1051	Butler türü, tarihleri ve süreleri kendisi tanır – siz yalnızca onaylarsınız.
+1052	Önemli belgeler
+1053	Almanya’da genellikle gerekenler. İşaretli = «Belgeler»de zaten var.
+1054	Sağlık sigortası kartı
+1055	Sosyal sigorta kartı
+1056	Kira sözleşmesi
+1057	Profil
+1058	Butler

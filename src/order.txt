@@ -79,3 +79,4 @@ docs/mappen.js
 docs/chip.js
 docs/erkennung.js
 docs/languages-start.js
+docs/start.js

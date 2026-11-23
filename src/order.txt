@@ -75,3 +75,4 @@ docs/home-edit.js
 docs/business.js
 docs/steuer-plus.js
 docs/linkup.js
+docs/mappen.js

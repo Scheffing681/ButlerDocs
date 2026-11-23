@@ -1578,3 +1578,115 @@
 1577	＋ Aggiungi
 1578	＋ Aggiungi un’attività
 1579	＋ Nuovo progetto
+1580	Le mie cartelle
+1581	Cartelle di documenti: casa, candidatura, cittadinanza …
+1582	Nuova cartella da un modello
+1583	Cartella propria
+1584	iniziare vuota
+1585	Una cartella contiene solo collegamenti – ogni documento resta una sola volta in «Documenti».
+1586	✓ pronta
+1587	Aperto: %t
+1588	Inviata il %d · in attesa di risposta
+1589	Inviata il %d · risposta ricevuta
+1590	Tutto pronto
+1591	Può creare il PDF e inviarlo.
+1592	Quasi pronta
+1593	Ancora %n punti aperti. Poi la cartella è pronta da inviare.
+1594	Aggiunga documenti – Butler controlla date e leggibilità.
+1595	manca · %h
+1596	%a di %b – completi, per favore
+1597	%t: scaduto il %d
+1598	%t ha più di %n mesi – ne serve uno più recente
+1599	%t: pagina %p forse sfocata – scansionare di nuovo?
+1600	%t è presente due volte
+1601	non necessario
+1602	facoltativo
+1603	📄 Un PDF con lettera ed elenco allegati
+1604	↕ Ordine
+1605	Rinomina
+1606	Elimina cartella
+1607	Eliminare la cartella? I documenti restano in «Documenti».
+1608	Cartella eliminata
+1609	Adatti
+1610	Ancora nessun documento adatto.
+1611	📷 Scansionarne uno nuovo
+1612	Non serve per questa cartella
+1613	Serve comunque
+1614	Scegli automaticamente
+1615	Necessari: %n
+1616	Ordine nel PDF
+1617	In quest’ordine i documenti vanno nel PDF e nell’elenco allegati.
+1618	Come nel modello
+1619	La cartella non ha documenti con pagine.
+1620	es. Hausverwaltung Müller
+1621	Riferimento / annuncio
+1622	Mittente
+1623	Crea il PDF
+1624	Non tutto è pronto: %n punti. Crearlo comunque?
+1625	Cartella «%n» creata
+1626	Nelle cartelle
+1627	＋ Cartella «%n»
+1628	Aggiunto a «%n»
+1629	Riconoscimento
+1630	Caricato
+1631	Riconosciuto
+1632	MRZ verificata
+1633	Chip (in seguito)
+1634	🔎 Leggi la riga a lettura ottica (<<<)
+1635	Leggo la riga … ci vuole fino a un minuto
+1636	Nessuna riga «<<<» trovata. Fotografi la pagina con la foto per intero e nitida (sulla carta d’identità è sul retro).
+1637	Riga letta, ma le cifre di controllo non corrispondono (%a di %b). Controlli i dati personalmente.
+1638	Le cifre di controllo corrispondono – il testo è stato letto correttamente.
+1639	«MRZ verificata» significa: la riga è stata letta senza errori. Non è una verifica di autenticità. La verifica del chip (NFC) arriverà con l’app dell’App Store.
+1640	Valido fino al
+1641	Applica
+1642	Dati applicati
+1643	Passaporto
+1644	Permesso di soggiorno
+1645	Affittare una casa
+1646	Candidatura
+1647	Cittadinanza
+1648	Kindergeld / Elterngeld
+1649	Prestito / banca
+1650	Carta d’identità o passaporto
+1651	Autocertificazione dell’inquilino (Mieterselbstauskunft)
+1652	modulo del locatore
+1653	Buste paga (ultime 3)
+1654	dal datore di lavoro, mensili
+1655	firmato
+1656	Rapporto Schufa
+1657	gratis: meineschufa.de (copia dei dati)
+1658	Attestato di assenza di arretrati d’affitto
+1659	dal locatore precedente
+1660	Estratto conto
+1661	non più vecchio di 3 mesi
+1662	CV
+1663	con data e firma
+1664	Lettera di presentazione
+1665	per questo posto
+1666	Referenze di lavoro
+1667	dai datori precedenti
+1668	Diplomi e attestati
+1669	scuola, formazione, studi
+1670	Certificati, corsi
+1671	valido
+1672	Atto di nascita
+1673	con traduzione se non in tedesco
+1674	Atto di matrimonio
+1675	se sposato/a
+1676	Certificato di residenza (Meldebescheinigung)
+1677	dal Bürgeramt
+1678	Estratto dell’assicurazione pensionistica
+1679	Certificato di lingua (B1)
+1680	Test di cittadinanza
+1681	«Leben in Deutschland»
+1682	Assicurazione sanitaria
+1683	tessera o attestato della cassa
+1684	Avviso di accertamento fiscale
+1685	l’ultimo
+1686	Atto di nascita del bambino
+1687	per l’Elterngeld – dall’anagrafe
+1688	Codice fiscale (Steuer-ID)
+1689	suo e del bambino
+1690	Dati bancari
+1691	IBAN – estratto o carta

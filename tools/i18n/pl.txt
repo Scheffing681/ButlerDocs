@@ -887,3 +887,119 @@
 886	Dyspozycje zwolnienia z podatku
 887	Informacja emerytalna
 888	sąd rejonowy
+889	Moje zestawy dokumentów
+890	Zestawy dokumentów: mieszkanie, praca, obywatelstwo …
+891	Nowy zestaw z szablonu
+892	Własny zestaw
+893	zacznij od pustego
+894	Zestaw zawiera tylko odnośniki – każdy dokument jest raz w «Dokumentach».
+895	✓ gotowe
+896	Otwarte: %t
+897	Wysłano %d · czeka na odpowiedź
+898	Wysłano %d · odpowiedź otrzymana
+899	Wszystko gotowe
+900	Można utworzyć PDF i wysłać.
+901	Prawie gotowe
+902	Otwartych punktów: %n. Potem zestaw jest gotowy do wysłania.
+903	Dodaj dokumenty – Butler sprawdzi terminy i czytelność.
+904	brak · %h
+905	%a z %b – proszę uzupełnić
+906	%t: wygasł %d
+907	%t jest starszy niż %n mies. – potrzebny nowszy
+908	%t: strona %p może być nieostra – zeskanować ponownie?
+909	%t jest dodany dwa razy
+910	niepotrzebne
+911	opcjonalnie
+912	📄 Jeden PDF z pismem i listą załączników
+913	↕ Kolejność
+914	Zmień nazwę
+915	Usuń zestaw
+916	Usunąć zestaw? Dokumenty zostają w «Dokumentach».
+917	Zestaw usunięty
+918	Pasujące
+919	Brak pasujących dokumentów.
+920	📷 Zeskanuj nowy
+921	Niepotrzebne w tym zestawie
+922	Jednak potrzebne
+923	Wybierz automatycznie
+924	Potrzeba: %n
+925	Kolejność w PDF
+926	W tej kolejności dokumenty trafią do PDF i listy załączników.
+927	Jak w szablonie
+928	W zestawie nie ma dokumentów ze stronami.
+929	Do kogo
+930	np. Hausverwaltung Müller
+931	Sygnatura / ogłoszenie
+932	Temat
+933	Nadawca
+934	Utwórz PDF
+935	Nie wszystko gotowe: %n punktów. Utworzyć mimo to?
+936	Utworzono zestaw «%n»
+937	W zestawach
+938	＋ Do zestawu «%n»
+939	Dodano do «%n»
+940	Rozpoznawanie
+941	Wgrany
+942	Rozpoznany
+943	MRZ sprawdzona
+944	Chip (później)
+945	🔎 Odczytaj strefę maszynową (<<<)
+946	Odczytuję wiersz … to trwa do minuty
+947	Nie znaleziono wierszy «<<<». Sfotografuj stronę ze zdjęciem w całości i ostro (w dowodzie – na odwrocie).
+948	Wiersz odczytany, ale cyfry kontrolne się nie zgadzają (%a z %b). Sprawdź dane samodzielnie.
+949	Cyfry kontrolne się zgadzają – tekst odczytano poprawnie.
+950	«MRZ sprawdzona» oznacza: wiersz odczytano bez błędów. To nie jest sprawdzenie autentyczności. Sprawdzenie chipu (NFC) pojawi się w aplikacji z App Store.
+951	Data urodzenia
+952	Ważny do
+953	Przenieś
+954	Dane przeniesione
+955	Paszport
+956	Dowód osobisty
+957	Dokument pobytowy
+958	Wynajem mieszkania
+959	Aplikacja o pracę
+960	Obywatelstwo
+961	Kindergeld / Elterngeld
+962	Kredyt / bank
+963	Dowód lub paszport
+964	Ankieta najemcy (Mieterselbstauskunft)
+965	formularz od wynajmującego
+966	Odcinki wypłaty (3 ostatnie)
+967	od pracodawcy, co miesiąc
+968	podpisana
+969	Raport Schufa
+970	bezpłatnie: meineschufa.de (kopia danych)
+971	Zaświadczenie o braku zaległości czynszowych
+972	od poprzedniego wynajmującego
+973	Wyciąg z konta
+974	nie starszy niż 3 miesiące
+975	CV
+976	z datą i podpisem
+977	List motywacyjny
+978	na to stanowisko
+979	Świadectwa pracy
+980	od poprzednich pracodawców
+981	Dyplomy i świadectwa
+982	szkoła, szkolenie, studia
+983	Certyfikaty, kursy
+984	ważny
+985	Akt urodzenia
+986	z tłumaczeniem, jeśli nie po niemiecku
+987	Akt małżeństwa
+988	jeśli w związku małżeńskim
+989	Zaświadczenie o zameldowaniu
+990	z Bürgeramt
+991	Przebieg ubezpieczenia emerytalnego
+992	Certyfikat językowy (B1)
+993	Test obywatelski
+994	«Leben in Deutschland»
+995	Ubezpieczenie zdrowotne
+996	karta lub zaświadczenie kasy
+997	Decyzja podatkowa
+998	ostatnia
+999	Akt urodzenia dziecka
+1000	do Elterngeld – z USC
+1001	Numer podatkowy (Steuer-ID)
+1002	Pana/Pani i dziecka
+1003	Dane bankowe
+1004	IBAN – wyciąg lub karta

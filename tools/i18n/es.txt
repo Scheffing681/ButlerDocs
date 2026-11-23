@@ -887,3 +887,119 @@
 886	Órdenes de exención
 887	Informe de pensión
 888	juzgado local
+889	Mis carpetas
+890	Carpetas de documentos: piso, candidatura, nacionalidad …
+891	Nueva carpeta desde una plantilla
+892	Carpeta propia
+893	empezar vacía
+894	Una carpeta solo contiene enlaces: cada documento está una sola vez en «Documentos».
+895	✓ lista
+896	Pendiente: %t
+897	Enviada el %d · esperando respuesta
+898	Enviada el %d · respuesta recibida
+899	Todo listo
+900	Puede crear el PDF y enviarlo.
+901	Casi lista
+902	Quedan %n puntos abiertos. Luego la carpeta estará lista para enviar.
+903	Añada documentos: Butler revisa fechas y legibilidad.
+904	falta · %h
+905	%a de %b – complete, por favor
+906	%t: caducó el %d
+907	%t tiene más de %n meses – hace falta uno más reciente
+908	%t: la página %p puede estar borrosa – ¿escanear de nuevo?
+909	%t está dos veces
+910	no hace falta
+911	opcional
+912	📄 Un PDF con carta y lista de anexos
+913	↕ Orden
+914	Cambiar nombre
+915	Borrar carpeta
+916	¿Borrar la carpeta? Los documentos siguen en «Documentos».
+917	Carpeta borrada
+918	Adecuados
+919	Todavía no hay documentos adecuados.
+920	📷 Escanear uno nuevo
+921	No hace falta para esta carpeta
+922	Sí hace falta
+923	Elegir automáticamente
+924	Necesarios: %n
+925	Orden en el PDF
+926	Así van los documentos en el PDF y en la lista de anexos.
+927	Como en la plantilla
+928	La carpeta no tiene documentos con páginas.
+929	A quién
+930	p. ej. Hausverwaltung Müller
+931	Referencia / anuncio
+932	Asunto
+933	Remitente
+934	Crear el PDF
+935	No todo está listo: %n puntos. ¿Crearlo igualmente?
+936	Carpeta «%n» creada
+937	En carpetas
+938	＋ Carpeta «%n»
+939	Añadido a «%n»
+940	Reconocimiento
+941	Subido
+942	Reconocido
+943	MRZ comprobada
+944	Chip (más adelante)
+945	🔎 Leer la línea de máquina (<<<)
+946	Leyendo la línea … tarda hasta un minuto
+947	No se encontraron líneas «<<<». Fotografíe la página con la foto entera y nítida (en el DNI, en el reverso).
+948	Línea leída, pero los dígitos de control no coinciden (%a de %b). Compruebe los datos usted mismo.
+949	Los dígitos de control coinciden: el texto se leyó correctamente.
+950	«MRZ comprobada» significa: la línea se leyó sin errores. No es una comprobación de autenticidad. La comprobación del chip (NFC) llegará con la app del App Store.
+951	Fecha de nacimiento
+952	Válido hasta
+953	Aplicar
+954	Datos aplicados
+955	Pasaporte
+956	Documento de identidad
+957	Permiso de residencia
+958	Alquilar un piso
+959	Candidatura de empleo
+960	Nacionalidad
+961	Kindergeld / Elterngeld
+962	Crédito / banco
+963	DNI o pasaporte
+964	Autodeclaración del inquilino (Mieterselbstauskunft)
+965	formulario del arrendador
+966	Nóminas (las 3 últimas)
+967	de la empresa, mensuales
+968	firmado
+969	Informe Schufa
+970	gratis: meineschufa.de (copia de datos)
+971	Certificado de no deber alquiler
+972	del arrendador anterior
+973	Extracto bancario
+974	de menos de 3 meses
+975	CV
+976	con fecha y firma
+977	Carta de presentación
+978	para este puesto
+979	Certificados de trabajo
+980	de empresas anteriores
+981	Títulos y certificados
+982	escuela, formación, estudios
+983	Certificados, cursos
+984	vigente
+985	Partida de nacimiento
+986	con traducción si no está en alemán
+987	Certificado de matrimonio
+988	si está casado/a
+989	Certificado de empadronamiento (Meldebescheinigung)
+990	del Bürgeramt
+991	Historial del seguro de pensiones
+992	Certificado de idioma (B1)
+993	Test de nacionalidad
+994	«Leben in Deutschland»
+995	Seguro médico
+996	tarjeta o certificado de la caja
+997	Liquidación de impuestos
+998	la última
+999	Partida de nacimiento del niño
+1000	para el Elterngeld – del registro civil
+1001	Número fiscal (Steuer-ID)
+1002	el suyo y el del niño
+1003	Datos bancarios
+1004	IBAN – extracto o tarjeta

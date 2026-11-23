@@ -272,7 +272,8 @@
   "ru": "В работе",
   "de": "In Bearbeitung",
   "files": [
-   "behoerden-briefe.js"
+   "behoerden-briefe.js",
+   "mappen.js"
   ]
  },
  "Decision received": {
@@ -545,6 +546,7 @@
    "business.js",
    "finanzen.js",
    "finanzen2.js",
+   "mappen.js",
    "steuer-plus.js",
    "vorsorge.js"
   ]
@@ -566,7 +568,8 @@
   "ru": "Пока пусто",
   "de": "Noch leer",
   "files": [
-   "behoerden-briefe.js"
+   "behoerden-briefe.js",
+   "mappen.js"
   ]
  },
  "photo": {
@@ -706,6 +709,7 @@
    "behoerden-termine.js",
    "behoerden.js",
    "linkup.js",
+   "mappen.js",
    "reliability.js"
   ]
  },
@@ -1254,6 +1258,7 @@
   "de": "Name",
   "files": [
    "behoerden.js",
+   "mappen.js",
    "notizen.js"
   ]
  },
@@ -1382,7 +1387,8 @@
   "ru": "Номер",
   "de": "Nummer",
   "files": [
-   "behoerden.js"
+   "behoerden.js",
+   "mappen.js"
   ]
  },
  "secret": {
@@ -2667,6 +2673,7 @@
   "files": [
    "business.js",
    "karriere2.js",
+   "mappen.js",
    "steuer-plus.js",
    "vorsorge.js"
   ]
@@ -2753,14 +2760,16 @@
   "de": "falls vorhanden",
   "files": [
    "business.js",
-   "karriere2.js"
+   "karriere2.js",
+   "mappen.js"
   ]
  },
  "%n documents": {
   "ru": "%n док.",
   "de": "%n Dokumente",
   "files": [
-   "business.js"
+   "business.js",
+   "mappen.js"
   ]
  },
  "Add %s": {
@@ -3627,7 +3636,8 @@
   "ru": "Какие документы?",
   "de": "Welche Dokumente?",
   "files": [
-   "finanzen2.js"
+   "finanzen2.js",
+   "mappen.js"
   ]
  },
  "Probably fitting": {
@@ -3641,7 +3651,8 @@
   "ru": "Все документы",
   "de": "Alle Dokumente",
   "files": [
-   "finanzen2.js"
+   "finanzen2.js",
+   "mappen.js"
   ]
  },
  "Projects & achievements": {
@@ -3778,7 +3789,8 @@
   "ru": "Трудовой договор",
   "de": "Arbeitsvertrag",
   "files": [
-   "karriere2.js"
+   "karriere2.js",
+   "mappen.js"
   ]
  },
  "Reference (Zeugnis)": {
@@ -3920,7 +3932,8 @@
   "ru": "＋ Ещё документ",
   "de": "＋ Weiteres Dokument",
   "files": [
-   "karriere2.js"
+   "karriere2.js",
+   "mappen.js"
   ]
  },
  "＋ Add a qualification": {
@@ -3990,7 +4003,8 @@
   "ru": "Страна",
   "de": "Land",
   "files": [
-   "karriere2.js"
+   "karriere2.js",
+   "mappen.js"
   ]
  },
  "Recognition in Germany": {
@@ -4640,6 +4654,826 @@
   "de": "Verknüpft: %n",
   "files": [
    "linkup.js"
+  ]
+ },
+ "My document sets": {
+  "ru": "Мои подборки",
+  "de": "Meine Mappen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Document sets: flat, job application, citizenship …": {
+  "ru": "Комплекты документов: квартира, работа, гражданство …",
+  "de": "Unterlagen-Sets: Wohnung, Bewerbung, Einbürgerung …",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "New set from a template": {
+  "ru": "Новая подборка из шаблона",
+  "de": "Neue Mappe aus Vorlage",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Own set": {
+  "ru": "Своя подборка",
+  "de": "Eigene Mappe",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "start empty": {
+  "ru": "начать с пустой",
+  "de": "leer beginnen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "A set holds only links – every document stays once in «Documents».": {
+  "ru": "В подборке только ссылки – каждый документ хранится один раз в «Документах».",
+  "de": "Eine Mappe enthält nur Verweise – jedes Dokument bleibt einmal in «Dokumente».",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "✓ ready": {
+  "ru": "✓ готово",
+  "de": "✓ fertig",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Open: %t": {
+  "ru": "Открыто: %t",
+  "de": "Offen: %t",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Sent %d · waiting for an answer": {
+  "ru": "Отправлено %d · ждём ответа",
+  "de": "Gesendet %d · wartet auf Antwort",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Sent %d · answer received": {
+  "ru": "Отправлено %d · ответ получен",
+  "de": "Gesendet %d · Antwort erhalten",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "All set": {
+  "ru": "Всё готово",
+  "de": "Alles bereit",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "You can make the PDF and send it.": {
+  "ru": "Можно собирать PDF и отправлять.",
+  "de": "Sie können das PDF erstellen und senden.",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Almost there": {
+  "ru": "Почти готово",
+  "de": "Fast fertig",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "%n points still open. Then the set is ready to send.": {
+  "ru": "Осталось пунктов: %n. Потом подборка готова к отправке.",
+  "de": "Noch %n Punkte offen. Dann ist die Mappe bereit zum Senden.",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Add documents – Butler checks dates and readability.": {
+  "ru": "Добавьте документы – Butler проверит сроки и читаемость.",
+  "de": "Fügen Sie Dokumente hinzu – Butler prüft Fristen und Lesbarkeit.",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "missing · %h": {
+  "ru": "нет · %h",
+  "de": "fehlt · %h",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "missing": {
+  "ru": "нет",
+  "de": "fehlt",
+  "files": [
+   "mappen.js",
+   "vorsorge.js"
+  ]
+ },
+ "%a of %b – please add more": {
+  "ru": "%a из %b – добавьте ещё",
+  "de": "%a von %b – bitte ergänzen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "%t: expired on %d": {
+  "ru": "%t: срок истёк %d",
+  "de": "%t: abgelaufen am %d",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "%t is older than %n months – please a newer one": {
+  "ru": "%t старше %n мес. – нужен новее",
+  "de": "%t ist älter als %n Monate – bitte neuer",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "%t: page %p may be blurred – scan again?": {
+  "ru": "%t: стр. %p, возможно, нечёткая – переснять?",
+  "de": "%t: Seite %p evtl. unscharf – neu scannen?",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "%t is in twice": {
+  "ru": "%t добавлен дважды",
+  "de": "%t ist doppelt drin",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "not needed": {
+  "ru": "не нужно",
+  "de": "nicht nötig",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "optional": {
+  "ru": "по желанию",
+  "de": "optional",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "📄 One PDF with cover letter & list": {
+  "ru": "📄 Один PDF с сопроводительным письмом и списком",
+  "de": "📄 Ein PDF mit Anschreiben & Anlagenliste",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "↕ Order": {
+  "ru": "↕ Порядок",
+  "de": "↕ Reihenfolge",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Rename": {
+  "ru": "Переименовать",
+  "de": "Umbenennen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Delete set": {
+  "ru": "Удалить подборку",
+  "de": "Mappe löschen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Delete the set? The documents stay in «Documents».": {
+  "ru": "Удалить подборку? Документы остаются в «Документах».",
+  "de": "Mappe löschen? Die Dokumente bleiben in «Dokumente».",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Set deleted": {
+  "ru": "Подборка удалена",
+  "de": "Mappe gelöscht",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Fitting": {
+  "ru": "Подходят",
+  "de": "Passend",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "No fitting documents yet.": {
+  "ru": "Подходящих документов пока нет.",
+  "de": "Noch keine passenden Dokumente.",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "📷 Scan a new one": {
+  "ru": "📷 Отсканировать новый",
+  "de": "📷 Neu scannen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Not needed for this set": {
+  "ru": "Не нужно для этой подборки",
+  "de": "Für diese Mappe nicht nötig",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Needed after all": {
+  "ru": "Снова нужно",
+  "de": "Doch nötig",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Choose automatically": {
+  "ru": "Выбрать автоматически",
+  "de": "Automatisch wählen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Needed: %n": {
+  "ru": "Нужно: %n",
+  "de": "Benötigt: %n",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Order in the PDF": {
+  "ru": "Порядок в PDF",
+  "de": "Reihenfolge im PDF",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "This is the order in the PDF and the list of enclosures.": {
+  "ru": "Так документы пойдут в PDF и в список вложений.",
+  "de": "So kommen die Dokumente ins PDF und in die Anlagenliste.",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "As in the template": {
+  "ru": "Как в шаблоне",
+  "de": "Wie in der Vorlage",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "The set has no documents with pages.": {
+  "ru": "В подборке нет документов со страницами.",
+  "de": "In der Mappe sind keine Dokumente mit Seiten.",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "To whom": {
+  "ru": "Кому",
+  "de": "An wen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "e.g. Hausverwaltung Müller": {
+  "ru": "например, Hausverwaltung Müller",
+  "de": "z. B. Hausverwaltung Müller",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Reference / listing": {
+  "ru": "Номер дела / объявления",
+  "de": "Aktenzeichen / Inserat",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Subject": {
+  "ru": "Тема",
+  "de": "Betreff",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Sender": {
+  "ru": "Отправитель",
+  "de": "Absender",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Make the PDF": {
+  "ru": "Создать PDF",
+  "de": "PDF erstellen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Not everything is ready: %n points. Make it anyway?": {
+  "ru": "Не всё готово: %n пунктов. Всё равно создать?",
+  "de": "Noch nicht alles bereit: %n Punkte. Trotzdem erstellen?",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Set «%n» created": {
+  "ru": "Подборка «%n» создана",
+  "de": "Mappe «%n» angelegt",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "In sets": {
+  "ru": "В подборках",
+  "de": "In Mappen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "＋ Set «%n»": {
+  "ru": "＋ В подборку «%n»",
+  "de": "＋ Mappe «%n»",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Added to «%n»": {
+  "ru": "Добавлено в «%n»",
+  "de": "Zu «%n» hinzugefügt",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Recognition": {
+  "ru": "Распознавание",
+  "de": "Erkennung",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Uploaded": {
+  "ru": "Загружен",
+  "de": "Hochgeladen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Recognised": {
+  "ru": "Распознан",
+  "de": "Erkannt",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "MRZ checked": {
+  "ru": "MRZ проверена",
+  "de": "MRZ geprüft",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Chip (later)": {
+  "ru": "Чип (позже)",
+  "de": "Chip (später)",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "🔎 Read the machine line (<<<)": {
+  "ru": "🔎 Прочитать машинную строку (<<<)",
+  "de": "🔎 Maschinenzeile lesen (<<<)",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Reading the line … this takes up to a minute": {
+  "ru": "Читаю строку … это занимает до минуты",
+  "de": "Lese die Zeile … das dauert bis zu einer Minute",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "No «<<<» lines found. Photograph the page with the photo fully and sharply (on ID cards it is on the back).": {
+  "ru": "Строки «<<<» не найдены. Сфотографируйте страницу с фото целиком и резко (у ID-карты строка на обороте).",
+  "de": "Keine Zeilen «<<<» gefunden. Fotografieren Sie die Seite mit Foto ganz und scharf (beim Ausweis auf der Rückseite).",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Line read, but the check digits do not match (%a of %b). Please check the details yourself.": {
+  "ru": "Строка прочитана, но контрольные цифры не сходятся (%a из %b). Проверьте данные вручную.",
+  "de": "Zeile gelesen, aber die Prüfziffern stimmen nicht (%a von %b). Bitte die Angaben selbst prüfen.",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "The check digits match – the text was read correctly.": {
+  "ru": "Контрольные цифры сходятся – текст прочитан верно.",
+  "de": "Die Prüfziffern stimmen – der Text ist richtig gelesen.",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "«MRZ checked» means: the line was read without errors. It is not a check of authenticity. The chip check (NFC) comes with the app from the App Store.": {
+  "ru": "«MRZ проверена» значит: строка прочитана без ошибок. Это не проверка подлинности. Проверка чипа (NFC) появится в приложении из App Store.",
+  "de": "«MRZ geprüft» heißt: die Zeile ist fehlerfrei gelesen. Es ist keine Echtheitsprüfung. Die Chip-Prüfung (NFC) kommt mit der App aus dem App Store.",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Date of birth": {
+  "ru": "Дата рождения",
+  "de": "Geburtsdatum",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Valid until": {
+  "ru": "Действителен до",
+  "de": "Gültig bis",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Apply": {
+  "ru": "Перенести в документ",
+  "de": "Übernehmen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Details applied": {
+  "ru": "Данные перенесены",
+  "de": "Angaben übernommen",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Passport": {
+  "ru": "Паспорт",
+  "de": "Reisepass",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "ID card": {
+  "ru": "Удостоверение личности",
+  "de": "Personalausweis / ID",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Residence permit": {
+  "ru": "Вид на жительство",
+  "de": "Aufenthaltstitel",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Renting a flat": {
+  "ru": "Аренда квартиры",
+  "de": "Wohnung mieten",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Job application": {
+  "ru": "Заявление на работу",
+  "de": "Bewerbung",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Naturalisation": {
+  "ru": "Гражданство",
+  "de": "Einbürgerung",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Child benefit / parental allowance": {
+  "ru": "Kindergeld / Elterngeld",
+  "de": "Kindergeld / Elterngeld",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Loan / bank": {
+  "ru": "Кредит / банк",
+  "de": "Kredit / Bank",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "ID card or passport": {
+  "ru": "Паспорт или ID",
+  "de": "Ausweis oder Pass",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Tenant self-disclosure": {
+  "ru": "Анкета арендатора",
+  "de": "Mieterselbstauskunft",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "form from the landlord": {
+  "ru": "бланк от арендодателя",
+  "de": "Formular vom Vermieter",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Payslips (last 3)": {
+  "ru": "Расчётные листы (3 последних)",
+  "de": "Lohnabrechnungen (3 letzte)",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "from the employer, monthly": {
+  "ru": "от работодателя, по месяцам",
+  "de": "vom Arbeitgeber, monatlich",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "signed": {
+  "ru": "подписанный",
+  "de": "unterschrieben",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Schufa report": {
+  "ru": "Выписка Schufa",
+  "de": "Schufa-Auskunft",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "free: meineschufa.de (data copy)": {
+  "ru": "бесплатно: meineschufa.de (копия данных)",
+  "de": "kostenlos: meineschufa.de (Datenkopie)",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Rent arrears clearance": {
+  "ru": "Справка об отсутствии долгов по аренде",
+  "de": "Mietschuldenfreiheit",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "from the previous landlord": {
+  "ru": "от прежнего арендодателя",
+  "de": "vom bisherigen Vermieter",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Bank statement": {
+  "ru": "Выписка со счёта",
+  "de": "Kontoauszug",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "not older than 3 months": {
+  "ru": "не старше 3 месяцев",
+  "de": "nicht älter als 3 Monate",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "CV": {
+  "ru": "Резюме",
+  "de": "Lebenslauf",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "with date and signature": {
+  "ru": "с датой и подписью",
+  "de": "mit Datum und Unterschrift",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Cover letter": {
+  "ru": "Сопроводительное письмо",
+  "de": "Anschreiben",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "for this job": {
+  "ru": "под эту вакансию",
+  "de": "für diese Stelle",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Job references": {
+  "ru": "Отзывы с работы",
+  "de": "Arbeitszeugnisse",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "from previous employers": {
+  "ru": "от прежних работодателей",
+  "de": "von früheren Arbeitgebern",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Diplomas & certificates": {
+  "ru": "Дипломы и аттестаты",
+  "de": "Zeugnisse & Abschlüsse",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "school, training, degree": {
+  "ru": "школа, обучение, вуз",
+  "de": "Schule, Ausbildung, Studium",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Certificates, courses": {
+  "ru": "Сертификаты, курсы",
+  "de": "Zertifikate, Kurse",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "valid": {
+  "ru": "действующий",
+  "de": "gültig",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Birth certificate": {
+  "ru": "Свидетельство о рождении",
+  "de": "Geburtsurkunde",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "with a translation if not German": {
+  "ru": "с переводом, если не на немецком",
+  "de": "mit Übersetzung, falls nicht deutsch",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Marriage certificate": {
+  "ru": "Свидетельство о браке",
+  "de": "Heiratsurkunde",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "if married": {
+  "ru": "если в браке",
+  "de": "falls verheiratet",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Registration certificate": {
+  "ru": "Справка о регистрации",
+  "de": "Meldebescheinigung",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "from the Bürgeramt": {
+  "ru": "из Bürgeramt",
+  "de": "vom Bürgeramt",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Pension insurance record": {
+  "ru": "Выписка пенсионного страхования",
+  "de": "Rentenversicherungsverlauf",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Language certificate (B1)": {
+  "ru": "Сертификат по языку (B1)",
+  "de": "Sprachzertifikat (B1)",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Naturalisation test": {
+  "ru": "Тест на гражданство",
+  "de": "Einbürgerungstest",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "«Leben in Deutschland»": {
+  "ru": "«Жизнь в Германии»",
+  "de": "«Leben in Deutschland»",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Health insurance": {
+  "ru": "Медицинская страховка",
+  "de": "Krankenversicherung",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "card or insurer’s certificate": {
+  "ru": "карта или справка кассы",
+  "de": "Karte oder Bescheinigung der Kasse",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Tax assessment": {
+  "ru": "Налоговое решение",
+  "de": "Steuerbescheid",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "latest": {
+  "ru": "последнее",
+  "de": "letzter",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Child’s birth certificate": {
+  "ru": "Свидетельство о рождении ребёнка",
+  "de": "Geburtsurkunde des Kindes",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "for Elterngeld – from the registry": {
+  "ru": "для Elterngeld – из ЗАГСа",
+  "de": "für Elterngeld – vom Standesamt",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Tax ID": {
+  "ru": "Налоговый номер (Steuer-ID)",
+  "de": "Steuer-ID",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "yours and the child’s": {
+  "ru": "ваш и ребёнка",
+  "de": "Ihre und die des Kindes",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "Bank details": {
+  "ru": "Банковские реквизиты",
+  "de": "Bankverbindung",
+  "files": [
+   "mappen.js"
+  ]
+ },
+ "IBAN – statement or card": {
+  "ru": "IBAN – выписка или карта",
+  "de": "IBAN – Auszug oder Karte",
+  "files": [
+   "mappen.js"
   ]
  },
  "or": {
@@ -6296,13 +7130,6 @@
  "Will & provisions – overview": {
   "ru": "Завещание и распоряжения — обзор",
   "de": "Testament & Vorsorge – Übersicht",
-  "files": [
-   "vorsorge.js"
-  ]
- },
- "missing": {
-  "ru": "нет",
-  "de": "fehlt",
   "files": [
    "vorsorge.js"
   ]

@@ -1578,3 +1578,115 @@
 1577	＋ Dodaj
 1578	＋ Dodaj zadatak
 1579	＋ Novi projekt
+1580	Moje mape
+1581	Mape dokumenata: stan, prijava za posao, državljanstvo …
+1582	Nova mapa iz predloška
+1583	Vlastita mapa
+1584	počni praznu
+1585	Mapa sadrži samo poveznice – svaki dokument je jednom u «Dokumenti».
+1586	✓ spremno
+1587	Otvoreno: %t
+1588	Poslano %d · čeka odgovor
+1589	Poslano %d · odgovor stigao
+1590	Sve je spremno
+1591	Možete izraditi PDF i poslati ga.
+1592	Gotovo spremno
+1593	Još %n otvorenih stavki. Tada je mapa spremna za slanje.
+1594	Dodajte dokumente – Butler provjerava rokove i čitljivost.
+1595	nedostaje · %h
+1596	%a od %b – molimo dopunite
+1597	%t: istekao %d
+1598	%t je stariji od %n mjeseci – potreban je noviji
+1599	%t: stranica %p možda nije oštra – ponovno skenirati?
+1600	%t je dodan dvaput
+1601	nije potrebno
+1602	po želji
+1603	📄 Jedan PDF s popratnim pismom i popisom priloga
+1604	↕ Redoslijed
+1605	Preimenuj
+1606	Izbriši mapu
+1607	Izbrisati mapu? Dokumenti ostaju u «Dokumenti».
+1608	Mapa izbrisana
+1609	Odgovarajući
+1610	Još nema odgovarajućih dokumenata.
+1611	📷 Skeniraj novi
+1612	Nije potrebno za ovu mapu
+1613	Ipak je potrebno
+1614	Odaberi automatski
+1615	Potrebno: %n
+1616	Redoslijed u PDF-u
+1617	Ovim redoslijedom dokumenti idu u PDF i u popis priloga.
+1618	Kao u predlošku
+1619	U mapi nema dokumenata sa stranicama.
+1620	npr. Hausverwaltung Müller
+1621	Broj predmeta / oglasa
+1622	Pošiljatelj
+1623	Izradi PDF
+1624	Nije sve spremno: %n stavki. Ipak izraditi?
+1625	Mapa «%n» je izrađena
+1626	U mapama
+1627	＋ U mapu «%n»
+1628	Dodano u «%n»
+1629	Prepoznavanje
+1630	Učitano
+1631	Prepoznato
+1632	MRZ provjerena
+1633	Čip (kasnije)
+1634	🔎 Pročitaj strojni redak (<<<)
+1635	Čitam redak … traje do jedne minute
+1636	Redci «<<<» nisu pronađeni. Fotografirajte stranicu s fotografijom cijelu i oštro (kod osobne iskaznice je na poleđini).
+1637	Redak je pročitan, ali kontrolne znamenke se ne slažu (%a od %b). Provjerite podatke sami.
+1638	Kontrolne znamenke se slažu – tekst je ispravno pročitan.
+1639	«MRZ provjerena» znači: redak je pročitan bez pogrešaka. To nije provjera vjerodostojnosti. Provjera čipa (NFC) stiže s aplikacijom iz App Storea.
+1640	Vrijedi do
+1641	Preuzmi
+1642	Podaci preuzeti
+1643	Putovnica
+1644	Dozvola boravka
+1645	Najam stana
+1646	Prijava za posao
+1647	Državljanstvo
+1648	Kindergeld / Elterngeld
+1649	Kredit / banka
+1650	Osobna iskaznica ili putovnica
+1651	Upitnik za najmoprimca (Mieterselbstauskunft)
+1652	obrazac od najmodavca
+1653	Platne liste (zadnje 3)
+1654	od poslodavca, mjesečno
+1655	potpisan
+1656	Schufa izvješće
+1657	besplatno: meineschufa.de (kopija podataka)
+1658	Potvrda da nema duga za najam
+1659	od prethodnog najmodavca
+1660	Bankovni izvod
+1661	ne stariji od 3 mjeseca
+1662	Životopis
+1663	s datumom i potpisom
+1664	Popratno pismo
+1665	za ovo radno mjesto
+1666	Svjedodžbe poslodavaca
+1667	od prijašnjih poslodavaca
+1668	Diplome i svjedodžbe
+1669	škola, obrazovanje, studij
+1670	Certifikati, tečajevi
+1671	važeći
+1672	Rodni list
+1673	s prijevodom ako nije na njemačkom
+1674	Vjenčani list
+1675	ako ste u braku
+1676	Potvrda o prijavi boravišta (Meldebescheinigung)
+1677	iz Bürgeramta
+1678	Izvadak mirovinskog osiguranja
+1679	Jezični certifikat (B1)
+1680	Test za državljanstvo
+1681	«Leben in Deutschland»
+1682	Zdravstveno osiguranje
+1683	iskaznica ili potvrda blagajne
+1684	Porezno rješenje
+1685	zadnje
+1686	Rodni list djeteta
+1687	za Elterngeld – iz matičnog ureda
+1688	Porezni broj (Steuer-ID)
+1689	vaš i djetetov
+1690	Bankovni podaci
+1691	IBAN – izvod ili kartica

@@ -1578,3 +1578,115 @@
 1577	＋ Adaugă
 1578	＋ Adaugă o sarcină
 1579	＋ Proiect nou
+1580	Dosarele mele
+1581	Dosare de documente: locuință, candidatură, cetățenie …
+1582	Dosar nou dintr-un șablon
+1583	Dosar propriu
+1584	începe gol
+1585	Un dosar conține doar legături – fiecare document rămâne o singură dată în «Documente».
+1586	✓ gata
+1587	Deschis: %t
+1588	Trimis pe %d · așteaptă răspuns
+1589	Trimis pe %d · răspuns primit
+1590	Totul e gata
+1591	Puteți crea PDF-ul și trimite.
+1592	Aproape gata
+1593	Mai sunt %n puncte deschise. Apoi dosarul e gata de trimis.
+1594	Adăugați documente – Butler verifică datele și lizibilitatea.
+1595	lipsește · %h
+1596	%a din %b – vă rugăm completați
+1597	%t: expirat pe %d
+1598	%t e mai vechi de %n luni – e nevoie de unul mai nou
+1599	%t: pagina %p poate fi neclară – scanați din nou?
+1600	%t apare de două ori
+1601	nu e necesar
+1602	opțional
+1603	📄 Un PDF cu scrisoare și listă de anexe
+1604	↕ Ordine
+1605	Redenumește
+1606	Șterge dosarul
+1607	Ștergeți dosarul? Documentele rămân în «Documente».
+1608	Dosar șters
+1609	Potrivite
+1610	Încă nu sunt documente potrivite.
+1611	📷 Scanează unul nou
+1612	Nu e necesar pentru acest dosar
+1613	Totuși necesar
+1614	Alege automat
+1615	Necesare: %n
+1616	Ordinea în PDF
+1617	În această ordine intră documentele în PDF și în lista de anexe.
+1618	Ca în șablon
+1619	Dosarul nu are documente cu pagini.
+1620	de ex. Hausverwaltung Müller
+1621	Număr dosar / anunț
+1622	Expeditor
+1623	Creează PDF
+1624	Nu e totul gata: %n puncte. Creați totuși?
+1625	Dosarul «%n» a fost creat
+1626	În dosare
+1627	＋ Dosar «%n»
+1628	Adăugat la «%n»
+1629	Recunoaștere
+1630	Încărcat
+1631	Recunoscut
+1632	MRZ verificată
+1633	Cip (mai târziu)
+1634	🔎 Citește rândul mașină (<<<)
+1635	Citesc rândul … durează până la un minut
+1636	Nu s-au găsit rânduri «<<<». Fotografiați pagina cu poza întreagă și clar (la buletin e pe verso).
+1637	Rând citit, dar cifrele de control nu se potrivesc (%a din %b). Verificați singur datele.
+1638	Cifrele de control se potrivesc – textul a fost citit corect.
+1639	«MRZ verificată» înseamnă: rândul a fost citit fără erori. Nu este o verificare a autenticității. Verificarea cipului (NFC) va veni cu aplicația din App Store.
+1640	Valabil până la
+1641	Preia
+1642	Date preluate
+1643	Pașaport
+1644	Permis de ședere
+1645	Închirierea unei locuințe
+1646	Candidatură
+1647	Cetățenie
+1648	Kindergeld / Elterngeld
+1649	Credit / bancă
+1650	Buletin sau pașaport
+1651	Fișa chiriașului (Mieterselbstauskunft)
+1652	formular de la proprietar
+1653	Fluturași de salariu (ultimii 3)
+1654	de la angajator, lunar
+1655	semnat
+1656	Raport Schufa
+1657	gratuit: meineschufa.de (copie a datelor)
+1658	Adeverință fără datorii de chirie
+1659	de la proprietarul anterior
+1660	Extras de cont
+1661	nu mai vechi de 3 luni
+1662	CV
+1663	cu dată și semnătură
+1664	Scrisoare de intenție
+1665	pentru acest post
+1666	Recomandări de la locul de muncă
+1667	de la angajatorii anteriori
+1668	Diplome și certificate
+1669	școală, formare, studii
+1670	Certificate, cursuri
+1671	valabil
+1672	Certificat de naștere
+1673	cu traducere, dacă nu e în germană
+1674	Certificat de căsătorie
+1675	dacă sunteți căsătorit(ă)
+1676	Adeverință de domiciliu (Meldebescheinigung)
+1677	de la Bürgeramt
+1678	Extras de asigurare de pensie
+1679	Certificat de limbă (B1)
+1680	Test de cetățenie
+1681	«Leben in Deutschland»
+1682	Asigurare de sănătate
+1683	card sau adeverință de la casă
+1684	Decizie de impunere
+1685	ultima
+1686	Certificatul de naștere al copilului
+1687	pentru Elterngeld – de la starea civilă
+1688	Cod fiscal (Steuer-ID)
+1689	al dvs. și al copilului
+1690	Date bancare
+1691	IBAN – extras sau card

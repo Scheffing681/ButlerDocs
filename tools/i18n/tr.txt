@@ -887,3 +887,119 @@
 886	Faiz muafiyet talimatları
 887	Emeklilik bilgilendirmesi
 888	sulh mahkemesi
+889	Belge setlerim
+890	Belge setleri: daire, iş başvurusu, vatandaşlık …
+891	Şablondan yeni set
+892	Kendi setim
+893	boş başla
+894	Sette yalnızca bağlantılar var – her belge «Belgeler»de bir kez durur.
+895	✓ hazır
+896	Açık: %t
+897	Gönderildi %d · yanıt bekleniyor
+898	Gönderildi %d · yanıt geldi
+899	Her şey hazır
+900	PDF oluşturup gönderebilirsiniz.
+901	Neredeyse hazır
+902	Daha %n madde açık. Sonra set gönderilmeye hazır.
+903	Belge ekleyin – Butler tarihleri ve okunabilirliği kontrol eder.
+904	eksik · %h
+905	%a / %b – lütfen tamamlayın
+906	%t: süresi %d tarihinde doldu
+907	%t %n aydan eski – lütfen daha yenisi
+908	%t: sayfa %p bulanık olabilir – yeniden taransın mı?
+909	%t iki kez eklenmiş
+910	gerekli değil
+911	isteğe bağlı
+912	📄 Ön yazı ve ek listesiyle tek PDF
+913	↕ Sıra
+914	Yeniden adlandır
+915	Seti sil
+916	Set silinsin mi? Belgeler «Belgeler»de kalır.
+917	Set silindi
+918	Uygun
+919	Henüz uygun belge yok.
+920	📷 Yenisini tara
+921	Bu set için gerekli değil
+922	Yine de gerekli
+923	Otomatik seç
+924	Gerekli: %n
+925	PDF’teki sıra
+926	Belgeler PDF’e ve ek listesine bu sırayla girer.
+927	Şablondaki gibi
+928	Sette sayfası olan belge yok.
+929	Kime
+930	örn. Hausverwaltung Müller
+931	Dosya no / ilan
+932	Konu
+933	Gönderen
+934	PDF oluştur
+935	Henüz her şey hazır değil: %n madde. Yine de oluşturulsun mu?
+936	«%n» seti oluşturuldu
+937	Setlerde
+938	＋ «%n» setine
+939	«%n» setine eklendi
+940	Tanıma
+941	Yüklendi
+942	Tanındı
+943	MRZ kontrol edildi
+944	Çip (sonra)
+945	🔎 Makine satırını oku (<<<)
+946	Satır okunuyor … bir dakikaya kadar sürer
+947	«<<<» satırları bulunamadı. Fotoğraflı sayfayı tamamen ve net çekin (kimlik kartında arka yüzde).
+948	Satır okundu ama kontrol rakamları tutmuyor (%a / %b). Lütfen bilgileri kendiniz kontrol edin.
+949	Kontrol rakamları tutuyor – metin doğru okundu.
+950	«MRZ kontrol edildi»: satır hatasız okundu demektir. Bu bir gerçeklik kontrolü değildir. Çip kontrolü (NFC) App Store uygulamasıyla gelecek.
+951	Doğum tarihi
+952	Geçerlilik tarihi
+953	Uygula
+954	Bilgiler aktarıldı
+955	Pasaport
+956	Kimlik kartı
+957	Oturum izni
+958	Daire kiralama
+959	İş başvurusu
+960	Vatandaşlık
+961	Çocuk parası / ebeveyn parası
+962	Kredi / banka
+963	Kimlik veya pasaport
+964	Kiracı bilgi formu (Mieterselbstauskunft)
+965	ev sahibinin formu
+966	Maaş bordroları (son 3)
+967	işverenden, aylık
+968	imzalı
+969	Schufa raporu
+970	ücretsiz: meineschufa.de (veri kopyası)
+971	Kira borcu yoktur belgesi
+972	önceki ev sahibinden
+973	Hesap dökümü
+974	3 aydan eski olmayan
+975	Özgeçmiş
+976	tarih ve imzalı
+977	Ön yazı
+978	bu iş için
+979	İş referansları
+980	önceki işverenlerden
+981	Diplomalar ve belgeler
+982	okul, meslek eğitimi, üniversite
+983	Sertifikalar, kurslar
+984	geçerli
+985	Doğum belgesi
+986	Almanca değilse çevirisiyle
+987	Evlilik belgesi
+988	evliyseniz
+989	İkamet belgesi (Meldebescheinigung)
+990	Bürgeramt’tan
+991	Emeklilik sigortası dökümü
+992	Dil sertifikası (B1)
+993	Vatandaşlık testi
+994	«Leben in Deutschland»
+995	Sağlık sigortası
+996	kart veya kasa belgesi
+997	Vergi tahakkuku
+998	son
+999	Çocuğun doğum belgesi
+1000	Elterngeld için – nüfus dairesinden
+1001	Vergi kimlik no (Steuer-ID)
+1002	sizin ve çocuğun
+1003	Banka bilgileri
+1004	IBAN – döküm veya kart

@@ -887,3 +887,119 @@
 886	Ordres d’exonération
 887	Relevé de retraite
 888	tribunal d’instance
+889	Mes dossiers
+890	Dossiers de documents : logement, candidature, naturalisation …
+891	Nouveau dossier à partir d’un modèle
+892	Mon propre dossier
+893	commencer vide
+894	Un dossier ne contient que des liens – chaque document reste une seule fois dans «Documents».
+895	✓ prêt
+896	Ouvert : %t
+897	Envoyé le %d · en attente de réponse
+898	Envoyé le %d · réponse reçue
+899	Tout est prêt
+900	Vous pouvez créer le PDF et l’envoyer.
+901	Presque prêt
+902	Encore %n points ouverts. Ensuite le dossier est prêt à envoyer.
+903	Ajoutez des documents – Butler vérifie les dates et la lisibilité.
+904	manquant · %h
+905	%a sur %b – veuillez compléter
+906	%t : expiré le %d
+907	%t date de plus de %n mois – il en faut un plus récent
+908	%t : page %p peut-être floue – numériser à nouveau ?
+909	%t figure deux fois
+910	pas nécessaire
+911	facultatif
+912	📄 Un PDF avec lettre et liste des pièces
+913	↕ Ordre
+914	Renommer
+915	Supprimer le dossier
+916	Supprimer le dossier ? Les documents restent dans «Documents».
+917	Dossier supprimé
+918	Adaptés
+919	Pas encore de document adapté.
+920	📷 En numériser un nouveau
+921	Pas nécessaire pour ce dossier
+922	Finalement nécessaire
+923	Choisir automatiquement
+924	Requis : %n
+925	Ordre dans le PDF
+926	C’est l’ordre dans le PDF et dans la liste des pièces jointes.
+927	Comme dans le modèle
+928	Le dossier ne contient aucun document avec des pages.
+929	À qui
+930	p. ex. Hausverwaltung Müller
+931	Référence / annonce
+932	Objet
+933	Expéditeur
+934	Créer le PDF
+935	Tout n’est pas prêt : %n points. Créer quand même ?
+936	Dossier «%n» créé
+937	Dans les dossiers
+938	＋ Dossier «%n»
+939	Ajouté à «%n»
+940	Reconnaissance
+941	Téléversé
+942	Reconnu
+943	MRZ vérifiée
+944	Puce (plus tard)
+945	🔎 Lire la ligne machine (<<<)
+946	Lecture de la ligne … cela prend jusqu’à une minute
+947	Aucune ligne «<<<» trouvée. Photographiez la page avec la photo en entier et nettement (au dos pour la carte d’identité).
+948	Ligne lue, mais les chiffres de contrôle ne concordent pas (%a sur %b). Vérifiez les données vous-même.
+949	Les chiffres de contrôle concordent – le texte est lu correctement.
+950	«MRZ vérifiée» signifie : la ligne a été lue sans erreur. Ce n’est pas une vérification d’authenticité. La vérification de la puce (NFC) viendra avec l’application de l’App Store.
+951	Date de naissance
+952	Valable jusqu’au
+953	Reprendre
+954	Données reprises
+955	Passeport
+956	Carte d’identité
+957	Titre de séjour
+958	Louer un logement
+959	Candidature
+960	Naturalisation
+961	Kindergeld / Elterngeld
+962	Crédit / banque
+963	Carte d’identité ou passeport
+964	Fiche de renseignements du locataire (Mieterselbstauskunft)
+965	formulaire du bailleur
+966	Fiches de paie (3 dernières)
+967	de l’employeur, mensuelles
+968	signé
+969	Rapport Schufa
+970	gratuit : meineschufa.de (copie des données)
+971	Attestation d’absence d’arriérés de loyer
+972	de l’ancien bailleur
+973	Relevé de compte
+974	pas plus de 3 mois
+975	CV
+976	daté et signé
+977	Lettre de motivation
+978	pour ce poste
+979	Certificats de travail
+980	des anciens employeurs
+981	Diplômes et certificats
+982	école, formation, études
+983	Certificats, cours
+984	valide
+985	Acte de naissance
+986	avec traduction s’il n’est pas en allemand
+987	Acte de mariage
+988	si marié(e)
+989	Attestation de domicile (Meldebescheinigung)
+990	du Bürgeramt
+991	Relevé de l’assurance retraite
+992	Certificat de langue (B1)
+993	Test de naturalisation
+994	«Leben in Deutschland»
+995	Assurance maladie
+996	carte ou attestation de la caisse
+997	Avis d’imposition
+998	le dernier
+999	Acte de naissance de l’enfant
+1000	pour l’Elterngeld – de l’état civil
+1001	Numéro fiscal (Steuer-ID)
+1002	le vôtre et celui de l’enfant
+1003	Coordonnées bancaires
+1004	IBAN – relevé ou carte

@@ -879,6 +879,22 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.bdback').click());await p.waitForTimeout(300);
  check('…and «Glas» again',await T(()=>!!document.documentElement.dataset.bd&&!!document.querySelector('.nav.bdnav')));
  await T(()=>{const G=window.__T.g();G.bdAcc='tuerkis';G.bdTheme='auto';window.__T.R('home')})}
+ where='start glas';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip').forEach(x=>x.remove());const G=window.__T.g();const d=n=>{const x=new Date();x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};G.tasks=G.tasks||[];
+  G.tasks.push({id:'sg1',t:'SG überfällig',due:d(-3),done:false,prio:2},{id:'sg2',t:'SG bald',due:d(4),done:false,prio:2},{id:'sg3',t:'SG später',due:d(30),done:false,prio:2});G.bdImp={};window.__T.R('home');window.__T.v()});await p.waitForTimeout(400);
+ const s1=await T(()=>{const sc=document.querySelector('.screen.sgs');if(!sc)return{};const t=[...sc.querySelectorAll('.sgi b')].map(b=>b.textContent);const kids=[...sc.children].map(c=>c.className);return{t,imp:kids.findIndex(c=>/sgimp/.test(c)),q:kids.findIndex(c=>/sgq/.test(c)),late:!!sc.querySelector('.sgp.r'),ring:!!sc.querySelector('.string')}});
+ check('Glas Start: «Wichtig für Sie» right under the search, no ring',s1.q>=0&&s1.imp===s1.q+1&&!s1.ring,JSON.stringify(s1));
+ check('…overdue stays, 4 days shown, 30 days not yet (14-day window); status with sign',s1.late&&(s1.t||[]).includes('SG überfällig')&&!(s1.t||[]).includes('SG später'),JSON.stringify(s1.t));
+ await T(()=>{const j=[...document.querySelectorAll('.sgi')].findIndex(b=>b.textContent.includes('SG überfällig'));document.querySelectorAll('.sgi')[j].click()});await p.waitForTimeout(300);
+ check('Tap opens the sheet: Öffnen · Erledigt · Morgen · 3 Tage · Woche',await T(()=>document.querySelectorAll('.dtsheet .sgm [data-a]').length===5));
+ await T(()=>document.querySelector('.dtsheet [data-a=done]').click());await p.waitForTimeout(300);
+ check('Erledigt: gone from Start, the task is ticked off, «Rückgängig» offered',await T(()=>{const G=window.__T.g();return![...document.querySelectorAll('.sgi b')].some(b=>b.textContent==='SG überfällig')&&G.tasks.find(t=>t.id==='sg1').done&&!!document.querySelector('.lnqbar button')}));
+ await T(()=>document.querySelector('.lnqbar button').click());await p.waitForTimeout(300);
+ check('…Rückgängig brings it back',await T(()=>!window.__T.g().tasks.find(t=>t.id==='sg1').done&&[...document.querySelectorAll('.sgi b')].some(b=>b.textContent==='SG überfällig')));
+ await T(()=>{const j=[...document.querySelectorAll('.sgi')].findIndex(b=>b.textContent.includes('SG bald'));document.querySelectorAll('.sgi')[j].click()});await p.waitForTimeout(300);
+ check('…a coming date also offers the iPhone calendar',await T(()=>!!document.querySelector('.dtsheet [data-a=cal]')));
+ await T(()=>document.querySelector('.dtsheet [data-a="3"]').click());await p.waitForTimeout(300);
+ check('Später (3 days): hidden until then',await T(()=>{const G=window.__T.g();const k=Object.keys(G.bdImp).find(k=>k.includes('SG bald'));return!!k&&!!G.bdImp[k].s&&![...document.querySelectorAll('.sgi b')].some(b=>b.textContent==='SG bald')}));
+ await T(()=>{const G=window.__T.g();G.tasks=G.tasks.filter(t=>!/^sg/.test(t.id));G.bdImp={};document.querySelectorAll('.lnqbar,.dtsheet').forEach(x=>x.remove());window.__T.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

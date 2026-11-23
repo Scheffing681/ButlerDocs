@@ -713,7 +713,8 @@
    "linkup.js",
    "mappen.js",
    "reliability.js",
-   "seiten.js"
+   "seiten.js",
+   "start-glas.js"
   ]
  },
  "Restore": {
@@ -736,6 +737,7 @@
   "de": "in %n Tagen",
   "files": [
    "behoerden-termine.js",
+   "start-glas.js",
    "start.js"
   ]
  },
@@ -745,6 +747,7 @@
   "files": [
    "behoerden-termine.js",
    "behoerden.js",
+   "start-glas.js",
    "start.js"
   ]
  },
@@ -753,7 +756,8 @@
   "de": "morgen",
   "files": [
    "behoerden-termine.js",
-   "behoerden.js"
+   "behoerden.js",
+   "start-glas.js"
   ]
  },
  "past": {
@@ -790,7 +794,8 @@
   "files": [
    "behoerden-termine.js",
    "karriere2.js",
-   "reliability.js"
+   "reliability.js",
+   "start-glas.js"
   ]
  },
  "Add “%o”": {
@@ -1023,7 +1028,8 @@
   "de": "Alle",
   "files": [
    "behoerden.js",
-   "eingang-fristen.js"
+   "eingang-fristen.js",
+   "start-glas.js"
   ]
  },
  "Your offices and services go here. Add only what you use.": {
@@ -2238,6 +2244,7 @@
   "de": "überfällig",
   "files": [
    "business.js",
+   "start-glas.js",
    "start.js"
   ]
  },
@@ -2480,7 +2487,8 @@
   "ru": "%n дней",
   "de": "%n Tagen",
   "files": [
-   "business.js"
+   "business.js",
+   "start-glas.js"
   ]
  },
  "Items": {
@@ -3889,7 +3897,8 @@
   "ru": "Входящие",
   "de": "Eingang",
   "files": [
-   "eingang-fristen.js"
+   "eingang-fristen.js",
+   "start-glas.js"
   ]
  },
  "New documents land here first. Check what Butler recognised and confirm.": {
@@ -4012,7 +4021,8 @@
    "linkup.js",
    "move-phone.js",
    "seiten.js",
-   "sicherung.js"
+   "sicherung.js",
+   "start-glas.js"
   ]
  },
  "No deadlines": {
@@ -5451,7 +5461,8 @@
   "de": "Rückgängig",
   "files": [
    "linkup.js",
-   "notizen.js"
+   "notizen.js",
+   "start-glas.js"
   ]
  },
  "Also shown in": {
@@ -7186,7 +7197,8 @@
   "ru": "пуст",
   "de": "leer",
   "files": [
-   "reliability.js"
+   "reliability.js",
+   "start-glas.js"
   ]
  },
  "on the phone: %n": {
@@ -7658,16 +7670,101 @@
    "smaragd.js"
   ]
  },
- "Ask Butler or search …": {
-  "ru": "Спросить Батлера или найти …",
-  "de": "Butler fragen oder suchen …",
+ "Remind tomorrow": {
+  "ru": "Завтра напомнить",
+  "de": "Morgen erinnern",
   "files": [
-   "start.js"
+   "start-glas.js"
+  ]
+ },
+ "In 3 days": {
+  "ru": "Через 3 дня",
+  "de": "In 3 Tagen",
+  "files": [
+   "start-glas.js"
+  ]
+ },
+ "Next week": {
+  "ru": "На следующей неделе",
+  "de": "Nächste Woche",
+  "files": [
+   "start-glas.js"
+  ]
+ },
+ "To the iPhone calendar": {
+  "ru": "В календарь iPhone",
+  "de": "In den iPhone-Kalender",
+  "files": [
+   "start-glas.js"
+  ]
+ },
+ "With an alert the day before and on the day at 9:00": {
+  "ru": "С напоминанием за день и в тот же день в 9:00",
+  "de": "Mit Erinnerung am Vortag und am Tag um 9:00",
+  "files": [
+   "start-glas.js"
+  ]
+ },
+ "Marked as done": {
+  "ru": "Отмечено как готово",
+  "de": "Als erledigt markiert",
+  "files": [
+   "start-glas.js"
+  ]
+ },
+ "Hidden until %d": {
+  "ru": "Скрыто до %d",
+  "de": "Ausgeblendet bis %d",
+  "files": [
+   "start-glas.js"
+  ]
+ },
+ "All in hand: no deadlines in the next 14 days": {
+  "ru": "Всё под контролем: в ближайшие 14 дней сроков нет",
+  "de": "Alles im Griff: keine Fristen in den nächsten 14 Tagen",
+  "files": [
+   "start-glas.js"
   ]
  },
  "Capture": {
   "ru": "Добавить",
   "de": "Erfassen",
+  "files": [
+   "start-glas.js",
+   "start.js"
+  ]
+ },
+ "Scan · Photo": {
+  "ru": "Скан · Фото",
+  "de": "Scan · Foto",
+  "files": [
+   "start-glas.js"
+  ]
+ },
+ "%n to check": {
+  "ru": "%n проверить",
+  "de": "%n prüfen",
+  "files": [
+   "start-glas.js"
+  ]
+ },
+ "all checked": {
+  "ru": "всё проверено",
+  "de": "alles geprüft",
+  "files": [
+   "start-glas.js"
+  ]
+ },
+ "Calendar file opened – tap «Add» in the calendar.": {
+  "ru": "Файл календаря открыт — нажмите «Добавить» в календаре.",
+  "de": "Kalenderdatei geöffnet – im Kalender auf «Hinzufügen» tippen.",
+  "files": [
+   "start-glas.js"
+  ]
+ },
+ "Ask Butler or search …": {
+  "ru": "Спросить Батлера или найти …",
+  "de": "Butler fragen oder suchen …",
   "files": [
    "start.js"
   ]

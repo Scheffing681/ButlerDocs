@@ -1200,3 +1200,15 @@
 1199	Örneğin
 1200	Bu Butler
 1201	Dokunun: sorun veya ekleyin. Basılı tutun: hemen tarayın.
+1202	Yarın hatırlat
+1203	3 gün sonra
+1204	Gelecek hafta
+1205	iPhone takvimine
+1206	Bir gün önce ve günün kendisinde 9:00’da hatırlatmalı
+1207	Tamamlandı olarak işaretlendi
+1208	%d tarihine kadar gizlendi
+1209	Her şey yolunda: önümüzdeki 14 günde süre yok
+1210	Tara · Fotoğraf
+1211	%n kontrol
+1212	hepsi kontrol edildi
+1213	Takvim dosyası açıldı – takvimde «Ekle»ye dokunun.

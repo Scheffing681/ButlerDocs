@@ -8,7 +8,7 @@ const bgS={help:['Чем могу помочь?','Wie kann ich helfen?','How can
 const bgt=k=>cv5n(bgS[k]||[k]);
 Hooks.on('render',()=>{try{if(typeof bdOn!=='function'||!bdOn()||m.route!=='concierge')return;const sc=document.querySelector('.screen.chat');if(!sc)return;sc.classList.add('bgc');const hd=sc.querySelector('.sub-hdr');
  if(hd&&!sc.querySelector('.bghd')){const nh=document.createElement('div');nh.className='bghd';
-  nh.innerHTML=`<button type="button" class="bgcb" data-act="go" data-to="home" aria-label="${i(bgt('back'))}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><span class="sgwm">BUTLER</span><button type="button" class="bgcb" data-act="bgmore" aria-label="${i(bgt('more'))}">⋯</button>`;
+  nh.innerHTML=`<button type="button" class="bgcb" data-act="bgback" aria-label="${i(bgt('back'))}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><span class="sgwm">BUTLER</span><button type="button" class="bgcb" data-act="bgmore" aria-label="${i(bgt('more'))}">⋯</button>`;
   hd.before(nh)}
  const h3=sc.querySelector('.bthero h3');if(h3&&h3.textContent!==bgt('help'))h3.textContent=bgt('help')}catch(e){Hooks.err('bgchat',e)}});
 Hooks.act('bgmore',()=>{const st=(document.querySelector('.screen.chat .status')||{}).textContent||'';const on=g.voice!==!1;

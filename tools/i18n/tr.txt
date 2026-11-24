@@ -1246,3 +1246,21 @@
 1245	Kenarlar ve gölgeler kaldırılır
 1246	Mektuplar
 1247	Aile ve önemli kişiler
+1248	Posta
+1249	Mektup yaz
+1250	Antetli, zarflı – PDF, e-posta veya SMS
+1251	Mektup geldi
+1252	Posta kutusundan mektup
+1253	fotoğrafını çekin – Butler süreyi bulur
+1254	Fotoğraf
+1255	E-posta ile mektup
+1256	«Mail»de metni kopyalayıp buraya yapıştırın
+1257	Mektuplarım
+1258	Henüz mektup yok
+1259	alındı
+1260	gönderildi
+1261	taslak
+1262	tamam
+1263	Mektuplar kendiliğinden gelmez: uygulamanın kendi posta sunucusu yok. Otomatik olarak yalnızca App Store sürümünde.
+1264	%n mektup
+1265	1 mektup

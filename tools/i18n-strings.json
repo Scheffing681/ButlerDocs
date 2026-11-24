@@ -1237,6 +1237,7 @@
   "files": [
    "behoerden.js",
    "eingang-fristen.js",
+   "post.js",
    "start-glas.js"
   ]
  },
@@ -1553,7 +1554,8 @@
   "ru": "Вставить",
   "de": "Einfügen",
   "files": [
-   "behoerden.js"
+   "behoerden.js",
+   "post.js"
   ]
  },
  "Could not paste – hold the field and choose “Paste”": {
@@ -1983,7 +1985,8 @@
   "ru": "Написать",
   "de": "Schreiben",
   "files": [
-   "behoerden.js"
+   "behoerden.js",
+   "post.js"
   ]
  },
  "data-act=\"go\" data-to=\"bsv\"": {
@@ -7360,6 +7363,132 @@
   "de": "clock",
   "files": [
    "only-docs.js"
+  ]
+ },
+ "Mail": {
+  "ru": "Почта",
+  "de": "Post",
+  "files": [
+   "post.js"
+  ]
+ },
+ "Write a letter": {
+  "ru": "Написать письмо",
+  "de": "Brief schreiben",
+  "files": [
+   "post.js"
+  ]
+ },
+ "With letterhead, envelope – PDF, e-mail or SMS": {
+  "ru": "С гербом, конвертом — PDF, e-mail или СМС",
+  "de": "Mit Briefkopf, Umschlag – PDF, E-Mail oder SMS",
+  "files": [
+   "post.js"
+  ]
+ },
+ "A letter came": {
+  "ru": "Пришло письмо",
+  "de": "Brief bekommen",
+  "files": [
+   "post.js"
+  ]
+ },
+ "Letter from the mailbox": {
+  "ru": "Бумажное письмо",
+  "de": "Brief aus dem Briefkasten",
+  "files": [
+   "post.js"
+  ]
+ },
+ "photograph it – Butler finds the deadline": {
+  "ru": "Сфотографировать — Батлер найдёт срок",
+  "de": "fotografieren – Butler findet die Frist",
+  "files": [
+   "post.js"
+  ]
+ },
+ "Photo": {
+  "ru": "Фото",
+  "de": "Foto",
+  "files": [
+   "post.js"
+  ]
+ },
+ "Letter by e-mail": {
+  "ru": "Письмо по e-mail",
+  "de": "Brief per E-Mail",
+  "files": [
+   "post.js"
+  ]
+ },
+ "Copy the text in «Mail» and paste it": {
+  "ru": "Скопировать текст в «Почте» и вставить",
+  "de": "Text in «Mail» kopieren und hier einfügen",
+  "files": [
+   "post.js"
+  ]
+ },
+ "My letters": {
+  "ru": "Мои письма",
+  "de": "Meine Briefe",
+  "files": [
+   "post.js"
+  ]
+ },
+ "No letters yet": {
+  "ru": "Писем пока нет",
+  "de": "Noch keine Briefe",
+  "files": [
+   "post.js"
+  ]
+ },
+ "received": {
+  "ru": "получено",
+  "de": "erhalten",
+  "files": [
+   "post.js"
+  ]
+ },
+ "sent": {
+  "ru": "отправлено",
+  "de": "gesendet",
+  "files": [
+   "post.js"
+  ]
+ },
+ "draft": {
+  "ru": "черновик",
+  "de": "Entwurf",
+  "files": [
+   "post.js"
+  ]
+ },
+ "done": {
+  "ru": "готово",
+  "de": "erledigt",
+  "files": [
+   "post.js"
+  ]
+ },
+ "Letters do not arrive by themselves: the app has no mail server of its own. Automatic only in the App Store version.": {
+  "ru": "Письма не приходят сами: у приложения нет своего почтового сервера. Автоматически — только в версии для App Store.",
+  "de": "Briefe kommen nicht von selbst an: die App hat keinen eigenen Mail-Server. Automatisch erst in der App-Store-Version.",
+  "files": [
+   "post.js"
+  ]
+ },
+ "%n letters": {
+  "ru": "%n писем",
+  "de": "%n Briefe",
+  "files": [
+   "post.js"
+  ]
+ },
+ "1 letter": {
+  "ru": "1 письмо",
+  "de": "1 Brief",
+  "files": [
+   "post.js"
   ]
  },
  "Check a backup": {

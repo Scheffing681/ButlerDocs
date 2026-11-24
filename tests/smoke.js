@@ -896,7 +896,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('Später (3 days): hidden until then',await T(()=>{const G=window.__T.g();const k=Object.keys(G.bdImp).find(k=>k.includes('SG bald'));return!!k&&!!G.bdImp[k].s&&![...document.querySelectorAll('.sgi b')].some(b=>b.textContent==='SG bald')}));
  await T(()=>{const G=window.__T.g();G.tasks=G.tasks.filter(t=>!/^sg/.test(t.id));G.bdImp={};document.querySelectorAll('.lnqbar,.dtsheet').forEach(x=>x.remove());window.__T.R('home')})}
  where='butler glas';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip').forEach(x=>x.remove());window.__T.g().chat=[];window.__T.R('concierge')});await p.waitForTimeout(400);
- const c1=await T(()=>{const sc=document.querySelector('.screen.chat');return{bg:!!(sc&&sc.classList.contains('bgc')),hd:!!document.querySelector('.bghd [data-act=bgmore]')&&!!document.querySelector('.bghd [data-to=home]'),old:sc&&getComputedStyle(sc.querySelector('.sub-hdr')).display,h:(document.querySelector('.bthero h3')||{}).textContent,orb:!!document.querySelector('.nav.bdnav .bdorb.on')}});
+ const c1=await T(()=>{const sc=document.querySelector('.screen.chat');return{bg:!!(sc&&sc.classList.contains('bgc')),hd:!!document.querySelector('.bghd [data-act=bgmore]')&&!!document.querySelector('.bghd [data-act=bgback]'),old:sc&&getComputedStyle(sc.querySelector('.sub-hdr')).display,h:(document.querySelector('.bthero h3')||{}).textContent,orb:!!document.querySelector('.nav.bdnav .bdorb.on')}});
  check('Glas Butler: back · BUTLER · ⋯ header, old header hidden, orb lit',c1.bg&&c1.hd&&c1.old==='none'&&c1.orb,JSON.stringify(c1));
  await T(()=>document.querySelector('[data-act=bgmore]').click());await p.waitForTimeout(300);
  check('⋯ offers «Antworten vorlesen» and «Gespräch löschen»',await T(()=>document.querySelectorAll('.dtsheet [data-a]').length===2));
@@ -907,7 +907,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('…Gespräch löschen empties the conversation',await T(()=>(window.__T.g().chat||[]).length===0));
  await T(()=>window.__T.R('home'))}
  where='screens glas';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip').forEach(x=>x.remove());const G=window.__T.g();const d=n=>{const x=new Date();x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};G.tasks=G.tasks||[];G.tasks.push({id:'sl1',t:'SL heute',due:d(0),done:false,prio:2});window.__T.R('dsrok')});await p.waitForTimeout(400);
- const f1=await T(()=>{const sc=document.querySelector('.screen.frw');return{hd:!!sc.querySelector(':scope>.bghd [data-act=odback]')&&!!sc.querySelector(':scope>.bghd [data-to=mycal]'),t:(sc.querySelector('.bgtitle')||{}).textContent,old:getComputedStyle(sc.querySelector(':scope>.sub-hdr')).display,days:sc.querySelectorAll('.sglday').length,today:!!sc.querySelector('.sglday.on i.a,.sglday.on i.r'),sign:[...sc.querySelectorAll('.frm em.sgp')].length}});
+ const f1=await T(()=>{const sc=document.querySelector('.screen.frw');return{hd:!!sc.querySelector(':scope>.bghd [data-act=bgback]')&&!!sc.querySelector(':scope>.bghd [data-to=mycal]'),t:(sc.querySelector('.bgtitle')||{}).textContent,old:getComputedStyle(sc.querySelector(':scope>.sub-hdr')).display,days:sc.querySelectorAll('.sglday').length,today:!!sc.querySelector('.sglday.on i.a,.sglday.on i.r'),sign:[...sc.querySelectorAll('.frm em.sgp')].length}});
  check('Glas Fristen: ‹ · BUTLER · calendar, big title, week strip of 7 with today marked, status signs',f1.hd&&f1.old==='none'&&f1.days===7&&f1.today&&f1.sign>0&&!!f1.t,JSON.stringify(f1));
  await T(()=>document.querySelector('.sglday.on').click());await p.waitForTimeout(300);
  check('…tap on today lists that day\'s deadlines',await T(()=>[...document.querySelectorAll('.dtsheet .sgm button')].some(b=>b.textContent.includes('SL heute'))));
@@ -918,7 +918,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  check('…the ring opens the list of key papers',await T(()=>!!document.querySelector('.dtsheet .strow')));
  await T(()=>{document.querySelectorAll('.dtsheet').forEach(x=>x.remove());window.__T.R('eing')});await p.waitForTimeout(400);
  const e1=await T(()=>{const sc=document.querySelector('.screen.egw');return{cap:sc.querySelectorAll('.sglcap [data-sglc]').length,more:!!sc.querySelector('.sglcap [data-act=stcap]'),home:(document.querySelector('.nav.bdnav .on')||{}).dataset}});
- check('Glas Eingang: Scannen · Fotos · Datei · Mehr on top of the inbox',e1.cap===3&&e1.more,JSON.stringify(e1));
+ check('Glas Eingang: Scannen · Fotos · Post · Mehr on top of the inbox',e1.cap===2&&e1.more,JSON.stringify(e1));
  await T(()=>document.querySelector('.sglcap [data-sglc=cam]').click());await p.waitForTimeout(500);
  check('…Scannen opens the scanner',await T(()=>!!document.querySelector('.sc9')));
  await T(()=>{window.__T.R('home')});await p.waitForTimeout(300);await T(()=>{document.querySelectorAll('.sc9').forEach(x=>x.remove())})}
@@ -949,6 +949,22 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.screen [data-to=people]').click());await p.waitForTimeout(300);
  await T(()=>window.__T.R('letters'));await p.waitForTimeout(400);
  check('Glas Briefe: header, no old hub tabs, the letter form stays',await T(()=>!!document.querySelector('.screen.splet>.bghd')&&getComputedStyle(document.querySelector('.screen>.h9tabs')).display==='none'&&!!document.querySelector('.screen .lform')));
+ await T(()=>window.__T.R('home'))}
+ where='post';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip').forEach(x=>x.remove());window.__T.R('home')});await p.waitForTimeout(400);
+ check('Glas Start: the tile «Dokumente» became «Post»',await T(()=>!!document.querySelector('.sga[data-k=post][data-to=post]')&&!document.querySelector('.sga[data-k=docs]')));
+ await T(()=>document.querySelector('.sga[data-k=post]').click());await p.waitForTimeout(400);
+ check('Post: Brief schreiben · Foto · Einfügen · Meine Briefe, Glas header',await T(()=>{const sc=document.querySelector('.screen.powr');return!!sc&&!!sc.querySelector('[data-poa=write]')&&!!sc.querySelector('[data-poa=photo]')&&!!sc.querySelector('[data-poa=paste]')&&!!sc.querySelector('.pomy')&&!!sc.querySelector(':scope>.bghd [data-act=bgback]')}));
+ await T(()=>document.querySelector('[data-poa=write]').click());await p.waitForTimeout(400);
+ check('…«Schreiben» opens the own Briefe editor',await T(()=>window.__T.m().route==='letters'&&!!document.querySelector('.lform')));
+ await T(()=>document.querySelector('.screen>.bghd [data-act=bgback]').click());await p.waitForTimeout(400);
+ check('‹ steps back once: Briefe → Post (not Start)',await T(()=>window.__T.m().route==='post'));
+ await T(()=>document.querySelector('[data-poa=photo]').click());await p.waitForTimeout(400);
+ check('…«Foto» opens «Brief bekommen»',await T(()=>!!document.querySelector('.dtsheet .mlnew')));
+ await T(()=>{document.querySelectorAll('.dtsheet').forEach(x=>x.remove());window.__T.R('dall')});await p.waitForTimeout(300);await T(()=>window.__T.R('mycal'));await p.waitForTimeout(400);
+ await T(()=>document.querySelector('.screen>.bghd .bgcb').click());await p.waitForTimeout(400);
+ check('‹ in Kalender goes back to Mehr, not to Start',await T(()=>window.__T.m().route==='dall'),await T(()=>window.__T.m().route));
+ await T(()=>window.__T.R('eing'));await p.waitForTimeout(400);
+ check('Eingang: Scannen · Fotos · Post · Mehr',await T(()=>!!document.querySelector('.sglcap [data-to=post]')&&!document.querySelector('.sglcap [data-sglc=file]')));
  await T(()=>window.__T.R('home'))}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));

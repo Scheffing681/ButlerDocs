@@ -4315,6 +4315,28 @@
    "eingang-fristen.js"
   ]
  },
+ "Bottom bar": {
+  "ru": "Нижняя панель",
+  "de": "Untere Leiste",
+  "files": [
+   "einstellungen-glas.js",
+   "nav-edit.js"
+  ]
+ },
+ "What sits next to Butler": {
+  "ru": "Что стоит рядом с Батлером",
+  "de": "Was neben Butler steht",
+  "files": [
+   "einstellungen-glas.js"
+  ]
+ },
+ "Light · Dark · Auto, colour, bottom bar": {
+  "ru": "Светлое · Тёмное · Авто, цвет, нижняя панель",
+  "de": "Hell · Dunkel · Auto, Farbe, untere Leiste",
+  "files": [
+   "einstellungen-glas.js"
+  ]
+ },
  "Butler added: %t": {
   "ru": "Butler дополнил: %t",
   "de": "Butler hat ergänzt: %t",
@@ -6839,13 +6861,6 @@
   "de": "Das alte Telefon behält seine Daten, bis Sie sie dort löschen.",
   "files": [
    "move-phone.js"
-  ]
- },
- "Bottom bar": {
-  "ru": "Нижняя панель",
-  "de": "Untere Leiste",
-  "files": [
-   "nav-edit.js"
   ]
  },
  "Tap a place, then what should go there. Butler in the middle and «More» always stay.": {

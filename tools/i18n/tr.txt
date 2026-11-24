@@ -1291,3 +1291,5 @@
 1290	her zaman
 1291	Oraya ne konabilir
 1292	Kaydedilmemiş değişiklikler
+1293	Butler’ın yanında ne duruyor
+1294	Açık · Koyu · Otomatik, renk, alt çubuk

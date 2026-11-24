@@ -12,8 +12,8 @@ Hooks.css('docs-alt-glas',`
 :root[data-bd] .lwhead *{color:var(--ink)!important}:root[data-bd] .lwhead small,:root[data-bd] .lwhead label{color:var(--muted)!important}
 :root[data-bd] .lwseal{border-color:var(--bd-acc)!important;background:color-mix(in srgb,var(--bd-acc) 12%,transparent)!important}:root[data-bd] .lwseal b{color:var(--bd-acc)!important}
 :root[data-bd] .lwask{border-color:var(--bd-edge)!important;background:var(--bd-glass)!important}
-:root[data-bd] .screen button.on:not(.bdorb):not(.sglday):not(.bnsl){background:var(--bd-acc)!important;background-image:none!important;color:#fff!important;border-color:transparent!important}
-:root[data-bd="dunkel"] .screen button.on:not(.bdorb):not(.sglday):not(.bnsl){color:#05201A!important}
+:root[data-bd] .screen button.on:not(.bdorb):not(.sglday):not(.bnsl):not([data-act=bdacc]):not([data-act=bdtheme]){background:var(--bd-acc)!important;background-image:none!important;color:#fff!important;border-color:transparent!important}
+:root[data-bd="dunkel"] .screen button.on:not(.bdorb):not(.sglday):not(.bnsl):not([data-act=bdacc]):not([data-act=bdtheme]){color:#05201A!important}
 :root[data-bd] .wdcard.gold{border-color:color-mix(in srgb,var(--bd-acc) 35%,transparent)!important;background:color-mix(in srgb,var(--bd-acc) 6%,var(--bd-glass))!important}
 :root[data-bd] .axadd.gold{background:var(--bd-acc)!important;background-image:none!important;color:#fff!important;border:0!important}
 :root[data-bd] .asv b,:root[data-bd] .asv strong,:root[data-bd] .asv .asnet,:root[data-bd] .asv [class*=net]{font-family:var(--display)!important}

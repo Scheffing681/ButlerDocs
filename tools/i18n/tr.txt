@@ -1293,3 +1293,5 @@
 1292	Kaydedilmemiş değişiklikler
 1293	Butler’ın yanında ne duruyor
 1294	Açık · Koyu · Otomatik, renk, alt çubuk
+1295	＋ Diğer ayrıntılar (saat, tekrar, kişi …)
+1296	− Daha az

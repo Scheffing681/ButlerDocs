@@ -1017,6 +1017,16 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
    check('…after choosing, the scanner opens with that picture (still no camera)',await T(()=>!!document.querySelector('.sc9')&&!window.__gum),await T(()=>({ov:!!document.querySelector('.sc9'),gum:window.__gum})))}
   await T(()=>{document.querySelectorAll('.sc9').forEach(x=>x.remove());document.documentElement.classList.remove('sc9on');window.__T.L.sc9home()});await p.waitForTimeout(400)}
  await T(()=>window.__T.R('home'))}
+ where='forms glas';{await T(()=>{document.querySelectorAll('.dtsheet,.sheet-wrap').forEach(x=>x.remove());window.__T.R('dsrok')});await p.waitForTimeout(400);
+ await T(()=>document.querySelector('[data-act=remnew]').click());await p.waitForTimeout(500);
+ const f1=await T(()=>{const f=document.querySelector('form.fgx');if(!f)return{};const vis=n=>{const e=f.querySelector(`[name=${n}]`);return!!e&&e.offsetParent!==null};return{t:vis('t'),due:vis('due'),who:vis('who'),rep:vis('rep'),tog:!!f.querySelector('.fgtog')}});
+ check('Neue Aufgabe: only «Was» and «Wann», the rest under «Weitere Angaben»',f1.t&&f1.due&&!f1.who&&!f1.rep&&f1.tog,JSON.stringify(f1));
+ await T(()=>document.querySelector('form.fgx .fgtog').click());await p.waitForTimeout(200);
+ check('…«Weitere Angaben» shows them',await T(()=>document.querySelector('form.fgx [name=who]').offsetParent!==null));
+ await T(()=>{document.querySelectorAll('.sheet-wrap,.dtsheet').forEach(x=>x.remove());window.__T.R('home')});await p.waitForTimeout(300);
+ await T(()=>document.querySelector('[data-act=stcap]').click());await p.waitForTimeout(400);
+ check('Erfassen: no «in der App» entries',await T(()=>!!document.querySelector('.dtsheet .strow')&&![...document.querySelectorAll('.dtsheet .strow.stapp')].some(x=>x.offsetParent!==null)));
+ await T(()=>{document.querySelectorAll('.dtsheet').forEach(x=>x.remove());window.__T.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

@@ -5001,6 +5001,20 @@
    "finanzen2.js"
   ]
  },
+ "＋ More details (time, repeat, person …)": {
+  "ru": "＋ Ещё подробности (время, повтор, человек …)",
+  "de": "＋ Weitere Angaben (Uhrzeit, Wiederholung, Person …)",
+  "files": [
+   "formen-glas.js"
+  ]
+ },
+ "− Less": {
+  "ru": "− Меньше",
+  "de": "− Weniger",
+  "files": [
+   "formen-glas.js"
+  ]
+ },
  "Employers": {
   "ru": "Работодатели",
   "de": "Arbeitgeber",

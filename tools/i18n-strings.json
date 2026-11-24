@@ -919,6 +919,7 @@
    "behoerden.js",
    "linkup.js",
    "mappen.js",
+   "ordnen.js",
    "reliability.js",
    "seiten.js",
    "start-glas.js"
@@ -4318,6 +4319,36 @@
    "erkennung.js"
   ]
  },
+ "Mail": {
+  "ru": "Почта",
+  "de": "Post",
+  "files": [
+   "farben.js",
+   "post.js",
+   "scan-glas.js"
+  ]
+ },
+ "Write and receive letters": {
+  "ru": "Писать и получать письма",
+  "de": "Briefe schreiben, bekommen",
+  "files": [
+   "farben.js"
+  ]
+ },
+ "Life book": {
+  "ru": "Книга жизни",
+  "de": "Lebensbuch",
+  "files": [
+   "farben.js"
+  ]
+ },
+ "Memories, history": {
+  "ru": "Воспоминания, история",
+  "de": "Erinnerungen, Geschichte",
+  "files": [
+   "farben.js"
+  ]
+ },
  "Finances": {
   "ru": "Финансы",
   "de": "Finanzen",
@@ -7369,12 +7400,18 @@
    "only-docs.js"
   ]
  },
- "Mail": {
-  "ru": "Почта",
-  "de": "Post",
+ "Reset": {
+  "ru": "Как было",
+  "de": "Zurücksetzen",
   "files": [
-   "post.js",
-   "scan-glas.js"
+   "ordnen.js"
+  ]
+ },
+ "Drag a tile": {
+  "ru": "Перетащите плитку",
+  "de": "Kachel verschieben",
+  "files": [
+   "ordnen.js"
   ]
  },
  "Write a letter": {

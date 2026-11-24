@@ -1280,3 +1280,8 @@
 1279	Gerçek tarayıcı gibi: «Dosyalar» → ⋯ → «Belgeleri Tara», sonra «Hazır olanı al».
 1280	Son
 1281	Henüz bir şey taranmadı
+1282	Mektup yaz ve al
+1283	Hayat kitabı
+1284	Anılar, geçmiş
+1285	Sıfırla
+1286	Kutucuğu sürükleyin

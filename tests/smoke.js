@@ -976,6 +976,23 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('[data-scg=cam]').click());await p.waitForTimeout(500);
  check('…«Scannen» opens the camera scanner',await T(()=>!!document.querySelector('.sc9:not(.sc9home)')));
  await T(()=>{document.querySelectorAll('.sc9').forEach(x=>x.remove());document.documentElement.classList.remove('sc9on');window.__T.R('home')})}
+ where='farben ordnen';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip,.orbar').forEach(x=>x.remove());const G=window.__T.g();delete G.bdOrd;window.__T.R('dall')});await p.waitForTimeout(500);
+ const f1=await T(()=>{const g=document.querySelector('.brg');return{n:g.querySelectorAll(':scope>.brt').length,arc:!!g.querySelector('[data-to=archive]'),fr:!!g.querySelector('[data-to=dsrok]'),post:!!g.querySelector('[data-to=post] .ddf'),life:!!g.querySelector('[data-to=life] .ddf'),col:g.querySelectorAll('.ddf').length,calm:document.querySelectorAll('.brm .fbcalm').length,lifeW:!!document.querySelector('.brm [data-to=life]')}});
+ check('Alle Bereiche: 9 coloured folders (no Dokumente/Fristen, + Post, Lebensbuch), Weitere calm',f1.n===9&&!f1.arc&&!f1.fr&&f1.post&&f1.life&&f1.col===9&&f1.calm>=6&&!f1.lifeW,JSON.stringify(f1));
+ await T(()=>window.__T.R('home'));await p.waitForTimeout(500);
+ check('Start: area tiles are coloured folders',await T(()=>document.querySelectorAll('.sgar .sga .ddf').length>=6));
+ const k0=await T(()=>[...document.querySelectorAll('.sgar>button')].map(b=>b.dataset.k));
+ const box=async k=>await T(k=>{const r=document.querySelector(`.sgar>button[data-k="${k}"]`).getBoundingClientRect();window.scrollBy(0,0);return{x:r.left+r.width/2,y:r.top+r.height/2}},k);
+ await T(()=>document.querySelector('.sgar').scrollIntoView({block:'center'}));await p.waitForTimeout(200);
+ let a=await box(k0[0]);await p.mouse.move(a.x,a.y);await p.mouse.down();await p.waitForTimeout(950);await p.mouse.up();await p.waitForTimeout(200);
+ check('Hold 0.8 s → tiles wiggle, «Fertig» bar, nothing opened',await T(()=>!!document.querySelector('.sgar.orjig')&&!!document.querySelector('.orbar')&&window.__T.m().route==='home'));
+ a=await box(k0[0]);const b2=await box(k0[3]);await p.mouse.move(a.x,a.y);await p.mouse.down();for(let s=1;s<=8;s++){await p.mouse.move(a.x+(b2.x-a.x)*s/8,a.y+(b2.y-a.y)*s/8);await p.waitForTimeout(30)}await p.mouse.up();await p.waitForTimeout(200);
+ await T(()=>document.querySelector('.orbar [data-or=done]').click());await p.waitForTimeout(300);
+ const k1=await T(()=>window.__T.g().bdOrd&&window.__T.g().bdOrd.start);const jig=await T(()=>!!document.querySelector('.orjig'));
+ check('Drag moves «'+k0[0]+'» to the place of «'+k0[3]+'», saved',!!k1&&k1.indexOf(k0[0])===3&&!jig,JSON.stringify(k1));
+ await T(()=>{window.__T.R('dall')});await p.waitForTimeout(200);await T(()=>window.__T.R('home'));await p.waitForTimeout(400);
+ check('…the order stays after leaving and coming back',await T(k=>[...document.querySelectorAll('.sgar>button')][3].dataset.k===k,k0[0]));
+ await T(()=>{delete window.__T.g().bdOrd;window.__T.save();window.__T.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

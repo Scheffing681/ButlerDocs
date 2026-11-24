@@ -895,6 +895,17 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.dtsheet [data-a="3"]').click());await p.waitForTimeout(300);
  check('Später (3 days): hidden until then',await T(()=>{const G=window.__T.g();const k=Object.keys(G.bdImp).find(k=>k.includes('SG bald'));return!!k&&!!G.bdImp[k].s&&![...document.querySelectorAll('.sgi b')].some(b=>b.textContent==='SG bald')}));
  await T(()=>{const G=window.__T.g();G.tasks=G.tasks.filter(t=>!/^sg/.test(t.id));G.bdImp={};document.querySelectorAll('.lnqbar,.dtsheet').forEach(x=>x.remove());window.__T.R('home')})}
+ where='butler glas';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip').forEach(x=>x.remove());window.__T.g().chat=[];window.__T.R('concierge')});await p.waitForTimeout(400);
+ const c1=await T(()=>{const sc=document.querySelector('.screen.chat');return{bg:!!(sc&&sc.classList.contains('bgc')),hd:!!document.querySelector('.bghd [data-act=bgmore]')&&!!document.querySelector('.bghd [data-to=home]'),old:sc&&getComputedStyle(sc.querySelector('.sub-hdr')).display,h:(document.querySelector('.bthero h3')||{}).textContent,orb:!!document.querySelector('.nav.bdnav .bdorb.on')}});
+ check('Glas Butler: back · BUTLER · ⋯ header, old header hidden, orb lit',c1.bg&&c1.hd&&c1.old==='none'&&c1.orb,JSON.stringify(c1));
+ await T(()=>document.querySelector('[data-act=bgmore]').click());await p.waitForTimeout(300);
+ check('⋯ offers «Antworten vorlesen» and «Gespräch löschen»',await T(()=>document.querySelectorAll('.dtsheet [data-a]').length===2));
+ const v0=await T(()=>window.__T.g().voice!==false);await T(()=>document.querySelector('.dtsheet [data-a=voice]').click());await p.waitForTimeout(300);
+ check('…Vorlesen switches and stays in the conversation',await T(v0=>(window.__T.g().voice!==false)!==v0&&window.__T.m().route==='concierge',v0));
+ await T(()=>{const G=window.__T.g();if(G.voice===false)G.voice=true;G.chat=[{r:'me',t:'x'},{r:'bot',t:'y'}];window.__T.v()});await p.waitForTimeout(200);
+ await T(()=>document.querySelector('[data-act=bgmore]').click());await p.waitForTimeout(300);await T(()=>document.querySelector('.dtsheet [data-a=clear]').click());await p.waitForTimeout(300);
+ check('…Gespräch löschen empties the conversation',await T(()=>(window.__T.g().chat||[]).length===0));
+ await T(()=>window.__T.R('home'))}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

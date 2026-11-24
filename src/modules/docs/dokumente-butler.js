@@ -72,7 +72,7 @@ document.addEventListener('input',e=>{const a=e.target;if(!a||a.id!=='ddq')retur
 /* --- Butler --- */
 const BT_Q=['letter','dl','bank','miss'];
 function btCards(k){const card=(ic,t,s,a,cls)=>`<button type="button" class="btc ${cls||''}" ${a}><span class="btci">${ic}</span><span class="btct"><b>${i(t)}</b>${s?`<small>${i(s)}</small>`:''}</span><span class="btgo">›</span></button>`;
- try{if(k==='dl'){const L2=stDlAll().filter(t=>{const n=stDays(t.k);return n>=-60&&n<=30});return L2.slice(0,4).map(t=>card('<i class="btd '+(stDays(t.k)<0?'r':'y')+'"></i>',t.t,stDate(t.k)+' · '+stWhen(t.k),t.act||'data-act="go" data-to="dsrok"')).join('')+card(dhi('clock'),ddt('a_allDl'),'','data-act="go" data-to="dsrok"','lnk')}
+ try{if(k==='dl'){const L2=stDlAll().filter(t=>{const n=stDays(t.k);return n>=-60&&n<=30});return L2.slice(0,4).map(t=>card('<i class="btd '+(stDays(t.k)<0?'r':stDays(t.k)<=7?'y':'g')+'"></i>',t.t,stDate(t.k)+' · '+stWhen(t.k),t.act||'data-act="go" data-to="dsrok"')).join('')+card(dhi('clock'),ddt('a_allDl'),'','data-act="go" data-to="dsrok"','lnk')}
  if(k==='miss'){const F=stFull().filter(x=>!x.ok);return F.slice(0,4).map(x=>card('<i class="btd y"></i>',stt('k_'+x.k),ddt('a_miss1'),'data-act="ddscan"')).join('')+card(sti('mpx'),ddt('a_list'),'','data-act="stfull"','lnk')}
  if(k==='bank'){const M={tpl:'kredit',pk:{},skip:{},extra:[]},S=mpxSum(M);return card('🏦',ddt('a_bankGo'),S.ok+' / '+S.need,'data-act="mpxnew" data-t="kredit"','lnk')+S.open.slice(0,4).map(r=>card('<i class="btd y"></i>',mpxT('s_'+r.s.k),r.st==='no'?ddt('a_miss1'):(r.W[0]||''),'data-act="mpxnew" data-t="kredit"')).join('')}
  if(k==='letter')return card(_('mail'),ddt('a_letterGo'),'','data-act="mlnew"','lnk')}catch(e){Hooks.err('btcards',e)}return''}
@@ -127,6 +127,6 @@ Hooks.css('docs-dokumente-butler',`
 .btcs{display:flex;flex-direction:column;gap:6px;margin-top:9px}
 .btc{display:flex;align-items:center;gap:10px;width:100%;border:1px solid var(--line);border-radius:13px;background:var(--surface);padding:8px 10px;font:inherit;color:var(--ink)!important;text-align:left;cursor:pointer}
 .btc.lnk{background:color-mix(in srgb,var(--green) 9%,var(--surface));border-color:color-mix(in srgb,var(--green) 25%,var(--line))}
-.btci{flex:none;width:22px;display:flex;justify-content:center;color:var(--green)}.btci svg{width:18px;height:18px}.btd{width:9px;height:9px;border-radius:50%;display:block}.btd.r{background:#e0684a}.btd.y{background:#e5a83a}
+.btci{flex:none;width:22px;display:flex;justify-content:center;color:var(--green)}.btci svg{width:18px;height:18px}.btd{width:9px;height:9px;border-radius:50%;display:block}.btd.r{background:#e0684a}.btd.y{background:#e5a83a}.btd.g{background:#4f9a68}
 .btct{flex:1;min-width:0;display:flex;flex-direction:column}.btct b{font-size:14px;font-weight:600;line-height:1.25}.btct small{font-size:12px;color:var(--muted)}.btgo{color:var(--green);font-weight:700}
 `);

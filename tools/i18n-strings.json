@@ -1592,7 +1592,8 @@
   "ru": "Назад",
   "de": "Zurück",
   "files": [
-   "behoerden.js"
+   "behoerden.js",
+   "butler-glas.js"
   ]
  },
  "Skip": {
@@ -3258,6 +3259,55 @@
   "de": "Übersicht %y",
   "files": [
    "business.js"
+  ]
+ },
+ "How can I help?": {
+  "ru": "Чем могу помочь?",
+  "de": "Wie kann ich helfen?",
+  "files": [
+   "butler-glas.js"
+  ]
+ },
+ "More options": {
+  "ru": "Ещё",
+  "de": "Weitere Optionen",
+  "files": [
+   "butler-glas.js"
+  ]
+ },
+ "Read answers aloud": {
+  "ru": "Читать ответы вслух",
+  "de": "Antworten vorlesen",
+  "files": [
+   "butler-glas.js"
+  ]
+ },
+ "on": {
+  "ru": "вкл.",
+  "de": "an",
+  "files": [
+   "butler-glas.js"
+  ]
+ },
+ "off": {
+  "ru": "выкл.",
+  "de": "aus",
+  "files": [
+   "butler-glas.js"
+  ]
+ },
+ "Clear conversation": {
+  "ru": "Очистить разговор",
+  "de": "Gespräch löschen",
+  "files": [
+   "butler-glas.js"
+  ]
+ },
+ "Documents and deadlines stay": {
+  "ru": "Документы и сроки останутся",
+  "de": "Dokumente und Fristen bleiben",
+  "files": [
+   "butler-glas.js"
   ]
  },
  "Chip checked": {

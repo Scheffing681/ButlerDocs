@@ -1212,3 +1212,10 @@
 1211	%n kontrol
 1212	hepsi kontrol edildi
 1213	Takvim dosyası açıldı – takvimde «Ekle»ye dokunun.
+1214	Nasıl yardımcı olabilirim?
+1215	Diğer seçenekler
+1216	Yanıtları sesli oku
+1217	açık
+1218	kapalı
+1219	Sohbeti temizle
+1220	Belgeler ve süreler kalır

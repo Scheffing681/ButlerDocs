@@ -88,3 +88,4 @@ docs/sicherung.js
 docs/smaragd.js
 docs/design.js
 docs/start-glas.js
+docs/butler-glas.js

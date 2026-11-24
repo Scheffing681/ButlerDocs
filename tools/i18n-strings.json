@@ -1120,6 +1120,7 @@
    "behoerden-termine.js",
    "behoerden.js",
    "layout-docs.js",
+   "search-places.js",
    "start.js"
   ]
  },
@@ -3072,6 +3073,7 @@
   "de": "Fristen",
   "files": [
    "business.js",
+   "search-places.js",
    "start.js"
   ]
  },
@@ -3686,6 +3688,7 @@
   "de": "Erscheinungsbild",
   "files": [
    "design.js",
+   "search-places.js",
    "smaragd.js"
   ]
  },
@@ -3743,6 +3746,7 @@
   "de": "Butler",
   "files": [
    "design.js",
+   "search-places.js",
    "start.js"
   ]
  },
@@ -4152,6 +4156,7 @@
   "de": "Eingang",
   "files": [
    "eingang-fristen.js",
+   "search-places.js",
    "start-glas.js"
   ]
  },
@@ -4314,6 +4319,7 @@
    "finanzen.js",
    "layout-docs.js",
    "notizen.js",
+   "search-places.js",
    "start.js"
   ]
  },
@@ -4789,6 +4795,7 @@
    "move-phone.js",
    "notizen.js",
    "reliability.js",
+   "search-places.js",
    "start.js"
   ]
  },
@@ -6923,6 +6930,7 @@
   "de": "Arbeit",
   "files": [
    "notizen.js",
+   "search-places.js",
    "start.js"
   ]
  },
@@ -7626,6 +7634,20 @@
   "de": "An diesem Tag keine Fristen",
   "files": [
    "screens-glas.js"
+  ]
+ },
+ "Letters": {
+  "ru": "Письма",
+  "de": "Briefe",
+  "files": [
+   "search-places.js"
+  ]
+ },
+ "Family & important people": {
+  "ru": "Семья и важные люди",
+  "de": "Familie & wichtige Menschen",
+  "files": [
+   "search-places.js"
   ]
  },
  "Edit pages": {

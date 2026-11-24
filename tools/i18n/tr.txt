@@ -1244,3 +1244,5 @@
 1243	«Önemli kişiler» altında ad ve telefon
 1244	Belge tara
 1245	Kenarlar ve gölgeler kaldırılır
+1246	Mektuplar
+1247	Aile ve önemli kişiler

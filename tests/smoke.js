@@ -943,6 +943,13 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.screen.dgw>.bghd .bgcb').click());await p.waitForTimeout(400);
  check('…‹ goes back',await T(()=>!document.querySelector('.screen.dgw')));
  await T(()=>window.__T.R('home'))}
+ where='search places';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip').forEach(x=>x.remove());window.__T.R('search')});await p.waitForTimeout(400);
+ for(const [q,to] of [['письмо','letters'],['Brief','letters'],['срок','dsrok'],['Familie','people']]){await T(q=>{const x=document.querySelector('.screen input');x.value=q;x.dispatchEvent(new Event('input',{bubbles:true}))},q);await p.waitForTimeout(400);
+  check('Search «'+q+'» finds the place '+to,await T(to=>!!document.querySelector(`.screen [data-act=go][data-to="${to}"]`),to))}
+ await T(()=>document.querySelector('.screen [data-to=people]').click());await p.waitForTimeout(300);
+ await T(()=>window.__T.R('letters'));await p.waitForTimeout(400);
+ check('Glas Briefe: header, no old hub tabs, the letter form stays',await T(()=>!!document.querySelector('.screen.splet>.bghd')&&getComputedStyle(document.querySelector('.screen>.h9tabs')).display==='none'&&!!document.querySelector('.screen .lform')));
+ await T(()=>window.__T.R('home'))}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

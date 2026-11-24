@@ -43,8 +43,15 @@ document.addEventListener('click',e=>{const sc=e.target.closest&&e.target.closes
 /* stPick opened the scanner's old home page (R('sc9') → scHome), so «Datei» / «Fotos» clicked a button that was not there.
    Now it opens the camera scanner itself (as the old home did) and, for files or the native camera, clicks its input
    in the same tap — iPhone allows a file picker only inside the tap itself. */
+/* v70: «Datei», «Fotos», «Beste Qualität» open ONLY their picker (no camera behind it). The picker is opened inside the tap
+   (iPhone allows it only there); the scanner opens afterwards with the chosen files — page editor / PDF import, no live camera. */
+const SCG_IN={'.sc9fi':{accept:'application/pdf,.pdf,image/*',multi:1},'.sc9gi:not(.sc9ni)':{accept:'image/*',multi:1},'.sc9ni':{accept:'image/*',cap:1}};
+function scgPicker(sel){const o=SCG_IN[sel];if(!o)return!1;const inp=document.createElement('input');inp.type='file';inp.accept=o.accept;if(o.multi)inp.multiple=!0;if(o.cap)inp.setAttribute('capture','environment');inp.__scSkip=!0;
+ inp.style.cssText='position:fixed;left:-9999px;top:0;opacity:0';document.body.appendChild(inp);
+ inp.addEventListener('change',()=>{const F=[...(inp.files||[])];inp.remove();if(!F.length)return;try{window.__scOpen({multi:!0,card:!0,kind:g.scKind==='id'?'id':'doc',files:F,done:()=>{}})}catch(e){Hooks.err('scgfiles',e)}},{once:!0});
+ setTimeout(()=>{if(document.body.contains(inp)&&!inp.files.length)inp.remove()},10*60*1000);inp.click();return!0}
 const scgP0=stPick;stPick=function(sel){try{if(typeof window.__scOpen!=='function')return scgP0.apply(this,arguments);
- window.__scOpen({multi:!0,card:!0,kind:g.scKind==='id'?'id':'doc',done:()=>{}});if(sel){const x=document.querySelector('.sc9 '+sel);x&&x.click()}}catch(e){Hooks.err('scgpick',e);return scgP0.apply(this,arguments)}};
+ if(sel&&scgPicker(sel))return;window.__scOpen({multi:!0,card:!0,kind:g.scKind==='id'?'id':'doc',done:()=>{}})}catch(e){Hooks.err('scgpick',e);return scgP0.apply(this,arguments)}};
 /* in the new look the scanner's own page is this screen (also when something asks for the route «sc9») */
 const scgR0=R;R=function(e){try{if(e==='sc9'&&typeof bdOn==='function'&&bdOn())return scgR0.call(this,'scan')}catch{}return scgR0.apply(this,arguments)};
 const scgH0=scHome;scHome=function(){try{if(typeof bdOn==='function'&&bdOn()){R('scan');return}}catch{}return scgH0.apply(this,arguments)};

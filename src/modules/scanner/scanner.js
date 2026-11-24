@@ -623,7 +623,7 @@ function scOpen(opt){const multi=!!opt.multi;let kind=opt.kind||(['doc','book','
   sh.onclick=async e=>{const b=e.target.closest('[data-q]');if(!b&&e.target!==sh)return;sh.remove();if(!b||b.dataset.q==='x')return;const small=b.dataset.q==='s';ov.insertAdjacentHTML('beforeend',`<div class="sc9busy"><i></i><span>PDF…</span></div>`);
    try{const imgs=pages.map(p=>{if(!small)return{cv:p.out};const k2=Math.min(1,1500/Math.max(p.out.width,p.out.height)),c=document.createElement('canvas');c.width=Math.round(p.out.width*k2);c.height=Math.round(p.out.height*k2);c.getContext('2d').drawImage(p.out,0,0,c.width,c.height);return{cv:c,q:.6}});
     const blob=await scPdf(imgs,ocr,title.trim());T('PDF · '+(blob.size/1048576).toFixed(1).replace('.',',')+' MB');await scSharePdf(blob,pdfName())}catch(err){T(String(err&&err.message||err))}finally{const bz=ov.querySelector('.sc9busy');bz&&bz.remove()}}};
- if(opt.image)fromImage(opt.image,-1);else if(opt.startFiles){setTimeout(()=>{camView();setTimeout(()=>{const fi=ov.querySelector('.sc9fi');fi&&fi.click()},50)},0)}else camView();return{close}}
+ if(opt.image)fromImage(opt.image,-1);else if(opt.files&&opt.files.length){importFiles([...opt.files])}else if(opt.startFiles){setTimeout(()=>{camView();setTimeout(()=>{const fi=ov.querySelector('.sc9fi');fi&&fi.click()},50)},0)}else camView();return{close}}
 
 /* ---------- every document camera in the app opens the scanner ---------- */
 const SC_SEL='.dzin[data-m="scan"],.insscanin,[data-asscan],[data-pjscan],[data-mlf],input[data-k="doc"],.bkscanf';

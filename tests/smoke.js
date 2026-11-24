@@ -1007,6 +1007,16 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.nav.bdnav [data-k=post]').click());await p.waitForTimeout(400);
  check('…the new place opens Post',await T(()=>window.__T.m().route==='post'));
  await T(()=>{delete window.__T.g().bdNav;window.__T.save();window.__T.R('home')})}
+ where='picker only';{await T(()=>{document.querySelectorAll('.dtsheet,.orbar,.sc9').forEach(x=>x.remove());document.documentElement.classList.remove('sc9on');window.__gum=0;try{const o=navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);navigator.mediaDevices.getUserMedia=c=>{window.__gum++;return o(c)}}catch{}window.__T.L.sc9home()});await p.waitForTimeout(400);
+ const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAEklEQVR4nGP4z8CAFTEMNQkAVv4/wawUCusAAAAASUVORK5CYII=','base64');
+ for(const [sel,lab] of [['[data-scg=files]','Fertiges holen / Datei'],['[data-scg=nat]','Beste Qualität']]){
+  const fc=p.waitForEvent('filechooser',{timeout:4000}).catch(()=>null);await T(sel=>document.querySelector(sel).click(),sel);const ch=await fc;
+  const st=await T(()=>({ov:!!document.querySelector('.sc9'),gum:window.__gum}));
+  check(lab+': only the picker opens (no camera, no scanner behind)',!!ch&&!st.ov&&!st.gum,JSON.stringify({ch:!!ch,...st}));
+  if(ch){await ch.setFiles({name:'brief.png',mimeType:'image/png',buffer:png});await p.waitForTimeout(800);
+   check('…after choosing, the scanner opens with that picture (still no camera)',await T(()=>!!document.querySelector('.sc9')&&!window.__gum),await T(()=>({ov:!!document.querySelector('.sc9'),gum:window.__gum})))}
+  await T(()=>{document.querySelectorAll('.sc9').forEach(x=>x.remove());document.documentElement.classList.remove('sc9on');window.__T.L.sc9home()});await p.waitForTimeout(400)}
+ await T(()=>window.__T.R('home'))}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

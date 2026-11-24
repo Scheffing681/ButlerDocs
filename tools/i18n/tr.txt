@@ -1219,3 +1219,8 @@
 1218	kapalı
 1219	Sohbeti temizle
 1220	Belgeler ve süreler kalır
+1221	Önemli belgeler
+1222	Fotoğraflar
+1223	Diğer yollar
+1224	%d tarihindeki süreler
+1225	Bu gün süre yok

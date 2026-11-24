@@ -1938,7 +1938,8 @@
   "files": [
    "bereiche.js",
    "design.js",
-   "dokumente-butler.js"
+   "dokumente-butler.js",
+   "screens-glas.js"
   ]
  },
  "Calendar": {
@@ -2854,6 +2855,7 @@
    "business.js",
    "karriere2.js",
    "mappen.js",
+   "screens-glas.js",
    "steuer-plus.js",
    "vorsorge.js"
   ]
@@ -3551,6 +3553,7 @@
    "design.js",
    "dokumente-butler.js",
    "notizen.js",
+   "screens-glas.js",
    "start.js"
   ]
  },
@@ -3714,7 +3717,8 @@
   "ru": "Файл",
   "de": "Datei",
   "files": [
-   "dokumente-butler.js"
+   "dokumente-butler.js",
+   "screens-glas.js"
   ]
  },
  "Sets": {
@@ -7403,6 +7407,41 @@
   "de": "im Browser",
   "files": [
    "reliability.js"
+  ]
+ },
+ "Key papers": {
+  "ru": "Важные бумаги",
+  "de": "Wichtige Papiere",
+  "files": [
+   "screens-glas.js"
+  ]
+ },
+ "Photos": {
+  "ru": "Фото",
+  "de": "Fotos",
+  "files": [
+   "screens-glas.js"
+  ]
+ },
+ "More ways": {
+  "ru": "Ещё способы",
+  "de": "Weitere Wege",
+  "files": [
+   "screens-glas.js"
+  ]
+ },
+ "Deadlines on %d": {
+  "ru": "Сроки на %d",
+  "de": "Fristen am %d",
+  "files": [
+   "screens-glas.js"
+  ]
+ },
+ "No deadlines on this day": {
+  "ru": "В этот день сроков нет",
+  "de": "An diesem Tag keine Fristen",
+  "files": [
+   "screens-glas.js"
   ]
  },
  "Edit pages": {

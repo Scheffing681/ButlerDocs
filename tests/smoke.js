@@ -906,6 +906,22 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('[data-act=bgmore]').click());await p.waitForTimeout(300);await T(()=>document.querySelector('.dtsheet [data-a=clear]').click());await p.waitForTimeout(300);
  check('…Gespräch löschen empties the conversation',await T(()=>(window.__T.g().chat||[]).length===0));
  await T(()=>window.__T.R('home'))}
+ where='screens glas';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip').forEach(x=>x.remove());const G=window.__T.g();const d=n=>{const x=new Date();x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};G.tasks=G.tasks||[];G.tasks.push({id:'sl1',t:'SL heute',due:d(0),done:false,prio:2});window.__T.R('dsrok')});await p.waitForTimeout(400);
+ const f1=await T(()=>{const sc=document.querySelector('.screen.frw');return{hd:!!sc.querySelector(':scope>.bghd [data-act=odback]')&&!!sc.querySelector(':scope>.bghd [data-to=mycal]'),t:(sc.querySelector('.bgtitle')||{}).textContent,old:getComputedStyle(sc.querySelector(':scope>.sub-hdr')).display,days:sc.querySelectorAll('.sglday').length,today:!!sc.querySelector('.sglday.on i.a,.sglday.on i.r'),sign:[...sc.querySelectorAll('.frm em.sgp')].length}});
+ check('Glas Fristen: ‹ · BUTLER · calendar, big title, week strip of 7 with today marked, status signs',f1.hd&&f1.old==='none'&&f1.days===7&&f1.today&&f1.sign>0&&!!f1.t,JSON.stringify(f1));
+ await T(()=>document.querySelector('.sglday.on').click());await p.waitForTimeout(300);
+ check('…tap on today lists that day\'s deadlines',await T(()=>[...document.querySelectorAll('.dtsheet .sgm button')].some(b=>b.textContent.includes('SL heute'))));
+ await T(()=>{document.querySelectorAll('.dtsheet').forEach(x=>x.remove());const G=window.__T.g();G.tasks=G.tasks.filter(t=>t.id!=='sl1');window.__T.R('archive')});await p.waitForTimeout(400);
+ const d1=await T(()=>{const sc=document.querySelector('.screen.ddw');return{ring:!!sc.querySelector('.sglring[data-act=stfull] .sglr'),t:!!sc.querySelector('.bgtitle'),more:!!sc.querySelector('.bghd [data-act=ddmore]')}});
+ check('Glas Dokumente: the «Wichtige Papiere» ring moved here, ⋯ kept',d1.ring&&d1.t&&d1.more,JSON.stringify(d1));
+ await T(()=>document.querySelector('.sglring').click());await p.waitForTimeout(300);
+ check('…the ring opens the list of key papers',await T(()=>!!document.querySelector('.dtsheet .strow')));
+ await T(()=>{document.querySelectorAll('.dtsheet').forEach(x=>x.remove());window.__T.R('eing')});await p.waitForTimeout(400);
+ const e1=await T(()=>{const sc=document.querySelector('.screen.egw');return{cap:sc.querySelectorAll('.sglcap [data-sglc]').length,more:!!sc.querySelector('.sglcap [data-act=stcap]'),home:(document.querySelector('.nav.bdnav .on')||{}).dataset}});
+ check('Glas Eingang: Scannen · Fotos · Datei · Mehr on top of the inbox',e1.cap===3&&e1.more,JSON.stringify(e1));
+ await T(()=>document.querySelector('.sglcap [data-sglc=cam]').click());await p.waitForTimeout(500);
+ check('…Scannen opens the scanner',await T(()=>!!document.querySelector('.sc9')));
+ await T(()=>{window.__T.R('home')});await p.waitForTimeout(300);await T(()=>{document.querySelectorAll('.sc9').forEach(x=>x.remove())})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

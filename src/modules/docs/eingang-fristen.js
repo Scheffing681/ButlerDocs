@@ -54,7 +54,7 @@ const FR_SRC={doc:'fld',gov:'gov',task:'chk'};
 function frScreen(){const A=stDlAll(),f=m.frF||'all',S=A.filter(t=>f==='all'||t.src===f);
  const cnt=k=>A.filter(t=>k==='all'||t.src===k).length;
  const row=t=>{const n=stDays(t.k),c=n<0?'r':n<=14?'y':'g';
-  return`<div class="frr"><button type="button" class="frm" ${t.act||''}><i class="${c}"></i>${dhi(FR_SRC[t.src]||'clock')}<span><b>${i(t.t)}</b><small>${i([t.w,stDate(t.k)].filter(Boolean).join(' · '))}</small></span><em class="${c}">${i(stWhen(t.k))}</em></button>${t.src==='task'?`<button type="button" class="frck" data-act="frdone" data-id="${i(t.tid)}" aria-label="✓"></button>`:''}</div>`};
+  return`<div class="frr"><button type="button" class="frm" ${t.act||''}><i class="${c}"></i>${dhi(FR_SRC[t.src]||'clock')}<span><b>${i(t.t)}</b><small>${i([t.w,stDate(t.k)].filter(Boolean).join(' · '))}</small></span><em class="${c}" data-n="${n}">${i(stWhen(t.k))}</em></button>${t.src==='task'?`<button type="button" class="frck" data-act="frdone" data-id="${i(t.tid)}" aria-label="✓"></button>`:''}</div>`};
  const grp=(k,fn)=>{const R2=S.filter(t=>fn(stDays(t.k)));return R2.length?`<h3 class="odh">${i(egt(k))}</h3><div class="dhcard frl">${R2.map(row).join('')}</div>`:''};
  const wd=(new Date().getDay()+6)%7,toSun=6-wd,dm=new Date(new Date().getFullYear(),new Date().getMonth()+1,0).getDate()-new Date().getDate();
  return`<div class="screen dhome frw"><div class="sub-hdr"><button class="iconbtn" data-act="odback" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(stt('a_dl'))}</h2></div><button type="button" class="iconbtn" data-act="go" data-to="mycal" aria-label="${i(egt('cal'))}">${dhi('cal')}</button></div>

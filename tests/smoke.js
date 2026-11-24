@@ -858,7 +858,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  where='design';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.ndbar,.bdtip').forEach(x=>x.remove());const G=window.__T.g();G.bdTheme='hell';window.__T.R('home');window.__T.v()});await p.waitForTimeout(400);
  const d1=await T(()=>{const r=document.documentElement,n=document.querySelector('.nav.bdnav');return{bd:r.dataset.bd,bg:getComputedStyle(r).getPropertyValue('--bg').trim().toUpperCase(),keys:n?[...n.querySelectorAll('[data-act=ly6go]')].map(b=>b.dataset.k).join(','):'',orb:!!(n&&n.querySelector('.bdorb')),on:n&&n.querySelector('.on')&&n.querySelector('.on').dataset.k}});
  check('Glas: light palette on <html data-bd="hell">',d1.bd==='hell'&&d1.bg==='#F6F4EE',JSON.stringify(d1));
- check('Glas: fixed bar Start · Dokumente · Butler orb · Fristen · Mehr',d1.keys==='home,archive,fristen,mehr'&&d1.orb&&d1.on==='home',JSON.stringify(d1));
+ check('Glas: default bar Start · Dokumente · Butler orb · Fristen · Mehr',d1.keys==='home,archive,fristen,mehr'&&d1.orb&&d1.on==='home',JSON.stringify(d1));
  await T(()=>{window.__T.g().nav6=['home','search','stats','profile'];window.__T.v()});await p.waitForTimeout(200);
  check('…a saved old bar does not change it',await T(()=>[...document.querySelectorAll('.nav.bdnav [data-act=ly6go]')].map(b=>b.dataset.k).join(',')==='home,archive,fristen,mehr'));
  await T(()=>document.querySelector('.bdorb').click());await p.waitForTimeout(300);
@@ -998,6 +998,15 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
   await T(()=>document.querySelector('.screen>.bghd .bgcb').click());await p.waitForTimeout(400);
   check('‹ from «'+k+'» goes back to Alle Bereiche',await T(()=>window.__T.m().route==='dall'),await T(()=>window.__T.m().route))}
  await T(()=>window.__T.R('home'))}
+ where='nav edit';{await T(()=>{document.querySelectorAll('.dtsheet,.orbar').forEach(x=>x.remove());delete window.__T.g().bdNav;window.__T.R('ly6')});await p.waitForTimeout(400);
+ check('Bottom-bar editor: 4 places, «Mehr» locked, Speichern button',await T(()=>document.querySelectorAll('.bned [data-bn=sel]').length===4&&!!document.querySelector('.bned .bnsl.lk')&&!!document.querySelector('.bned [data-bn=save]')));
+ await T(()=>{document.querySelector('[data-bn=sel][data-i="1"]').click();document.querySelector('[data-bn=put][data-k=post]').click()});await p.waitForTimeout(200);
+ check('…not saved until «Speichern»',await T(()=>!window.__T.g().bdNav&&!!document.querySelector('.bnchg')));
+ await T(()=>document.querySelector('[data-bn=save]').click());await p.waitForTimeout(400);
+ check('…saved: the bar shows Start · Post · Butler · Fristen · Mehr',await T(()=>[...document.querySelectorAll('.nav.bdnav [data-act=ly6go]')].map(b=>b.dataset.k).join(',')==='home,post,fristen,mehr'));
+ await T(()=>document.querySelector('.nav.bdnav [data-k=post]').click());await p.waitForTimeout(400);
+ check('…the new place opens Post',await T(()=>window.__T.m().route==='post'));
+ await T(()=>{delete window.__T.g().bdNav;window.__T.save();window.__T.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

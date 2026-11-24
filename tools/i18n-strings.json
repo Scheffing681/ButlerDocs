@@ -755,6 +755,7 @@
    "finanzen.js",
    "finanzen2.js",
    "mappen.js",
+   "nav-edit.js",
    "steuer-plus.js",
    "vorsorge.js"
   ]
@@ -2191,6 +2192,7 @@
   "files": [
    "bereiche.js",
    "layout-docs.js",
+   "nav-edit.js",
    "scan-glas.js"
   ]
  },
@@ -4163,6 +4165,7 @@
   "de": "Eingang",
   "files": [
    "eingang-fristen.js",
+   "nav-edit.js",
    "search-places.js",
    "start-glas.js"
   ]
@@ -4324,6 +4327,7 @@
   "de": "Post",
   "files": [
    "farben.js",
+   "nav-edit.js",
    "post.js",
    "scan-glas.js"
   ]
@@ -4355,6 +4359,7 @@
   "files": [
    "finanzen.js",
    "layout-docs.js",
+   "nav-edit.js",
    "notizen.js",
    "search-places.js",
    "start.js"
@@ -6836,6 +6841,65 @@
    "move-phone.js"
   ]
  },
+ "Bottom bar": {
+  "ru": "Нижняя панель",
+  "de": "Untere Leiste",
+  "files": [
+   "nav-edit.js"
+  ]
+ },
+ "Tap a place, then what should go there. Butler in the middle and «More» always stay.": {
+  "ru": "Нажмите место, затем то, что туда поставить. Батлер в центре и «Ещё» остаются всегда.",
+  "de": "Platz antippen, dann das, was dorthin soll. Butler in der Mitte und «Mehr» bleiben immer.",
+  "files": [
+   "nav-edit.js"
+  ]
+ },
+ "Reset": {
+  "ru": "Как было",
+  "de": "Wie vorher",
+  "files": [
+   "nav-edit.js",
+   "ordnen.js"
+  ]
+ },
+ "Bottom bar saved": {
+  "ru": "Нижняя панель сохранена",
+  "de": "Untere Leiste gespeichert",
+  "files": [
+   "nav-edit.js"
+  ]
+ },
+ "always": {
+  "ru": "всегда",
+  "de": "immer",
+  "files": [
+   "nav-edit.js"
+  ]
+ },
+ "What can go there": {
+  "ru": "Что можно поставить",
+  "de": "Was hin kann",
+  "files": [
+   "nav-edit.js"
+  ]
+ },
+ "Unsaved changes": {
+  "ru": "Есть несохранённые изменения",
+  "de": "Nicht gespeicherte Änderungen",
+  "files": [
+   "nav-edit.js"
+  ]
+ },
+ "Family": {
+  "ru": "Семья",
+  "de": "Familie",
+  "files": [
+   "nav-edit.js",
+   "notizen.js",
+   "start.js"
+  ]
+ },
  "This document is already there: “%t”": {
   "ru": "Такой документ уже есть: «%t»",
   "de": "Dieses Dokument gibt es schon: „%t“",
@@ -6991,14 +7055,6 @@
   "de": "Reisen",
   "files": [
    "notizen.js"
-  ]
- },
- "Family": {
-  "ru": "Семья",
-  "de": "Familie",
-  "files": [
-   "notizen.js",
-   "start.js"
   ]
  },
  "Ideas": {
@@ -7398,13 +7454,6 @@
   "de": "clock",
   "files": [
    "only-docs.js"
-  ]
- },
- "Reset": {
-  "ru": "Как было",
-  "de": "Zurücksetzen",
-  "files": [
-   "ordnen.js"
   ]
  },
  "Drag a tile": {

@@ -1285,3 +1285,9 @@
 1284	Anılar, geçmiş
 1285	Sıfırla
 1286	Kutucuğu sürükleyin
+1287	Alt çubuk
+1288	Bir yere dokunun, sonra oraya ne konacağını seçin. Ortadaki Butler ve «Daha fazla» her zaman kalır.
+1289	Alt çubuk kaydedildi
+1290	her zaman
+1291	Oraya ne konabilir
+1292	Kaydedilmemiş değişiklikler

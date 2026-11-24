@@ -37,7 +37,7 @@ function sgStart(){sgTidy();let E=[];try{E=typeof egList==='function'?egList():[
  return`<div class="screen dhome stn sgs">
  <div class="sthd sghd"><button type="button" class="stav" data-act="go" data-to="profile" aria-label="${i(stt('n_prof'))}">${i(stIni())}</button><span class="sgwm">BUTLER</span>
   <div class="dhtr"><button type="button" class="stcb" data-act="go" data-to="reminders" aria-label="bell">${dhi('bell')}</button></div></div>
- <h1 class="sggr">${i(stHello())},${stName()?` <em>${i(stName())}</em>`:''}</h1><p class="sgdt">${i(ds)}</p>
+ <h1 class="sggr">${i(stHello())}${(()=>{const n=String(stName()||'').trim().split(/\s+/)[0];return n?`, <em>${i(n)}</em>`:''})()}</h1><p class="sgdt">${i(ds)}</p>
  <button type="button" class="sgq" data-act="go" data-to="search">${sti('search')}<span>${i(stt('ask'))}</span></button>
  ${sgImp()}
  <div class="sgtwo"><button type="button" class="sgc" data-act="stcap">${dhi('scan')}<span><b>${i(sgt('cap'))}</b><small>${i(sgt('capS'))}</small></span></button>
@@ -74,7 +74,7 @@ Hooks.css('docs-start-glas',`
 .sgs{padding-bottom:24px}
 .sghd{display:grid!important;grid-template-columns:44px 1fr 44px;align-items:center}.sgwm{text-align:center;font:600 13px Georgia,"Cormorant Garamond",serif;letter-spacing:.42em;color:var(--muted);padding-left:.42em}
 .sggr{font:600 26px/1.15 var(--display);margin:4px 2px 2px;color:var(--ink)}.sggr em{font-style:normal;color:var(--bd-acc,var(--green))}
-.sgdt{margin:0 2px 12px;font-size:15px;color:var(--muted)}
+.sggr{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sgdt{margin:0 2px 10px;font-size:15px;color:var(--muted)}
 .sgq{display:flex;align-items:center;gap:10px;width:100%;min-height:48px;border-radius:16px;border:1px solid var(--bd-edge,var(--line));background:var(--bd-glass,var(--surface));color:var(--muted);font:16px var(--body);padding:0 14px;margin-bottom:12px;text-align:left;cursor:pointer}.sgq svg{width:20px;height:20px}
 .sgimp{padding:12px 14px 6px!important;margin-bottom:12px;border-radius:22px!important}
 .sgh{display:flex;align-items:center;margin-bottom:2px}.sgh b{font-size:17px}.sgh button{margin-left:auto;border:0;background:none;color:var(--bd-acc,var(--green));font:600 15px var(--body);padding:6px 0 6px 10px;cursor:pointer}

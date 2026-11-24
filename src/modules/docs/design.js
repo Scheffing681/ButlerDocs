@@ -32,9 +32,10 @@ try{ly6EXT.mehr={lab:()=>bdt('more'),ic:()=>bd8i('grid'),open:()=>R('dall'),on:r
 const BD_NAV=['home','archive','fristen','mehr'];
 const bdJ0=j0;
 j0=function(){if(!bdOn())return bdJ0.apply(this,arguments);
- let c='mehr';try{const r=m.route;if(r==='concierge')c='orb';else if(r==='home'||r==='eing'||r==='post')c='home';else{const x=['archive','fristen'].find(k=>ly6EXT[k]&&ly6EXT[k].on&&ly6EXT[k].on(r));if(x)c=x;else if(r==='archive')c='archive'}}catch{}
+ const S=(typeof bdNavSlots==='function')?bdNavSlots():BD_NAV;
+ let c='mehr';try{const r=m.route;if(r==='concierge')c='orb';else{const x=S.find(k=>k!=='mehr'&&(k===r||(ly6EXT[k]&&ly6EXT[k].on&&ly6EXT[k].on(r))));if(x)c=x;else if(S.includes('home')&&(r==='home'||r==='eing'||r==='post'))c='home'}}catch{}
  const b=k=>`<button data-act="ly6go" data-k="${k}" data-to="${k}" class="${c===k?'on':''}" ${c===k?'aria-current="page"':''}>${ly6ic(k)}<span>${i(ly6lab(k))}</span></button>`;
- return`<nav class="nav bdnav">${b('home')}${b('archive')}<button type="button" class="bdorb${c==='orb'?' on':''}${g.bdOrbSeen?'':' new'}" data-act="bdorb" aria-label="${i(bdt('butler'))}"><i class="bdob" aria-hidden="true"></i><span>${i(bdt('butler'))}</span></button>${b('fristen')}${b('mehr')}</nav>`};
+ return`<nav class="nav bdnav">${b(S[0])}${b(S[1])}<button type="button" class="bdorb${c==='orb'?' on':''}${g.bdOrbSeen?'':' new'}" data-act="bdorb" aria-label="${i(bdt('butler'))}"><i class="bdob" aria-hidden="true"></i><span>${i(bdt('butler'))}</span></button>${b(S[2])}${b(S[3])}</nav>`};
 /* hold the orb = scanner at once */
 let bdLPt=0,bdLPdone=0;
 document.addEventListener('pointerdown',e=>{const o=e.target.closest&&e.target.closest('.bdorb');if(!o)return;bdLPdone=0;clearTimeout(bdLPt);

@@ -91,3 +91,4 @@ docs/start-glas.js
 docs/butler-glas.js
 docs/screens-glas.js
 docs/areas-glas.js
+docs/doc-glas.js

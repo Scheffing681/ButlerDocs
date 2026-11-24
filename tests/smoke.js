@@ -936,6 +936,13 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  const m1=await T(()=>({e:!!document.querySelector('.agempty'),n:document.querySelectorAll('.agstep').length,em:!!document.querySelector('.screen>p.empty')}));
  check('Gesundheit: empty → card, health card, vaccination record, family doctor',m1.em?(m1.e&&m1.n===3):!m1.e,JSON.stringify(m1));
  await T(()=>window.__T.R('home'))}
+ where='doc glas';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip').forEach(x=>x.remove());window.__T.R('archive')});await p.waitForTimeout(400);
+ await T(()=>{const b=document.querySelector('[data-act=dzopen]');if(b)b.click();else window.__lnq.open('lz')});await p.waitForTimeout(700);await T(()=>document.querySelectorAll('.dtsheet').forEach(x=>x.remove()));
+ const g1=await T(()=>{const sc=document.querySelector('.screen.dgw');return sc?{dg:sc.classList.contains('dgw'),hd:!!sc.querySelector(':scope>.bghd [data-act]'),t:(sc.querySelector('.bgtitle')||{}).textContent,view:sc.querySelectorAll('button[data-act]').length>3}:{}});
+ check('Glas document screen: header ‹ · BUTLER and title',g1.dg&&g1.hd&&!!g1.t,JSON.stringify(g1));
+ await T(()=>document.querySelector('.screen.dgw>.bghd .bgcb').click());await p.waitForTimeout(400);
+ check('…‹ goes back',await T(()=>!document.querySelector('.screen.dgw')));
+ await T(()=>window.__T.R('home'))}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

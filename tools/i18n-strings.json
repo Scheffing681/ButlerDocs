@@ -1238,6 +1238,7 @@
    "behoerden.js",
    "eingang-fristen.js",
    "post.js",
+   "scan-glas.js",
    "start-glas.js"
   ]
  },
@@ -2188,7 +2189,8 @@
   "de": "Scanner",
   "files": [
    "bereiche.js",
-   "layout-docs.js"
+   "layout-docs.js",
+   "scan-glas.js"
   ]
  },
  "Family & close ones": {
@@ -3767,6 +3769,7 @@
    "design.js",
    "dokumente-butler.js",
    "notizen.js",
+   "scan-glas.js",
    "screens-glas.js",
    "start.js"
   ]
@@ -5285,7 +5288,8 @@
   "ru": "%n стр.",
   "de": "%n S.",
   "files": [
-   "karriere2.js"
+   "karriere2.js",
+   "scan-glas.js"
   ]
  },
  "PDF file – cannot be inserted": {
@@ -7369,7 +7373,8 @@
   "ru": "Почта",
   "de": "Post",
   "files": [
-   "post.js"
+   "post.js",
+   "scan-glas.js"
   ]
  },
  "Write a letter": {
@@ -7728,6 +7733,118 @@
   "de": "im Browser",
   "files": [
    "reliability.js"
+  ]
+ },
+ "Edges & shadows gone, several pages → PDF": {
+  "ru": "Края и тени уберутся, несколько страниц → PDF",
+  "de": "Ränder & Schatten weg, mehrere Seiten → PDF",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "Sheet": {
+  "ru": "Лист",
+  "de": "Blatt",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "ID · 2 sides": {
+  "ru": "Удостоверение · 2 стороны",
+  "de": "Ausweis · 2 Seiten",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "Use a ready one": {
+  "ru": "Взять готовое",
+  "de": "Fertiges holen",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "PDF or photo from Files, Photos, iCloud": {
+  "ru": "PDF или фото из «Файлов», «Фото», iCloud",
+  "de": "PDF oder Foto aus Dateien, Fotos, iCloud",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "Best quality": {
+  "ru": "Лучшее качество",
+  "de": "Beste Qualität",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "Photo with the iPhone camera, Butler straightens it": {
+  "ru": "Фото камерой iPhone, Батлер выровняет",
+  "de": "Foto mit der iPhone-Kamera, Butler begradigt es",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "From a printer or from mail": {
+  "ru": "С принтера или из почты",
+  "de": "Vom Drucker oder aus der Mail",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "Printer": {
+  "ru": "Принтер",
+  "de": "Drucker",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "on the printer «Scan to e-mail / iCloud» – or in the printer app «Save to Files»": {
+  "ru": "на принтере «Скан на e-mail / iCloud» — или в приложении принтера «Сохранить в Файлы»",
+  "de": "am Drucker «Scan an E-Mail / iCloud» – oder in der Drucker-App «In Dateien sichern»",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "press and hold the attachment → «Save to Files»": {
+  "ru": "вложение долго нажать → «Сохранить в Файлы»",
+  "de": "Anhang lange drücken → «In Dateien sichern»",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "Then here": {
+  "ru": "Потом здесь",
+  "de": "Dann hier",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "«Use a ready one» – Butler reads type, date and deadline": {
+  "ru": "«Взять готовое» — Батлер прочтёт вид, дату и срок",
+  "de": "«Fertiges holen» – Butler liest Art, Datum und Frist",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "Perfect like a real scanner: in «Files» → ⋯ → «Scan Documents», then «Use a ready one».": {
+  "ru": "Идеально, как настоящий сканер: в «Файлах» → ⋯ → «Сканировать документы», потом «Взять готовое».",
+  "de": "Perfekt wie ein echter Scanner: in «Dateien» → ⋯ → «Dokumente scannen», dann «Fertiges holen».",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "Recent": {
+  "ru": "Недавние",
+  "de": "Zuletzt",
+  "files": [
+   "scan-glas.js"
+  ]
+ },
+ "Nothing scanned yet": {
+  "ru": "Пока ничего не отсканировано",
+  "de": "Noch nichts gescannt",
+  "files": [
+   "scan-glas.js"
   ]
  },
  "Key papers": {

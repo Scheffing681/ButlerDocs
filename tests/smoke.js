@@ -966,6 +966,16 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>window.__T.R('eing'));await p.waitForTimeout(400);
  check('Eingang: Scannen · Fotos · Post · Mehr',await T(()=>!!document.querySelector('.sglcap [data-to=post]')&&!document.querySelector('.sglcap [data-sglc=file]')));
  await T(()=>window.__T.R('home'))}
+ where='scan glas';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip,.sc9').forEach(x=>x.remove());window.__T.R('home')});await p.waitForTimeout(300);
+ await T(()=>window.__T.L.sc9home());await p.waitForTimeout(400);
+ const s1=await T(()=>{const sc=document.querySelector('.screen.scgw');return sc?{hd:!!sc.querySelector(':scope>.bghd [data-act=bgback]'),cam:!!sc.querySelector('[data-scg=cam]'),files:!!sc.querySelector('[data-scg=files]'),nat:!!sc.querySelector('[data-scg=nat]'),seg:sc.querySelectorAll('[data-scgk]').length,old:!!document.querySelector('.sc9home'),help:!!sc.querySelector('details.scghelp'),bk:!!sc.querySelector('[data-scg=book],[data-a=book]')}:{}});
+ check('Glas Scanner page: Scannen · Blatt/Ausweis · Fertiges holen · Beste Qualität · help, no Buch/Tafel',s1.hd&&s1.cam&&s1.files&&s1.nat&&s1.seg===2&&!s1.old&&s1.help&&!s1.bk,JSON.stringify(s1));
+ await T(()=>document.querySelector('[data-scgk=id]').click());await p.waitForTimeout(200);
+ check('…«Ausweis · 2 Seiten» is remembered',await T(()=>window.__T.g().scKind==='id'&&document.querySelector('[data-scgk=id]').classList.contains('on')));
+ await T(()=>document.querySelector('[data-scgk=doc]').click());await p.waitForTimeout(200);
+ await T(()=>document.querySelector('[data-scg=cam]').click());await p.waitForTimeout(500);
+ check('…«Scannen» opens the camera scanner',await T(()=>!!document.querySelector('.sc9:not(.sc9home)')));
+ await T(()=>{document.querySelectorAll('.sc9').forEach(x=>x.remove());document.documentElement.classList.remove('sc9on');window.__T.R('home')})}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

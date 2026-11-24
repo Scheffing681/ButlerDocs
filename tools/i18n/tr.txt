@@ -1264,3 +1264,19 @@
 1263	Mektuplar kendiliğinden gelmez: uygulamanın kendi posta sunucusu yok. Otomatik olarak yalnızca App Store sürümünde.
 1264	%n mektup
 1265	1 mektup
+1266	Kenarlar ve gölgeler gider, birkaç sayfa → PDF
+1267	Sayfa
+1268	Kimlik · 2 yüz
+1269	Hazır olanı al
+1270	Dosyalar, Fotoğraflar, iCloud’dan PDF veya fotoğraf
+1271	En iyi kalite
+1272	iPhone kamerasıyla fotoğraf, Butler düzeltir
+1273	Yazıcıdan veya e-postadan
+1274	Yazıcı
+1275	yazıcıda «E-postaya / iCloud’a tara» – veya yazıcı uygulamasında «Dosyalar’a Kaydet»
+1276	eke basılı tutun → «Dosyalar’a Kaydet»
+1277	Sonra burada
+1278	«Hazır olanı al» – Butler türü, tarihi ve süreyi okur
+1279	Gerçek tarayıcı gibi: «Dosyalar» → ⋯ → «Belgeleri Tara», sonra «Hazır olanı al».
+1280	Son
+1281	Henüz bir şey taranmadı

@@ -94,3 +94,4 @@ docs/areas-glas.js
 docs/doc-glas.js
 docs/search-places.js
 docs/post.js
+docs/scan-glas.js

@@ -23,7 +23,7 @@ function bdApply(){try{const r=document.documentElement;if(!bdOn()){if(r.dataset
  if(r.dataset.sm)delete r.dataset.sm;
  const v2=bdDark()?'dunkel':'hell',a=BD_ACC[g.bdAcc]?g.bdAcc:'tuerkis';if(r.dataset.bd!==v2)r.dataset.bd=v2;if(r.dataset.bda!==a)r.dataset.bda=a;
  r.style.setProperty('--bd-acc',BD_ACC[a][v2==='dunkel'?1:0]);r.style.colorScheme=v2==='dunkel'?'dark':'light';
- const mt=document.querySelector('meta[name="theme-color"]');mt&&mt.setAttribute('content',v2==='dunkel'?'#081216':'#F6F4EE')}catch(e){Hooks.err('bdapply',e)}}
+ const mt=document.querySelector('meta[name="theme-color"]');mt&&mt.setAttribute('content',v2==='dunkel'?'#081216':'#F6F4EE');try{document.body.style.setProperty('background-color',v2==='dunkel'?'#081216':'#F6F4EE','important')}catch{}}catch(e){Hooks.err('bdapply',e)}}
 Hooks.on('render',bdApply);
 try{bdMQ&&bdMQ.addEventListener('change',()=>{bdApply()})}catch{}
 try{new MutationObserver(()=>{if(bdOn()&&document.documentElement.dataset.sm)bdApply()}).observe(document.documentElement,{attributes:!0,attributeFilter:['data-sm','data-style']})}catch{}
@@ -87,8 +87,13 @@ Hooks.css('docs-design',`
 :root[data-bd]{--bd8nv:var(--bg)!important;--bd8a:var(--bd-acc)!important;--bd8mu:var(--muted)!important;--bd8ln:var(--line)!important;--br9bg:var(--bg)!important;--lg-bg:var(--bg)!important;--lg-gold:var(--bd-acc)!important}
 html[data-bd] .app,html[data-bd].bd8n .app{background:var(--bg)!important;background-image:none!important;isolation:isolate}
 html[data-bd] .app::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none}
-html[data-bd="hell"] .app::before{background:radial-gradient(70% 40% at 100% 0%,color-mix(in srgb,var(--bd-acc) 16%,transparent),transparent 70%),radial-gradient(60% 35% at 0% 30%,rgba(138,143,214,.14),transparent 70%)}
-html[data-bd="dunkel"] .app::before{background:radial-gradient(80% 40% at 50% -5%,color-mix(in srgb,var(--bd-acc) 16%,transparent),transparent 70%),radial-gradient(60% 40% at 0% 60%,rgba(169,174,240,.07),transparent 70%)}
+/* v67: the glow starts below the status bar, so the strip under the clock has exactly the page colour — no edge line */
+html[data-bd="hell"] .app::before{background:radial-gradient(70% 32% at 100% 34%,color-mix(in srgb,var(--bd-acc) 13%,transparent),transparent 70%),radial-gradient(60% 30% at 0% 60%,rgba(138,143,214,.12),transparent 70%)}
+html[data-bd="dunkel"] .app::before{background:radial-gradient(80% 34% at 50% 30%,color-mix(in srgb,var(--bd-acc) 12%,transparent),transparent 70%),radial-gradient(60% 40% at 0% 70%,rgba(169,174,240,.07),transparent 70%)}
+/* one piece: no rubber-band bounce of the page or of the screen; content fades in under the status bar instead of a hard cut */
+html[data-bd],html[data-bd] body{overscroll-behavior:none}
+html[data-bd] .app>.screen{overscroll-behavior-y:none}
+html[data-bd] .app::after{content:"";position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:18px;background:linear-gradient(var(--bg),color-mix(in srgb,var(--bg) 0%,transparent));pointer-events:none;z-index:6}
 :root[data-bd] h1,:root[data-bd] h2,:root[data-bd] h3,:root[data-bd] h4{font-family:var(--display);letter-spacing:-.01em}
 :root[data-bd] small:not(.string small),:root[data-bd] .muted{font-size:max(13px,1em)}
 :root[data-bd] .string>i{background:var(--bg)!important}

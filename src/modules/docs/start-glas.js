@@ -73,7 +73,7 @@ document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest
 Hooks.css('docs-start-glas',`
 .sgs{padding-bottom:24px}
 .sghd{display:grid!important;grid-template-columns:44px 1fr 44px;align-items:center}.sgwm{text-align:center;font:600 13px Georgia,"Cormorant Garamond",serif;letter-spacing:.42em;color:var(--muted);padding-left:.42em}
-.sggr{font:600 28px/1.15 var(--display);margin:8px 2px 2px;color:var(--ink)}.sggr em{font-style:normal;color:var(--bd-acc,var(--green))}
+.sggr{font:600 26px/1.15 var(--display);margin:4px 2px 2px;color:var(--ink)}.sggr em{font-style:normal;color:var(--bd-acc,var(--green))}
 .sgdt{margin:0 2px 12px;font-size:15px;color:var(--muted)}
 .sgq{display:flex;align-items:center;gap:10px;width:100%;min-height:48px;border-radius:16px;border:1px solid var(--bd-edge,var(--line));background:var(--bd-glass,var(--surface));color:var(--muted);font:16px var(--body);padding:0 14px;margin-bottom:12px;text-align:left;cursor:pointer}.sgq svg{width:20px;height:20px}
 .sgimp{padding:12px 14px 6px!important;margin-bottom:12px;border-radius:22px!important}

@@ -91,7 +91,7 @@ Hooks.css('docs-start-glas',`
 .sgc{display:flex;align-items:center;gap:10px;min-width:0;border-radius:18px;padding:12px;border:1px solid rgba(255,255,255,.7);font:inherit;color:var(--ink);text-align:left;cursor:pointer;background:linear-gradient(150deg,#d6f1ea,#b8e3d8cc)}
 .sgc.sge{background:linear-gradient(150deg,#e3effa,#cfe0f3cc)}
 :root[data-bd="dunkel"] .sgc{background:linear-gradient(150deg,#1f6b5ccc,#14403acc);border-color:#5fe0c444}:root[data-bd="dunkel"] .sgc.sge{background:linear-gradient(150deg,#244a73cc,#1a2f4dcc);border-color:#8ab4ff44}
-.sgc svg{width:24px;height:24px;flex:none;color:var(--bd-acc,var(--green))}:root[data-bd="dunkel"] .sgc.sge svg{color:#9cc0ff}.sgc>span{flex:1;min-width:0}.sgc b{display:block;font-size:16px}.sgc small{display:block;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sgc{gap:8px!important;padding:12px 10px!important}.sgc svg{width:22px;height:22px;flex:none;color:var(--bd-acc,var(--green))}:root[data-bd="dunkel"] .sgc.sge svg{color:#9cc0ff}.sgc>span{flex:1;min-width:0}.sgc b{display:block;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sgc small{display:block;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sgc em{flex:none;font-style:normal;background:var(--bd-acc,var(--green));color:#fff;border-radius:11px;min-width:24px;height:24px;display:grid;place-items:center;font-size:13px;font-weight:700}:root[data-bd="dunkel"] .sgc em{color:#05201A}
 .sgar{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:8px!important}
 .sga{display:flex!important;flex-direction:column;align-items:center;gap:3px;padding:11px 2px 9px!important;min-width:0;border-radius:16px!important}

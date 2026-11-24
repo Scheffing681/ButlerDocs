@@ -13,9 +13,10 @@ const sglSign=n=>n<0?'r':n<=7?'y':'g';
 function sglHead(sc){const hd=sc.querySelector(':scope>.sub-hdr');if(!hd||sc.querySelector(':scope>.bghd'))return;
  const t=(hd.querySelector('.ttl h2,.ttl h1')||{}).textContent||'';const rb=hd.lastElementChild&&hd.lastElementChild.tagName==='BUTTON'&&hd.lastElementChild!==hd.firstElementChild?hd.lastElementChild:null;
  const nh=document.createElement('div');nh.className='bghd';
- nh.innerHTML=`<button type="button" class="bgcb" data-act="odback" aria-label="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><span class="sgwm">BUTLER</span><span></span>`;
+ nh.innerHTML=`<button type="button" class="bgcb" aria-label="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><span class="sgwm">BUTLER</span><span></span>`;
+ const fb=hd.firstElementChild,bb=nh.firstElementChild;if(fb&&fb.tagName==='BUTTON'){[...fb.attributes].forEach(a=>{if(a.name.startsWith('data-'))bb.setAttribute(a.name,a.value)})}if(!bb.dataset.act)bb.dataset.act='odback';
  if(rb){const c=rb.cloneNode(!0);c.className='bgcb';c.removeAttribute('id');nh.lastElementChild.replaceWith(c)}
- const h=document.createElement('h1');h.className='bgtitle';h.textContent=t;hd.before(nh);hd.before(h);sc.classList.add('sglw')}
+ const h=document.createElement('h1');h.className='bgtitle';h.textContent=t;hd.before(nh);hd.before(h);const sub=sc.querySelector(':scope>.dcsub');if(sub){sub.classList.add('bgsub');h.after(sub)}sc.classList.add('sglw')}
 function sglWeek(){const A=(()=>{try{return stDlAll()}catch{return[]}})(),now=new Date();now.setHours(12,0,0,0);const wd=(now.getDay()+6)%7,mo=new Date(now);mo.setDate(now.getDate()-wd);
  let h='';for(let j=0;j<7;j++){const d=new Date(mo);d.setDate(mo.getDate()+j);const k=d.toISOString().slice(0,10),n=A.filter(t=>t.k===k);const late=n.some(t=>stDays(t.k)<0);
   let wn='';try{wn=d.toLocaleDateString(he(),{weekday:'short'}).replace('.','').slice(0,2)}catch{}

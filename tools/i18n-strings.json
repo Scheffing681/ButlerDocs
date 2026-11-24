@@ -1,9 +1,216 @@
 {
+ "Still empty – 3 first steps": {
+  "ru": "Пока пусто — 3 первых шага",
+  "de": "Noch leer – 3 erste Schritte",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "So everything is together when you need it.": {
+  "ru": "Так всё будет под рукой, когда понадобится.",
+  "de": "So ist alles beisammen, wenn Sie es brauchen.",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "add": {
+  "ru": "добавить",
+  "de": "hinzufügen",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "scan": {
+  "ru": "сканировать",
+  "de": "scannen",
+  "files": [
+   "areas-glas.js",
+   "dokumente-butler.js"
+  ]
+ },
+ "go there": {
+  "ru": "открыть",
+  "de": "öffnen",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Employer": {
+  "ru": "Работодатель",
+  "de": "Arbeitgeber",
+  "files": [
+   "areas-glas.js",
+   "linkup.js"
+  ]
+ },
+ "Name and since when": {
+  "ru": "Название и с какого времени",
+  "de": "Name und seit wann",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Employment contract": {
+  "ru": "Трудовой договор",
+  "de": "Arbeitsvertrag",
+  "files": [
+   "areas-glas.js",
+   "karriere2.js",
+   "mappen.js",
+   "start.js"
+  ]
+ },
+ "photo or file": {
+  "ru": "Фото или файл",
+  "de": "fotografieren oder Datei",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Payslip": {
+  "ru": "Расчётный лист",
+  "de": "Gehaltsabrechnung",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "the latest is enough": {
+  "ru": "Достаточно последнего",
+  "de": "die letzte genügt",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Add the citizens’ office": {
+  "ru": "Бюргерамт",
+  "de": "Bürgeramt hinzufügen",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Address, hours, appointment": {
+  "ru": "Адрес, часы работы, запись",
+  "de": "Adresse, Öffnungszeiten, Termin",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Tax office": {
+  "ru": "Финансовое ведомство",
+  "de": "Finanzamt",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Enter the tax number": {
+  "ru": "Указать налоговый номер",
+  "de": "Steuernummer eintragen",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
  "Letter from an office": {
   "ru": "Письмо из ведомства",
-  "de": "Behördenschreiben",
+  "de": "Brief vom Amt",
   "files": [
+   "areas-glas.js",
    "behoerden-briefe.js"
+  ]
+ },
+ "photograph it – the deadline is found": {
+  "ru": "Фото — срок найдётся сам",
+  "de": "fotografieren – Frist wird gefunden",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Health insurance card": {
+  "ru": "Карта больничной кассы",
+  "de": "Gesundheitskarte",
+  "files": [
+   "areas-glas.js",
+   "start.js"
+  ]
+ },
+ "Front and back": {
+  "ru": "Обе стороны",
+  "de": "Vorder- und Rückseite",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Vaccination record": {
+  "ru": "Прививочный паспорт",
+  "de": "Impfpass",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "every page with entries": {
+  "ru": "Все страницы с отметками",
+  "de": "alle Seiten mit Einträgen",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Family doctor": {
+  "ru": "Домашний врач",
+  "de": "Hausarzt",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Name and phone under «Important people»": {
+  "ru": "Имя и телефон в «Важных людях»",
+  "de": "Name und Telefon bei «Wichtige Menschen»",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Scan a document": {
+  "ru": "Сканировать документ",
+  "de": "Dokument scannen",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "Edges and shadows are removed": {
+  "ru": "Края и тени убираются сами",
+  "de": "Ränder und Schatten werden entfernt",
+  "files": [
+   "areas-glas.js"
+  ]
+ },
+ "From photos": {
+  "ru": "Из фото",
+  "de": "Aus Fotos",
+  "files": [
+   "areas-glas.js",
+   "start.js"
+  ]
+ },
+ "Pictures and screenshots": {
+  "ru": "Снимки и скриншоты",
+  "de": "Bilder und Screenshots",
+  "files": [
+   "areas-glas.js",
+   "start.js"
+  ]
+ },
+ "File or PDF": {
+  "ru": "Файл или PDF",
+  "de": "Datei oder PDF",
+  "files": [
+   "areas-glas.js",
+   "start.js"
+  ]
+ },
+ "From «Files» and iCloud": {
+  "ru": "Из «Файлов» и iCloud",
+  "de": "Aus «Dateien» und iCloud",
+  "files": [
+   "areas-glas.js",
+   "start.js"
   ]
  },
  "Looks like a letter from: %o": {
@@ -3903,13 +4110,6 @@
    "dokumente-butler.js"
   ]
  },
- "scan": {
-  "ru": "сканировать",
-  "de": "scannen",
-  "files": [
-   "dokumente-butler.js"
-  ]
- },
  "missing": {
   "ru": "нет",
   "de": "fehlt",
@@ -4752,15 +4952,6 @@
    "karriere2.js"
   ]
  },
- "Employment contract": {
-  "ru": "Трудовой договор",
-  "de": "Arbeitsvertrag",
-  "files": [
-   "karriere2.js",
-   "mappen.js",
-   "start.js"
-  ]
- },
  "Reference (Zeugnis)": {
   "ru": "Arbeitszeugnis",
   "de": "Arbeitszeugnis",
@@ -5557,13 +5748,6 @@
  "Where else?": {
   "ru": "Куда ещё?",
   "de": "Wo noch zeigen?",
-  "files": [
-   "linkup.js"
-  ]
- },
- "Employer": {
-  "ru": "Работодатель",
-  "de": "Arbeitgeber",
   "files": [
    "linkup.js"
   ]
@@ -7963,34 +8147,6 @@
    "start.js"
   ]
  },
- "From photos": {
-  "ru": "Из фото",
-  "de": "Aus Fotos",
-  "files": [
-   "start.js"
-  ]
- },
- "Pictures and screenshots": {
-  "ru": "Снимки и скриншоты",
-  "de": "Bilder und Screenshots",
-  "files": [
-   "start.js"
-  ]
- },
- "File or PDF": {
-  "ru": "Файл или PDF",
-  "de": "Datei oder PDF",
-  "files": [
-   "start.js"
-  ]
- },
- "From «Files» and iCloud": {
-  "ru": "Из «Файлов» и iCloud",
-  "de": "Aus «Dateien» und iCloud",
-  "files": [
-   "start.js"
-  ]
- },
  "Printer & scanner (Wi-Fi)": {
   "ru": "Принтер и сканер (Wi-Fi)",
   "de": "Drucker & Scanner (WLAN)",
@@ -8036,13 +8192,6 @@
  "What one usually needs in Germany. Tick = already in «Documents».": {
   "ru": "Что обычно нужно в Германии. Галочка — документ уже есть в «Документах».",
   "de": "Was man in Deutschland meist braucht. Haken = schon in «Dokumente».",
-  "files": [
-   "start.js"
-  ]
- },
- "Health insurance card": {
-  "ru": "Карта больничной кассы",
-  "de": "Gesundheitskarte",
   "files": [
    "start.js"
   ]

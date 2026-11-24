@@ -922,6 +922,20 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>document.querySelector('.sglcap [data-sglc=cam]').click());await p.waitForTimeout(500);
  check('…Scannen opens the scanner',await T(()=>!!document.querySelector('.sc9')));
  await T(()=>{window.__T.R('home')});await p.waitForTimeout(300);await T(()=>{document.querySelectorAll('.sc9').forEach(x=>x.remove())})}
+ where='areas glas';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip').forEach(x=>x.remove());window.__T.R('dall')});await p.waitForTimeout(400);
+ check('Glas Mehr: same header ‹ · BUTLER, big title',await T(()=>!!document.querySelector('.screen>.bghd .bgcb')&&!!document.querySelector('.screen>.bgtitle')));
+ for(const r of ['people','fzm','kar','bsv','dnach']){await T(r=>window.__T.R(r),r);await p.waitForTimeout(300);check('Glas header on '+r,await T(()=>!!document.querySelector('.screen>.bghd')&&getComputedStyle(document.querySelector('.screen>.sub-hdr')).display==='none'))}
+ await T(()=>window.__T.R('kar'));await p.waitForTimeout(300);
+ const k1=await T(()=>({e:!!document.querySelector('.agempty'),n:document.querySelectorAll('.agstep').length,b:[...document.querySelectorAll('.agstep [data-agdo]')].map(b=>b.dataset.agdo).join(',')}));
+ if(k1.e){check('Empty Arbeit: «3 erste Schritte», each with a button',k1.n===3&&k1.b==='act:krjobed,cam,cam',JSON.stringify(k1));
+  await T(()=>document.querySelector('[data-agdo="act:krjobed"]').click());await p.waitForTimeout(300);check('…«Arbeitgeber hinzufügen» opens the employer form',await T(()=>!!document.querySelector('.dtsheet')||window.__T.m().route!=='kar'));await T(()=>document.querySelectorAll('.dtsheet').forEach(x=>x.remove()))}
+ await T(()=>window.__T.R('bsv'));await p.waitForTimeout(300);
+ const b1=await T(()=>({e:!!document.querySelector('.agempty'),n:document.querySelectorAll('.agstep').length,list:!!document.querySelector('.screen.bsv .odr')}));
+ check('Behörden: empty → 3 first steps, with entries → none',b1.list?!b1.e:(b1.e&&b1.n===3),JSON.stringify(b1));
+ await T(()=>{window.__T.R('home')});await p.waitForTimeout(300);await T(()=>document.querySelector('[data-act=dccat][data-v=med]').click());await p.waitForTimeout(400);
+ const m1=await T(()=>({e:!!document.querySelector('.agempty'),n:document.querySelectorAll('.agstep').length,em:!!document.querySelector('.screen>p.empty')}));
+ check('Gesundheit: empty → card, health card, vaccination record, family doctor',m1.em?(m1.e&&m1.n===3):!m1.e,JSON.stringify(m1));
+ await T(()=>window.__T.R('home'))}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

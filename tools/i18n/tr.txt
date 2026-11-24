@@ -1224,3 +1224,23 @@
 1223	Diğer yollar
 1224	%d tarihindeki süreler
 1225	Bu gün süre yok
+1226	Henüz boş – 3 ilk adım
+1227	Böylece gerektiğinde her şey bir arada olur.
+1228	ekle
+1229	aç
+1230	Ad ve ne zamandan beri
+1231	fotoğraf veya dosya
+1232	Maaş bordrosu
+1233	sonuncusu yeterli
+1234	Nüfus dairesini ekle
+1235	Adres, saatler, randevu
+1236	Vergi dairesi
+1237	Vergi numarasını girin
+1238	fotoğrafını çekin – süre bulunur
+1239	Ön ve arka yüz
+1240	Aşı kartı
+1241	kayıtlı tüm sayfalar
+1242	Aile hekimi
+1243	«Önemli kişiler» altında ad ve telefon
+1244	Belge tara
+1245	Kenarlar ve gölgeler kaldırılır

@@ -17,7 +17,7 @@ const agS={t:['Пока пусто — 3 первых шага','Noch leer – 3
  d2:['Из фото','Aus Fotos','From photos'],d2S:['Снимки и скриншоты','Bilder und Screenshots','Pictures and screenshots'],
  d3:['Файл или PDF','Datei oder PDF','File or PDF'],d3S:['Из «Файлов» и iCloud','Aus «Dateien» und iCloud','From «Files» and iCloud']};
 const agt=k=>cv5n(agS[k]||[k]);
-const AG_R=['scan','post','letters','search','dall','people','fzm','kar','bsv','dccat','dnach','mpx','tasks','mycal','notiz','life','profile','style','reminders'];
+const AG_R=['dsafe','dvors','law','ins','assets','projects','project','pv','td9today','ly6','scan','post','letters','search','dall','people','fzm','kar','bsv','dccat','dnach','mpx','tasks','mycal','notiz','life','profile','style','reminders'];
 /* the steps: [title, subtitle, icon, button word, what it does] */
 const AG_STEPS={
  kar:[['job','jobS','brief','add','act:krjobed'],['con','conS','file','scan','cam'],['pay','payS','coin','scan','cam']],

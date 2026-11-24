@@ -98,3 +98,4 @@ docs/scan-glas.js
 docs/farben.js
 docs/ordnen.js
 docs/nav-edit.js
+docs/alt-glas.js

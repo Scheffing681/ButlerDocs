@@ -3,7 +3,7 @@
    Vorsorge, every document category, Mappen, Aufgaben, Kalender, Notizen, Profil, Stil.
    Gold buttons and tabs take the accent colour. Every empty area shows «Noch leer – 3 erste Schritte» with one button per step. */
 const agS={t:['Пока пусто — 3 первых шага','Noch leer – 3 erste Schritte','Still empty – 3 first steps'],s:['Так всё будет под рукой, когда понадобится.','So ist alles beisammen, wenn Sie es brauchen.','So everything is together when you need it.'],
- add:['добавить','hinzufügen','add'],scan:['сканировать','scannen','scan'],open:['открыть','öffnen','go there'],
+ add:['добавить','hinzufügen','add'],scan:['скан','scannen','scan'],open:['открыть','öffnen','go there'],
  job:['Работодатель','Arbeitgeber','Employer'],jobS:['Название и с какого времени','Name und seit wann','Name and since when'],
  con:['Трудовой договор','Arbeitsvertrag','Employment contract'],conS:['Фото или файл','fotografieren oder Datei','photo or file'],
  pay:['Расчётный лист','Gehaltsabrechnung','Payslip'],payS:['Достаточно последнего','die letzte genügt','the latest is enough'],
@@ -48,8 +48,8 @@ Hooks.css('docs-areas-glas',`
 .agsteps{display:flex;flex-direction:column;gap:8px}
 .agstep{display:flex;align-items:center;gap:10px;border:1px solid var(--bd-edge,var(--line));border-radius:16px;background:var(--bd-glass,var(--surface));padding:10px 10px 10px 12px}
 .agi{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:color-mix(in srgb,var(--bd-acc,var(--green)) 12%,transparent);color:var(--bd-acc,var(--green))}.agi svg{width:20px;height:20px}
-.agtx{flex:1;min-width:0}.agtx b{display:block;font-size:15.5px;overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}.agtx small{display:block;font-size:13.5px;color:var(--muted);overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
-.agb{flex:none;border:0;border-radius:12px;padding:8px 9px;font:700 13.5px var(--body);cursor:pointer;background:color-mix(in srgb,var(--bd-acc,var(--green)) 14%,transparent);color:var(--bd-acc,var(--green));max-width:40%;white-space:normal;overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+.agtx{flex:1;min-width:0}.agtx b{display:block;font-size:15.5px;overflow-wrap:normal;hyphens:manual;-webkit-hyphens:manual}.agtx small{display:block;font-size:13.5px;color:var(--muted);overflow-wrap:normal;hyphens:manual;-webkit-hyphens:manual}
+.agb{flex:none;border:0;border-radius:12px;padding:8px 9px;font:700 13.5px var(--body);cursor:pointer;background:color-mix(in srgb,var(--bd-acc,var(--green)) 14%,transparent);color:var(--bd-acc,var(--green));max-width:34%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .agb.sc{background:var(--bd-acc,var(--green));color:#fff}:root[data-bd="dunkel"] .agb.sc{color:#05201A}:root[data-bd="dunkel"] .agb:not(.sc){color:var(--bd-acc)}
 /* gold → accent */
 :root[data-bd] .xpchip{background:var(--bd-glass)!important;border:1px solid var(--bd-edge)!important;color:var(--ink)!important}

@@ -33,7 +33,13 @@ document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest
  try{const a=b.dataset.poa;if(a==='write')R('letters');else if(a==='photo'||a==='paste')L.mlnew();else if(a==='list')L.mllist();
   else if(b.dataset.pok==='r')L.mlopen({id:b.dataset.poi});else if(b.dataset.pok==='w')f5(b.dataset.poi)}catch(er){Hooks.err('poact',er)}});
 /* back one step */
-Hooks.act('bgback',()=>{try{if(!eg())R('home')}catch{R('home')}});
+/* v68: a screen's own back (sub-page → its list) is still used, but when it would leave the screen
+   (bsvback, fzback, dchome … all go to Start or Dokumente) the step goes back in the history instead */
+Hooks.act('bgback',d=>{const back=()=>{try{if(!eg())R('home')}catch{R('home')}};const ia=d&&d.iact;
+ if(!ia||typeof L[ia]!=='function')return back();
+ const r0=m.route,R0=R;let left=null;R=function(r){if(left===null&&r!==r0){left=r;return}return R0.apply(this,arguments)};
+ try{L[ia](Object.assign({},d,{act:ia}))}catch(e){Hooks.err('bgback',e)}finally{R=R0}
+ if(left!==null||m.route!==r0){if(m.route!==r0)m.route=r0;back()}});
 /* Start: «Dokumente» tile → «Post» (only in the new look; the bar keeps Dokumente) */
 const poSA=sgStart;sgStart=function(){let h=poSA.apply(this,arguments);try{const n=poCount();
  h=h.replace(/<button type="button" class="sta sga" data-k="docs"[^>]*>[\s\S]*?<\/button>/,`<button type="button" class="sta sga" data-k="post" data-act="go" data-to="post">${poIc(PO_MAIL)}<b>${i(pot('t'))}</b><small>${n?i(n===1?pot('n1'):pot('n',{n})):'&nbsp;'}</small></button>`)}catch(e){Hooks.err('postart',e)}return h};

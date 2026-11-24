@@ -27,6 +27,9 @@ Hooks.css('docs-farben',`
 :root[data-bd] .brt .ddf{margin:6px auto 8px}:root[data-bd] .brt .ddf svg{width:20px!important;height:20px!important;color:#fff!important;stroke:#fff!important}
 :root[data-bd] .sga .ddf{width:46px;height:34px;margin:6px auto 4px}:root[data-bd] .sga .ddf svg{width:17px!important;height:17px!important;color:#fff!important;stroke:#fff!important}
 :root[data-bd] .sga .ddf:before{width:20px;height:8px;top:-5px}
+:root[data-bd] .dhgrid,:root[data-bd] .brm{grid-template-columns:repeat(3,minmax(0,1fr))!important}:root[data-bd] .brm{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+:root[data-bd] .dht,:root[data-bd] .brw{min-width:0;overflow:hidden}
+:root[data-bd] .dht b,:root[data-bd] .dht small,:root[data-bd] .brw span{max-width:100%;overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
 .fbcalm{width:40px;height:40px;border-radius:12px;margin:0 auto 4px;background:color-mix(in srgb,var(--bd-acc,var(--green)) 14%,transparent);display:grid;place-items:center}
 .fbcalm svg{width:22px!important;height:22px!important;color:var(--bd-acc,var(--green))!important;stroke:var(--bd-acc,var(--green))!important;margin:0!important}
 `);

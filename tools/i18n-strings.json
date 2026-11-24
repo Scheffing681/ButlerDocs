@@ -21,7 +21,7 @@
   ]
  },
  "scan": {
-  "ru": "сканировать",
+  "ru": "скан",
   "de": "scannen",
   "files": [
    "areas-glas.js",

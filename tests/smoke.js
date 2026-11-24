@@ -993,6 +993,11 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>{window.__T.R('dall')});await p.waitForTimeout(200);await T(()=>window.__T.R('home'));await p.waitForTimeout(400);
  check('…the order stays after leaving and coming back',await T(k=>[...document.querySelectorAll('.sgar>button')][3].dataset.k===k,k0[0]));
  await T(()=>{delete window.__T.g().bdOrd;window.__T.save();window.__T.R('home')})}
+ where='back from areas';{for(const k of ['personal','bsv','fzm','kar','dnach','post']){await T(()=>{document.querySelectorAll('.dtsheet,.orbar').forEach(x=>x.remove());window.__T.R('dall')});await p.waitForTimeout(300);
+  await T(k=>[...document.querySelectorAll('.brg>button')].find(x=>(x.dataset.to||x.dataset.v)===k).click(),k);await p.waitForTimeout(400);
+  await T(()=>document.querySelector('.screen>.bghd .bgcb').click());await p.waitForTimeout(400);
+  check('‹ from «'+k+'» goes back to Alle Bereiche',await T(()=>window.__T.m().route==='dall'),await T(()=>window.__T.m().route))}
+ await T(()=>window.__T.R('home'))}
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

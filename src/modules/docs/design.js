@@ -20,7 +20,7 @@ const bdDark=()=>{const t=g.bdTheme||'auto';return t==='dunkel'||(t==='auto'&&!!
 function bdApply(){try{const r=document.documentElement;if(!bdOn()){if(r.dataset.bd){delete r.dataset.bd;delete r.dataset.bda;try{Ws()}catch{}}return}
  /* once: the old «Smaragd» becomes Dunkel; the old style choice is kept for the way back */
  if(!g.bd57m){g.bd57m=1;if(g.style==='smaragd')g.bdTheme='dunkel';g.bdTheme=g.bdTheme||'auto';g.bdPrevStyle=g.style||'auto';if(g.style&&g.style!=='auto'){g.style='auto';try{Ws()}catch{}}$()}
- if(r.dataset.sm)delete r.dataset.sm;
+ if(r.dataset.sm)delete r.dataset.sm;try{const lg=String(g.lang||'de').slice(0,2);if(r.lang!==lg)r.lang=lg}catch{}/* v68: right hyphenation for ru/uk/tr */
  const v2=bdDark()?'dunkel':'hell',a=BD_ACC[g.bdAcc]?g.bdAcc:'tuerkis';if(r.dataset.bd!==v2)r.dataset.bd=v2;if(r.dataset.bda!==a)r.dataset.bda=a;
  r.style.setProperty('--bd-acc',BD_ACC[a][v2==='dunkel'?1:0]);r.style.colorScheme=v2==='dunkel'?'dark':'light';
  const mt=document.querySelector('meta[name="theme-color"]');mt&&mt.setAttribute('content',v2==='dunkel'?'#081216':'#F6F4EE');try{document.body.style.setProperty('background-color',v2==='dunkel'?'#081216':'#F6F4EE','important')}catch{}}catch(e){Hooks.err('bdapply',e)}}

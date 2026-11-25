@@ -1899,3 +1899,26 @@
 1898	Regla: «%n» → %f
 1899	Compra desde recibo: %n
 1900	Trámite desde documento: %n
+1901	aún no hay compras
+1902	Comprado este mes
+1903	La garantía termina pronto
+1904	compras (%n)
+1905	Informe PDF
+1906	periodo, fecha y fuentes: para usted o su asesor
+1907	Resumen Butler · %p
+1908	Creado el %d · solo datos de este teléfono
+1909	Las cifras muestran solo lo registrado en la app. Lo que falta, falta también en el informe.
+1910	Vincular con contrato
+1911	Crear tarea «responder» (en 7 días)
+1912	Abrir un trámite
+1913	trámite
+1914	Coincidiría ahora: %n (%t). Los documentos existentes no se cambian.
+1915	Aún no coincide ningún documento.
+1916	en pausa
+1917	Pausa
+1918	última vez %d
+1919	contrato eliminado
+1920	Responder: %t
+1921	Regla: tarea «Responder: %t»
+1922	Regla: trámite «%t»
+1923	Introduzca una palabra y elija al menos una acción

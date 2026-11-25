@@ -1899,3 +1899,26 @@
 1898	Règle : « %n » → %f
 1899	Achat depuis un ticket : %n
 1900	Dossier depuis un document : %n
+1901	aucun achat saisi
+1902	Acheté ce mois-ci
+1903	La garantie se termine bientôt
+1904	achats (%n)
+1905	Rapport PDF
+1906	période, date et sources – pour vous ou votre conseiller
+1907	Aperçu Butler · %p
+1908	Créé le %d · uniquement les données de ce téléphone
+1909	Les chiffres ne montrent que ce qui est saisi dans l’app. Ce qui manque manque aussi dans le rapport.
+1910	Lier à un contrat
+1911	Créer une tâche « répondre » (dans 7 jours)
+1912	Ouvrir un dossier
+1913	dossier
+1914	Correspondrait maintenant : %n (%t). Les documents existants ne sont pas modifiés.
+1915	Aucun document ne correspond encore.
+1916	en pause
+1917	Pause
+1918	dernière fois %d
+1919	contrat supprimé
+1920	Répondre : %t
+1921	Règle : tâche « Répondre : %t »
+1922	Règle : dossier « %t »
+1923	Saisissez un mot et choisissez au moins une action

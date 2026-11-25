@@ -1899,3 +1899,26 @@
 1898	Reguła: „%n” → %f
 1899	Zakup z paragonu: %n
 1900	Sprawa z dokumentu: %n
+1901	nie wpisano jeszcze zakupów
+1902	Kupione w tym miesiącu
+1903	Gwarancja wkrótce się kończy
+1904	zakupy (%n)
+1905	Raport PDF
+1906	okres, data i źródła – dla Ciebie lub doradcy
+1907	Przegląd Butler · %p
+1908	Utworzono %d · tylko dane z tego telefonu
+1909	Liczby pokazują tylko to, co wpisano w aplikacji. Czego brakuje, brakuje też w raporcie.
+1910	Powiąż z umową
+1911	Utwórz zadanie „odpowiedz” (za 7 dni)
+1912	Załóż sprawę
+1913	sprawa
+1914	Pasowałoby teraz: %n (%t). Istniejące dokumenty nie są zmieniane.
+1915	Na razie żaden dokument nie pasuje.
+1916	wstrzymana
+1917	Pauza
+1918	ostatnio %d
+1919	umowa usunięta
+1920	Odpowiedz: %t
+1921	Reguła: zadanie „Odpowiedz: %t”
+1922	Reguła: sprawa „%t”
+1923	Wpisz słowo i wybierz co najmniej jedną akcję

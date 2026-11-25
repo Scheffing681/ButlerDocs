@@ -1993,7 +1993,8 @@
   "ru": "Что сделать",
   "de": "Was ist zu tun",
   "files": [
-   "behoerden-termine.js"
+   "behoerden-termine.js",
+   "werkzeuge.js"
   ]
  },
  "Next date": {
@@ -4510,7 +4511,8 @@
   "de": "Käufe & Garantie",
   "files": [
    "butler-rechte.js",
-   "kauf-gesund.js"
+   "kauf-gesund.js",
+   "ueberblick.js"
   ]
  },
  "Letters & applications": {
@@ -9783,7 +9785,8 @@
   "ru": "задача",
   "de": "Aufgabe",
   "files": [
-   "notizen.js"
+   "notizen.js",
+   "werkzeuge.js"
   ]
  },
  "Open calendar": {
@@ -12173,6 +12176,69 @@
    "ueberblick.js"
   ]
  },
+ "no purchases entered yet": {
+  "ru": "покупки ещё не внесены",
+  "de": "noch keine Käufe eingetragen",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Bought this month": {
+  "ru": "Куплено в этом месяце",
+  "de": "Diesen Monat gekauft",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Warranty ends soon": {
+  "ru": "Скоро конец гарантии",
+  "de": "Garantie / Gewährleistung endet bald",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "purchases (%n)": {
+  "ru": "покупки (%n)",
+  "de": "Käufe (%n)",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Report as PDF": {
+  "ru": "Отчёт PDF",
+  "de": "Bericht als PDF",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "period, date and sources – for you or your adviser": {
+  "ru": "период, дата и источники — для себя или консультанта",
+  "de": "Zeitraum, Datum und Quellen – für Sie oder Ihren Berater",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Butler overview · %p": {
+  "ru": "Обзор Butler · %p",
+  "de": "Butler-Überblick · %p",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Created %d · only data from this phone": {
+  "ru": "Создано %d · только данные с этого телефона",
+  "de": "Erstellt am %d · nur Daten von diesem Telefon",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "The figures show only what is in the app. What is missing is missing in the report, too.": {
+  "ru": "Цифры показывают только то, что внесено в приложение. Если чего-то нет — в отчёте этого тоже нет.",
+  "de": "Die Zahlen zeigen nur, was in der App erfasst ist. Was fehlt, fehlt auch im Bericht.",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
  "Month": {
   "ru": "Месяц",
   "de": "Monat",
@@ -13540,6 +13606,97 @@
    "werkzeuge.js"
   ]
  },
+ "Link to contract": {
+  "ru": "Связать с договором",
+  "de": "Mit Vertrag verknüpfen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Create a task “reply” (in 7 days)": {
+  "ru": "Создать задачу «ответить» (через 7 дней)",
+  "de": "Aufgabe „antworten“ anlegen (in 7 Tagen)",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Open a case": {
+  "ru": "Завести дело (Vorgang)",
+  "de": "Vorgang anlegen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "case": {
+  "ru": "дело",
+  "de": "Vorgang",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Would match now: %n (%t). Existing documents are not changed.": {
+  "ru": "Сейчас подошло бы: %n (%t). Уже существующие документы правило не трогает.",
+  "de": "Würde jetzt passen: %n (%t). Vorhandene Dokumente ändert die Regel nicht.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "No document matches yet.": {
+  "ru": "Пока ни один документ не подходит.",
+  "de": "Noch passt kein Dokument.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "paused": {
+  "ru": "на паузе",
+  "de": "pausiert",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Pause": {
+  "ru": "Пауза",
+  "de": "Pause",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "last %d": {
+  "ru": "последний раз %d",
+  "de": "zuletzt %d",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "contract deleted": {
+  "ru": "договор удалён",
+  "de": "Vertrag gelöscht",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Reply: %t": {
+  "ru": "Ответить: %t",
+  "de": "Antworten: %t",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Rule: task “Reply: %t”": {
+  "ru": "Правило: задача «Ответить: %t»",
+  "de": "Regel: Aufgabe „Antworten: %t“",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Rule: case “%t”": {
+  "ru": "Правило: дело «%t»",
+  "de": "Regel: Vorgang „%t“",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
  "applied: %n": {
   "ru": "сработало: %n",
   "de": "angewendet: %n",
@@ -13547,9 +13704,9 @@
    "werkzeuge.js"
   ]
  },
- "Please enter a word and choose a folder": {
-  "ru": "Впишите слово и выберите папку",
-  "de": "Bitte Wort eintragen und Ordner wählen",
+ "Please enter a word and choose at least one action": {
+  "ru": "Впишите слово и выберите хотя бы одно действие",
+  "de": "Bitte Wort eintragen und mindestens eine Aktion wählen",
   "files": [
    "werkzeuge.js"
   ]

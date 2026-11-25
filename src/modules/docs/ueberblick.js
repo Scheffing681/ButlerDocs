@@ -9,7 +9,8 @@
 const ubS={
  wk:['Ваша неделя','Ihre Woche','Your week'],ovw:['Обзор','Überblick','Overview'],dl:['Сроки','Fristen','Deadlines'],pay:['Платежи · %a','Zahlungen · %a','Payments · %a'],payN:['Платежи','Zahlungen','Payments'],
  rise:['Цена растёт','Preis steigt','Price rises'],inb:['Во входящих','im Eingang','in the inbox'],
- per_w:['Неделя','Woche','Week'],per_m:['Месяц','Monat','Month'],per_q:['Квартал','Quartal','Quarter'],adj:['Настроить','Anpassen','Customise'],
+ per_w:['Неделя','Woche','Week'],b_kauf:['Покупки и гарантия','Käufe & Garantie','Purchases & warranty'],noKauf:['покупки ещё не внесены','noch keine Käufe eingetragen','no purchases entered yet'],kNew:['Куплено в этом месяце','Diesen Monat gekauft','Bought this month'],kEnd:['Скоро конец гарантии','Garantie / Gewährleistung endet bald','Warranty ends soon'],srcKauf:['покупки (%n)','Käufe (%n)','purchases (%n)'],
+ pdf:['Отчёт PDF','Bericht als PDF','Report as PDF'],pdfS:['период, дата и источники — для себя или консультанта','Zeitraum, Datum und Quellen – für Sie oder Ihren Berater','period, date and sources – for you or your adviser'],rT:['Обзор Butler · %p','Butler-Überblick · %p','Butler overview · %p'],rMade:['Создано %d · только данные с этого телефона','Erstellt am %d · nur Daten von diesem Telefon','Created %d · only data from this phone'],rNote:['Цифры показывают только то, что внесено в приложение. Если чего-то нет — в отчёте этого тоже нет.','Die Zahlen zeigen nur, was in der App erfasst ist. Was fehlt, fehlt auch im Bericht.','The figures show only what is in the app. What is missing is missing in the report, too.'],per_m:['Месяц','Monat','Month'],per_q:['Квартал','Quartal','Quarter'],adj:['Настроить','Anpassen','Customise'],
  b_aus:['Расходы','Ausgaben','Spending'],b_doc:['Документы','Dokumente','Documents'],b_ver:['Договоры и подписки','Verträge & Abos','Contracts & subs'],b_dl:['Сроки и задачи','Termine & Aufgaben','Dates & tasks'],b_bes:['Имущество','Besitz','Property'],b_fam:['Семья','Familie','Family'],
  vsM:['к %m','zu %m','vs %m'],src:['из: %t','aus: %t','from: %t'],srcAus:['расходов и %n договоров','Ausgaben + %n Verträgen','spending + %n contracts'],
  inEing:['Во входящих','Im Eingang','In the inbox'],exp:['Скоро истекают','Laufen bald ab','Run out soon'],unpaid:['Счета без «оплачено»','Rechnungen ohne „bezahlt“','Bills not marked paid'],
@@ -22,8 +23,8 @@ const ubS={
  show:['Показывать','Anzeigen','Show'],per:['Период','Zeitraum','Period'],first:['Порядок','Reihenfolge','Order'],onStart:['«Ваша неделя» на главной','„Ihre Woche“ auf Start','“Your week” on Start'],
  honest:['Каждая цифра показывает, откуда она. Если данных мало, Батлер так и скажет.','Jede Zahl im Überblick zeigt, woher sie stammt. Fehlen Angaben, sagt Butler das.','Every number shows where it comes from. If data is missing, Butler says so.']};
 const ubt=(k,o)=>{let s=cv5n(ubS[k]||[k]);if(o)for(const p in o)s=s.split('%'+p).join(o[p]);return s};
-const UB_K=['aus','doc','ver','dl','bes','fam'],UB_IC={aus:'💶',doc:'📄',ver:'🔁',dl:'⏰',bes:'🚗',fam:'👪'};
-const ubD=()=>{const o=g.ubl=g.ubl&&typeof g.ubl==='object'?g.ubl:{};if(!o.hide||typeof o.hide!=='object')o.hide={};if(!Array.isArray(o.ord)||o.ord.length!==UB_K.length||!UB_K.every(k=>o.ord.includes(k)))o.ord=UB_K.slice();if(!o.per)o.per='w';return o};
+const UB_K=['aus','doc','ver','dl','kauf','bes','fam'],UB_IC={aus:'💶',doc:'📄',ver:'🔁',dl:'⏰',kauf:'🛍',bes:'🚗',fam:'👪'};
+const ubD=()=>{const o=g.ubl=g.ubl&&typeof g.ubl==='object'?g.ubl:{};if(!o.hide||typeof o.hide!=='object')o.hide={};if(!Array.isArray(o.ord))o.ord=UB_K.slice();o.ord=o.ord.filter(k=>UB_K.includes(k));UB_K.forEach((k,j)=>{if(!o.ord.includes(k))o.ord.splice(Math.min(j,o.ord.length),0,k)});if(!o.per)o.per='w';return o};
 const ubDays=()=>({w:7,m:31,q:92})[m.ublP||ubD().per]||7;
 /* bills that are due in the next n days and not marked paid */
 function ubPays(n){const out=[];try{Ke().items.filter(d=>d&&!d.type&&!d.del&&!d.paid).forEach(d=>{const o=eiRead(d);if(o.kind==='inv'&&o.due&&o.amt&&vaDays(o.due)>=0&&vaDays(o.due)<=n)out.push({d,o})})}catch{}return out}
@@ -46,6 +47,8 @@ function ubBlock(k){const n=ubDays();let body='',src='';
   body=(R2.length?ubRow(ubt('rise'),R2.map(r=>(r.e.co||'')+' +'+vaPct(r.pct)).join(', '),R2.length,`data-act="vapr" data-id="${R2[0].e.id}"`):'')+(kb.length?ubRow(ubt('kb'),kb.map(r=>r.nm).slice(0,3).join(', '),kb.length,'data-act="fzkost"'):'')+ubRow(ubt('abos'),'',vaEur(ab),'data-act="fzkost"')}
  if(k==='dl'){let F=[];try{F=stDlAll().filter(t=>vaDays(t.k)>=0&&vaDays(t.k)<=n)}catch{}const op=(g.tasks||[]).filter(t=>t&&!t.done&&t.knd!=='w').length;
   body=ubRow(ubt('thisP'),F[0]?F[0].t+' · '+vaDate(F[0].k):ubt('ok'),F.length,'data-act="go" data-to="dsrok"')+ubRow(ubt('open'),'',op,'data-act="go" data-to="tasks"')}
+ if(k==='kauf'){let K=[];try{K=kgK()}catch{}if(!K.length)return ubNone(ubt('noKauf'));const mk=vaMonKey(0),newM=K.filter(x=>String(x.d||'').startsWith(mk)),end=K.map(x=>({x,e:x.gar&&vaDays(x.gar)>=0?x.gar:kgGew(x)})).filter(z=>z.e&&vaDays(z.e)>=0&&vaDays(z.e)<=Math.max(90,n)).sort((a,b)=>a.e.localeCompare(b.e));
+  body=ubRow(ubt('kNew'),newM.map(x=>x.n).slice(0,3).join(', '),newM.length,'data-act="go" data-to="kauf"')+ubRow(ubt('kEnd'),end.slice(0,2).map(z=>z.x.n+' '+vaDate(z.e)).join(', ')||ubt('ok'),end.length,'data-act="go" data-to="kauf"');src=ubt('src',{t:ubt('srcKauf',{n:K.length})})}
  if(k==='bes'){let car=null,home=null;try{car=akAsset('car');home=akAsset('home')}catch{}const has=A=>A&&(A.C.length||A.D.length||A.E.length);if(!has(car)&&!has(home))return ubNone(ubt('noBes'));
   body=(has(car)?(car.tuv?ubRow(ubt('tuv'),'',vaDate(car.tuv.end||car.tuv.f.valid),'data-act="akw" data-k="car"'):'')+ubRow(ubt('carC'),'',vaEur(car.tot),'data-act="akw" data-k="car"'):'')+(has(home)?ubRow(ubt('homeC'),'',vaEur(home.tot),'data-act="akw" data-k="home"'):'')}
  if(k==='fam'){let C=[];try{C=Va().filter(c=>c&&(c.cat==='family'||c.fam))}catch{}if(!C.length)return ubNone(ubt('noFam'));
@@ -56,6 +59,7 @@ function ublScreen(){const D=ubD(),P=m.ublP||D.per;
  return`<div class="screen dhome fz va ubs"><div class="sub-hdr"><button class="iconbtn" data-act="back" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(ubt('ovw'))}</h2></div><span></span></div>
  <div class="vachips">${['w','m','q'].map(p=>`<button type="button" class="${P===p?'on':''}" data-act="ublp" data-k="${p}">${i(ubt('per_'+p))}</button>`).join('')}</div>
  ${D.ord.filter(k=>!D.hide[k]).map(k=>`<div class="vacard ubb"><h3>${UB_IC[k]} ${i(ubt('b_'+k))}</h3>${ubBlock(k)}</div>`).join('')}
+ <div class="vacard"><button type="button" class="varow" data-act="ubpdf"><span class="vaic">📄</span><span class="vatx"><b>${i(ubt('pdf'))}</b><small>${i(ubt('pdfS'))}</small></span><span class="vaam">›</span></button></div>
  <button type="button" class="valnk" data-act="go" data-to="ublset">${i(ubt('adj'))}</button><p class="vanote">${i(ubt('honest'))}</p></div>`}
 function ublSet(){const D=ubD(),tg=(on,t,a,k)=>`<button type="button" class="vaabot" data-act="${a}" data-k="${k}"><span><b>${t}</b></span><u class="${on?'on':''}"></u></button>`;
  return`<div class="screen dhome fz va ubs"><div class="sub-hdr"><button class="iconbtn" data-act="back" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(ubt('adj'))}</h2></div><span></span></div>
@@ -63,6 +67,18 @@ function ublSet(){const D=ubD(),tg=(on,t,a,k)=>`<button type="button" class="vaa
  <h3 class="vash">${i(ubt('per'))}</h3><div class="vachips">${['w','m','q'].map(p=>`<button type="button" class="${D.per===p?'on':''}" data-act="ublper" data-k="${p}">${i(ubt('per_'+p))}</button>`).join('')}</div>
  ${tg(!D.noStart,i(ubt('onStart')),'ublst','')}
  <p class="vanote">${i(ubt('honest'))}</p></div>`}
+/* the report: exactly what the screen shows, with period, date and the «aus: …» sources, as a PDF */
+function ubReport(){const P=m.ublP||ubD().per,per=ubt('per_'+P)+' · '+(P==='w'?vaDate(vaIso(0))+' – '+vaDate(vaIso(7)):vaMonName(vaMonKey(0))),L2=[];
+ document.querySelectorAll('.ubs .ubb').forEach(b=>{const h=b.querySelector('h3');L2.push({h:(h&&h.textContent||'').replace(/^[^\p{L}\p{N}]+/u,'').trim()});
+  b.querySelectorAll('.varow,.ubkpi>div,.ubnone').forEach(r=>{const t=r.querySelector('b'),sm=r.querySelector('small'),am=r.querySelector('.vaam');L2.push({t:(t?t.textContent:r.textContent).trim(),s:sm?sm.textContent.trim():'',a:am?am.textContent.replace('›','').trim():''})});
+  const sr=b.querySelector('.ubsrc');sr&&L2.push({src:sr.textContent.trim()})});return{per,L2}}
+async function ubPdf(){const{per,L2}=ubReport();const P=[];let[c,x2]=fzPage();P.push(c);let yy=140;const ml=140,line=(t,o)=>{o=o||{};if(yy>FZ_H-150){[c,x2]=fzPage();P.push(c);yy=140}x2.fillStyle=o.g?'#666':'#000';x2.font=`${o.b?'bold ':''}${o.s||26}px Georgia, serif`;x2.fillText(String(t).slice(0,o.r?58:80),ml+(o.x||0),yy);if(o.r){const w=x2.measureText(o.r).width;x2.fillText(o.r,FZ_W-120-w,yy)}yy+=o.h||40};
+ line(ubt('rT',{p:per}),{b:1,s:38,h:56});line(ubt('rMade',{d:vaDate(vaIso(0))}),{s:22,g:1,h:60});
+ L2.forEach(r=>{if(r.h){yy+=14;line(r.h,{b:1,s:30,h:48})}else if(r.src)line(r.src,{s:20,g:1,x:20,h:40});else{line(r.t,{x:20,r:r.a});if(r.s)line(r.s,{x:40,s:21,g:1,h:34})}});
+ yy+=20;line(ubt('rNote'),{s:20,g:1});
+ const name=ubt('rT',{p:per}).replace(/[\\/:*?"<>|]/g,'-')+'.pdf',f=new File([new Blob([Kn(P)],{type:'application/pdf'})],name,{type:'application/pdf'});
+ try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:name});return f}}catch(e){if(e&&e.name==='AbortError')return f}try{Hl(f)}catch{}try{tlxLog('csv',name)}catch{}return f}
+Hooks.act('ubpdf',()=>{ubPdf().catch(e=>Hooks.err('ubpdf',e))});
 ['ubl','ublset'].forEach(r=>{OD_OK.add(r);Te.includes(r)||Te.push(r);try{AG_R.includes(r)||AG_R.push(r)}catch{}});
 (Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='ubl')return ublScreen();if(m.route==='ublset')return ublSet()}catch(e){Hooks.err('ubscreen',e)}});
 Hooks.act('ublp',d=>{m.ublP=d.k;v()});Hooks.act('ublper',d=>{ubD().per=d.k;m.ublP=null;$();v()});

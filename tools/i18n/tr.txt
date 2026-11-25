@@ -1899,3 +1899,26 @@
 1898	Kural: “%n” → %f
 1899	Fişten satın alım: %n
 1900	Belgeden dosya: %n
+1901	henüz satın alım girilmedi
+1902	Bu ay satın alınan
+1903	Garanti yakında bitiyor
+1904	satın alımlar (%n)
+1905	PDF rapor
+1906	dönem, tarih ve kaynaklar – kendiniz veya danışmanınız için
+1907	Butler genel bakış · %p
+1908	%d tarihinde oluşturuldu · yalnızca bu telefondaki veriler
+1909	Rakamlar yalnızca uygulamaya girileni gösterir. Eksik olan raporda da eksiktir.
+1910	Sözleşmeye bağla
+1911	“Yanıtla” görevi oluştur (7 gün içinde)
+1912	Dosya aç
+1913	dosya
+1914	Şu an eşleşirdi: %n (%t). Mevcut belgeler değiştirilmez.
+1915	Henüz eşleşen belge yok.
+1916	duraklatıldı
+1917	Duraklat
+1918	son %d
+1919	sözleşme silindi
+1920	Yanıtla: %t
+1921	Kural: görev “Yanıtla: %t”
+1922	Kural: dosya “%t”
+1923	Lütfen bir kelime girin ve en az bir işlem seçin

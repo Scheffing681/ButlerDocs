@@ -951,7 +951,8 @@
   "files": [
    "behoerden-termine.js",
    "start-glas.js",
-   "start.js"
+   "start.js",
+   "suche-smart.js"
   ]
  },
  "today": {
@@ -961,7 +962,8 @@
    "behoerden-termine.js",
    "behoerden.js",
    "start-glas.js",
-   "start.js"
+   "start.js",
+   "suche-smart.js"
   ]
  },
  "tomorrow": {
@@ -3089,7 +3091,8 @@
   "files": [
    "business.js",
    "search-places.js",
-   "start.js"
+   "start.js",
+   "suche-smart.js"
   ]
  },
  "Business registration": {
@@ -3769,7 +3772,8 @@
   "ru": "Сказать",
   "de": "Sprechen",
   "files": [
-   "design.js"
+   "design.js",
+   "suche-smart.js"
   ]
  },
  "Scan": {
@@ -4717,6 +4721,7 @@
   "de": "%a / Monat",
   "files": [
    "finanzen2.js",
+   "suche-smart.js",
    "vertraege-abos.js"
   ]
  },
@@ -4760,6 +4765,7 @@
   "de": "kündbar bis %d",
   "files": [
    "finanzen2.js",
+   "suche-smart.js",
    "vertraege-abos.js"
   ]
  },
@@ -9032,6 +9038,345 @@
    "steuer-plus.js"
   ]
  },
+ "Contracts & subscriptions": {
+  "ru": "Договоры и подписки",
+  "de": "Verträge & Abos",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Spending": {
+  "ru": "Расходы",
+  "de": "Ausgaben",
+  "files": [
+   "suche-smart.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "“%t” in the text": {
+  "ru": "«%t» в тексте",
+  "de": "„%t“ im Text",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Recent searches": {
+  "ru": "Недавно искали",
+  "de": "Zuletzt gesucht",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Clear history": {
+  "ru": "Очистить историю",
+  "de": "Verlauf löschen",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Saved searches": {
+  "ru": "Сохранённые поиски",
+  "de": "Gespeicherte Suchen",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Ask for example": {
+  "ru": "Спросите, например",
+  "de": "Fragen Sie z. B.",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "⭐ Save search": {
+  "ru": "⭐ Сохранить поиск",
+  "de": "⭐ Suche speichern",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Search saved": {
+  "ru": "Поиск сохранён",
+  "de": "Suche gespeichert",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Remove from saved": {
+  "ru": "Убрать из сохранённых",
+  "de": "Nicht mehr speichern",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "%n results · current": {
+  "ru": "%n результатов · актуально",
+  "de": "%n Treffer · aktuell",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "All %n": {
+  "ru": "Все %n",
+  "de": "Alle %n",
+  "files": [
+   "suche-smart.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "What do I pay for subscriptions?": {
+  "ru": "Сколько я плачу за подписки?",
+  "de": "Was zahle ich für Abos?",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "What can I cancel in 3 months?": {
+  "ru": "Что можно расторгнуть за 3 месяца?",
+  "de": "Was ist in 3 Monaten kündbar?",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Latest payslip": {
+  "ru": "Последняя зарплатная ведомость",
+  "de": "Letzte Lohnabrechnung",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Spending last month": {
+  "ru": "Расходы за прошлый месяц",
+  "de": "Ausgaben letzten Monat",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "What does my car cost a year?": {
+  "ru": "Сколько стоит машина в год?",
+  "de": "Was kostet mein Auto im Jahr?",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Subscriptions: %n": {
+  "ru": "Подписки: %n",
+  "de": "Abos: %n",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Contracts & subscriptions: %n": {
+  "ru": "Договоры и подписки: %n",
+  "de": "Verträge & Abos: %n",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "%a a year": {
+  "ru": "%a в год",
+  "de": "%a im Jahr",
+  "files": [
+   "suche-smart.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "contract": {
+  "ru": "договор",
+  "de": "Vertrag",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "spending “%c”": {
+  "ru": "расходы «%c»",
+  "de": "Ausgaben „%c“",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "%n entries": {
+  "ru": "записей: %n",
+  "de": "%n Einträge",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Can be cancelled: %p": {
+  "ru": "Можно расторгнуть: %p",
+  "de": "Kündbar: %p",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Nothing to cancel in this period.": {
+  "ru": "В этот период ничего расторгать не нужно.",
+  "de": "In diesem Zeitraum ist nichts kündbar.",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Spending · %p": {
+  "ru": "Расходы · %p",
+  "de": "Ausgaben · %p",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Fixed costs (contracts)": {
+  "ru": "Постоянные расходы (договоры)",
+  "de": "Feste Kosten (Verträge)",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "%n months": {
+  "ru": "%n мес.",
+  "de": "%n Monate",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Car · %p": {
+  "ru": "Машина · %p",
+  "de": "Auto · %p",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "≈ %a a month": {
+  "ru": "≈ %a в месяц",
+  "de": "≈ %a im Monat",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Incomplete": {
+  "ru": "Неполно",
+  "de": "Unvollständig",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "No spending entered for %m.": {
+  "ru": "Нет записей за: %m.",
+  "de": "Für %m sind keine Ausgaben eingetragen.",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "No car contract saved.": {
+  "ru": "Нет договора страховки машины.",
+  "de": "Kein Kfz-Vertrag gespeichert.",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Every bill and entry is counted only once.": {
+  "ru": "Каждый документ и каждая запись считаются только один раз.",
+  "de": "Jede Rechnung und jeder Eintrag zählt nur einmal.",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Latest document": {
+  "ru": "Последний документ",
+  "de": "Neuestes Dokument",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Next deadline": {
+  "ru": "Ближайший срок",
+  "de": "Nächste Frist",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "How it was counted: %t": {
+  "ru": "Как посчитано: %t",
+  "de": "So gerechnet: %t",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "your entries + fixed costs of the contracts": {
+  "ru": "Ваши записи + постоянные расходы по договорам",
+  "de": "Ihre Einträge + feste Kosten der Verträge",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "car contracts + “Fuel” and “Car” from spending": {
+  "ru": "договоры машины + «Бензин» и «Машина» из расходов",
+  "de": "Kfz-Verträge + „Tanken“ und „Auto“ aus den Ausgaben",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "Also found via similar words: %w": {
+  "ru": "Найдено также по похожим словам: %w",
+  "de": "Auch gefunden über ähnliche Wörter: %w",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "this month": {
+  "ru": "этот месяц",
+  "de": "dieser Monat",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "last month": {
+  "ru": "прошлый месяц",
+  "de": "letzter Monat",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "since January": {
+  "ru": "с января",
+  "de": "seit Januar",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "last %n months": {
+  "ru": "последние %n мес.",
+  "de": "letzte %n Monate",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "next %n days": {
+  "ru": "ближайшие %n дн.",
+  "de": "nächste %n Tage",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "until year end": {
+  "ru": "до конца года",
+  "de": "bis Jahresende",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "yesterday": {
+  "ru": "вчера",
+  "de": "gestern",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
+ "%n days ago": {
+  "ru": "%n дн. назад",
+  "de": "vor %n Tagen",
+  "files": [
+   "suche-smart.js"
+  ]
+ },
  "Self-check: all fine ✓": {
   "ru": "Самопроверка: всё в порядке ✓",
   "de": "Selbsttest: alles in Ordnung ✓",
@@ -9109,23 +9454,9 @@
    "tidy.js"
   ]
  },
- "Spending": {
-  "ru": "Расходы",
-  "de": "Ausgaben",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
  "Fixed costs": {
   "ru": "Постоянные расходы",
   "de": "Feste Kosten",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
- "%a a year": {
-  "ru": "%a в год",
-  "de": "%a im Jahr",
   "files": [
    "vertraege-abos.js"
   ]
@@ -9203,13 +9534,6 @@
  "by %d · %k days": {
   "ru": "до %d · %k дн.",
   "de": "bis %d · %k Tage",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
- "All %n": {
-  "ru": "Все %n",
-  "de": "Alle %n",
   "files": [
    "vertraege-abos.js"
   ]

@@ -1375,3 +1375,48 @@
 1374	Sözleşmeler ve abonelikler
 1375	Abonelik olarak say
 1376	“Finanslar”da sözleşmelerden ayrı gösterilir
+1377	Sözleşmeler ve abonelikler
+1378	Metinde “%t”
+1379	Son aramalar
+1380	Geçmişi temizle
+1381	Kayıtlı aramalar
+1382	Örneğin sorun
+1383	⭐ Aramayı kaydet
+1384	Arama kaydedildi
+1385	Kayıtlılardan çıkar
+1386	%n sonuç · güncel
+1387	Aboneliklere ne ödüyorum?
+1388	3 ay içinde neyi feshedebilirim?
+1389	Son maaş bordrosu
+1390	Geçen ayın harcamaları
+1391	Arabam yılda kaça mal oluyor?
+1392	Abonelikler: %n
+1393	Sözleşmeler ve abonelikler: %n
+1394	sözleşme
+1395	harcamalar “%c”
+1396	%n kayıt
+1397	Feshedilebilir: %p
+1398	Bu dönemde feshedilecek bir şey yok.
+1399	Harcamalar · %p
+1400	Sabit giderler (sözleşmeler)
+1401	%n ay
+1402	Araba · %p
+1403	≈ ayda %a
+1404	Eksik
+1405	%m için harcama girilmemiş.
+1406	Kayıtlı araç sözleşmesi yok.
+1407	Her fatura ve kayıt yalnızca bir kez sayılır.
+1408	En yeni belge
+1409	Sonraki süre
+1410	Hesaplama: %t
+1411	girdileriniz + sözleşmelerin sabit giderleri
+1412	araç sözleşmeleri + harcamalardan “Yakıt” ve “Araba”
+1413	Benzer kelimelerle de bulundu: %w
+1414	bu ay
+1415	geçen ay
+1416	ocaktan beri
+1417	son %n ay
+1418	sonraki %n gün
+1419	yıl sonuna kadar
+1420	dün
+1421	%n gün önce

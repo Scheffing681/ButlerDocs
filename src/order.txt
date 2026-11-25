@@ -102,3 +102,4 @@ docs/alt-glas.js
 docs/einstellungen-glas.js
 docs/formen-glas.js
 docs/vertraege-abos.js
+docs/suche-smart.js

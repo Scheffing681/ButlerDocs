@@ -1420,3 +1420,49 @@
 1419	yıl sonuna kadar
 1420	dün
 1421	%n gün önce
+1422	Yeni
+1423	▲ fiyat
+1424	Uygun: %t
+1425	sözleşme “%n”
+1426	son tarih %d
+1427	＋ Tara · Fotoğraf · Dosya
+1428	Aynı anda birden fazla dosya. Tanıma yalnızca bu telefonda çalışır.
+1429	Butler ne yaptı
+1430	Burada bir şey yok.
+1431	Belge tanındı
+1432	Fatura tanındı
+1433	Mektup tanındı
+1434	“%l” satırından
+1435	Son ödeme
+1436	= sözleşme “%n” ✓
+1437	değiştir
+1438	Yeni fiyat
+1439	Butler öneriyor
+1440	“%n” sözleşmesine bağla
+1441	aynı numara
+1442	aynı firma adı
+1443	Ödeme hatırlatması
+1444	%d, 2 gün önce
+1445	“Harcamalar”a ekle
+1446	zaten sözleşme üzerinden sayılıyor – iki kez değil
+1447	Yeni fiyatı sözleşmeye gir
+1448	%d itibarıyla %a → Butler artışı gösterir
+1449	Görev oluştur
+1450	7 gün içinde “%t”
+1451	Onayınız olmadan hiçbir şey olmaz. Her şey geri alınabilir.
+1452	Belgeyi aç
+1453	Yapıldı: %n
+1454	Dün
+1455	Geri alındı
+1456	Kayıt bu telefonda 90 gün kalır.
+1457	%t → sözleşme “%n”
+1458	Hatırlatma %d: %t
+1459	“Harcamalar”da %a
+1460	“%n” içinde yeni fiyat %a
+1461	Görev: %t
+1462	Onaylandı: %t
+1463	Arşivlendi: %t
+1464	sizin tarafınızdan onaylandı
+1465	Öde: %t (%a)
+1466	Halledilecek: %t
+1467	“%t” ile aynı numara ve tutar

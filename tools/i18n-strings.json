@@ -922,6 +922,7 @@
   "files": [
    "behoerden-termine.js",
    "behoerden.js",
+   "eingang-smart.js",
    "linkup.js",
    "mappen.js",
    "ordnen.js",
@@ -1622,6 +1623,7 @@
   "de": "Nummer",
   "files": [
    "behoerden.js",
+   "eingang-smart.js",
    "mappen.js"
   ]
  },
@@ -4192,7 +4194,8 @@
   "ru": "Проверить",
   "de": "Prüfen",
   "files": [
-   "eingang-fristen.js"
+   "eingang-fristen.js",
+   "eingang-smart.js"
   ]
  },
  "Ready": {
@@ -4206,21 +4209,24 @@
   "ru": "проверить",
   "de": "prüfen",
   "files": [
-   "eingang-fristen.js"
+   "eingang-fristen.js",
+   "eingang-smart.js"
   ]
  },
  "ready": {
   "ru": "готово",
   "de": "bereit",
   "files": [
-   "eingang-fristen.js"
+   "eingang-fristen.js",
+   "eingang-smart.js"
   ]
  },
  "duplicate?": {
   "ru": "дубликат?",
   "de": "Duplikat?",
   "files": [
-   "eingang-fristen.js"
+   "eingang-fristen.js",
+   "eingang-smart.js"
   ]
  },
  "Kind not recognised – please name it": {
@@ -4241,7 +4247,8 @@
   "ru": "Подтвердить",
   "de": "Bestätigen",
   "files": [
-   "eingang-fristen.js"
+   "eingang-fristen.js",
+   "eingang-smart.js"
   ]
  },
  "Confirm %n ready ones": {
@@ -4324,6 +4331,394 @@
   "de": "Erledigt ✓",
   "files": [
    "eingang-fristen.js"
+  ]
+ },
+ "New": {
+  "ru": "Новые",
+  "de": "Neu",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Archive": {
+  "ru": "Архив",
+  "de": "Archiv",
+  "files": [
+   "eingang-smart.js",
+   "notizen.js"
+  ]
+ },
+ "▲ price": {
+  "ru": "▲ цена",
+  "de": "▲ Preis",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Fits: %t": {
+  "ru": "Подходит к: %t",
+  "de": "Passt zu: %t",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "contract “%n”": {
+  "ru": "договор «%n»",
+  "de": "Vertrag „%n“",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "due %d": {
+  "ru": "срок %d",
+  "de": "fällig %d",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "＋ Scan · Photo · File": {
+  "ru": "＋ Скан · Фото · Файл",
+  "de": "＋ Scannen · Foto · Datei",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Several files at once. Recognition runs on this phone only.": {
+  "ru": "Можно сразу несколько файлов. Распознавание идёт только на этом телефоне.",
+  "de": "Mehrere Dateien auf einmal möglich. Erkennung läuft nur auf diesem Telefon.",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "What Butler did": {
+  "ru": "Что сделал Батлер",
+  "de": "Was Butler getan hat",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Nothing here.": {
+  "ru": "Здесь пусто.",
+  "de": "Hier ist nichts.",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Document recognised": {
+  "ru": "Документ распознан",
+  "de": "Dokument erkannt",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Bill recognised": {
+  "ru": "Счёт распознан",
+  "de": "Rechnung erkannt",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Letter recognised": {
+  "ru": "Письмо распознано",
+  "de": "Brief erkannt",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Sender": {
+  "ru": "Отправитель",
+  "de": "Absender",
+  "files": [
+   "eingang-smart.js",
+   "mappen.js"
+  ]
+ },
+ "Amount": {
+  "ru": "Сумма",
+  "de": "Betrag",
+  "files": [
+   "eingang-smart.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "from the line “%l”": {
+  "ru": "из строки «%l»",
+  "de": "aus Zeile „%l“",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Due on": {
+  "ru": "Оплатить до",
+  "de": "Fällig am",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "= contract “%n” ✓": {
+  "ru": "= договор «%n» ✓",
+  "de": "= Vertrag „%n“ ✓",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Folder": {
+  "ru": "Папка",
+  "de": "Ordner",
+  "files": [
+   "eingang-smart.js",
+   "notizen.js"
+  ]
+ },
+ "change": {
+  "ru": "изменить",
+  "de": "ändern",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "New price": {
+  "ru": "Новая цена",
+  "de": "Neuer Preis",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "from %d": {
+  "ru": "с %d",
+  "de": "ab %d",
+  "files": [
+   "eingang-smart.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "Butler suggests": {
+  "ru": "Батлер предлагает",
+  "de": "Butler schlägt vor",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Link with contract “%n”": {
+  "ru": "Связать с договором «%n»",
+  "de": "Mit Vertrag „%n“ verknüpfen",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "same number": {
+  "ru": "тот же номер",
+  "de": "gleiche Nummer",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "same company name": {
+  "ru": "то же название фирмы",
+  "de": "gleicher Firmenname",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Reminder to pay": {
+  "ru": "Напомнить об оплате",
+  "de": "Erinnerung zum Bezahlen",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "on %d, 2 days before": {
+  "ru": "%d, за 2 дня",
+  "de": "am %d, 2 Tage vorher",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Enter in “Spending”": {
+  "ru": "Внести в «Расходы»",
+  "de": "In „Ausgaben“ eintragen",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "already counted via the contract – not twice": {
+  "ru": "уже учтено через договор — не дважды",
+  "de": "zählt schon über den Vertrag – nicht doppelt",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Put the new price into the contract": {
+  "ru": "Внести новую цену в договор",
+  "de": "Neuen Preis im Vertrag eintragen",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "%a from %d → Butler shows the rise": {
+  "ru": "%a с %d → Батлер покажет повышение",
+  "de": "%a ab %d → Butler zeigt die Erhöhung",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Create a task": {
+  "ru": "Создать задачу",
+  "de": "Aufgabe anlegen",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "“%t” in 7 days": {
+  "ru": "«%t» через 7 дней",
+  "de": "„%t“ in 7 Tagen",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Nothing happens without your confirmation. Everything can be undone.": {
+  "ru": "Без Вашего подтверждения ничего не происходит. Всё можно отменить.",
+  "de": "Nichts passiert ohne Ihre Bestätigung. Alles lässt sich rückgängig machen.",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Open document": {
+  "ru": "Открыть документ",
+  "de": "Dokument öffnen",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Done: %n": {
+  "ru": "Сделано: %n",
+  "de": "Erledigt: %n",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Today": {
+  "ru": "Сегодня",
+  "de": "Heute",
+  "files": [
+   "eingang-smart.js",
+   "layout-docs.js"
+  ]
+ },
+ "Yesterday": {
+  "ru": "Вчера",
+  "de": "Gestern",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Earlier": {
+  "ru": "Раньше",
+  "de": "Früher",
+  "files": [
+   "eingang-smart.js",
+   "seiten.js"
+  ]
+ },
+ "Undo": {
+  "ru": "Отменить",
+  "de": "Rückgängig",
+  "files": [
+   "eingang-smart.js",
+   "linkup.js",
+   "notizen.js",
+   "start-glas.js"
+  ]
+ },
+ "Undone": {
+  "ru": "Отменено",
+  "de": "Rückgängig gemacht",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "The log stays 90 days on this phone.": {
+  "ru": "Журнал хранится 90 дней на этом телефоне.",
+  "de": "Das Protokoll bleibt 90 Tage auf diesem Telefon.",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "%t → contract “%n”": {
+  "ru": "%t → договор «%n»",
+  "de": "%t → Vertrag „%n“",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Reminder %d: %t": {
+  "ru": "Напоминание %d: %t",
+  "de": "Erinnerung %d: %t",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "%a in “Spending”": {
+  "ru": "%a в «Расходах»",
+  "de": "%a in „Ausgaben“",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "New price %a in “%n”": {
+  "ru": "Новая цена %a в «%n»",
+  "de": "Neuer Preis %a in „%n“",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Task: %t": {
+  "ru": "Задача: %t",
+  "de": "Aufgabe: %t",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Confirmed: %t": {
+  "ru": "Подтверждено: %t",
+  "de": "Bestätigt: %t",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Archived: %t": {
+  "ru": "В архиве: %t",
+  "de": "Archiviert: %t",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "confirmed by you": {
+  "ru": "подтверждено Вами",
+  "de": "von Ihnen bestätigt",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Pay: %t (%a)": {
+  "ru": "Оплатить: %t (%a)",
+  "de": "Bezahlen: %t (%a)",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "Deal with: %t": {
+  "ru": "Разобраться: %t",
+  "de": "Erledigen: %t",
+  "files": [
+   "eingang-smart.js"
+  ]
+ },
+ "same number and amount as “%t”": {
+  "ru": "тот же номер и сумма, что у «%t»",
+  "de": "gleiche Nummer und Summe wie „%t“",
+  "files": [
+   "eingang-smart.js"
   ]
  },
  "Bottom bar": {
@@ -5704,13 +6099,6 @@
    "layout-docs.js"
   ]
  },
- "Today": {
-  "ru": "Сегодня",
-  "de": "Heute",
-  "files": [
-   "layout-docs.js"
-  ]
- },
  "Offices (appointments, deadlines)": {
   "ru": "Ведомства (термины, сроки)",
   "de": "Behörden (Termine, Fristen)",
@@ -5802,15 +6190,6 @@
   "de": "Auch bei %n gezeigt",
   "files": [
    "linkup.js"
-  ]
- },
- "Undo": {
-  "ru": "Отменить",
-  "de": "Rückgängig",
-  "files": [
-   "linkup.js",
-   "notizen.js",
-   "start-glas.js"
   ]
  },
  "Also shown in": {
@@ -6208,13 +6587,6 @@
  "Subject": {
   "ru": "Тема",
   "de": "Betreff",
-  "files": [
-   "mappen.js"
-  ]
- },
- "Sender": {
-  "ru": "Отправитель",
-  "de": "Absender",
   "files": [
    "mappen.js"
   ]
@@ -7025,13 +7397,6 @@
    "notizen.js"
   ]
  },
- "Archive": {
-  "ru": "Архив",
-  "de": "Archiv",
-  "files": [
-   "notizen.js"
-  ]
- },
  "Bin": {
   "ru": "Корзина",
   "de": "Papierkorb",
@@ -7121,13 +7486,6 @@
  "＋ Folder": {
   "ru": "＋ Папка",
   "de": "＋ Ordner",
-  "files": [
-   "notizen.js"
-  ]
- },
- "Folder": {
-  "ru": "Папка",
-  "de": "Ordner",
   "files": [
    "notizen.js"
   ]
@@ -8060,13 +8418,6 @@
  "%n selected": {
   "ru": "Выбрано: %n",
   "de": "%n ausgewählt",
-  "files": [
-   "seiten.js"
-  ]
- },
- "Earlier": {
-  "ru": "Раньше",
-  "de": "Früher",
   "files": [
    "seiten.js"
   ]
@@ -9489,13 +9840,6 @@
    "vertraege-abos.js"
   ]
  },
- "from %d": {
-  "ru": "с %d",
-  "de": "ab %d",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
  "+%a a year": {
   "ru": "+%a в год",
   "de": "+%a im Jahr",
@@ -9870,13 +10214,6 @@
  "Expense": {
   "ru": "Расход",
   "de": "Ausgabe",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
- "Amount": {
-  "ru": "Сумма",
-  "de": "Betrag",
   "files": [
    "vertraege-abos.js"
   ]

@@ -110,3 +110,4 @@ docs/abschluss.js
 docs/kontakte-post.js
 docs/steuerzentrum.js
 docs/kalender-nz.js
+docs/kauf-gesund.js

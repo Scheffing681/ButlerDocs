@@ -1731,3 +1731,59 @@
 1730	30 günden eski yedek
 1731	Her şey sakin ✓
 1732	ST
+1733	Satın alımlar ve garanti
+1734	Aktif
+1735	Sona erdi
+1736	＋ Satın alım
+1737	Henüz satın alım yok. Elle veya bir fişten.
+1738	Ürün
+1739	Üretici / model
+1740	Mağaza
+1741	Satın alma tarihi
+1742	Fiyat
+1743	Seri numarası
+1744	Garanti bitişi (belgeye göre)
+1745	Lütfen ürünü girin
+1746	Yasal garanti %d tarihine kadar
+1747	Garanti %d tarihine kadar
+1748	belgeye göre garanti yok
+1749	Garanti (gönüllü, belgeye göre) ile yasal garanti (kanun, 2 yıl) farklıdır. Lütfen koşulları kontrol edin.
+1750	Onarımlar
+1751	＋ Onarım
+1752	Ne yapıldı
+1753	Maliyet
+1754	Mağazaya mektup
+1755	hazır kusur bildirimi – siz gönderirsiniz
+1756	Butler sonuç vaat etmez ve hukuki değerlendirme yapmaz.
+1757	Garantili satın alım oluştur
+1758	Gerçekten silinsin mi? Tekrar
+1759	Garanti bitiyor: %n
+1760	Yasal garanti bitiyor: %n
+1761	Ziyaretler
+1762	İlaçlar
+1763	Aşılar
+1764	Tahlil değerleri
+1765	Doktor / muayenehane
+1766	Neden
+1767	Sonraki randevu
+1768	Doz (reçeteye göre)
+1769	Başlangıç
+1770	Bitiş
+1771	Reçete eden
+1772	Aşı
+1773	Sonraki doz (belirtildiyse)
+1774	Değer
+1775	Referans (rapordaki gibi)
+1776	Laboratuvar
+1777	Henüz boş.
+1778	＋ Ekle
+1779	Yalnızca sizin girdikleriniz. Butler teşhis koymaz, tedaviyi değiştirmez – buna doktorunuz karar verir.
+1780	Özel kod
+1781	bölüm yalnızca kodla açılır
+1782	Kod belirle (4–8 rakam)
+1783	Kodu kaldır
+1784	“Sağlık” kodunu girin
+1785	Yanlış kod
+1786	Aşı zamanı: %n
+1787	Ziyaretler, ilaçlar, aşılar, değerler
+1788	tarih

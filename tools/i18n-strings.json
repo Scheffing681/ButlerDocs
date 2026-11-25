@@ -128,6 +128,7 @@
    "abschluss.js",
    "behoerden.js",
    "finanzen.js",
+   "kauf-gesund.js",
    "kontakte-post.js",
    "notizen.js",
    "start.js"
@@ -635,6 +636,7 @@
    "akte.js",
    "behoerden.js",
    "finanzen2.js",
+   "kauf-gesund.js",
    "kontakte-post.js"
   ]
  },
@@ -643,6 +645,7 @@
   "de": "＋ Dokument verknüpfen",
   "files": [
    "akte.js",
+   "kauf-gesund.js",
    "kontakte-post.js"
   ]
  },
@@ -681,6 +684,7 @@
    "business.js",
    "finanzen.js",
    "finanzen2.js",
+   "kauf-gesund.js",
    "kontakte-post.js",
    "mappen.js",
    "nav-edit.js",
@@ -837,7 +841,8 @@
   "ru": "Скоро",
   "de": "Bald",
   "files": [
-   "akte.js"
+   "akte.js",
+   "kauf-gesund.js"
   ]
  },
  "Everything": {
@@ -866,6 +871,7 @@
    "akte.js",
    "finanzen2.js",
    "kalender-nz.js",
+   "kauf-gesund.js",
    "kontakte-post.js",
    "layout-docs.js",
    "move-phone.js",
@@ -1303,6 +1309,7 @@
   "files": [
    "behoerden-briefe.js",
    "behoerden.js",
+   "kauf-gesund.js",
    "kontakte-post.js",
    "reliability.js"
   ]
@@ -1684,6 +1691,7 @@
    "business.js",
    "finanzen.js",
    "finanzen2.js",
+   "kauf-gesund.js",
    "seiten.js",
    "steuer-plus.js",
    "vertraege-abos.js"
@@ -1925,6 +1933,7 @@
   "files": [
    "behoerden-termine.js",
    "karriere2.js",
+   "kauf-gesund.js",
    "kontakte-post.js",
    "reliability.js",
    "start-glas.js"
@@ -2159,6 +2168,7 @@
    "behoerden.js",
    "eingang-fristen.js",
    "kalender-nz.js",
+   "kauf-gesund.js",
    "kontakte-post.js",
    "post.js",
    "scan-glas.js",
@@ -2399,6 +2409,7 @@
   "de": "Name",
   "files": [
    "behoerden.js",
+   "kauf-gesund.js",
    "mappen.js",
    "notizen.js",
    "seiten.js"
@@ -3633,7 +3644,8 @@
   "ru": "Ед.",
   "de": "Einheit",
   "files": [
-   "business.js"
+   "business.js",
+   "kauf-gesund.js"
   ]
  },
  "Price €": {
@@ -6224,7 +6236,8 @@
   "ru": "Результат",
   "de": "Ergebnis",
   "files": [
-   "finanzen2.js"
+   "finanzen2.js",
+   "kauf-gesund.js"
   ]
  },
  "data-act=\"go\" data-to=\"kar\"": {
@@ -7111,6 +7124,400 @@
    "karriere2.js"
   ]
  },
+ "Purchases & warranty": {
+  "ru": "Покупки и гарантия",
+  "de": "Käufe & Garantie",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Active": {
+  "ru": "Идёт",
+  "de": "Läuft",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Expired": {
+  "ru": "Истекла",
+  "de": "Vorbei",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "＋ Purchase": {
+  "ru": "＋ Покупка",
+  "de": "＋ Kauf",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "No purchases yet. By hand or from a receipt.": {
+  "ru": "Покупок пока нет. Добавьте вручную или из чека («Als Kauf anlegen»).",
+  "de": "Noch keine Käufe. Von Hand oder aus einem Beleg („Als Kauf anlegen“).",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Product": {
+  "ru": "Товар",
+  "de": "Produkt",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Maker / model": {
+  "ru": "Производитель / модель",
+  "de": "Hersteller / Modell",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Shop": {
+  "ru": "Магазин",
+  "de": "Händler",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Purchase date": {
+  "ru": "Дата покупки",
+  "de": "Kaufdatum",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Price": {
+  "ru": "Цена",
+  "de": "Preis",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Serial number": {
+  "ru": "Серийный номер",
+  "de": "Seriennummer",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Warranty until (per document)": {
+  "ru": "Гарантия до (по документу)",
+  "de": "Garantie bis (laut Dokument)",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Please enter the product": {
+  "ru": "Впишите товар",
+  "de": "Bitte das Produkt eintragen",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Statutory warranty until %d": {
+  "ru": "Gewährleistung по закону до %d",
+  "de": "Gewährleistung (gesetzlich) bis %d",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Warranty until %d": {
+  "ru": "Гарантия до %d",
+  "de": "Garantie bis %d",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "no warranty per document": {
+  "ru": "гарантии по документу нет",
+  "de": "keine Garantie laut Dokument",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Warranty (voluntary, per document) and statutory warranty (by law, 2 years) are different. Please check the terms.": {
+  "ru": "Garantie (добровольно, по документу) и Gewährleistung (по закону, 2 года) — разные вещи. Проверьте условия.",
+  "de": "Garantie (freiwillig, laut Dokument) und Gewährleistung (Gesetz, 2 Jahre) sind verschieden. Bedingungen bitte prüfen.",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Repairs": {
+  "ru": "Ремонты",
+  "de": "Reparaturen",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "＋ Repair": {
+  "ru": "＋ Ремонт",
+  "de": "＋ Reparatur",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "What was done": {
+  "ru": "Что сделано",
+  "de": "Was wurde gemacht",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Cost": {
+  "ru": "Стоимость",
+  "de": "Kosten",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Letter to the shop": {
+  "ru": "Письмо продавцу",
+  "de": "Schreiben an den Händler",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "ready defect notice – you send it": {
+  "ru": "готовый текст о недостатке — отправляете Вы",
+  "de": "fertiger Text zur Mängelanzeige – Sie senden",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Butler promises no result and gives no legal assessment.": {
+  "ru": "Батлер не обещает результат и не оценивает претензию юридически.",
+  "de": "Butler verspricht kein Ergebnis und bewertet den Anspruch nicht rechtlich.",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Create a purchase with warranty": {
+  "ru": "Создать покупку с гарантией",
+  "de": "Als Kauf mit Garantie anlegen",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Really delete? Again": {
+  "ru": "Точно удалить? Ещё раз",
+  "de": "Wirklich löschen? Nochmals",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Warranty ends: %n": {
+  "ru": "Конец гарантии: %n",
+  "de": "Garantie endet: %n",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Statutory warranty ends: %n": {
+  "ru": "Конец Gewährleistung: %n",
+  "de": "Gewährleistung endet: %n",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Text copied": {
+  "ru": "Текст скопирован",
+  "de": "Text kopiert",
+  "files": [
+   "kauf-gesund.js",
+   "kontakte-post.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "Visits": {
+  "ru": "Визиты",
+  "de": "Besuche",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Medicines": {
+  "ru": "Лекарства",
+  "de": "Arznei",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Vaccinations": {
+  "ru": "Прививки",
+  "de": "Impfungen",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Lab values": {
+  "ru": "Анализы",
+  "de": "Werte",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Doctor / practice": {
+  "ru": "Врач / учреждение",
+  "de": "Ärztin / Praxis",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Reason": {
+  "ru": "Причина",
+  "de": "Grund",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Next appointment": {
+  "ru": "Следующий визит",
+  "de": "Nächster Termin",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Dose (as prescribed)": {
+  "ru": "Дозировка (как назначено)",
+  "de": "Dosierung (wie verordnet)",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Since": {
+  "ru": "С",
+  "de": "Seit",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Until": {
+  "ru": "До",
+  "de": "Bis",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Prescribed by": {
+  "ru": "Назначил(а)",
+  "de": "Verordnet von",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Vaccination": {
+  "ru": "Прививка",
+  "de": "Impfung",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Next booster (if stated)": {
+  "ru": "Следующая (если указано)",
+  "de": "Nächste Auffrischung (falls angegeben)",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Value": {
+  "ru": "Показатель",
+  "de": "Wert",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Reference (as on the report)": {
+  "ru": "Норма (как в бланке)",
+  "de": "Referenz (wie im Befund)",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Lab": {
+  "ru": "Лаборатория",
+  "de": "Labor",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Empty yet.": {
+  "ru": "Пока пусто.",
+  "de": "Noch leer.",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "＋ Add": {
+  "ru": "＋ Добавить",
+  "de": "＋ Hinzufügen",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Only what you entered. Butler makes no diagnoses and changes no treatment – your doctor decides.": {
+  "ru": "Только то, что Вы внесли. Батлер не ставит диагнозы и не меняет лечение — это решает врач.",
+  "de": "Nur was Sie eingetragen haben. Butler stellt keine Diagnosen und ändert keine Behandlung – das entscheidet die Ärztin.",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Own code": {
+  "ru": "Код для раздела",
+  "de": "Eigener Code",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "the section opens only with the code": {
+  "ru": "раздел откроется только с кодом",
+  "de": "der Bereich öffnet nur mit Code",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Set a code (4–8 digits)": {
+  "ru": "Задать код (4–8 цифр)",
+  "de": "Code festlegen (4–8 Ziffern)",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Remove code": {
+  "ru": "Убрать код",
+  "de": "Code entfernen",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Enter the “Health” code": {
+  "ru": "Введите код раздела «Здоровье»",
+  "de": "Code für „Gesundheit“ eingeben",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Wrong code": {
+  "ru": "Неверный код",
+  "de": "Falscher Code",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Vaccination due: %n": {
+  "ru": "Прививка: %n",
+  "de": "Impfung fällig: %n",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
+ "Visits, medicines, vaccinations, values": {
+  "ru": "Визиты, лекарства, прививки, анализы",
+  "de": "Besuche, Medikamente, Impfungen, Werte",
+  "files": [
+   "kauf-gesund.js"
+  ]
+ },
  "Contacts": {
   "ru": "Контакты",
   "de": "Kontakte",
@@ -7577,14 +7984,6 @@
   "de": "Nachfragen",
   "files": [
    "kontakte-post.js"
-  ]
- },
- "Text copied": {
-  "ru": "Текст скопирован",
-  "de": "Text kopiert",
-  "files": [
-   "kontakte-post.js",
-   "vertraege-abos.js"
   ]
  },
  "Create a case from this letter": {

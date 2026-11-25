@@ -1731,3 +1731,59 @@
 1730	Copia de más de 30 días
 1731	Todo tranquilo ✓
 1732	ST
+1733	Compras y garantía
+1734	Activa
+1735	Vencida
+1736	＋ Compra
+1737	Aún no hay compras. A mano o desde un recibo.
+1738	Producto
+1739	Fabricante / modelo
+1740	Tienda
+1741	Fecha de compra
+1742	Precio
+1743	Número de serie
+1744	Garantía hasta (según el documento)
+1745	Introduzca el producto
+1746	Garantía legal hasta %d
+1747	Garantía hasta %d
+1748	sin garantía según el documento
+1749	La garantía (voluntaria, según el documento) y la garantía legal (ley, 2 años) son distintas. Revise las condiciones.
+1750	Reparaciones
+1751	＋ Reparación
+1752	Qué se hizo
+1753	Coste
+1754	Carta a la tienda
+1755	aviso de defecto listo – usted lo envía
+1756	Butler no promete resultado ni hace valoración jurídica.
+1757	Crear compra con garantía
+1758	¿Eliminar de verdad? Otra vez
+1759	Fin de garantía: %n
+1760	Fin de garantía legal: %n
+1761	Visitas
+1762	Medicamentos
+1763	Vacunas
+1764	Análisis
+1765	Médico / consulta
+1766	Motivo
+1767	Próxima cita
+1768	Dosis (según receta)
+1769	Desde
+1770	Hasta
+1771	Recetado por
+1772	Vacuna
+1773	Próxima dosis (si se indica)
+1774	Valor
+1775	Referencia (como en el informe)
+1776	Laboratorio
+1777	Aún vacío.
+1778	＋ Añadir
+1779	Solo lo que usted introdujo. Butler no diagnostica ni cambia tratamientos: decide su médico.
+1780	Código propio
+1781	la sección solo se abre con el código
+1782	Fijar código (4–8 dígitos)
+1783	Quitar código
+1784	Introduzca el código de «Salud»
+1785	Código incorrecto
+1786	Vacuna pendiente: %n
+1787	Visitas, medicamentos, vacunas, análisis
+1788	fecha

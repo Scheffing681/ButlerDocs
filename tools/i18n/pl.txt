@@ -1731,3 +1731,59 @@
 1730	Kopia starsza niż 30 dni
 1731	Wszystko spokojnie ✓
 1732	ST
+1733	Zakupy i gwarancja
+1734	Aktywna
+1735	Wygasła
+1736	＋ Zakup
+1737	Brak zakupów. Ręcznie lub z paragonu.
+1738	Produkt
+1739	Producent / model
+1740	Sklep
+1741	Data zakupu
+1742	Cena
+1743	Numer seryjny
+1744	Gwarancja do (wg dokumentu)
+1745	Wpisz produkt
+1746	Rękojmia ustawowa do %d
+1747	Gwarancja do %d
+1748	brak gwarancji wg dokumentu
+1749	Gwarancja (dobrowolna, wg dokumentu) i rękojmia (ustawa, 2 lata) to co innego. Sprawdź warunki.
+1750	Naprawy
+1751	＋ Naprawa
+1752	Co zrobiono
+1753	Koszt
+1754	Pismo do sprzedawcy
+1755	gotowa reklamacja – wysyłasz Ty
+1756	Butler nie obiecuje wyniku i nie ocenia roszczenia prawnie.
+1757	Utwórz zakup z gwarancją
+1758	Na pewno usunąć? Jeszcze raz
+1759	Koniec gwarancji: %n
+1760	Koniec rękojmi: %n
+1761	Wizyty
+1762	Leki
+1763	Szczepienia
+1764	Wyniki badań
+1765	Lekarz / gabinet
+1766	Powód
+1767	Następna wizyta
+1768	Dawkowanie (jak przepisano)
+1769	Od
+1770	Do
+1771	Przepisał(a)
+1772	Szczepienie
+1773	Następna dawka (jeśli podano)
+1774	Parametr
+1775	Norma (jak w wyniku)
+1776	Laboratorium
+1777	Na razie pusto.
+1778	＋ Dodaj
+1779	Tylko to, co wpisano. Butler nie stawia diagnoz i nie zmienia leczenia – decyduje lekarz.
+1780	Własny kod
+1781	sekcja otworzy się tylko z kodem
+1782	Ustaw kod (4–8 cyfr)
+1783	Usuń kod
+1784	Wpisz kod „Zdrowie”
+1785	Błędny kod
+1786	Szczepienie: %n
+1787	Wizyty, leki, szczepienia, wyniki
+1788	data

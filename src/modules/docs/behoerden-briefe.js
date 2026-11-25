@@ -96,7 +96,7 @@ const BSV_TPL={
  nach:{n:'Unterlagen nachreichen',subj:c=>`Nachreichung von Unterlagen${c.rd?' – Ihr Schreiben vom '+c.rd:''}`,body:()=>`anbei übersende ich Ihnen die angeforderten Unterlagen:\n\n- \n- \n\nBitte bestätigen Sie mir den Eingang.`},
  stand:{n:'Sachstandsanfrage',subj:c=>`Sachstandsanfrage${c.ant?' – '+c.ant:''}`,body:c=>`am ${c.antD||'…'} habe ich ${c.ant?'meinen Antrag „'+c.ant+'“':'einen Antrag'} gestellt. Bis heute habe ich keine Nachricht von Ihnen erhalten.\n\nBitte teilen Sie mir den aktuellen Stand der Bearbeitung mit.`},
  frei:{n:'Leeres Schreiben',subj:()=>'',body:()=>''}};
-function bsvMe(){let me={};try{me=ja()}catch{}const name=[me.first,me.mid,me.last].filter(Boolean).join(' ')||((g.user&&[g.user.first,g.user.last].filter(Boolean).join(' '))||'');const addr=String(me.addr||(bsvD().nf||{}).addr||'').trim();const mail=String(me.email||(g.user&&g.user.email)||'').trim();return{name,addr,mail}}
+function bsvMe(){let me={};try{me=ja()}catch{}const name=[me.first,me.mid,me.last].filter(Boolean).join(' ')||((g.user&&[g.user.first,g.user.last].filter(Boolean).join(' '))||'');const addr=String(me.post||me.addr||(bsvD().nf||{}).addr||'').trim();const mail=String(me.email||(g.user&&g.user.email)||'').trim();return{name,addr,mail}}
 function bsvAz(it,ant){if(ant&&ant.az)return'Aktenzeichen: '+ant.az;const n=(it.nums||[]).find(z=>!z.s&&z.v&&/aktenzeichen|steuernummer|kundennummer|bg-nummer|kindergeld|versicherungsnummer|\baz\b/i.test(z.t||''));return n?(n.t+': '+n.v):''}
 /* the letter's subject and text (sender, office, date, signature come from the «Briefe» editor itself) */
 function bsvLetter(b){const it=bsvGet(b.it)||{},me=bsvMe(),ant=b.ant&&bsvAnts().find(z=>z.id===b.ant),tp=BSV_TPL[b.tpl]||BSV_TPL.frei;

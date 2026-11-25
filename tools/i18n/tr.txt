@@ -1859,3 +1859,25 @@
 1858	Hayır. Butler düzenler, süreleri hesaplar ve taslak hazırlar. Kararı siz, avukat veya doktor verir.
 1859	Uygulamayı nasıl korurum?
 1860	Profilde kilit kodu, önemli belgeler için kasa, “Sağlık” için ayrı kod.
+1861	Ertelenenler
+1862	Sonra hatırlat
+1863	Bir hafta içinde
+1864	Geri getir
+1865	Hangi bildirimler gösterilsin
+1866	kapatılan alanlar zilde görünmez
+1867	Push bildirimleri App Store sürümüyle gelecek. O zamana kadar her şey zilde.
+1868	Adresler
+1869	Ev adresi
+1870	Posta adresi (farklıysa)
+1871	Ek adres
+1872	＋ Adres
+1873	Ne için (ör. bahçe, iş)
+1874	Mektuplarda posta adresi, yoksa ev adresi kullanılır. Eski belgeler ve mektuplar değişmez.
+1875	Doğum tarihi (isteğe bağlı)
+1876	Son yedek: %d
+1877	şimdi yedek oluştur
+1878	Tam arşiv (ZIP)
+1879	klasörlere göre tüm belgeler + CSV tabloları
+1880	Arşiv oluşturuluyor …
+1881	Arşiv şifreli değildir – güvenli saklayın. Telefon değiştirmek için yedeği kullanın.
+1882	Tam arşiv oluşturuldu

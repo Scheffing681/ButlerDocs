@@ -1859,3 +1859,25 @@
 1858	Nie. Butler porządkuje, liczy terminy i przygotowuje szkice. Decydujesz Ty, prawnik lub lekarz.
 1859	Jak chronić aplikację?
 1860	Kod blokady w Profilu, sejf na ważne dokumenty, osobny kod dla „Zdrowia”.
+1861	Odłożone
+1862	Przypomnij później
+1863	Za tydzień
+1864	Przywróć
+1865	Które powiadomienia pokazywać
+1866	wyłączone obszary nie pojawiają się w dzwonku
+1867	Powiadomienia push pojawią się z wersją z App Store. Do tego czasu wszystko jest w dzwonku.
+1868	Adresy
+1869	Adres zamieszkania
+1870	Adres korespondencyjny (jeśli inny)
+1871	Dodatkowy adres
+1872	＋ Adres
+1873	Do czego (np. działka, praca)
+1874	W listach używany jest adres korespondencyjny, w przeciwnym razie adres zamieszkania. Stare dokumenty i listy się nie zmieniają.
+1875	Data urodzenia (opcjonalnie)
+1876	Ostatnia kopia: %d
+1877	utwórz kopię teraz
+1878	Pełne archiwum (ZIP)
+1879	wszystkie dokumenty wg folderów + tabele CSV
+1880	Tworzę archiwum …
+1881	Archiwum nie jest szyfrowane – przechowuj je bezpiecznie. Do przeprowadzki użyj kopii zapasowej.
+1882	Utworzono pełne archiwum

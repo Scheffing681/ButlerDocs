@@ -15,6 +15,11 @@ const tlxS={
  pd:['Личные данные','Persönliche Angaben','Personal details'],pdS:['Земля, Steuer-ID, класс — по желанию','Bundesland, Steuer-ID, Steuerklasse – freiwillig','State, tax ID, tax class – optional'],
  bl:['Федеральная земля','Bundesland','Federal state'],blS:['для праздников в календаре','für Feiertage im Kalender','for holidays in the calendar'],sid:['Steuer-ID (11 цифр)','Steuer-ID (11 Ziffern)','Tax ID (11 digits)'],skl:['Налоговый класс','Steuerklasse','Tax class'],
  sidBad:['Steuer-ID должна содержать 11 цифр','Die Steuer-ID hat 11 Ziffern','The tax ID has 11 digits'],pdNote:['Хранится только на телефоне. Нужно лишь для Вашего обзора.','Bleibt nur auf dem Telefon. Nur für Ihre Übersicht.','Stays on the phone only. Just for your overview.'],save:['Сохранить','Speichern','Save'],saved:['Сохранено','Gespeichert','Saved'],
+ adr:['Адреса','Adressen','Addresses'],a_home:['Адрес проживания','Wohnadresse','Home address'],a_post:['Почтовый адрес (если другой)','Postanschrift (falls anders)','Postal address (if different)'],a_more:['Дополнительный адрес','Weitere Adresse','Further address'],a_add:['＋ Адрес','＋ Adresse','＋ Address'],a_lbl:['Для чего (напр. дача, работа)','Wofür (z. B. Garten, Arbeit)','What for (e.g. garden, work)'],
+ a_note:['В письма подставляется почтовый адрес, если он указан, иначе адрес проживания. Старые документы и письма не меняются.','In Briefe kommt die Postanschrift, sonst die Wohnadresse. Alte Dokumente und Briefe bleiben unverändert.','Letters use the postal address, otherwise the home address. Old documents and letters stay unchanged.'],
+ bday:['Дата рождения (по желанию)','Geburtsdatum (freiwillig)','Date of birth (optional)'],
+ lastBk:['Последняя копия: %d','Letzte Sicherung: %d','Last backup: %d'],noBk:['Резервной копии ещё нет','Noch keine Sicherung','No backup yet'],bkS:['создать копию сейчас','jetzt Sicherung erstellen','create a backup now'],
+ zip:['Полный архив (ZIP)','Vollständiges Archiv (ZIP)','Full archive (ZIP)'],zipS:['все документы по папкам + таблицы CSV','alle Dokumente nach Ordnern + CSV-Tabellen','all documents by folder + CSV tables'],zipBusy:['Собираю архив…','Archiv wird erstellt …','Building the archive …'],zipNote:['Архив не зашифрован — храните его в надёжном месте. Для переезда используйте резервную копию.','Das Archiv ist nicht verschlüsselt – sicher aufbewahren. Zum Umziehen die Sicherung nutzen.','The archive is not encrypted – keep it safe. To move phones, use the backup.'],l_zip:['Создан полный архив','Vollständiges Archiv erstellt','Full archive created'],
  dat:['Данные и память','Daten & Speicher','Data & storage'],datS:['место, дубликаты, архив, CSV','Platz, Duplikate, Archiv, CSV','space, duplicates, archive, CSV'],
  used:['Занято %u из %q','Belegt: %u von %q','Used: %u of %q'],noEst:['Браузер не сообщает размер памяти','Der Browser nennt keine Speichergröße','The browser does not report storage size'],
  keep:['Не удалять данные автоматически','Daten dauerhaft behalten','Keep data permanently'],keepS:['просим браузер не чистить память','Browser bitten, nichts zu löschen','ask the browser not to clear storage'],keepOn:['Браузер подтвердил','Vom Browser bestätigt','Confirmed by the browser'],keepNo:['Браузер не подтвердил — делайте резервную копию','Browser hat nicht bestätigt – bitte Sicherung machen','Browser did not confirm – please make a backup'],
@@ -44,19 +49,27 @@ const tlxRow=(ic,t,s,act,right)=>`<button type="button" class="varow" ${act||''}
 const tlxHd=t=>`<div class="sub-hdr"><button class="iconbtn" data-act="back" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(t)}</h2></div><span></span></div>`;
 /* ---- security log ---- */
 function tlxLog(k,t){try{const L2=Array.isArray(g.secLog)?g.secLog:(g.secLog=[]);L2.unshift({ts:Date.now(),k,t:t||''});if(L2.length>100)L2.length=100;$()}catch{}}
-const tlxLogTxt=x=>({open:tlxt('l_open'),bk:tlxt('l_bk'),vault:tlxt('l_vault'),csv:tlxt('l_csv',{n:x.t}),rule:tlxt('l_rule',{n:x.t}),move:tlxt('l_move',{n:x.t}),pd:tlxt('l_pd')})[x.k]||x.t||x.k;
+const tlxLogTxt=x=>({open:tlxt('l_open'),bk:tlxt('l_bk'),vault:tlxt('l_vault'),csv:tlxt('l_csv',{n:x.t}),rule:tlxt('l_rule',{n:x.t}),move:tlxt('l_move',{n:x.t}),pd:tlxt('l_pd'),zip:tlxt('l_zip')})[x.k]||x.t||x.k;
 let tlxOpened=0,tlxLastR='';
 Hooks.on('render',()=>{try{if(!tlxOpened&&g&&ja&&(()=>{try{return ja().first}catch{return 0}})()){tlxOpened=1;tlxLog('open')}if(m.route==='dsafe'&&tlxLastR!=='dsafe')tlxLog('vault');tlxLastR=m.route}catch{}});
 document.addEventListener('click',e=>{try{const b=e.target.closest&&e.target.closest('[data-act="pvbk"]');if(b)tlxLog('bk')}catch{}},!0);
 /* ---- personal details ---- */
 const tlxPd=()=>g.pd&&typeof g.pd==='object'?g.pd:(g.pd={});
-function tlxpScreen(){const P=tlxPd(),bl=(KN_BL.find(x=>x[0]===g.bl)||[])[1]||'—';
+function tlxpScreen(){const P=tlxPd(),me=(()=>{try{return ja()}catch{return{}}})(),bl=(KN_BL.find(x=>x[0]===g.bl)||[])[1]||'—';
  return`<div class="screen dhome fz va tlxw">${tlxHd(tlxt('pd'))}<div class="vacard">${tlxRow('🗺',tlxt('bl'),tlxt('blS'),'data-act="knbl"',`<small>${i(bl)}</small>`)}</div>
- <div class="vacard tlxf"><label class="bsvl">${i(tlxt('sid'))}</label><input class="field" inputmode="numeric" maxlength="14" data-tlxs value="${i(P.sid||'')}" autocomplete="off">
+ <h3 class="vash">${i(tlxt('adr'))}</h3><div class="vacard tlxf"><label class="bsvl">${i(tlxt('a_home'))}</label><textarea class="field" rows="2" data-tlxa="addr">${i(me.addr||'')}</textarea>
+ <label class="bsvl">${i(tlxt('a_post'))}</label><textarea class="field" rows="2" data-tlxa="post">${i(me.post||'')}</textarea>
+ ${(me.addrs||[]).map((a,j)=>`<label class="bsvl">${i(a.l||tlxt('a_more'))}</label><div class="tlxar"><textarea class="field" rows="2" data-tlxm="${j}">${i(a.v||'')}</textarea><button type="button" class="akx" data-act="tlxadel" data-j="${j}">✕</button></div>`).join('')}
+ <button type="button" class="valnk" data-act="tlxaadd">${i(tlxt('a_add'))}</button><p class="vanote">${i(tlxt('a_note'))}</p></div>
+ <div class="vacard tlxf"><label class="bsvl">${i(tlxt('bday'))}</label><input class="field" type="date" data-tlxbd value="${i(me.bday||'')}">
+ <label class="bsvl">${i(tlxt('sid'))}</label><input class="field" inputmode="numeric" maxlength="14" data-tlxs value="${i(P.sid||'')}" autocomplete="off">
  <label class="bsvl">${i(tlxt('skl'))}</label><div class="vachips">${['I','II','III','IV','V','VI'].map(k=>`<button type="button" class="${P.skl===k?'on':''}" data-act="tlxskl" data-k="${k}">${k}</button>`).join('')}</div>
  <small class="verr" data-tlxe></small><button type="button" class="vaadd" data-act="tlxpsave">${i(tlxt('save'))}</button></div><p class="vanote">${i(tlxt('pdNote'))}</p></div>`}
 Hooks.act('tlxskl',d=>{const P=tlxPd();P.skl=P.skl===d.k?'':d.k;$();tlxLog('pd');v()});
-Hooks.act('tlxpsave',()=>{const el=document.querySelector('[data-tlxs]');if(!el)return;const s2=el.value.replace(/\s/g,'');if(s2&&!/^\d{11}$/.test(s2)){const e=document.querySelector('[data-tlxe]');e&&(e.textContent=tlxt('sidBad'));return}tlxPd().sid=s2;$();tlxLog('pd');T(tlxt('saved'));v()});
+const tlxAddrRead=()=>{try{const me=ja();document.querySelectorAll('[data-tlxa]').forEach(t=>{me[t.dataset.tlxa]=t.value.trim()});document.querySelectorAll('[data-tlxm]').forEach(t=>{const a=(me.addrs||[])[+t.dataset.tlxm];a&&(a.v=t.value.trim())});const b=document.querySelector('[data-tlxbd]');b&&(me.bday=b.value)}catch{}};
+Hooks.act('tlxaadd',()=>{tlxAddrRead();H(tlxt('a_more'),`<div class="bsvys"><label class="bsvl">${i(tlxt('a_lbl'))}</label><input class="field" data-tl><textarea class="field" rows="3" data-tv></textarea><button type="button" class="vaadd" data-ks>${i(tlxt('save'))}</button></div>`,el=>{el.classList.add('bsvsh');el.querySelector('[data-ks]').onclick=()=>{const me=ja();(me.addrs=Array.isArray(me.addrs)?me.addrs:[]).push({id:V(),l:el.querySelector('[data-tl]').value.trim(),v:el.querySelector('[data-tv]').value.trim()});$();tlxLog('pd');el.remove();v()}})});
+Hooks.act('tlxadel',d=>{tlxAddrRead();const me=ja();me.addrs=(me.addrs||[]).filter((a,j)=>j!==+d.j);$();tlxLog('pd');v()});
+Hooks.act('tlxpsave',()=>{const el=document.querySelector('[data-tlxs]');if(!el)return;tlxAddrRead();const s2=el.value.replace(/\s/g,'');if(s2&&!/^\d{11}$/.test(s2)){const e=document.querySelector('[data-tlxe]');e&&(e.textContent=tlxt('sidBad'));return}tlxPd().sid=s2;$();tlxLog('pd');T(tlxt('saved'));v()});
 /* ---- data & storage ---- */
 const tlxDocs=()=>{try{return Ke().items.filter(d=>d&&!d.type&&!d.del)}catch{return[]}};
 const tlxNoTitle=()=>tlxDocs().filter(d=>!String(d.title||'').trim()||/^(scan|img|image|dokument|document|foto|photo|bild|pxl|dsc)[\s_-]*\d*(\.\w+)?$/i.test(String(d.title).trim()));
@@ -71,6 +84,7 @@ function tlxdScreen(){const D=tlxDocs(),nt=tlxNoTitle(),du=tlxDups(),en=tlxEnded
  <h3 class="vash">${i(tlxt('cnt'))}</h3><div class="vacard tlxcn">${[['📄','c_doc',D.length],['📑','c_ctr',ctr.length],['👤','c_kon',kon.length],['🛍','c_kauf',(g.kauf||[]).length]].map(([ic,k,n])=>`<div><span>${ic}</span><b>${n}</b><small>${i(tlxt(k))}</small></div>`).join('')}</div>
  <h3 class="vash">${i(tlxt('chk'))}</h3><div class="vacard">${nt.length||du.length||en.length?[nt.length?tlxRow('🏷',tlxt('noTitle',{n:nt.length}),'','data-act="tlxv" data-k="nt"'):'',du.length?tlxRow('⧉',tlxt('dup',{n:du.length}),tlxt('dupNote'),'data-act="tlxv" data-k="dup"'):'',en.length?tlxRow('🗄',tlxt('ended',{n:en.length}),'','data-act="tlxv" data-k="end"'):''].join(''):tlxRow('✅',tlxt('allOk'),'','','')}</div>
  ${list?`<div class="vacard tlxls">${list.map(g2=>g2.map(d=>`<button type="button" class="varow" data-act="dzopen" data-id="${d.id}"><span class="vaic">📄</span><span class="vatx"><b>${i(d.title||'—')}</b><small>${i([d.party,d.end?vaDate(d.end):d.date?vaDate(d.date):''].filter(Boolean).join(' · '))}</small></span><span class="vaam">›</span></button>`).join('')+(g2.length>1?'<hr class="tlxhr">':'')).join('')}</div>`:''}
+ <div class="vacard">${(()=>{const last=+(localStorage.getItem('bdocs:bd.lastbk')||0)||g.bkLast||0;return tlxRow('☁️',last?tlxt('lastBk',{d:new Date(last).toLocaleDateString(he())}):tlxt('noBk'),tlxt('bkS'),'data-act="pvbk"')})()}${tlxRow('🗜',tlxt('zip'),tlxt('zipS'),'data-act="tlxzip"')}<p class="vanote">${i(tlxt('zipNote'))}</p></div>
  <h3 class="vash">${i(tlxt('csv'))}</h3><div class="vacard">${['ctr','aus','kon','kauf'].map(k=>tlxRow('⬇',tlxt('x_'+k),tlxt('csvS'),`data-act="tlxcsv" data-k="${k}"`)).join('')}</div></div>`}
 function tlxFill(){if(m.route!=='tlxd')return;const q=document.querySelector('[data-tlxq]');if(!q||q.dataset.ok)return;q.dataset.ok=1;
  try{navigator.storage.estimate().then(e=>{if(!e||!e.quota){q.textContent=tlxt('noEst');return}q.textContent=tlxt('used',{u:tlxMb(e.usage||0),q:tlxMb(e.quota)});const b=document.querySelector('[data-tlxb]');b&&(b.style.width=Math.max(1,Math.min(100,Math.round((e.usage||0)/e.quota*100)))+'%')}).catch(()=>{q.textContent=tlxt('noEst')})}catch{q.textContent=tlxt('noEst')}}
@@ -86,6 +100,14 @@ function tlxCsv(k){const t=vaIso(0);let H2=[],rows=[];
  if(k==='kauf'){H2=['Produkt','Händler','Kaufdatum','Preis EUR','Seriennummer','Garantie bis','Gewährleistung bis'];rows=(g.kauf||[]).map(x=>[x.n,x.shop,x.d,tlxCents(x.p),x.sn,x.gar,x.d?vaAdd(x.d,730):''])}
  return{H:H2,rows,txt:'﻿'+[H2,...rows].map(r=>r.map(tlxCsvCell).join(';')).join('\r\n')}}
 Hooks.act('tlxcsv',d=>{const c=tlxCsv(d.k);if(!c.rows.length){T(tlxt('empty'));return}const nm=tlxt('x_'+d.k);try{Hl(new File([c.txt],nm,{type:'text/csv'}))}catch{}tlxLog('csv',nm)});
+async function tlxZip(){const D=tlxDocs();T(tlxt('zipBusy'));const a=[],used=new Set,b64=s2=>{const c=atob(s2),u=new Uint8Array(c.length);for(let j=0;j<c.length;j++)u[j]=c.charCodeAt(j);return u},
+ un=n=>{let c=n,k=2;while(used.has(c))c=n.replace(/(\.[^.\/]+)?$/,` (${k++})$1`);used.add(c);return c};
+ for(const d of D){const fo=r4(d.folder?tlxFn(d.folder):'—'),dir=fo+'/'+r4((d.date?d.date+' ':'')+(d.title||'Dokument'));for(const f of d.files||[])try{const p=await ni(f);p&&a.push({name:un(dir+'/'+r4(f.name||'datei.'+l4(f.type))),data:b64(p)})}catch{}
+  let n=0;for(const f of d.pages||[]){n++;try{const p=await ni(f);p&&a.push({name:un(dir+'/'+String(n).padStart(2,'0')+'.'+l4(f.type)),data:b64(p)})}catch{}}}
+ ['ctr','aus','kon','kauf'].forEach(k=>{const c=tlxCsv(k);if(c.rows.length)a.push({name:'Tabellen/'+r4(tlxt('x_'+k)),data:new TextEncoder().encode(c.txt)})});
+ a.unshift({name:'00 Inhalt.txt',data:new TextEncoder().encode('Butler Docs – '+vaDate(vaIso(0))+'\n'+D.length+' '+tlxt('c_doc')+'\n\n'+D.map(d=>'– '+[d.date?vaDate(d.date):'',d.title||'—',d.party||''].filter(Boolean).join(' · ')).join('\n'))});
+ const file=new File([DZ(a)],'Butler Docs Archiv '+vaIso(0)+'.zip',{type:'application/zip'});try{Hl(file)}catch{}tlxLog('zip');return a.length}
+Hooks.act('tlxzip',()=>{tlxZip().catch(e=>Hooks.err('tlxzip',e))});
 /* ---- help ---- */
 const TLX_Q=['1','2','3','4','5','6','7','8'];
 const tlxNorm=s=>String(s||'').toLowerCase();
@@ -128,4 +150,4 @@ try{SP_L.push(['tlxd','note',tlxS.dat,['speicher','память','storage','dupl
 Hooks.css('docs-werkzeuge',`.tlxcn{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:12px 8px}.tlxcn div{display:flex;flex-direction:column;align-items:center;gap:2px}.tlxcn b{font-size:20px}.tlxcn small{font-size:12px;opacity:.7;text-align:center}
 .tlxst .vabar{display:block;margin-top:10px;background:rgba(255,255,255,.25)}.tlxst .vabar i{background:#fff}.tlxst b{font-size:20px}.tlxhr{border:0;border-top:2px dashed rgba(0,0,0,.08);margin:4px 0}
 .tlxq{margin:0 0 12px;width:100%}.tlxfaq details{padding:12px 4px;border-bottom:1px solid rgba(0,0,0,.06)}.tlxfaq details:last-child{border:0}.tlxfaq summary{font-weight:600;cursor:pointer}.tlxfaq p{margin:8px 0 0;opacity:.85;line-height:1.45}
-.tlxle{display:flex;gap:10px;padding:7px 4px;border-bottom:1px solid rgba(0,0,0,.05)}.tlxle small{opacity:.6;min-width:92px}.tlxpre{padding:0 2px 8px;flex-wrap:wrap}.tlxf .vachips{margin:4px 0 10px}.tlxents{margin:14px 0}`);
+.tlxle{display:flex;gap:10px;padding:7px 4px;border-bottom:1px solid rgba(0,0,0,.05)}.tlxle small{opacity:.6;min-width:92px}.tlxpre{padding:0 2px 8px;flex-wrap:wrap}.tlxf .vachips{margin:4px 0 10px}.tlxar{display:flex;gap:6px;align-items:flex-start}.tlxar textarea{flex:1}.tlxf textarea{width:100%;resize:vertical}.tlxents{margin:14px 0}`);

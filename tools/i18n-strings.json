@@ -128,6 +128,7 @@
    "abschluss.js",
    "behoerden.js",
    "finanzen.js",
+   "kalender-nz.js",
    "kauf-gesund.js",
    "kontakte-post.js",
    "notizen.js",
@@ -4197,7 +4198,8 @@
   "ru": "до %d",
   "de": "bis %d",
   "files": [
-   "business.js"
+   "business.js",
+   "kalender-nz.js"
   ]
  },
  "No open deadlines": {
@@ -4829,7 +4831,8 @@
   "ru": "Резервной копии ещё нет",
   "de": "Noch keine Sicherung",
   "files": [
-   "dokumente-butler.js"
+   "dokumente-butler.js",
+   "werkzeuge.js"
   ]
  },
  "Search: name, text, number …": {
@@ -5223,6 +5226,7 @@
   "de": "Neu",
   "files": [
    "eingang-smart.js",
+   "kalender-nz.js",
    "kontakte-post.js"
   ]
  },
@@ -6446,6 +6450,71 @@
  "Read": {
   "ru": "Прочитано",
   "de": "Gelesen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Purchases": {
+  "ru": "Покупки",
+  "de": "Käufe",
+  "files": [
+   "kalender-nz.js",
+   "werkzeuge.js"
+  ]
+ },
+ "Snoozed": {
+  "ru": "Отложенные",
+  "de": "Später",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Remind later": {
+  "ru": "Напомнить позже",
+  "de": "Später erinnern",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "In 3 days": {
+  "ru": "Через 3 дня",
+  "de": "In 3 Tagen",
+  "files": [
+   "kalender-nz.js",
+   "start-glas.js"
+  ]
+ },
+ "In a week": {
+  "ru": "Через неделю",
+  "de": "In einer Woche",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Bring back": {
+  "ru": "Вернуть",
+  "de": "Zurückholen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Which notices to show": {
+  "ru": "Какие уведомления показывать",
+  "de": "Welche Hinweise anzeigen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "switched-off areas do not appear in the bell": {
+  "ru": "выключенные категории не попадают в колокольчик",
+  "de": "abgeschaltete Bereiche erscheinen nicht in der Glocke",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Push notifications come with the App Store version. Until then everything is in the bell.": {
+  "ru": "Push-уведомления появятся с версией из App Store. Сейчас всё видно в колокольчике.",
+  "de": "Push-Mitteilungen kommen mit der App-Store-Version. Bis dahin steht alles in der Glocke.",
   "files": [
    "kalender-nz.js"
   ]
@@ -10655,13 +10724,6 @@
    "start-glas.js"
   ]
  },
- "In 3 days": {
-  "ru": "Через 3 дня",
-  "de": "In 3 Tagen",
-  "files": [
-   "start-glas.js"
-  ]
- },
  "Next week": {
   "ru": "На следующей неделе",
   "de": "Nächste Woche",
@@ -12917,6 +12979,111 @@
    "werkzeuge.js"
   ]
  },
+ "Addresses": {
+  "ru": "Адреса",
+  "de": "Adressen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Home address": {
+  "ru": "Адрес проживания",
+  "de": "Wohnadresse",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Postal address (if different)": {
+  "ru": "Почтовый адрес (если другой)",
+  "de": "Postanschrift (falls anders)",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Further address": {
+  "ru": "Дополнительный адрес",
+  "de": "Weitere Adresse",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "＋ Address": {
+  "ru": "＋ Адрес",
+  "de": "＋ Adresse",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "What for (e.g. garden, work)": {
+  "ru": "Для чего (напр. дача, работа)",
+  "de": "Wofür (z. B. Garten, Arbeit)",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Letters use the postal address, otherwise the home address. Old documents and letters stay unchanged.": {
+  "ru": "В письма подставляется почтовый адрес, если он указан, иначе адрес проживания. Старые документы и письма не меняются.",
+  "de": "In Briefe kommt die Postanschrift, sonst die Wohnadresse. Alte Dokumente und Briefe bleiben unverändert.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Date of birth (optional)": {
+  "ru": "Дата рождения (по желанию)",
+  "de": "Geburtsdatum (freiwillig)",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Last backup: %d": {
+  "ru": "Последняя копия: %d",
+  "de": "Letzte Sicherung: %d",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "create a backup now": {
+  "ru": "создать копию сейчас",
+  "de": "jetzt Sicherung erstellen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Full archive (ZIP)": {
+  "ru": "Полный архив (ZIP)",
+  "de": "Vollständiges Archiv (ZIP)",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "all documents by folder + CSV tables": {
+  "ru": "все документы по папкам + таблицы CSV",
+  "de": "alle Dokumente nach Ordnern + CSV-Tabellen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Building the archive …": {
+  "ru": "Собираю архив…",
+  "de": "Archiv wird erstellt …",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "The archive is not encrypted – keep it safe. To move phones, use the backup.": {
+  "ru": "Архив не зашифрован — храните его в надёжном месте. Для переезда используйте резервную копию.",
+  "de": "Das Archiv ist nicht verschlüsselt – sicher aufbewahren. Zum Umziehen die Sicherung nutzen.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Full archive created": {
+  "ru": "Создан полный архив",
+  "de": "Vollständiges Archiv erstellt",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
  "Data & storage": {
   "ru": "Данные и память",
   "de": "Daten & Speicher",
@@ -12976,13 +13143,6 @@
  "What is stored": {
   "ru": "Что хранится",
   "de": "Was gespeichert ist",
-  "files": [
-   "werkzeuge.js"
-  ]
- },
- "Purchases": {
-  "ru": "Покупки",
-  "de": "Käufe",
   "files": [
    "werkzeuge.js"
   ]

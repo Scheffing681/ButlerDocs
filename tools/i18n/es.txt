@@ -1859,3 +1859,25 @@
 1858	No. Butler ordena, calcula plazos y prepara borradores. Decide usted, un abogado o un médico.
 1859	¿Cómo protejo la app?
 1860	Código de bloqueo en el Perfil, caja fuerte para documentos clave, código propio para «Salud».
+1861	Pospuestas
+1862	Recordar más tarde
+1863	En una semana
+1864	Recuperar
+1865	Qué avisos mostrar
+1866	las áreas desactivadas no aparecen en la campana
+1867	Las notificaciones push llegarán con la versión de App Store. Hasta entonces todo está en la campana.
+1868	Direcciones
+1869	Domicilio
+1870	Dirección postal (si es distinta)
+1871	Otra dirección
+1872	＋ Dirección
+1873	Para qué (p. ej. huerto, trabajo)
+1874	Las cartas usan la dirección postal; si no, el domicilio. Los documentos y cartas antiguos no cambian.
+1875	Fecha de nacimiento (opcional)
+1876	Última copia: %d
+1877	crear una copia ahora
+1878	Archivo completo (ZIP)
+1879	todos los documentos por carpeta + tablas CSV
+1880	Creando el archivo …
+1881	El archivo no está cifrado: guárdelo en lugar seguro. Para cambiar de teléfono, use la copia.
+1882	Archivo completo creado

@@ -1859,3 +1859,25 @@
 1858	Non. Butler organise, calcule les échéances et prépare des brouillons. Vous, un avocat ou un médecin décidez.
 1859	Comment protéger l’application ?
 1860	Code de verrouillage dans le Profil, coffre pour les documents clés, code propre pour « Santé ».
+1861	Reportées
+1862	Rappeler plus tard
+1863	Dans une semaine
+1864	Rétablir
+1865	Quels avis afficher
+1866	les domaines désactivés n’apparaissent pas dans la cloche
+1867	Les notifications push arriveront avec la version App Store. D’ici là, tout est dans la cloche.
+1868	Adresses
+1869	Adresse du domicile
+1870	Adresse postale (si différente)
+1871	Autre adresse
+1872	＋ Adresse
+1873	Pour quoi (ex. jardin, travail)
+1874	Les lettres utilisent l’adresse postale, sinon celle du domicile. Les anciens documents et lettres restent inchangés.
+1875	Date de naissance (facultatif)
+1876	Dernière sauvegarde : %d
+1877	créer une sauvegarde maintenant
+1878	Archive complète (ZIP)
+1879	tous les documents par dossier + tableaux CSV
+1880	Création de l’archive …
+1881	L’archive n’est pas chiffrée – conservez-la en lieu sûr. Pour changer de téléphone, utilisez la sauvegarde.
+1882	Archive complète créée

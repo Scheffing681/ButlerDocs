@@ -20,7 +20,10 @@ const knS={
  /* bell */
  nz:['Уведомления','Mitteilungen','Notifications'],day:['Сегодня: сроков %a · платежей %b · встреч %c','Heute: %a Fristen · %b Zahlungen · %c Termine','Today: %a deadlines · %b payments · %c events'],
  p_hi:['важно','hoch','high'],p_mid:['средне','mittel','medium'],p_lo:['инфо','niedrig','low'],c_all:['Все','Alle','All'],c_fin:['Деньги','Finanzen','Money'],c_doc:['Документы','Dokumente','Documents'],c_ver:['Договоры','Verträge','Contracts'],c_kal:['Календарь','Termine','Calendar'],c_post:['Письма','Post','Mail'],c_sys:['Система','System','System'],
- read:['Прочитано','Gelesen','Read'],allRead:['Отметить всё прочитанным','Alle als gelesen','Mark all as read'],quiet:['Тихий режим','Ruhemodus','Quiet mode'],quietS:['считать только важное','nur „hoch“ zählen','count only “high”'],
+ read:['Прочитано','Gelesen','Read'],c_kauf:['Покупки','Käufe','Purchases'],c_ges:['Здоровье','Gesundheit','Health'],
+ s_neu:['Новые','Neu','New'],s_rd:['Прочитанные','Gelesen','Read'],s_sn:['Отложенные','Später','Snoozed'],snz:['Напомнить позже','Später erinnern','Remind later'],sn1:['Завтра','Morgen','Tomorrow'],sn3:['Через 3 дня','In 3 Tagen','In 3 days'],sn7:['Через неделю','In einer Woche','In a week'],snU:['до %d','bis %d','until %d'],snBack:['Вернуть','Zurückholen','Bring back'],
+ cats:['Какие уведомления показывать','Welche Hinweise anzeigen','Which notices to show'],catsS:['выключенные категории не попадают в колокольчик','abgeschaltete Bereiche erscheinen nicht in der Glocke','switched-off areas do not appear in the bell'],
+ pushN:['Push-уведомления появятся с версией из App Store. Сейчас всё видно в колокольчике.','Push-Mitteilungen kommen mit der App-Store-Version. Bis dahin steht alles in der Glocke.','Push notifications come with the App Store version. Until then everything is in the bell.'],allRead:['Отметить всё прочитанным','Alle als gelesen','Mark all as read'],quiet:['Тихий режим','Ruhemodus','Quiet mode'],quietS:['считать только важное','nur „hoch“ zählen','count only “high”'],
  payN:['%d: платежей %n · %a','%d: %n Zahlungen · %a','%d: %n payments · %a'],late:['просрочено','überfällig','overdue'],inD:['через %n дн.','in %n Tagen','in %n days'],
  inb:['Во входящих: %n','Im Eingang: %n','In the inbox: %n'],ans:['Ответа нет: %t','Keine Antwort: %t','No answer: %t'],bk:['Копия старше 30 дней','Sicherung älter als 30 Tage','Backup older than 30 days'],
  empty:['Всё спокойно ✓','Alles ruhig ✓','All calm ✓'],openKal:['Календарь','Kalender','Calendar']};
@@ -78,9 +81,10 @@ document.addEventListener('click',e=>{try{if(m.route!=='kal'||!knDraft)return;co
 Hooks.act('knv',d=>{m.knV=d.k;v()});Hooks.act('knw',d=>{m.knW=(m.knW||0)+(+d.d);v()});Hooks.act('kny',d=>{m.knY=(m.knY||new Date().getFullYear())+(+d.d);m.knM=null;v()});Hooks.act('knm',d=>{m.knM=m.knM===d.k?null:d.k;v()});
 Hooks.act('knbl',()=>{H(knt('bl'),`<div class="bsvys">${KN_BL.map(([k,n])=>`<button type="button" class="varow" data-blk="${k}"><span class="vatx"><b>${i(n)}</b></span><span class="vaam">${g.bl===k?'✓':''}</span></button>`).join('')}</div>`,el=>{el.classList.add('bsvsh');el.addEventListener('click',e=>{const b=e.target.closest('[data-blk]');if(!b)return;g.bl=b.dataset.blk;$();el.remove();v()})})});
 /* ---------- the bell ---------- */
-const nzD=()=>{const o=g.nz=g.nz&&typeof g.nz==='object'?g.nz:{};if(!o.read||typeof o.read!=='object')o.read={};return o};
+const nzD=()=>{const o=g.nz=g.nz&&typeof g.nz==='object'?g.nz:{};['read','off','sn'].forEach(k=>{if(!o[k]||typeof o[k]!=='object')o[k]={}});return o};
+const NZ_C=['fin','doc','ver','kal','post','kauf','ges','sys'];const nzSn=x=>{const u=nzD().sn[x.key];return u&&u>vaIso(0)?u:''};
 function nzItems(){const out=[],today=vaIso(0),add=(key,c,p,ic,t,s,act)=>out.push({key,c,p,ic,t,s,act});
- try{stDlAll().forEach(t=>{const n=vaDays(t.k);if(n<-60||n>30)return;const kd=/kündig|kuendig|cancel|расторг|sonderkünd/i.test(t.t);const c=t.src==='vapr'?'ver':t.src==='task'?'kal':kd?'ver':'doc';
+ try{stDlAll().forEach(t=>{const n=vaDays(t.k);if(n<-60||n>30)return;const kd=/kündig|kuendig|cancel|расторг|sonderkünd/i.test(t.t);const c=t.src==='vapr'?'ver':t.src==='task'?'kal':t.src==='kauf'?'kauf':t.src==='ges'?'ges':kd?'ver':'doc';
   const p=n<0?'hi':kd&&n<=14?'hi':n<=3?'mid':'lo';add('dl|'+t.k+'|'+t.t,c,p,n<0?'⚠':'⏰',t.t,n<0?knt('late'):n===0?knt('today'):knt('inD',{n}),t.act||'data-act="go" data-to="dsrok"')})}catch{}
  try{vaRises().forEach(r=>add('pr|'+r.key,'ver','hi','▲',vat('riseS')+': '+(r.e.co||''),vaEur(r.old)+' → '+vaEur(r.neu)+' · +'+vaPct(r.pct),`data-act="vapr" data-id="${r.e.id}"`))}catch{}
  try{const P=ubPays(7),by={};P.forEach(x=>(by[x.o.due]=by[x.o.due]||[]).push(x));Object.keys(by).sort().forEach(k=>{const L2=by[k],sum=L2.reduce((a,b)=>a+b.o.amt,0),n=vaDays(k);
@@ -90,20 +94,23 @@ function nzItems(){const out=[],today=vaIso(0),add=(key,c,p,ic,t,s,act)=>out.pus
  try{kpVg().filter(x=>['vers','zug','wart'].includes(x.st)&&x.exp&&x.exp<today).forEach(x=>add('vg|'+x.id+'|'+x.exp,'post','mid','📂',knt('ans',{t:x.t}),x.whoN||'',`data-act="vgopen" data-id="${x.id}"`))}catch{}
  try{knEv().forEach(e=>{if(!e||!e.date||!Array.isArray(e.rem)||!e.rem.length||e.yearly)return;const n=vaDays(e.date);if(n<0||n>Math.max(...e.rem))return;add('ev|'+e.id+'|'+e.date,'kal',n<=1?'mid':'lo','📅',e.title||'—',(n===0?knt('today'):knt('inD',{n}))+(e.time?' · '+e.time:''),'data-act="go" data-to="kal"')})}catch{}
  try{const last=+(localStorage.getItem('bdocs:bd.lastbk')||0)||g.bkLast||0;if(last&&Date.now()-last>30*864e5)add('bk|'+Math.floor(last/864e5),'sys','mid','☁️',knt('bk'),'','data-act="pvbk"')}catch{}
- const P={hi:0,mid:1,lo:2};return out.sort((a,b)=>P[a.p]-P[b.p])}
-function nzScreen(){const D=nzD(),f=m.nzF||'all',A=nzItems(),L2=A.filter(x=>f==='all'||x.c===f),today=vaIso(0);
+ const P={hi:0,mid:1,lo:2},off=nzD().off||{};return out.filter(x=>!off[x.c]).sort((a,b)=>P[a.p]-P[b.p])}
+function nzScreen(){const D=nzD(),f=m.nzF||'all',st=m.nzS||'neu',A0=nzItems(),A=A0.filter(x=>st==='sn'?!!nzSn(x):!nzSn(x)&&(st==='rd'?!!D.read[x.key]:!D.read[x.key])),L2=A.filter(x=>f==='all'||x.c===f),today=vaIso(0);
  let dl=0,pay=0,ev=0;try{dl=stDlAll().filter(t=>t.k===today).length}catch{}try{pay=ubPays(0).length}catch{}try{ev=knEv().filter(e=>e&&e.date===today).length}catch{}
- const cats=['all',...['fin','doc','ver','kal','post','sys'].filter(c=>A.some(x=>x.c===c))];
+ const cats=['all',...NZ_C.filter(c=>A.some(x=>x.c===c))];
  return`<div class="screen dhome fz va nzw"><div class="sub-hdr"><button class="iconbtn" data-act="back" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(knt('nz'))}</h2></div><span></span></div>
  <div class="vahero"><small>${i(knt('today'))}</small><b class="kpn">${i(new Date().toLocaleDateString(he(),{weekday:'long',day:'numeric',month:'long'}))}</b><small>${i(knt('day',{a:dl,b:pay,c:ev}))}</small></div>
+ <div class="eitabs">${['neu','rd','sn'].map(k=>`<button type="button" class="${st===k?'on':''}" data-act="nzs" data-k="${k}">${i(knt('s_'+k))} ${A0.filter(x=>k==='sn'?!!nzSn(x):!nzSn(x)&&(k==='rd'?!!D.read[x.key]:!D.read[x.key])).length||''}</button>`).join('')}</div>
  <div class="vachips">${cats.map(c=>`<button type="button" class="${f===c?'on':''}" data-act="nzf" data-k="${c}">${i(knt('c_'+c))}</button>`).join('')}</div>
- ${L2.length?`<div class="vacard">${L2.map(x=>`<div class="varow nzr ${D.read[x.key]?'rd':''}"><button type="button" class="akdo" data-nzk="${i(x.key)}" ${x.act||''}><span class="vaic">${x.ic}</span><span class="vatx"><b>${i(x.t)}</b><small>${i(x.s)}</small></span></button><span class="nzp ${x.p}">${i(knt('p_'+x.p))}</span></div>`).join('')}</div>`:`<div class="vacard"><p class="dhnone">${i(knt('empty'))}</p></div>`}
+ ${L2.length?`<div class="vacard">${L2.map(x=>`<div class="varow nzr ${D.read[x.key]?'rd':''}"><button type="button" class="akdo" data-nzk="${i(x.key)}" ${x.act||''}><span class="vaic">${x.ic}</span><span class="vatx"><b>${i(x.t)}</b><small>${i(x.s)}</small></span></button><span class="nzp ${x.p}">${i(nzSn(x)?knt('snU',{d:vaDate(nzSn(x))}):knt('p_'+x.p))}</span><button type="button" class="akx nzsz" data-act="nzsn" data-k="${i(x.key)}" aria-label="${i(knt('snz'))}">${nzSn(x)?'↩':'⏱'}</button></div>`).join('')}</div>`:`<div class="vacard"><p class="dhnone">${i(knt('empty'))}</p></div>`}
  ${L2.length?`<button type="button" class="valnk" data-act="nzall">${i(knt('allRead'))}</button>`:''}
  <button type="button" class="vaabot" data-act="nzq"><span><b>🌙 ${i(knt('quiet'))}</b><small>${i(knt('quietS'))}</small></span><u class="${D.quiet?'on':''}"></u></button>
+ <h3 class="vash">${i(knt('cats'))}</h3><div class="vacard nzcs"><p class="vanote">${i(knt('catsS'))}</p>${NZ_C.map(c=>`<button type="button" class="vaabot" data-act="nzc" data-k="${c}"><span><b>${i(knt('c_'+c))}</b></span><u class="${D.off[c]?'':'on'}"></u></button>`).join('')}<p class="vanote">${i(knt('pushN'))}</p></div>
  <button type="button" class="vaabot abent" data-act="go" data-to="kal"><span><b>📅 ${i(knt('openKal'))}</b></span><span class="akch">›</span></button></div>`}
 document.addEventListener('click',e=>{try{if(m.route!=='nz')return;const b=e.target.closest('[data-nzk]');if(b){nzD().read[b.dataset.nzk]=1;$()}}catch{}},!0);
-Hooks.act('nzf',d=>{m.nzF=d.k;v()});Hooks.act('nzall',()=>{const D=nzD();nzItems().forEach(x=>D.read[x.key]=1);$();v()});Hooks.act('nzq',()=>{const D=nzD();D.quiet=D.quiet?0:1;$();v()});
-const nzCount=()=>{try{const D=nzD();return nzItems().filter(x=>!D.read[x.key]&&(!D.quiet||x.p==='hi')).length}catch{return 0}};
+Hooks.act('nzf',d=>{m.nzF=d.k;v()});Hooks.act('nzs',d=>{m.nzS=d.k;m.nzF='all';v()});Hooks.act('nzc',d=>{const D=nzD();D.off[d.k]?delete D.off[d.k]:D.off[d.k]=1;$();v()});
+Hooks.act('nzsn',d=>{const D=nzD();if(D.sn[d.k]&&D.sn[d.k]>vaIso(0)){delete D.sn[d.k];$();v();return}H(knt('snz'),`<div class="bsvys">${[1,3,7].map(n=>`<button type="button" class="varow" data-n="${n}"><span class="vatx"><b>${i(knt('sn'+n))}</b><small>${i(vaDate(vaIso(n)))}</small></span></button>`).join('')}</div>`,el=>{el.classList.add('bsvsh');el.addEventListener('click',e=>{const b=e.target.closest('[data-n]');if(!b)return;D.sn[d.k]=vaIso(+b.dataset.n);$();el.remove();v()})})});Hooks.act('nzall',()=>{const D=nzD();nzItems().forEach(x=>D.read[x.key]=1);$();v()});Hooks.act('nzq',()=>{const D=nzD();D.quiet=D.quiet?0:1;$();v()});
+const nzCount=()=>{try{const D=nzD();return nzItems().filter(x=>!D.read[x.key]&&!nzSn(x)&&(!D.quiet||x.p==='hi')).length}catch{return 0}};
 ['kal','nz'].forEach(r=>{OD_OK.add(r);Te.includes(r)||Te.push(r);try{AG_R.includes(r)||AG_R.push(r)}catch{}});
 (Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='kal')return kalScreen();if(m.route==='nz')return nzScreen()}catch(e){Hooks.err('knscreen',e)}});
 /* Start's bell → the one list, with its own count; Fristen and the core calendar get a way into Kalender */
@@ -112,7 +119,7 @@ Hooks.on('screen',h=>{try{if(typeof h!=='string')return h;if(m.route==='home'&&h
 Hooks.on('render',()=>{try{if(m.route!=='home')return;const b=document.querySelector('[data-to="nz"]');if(!b)return;const n=nzCount();let s=b.querySelector('.nzb');b.querySelectorAll(':scope>i,:scope>em,:scope>.badge,:scope>b').forEach(x=>{if(!x.classList.contains('nzb'))x.style.display='none'});
  if(!n){s&&s.remove();return}if(!s){s=document.createElement('span');s.className='nzb';b.appendChild(s)}s.textContent=n>9?'9+':String(n)}catch(e){Hooks.err('nzbadge',e)}});
 try{SP_L.push(['kal','cal',knS.kal,['kalender','календар','calendar','termin','woche','feiertag','праздник','holiday']],['nz','cal',knS.nz,['mitteilung','уведомл','notification','glocke','benachricht']])}catch{}
-Hooks.css('docs-kalender-nz',`
+Hooks.css('docs-kalender-nz',`.nzsz{flex:none;margin-left:4px}.nzcs .vaabot{margin:6px 0}
 .knq{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin:0 0 10px}.knpv{padding:12px 16px}.knpv b{display:block}.knpv small{color:var(--muted)}.knrem{flex-wrap:wrap;margin:8px 0}.kncl{color:#b9770e;font-size:14px;margin:6px 0}
 .knnav{margin:0 0 10px;color:var(--ink)}.knnav button{background:var(--bd-glass,var(--surface));color:var(--ink);border:1px solid var(--bd-edge,var(--line))}
 .knday{padding:6px 16px}.knday.now{border:1.5px solid var(--bd-acc,var(--green))}.kndh{font-size:13px;font-weight:700;color:var(--muted);text-transform:capitalize;padding:6px 0 2px}.kn0{color:var(--muted);margin:2px 0 8px}

@@ -1,4 +1,531 @@
 {
+ "Folder for an adviser": {
+  "ru": "Папка для консультанта",
+  "de": "Mappe für Berater",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Tax adviser": {
+  "ru": "Налоговый консультант",
+  "de": "Steuerberater",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Financial adviser": {
+  "ru": "Финансовый консультант",
+  "de": "Finanzberater",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Family": {
+  "ru": "Семья",
+  "de": "Familie",
+  "files": [
+   "abschluss.js",
+   "nav-edit.js",
+   "notizen.js",
+   "start.js",
+   "ueberblick.js"
+  ]
+ },
+ "Own": {
+  "ru": "Своя",
+  "de": "Eigene",
+  "files": [
+   "abschluss.js",
+   "behoerden-termine.js"
+  ]
+ },
+ "Annual payroll tax statement": {
+  "ru": "Справка о зарплате и налоге",
+  "de": "Lohnsteuerbescheinigung",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Payslips": {
+  "ru": "Зарплатные ведомости",
+  "de": "Lohnabrechnungen",
+  "files": [
+   "abschluss.js",
+   "karriere2.js"
+  ]
+ },
+ "Tradesmen & service charges": {
+  "ru": "Счета мастеров, Nebenkosten",
+  "de": "Handwerker & Nebenkosten",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Donation receipts": {
+  "ru": "Пожертвования",
+  "de": "Spendenquittungen",
+  "files": [
+   "abschluss.js",
+   "steuer-plus.js"
+  ]
+ },
+ "Tax assessments": {
+  "ru": "Налоговые решения",
+  "de": "Steuerbescheide",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Insurance": {
+  "ru": "Страховки",
+  "de": "Versicherungen",
+  "files": [
+   "abschluss.js",
+   "business.js"
+  ]
+ },
+ "Bank statements": {
+  "ru": "Выписки из банка",
+  "de": "Kontoauszüge",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Loans": {
+  "ru": "Кредиты",
+  "de": "Kredite & Darlehen",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Rent & home": {
+  "ru": "Жильё",
+  "de": "Miete & Wohnung",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "ID documents": {
+  "ru": "Удостоверения",
+  "de": "Ausweise",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Powers of attorney": {
+  "ru": "Доверенности, распоряжения",
+  "de": "Vollmachten & Verfügungen",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Health": {
+  "ru": "Медицина",
+  "de": "Gesundheit",
+  "files": [
+   "abschluss.js",
+   "behoerden.js",
+   "finanzen.js",
+   "notizen.js",
+   "start.js"
+  ]
+ },
+ "%n documents": {
+  "ru": "документов: %n",
+  "de": "%n Dokumente",
+  "files": [
+   "abschluss.js",
+   "akte.js",
+   "business.js",
+   "dokumente-butler.js",
+   "mappen.js"
+  ]
+ },
+ "1 document": {
+  "ru": "1 документ",
+  "de": "1 Dokument",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Access code on opening": {
+  "ru": "Код при открытии",
+  "de": "Zugangscode beim Öffnen",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "in the profile → “Access protection”": {
+  "ru": "в профиле → «Защита доступа»",
+  "de": "im Profil → „Zugangsschutz“",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "none": {
+  "ru": "нет",
+  "de": "keine",
+  "files": [
+   "abschluss.js",
+   "business.js",
+   "reliability.js"
+  ]
+ },
+ "Contracts overview": {
+  "ru": "Обзор договоров",
+  "de": "Übersicht der Verträge",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "%n contracts with amounts and deadlines": {
+  "ru": "%n договоров с суммами и сроками",
+  "de": "%n Verträge mit Beträgen und Fristen",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "As ZIP": {
+  "ru": "Архив ZIP",
+  "de": "Als ZIP",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "all originals + table of contents": {
+  "ru": "все оригиналы + оглавление",
+  "de": "alle Originale + Inhaltsverzeichnis",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "As one PDF": {
+  "ru": "Один PDF",
+  "de": "Als ein PDF",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "cover, overview and list": {
+  "ru": "обложка, обзор и список",
+  "de": "Deckblatt, Übersicht und Liste",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Then “Share” → Mail, AirDrop or iCloud.": {
+  "ru": "Потом «Поделиться» → Почта, AirDrop или iCloud.",
+  "de": "Danach „Teilen“ → Mail, AirDrop oder iCloud.",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Butler only shows – he does not advise or sell anything.": {
+  "ru": "Батлер только показывает — он не консультирует и ничего не продаёт.",
+  "de": "Butler zeigt nur – er berät nicht und verkauft nichts.",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Building the folder …": {
+  "ru": "Собираю папку …",
+  "de": "Mappe wird erstellt …",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "No documents selected": {
+  "ru": "Не выбрано ни одного документа",
+  "de": "Keine Dokumente ausgewählt",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Table of contents": {
+  "ru": "Оглавление",
+  "de": "Inhaltsverzeichnis",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Created on %d": {
+  "ru": "Создано %d",
+  "de": "Erstellt am %d",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "for: %p": {
+  "ru": "для: %p",
+  "de": "für: %p",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Security & data": {
+  "ru": "Безопасность и данные",
+  "de": "Sicherheit & Daten",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Protection": {
+  "ru": "Защита",
+  "de": "Schutz",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Vault with its own code": {
+  "ru": "Сейф с отдельным кодом",
+  "de": "Tresor mit eigenem Code",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "IDs, passwords, PINs": {
+  "ru": "паспорт, пароли, PIN",
+  "de": "Ausweise, Passwörter, PINs",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Face ID instead of a code": {
+  "ru": "Face ID вместо кода",
+  "de": "Face ID statt Code",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "comes with the App Store version": {
+  "ru": "появится в версии из App Store",
+  "de": "kommt mit der App-Store-Version",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Reminders": {
+  "ru": "Напоминания",
+  "de": "Erinnerungen",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "First reminder": {
+  "ru": "Первый раз напомнить",
+  "de": "Zum ersten Mal erinnern",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "this early a deadline shows in “Important for you”": {
+  "ru": "так рано срок появляется в «Важно для Вас»",
+  "de": "so früh erscheint eine Frist in „Wichtig für Sie“",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "%n days before": {
+  "ru": "за %n дн.",
+  "de": "%n Tage vorher",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "1 day before": {
+  "ru": "за 1 день",
+  "de": "1 Tag vorher",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Push notifications": {
+  "ru": "Push-уведомления",
+  "de": "Push-Mitteilungen",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Today: “Add to iPhone calendar” on every deadline": {
+  "ru": "Сейчас: «В календарь iPhone» у каждого срока",
+  "de": "Heute: „In den iPhone-Kalender“ bei jeder Frist",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Backup": {
+  "ru": "Резервная копия",
+  "de": "Sicherung",
+  "files": [
+   "abschluss.js",
+   "reliability.js"
+  ]
+ },
+ "Save a backup now": {
+  "ru": "Сохранить копию сейчас",
+  "de": "Jetzt Sicherung speichern",
+  "files": [
+   "abschluss.js",
+   "move-phone.js"
+  ]
+ },
+ "encrypted file – to iCloud Drive, USB or “Files”": {
+  "ru": "зашифрованный файл — в iCloud Drive, на флешку или в «Файлы»",
+  "de": "verschlüsselte Datei – in iCloud Drive, auf USB oder in „Dateien“",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Privacy": {
+  "ru": "Конфиденциальность",
+  "de": "Datenschutz",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "what is stored where": {
+  "ru": "что хранится и где",
+  "de": "was wo gespeichert ist",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Family & emergency": {
+  "ru": "Семья и экстренный случай",
+  "de": "Familie & Notfall",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Send a folder to the family": {
+  "ru": "Отправить папку семье",
+  "de": "Mappe an Familie senden",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "via AirDrop or mail – no shared storage": {
+  "ru": "через AirDrop или почту — общего хранилища нет",
+  "de": "per AirDrop oder Mail – ohne gemeinsamen Speicher",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Emergency folder": {
+  "ru": "Папка на крайний случай",
+  "de": "Notfall-Mappe",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "in “Provision”: file + password on paper for a trusted person": {
+  "ru": "в «Предусмотрительности»: файл + пароль на бумаге для доверенного человека",
+  "de": "in „Vorsorge“: Datei + Passwort auf Papier für eine Vertrauensperson",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Plans": {
+  "ru": "Тарифы",
+  "de": "Tarife",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "everything there is today": {
+  "ru": "всё, что есть сегодня",
+  "de": "alles, was es heute gibt",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "via the App Store": {
+  "ru": "через App Store",
+  "de": "über den App Store",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "later": {
+  "ru": "позже",
+  "de": "später",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Everything stays on this phone. Butler has no server and never sees your data.": {
+  "ru": "Всё остаётся на этом телефоне. У Батлера нет сервера, он никогда не видит Ваши данные.",
+  "de": "Alles bleibt auf diesem Telefon. Butler hat keinen Server und sieht Ihre Daten nie.",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Share with an AI …": {
+  "ru": "Поделиться с ИИ …",
+  "de": "Mit einer KI teilen …",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Share the document with an AI?": {
+  "ru": "Поделиться документом с ИИ?",
+  "de": "Dokument mit einer KI teilen?",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "“%t” then leaves this phone and goes to the app you choose (e.g. Claude). Butler itself never sends anything.": {
+  "ru": "«%t» тогда покинет этот телефон и попадёт в приложение, которое Вы выберете (например, Claude). Сам Батлер никогда ничего не отправляет.",
+  "de": "„%t“ verlässt dann dieses Telefon und geht an die App, die Sie wählen (z. B. Claude). Butler selbst sendet nie etwas.",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Choose an app": {
+  "ru": "Выбрать приложение",
+  "de": "App wählen",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Cancel": {
+  "ru": "Отмена",
+  "de": "Abbrechen",
+  "files": [
+   "abschluss.js",
+   "akte.js",
+   "behoerden.js",
+   "seiten.js"
+  ]
+ },
+ "This browser cannot share files. Open the document and use “Share”.": {
+  "ru": "Этот браузер не умеет делиться файлами. Откройте документ и используйте «Поделиться».",
+  "de": "Dieser Browser kann keine Dateien teilen. Öffnen Sie das Dokument und nutzen Sie „Teilen“.",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "The document has no file": {
+  "ru": "В документе нет файла",
+  "de": "Das Dokument hat keine Datei",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "Face ID, reminders, backup, plans": {
+  "ru": "Face ID, напоминания, копия, тарифы",
+  "de": "Face ID, Erinnerungen, Sicherung, Tarife",
+  "files": [
+   "abschluss.js"
+  ]
+ },
+ "for a tax or financial adviser, as ZIP or PDF": {
+  "ru": "для налогового или финансового консультанта, ZIP или PDF",
+  "de": "für Steuer- oder Finanzberater, als ZIP oder PDF",
+  "files": [
+   "abschluss.js"
+  ]
+ },
  "File": {
   "ru": "Дело",
   "de": "Akte",
@@ -6,16 +533,6 @@
    "akte.js",
    "dokumente-butler.js",
    "screens-glas.js"
-  ]
- },
- "%n documents": {
-  "ru": "документов: %n",
-  "de": "%n Dokumente",
-  "files": [
-   "akte.js",
-   "business.js",
-   "dokumente-butler.js",
-   "mappen.js"
   ]
  },
  "%n deadlines": {
@@ -175,15 +692,6 @@
   "de": "Vertrag öffnen",
   "files": [
    "akte.js"
-  ]
- },
- "Cancel": {
-  "ru": "Расторгнуть",
-  "de": "Kündigen",
-  "files": [
-   "akte.js",
-   "behoerden.js",
-   "seiten.js"
   ]
  },
  "Does this belong to “%n”?": {
@@ -1437,13 +1945,6 @@
    "behoerden-termine.js"
   ]
  },
- "Own": {
-  "ru": "Своя",
-  "de": "Eigene",
-  "files": [
-   "behoerden-termine.js"
-  ]
- },
  "What to do": {
   "ru": "Что сделать",
   "de": "Was ist zu tun",
@@ -2067,16 +2568,6 @@
   "de": "schon da",
   "files": [
    "behoerden.js"
-  ]
- },
- "Health": {
-  "ru": "Здоровье",
-  "de": "Gesundheit",
-  "files": [
-   "behoerden.js",
-   "finanzen.js",
-   "notizen.js",
-   "start.js"
   ]
  },
  "Family & school": {
@@ -2898,14 +3389,6 @@
    "business.js"
   ]
  },
- "none": {
-  "ru": "не нужна",
-  "de": "keine",
-  "files": [
-   "business.js",
-   "reliability.js"
-  ]
- },
  "monthly": {
   "ru": "ежемесячно",
   "de": "monatlich",
@@ -3410,13 +3893,6 @@
  "Phone / internet": {
   "ru": "Телефон / интернет",
   "de": "Telefon / Internet",
-  "files": [
-   "business.js"
-  ]
- },
- "Insurance": {
-  "ru": "Страховки",
-  "de": "Versicherungen",
   "files": [
    "business.js"
   ]
@@ -5777,13 +6253,6 @@
    "karriere2.js"
   ]
  },
- "Payslips": {
-  "ru": "Расчётные листы",
-  "de": "Gehaltsabrechnungen",
-  "files": [
-   "karriere2.js"
-  ]
- },
  "Wage tax certificate": {
   "ru": "Lohnsteuerbescheinigung",
   "de": "Lohnsteuerbescheinigung",
@@ -7537,13 +8006,6 @@
    "move-phone.js"
   ]
  },
- "Save a backup now": {
-  "ru": "Сохранить копию сейчас",
-  "de": "Sicherung jetzt speichern",
-  "files": [
-   "move-phone.js"
-  ]
- },
  "Share the app link": {
   "ru": "Поделиться ссылкой на приложение",
   "de": "Link zur App teilen",
@@ -7606,16 +8068,6 @@
   "de": "Nicht gespeicherte Änderungen",
   "files": [
    "nav-edit.js"
-  ]
- },
- "Family": {
-  "ru": "Семья",
-  "de": "Familie",
-  "files": [
-   "nav-edit.js",
-   "notizen.js",
-   "start.js",
-   "ueberblick.js"
   ]
  },
  "This document is already there: “%t”": {
@@ -8493,13 +8945,6 @@
  "Device": {
   "ru": "Устройство",
   "de": "Gerät",
-  "files": [
-   "reliability.js"
-  ]
- },
- "Backup": {
-  "ru": "Копия",
-  "de": "Sicherung",
   "files": [
    "reliability.js"
   ]
@@ -9600,13 +10045,6 @@
  "Way to work / home office": {
   "ru": "Дорога на работу / Homeoffice",
   "de": "Weg zur Arbeit / Homeoffice",
-  "files": [
-   "steuer-plus.js"
-  ]
- },
- "Donation receipts": {
-  "ru": "Справки о пожертвованиях",
-  "de": "Spendenquittungen",
   "files": [
    "steuer-plus.js"
   ]

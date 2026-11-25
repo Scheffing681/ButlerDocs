@@ -106,3 +106,4 @@ docs/suche-smart.js
 docs/eingang-smart.js
 docs/akte.js
 docs/ueberblick.js
+docs/abschluss.js

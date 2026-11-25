@@ -1539,3 +1539,64 @@
 1538	Start'ta “Haftanız”
 1539	Her sayı nereden geldiğini gösterir. Veri eksikse Butler bunu söyler.
 1540	Yakınlar
+1541	Danışman için dosya
+1542	Vergi danışmanı
+1543	Finans danışmanı
+1544	Yıllık bordro vergi belgesi
+1545	Ustalar ve yan giderler
+1546	Vergi kararları
+1547	Banka ekstreleri
+1548	Krediler
+1549	Kira ve ev
+1550	Kimlik belgeleri
+1551	Vekaletnameler
+1552	1 belge
+1553	Açılışta erişim kodu
+1554	profilde → “Erişim koruması”
+1555	Sözleşmelere genel bakış
+1556	tutar ve sürelerle %n sözleşme
+1557	ZIP olarak
+1558	tüm orijinaller + içindekiler
+1559	Tek PDF olarak
+1560	kapak, genel bakış ve liste
+1561	Sonra “Paylaş” → Posta, AirDrop veya iCloud.
+1562	Butler yalnızca gösterir – danışmanlık yapmaz ve bir şey satmaz.
+1563	Dosya hazırlanıyor …
+1564	Belge seçilmedi
+1565	İçindekiler
+1566	%d tarihinde oluşturuldu
+1567	için: %p
+1568	Güvenlik ve veriler
+1569	Koruma
+1570	Kendi kodlu kasa
+1571	Kimlikler, şifreler, PIN'ler
+1572	Kod yerine Face ID
+1573	App Store sürümüyle gelecek
+1574	Hatırlatmalar
+1575	İlk hatırlatma
+1576	bir süre “Sizin için önemli”de bu kadar erken görünür
+1577	%n gün önce
+1578	1 gün önce
+1579	Anlık bildirimler
+1580	Bugün: her sürede “iPhone takvimine ekle”
+1581	şifreli dosya – iCloud Drive, USB veya “Dosyalar”a
+1582	Gizlilik
+1583	ne nerede saklanıyor
+1584	Aile ve acil durum
+1585	Aileye dosya gönder
+1586	AirDrop veya posta ile – ortak depolama yok
+1587	Acil durum dosyası
+1588	“Önlem”de: dosya + güvendiğiniz kişi için kâğıtta şifre
+1589	Planlar
+1590	bugün olan her şey
+1591	App Store üzerinden
+1592	daha sonra
+1593	Her şey bu telefonda kalır. Butler'ın sunucusu yoktur ve verilerinizi asla görmez.
+1594	Bir yapay zekâ ile paylaş …
+1595	Belge bir yapay zekâ ile paylaşılsın mı?
+1596	“%t” bu telefondan çıkar ve seçtiğiniz uygulamaya gider (ör. Claude). Butler'ın kendisi asla bir şey göndermez.
+1597	Uygulama seç
+1598	Bu tarayıcı dosya paylaşamıyor. Belgeyi açın ve “Paylaş”ı kullanın.
+1599	Belgede dosya yok
+1600	Face ID, hatırlatmalar, yedek, planlar
+1601	vergi veya finans danışmanı için, ZIP veya PDF

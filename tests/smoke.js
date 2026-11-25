@@ -1125,6 +1125,21 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
   await T(()=>window.__T.R('ubl'));await p.waitForTimeout(300);check('…the overview follows it',await T(()=>document.querySelectorAll('.ubb').length===5));
   await T(()=>{const W=window.__T,it=W.Ke().items;const j=it.findIndex(z=>z.id==='ubd1');j>=0&&it.splice(j,1);delete W.g().ubl;W.save();W.R('home')})}
 
+ where='v79 mappe, security';{await T(()=>{const W=window.__T,it=W.Ke().items;it.push({id:'abd1',title:'Lohnsteuerbescheinigung AB',files:[],pages:[],ts:1},{id:'abd2',title:'Spendenquittung AB',files:[],pages:[],ts:1});W.save();W.R('mbr')});await p.waitForTimeout(400);
+  const a1=await T(()=>({r:window.__T.m().route,lst:document.querySelector('[data-abg=lst]')?.checked,sp:document.querySelector('[data-abg=spend]')?.checked}));
+  check('Mappe für Berater: the Steuerberater preset ticks the fitting groups',a1.r==='mbr'&&a1.lst&&a1.sp,JSON.stringify(a1));
+  await T(()=>document.querySelector('[data-act=abp][data-k=fam]').click());await p.waitForTimeout(300);
+  check('…the Familie preset does not take tax papers',await T(()=>!document.querySelector('[data-abg=lst]')?.checked));
+  await T(()=>window.__T.R('sich'));await p.waitForTimeout(300);
+  check('Sicherheit & Daten: vault, reminders, backup, family, plans',await T(()=>{const t=document.querySelector('.screen').innerText;return /Tresor|Сейф|Vault/.test(t)&&document.querySelectorAll('[data-act=abrd]').length===5&&!!document.querySelector('[data-act=pvbk]')&&!!document.querySelector('[data-act=abfam]')}));
+  await T(()=>{const W=window.__T,G=W.g(),d=n=>{const x=new Date();x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};G.tasks=G.tasks||[];G.tasks.push({id:'abt1',t:'Frist AB 25',due:d(25),done:false});W.save();document.querySelector('[data-act=abrd][data-k="30"]').click()});await p.waitForTimeout(300);
+  await T(()=>window.__T.R('home'));await p.waitForTimeout(400);
+  check('«30 Tage vorher»: a deadline in 25 days shows in «Wichtig für Sie»',await T(()=>(window.__T.m().sgL||[]).some(t=>t.t==='Frist AB 25')));
+  await T(()=>{const W=window.__T,G=W.g();G.remDays=14;W.v()});await p.waitForTimeout(300);
+  check('…with 14 days it does not',await T(()=>!(window.__T.m().sgL||[]).some(t=>t.t==='Frist AB 25')));
+  check('the BUTLER word mark is gold (only accent)',await T(()=>{const w=document.querySelector('.sgwm');return !!w&&/gradient/.test(getComputedStyle(w).backgroundImage)}));
+  await T(()=>{const W=window.__T,G=W.g(),it=W.Ke().items;for(const id of['abd1','abd2']){const j=it.findIndex(z=>z.id===id);j>=0&&it.splice(j,1)}G.tasks=G.tasks.filter(t=>t.id!=='abt1');delete G.remDays;delete G.mbr;W.save();W.R('home')})}
+
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

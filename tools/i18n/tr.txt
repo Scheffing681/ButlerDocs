@@ -1504,3 +1504,38 @@
 1503	İlgili değil
 1504	TÜV %d tarihine kadar
 1505	Henüz bir şey bulunamadı. Bir belge ekleyin (ruhsat, sigorta, TÜV) – Butler gerisini toplar.
+1506	Haftanız
+1507	Genel bakış
+1508	Ödemeler · %a
+1509	Ödemeler
+1510	Fiyat artışları
+1511	gelen kutusunda
+1512	Hafta
+1513	Ay
+1514	Çeyrek
+1515	Özelleştir
+1516	Randevular ve görevler
+1517	%m'a göre
+1518	kaynak: %t
+1519	harcamalar + %n sözleşme
+1520	Gelen kutusunda
+1521	Yakında sona eriyor
+1522	“Ödendi” işaretsiz faturalar
+1523	Aylık abonelikler
+1524	Bu dönemde
+1525	Açık görevler
+1526	Araç TÜV
+1527	Ocaktan beri araba
+1528	Ocaktan beri ev
+1529	Doğum günü: %n
+1530	Aile belgeleri sona eriyor
+1531	veri yok – %t
+1532	harcamaları girin
+1533	sözleşme ekleyin
+1534	yakınlarınızı “Kişiler”e ekleyin
+1535	araç ruhsatı veya kira sözleşmesi ekleyin
+1536	her şey sakin ✓
+1537	Dönem
+1538	Start'ta “Haftanız”
+1539	Her sayı nereden geldiğini gösterir. Veri eksikse Butler bunu söyler.
+1540	Yakınlar

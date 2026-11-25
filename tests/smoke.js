@@ -883,7 +883,7 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  where='start glas';{await T(()=>{document.querySelectorAll('.dtsheet,.lnqbar,.bdtip').forEach(x=>x.remove());const G=window.__T.g();const d=n=>{const x=new Date();x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};G.tasks=G.tasks||[];
   G.tasks.push({id:'sg1',t:'SG überfällig',due:d(-3),done:false,prio:2},{id:'sg2',t:'SG bald',due:d(4),done:false,prio:2},{id:'sg3',t:'SG später',due:d(30),done:false,prio:2});G.bdImp={};window.__T.R('home');window.__T.v()});await p.waitForTimeout(400);
  const s1=await T(()=>{const sc=document.querySelector('.screen.sgs');if(!sc)return{};const t=[...sc.querySelectorAll('.sgi b')].map(b=>b.textContent);const kids=[...sc.children].map(c=>c.className);return{t,imp:kids.findIndex(c=>/sgimp/.test(c)),q:kids.findIndex(c=>/sgq/.test(c)),late:!!sc.querySelector('.sgp.r'),ring:!!sc.querySelector('.string')}});
- check('Glas Start: «Wichtig für Sie» right under the search, no ring',s1.q>=0&&s1.imp===s1.q+1&&!s1.ring,JSON.stringify(s1));
+ check('Glas Start: «Wichtig für Sie» right under the search (and «Ihre Woche»), no ring',s1.q>=0&&(s1.imp===s1.q+1||s1.imp===s1.q+2)&&!s1.ring,JSON.stringify(s1));
  check('…overdue stays, 4 days shown, 30 days not yet (14-day window); status with sign',s1.late&&(s1.t||[]).includes('SG überfällig')&&!(s1.t||[]).includes('SG später'),JSON.stringify(s1.t));
  await T(()=>{const j=[...document.querySelectorAll('.sgi')].findIndex(b=>b.textContent.includes('SG überfällig'));document.querySelectorAll('.sgi')[j].click()});await p.waitForTimeout(300);
  check('Tap opens the sheet: Öffnen · Erledigt · Morgen · 3 Tage · Woche',await T(()=>document.querySelectorAll('.dtsheet .sgm [data-a]').length===5));
@@ -1112,6 +1112,18 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
   await T(()=>{document.querySelectorAll('.dtsheet').forEach(x=>x.remove());document.querySelector('.screen').insertAdjacentHTML('beforeend','<button id="akb2" data-act="akw" data-k="car"></button>');document.getElementById('akb2').click()});await p.waitForTimeout(500);
   check('«Alles zum Auto» gathers the vehicle document',await T(()=>window.__T.m().route==='akw'&&/Fahrzeugschein AK/.test(document.querySelector('.screen').textContent)));
   await T(()=>{const W=window.__T,it=W.Ke().items;for(const id of['akc1','akd1','akd2','akd3']){const j=it.findIndex(z=>z.id===id);j>=0&&it.splice(j,1)}W.save();W.R('home')})}
+
+ where='v78 overview';{await T(()=>{const W=window.__T,it=W.Ke().items,d=n=>{const x=new Date();x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)},de=k=>k.split('-').reverse().join('.');
+   it.push({id:'ubd1',title:'Rechnung UB',snip:'Rechnung Gesamtbetrag 40,00 € Fällig am '+de(d(3)),files:[],pages:[],ts:Date.now()});W.save();W.R('home')});await p.waitForTimeout(500);
+  const w1=await T(()=>{const c=document.querySelector('.ubwk');return c&&c.innerText});
+  check('Start: «Ihre Woche» with deadlines, payments (with the sum) and the inbox',!!w1&&/40,00/.test(w1),String(w1));
+  await T(()=>document.querySelector('.ubwk').click());await p.waitForTimeout(400);
+  const u1=await T(()=>({r:window.__T.m().route,n:document.querySelectorAll('.ubb').length}));check('…it opens «Überblick» with six blocks',u1.r==='ubl'&&u1.n===6,JSON.stringify(u1));
+  await T(()=>window.__T.R('ublset'));await p.waitForTimeout(300);await T(()=>document.querySelector('[data-act=ubltog][data-k=fam]').click());await p.waitForTimeout(200);
+  await T(()=>document.querySelector('[data-act=ublmv][data-k=dl][data-d="-1"]').click());await p.waitForTimeout(200);
+  const u2=await T(()=>window.__T.g().ubl);check('«Anpassen»: hide a block and change the order',u2.hide.fam===1&&u2.ord.indexOf('dl')===2,JSON.stringify(u2));
+  await T(()=>window.__T.R('ubl'));await p.waitForTimeout(300);check('…the overview follows it',await T(()=>document.querySelectorAll('.ubb').length===5));
+  await T(()=>{const W=window.__T,it=W.Ke().items;const j=it.findIndex(z=>z.id==='ubd1');j>=0&&it.splice(j,1);delete W.g().ubl;W.save();W.R('home')})}
 
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));

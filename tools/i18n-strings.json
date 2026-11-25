@@ -297,7 +297,8 @@
   "ru": "Имущество",
   "de": "Besitz",
   "files": [
-   "akte.js"
+   "akte.js",
+   "ueberblick.js"
   ]
  },
  "%a since January": {
@@ -349,7 +350,8 @@
    "notizen.js",
    "reliability.js",
    "search-places.js",
-   "start.js"
+   "start.js",
+   "ueberblick.js"
   ]
  },
  "Spending since January": {
@@ -1588,7 +1590,8 @@
   "ru": "Порядок",
   "de": "Ordnen",
   "files": [
-   "behoerden.js"
+   "behoerden.js",
+   "ueberblick.js"
   ]
  },
  "What to add?": {
@@ -1796,7 +1799,8 @@
   "ru": "Показать",
   "de": "Zeigen",
   "files": [
-   "behoerden.js"
+   "behoerden.js",
+   "ueberblick.js"
   ]
  },
  "secret – in the vault": {
@@ -3457,7 +3461,8 @@
    "business.js",
    "search-places.js",
    "start.js",
-   "suche-smart.js"
+   "suche-smart.js",
+   "ueberblick.js"
   ]
  },
  "Business registration": {
@@ -7609,7 +7614,8 @@
   "files": [
    "nav-edit.js",
    "notizen.js",
-   "start.js"
+   "start.js",
+   "ueberblick.js"
   ]
  },
  "This document is already there: “%t”": {
@@ -9694,6 +9700,7 @@
   "de": "Ausgaben",
   "files": [
    "suche-smart.js",
+   "ueberblick.js",
    "vertraege-abos.js"
   ]
  },
@@ -10091,6 +10098,267 @@
    "tidy.js"
   ]
  },
+ "Your week": {
+  "ru": "Ваша неделя",
+  "de": "Ihre Woche",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Overview": {
+  "ru": "Обзор",
+  "de": "Überblick",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Payments · %a": {
+  "ru": "Платежи · %a",
+  "de": "Zahlungen · %a",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Payments": {
+  "ru": "Платежи",
+  "de": "Zahlungen",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Price rises": {
+  "ru": "Цена растёт",
+  "de": "Preis steigt",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "in the inbox": {
+  "ru": "Во входящих",
+  "de": "im Eingang",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Week": {
+  "ru": "Неделя",
+  "de": "Woche",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Month": {
+  "ru": "Месяц",
+  "de": "Monat",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Quarter": {
+  "ru": "Квартал",
+  "de": "Quartal",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Customise": {
+  "ru": "Настроить",
+  "de": "Anpassen",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Contracts & subs": {
+  "ru": "Договоры и подписки",
+  "de": "Verträge & Abos",
+  "files": [
+   "ueberblick.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "Dates & tasks": {
+  "ru": "Сроки и задачи",
+  "de": "Termine & Aufgaben",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "vs %m": {
+  "ru": "к %m",
+  "de": "zu %m",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "from: %t": {
+  "ru": "из: %t",
+  "de": "aus: %t",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "spending + %n contracts": {
+  "ru": "расходов и %n договоров",
+  "de": "Ausgaben + %n Verträgen",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "In the inbox": {
+  "ru": "Во входящих",
+  "de": "Im Eingang",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Run out soon": {
+  "ru": "Скоро истекают",
+  "de": "Laufen bald ab",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Bills not marked paid": {
+  "ru": "Счета без «оплачено»",
+  "de": "Rechnungen ohne „bezahlt“",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Can be cancelled soon": {
+  "ru": "Скоро можно расторгнуть",
+  "de": "Bald kündbar",
+  "files": [
+   "ueberblick.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "Subscriptions a month": {
+  "ru": "Подписки в месяц",
+  "de": "Abos im Monat",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "In this period": {
+  "ru": "В этот период",
+  "de": "In diesem Zeitraum",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Open tasks": {
+  "ru": "Открытые задачи",
+  "de": "Offene Aufgaben",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Car TÜV": {
+  "ru": "TÜV машины",
+  "de": "TÜV Auto",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Car since January": {
+  "ru": "Машина с января",
+  "de": "Auto seit Januar",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Home since January": {
+  "ru": "Жильё с января",
+  "de": "Wohnung seit Januar",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Birthday: %n": {
+  "ru": "День рождения: %n",
+  "de": "Geburtstag: %n",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Family documents run out": {
+  "ru": "Документы семьи истекают",
+  "de": "Familien-Dokumente laufen ab",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "no data – %t": {
+  "ru": "нет данных — %t",
+  "de": "keine Angaben – %t",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "enter spending": {
+  "ru": "внесите расходы",
+  "de": "Ausgaben eintragen",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "add contracts": {
+  "ru": "добавьте договоры",
+  "de": "Verträge hinzufügen",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "add relatives in “Contacts”": {
+  "ru": "добавьте близких в «Контакты»",
+  "de": "Angehörige in „Kontakte“ eintragen",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "add a vehicle registration or rental contract": {
+  "ru": "добавьте Fahrzeugschein или договор аренды",
+  "de": "Fahrzeugschein oder Mietvertrag hinzufügen",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "all calm ✓": {
+  "ru": "всё спокойно ✓",
+  "de": "alles ruhig ✓",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Period": {
+  "ru": "Период",
+  "de": "Zeitraum",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "“Your week” on Start": {
+  "ru": "«Ваша неделя» на главной",
+  "de": "„Ihre Woche“ auf Start",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Every number shows where it comes from. If data is missing, Butler says so.": {
+  "ru": "Каждая цифра показывает, откуда она. Если данных мало, Батлер так и скажет.",
+  "de": "Jede Zahl im Überblick zeigt, woher sie stammt. Fehlen Angaben, sagt Butler das.",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
+ "Relatives": {
+  "ru": "Близкие",
+  "de": "Angehörige",
+  "files": [
+   "ueberblick.js"
+  ]
+ },
  "Fixed costs": {
   "ru": "Постоянные расходы",
   "de": "Feste Kosten",
@@ -10150,13 +10418,6 @@
  "Keep": {
   "ru": "Оставить",
   "de": "Behalten",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
- "Can be cancelled soon": {
-  "ru": "Скоро можно расторгнуть",
-  "de": "Bald kündbar",
   "files": [
    "vertraege-abos.js"
   ]
@@ -10584,13 +10845,6 @@
  "Leisure": {
   "ru": "Досуг",
   "de": "Freizeit",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
- "Contracts & subs": {
-  "ru": "Договоры и подписки",
-  "de": "Verträge & Abos",
   "files": [
    "vertraege-abos.js"
   ]

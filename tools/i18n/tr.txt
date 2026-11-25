@@ -1699,3 +1699,35 @@
 1698	Yıl CSV olarak (Excel)
 1699	ELSTER: uygulamalar için açık arayüz yok. Butler hazırlar – siz Mein ELSTER'e girersiniz.
 1700	Vergi merkezini aç
+1701	Liste
+1702	ör. “5.12. saat 15 ev sahibiyle görüşme”
+1703	Oluşturulacak: %t
+1704	Bu saatte zaten “%t” var. %h boş.
+1705	%h al
+1706	Yine de kaydet
+1707	Tarih bulunamadı – ör. “5.12.” veya “yarın”
+1708	Hatırlat
+1709	%n gün önce
+1710	Eyalet
+1711	resmî tatiller için
+1712	Resmî tatil
+1713	Doğum günü
+1714	Bu günlerde bir şey yok
+1715	Yarın
+1716	Bildirimler
+1717	Bugün: %a süre · %b ödeme · %c randevu
+1718	yüksek
+1719	orta
+1720	düşük
+1721	Para
+1722	Sistem
+1723	Okundu
+1724	Tümünü okundu işaretle
+1725	Sessiz mod
+1726	yalnızca “yüksek” sayılsın
+1727	%d: %n ödeme · %a
+1728	Gelen kutusunda: %n
+1729	Cevap yok: %t
+1730	30 günden eski yedek
+1731	Her şey sakin ✓
+1732	ST

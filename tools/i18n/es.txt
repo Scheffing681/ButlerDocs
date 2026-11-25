@@ -1699,3 +1699,35 @@
 1698	Año como CSV (Excel)
 1699	ELSTER: no hay interfaz abierta para apps. Butler prepara – tú lo introduces en Mein ELSTER.
 1700	Abrir el centro fiscal
+1701	Lista
+1702	p. ej. «Cita con el casero 5.12. 15:00»
+1703	Se creará: %t
+1704	A esta hora ya está «%t». Libre a las %h.
+1705	Tomar %h
+1706	Guardar de todos modos
+1707	No se encontró fecha – p. ej. «5.12.» o «mañana»
+1708	Recordar
+1709	%n d antes
+1710	Estado federado
+1711	para los festivos
+1712	Festivo
+1713	Cumpleaños
+1714	Nada en estos días
+1715	Mañana
+1716	Notificaciones
+1717	Hoy: %a plazos · %b pagos · %c citas
+1718	alta
+1719	media
+1720	baja
+1721	Dinero
+1722	Sistema
+1723	Leído
+1724	Marcar todo como leído
+1725	Modo silencio
+1726	contar solo «alta»
+1727	%d: %n pagos · %a
+1728	En la bandeja: %n
+1729	Sin respuesta: %t
+1730	Copia de más de 30 días
+1731	Todo tranquilo ✓
+1732	ST

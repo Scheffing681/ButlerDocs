@@ -1699,3 +1699,35 @@
 1698	Année en CSV (Excel)
 1699	ELSTER : pas d’interface ouverte pour les apps. Butler prépare – vous saisissez dans Mein ELSTER.
 1700	Ouvrir le centre fiscal
+1701	Liste
+1702	p. ex. «RDV propriétaire 5.12. 15 h»
+1703	Sera créé : %t
+1704	«%t» est déjà prévu à cette heure. Libre à %h.
+1705	Prendre %h
+1706	Enregistrer quand même
+1707	Aucune date trouvée – p. ex. «5.12.» ou «demain»
+1708	Rappeler
+1709	%n j avant
+1710	Land fédéral
+1711	pour les jours fériés
+1712	Jour férié
+1713	Anniversaire
+1714	Rien ces jours-là
+1715	Demain
+1716	Notifications
+1717	Aujourd’hui : %a délais · %b paiements · %c rendez-vous
+1718	haut
+1719	moyen
+1720	bas
+1721	Argent
+1722	Système
+1723	Lu
+1724	Tout marquer comme lu
+1725	Mode silencieux
+1726	compter seulement «haut»
+1727	%d : %n paiements · %a
+1728	Dans la boîte : %n
+1729	Pas de réponse : %t
+1730	Sauvegarde de plus de 30 jours
+1731	Tout est calme ✓
+1732	ST

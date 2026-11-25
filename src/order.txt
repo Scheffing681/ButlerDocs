@@ -109,3 +109,4 @@ docs/ueberblick.js
 docs/abschluss.js
 docs/kontakte-post.js
 docs/steuerzentrum.js
+docs/kalender-nz.js

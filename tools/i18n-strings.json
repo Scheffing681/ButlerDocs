@@ -852,6 +852,7 @@
   "de": "Verträge",
   "files": [
    "akte.js",
+   "kalender-nz.js",
    "kontakte-post.js",
    "move-phone.js",
    "reliability.js",
@@ -864,6 +865,7 @@
   "files": [
    "akte.js",
    "finanzen2.js",
+   "kalender-nz.js",
    "kontakte-post.js",
    "layout-docs.js",
    "move-phone.js",
@@ -1578,7 +1580,8 @@
   "de": "Eintragen",
   "files": [
    "behoerden-briefe.js",
-   "behoerden.js"
+   "behoerden.js",
+   "kalender-nz.js"
   ]
  },
  "Other date": {
@@ -1861,6 +1864,7 @@
   "de": "in %n Tagen",
   "files": [
    "behoerden-termine.js",
+   "kalender-nz.js",
    "kontakte-post.js",
    "start-glas.js",
    "start.js",
@@ -2154,6 +2158,7 @@
   "files": [
    "behoerden.js",
    "eingang-fristen.js",
+   "kalender-nz.js",
    "kontakte-post.js",
    "post.js",
    "scan-glas.js",
@@ -2564,6 +2569,7 @@
   "files": [
    "behoerden.js",
    "business.js",
+   "kalender-nz.js",
    "seiten.js",
    "steuer-plus.js",
    "steuerzentrum.js"
@@ -3056,7 +3062,8 @@
   "de": "Kalender",
   "files": [
    "bereiche.js",
-   "eingang-fristen.js"
+   "eingang-fristen.js",
+   "kalender-nz.js"
   ]
  },
  "Tasks": {
@@ -3357,6 +3364,7 @@
   "de": "überfällig",
   "files": [
    "business.js",
+   "kalender-nz.js",
    "start-glas.js",
    "start.js"
   ]
@@ -4202,6 +4210,7 @@
   "files": [
    "business.js",
    "finanzen2.js",
+   "kalender-nz.js",
    "karriere2.js"
   ]
  },
@@ -5462,6 +5471,7 @@
   "de": "Heute",
   "files": [
    "eingang-smart.js",
+   "kalender-nz.js",
    "layout-docs.js"
   ]
  },
@@ -5615,6 +5625,7 @@
   "de": "Post",
   "files": [
    "farben.js",
+   "kalender-nz.js",
    "nav-edit.js",
    "post.js",
    "scan-glas.js"
@@ -6249,6 +6260,231 @@
   "de": "− Weniger",
   "files": [
    "formen-glas.js"
+  ]
+ },
+ "List": {
+  "ru": "Список",
+  "de": "Liste",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Week": {
+  "ru": "Неделя",
+  "de": "Woche",
+  "files": [
+   "kalender-nz.js",
+   "ueberblick.js"
+  ]
+ },
+ "e.g. “Meeting landlord 5.12. 3 pm”": {
+  "ru": "Напр. «Термин у арендодателя 5.12. 15:00»",
+  "de": "z. B. „Termin mit Vermieter 5.12. 15 Uhr“",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Will be created: %t": {
+  "ru": "Будет создано: %t",
+  "de": "Wird angelegt: %t",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "“%t” is already at this time. Free at %h.": {
+  "ru": "В это время уже есть «%t». Свободно в %h.",
+  "de": "Um diese Zeit ist schon „%t“. Frei wäre %h Uhr.",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Take %h": {
+  "ru": "Взять %h",
+  "de": "%h Uhr nehmen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Save anyway": {
+  "ru": "Всё равно сохранить",
+  "de": "Trotzdem speichern",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "No date found – e.g. “5.12.” or “tomorrow”": {
+  "ru": "Не нашёл дату — напишите, например, «5.12.» или «завтра»",
+  "de": "Kein Datum erkannt – z. B. „5.12.“ oder „morgen“",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Remind": {
+  "ru": "Напомнить",
+  "de": "Erinnern",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "%n d before": {
+  "ru": "за %n дн.",
+  "de": "%n T. vorher",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Federal state": {
+  "ru": "Федеральная земля",
+  "de": "Bundesland",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "for public holidays": {
+  "ru": "для праздников",
+  "de": "für die Feiertage",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Holiday": {
+  "ru": "Праздник",
+  "de": "Feiertag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Birthday": {
+  "ru": "День рождения",
+  "de": "Geburtstag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Nothing on these days": {
+  "ru": "Ничего в эти дни",
+  "de": "Nichts an diesen Tagen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Tomorrow": {
+  "ru": "Завтра",
+  "de": "Morgen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Notifications": {
+  "ru": "Уведомления",
+  "de": "Mitteilungen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Today: %a deadlines · %b payments · %c events": {
+  "ru": "Сегодня: сроков %a · платежей %b · встреч %c",
+  "de": "Heute: %a Fristen · %b Zahlungen · %c Termine",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "high": {
+  "ru": "важно",
+  "de": "hoch",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "medium": {
+  "ru": "средне",
+  "de": "mittel",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "low": {
+  "ru": "инфо",
+  "de": "niedrig",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Money": {
+  "ru": "Деньги",
+  "de": "Finanzen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "System": {
+  "ru": "Система",
+  "de": "System",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Read": {
+  "ru": "Прочитано",
+  "de": "Gelesen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Mark all as read": {
+  "ru": "Отметить всё прочитанным",
+  "de": "Alle als gelesen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Quiet mode": {
+  "ru": "Тихий режим",
+  "de": "Ruhemodus",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "count only “high”": {
+  "ru": "считать только важное",
+  "de": "nur „hoch“ zählen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "%d: %n payments · %a": {
+  "ru": "%d: платежей %n · %a",
+  "de": "%d: %n Zahlungen · %a",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "In the inbox: %n": {
+  "ru": "Во входящих: %n",
+  "de": "Im Eingang: %n",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "No answer: %t": {
+  "ru": "Ответа нет: %t",
+  "de": "Keine Antwort: %t",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Backup older than 30 days": {
+  "ru": "Копия старше 30 дней",
+  "de": "Sicherung älter als 30 Tage",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "All calm ✓": {
+  "ru": "Всё спокойно ✓",
+  "de": "Alles ruhig ✓",
+  "files": [
+   "kalender-nz.js"
   ]
  },
  "Employers": {
@@ -11330,13 +11566,6 @@
  "in the inbox": {
   "ru": "Во входящих",
   "de": "im Eingang",
-  "files": [
-   "ueberblick.js"
-  ]
- },
- "Week": {
-  "ru": "Неделя",
-  "de": "Woche",
   "files": [
    "ueberblick.js"
   ]

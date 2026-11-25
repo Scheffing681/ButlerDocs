@@ -1881,3 +1881,21 @@
 1880	Creando el archivo …
 1881	El archivo no está cifrado: guárdelo en lugar seguro. Para cambiar de teléfono, use la copia.
 1882	Archivo completo creado
+1883	Butler: acceso e historial
+1884	qué puede ver Butler, qué ha hecho
+1885	Butler funciona solo en este teléfono. Ningún dato va a una IA externa.
+1886	Qué puede usar Butler en sus respuestas
+1887	Butler no lee ni menciona lo desactivado; su propia búsqueda no se limita
+1888	Dinero y gastos
+1889	Calendario y tareas
+1890	desactivado por defecto
+1891	El área «%a» está cerrada para Butler. No miro allí ni menciono nada de ella. Permítala en «Butler: acceso e historial».
+1892	todo lo que Butler cambió por sí mismo, con deshacer
+1893	Butler nunca hace solo lo importante
+1894	enviar, borrar, pagos y compartir: solo tras su confirmación
+1895	Desde el chat: apunte %n
+1896	Desde el chat: cita «%n»
+1897	Desde el chat: tarea «%n»
+1898	Regla: «%n» → %f
+1899	Compra desde recibo: %n
+1900	Trámite desde documento: %n

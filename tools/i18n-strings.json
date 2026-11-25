@@ -127,6 +127,7 @@
   "files": [
    "abschluss.js",
    "behoerden.js",
+   "butler-rechte.js",
    "finanzen.js",
    "kalender-nz.js",
    "kauf-gesund.js",
@@ -872,6 +873,7 @@
   "de": "Dokumente",
   "files": [
    "akte.js",
+   "butler-rechte.js",
    "finanzen2.js",
    "kalender-nz.js",
    "kauf-gesund.js",
@@ -926,6 +928,7 @@
   "de": "%n Einträge",
   "files": [
    "akte.js",
+   "butler-rechte.js",
    "suche-smart.js"
   ]
  },
@@ -4436,6 +4439,173 @@
    "butler-glas.js"
   ]
  },
+ "Butler: access & history": {
+  "ru": "Батлер: доступ и история",
+  "de": "Butler: Rechte & Verlauf",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "what Butler may see, what he did": {
+  "ru": "что Батлеру можно видеть, что он сделал",
+  "de": "was Butler sehen darf, was er getan hat",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "Butler works only on this phone. No data goes to an external AI.": {
+  "ru": "Батлер работает только на этом телефоне. Данные не уходят ни в какой внешний ИИ.",
+  "de": "Butler arbeitet nur auf diesem Telefon. Keine Daten gehen an eine externe KI.",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "What Butler may use in answers": {
+  "ru": "Что Батлеру можно использовать в ответах",
+  "de": "Was Butler in Antworten nutzen darf",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "Butler neither reads nor mentions what is off; your own search is not limited": {
+  "ru": "выключенное Батлер не читает и не упоминает; Ваш собственный поиск это не ограничивает",
+  "de": "Abgeschaltetes liest und nennt Butler nicht; Ihre eigene Suche bleibt frei",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "Money & expenses": {
+  "ru": "Деньги и расходы",
+  "de": "Geld & Ausgaben",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "Contracts & subscriptions": {
+  "ru": "Договоры и подписки",
+  "de": "Verträge & Abos",
+  "files": [
+   "butler-rechte.js",
+   "suche-smart.js"
+  ]
+ },
+ "Contacts": {
+  "ru": "Контакты",
+  "de": "Kontakte",
+  "files": [
+   "butler-rechte.js",
+   "kontakte-post.js",
+   "werkzeuge.js"
+  ]
+ },
+ "Calendar & tasks": {
+  "ru": "Календарь и задачи",
+  "de": "Kalender & Aufgaben",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "Purchases & warranty": {
+  "ru": "Покупки и гарантия",
+  "de": "Käufe & Garantie",
+  "files": [
+   "butler-rechte.js",
+   "kauf-gesund.js"
+  ]
+ },
+ "Letters & applications": {
+  "ru": "Письма и заявления",
+  "de": "Post & Anträge",
+  "files": [
+   "butler-rechte.js",
+   "kontakte-post.js"
+  ]
+ },
+ "off by default": {
+  "ru": "по умолчанию выключено",
+  "de": "standardmäßig aus",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "The area “%a” is closed for Butler. I do not look into it or name anything from it. Allow it under “Butler: access & history”.": {
+  "ru": "Раздел «%a» закрыт для Батлера. Я не смотрю туда и ничего оттуда не называю. Открыть доступ можно в «Батлер: доступ и история».",
+  "de": "Der Bereich „%a“ ist für Butler gesperrt. Ich schaue dort nicht hinein und nenne nichts daraus. Freigeben unter „Butler: Rechte & Verlauf“.",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "What Butler did": {
+  "ru": "Что сделал Батлер",
+  "de": "Was Butler getan hat",
+  "files": [
+   "butler-rechte.js",
+   "eingang-smart.js"
+  ]
+ },
+ "everything Butler changed itself – with undo": {
+  "ru": "всё, что Батлер изменил сам, — с отменой",
+  "de": "alles, was Butler selbst geändert hat – mit Rückgängig",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "Butler never does important things alone": {
+  "ru": "Важное Батлер не делает сам",
+  "de": "Wichtiges macht Butler nie allein",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "sending, deleting, payments and sharing – only after you confirm": {
+  "ru": "отправка, удаление, платежи и доступ для других — только после Вашего подтверждения",
+  "de": "Senden, Löschen, Zahlungen und Freigaben – nur nach Ihrer Bestätigung",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "From the chat: entry %n": {
+  "ru": "Из чата: запись %n",
+  "de": "Aus dem Chat: Buchung %n",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "From the chat: appointment “%n”": {
+  "ru": "Из чата: событие «%n»",
+  "de": "Aus dem Chat: Termin „%n“",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "From the chat: task “%n”": {
+  "ru": "Из чата: задача «%n»",
+  "de": "Aus dem Chat: Aufgabe „%n“",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "Rule: “%n” → %f": {
+  "ru": "Правило: «%n» → %f",
+  "de": "Regel: „%n“ → %f",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "Purchase from receipt: %n": {
+  "ru": "Покупка из чека: %n",
+  "de": "Kauf aus Beleg: %n",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
+ "Case from document: %n": {
+  "ru": "Дело из документа: %n",
+  "de": "Vorgang aus Dokument: %n",
+  "files": [
+   "butler-rechte.js"
+  ]
+ },
  "Chip checked": {
   "ru": "Чип проверен",
   "de": "Chip geprüft",
@@ -5276,13 +5446,6 @@
  "Several files at once. Recognition runs on this phone only.": {
   "ru": "Можно сразу несколько файлов. Распознавание идёт только на этом телефоне.",
   "de": "Mehrere Dateien auf einmal möglich. Erkennung läuft nur auf diesem Telefon.",
-  "files": [
-   "eingang-smart.js"
-  ]
- },
- "What Butler did": {
-  "ru": "Что сделал Батлер",
-  "de": "Was Butler getan hat",
   "files": [
    "eingang-smart.js"
   ]
@@ -7199,13 +7362,6 @@
    "karriere2.js"
   ]
  },
- "Purchases & warranty": {
-  "ru": "Покупки и гарантия",
-  "de": "Käufe & Garantie",
-  "files": [
-   "kauf-gesund.js"
-  ]
- },
  "Active": {
   "ru": "Идёт",
   "de": "Läuft",
@@ -7593,14 +7749,6 @@
    "kauf-gesund.js"
   ]
  },
- "Contacts": {
-  "ru": "Контакты",
-  "de": "Kontakte",
-  "files": [
-   "kontakte-post.js",
-   "werkzeuge.js"
-  ]
- },
  "Personal": {
   "ru": "Личные",
   "de": "Persönlich",
@@ -7784,13 +7932,6 @@
  "＋ New case": {
   "ru": "＋ Новое дело",
   "de": "＋ Neuer Vorgang",
-  "files": [
-   "kontakte-post.js"
-  ]
- },
- "Letters & applications": {
-  "ru": "Дела и заявления",
-  "de": "Post & Anträge",
   "files": [
    "kontakte-post.js"
   ]
@@ -11592,13 +11733,6 @@
   "de": "Steuerzentrum öffnen",
   "files": [
    "steuerzentrum.js"
-  ]
- },
- "Contracts & subscriptions": {
-  "ru": "Договоры и подписки",
-  "de": "Verträge & Abos",
-  "files": [
-   "suche-smart.js"
   ]
  },
  "Spending": {

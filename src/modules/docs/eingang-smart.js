@@ -121,7 +121,7 @@ Hooks.act('eigo',dd=>{const d=Ke().items.find(x=>x.id===dd.id);if(!d)return;cons
   d.ok=1;d.okTs=Date.now();eiAddLog('ok',eit('l_ok',{t:nm}),{doc:d.id});$();T(eit('okN',{n:n+1}));m.eiOpt=null;eiSel=null;const h=m.hist||[];if(h.length&&h[h.length-1].route==='eing')h.pop();R('eing',void 0,!0)}catch(e){Hooks.err('eigo',e)}});
 Hooks.act('eiarch',dd=>{const d=Ke().items.find(x=>x.id===dd.id);if(!d)return;d.ok=1;d.arch=1;d.okTs=d.okTs||Date.now();eiAddLog('arch',eit('l_arch',{t:d.title||'—'}),{doc:d.id});$();eiSel=null;R('eing',void 0,!0)});
 /* ---------- the journal ---------- */
-const EI_IC={link:'🔗',price:'▲',rem:'⏰',aus:'💶',task:'✓',ok:'📥',arch:'🗄'};
+const EI_IC={move:'📁',new:'✨',kauf:'🛍',vg:'📂',link:'🔗',price:'▲',rem:'⏰',aus:'💶',task:'✓',ok:'📥',arch:'🗄'};
 function eiJournal(){const L2=eiLogD(),day=ts=>{const a=new Date(ts);a.setHours(0,0,0,0);const n=new Date();n.setHours(0,0,0,0);const k=Math.round((n-a)/864e5);return k===0?'today':k===1?'yest':'earlier'};
  const grp=['today','yest','earlier'].map(k=>[k,L2.filter(x=>day(x.ts)===k)]).filter(x=>x[1].length);
  const tm=ts=>new Date(ts).toLocaleTimeString(he(),{hour:'2-digit',minute:'2-digit'});
@@ -136,6 +136,8 @@ Hooks.act('eiundo',dd=>{const x=eiLogD().find(z=>z.id===dd.id);if(!x||x.done)ret
   if(x.k==='aus')vaAD().e=vaAD().e.filter(z=>z.id!==u.aus);
   if(x.k==='ok'&&doc){delete doc.ok;delete doc.okTs}
   if(x.k==='arch'&&doc){delete doc.arch;delete doc.ok}
+  if(x.k==='move'&&doc){doc.folder=u.prev||'';doc.rlx=doc.rlx||'undo'}
+  if(x.k==='new'||x.k==='kauf'||x.k==='vg'){const col=x.k==='kauf'?'kauf':x.k==='vg'?'vg':u.col;if(col==='tx'){try{const F=U();F.tx=F.tx.filter(z=>z.id!==u.id)}catch{}}else if(col&&Array.isArray(g[col]))g[col]=g[col].filter(z=>z.id!==u.id)}
   x.done=1;$();v();T(eit('undone'))}catch(e){Hooks.err('eiundo',e)}});
 Hooks.css('docs-eingang-smart',`
 .eitabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;background:var(--bd-glass,var(--surface));border:1px solid var(--bd-edge,var(--line));border-radius:16px;padding:4px;margin:0 0 12px}

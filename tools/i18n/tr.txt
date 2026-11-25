@@ -1881,3 +1881,21 @@
 1880	Arşiv oluşturuluyor …
 1881	Arşiv şifreli değildir – güvenli saklayın. Telefon değiştirmek için yedeği kullanın.
 1882	Tam arşiv oluşturuldu
+1883	Butler: erişim ve geçmiş
+1884	Butler’ın neyi görebileceği, ne yaptığı
+1885	Butler yalnızca bu telefonda çalışır. Hiçbir veri harici bir yapay zekâya gitmez.
+1886	Butler’ın cevaplarda kullanabilecekleri
+1887	Kapalı olanı Butler okumaz ve anmaz; kendi aramanız serbest kalır
+1888	Para ve harcamalar
+1889	Takvim ve görevler
+1890	varsayılan olarak kapalı
+1891	“%a” alanı Butler’a kapalı. Oraya bakmam ve oradan hiçbir şey söylemem. “Butler: erişim ve geçmiş” bölümünden açabilirsiniz.
+1892	Butler’ın kendi değiştirdiği her şey – geri alma ile
+1893	Butler önemli şeyleri asla tek başına yapmaz
+1894	gönderme, silme, ödemeler ve paylaşım – yalnızca onayınızdan sonra
+1895	Sohbetten: kayıt %n
+1896	Sohbetten: randevu “%n”
+1897	Sohbetten: görev “%n”
+1898	Kural: “%n” → %f
+1899	Fişten satın alım: %n
+1900	Belgeden dosya: %n

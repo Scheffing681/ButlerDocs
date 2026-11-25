@@ -1881,3 +1881,21 @@
 1880	Création de l’archive …
 1881	L’archive n’est pas chiffrée – conservez-la en lieu sûr. Pour changer de téléphone, utilisez la sauvegarde.
 1882	Archive complète créée
+1883	Butler : accès et historique
+1884	ce que Butler peut voir, ce qu’il a fait
+1885	Butler fonctionne uniquement sur ce téléphone. Aucune donnée n’est envoyée à une IA externe.
+1886	Ce que Butler peut utiliser dans ses réponses
+1887	Butler ne lit ni ne mentionne ce qui est désactivé ; votre propre recherche reste libre
+1888	Argent et dépenses
+1889	Calendrier et tâches
+1890	désactivé par défaut
+1891	Le domaine « %a » est fermé pour Butler. Je n’y regarde pas et n’en cite rien. Autorisez-le dans « Butler : accès et historique ».
+1892	tout ce que Butler a modifié lui-même – avec annulation
+1893	Butler ne fait jamais seul les choses importantes
+1894	envoi, suppression, paiements et partage – seulement après votre confirmation
+1895	Depuis le chat : écriture %n
+1896	Depuis le chat : rendez-vous « %n »
+1897	Depuis le chat : tâche « %n »
+1898	Règle : « %n » → %f
+1899	Achat depuis un ticket : %n
+1900	Dossier depuis un document : %n

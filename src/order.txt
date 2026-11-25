@@ -112,3 +112,4 @@ docs/steuerzentrum.js
 docs/kalender-nz.js
 docs/kauf-gesund.js
 docs/werkzeuge.js
+docs/butler-rechte.js

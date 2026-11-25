@@ -1881,3 +1881,21 @@
 1880	Tworzę archiwum …
 1881	Archiwum nie jest szyfrowane – przechowuj je bezpiecznie. Do przeprowadzki użyj kopii zapasowej.
 1882	Utworzono pełne archiwum
+1883	Butler: dostęp i historia
+1884	co Butler może widzieć, co zrobił
+1885	Butler działa tylko na tym telefonie. Żadne dane nie trafiają do zewnętrznej AI.
+1886	Co Butler może używać w odpowiedziach
+1887	Wyłączonego Butler nie czyta ani nie wymienia; Twoje wyszukiwanie pozostaje wolne
+1888	Pieniądze i wydatki
+1889	Kalendarz i zadania
+1890	domyślnie wyłączone
+1891	Obszar „%a” jest zamknięty dla Butlera. Nie zaglądam tam i niczego z niego nie podaję. Odblokuj w „Butler: dostęp i historia”.
+1892	wszystko, co Butler zmienił sam – z cofaniem
+1893	Ważnych rzeczy Butler nigdy nie robi sam
+1894	wysyłanie, usuwanie, płatności i udostępnianie – tylko po Twoim potwierdzeniu
+1895	Z czatu: wpis %n
+1896	Z czatu: termin „%n”
+1897	Z czatu: zadanie „%n”
+1898	Reguła: „%n” → %f
+1899	Zakup z paragonu: %n
+1900	Sprawa z dokumentu: %n

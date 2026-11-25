@@ -48,7 +48,7 @@ function eiRead(d){const t=eiTxt(d),o={party:d.party||'',amt:0,amtL:'',due:'',nu
  if(!o.amt){const all=[...t.matchAll(/(\d{1,3}(?:\.\d{3})*,\d{2})\s*(?:€|eur)/gi)].map(x=>eiNum(x[1]));if(all.length){o.amt=Math.max(...all);o.amtL=''}}
  const du=t.match(/(fällig(?: am)?|faellig|zahlbar bis|zahlungsziel|zu zahlen bis|abbuchung am|bis zum|due)[^\d\n]{0,20}(\d{1,2}\.\d{1,2}\.\d{2,4})/i);if(du)o.due=eiDe(du[2]);
  if(!o.due&&d.end&&/^\d{4}-\d\d-\d\d$/.test(d.end))o.due=d.end;
- const nu=t.match(/(kunden-?nr\.?|kundennummer|vertrags-?nr\.?|vertragsnummer|versicherungs-?(?:schein)?-?nr\.?|versicherungsnummer|policen-?nr\.?|mitglieds-?nr\.?|mitgliedsnummer|customer no\.?|contract no\.?)\s*[:.]?\s*([A-Z0-9][A-Z0-9 \-\/]{3,22}[A-Z0-9])/i);if(nu)o.num=nu[2].trim();
+ const nu=t.match(/(kunden-?nr\.?|kundennummer|vertrags-?nr\.?|vertragsnummer|versicherungs-?(?:schein)?-?nr\.?|versicherungsnummer|policen-?nr\.?|mitglieds-?nr\.?|mitgliedsnummer|customer no\.?|contract no\.?)\s*[:.]?\s*([A-Z0-9][A-Z0-9 \-\/]{3,22}[A-Z0-9])/i);if(nu)o.num=nu[2].replace(/\s+[A-Za-zÄÖÜäöüß]{2,}.*$/,'').trim();
  if(!o.num&&f.number)o.num=f.number;
  if(/(preisanpassung|preiserhöhung|preiserhoehung|neuer (monats)?preis|neue[rn]? (grund)?gebühr|beitragsanpassung|beitragserhöhung)/i.test(t)){const ab=t.match(/(ab|zum|mit wirkung zum|gültig ab)\s+(dem\s+)?(\d{1,2}\.\d{1,2}\.\d{2,4})/i);
   const np=t.match(/(neu(?:er|e)?\s*(?:monats)?(?:preis|beitrag|grundgebühr)|künftig|kuenftig|ab dann)[^\d\n]{0,40}(\d{1,3}(?:\.\d{3})*,\d{2})/i);if(ab&&np){o.newFrom=eiDe(ab[3]);o.newP=eiNum(np[2])}}

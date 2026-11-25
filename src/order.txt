@@ -104,3 +104,4 @@ docs/formen-glas.js
 docs/vertraege-abos.js
 docs/suche-smart.js
 docs/eingang-smart.js
+docs/akte.js

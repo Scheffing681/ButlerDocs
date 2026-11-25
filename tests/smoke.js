@@ -1093,6 +1093,26 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
   check('journal «Rückgängig» removes the new price again',await T(()=>window.__T.Ke().items.find(x=>x.id==='eic1').prices.length)===n0-1);
   await T(()=>{const W=window.__T,G=W.g(),it=W.Ke().items;for(const id of['eic1','eid1','eid2']){const j=it.findIndex(z=>z.id===id);j>=0&&it.splice(j,1)}G.tasks=(G.tasks||[]).filter(t=>!/EI\b/.test(t.t));G.eiLog=[];W.save();W.R('home')})}
 
+ where='v77 document connection';{await T(()=>{const W=window.__T,it=W.Ke().items;
+   it.push({id:'akc1',type:'ins',co:'Vodafone AK',polno:'4471 902',cat:'ins_other',start:'2023-03-15',noticeM:1,per:'m',prices:[{from:'2023-03-15',amt:5900,per:'m'},{from:'2025-04-01',amt:6500,per:'m'}],files:[],pages:[],ts:1});
+   it.push({id:'akd1',title:'Rechnung AK 11',snip:'Rechnung Kundennummer 4471 902 Gesamtbetrag 65,00 €',files:[],pages:[],ts:Date.now()-5e6,date:'2026-11-03',ctr:'akc1'});
+   it.push({id:'akd2',title:'Rechnung AK 12',snip:'Rechnung Kundennummer 4471 902 Gesamtbetrag 65,00 €',files:[],pages:[],ts:Date.now()-4e6,date:'2026-12-03'});
+   it.push({id:'akd3',title:'Fahrzeugschein AK',dtype:'vehicle',f:{number:'M-AK 1'},files:[],pages:[],ts:1});W.save();
+   document.querySelector('.screen').insertAdjacentHTML('beforeend','<button id="akb1" data-act="akopen" data-id="akc1"></button>');document.getElementById('akb1').click()});await p.waitForTimeout(500);
+  const a1=await T(()=>({r:window.__T.m().route,bars:document.querySelectorAll('.akpc i').length,tl:[...document.querySelectorAll('.aktl button')].map(b=>b.querySelector('b').textContent).join('|'),unpaid:!!document.querySelector('.aktl button.w')}));
+  check('Akte: price bars and the timeline of linked documents (bill without «bezahlt» marked)',a1.r==='akte'&&a1.bars===2&&/Rechnung AK 11/.test(a1.tl)&&!/Rechnung AK 12/.test(a1.tl)&&a1.unpaid,JSON.stringify(a1));
+  await T(()=>{window.__T.m().bdid='akd2';window.__T.R('bdoc')});await p.waitForTimeout(600);await T(()=>document.querySelectorAll('.dtsheet').forEach(x=>x.remove()));
+  check('a document asks «Gehört das zu „Vodafone AK“?»',await T(()=>!!document.querySelector('.aksug')&&/Vodafone AK/.test(document.querySelector('.aksug').textContent)));
+  await T(()=>document.querySelector('[data-act=akyes]').click());await p.waitForTimeout(400);
+  check('…«Ja» links it; the card then says «Gehört zu»',await T(()=>window.__T.Ke().items.find(x=>x.id==='akd2').ctr==='akc1'&&!document.querySelector('.aksug')));
+  await T(()=>{document.querySelectorAll('.dtsheet').forEach(x=>x.remove());const b=document.querySelector('[data-act=akpaid]');b&&b.click()});await p.waitForTimeout(300);
+  check('a bill can be marked «bezahlt»',await T(()=>!!window.__T.Ke().items.find(x=>x.id==='akd2').paid));
+  await T(()=>{document.querySelectorAll('.dtsheet').forEach(x=>x.remove());const b=document.querySelector('[data-act=akun]');b&&b.click()});await p.waitForTimeout(300);
+  check('✕ removes the link, the document stays',await T(()=>{const d=window.__T.Ke().items.find(x=>x.id==='akd2');return d&&!d.ctr}));
+  await T(()=>{document.querySelectorAll('.dtsheet').forEach(x=>x.remove());document.querySelector('.screen').insertAdjacentHTML('beforeend','<button id="akb2" data-act="akw" data-k="car"></button>');document.getElementById('akb2').click()});await p.waitForTimeout(500);
+  check('«Alles zum Auto» gathers the vehicle document',await T(()=>window.__T.m().route==='akw'&&/Fahrzeugschein AK/.test(document.querySelector('.screen').textContent)));
+  await T(()=>{const W=window.__T,it=W.Ke().items;for(const id of['akc1','akd1','akd2','akd3']){const j=it.findIndex(z=>z.id===id);j>=0&&it.splice(j,1)}W.save();W.R('home')})}
+
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

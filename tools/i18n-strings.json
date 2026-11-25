@@ -1,4 +1,400 @@
 {
+ "File": {
+  "ru": "Дело",
+  "de": "Akte",
+  "files": [
+   "akte.js",
+   "dokumente-butler.js",
+   "screens-glas.js"
+  ]
+ },
+ "%n documents": {
+  "ru": "документов: %n",
+  "de": "%n Dokumente",
+  "files": [
+   "akte.js",
+   "business.js",
+   "dokumente-butler.js",
+   "mappen.js"
+  ]
+ },
+ "%n deadlines": {
+  "ru": "сроков: %n",
+  "de": "%n Fristen",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Contract · No. %n": {
+  "ru": "Договор · № %n",
+  "de": "Vertrag · Nr. %n",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Contract": {
+  "ru": "Договор",
+  "de": "Vertrag",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "%a / month": {
+  "ru": "%a / мес.",
+  "de": "%a / Monat",
+  "files": [
+   "akte.js",
+   "finanzen2.js",
+   "suche-smart.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "since %d": {
+  "ru": "с %d",
+  "de": "seit %d",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "from %d: %a": {
+  "ru": "с %d: %a",
+  "de": "ab %d: %a",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Price history": {
+  "ru": "История цены",
+  "de": "Preisverlauf",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "History": {
+  "ru": "История",
+  "de": "Verlauf",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "✓ paid on %d": {
+  "ru": "✓ оплачено %d",
+  "de": "✓ bezahlt am %d",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "not marked “paid” – check?": {
+  "ru": "без отметки «оплачено» — проверить?",
+  "de": "ohne „bezahlt“ – prüfen?",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Contract start": {
+  "ru": "Начало договора",
+  "de": "Vertragsbeginn",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "original": {
+  "ru": "оригинал",
+  "de": "Original",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Note": {
+  "ru": "Заметка",
+  "de": "Notiz",
+  "files": [
+   "akte.js",
+   "behoerden.js",
+   "finanzen2.js"
+  ]
+ },
+ "＋ Link a document": {
+  "ru": "＋ Связать документ",
+  "de": "＋ Dokument verknüpfen",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Which documents belong here?": {
+  "ru": "Какие документы относятся к делу?",
+  "de": "Welche Dokumente gehören dazu?",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Probably fitting": {
+  "ru": "Похоже, подходят",
+  "de": "Passt vermutlich",
+  "files": [
+   "akte.js",
+   "finanzen2.js"
+  ]
+ },
+ "All documents": {
+  "ru": "Все документы",
+  "de": "Alle Dokumente",
+  "files": [
+   "akte.js",
+   "finanzen2.js",
+   "mappen.js"
+  ]
+ },
+ "Save": {
+  "ru": "Сохранить",
+  "de": "Speichern",
+  "files": [
+   "akte.js",
+   "behoerden-briefe.js",
+   "behoerden-termine.js",
+   "behoerden.js",
+   "business.js",
+   "finanzen.js",
+   "finanzen2.js",
+   "mappen.js",
+   "nav-edit.js",
+   "steuer-plus.js",
+   "vertraege-abos.js",
+   "vorsorge.js"
+  ]
+ },
+ "No linked documents yet. Bills and letters come in via the “Inbox” or the button below.": {
+  "ru": "Пока нет связанных документов. Счета и письма связываются сами — через «Входящие» или кнопкой ниже.",
+  "de": "Noch keine verknüpften Dokumente. Rechnungen und Briefe kommen über den „Eingang“ oder den Knopf unten dazu.",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Open contract": {
+  "ru": "Открыть договор",
+  "de": "Vertrag öffnen",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Cancel": {
+  "ru": "Расторгнуть",
+  "de": "Kündigen",
+  "files": [
+   "akte.js",
+   "behoerden.js",
+   "seiten.js"
+  ]
+ },
+ "Does this belong to “%n”?": {
+  "ru": "Это относится к «%n»?",
+  "de": "Gehört das zu „%n“?",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Same number %v.": {
+  "ru": "Тот же номер %v.",
+  "de": "Gleiche Nummer %v.",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Same company name.": {
+  "ru": "То же название фирмы.",
+  "de": "Gleicher Firmenname.",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Yes, link": {
+  "ru": "Да, связать",
+  "de": "Ja, verknüpfen",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "No": {
+  "ru": "Нет",
+  "de": "Nein",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Belongs to: %n": {
+  "ru": "Относится к: %n",
+  "de": "Gehört zu: %n",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Linked with “%n”": {
+  "ru": "Связано с «%n»",
+  "de": "Verknüpft mit „%n“",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Link removed, the document stays": {
+  "ru": "Связь убрана, документ остался",
+  "de": "Verknüpfung entfernt, das Dokument bleibt",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "✓ Mark as paid": {
+  "ru": "✓ Отметить как оплаченный",
+  "de": "✓ Als bezahlt markieren",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Noted: paid": {
+  "ru": "Отмечено: оплачено",
+  "de": "Vermerkt: bezahlt",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Removing a link never deletes the document itself.": {
+  "ru": "Удаление связи никогда не удаляет сам документ.",
+  "de": "Eine Verknüpfung löschen entfernt nie das Dokument selbst.",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Car": {
+  "ru": "Машина",
+  "de": "Auto",
+  "files": [
+   "akte.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "Home": {
+  "ru": "Жильё",
+  "de": "Wohnung",
+  "files": [
+   "akte.js",
+   "layout-docs.js"
+  ]
+ },
+ "Everything about the car": {
+  "ru": "Всё о машине",
+  "de": "Alles zum Auto",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Everything about the home": {
+  "ru": "Всё о жилье",
+  "de": "Alles zur Wohnung",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Property": {
+  "ru": "Имущество",
+  "de": "Besitz",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "%a since January": {
+  "ru": "%a с января",
+  "de": "%a seit Januar",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "≈ %a / month": {
+  "ru": "≈ %a в месяц",
+  "de": "≈ %a / Monat",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Soon": {
+  "ru": "Скоро",
+  "de": "Bald",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Everything": {
+  "ru": "Всё по теме",
+  "de": "Alles dazu",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Contracts": {
+  "ru": "Договоры",
+  "de": "Verträge",
+  "files": [
+   "akte.js",
+   "move-phone.js",
+   "reliability.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "Documents": {
+  "ru": "Документы",
+  "de": "Dokumente",
+  "files": [
+   "akte.js",
+   "finanzen2.js",
+   "layout-docs.js",
+   "move-phone.js",
+   "notizen.js",
+   "reliability.js",
+   "search-places.js",
+   "start.js"
+  ]
+ },
+ "Spending since January": {
+  "ru": "Расходы с января",
+  "de": "Ausgaben seit Januar",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "＋ Add a document": {
+  "ru": "＋ Добавить документ",
+  "de": "＋ Dokument hinzufügen",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Not related": {
+  "ru": "Не относится",
+  "de": "Gehört nicht dazu",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "TÜV until %d": {
+  "ru": "TÜV до %d",
+  "de": "TÜV bis %d",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "Nothing found yet. Add a document (registration, insurance, TÜV) – Butler gathers the rest.": {
+  "ru": "Пока ничего не найдено. Добавьте документ (Fahrzeugschein, страховку, TÜV) — Батлер соберёт остальное.",
+  "de": "Noch nichts gefunden. Fügen Sie ein Dokument hinzu (Fahrzeugschein, Versicherung, TÜV) – Butler sammelt den Rest.",
+  "files": [
+   "akte.js"
+  ]
+ },
+ "%n entries": {
+  "ru": "записей: %n",
+  "de": "%n Einträge",
+  "files": [
+   "akte.js",
+   "suche-smart.js"
+  ]
+ },
  "Still empty – 3 first steps": {
   "ru": "Пока пусто — 3 первых шага",
   "de": "Noch leer – 3 erste Schritte",
@@ -745,23 +1141,6 @@
    "vertraege-abos.js"
   ]
  },
- "Save": {
-  "ru": "Сохранить",
-  "de": "Speichern",
-  "files": [
-   "behoerden-briefe.js",
-   "behoerden-termine.js",
-   "behoerden.js",
-   "business.js",
-   "finanzen.js",
-   "finanzen2.js",
-   "mappen.js",
-   "nav-edit.js",
-   "steuer-plus.js",
-   "vertraege-abos.js",
-   "vorsorge.js"
-  ]
- },
  "Delete": {
   "ru": "Удалить",
   "de": "Löschen",
@@ -1449,14 +1828,6 @@
    "behoerden.js"
   ]
  },
- "Note": {
-  "ru": "Заметка",
-  "de": "Notiz",
-  "files": [
-   "behoerden.js",
-   "finanzen2.js"
-  ]
- },
  "Prefilled – please check: addresses and hours change.": {
   "ru": "Данные заполнены заранее — пожалуйста, проверьте: адреса и часы меняются.",
   "de": "Vorausgefüllt – bitte prüfen: Adressen und Zeiten ändern sich.",
@@ -1653,14 +2024,6 @@
   "de": "Auf die Startseite",
   "files": [
    "behoerden.js"
-  ]
- },
- "Cancel": {
-  "ru": "Отмена",
-  "de": "Abbrechen",
-  "files": [
-   "behoerden.js",
-   "seiten.js"
   ]
  },
  "Saved": {
@@ -3176,15 +3539,6 @@
    "mappen.js"
   ]
  },
- "%n documents": {
-  "ru": "%n док.",
-  "de": "%n Dokumente",
-  "files": [
-   "business.js",
-   "dokumente-butler.js",
-   "mappen.js"
-  ]
- },
  "Add %s": {
   "ru": "%s — добавить",
   "de": "%s hinzufügen",
@@ -3944,14 +4298,6 @@
   "de": "Suchen: Name, Text, Nummer …",
   "files": [
    "dokumente-butler.js"
-  ]
- },
- "File": {
-  "ru": "Файл",
-  "de": "Datei",
-  "files": [
-   "dokumente-butler.js",
-   "screens-glas.js"
   ]
  },
  "Sets": {
@@ -5111,15 +5457,6 @@
    "finanzen2.js"
   ]
  },
- "%a / month": {
-  "ru": "%a в месяц",
-  "de": "%a / Monat",
-  "files": [
-   "finanzen2.js",
-   "suche-smart.js",
-   "vertraege-abos.js"
-  ]
- },
  "%a a year · %n contracts": {
   "ru": "%a в год · договоров: %n",
   "de": "%a im Jahr · %n Verträge",
@@ -5262,19 +5599,6 @@
    "finanzen2.js"
   ]
  },
- "Documents": {
-  "ru": "Документы",
-  "de": "Dokumente",
-  "files": [
-   "finanzen2.js",
-   "layout-docs.js",
-   "move-phone.js",
-   "notizen.js",
-   "reliability.js",
-   "search-places.js",
-   "start.js"
-  ]
- },
  "＋ Document from the app": {
   "ru": "＋ Документ из приложения",
   "de": "＋ Dokument aus der App",
@@ -5285,21 +5609,6 @@
  "Which documents?": {
   "ru": "Какие документы?",
   "de": "Welche Dokumente?",
-  "files": [
-   "finanzen2.js",
-   "mappen.js"
-  ]
- },
- "Probably fitting": {
-  "ru": "Похоже, подходят",
-  "de": "Passt vermutlich",
-  "files": [
-   "finanzen2.js"
-  ]
- },
- "All documents": {
-  "ru": "Все документы",
-  "de": "Alle Dokumente",
   "files": [
    "finanzen2.js",
    "mappen.js"
@@ -6062,13 +6371,6 @@
   "de": "Diese Sprache ist noch nicht in der App – sie ist jetzt auf Englisch. Die Sprache ändern Sie im Profil.",
   "files": [
    "languages-start.js"
-  ]
- },
- "Home": {
-  "ru": "Главная",
-  "de": "Startseite",
-  "files": [
-   "layout-docs.js"
   ]
  },
  "Order of the tiles ↑↓ · eye = show/hide": {
@@ -7125,15 +7427,6 @@
   "de": "Ihre Daten vom alten Telefon sind da:",
   "files": [
    "move-phone.js"
-  ]
- },
- "Contracts": {
-  "ru": "Договоры",
-  "de": "Verträge",
-  "files": [
-   "move-phone.js",
-   "reliability.js",
-   "vertraege-abos.js"
   ]
  },
  "Photos / pages": {
@@ -9546,13 +9839,6 @@
    "suche-smart.js"
   ]
  },
- "%n entries": {
-  "ru": "записей: %n",
-  "de": "%n Einträge",
-  "files": [
-   "suche-smart.js"
-  ]
- },
  "Can be cancelled: %p": {
   "ru": "Можно расторгнуть: %p",
   "de": "Kündbar: %p",
@@ -10291,13 +10577,6 @@
  "Gifts": {
   "ru": "Подарки",
   "de": "Geschenke",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
- "Car": {
-  "ru": "Машина",
-  "de": "Auto",
   "files": [
    "vertraege-abos.js"
   ]

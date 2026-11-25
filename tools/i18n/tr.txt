@@ -1466,3 +1466,41 @@
 1465	Öde: %t (%a)
 1466	Halledilecek: %t
 1467	“%t” ile aynı numara ve tutar
+1468	%n süre
+1469	Sözleşme · No. %n
+1470	Sözleşme
+1471	%d tarihinden beri
+1472	%d itibarıyla: %a
+1473	Fiyat geçmişi
+1474	Geçmiş
+1475	✓ %d tarihinde ödendi
+1476	“ödendi” işareti yok – kontrol?
+1477	Sözleşme başlangıcı
+1478	orijinal
+1479	＋ Belge bağla
+1480	Hangi belgeler buraya ait?
+1481	Henüz bağlı belge yok. Faturalar ve mektuplar “Gelen kutusu” veya aşağıdaki düğme ile eklenir.
+1482	Sözleşmeyi aç
+1483	Bu “%n” ile mi ilgili?
+1484	Aynı numara %v.
+1485	Aynı firma adı.
+1486	Evet, bağla
+1487	Hayır
+1488	Ait olduğu: %n
+1489	“%n” ile bağlandı
+1490	Bağlantı kaldırıldı, belge duruyor
+1491	✓ Ödendi olarak işaretle
+1492	Not edildi: ödendi
+1493	Bir bağlantıyı silmek belgenin kendisini asla silmez.
+1494	Araba hakkında her şey
+1495	Ev hakkında her şey
+1496	Mülk
+1497	Ocaktan beri %a
+1498	≈ ayda %a
+1499	Yakında
+1500	Hepsi
+1501	Ocaktan beri harcamalar
+1502	＋ Belge ekle
+1503	İlgili değil
+1504	TÜV %d tarihine kadar
+1505	Henüz bir şey bulunamadı. Bir belge ekleyin (ruhsat, sigorta, TÜV) – Butler gerisini toplar.

@@ -1295,3 +1295,83 @@
 1294	Açık · Koyu · Otomatik, renk, alt çubuk
 1295	＋ Diğer ayrıntılar (saat, tekrar, kişi …)
 1296	− Daha az
+1297	Harcamalar
+1298	Sabit giderler
+1299	Yılda %a
+1300	%n sözleşme · %a
+1301	%n abonelik · %a
+1302	Fiyat artışı bulundu
+1303	Fiyat artıyor
+1304	%d itibarıyla
+1305	Yılda +%a
+1306	%d tarihine kadar erken fesih mümkün (lütfen kontrol edin)
+1307	Feshi hazırla
+1308	Kalsın
+1309	Yakında feshedilebilir
+1310	%d tarihine kadar · %k gün
+1311	Tümü %n
+1312	Sözleşmeler %n
+1313	Abonelikler %n
+1314	Abone
+1315	her zaman feshedilebilir
+1316	%y yılından beri
+1317	＋ Sözleşme veya abonelik
+1318	Her şey yalnızca bu telefonda kalır. Butler sadece gösterir – siz karar verirsiniz.
+1319	Henüz sözleşme yok. “＋ Sözleşme veya abonelik”e dokunun – sigorta, elektrik, telefon, internet, spor, Netflix …
+1320	Fiyat artışı
+1321	Ek maliyet
+1322	aylık / yıllık
+1323	Son fesih tarihi
+1324	erken, fiyat artışı nedeniyle
+1325	%n gün kaldı
+1326	Sözleşme başlangıcı
+1327	No.
+1328	Ne yapmak istersiniz?
+1329	Hazır bir mektup, siz kontrol edip gönderirsiniz
+1330	Hatırlat
+1331	%a ve %b tarihlerinde
+1332	yeni fiyat kabul edilir
+1333	Hatırlatmalar eklendi
+1334	Tamam, sözleşme kalıyor
+1335	%n: fesih hakkında karar ver (%d tarihine kadar)
+1336	Lütfen sağlayıcının mektubundaki süreyi kontrol edin. Butler hukuki danışmanlık vermez.
+1337	Fesih
+1338	Sarı: Butler'ın verilerinizden eklediği. Değiştirmek için metne dokunun.
+1339	Kendi e-postamla gönder
+1340	e-posta uygulamanızı açar
+1341	PDF olarak kaydet
+1342	yazdırmak veya yüklemek için
+1343	Metni kopyala
+1344	iletişim formu için
+1345	Metin kopyalandı
+1346	Gönderdikten sonra Butler 14 gün içinde onayı kontrol etmenizi hatırlatır.
+1347	%n: fesih onayını kontrol et
+1348	Not edildi: fesih gönderildi
+1349	Harcamalar · %m
+1350	Sabit %a
+1351	Girilen %a
+1352	＋ Harcama
+1353	Son girilenler
+1354	otomatik
+1355	Banka ekstresi yükle (CSV) – isteğe bağlı
+1356	Yalnızca harcamalar; gelir yok, banka bağlantısı yok. Her şey bu telefonda kalır.
+1357	Bu ay henüz bir şey girilmedi. “＋ Harcama” – tutar, kategori, bitti.
+1358	Yeni harcama
+1359	Harcama
+1360	Tutar
+1361	Nerede? (isteğe bağlı) – ör. REWE
+1362	Tutarı yazın, kategoriye dokunun, bitti.
+1363	%n harcama aktarıldı (%k tekrar atlandı)
+1364	Dosyada harcama bulunamadı
+1365	Market
+1366	Yakıt
+1367	Restoran
+1368	Giyim
+1369	Eczane, kozmetik
+1370	Ev
+1371	Hediyeler
+1372	Araba
+1373	Boş zaman
+1374	Sözleşmeler ve abonelikler
+1375	Abonelik olarak say
+1376	“Finanslar”da sözleşmelerden ayrı gösterilir

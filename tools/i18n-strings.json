@@ -741,7 +741,8 @@
    "behoerden-termine.js",
    "business.js",
    "finanzen.js",
-   "notizen.js"
+   "notizen.js",
+   "vertraege-abos.js"
   ]
  },
  "Save": {
@@ -757,6 +758,7 @@
    "mappen.js",
    "nav-edit.js",
    "steuer-plus.js",
+   "vertraege-abos.js",
    "vorsorge.js"
   ]
  },
@@ -771,7 +773,8 @@
    "finanzen.js",
    "finanzen2.js",
    "seiten.js",
-   "steuer-plus.js"
+   "steuer-plus.js",
+   "vertraege-abos.js"
   ]
  },
  "Empty so far": {
@@ -837,7 +840,8 @@
   "de": "Worum geht es",
   "files": [
    "behoerden-termine.js",
-   "business.js"
+   "business.js",
+   "vertraege-abos.js"
   ]
  },
  "e.g. renewing the residence permit": {
@@ -1112,7 +1116,8 @@
    "behoerden-termine.js",
    "behoerden.js",
    "finanzen.js",
-   "finanzen2.js"
+   "finanzen2.js",
+   "vertraege-abos.js"
   ]
  },
  "Offices": {
@@ -2534,7 +2539,8 @@
   "ru": "ежемесячно",
   "de": "monatlich",
   "files": [
-   "business.js"
+   "business.js",
+   "vertraege-abos.js"
   ]
  },
  "quarterly": {
@@ -2614,7 +2620,8 @@
   "files": [
    "business.js",
    "finanzen.js",
-   "linkup.js"
+   "linkup.js",
+   "vertraege-abos.js"
   ]
  },
  "Customers": {
@@ -4518,7 +4525,8 @@
   "ru": "Впишите сумму",
   "de": "Bitte einen Betrag eingeben",
   "files": [
-   "finanzen.js"
+   "finanzen.js",
+   "vertraege-abos.js"
   ]
  },
  "All categories": {
@@ -4686,7 +4694,8 @@
   "ru": "Налоговая папка",
   "de": "Steuer-Mappe",
   "files": [
-   "finanzen2.js"
+   "finanzen2.js",
+   "vertraege-abos.js"
   ]
  },
  "Contracts & costs": {
@@ -4707,7 +4716,8 @@
   "ru": "%a в месяц",
   "de": "%a / Monat",
   "files": [
-   "finanzen2.js"
+   "finanzen2.js",
+   "vertraege-abos.js"
   ]
  },
  "%a a year · %n contracts": {
@@ -4749,7 +4759,8 @@
   "ru": "можно расторгнуть до %d",
   "de": "kündbar bis %d",
   "files": [
-   "finanzen2.js"
+   "finanzen2.js",
+   "vertraege-abos.js"
   ]
  },
  "No contracts yet. Tap “＋ Contract” – insurance, power, phone, internet, gym …": {
@@ -6743,7 +6754,8 @@
   "de": "Verträge",
   "files": [
    "move-phone.js",
-   "reliability.js"
+   "reliability.js",
+   "vertraege-abos.js"
   ]
  },
  "Photos / pages": {
@@ -9095,6 +9107,566 @@
   "de": "Profil öffnen",
   "files": [
    "tidy.js"
+  ]
+ },
+ "Spending": {
+  "ru": "Расходы",
+  "de": "Ausgaben",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Fixed costs": {
+  "ru": "Постоянные расходы",
+  "de": "Feste Kosten",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "%a a year": {
+  "ru": "%a в год",
+  "de": "%a im Jahr",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "%n contracts · %a": {
+  "ru": "Договоров: %n · %a",
+  "de": "%n Verträge · %a",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "%n subscriptions · %a": {
+  "ru": "Подписок: %n · %a",
+  "de": "%n Abos · %a",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Price rise found": {
+  "ru": "Цена выросла",
+  "de": "Preiserhöhung erkannt",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Price goes up": {
+  "ru": "Цена растёт",
+  "de": "Preis steigt",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "from %d": {
+  "ru": "с %d",
+  "de": "ab %d",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "+%a a year": {
+  "ru": "+%a в год",
+  "de": "+%a im Jahr",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Early cancellation possible until %d (please check)": {
+  "ru": "Расторгнуть из-за повышения можно до %d (проверьте в письме)",
+  "de": "Sonderkündigung möglich bis %d (bitte prüfen)",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Prepare cancellation": {
+  "ru": "Подготовить расторжение",
+  "de": "Kündigung vorbereiten",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Keep": {
+  "ru": "Оставить",
+  "de": "Behalten",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Can be cancelled soon": {
+  "ru": "Скоро можно расторгнуть",
+  "de": "Bald kündbar",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "by %d · %k days": {
+  "ru": "до %d · %k дн.",
+  "de": "bis %d · %k Tage",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "All %n": {
+  "ru": "Все %n",
+  "de": "Alle %n",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Contracts %n": {
+  "ru": "Договоры %n",
+  "de": "Verträge %n",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Subscriptions %n": {
+  "ru": "Подписки %n",
+  "de": "Abos %n",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Sub": {
+  "ru": "Подписка",
+  "de": "Abo",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "cancel any time": {
+  "ru": "можно расторгнуть в любой момент",
+  "de": "jederzeit kündbar",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "since %y": {
+  "ru": "с %y",
+  "de": "seit %y",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "＋ Contract or subscription": {
+  "ru": "＋ Договор или подписка",
+  "de": "＋ Vertrag oder Abo",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Everything stays on this phone only. Butler only shows – you decide.": {
+  "ru": "Всё хранится только на этом телефоне. Батлер только показывает — решаете Вы.",
+  "de": "Alles bleibt nur auf diesem Telefon. Butler zeigt nur – Sie entscheiden.",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "No contracts yet. Tap “＋ Contract or subscription” – insurance, power, phone, internet, gym, Netflix …": {
+  "ru": "Договоров пока нет. Нажмите «＋ Договор или подписка»: страховка, свет, телефон, интернет, спорт, Netflix …",
+  "de": "Noch keine Verträge. Tippen Sie auf „＋ Vertrag oder Abo“ – Versicherung, Strom, Handy, Internet, Sport, Netflix …",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Price rise": {
+  "ru": "Повышение цены",
+  "de": "Preiserhöhung",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Extra cost": {
+  "ru": "Доплата",
+  "de": "Mehrkosten",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "per month / per year": {
+  "ru": "в месяц / в год",
+  "de": "pro Monat / pro Jahr",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Cancel by": {
+  "ru": "Расторгнуть до",
+  "de": "Kündigen bis",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "early, because of the price rise": {
+  "ru": "досрочно из-за повышения",
+  "de": "Sonderkündigung wegen Preiserhöhung",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "%n days left": {
+  "ru": "осталось %n дн.",
+  "de": "noch %n Tage",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Contract since": {
+  "ru": "Договор с",
+  "de": "Vertrag seit",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "No.": {
+  "ru": "№",
+  "de": "Nr.",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "What would you like to do?": {
+  "ru": "Что сделать?",
+  "de": "Was möchten Sie tun?",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "A ready letter, you check and send": {
+  "ru": "Готовое письмо — Вы проверяете и отправляете",
+  "de": "Fertiger Brief, Sie prüfen und senden",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Remind me": {
+  "ru": "Напомнить",
+  "de": "Erinnern",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "on %a and %b": {
+  "ru": "%a и %b",
+  "de": "am %a und am %b",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "the new price is accepted": {
+  "ru": "новая цена принимается",
+  "de": "neuer Preis wird übernommen",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Reminders added": {
+  "ru": "Напоминания добавлены в задачи",
+  "de": "Erinnerungen angelegt",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Fine, the contract stays": {
+  "ru": "Хорошо, договор остаётся",
+  "de": "Gut, der Vertrag bleibt",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "%n: decide about cancelling (by %d)": {
+  "ru": "%n: решить о расторжении (до %d)",
+  "de": "%n: über Kündigung entscheiden (bis %d)",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Please check the deadline in the provider’s letter. Butler gives no legal advice.": {
+  "ru": "Пожалуйста, проверьте срок в письме фирмы. Батлер не даёт юридических советов.",
+  "de": "Bitte prüfen Sie die Frist im Brief des Anbieters. Butler gibt keine Rechtsberatung.",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Cancellation": {
+  "ru": "Расторжение",
+  "de": "Kündigung",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Yellow: filled in by Butler from your data. Tap the text to change it.": {
+  "ru": "Жёлтым — то, что Батлер взял из Ваших данных. Нажмите на текст, чтобы изменить.",
+  "de": "Gelb markiert: von Butler aus Ihren Unterlagen eingesetzt. Tippen zum Ändern.",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Send with my mail": {
+  "ru": "Отправить моей почтой",
+  "de": "Mit meiner Mail senden",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "opens your mail app": {
+  "ru": "откроется Ваше почтовое приложение",
+  "de": "öffnet Ihre Mail-App",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Save as PDF": {
+  "ru": "Сохранить как PDF",
+  "de": "Als PDF speichern",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "to print or upload": {
+  "ru": "для печати или загрузки",
+  "de": "zum Drucken oder Hochladen",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Copy text": {
+  "ru": "Скопировать текст",
+  "de": "Text kopieren",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "for the contact form": {
+  "ru": "для формы на сайте",
+  "de": "für das Kontaktformular",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Text copied": {
+  "ru": "Текст скопирован",
+  "de": "Text kopiert",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "After sending, Butler reminds you in 14 days to check the confirmation.": {
+  "ru": "После отправки Батлер напомнит через 14 дней проверить подтверждение.",
+  "de": "Nach dem Senden erinnert Butler Sie in 14 Tagen an die Bestätigung.",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "%n: check the cancellation confirmation": {
+  "ru": "%n: проверить подтверждение расторжения",
+  "de": "%n: Kündigungsbestätigung prüfen",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Noted: cancellation sent": {
+  "ru": "Отмечено: расторжение отправлено",
+  "de": "Vermerkt: Kündigung gesendet",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Spending · %m": {
+  "ru": "Расходы · %m",
+  "de": "Ausgaben %m",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Fixed %a": {
+  "ru": "Постоянные %a",
+  "de": "Feste Kosten %a",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Entered %a": {
+  "ru": "Внесено %a",
+  "de": "Eingetragen %a",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "＋ Expense": {
+  "ru": "＋ Расход",
+  "de": "＋ Ausgabe",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Latest": {
+  "ru": "Последние",
+  "de": "Zuletzt",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "automatic": {
+  "ru": "автоматически",
+  "de": "automatisch",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Load bank statement (CSV) – optional": {
+  "ru": "Загрузить выписку (CSV) — по желанию",
+  "de": "Kontoauszug laden (CSV) – freiwillig",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Spending only, no income and no bank connection. Everything stays on this phone.": {
+  "ru": "Только расходы — без доходов и без банка. Всё хранится на этом телефоне.",
+  "de": "Nur Ausgaben, ohne Einnahmen und ohne Bankverbindung. Alles bleibt auf diesem Telefon.",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Nothing entered this month yet. “＋ Expense” – amount, category, done.": {
+  "ru": "В этом месяце ещё ничего не внесено. Нажмите «＋ Расход» — сумма, категория, готово.",
+  "de": "In diesem Monat noch nichts eingetragen. „＋ Ausgabe“ – Betrag, Kategorie, fertig.",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "New expense": {
+  "ru": "Новый расход",
+  "de": "Neue Ausgabe",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Expense": {
+  "ru": "Расход",
+  "de": "Ausgabe",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Amount": {
+  "ru": "Сумма",
+  "de": "Betrag",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Where? (optional) – e.g. REWE": {
+  "ru": "Где? (по желанию) — например, REWE",
+  "de": "Wo? (freiwillig) – z. B. REWE",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Type the amount, tap a category, done.": {
+  "ru": "Сумма, категория — готово.",
+  "de": "Betrag eintippen, Kategorie tippen, fertig.",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "%n expenses imported (%k doubles skipped)": {
+  "ru": "Загружено расходов: %n (повторы пропущены: %k)",
+  "de": "%n Ausgaben übernommen (%k doppelte übersprungen)",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "No expenses found in the file": {
+  "ru": "В файле не найдено расходов",
+  "de": "In der Datei wurden keine Ausgaben gefunden",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Groceries": {
+  "ru": "Продукты",
+  "de": "Lebensmittel",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Fuel": {
+  "ru": "Бензин",
+  "de": "Tanken",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Restaurant": {
+  "ru": "Кафе",
+  "de": "Restaurant",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Clothes": {
+  "ru": "Одежда",
+  "de": "Kleidung",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Drugstore": {
+  "ru": "Аптека, косметика",
+  "de": "Drogerie",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Household": {
+  "ru": "Дом",
+  "de": "Haushalt",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Gifts": {
+  "ru": "Подарки",
+  "de": "Geschenke",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Car": {
+  "ru": "Машина",
+  "de": "Auto",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Leisure": {
+  "ru": "Досуг",
+  "de": "Freizeit",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Contracts & subs": {
+  "ru": "Договоры и подписки",
+  "de": "Verträge & Abos",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "Count as subscription": {
+  "ru": "Считать подпиской",
+  "de": "Als Abo zählen",
+  "files": [
+   "vertraege-abos.js"
+  ]
+ },
+ "shown apart from contracts in “Finances”": {
+  "ru": "в «Финансах» отдельно от договоров",
+  "de": "in „Finanzen“ getrennt von Verträgen",
+  "files": [
+   "vertraege-abos.js"
   ]
  },
  "Will & provisions": {

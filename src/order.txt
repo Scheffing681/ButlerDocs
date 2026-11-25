@@ -101,3 +101,4 @@ docs/nav-edit.js
 docs/alt-glas.js
 docs/einstellungen-glas.js
 docs/formen-glas.js
+docs/vertraege-abos.js

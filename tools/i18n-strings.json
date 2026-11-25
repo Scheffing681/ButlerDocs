@@ -3,7 +3,8 @@
   "ru": "Папка для консультанта",
   "de": "Mappe für Berater",
   "files": [
-   "abschluss.js"
+   "abschluss.js",
+   "steuerzentrum.js"
   ]
  },
  "Tax adviser": {
@@ -51,7 +52,8 @@
   "de": "Lohnabrechnungen",
   "files": [
    "abschluss.js",
-   "karriere2.js"
+   "karriere2.js",
+   "steuerzentrum.js"
   ]
  },
  "Tradesmen & service charges": {
@@ -140,7 +142,8 @@
    "business.js",
    "dokumente-butler.js",
    "kontakte-post.js",
-   "mappen.js"
+   "mappen.js",
+   "steuerzentrum.js"
   ]
  },
  "1 document": {
@@ -2280,7 +2283,8 @@
   "ru": "Закрыто",
   "de": "Geschlossen",
   "files": [
-   "behoerden.js"
+   "behoerden.js",
+   "steuerzentrum.js"
   ]
  },
  "opens %d %t": {
@@ -2561,7 +2565,8 @@
    "behoerden.js",
    "business.js",
    "seiten.js",
-   "steuer-plus.js"
+   "steuer-plus.js",
+   "steuerzentrum.js"
   ]
  },
  "Please enter a name": {
@@ -5666,7 +5671,8 @@
   "ru": "Чеков: %n · %a",
   "de": "%n Belege · %a",
   "files": [
-   "finanzen.js"
+   "finanzen.js",
+   "steuerzentrum.js"
   ]
  },
  "Tax return %y due %z (without adviser – please check)": {
@@ -6960,7 +6966,8 @@
   "ru": "договоров: %n",
   "de": "%n Verträge",
   "files": [
-   "kontakte-post.js"
+   "kontakte-post.js",
+   "steuerzentrum.js"
   ]
  },
  "＋ Call": {
@@ -7087,14 +7094,16 @@
   "ru": "Проверить",
   "de": "Zu prüfen",
   "files": [
-   "kontakte-post.js"
+   "kontakte-post.js",
+   "steuerzentrum.js"
   ]
  },
  "Prepared": {
   "ru": "Подготовлено",
   "de": "Vorbereitet",
   "files": [
-   "kontakte-post.js"
+   "kontakte-post.js",
+   "steuerzentrum.js"
   ]
  },
  "Delivered": {
@@ -7201,7 +7210,8 @@
   "ru": "Статус",
   "de": "Status",
   "files": [
-   "kontakte-post.js"
+   "kontakte-post.js",
+   "steuerzentrum.js"
   ]
  },
  "by": {
@@ -7244,7 +7254,8 @@
   "de": "Vollständig",
   "files": [
    "kontakte-post.js",
-   "start.js"
+   "start.js",
+   "steuerzentrum.js"
   ]
  },
  "Missing: %n": {
@@ -8385,7 +8396,8 @@
   "ru": "Налоговое решение",
   "de": "Steuerbescheid",
   "files": [
-   "mappen.js"
+   "mappen.js",
+   "steuerzentrum.js"
   ]
  },
  "latest": {
@@ -10278,7 +10290,8 @@
   "ru": "Расходы на работу",
   "de": "Werbungskosten",
   "files": [
-   "steuer-plus.js"
+   "steuer-plus.js",
+   "steuerzentrum.js"
   ]
  },
  "%a of 1,230 €": {
@@ -10671,6 +10684,209 @@
   "de": "Bitte das Datum eintragen",
   "files": [
    "steuer-plus.js"
+  ]
+ },
+ "Tax centre": {
+  "ru": "Налоговый центр",
+  "de": "Steuerzentrum",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Tax year %y": {
+  "ru": "Налоговый год %y",
+  "de": "Steuerjahr %y",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Not started": {
+  "ru": "Не начато",
+  "de": "Nicht begonnen",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "In preparation": {
+  "ru": "Готовлю",
+  "de": "In Vorbereitung",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Documents missing": {
+  "ru": "Не хватает документов",
+  "de": "Dokumente fehlen",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Filed": {
+  "ru": "Подано",
+  "de": "Eingereicht",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "You set the status – Butler does not guess it.": {
+  "ru": "Статус ставите Вы — Батлер его не угадывает.",
+  "de": "Den Status setzen Sie – Butler rät ihn nicht.",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Tax check": {
+  "ru": "Проверка",
+  "de": "Steuer-Check",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Missing": {
+  "ru": "Нет",
+  "de": "Fehlt",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "%a complete · %b check · %c missing": {
+  "ru": "%a есть · %b проверить · %c нет",
+  "de": "%a vollständig · %b prüfen · %c fehlt",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Payroll tax statement": {
+  "ru": "Справка о зарплате (Lohnsteuerbescheinigung)",
+  "de": "Lohnsteuerbescheinigung",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Insurance & pension": {
+  "ru": "Страховки и пенсия",
+  "de": "Versicherungen & Vorsorge",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Special expenses": {
+  "ru": "Особые расходы (Spenden, Kinderbetreuung)",
+  "de": "Sonderausgaben (Spenden, Kinderbetreuung)",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Extraordinary burdens (health)": {
+  "ru": "Медицина (außergewöhnliche Belastungen)",
+  "de": "Außergewöhnliche Belastungen (Gesundheit)",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Tradesmen & household": {
+  "ru": "Мастера и хозяйство",
+  "de": "Handwerker & Haushalt",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Children & child benefit": {
+  "ru": "Дети, Kindergeld",
+  "de": "Kinder & Kindergeld",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "nothing found": {
+  "ru": "ничего не найдено",
+  "de": "nichts gefunden",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "%n children in “Family”, no child benefit document": {
+  "ru": "детей в «Семье»: %n, документа о Kindergeld нет",
+  "de": "%n Kinder in „Familie“, kein Kindergeld-Dokument",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "no children entered": {
+  "ru": "детей не указано",
+  "de": "keine Kinder eingetragen",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "“Missing” does not mean the document is legally required. Receipts are usually kept for questions of the tax office, not sent.": {
+  "ru": "«Нет» не значит, что документ обязателен по закону. Обычно документы не прикладывают, а хранят на случай запроса Finanzamt.",
+  "de": "„Fehlt“ heißt nicht, dass das Dokument gesetzlich nötig ist. Belege werden meist nicht mitgeschickt, sondern für Rückfragen des Finanzamts aufbewahrt.",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Compared with %y": {
+  "ru": "Сравнение с %y",
+  "de": "Vergleich mit %y",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Refund": {
+  "ru": "Возврат",
+  "de": "Erstattung",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Additional payment": {
+  "ru": "Доплата",
+  "de": "Nachzahlung",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Amount on the assessment": {
+  "ru": "Сумма из решения",
+  "de": "Betrag laut Bescheid",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Objection until %d – please check in the assessment": {
+  "ru": "Возражение (Einspruch) до %d — проверьте по письму",
+  "de": "Einspruch bis %d – bitte im Bescheid prüfen",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Prepare an objection": {
+  "ru": "Подготовить возражение",
+  "de": "Einspruch vorbereiten",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Year as CSV (Excel)": {
+  "ru": "Экспорт года в CSV (Excel)",
+  "de": "Jahr als CSV (Excel)",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "ELSTER: there is no open interface for apps. Butler prepares – you enter it in Mein ELSTER.": {
+  "ru": "ELSTER: открытого подключения для приложений нет. Батлер готовит данные — вводите их в Mein ELSTER сами.",
+  "de": "ELSTER: Für Apps gibt es keine offene Schnittstelle. Butler bereitet vor – eingetragen wird in Mein ELSTER.",
+  "files": [
+   "steuerzentrum.js"
+  ]
+ },
+ "Open the tax centre": {
+  "ru": "Открыть налоговый центр",
+  "de": "Steuerzentrum öffnen",
+  "files": [
+   "steuerzentrum.js"
   ]
  },
  "Contracts & subscriptions": {

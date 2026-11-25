@@ -1670,3 +1670,32 @@
 1669	Tous les contacts
 1670	personnes, administrations, entreprises – avec historique
 1671	Oui
+1672	Centre fiscal
+1673	Année fiscale %y
+1674	Pas commencé
+1675	En préparation
+1676	Documents manquants
+1677	Déposée
+1678	C’est vous qui fixez le statut – Butler ne le devine pas.
+1679	Contrôle fiscal
+1680	Manquant
+1681	%a complet · %b à vérifier · %c manquant
+1682	Attestation annuelle d’impôt sur le salaire
+1683	Assurances et retraite
+1684	Dépenses spéciales
+1685	Charges exceptionnelles (santé)
+1686	Artisans et ménage
+1687	Enfants et allocations
+1688	rien trouvé
+1689	%n enfants dans «Famille», aucun document d’allocations
+1690	aucun enfant saisi
+1691	«Manquant» ne signifie pas que le document est légalement exigé. Les justificatifs sont gardés pour les questions du fisc, pas envoyés.
+1692	Comparé à %y
+1693	Remboursement
+1694	Supplément à payer
+1695	Montant de l’avis
+1696	Contestation jusqu’au %d – vérifiez dans l’avis
+1697	Préparer une contestation
+1698	Année en CSV (Excel)
+1699	ELSTER : pas d’interface ouverte pour les apps. Butler prépare – vous saisissez dans Mein ELSTER.
+1700	Ouvrir le centre fiscal

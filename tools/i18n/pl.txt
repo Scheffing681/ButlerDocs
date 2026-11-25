@@ -1670,3 +1670,32 @@
 1669	Wszystkie kontakty
 1670	osoby, urzędy, firmy – z historią
 1671	Tak
+1672	Centrum podatkowe
+1673	Rok podatkowy %y
+1674	Nie rozpoczęto
+1675	W przygotowaniu
+1676	Brakuje dokumentów
+1677	Złożono
+1678	Status ustawiasz Ty – Butler go nie zgaduje.
+1679	Kontrola podatkowa
+1680	Brak
+1681	%a kompletne · %b sprawdzić · %c brak
+1682	Zaświadczenie o podatku od wynagrodzenia
+1683	Ubezpieczenia i emerytura
+1684	Wydatki specjalne
+1685	Obciążenia nadzwyczajne (zdrowie)
+1686	Fachowcy i gospodarstwo
+1687	Dzieci i zasiłek
+1688	nic nie znaleziono
+1689	dzieci w «Rodzinie»: %n, brak dokumentu o zasiłku
+1690	nie wpisano dzieci
+1691	«Brak» nie znaczy, że dokument jest prawnie wymagany. Dowodów zwykle się nie wysyła, tylko przechowuje na wypadek pytań urzędu.
+1692	Porównanie z %y
+1693	Zwrot
+1694	Dopłata
+1695	Kwota z decyzji
+1696	Sprzeciw do %d – sprawdź w decyzji
+1697	Przygotuj sprzeciw
+1698	Rok jako CSV (Excel)
+1699	ELSTER: nie ma otwartego interfejsu dla aplikacji. Butler przygotowuje – wpisujesz w Mein ELSTER.
+1700	Otwórz centrum podatkowe

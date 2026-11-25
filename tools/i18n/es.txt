@@ -1670,3 +1670,32 @@
 1669	Todos los contactos
 1670	personas, oficinas, empresas – con historial
 1671	Sí
+1672	Centro fiscal
+1673	Año fiscal %y
+1674	No iniciado
+1675	En preparación
+1676	Faltan documentos
+1677	Presentada
+1678	El estado lo pones tú – Butler no lo adivina.
+1679	Revisión fiscal
+1680	Falta
+1681	%a completo · %b revisar · %c falta
+1682	Certificado anual de retenciones
+1683	Seguros y pensión
+1684	Gastos especiales
+1685	Cargas extraordinarias (salud)
+1686	Reformas y hogar
+1687	Hijos y ayuda por hijos
+1688	no se encontró nada
+1689	%n hijos en «Familia», sin documento de ayuda
+1690	no hay hijos registrados
+1691	«Falta» no significa que el documento sea obligatorio por ley. Los justificantes suelen guardarse para preguntas de Hacienda, no enviarse.
+1692	Comparado con %y
+1693	Devolución
+1694	Pago adicional
+1695	Importe de la resolución
+1696	Recurso hasta el %d – compruébalo en la resolución
+1697	Preparar un recurso
+1698	Año como CSV (Excel)
+1699	ELSTER: no hay interfaz abierta para apps. Butler prepara – tú lo introduces en Mein ELSTER.
+1700	Abrir el centro fiscal

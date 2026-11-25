@@ -1670,3 +1670,32 @@
 1669	Tüm kişiler
 1670	kişiler, kurumlar, firmalar – geçmişiyle
 1671	Evet
+1672	Vergi merkezi
+1673	Vergi yılı %y
+1674	Başlanmadı
+1675	Hazırlanıyor
+1676	Belgeler eksik
+1677	Verildi
+1678	Durumu siz belirlersiniz – Butler tahmin etmez.
+1679	Vergi kontrolü
+1680	Eksik
+1681	%a tamam · %b kontrol · %c eksik
+1682	Yıllık bordro vergi belgesi
+1683	Sigorta ve emeklilik
+1684	Özel giderler
+1685	Olağanüstü yükler (sağlık)
+1686	Ustalar ve ev
+1687	Çocuklar ve çocuk parası
+1688	bir şey bulunamadı
+1689	“Aile”de %n çocuk, çocuk parası belgesi yok
+1690	çocuk girilmedi
+1691	“Eksik”, belgenin yasal olarak gerekli olduğu anlamına gelmez. Belgeler genelde gönderilmez, vergi dairesinin soruları için saklanır.
+1692	%y ile karşılaştırma
+1693	İade
+1694	Ek ödeme
+1695	Karardaki tutar
+1696	%d tarihine kadar itiraz – lütfen kararda kontrol edin
+1697	İtirazı hazırla
+1698	Yıl CSV olarak (Excel)
+1699	ELSTER: uygulamalar için açık arayüz yok. Butler hazırlar – siz Mein ELSTER'e girersiniz.
+1700	Vergi merkezini aç

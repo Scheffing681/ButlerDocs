@@ -690,7 +690,8 @@
    "nav-edit.js",
    "steuer-plus.js",
    "vertraege-abos.js",
-   "vorsorge.js"
+   "vorsorge.js",
+   "werkzeuge.js"
   ]
  },
  "No linked documents yet. Bills and letters come in via the “Inbox” or the button below.": {
@@ -861,7 +862,8 @@
    "kontakte-post.js",
    "move-phone.js",
    "reliability.js",
-   "vertraege-abos.js"
+   "vertraege-abos.js",
+   "werkzeuge.js"
   ]
  },
  "Documents": {
@@ -879,7 +881,8 @@
    "reliability.js",
    "search-places.js",
    "start.js",
-   "ueberblick.js"
+   "ueberblick.js",
+   "werkzeuge.js"
   ]
  },
  "Spending since January": {
@@ -1694,7 +1697,8 @@
    "kauf-gesund.js",
    "seiten.js",
    "steuer-plus.js",
-   "vertraege-abos.js"
+   "vertraege-abos.js",
+   "werkzeuge.js"
   ]
  },
  "Empty so far": {
@@ -2583,7 +2587,8 @@
    "kalender-nz.js",
    "seiten.js",
    "steuer-plus.js",
-   "steuerzentrum.js"
+   "steuerzentrum.js",
+   "werkzeuge.js"
   ]
  },
  "Please enter a name": {
@@ -6350,7 +6355,8 @@
   "ru": "Федеральная земля",
   "de": "Bundesland",
   "files": [
-   "kalender-nz.js"
+   "kalender-nz.js",
+   "werkzeuge.js"
   ]
  },
  "for public holidays": {
@@ -7522,7 +7528,8 @@
   "ru": "Контакты",
   "de": "Kontakte",
   "files": [
-   "kontakte-post.js"
+   "kontakte-post.js",
+   "werkzeuge.js"
   ]
  },
  "Personal": {
@@ -7738,7 +7745,8 @@
   "de": "Zu prüfen",
   "files": [
    "kontakte-post.js",
-   "steuerzentrum.js"
+   "steuerzentrum.js",
+   "werkzeuge.js"
   ]
  },
  "Prepared": {
@@ -12858,6 +12866,510 @@
   "de": "%a von %b · wo die Originale liegen",
   "files": [
    "vorsorge.js"
+  ]
+ },
+ "Personal details": {
+  "ru": "Личные данные",
+  "de": "Persönliche Angaben",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "State, tax ID, tax class – optional": {
+  "ru": "Земля, Steuer-ID, класс — по желанию",
+  "de": "Bundesland, Steuer-ID, Steuerklasse – freiwillig",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "for holidays in the calendar": {
+  "ru": "для праздников в календаре",
+  "de": "für Feiertage im Kalender",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Tax ID (11 digits)": {
+  "ru": "Steuer-ID (11 цифр)",
+  "de": "Steuer-ID (11 Ziffern)",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Tax class": {
+  "ru": "Налоговый класс",
+  "de": "Steuerklasse",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "The tax ID has 11 digits": {
+  "ru": "Steuer-ID должна содержать 11 цифр",
+  "de": "Die Steuer-ID hat 11 Ziffern",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Stays on the phone only. Just for your overview.": {
+  "ru": "Хранится только на телефоне. Нужно лишь для Вашего обзора.",
+  "de": "Bleibt nur auf dem Telefon. Nur für Ihre Übersicht.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Data & storage": {
+  "ru": "Данные и память",
+  "de": "Daten & Speicher",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "space, duplicates, archive, CSV": {
+  "ru": "место, дубликаты, архив, CSV",
+  "de": "Platz, Duplikate, Archiv, CSV",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Used: %u of %q": {
+  "ru": "Занято %u из %q",
+  "de": "Belegt: %u von %q",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "The browser does not report storage size": {
+  "ru": "Браузер не сообщает размер памяти",
+  "de": "Der Browser nennt keine Speichergröße",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Keep data permanently": {
+  "ru": "Не удалять данные автоматически",
+  "de": "Daten dauerhaft behalten",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "ask the browser not to clear storage": {
+  "ru": "просим браузер не чистить память",
+  "de": "Browser bitten, nichts zu löschen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Confirmed by the browser": {
+  "ru": "Браузер подтвердил",
+  "de": "Vom Browser bestätigt",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Browser did not confirm – please make a backup": {
+  "ru": "Браузер не подтвердил — делайте резервную копию",
+  "de": "Browser hat nicht bestätigt – bitte Sicherung machen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "What is stored": {
+  "ru": "Что хранится",
+  "de": "Was gespeichert ist",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Purchases": {
+  "ru": "Покупки",
+  "de": "Käufe",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Without a clear title: %n": {
+  "ru": "Без понятного названия: %n",
+  "de": "Ohne klaren Titel: %n",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Possible duplicates: %n": {
+  "ru": "Возможные дубликаты: %n",
+  "de": "Mögliche Duplikate: %n",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Ended contracts: %n": {
+  "ru": "Закончившиеся договоры: %n",
+  "de": "Beendete Verträge: %n",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "All fine": {
+  "ru": "Всё в порядке",
+  "de": "Alles in Ordnung",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Same title and page count. Butler deletes nothing by itself.": {
+  "ru": "Одинаковое название и число страниц. Батлер ничего не удаляет сам.",
+  "de": "Gleicher Titel und gleiche Seitenzahl. Butler löscht nichts selbst.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "CSV export": {
+  "ru": "Экспорт CSV",
+  "de": "CSV-Export",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "for Excel, separator “;”": {
+  "ru": "для Excel, разделитель «;»",
+  "de": "für Excel, Trennzeichen „;“",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Contracts.csv": {
+  "ru": "Договоры.csv",
+  "de": "Verträge.csv",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Expenses.csv": {
+  "ru": "Расходы.csv",
+  "de": "Ausgaben.csv",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Contacts.csv": {
+  "ru": "Контакты.csv",
+  "de": "Kontakte.csv",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Purchases.csv": {
+  "ru": "Покупки.csv",
+  "de": "Käufe.csv",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Empty – nothing to export": {
+  "ru": "Пусто — нечего выгружать",
+  "de": "Leer – nichts zu exportieren",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Security log": {
+  "ru": "Журнал безопасности",
+  "de": "Sicherheitsprotokoll",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "what happened to your data on this phone": {
+  "ru": "что происходило с Вашими данными на этом телефоне",
+  "de": "was mit Ihren Daten auf diesem Telefon geschah",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "No entries yet": {
+  "ru": "Записей пока нет",
+  "de": "Noch keine Einträge",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Clear log": {
+  "ru": "Очистить журнал",
+  "de": "Protokoll leeren",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "App opened": {
+  "ru": "Приложение открыто",
+  "de": "App geöffnet",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Backup created": {
+  "ru": "Создана резервная копия",
+  "de": "Sicherung erstellt",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Vault opened": {
+  "ru": "Открыт сейф",
+  "de": "Tresor geöffnet",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Export: %n": {
+  "ru": "Экспорт: %n",
+  "de": "Export: %n",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Rule: %n": {
+  "ru": "Правило: %n",
+  "de": "Regel: %n",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Moved by rule: %n": {
+  "ru": "Перемещено правилом: %n",
+  "de": "Per Regel verschoben: %n",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Personal details changed": {
+  "ru": "Изменены личные данные",
+  "de": "Persönliche Angaben geändert",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Help": {
+  "ru": "Помощь",
+  "de": "Hilfe",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "questions & answers, write to support": {
+  "ru": "вопросы и ответы, написать в поддержку",
+  "de": "Fragen & Antworten, Support schreiben",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Search questions": {
+  "ru": "Поиск по вопросам",
+  "de": "Fragen durchsuchen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Write to support": {
+  "ru": "Написать в поддержку",
+  "de": "An den Support schreiben",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "opens your mail app; version included": {
+  "ru": "откроется Ваша почта; версия уже вписана",
+  "de": "öffnet Ihr Mailprogramm; Version ist eingetragen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Nothing found – ask Butler": {
+  "ru": "Ничего не найдено — спросите Батлера",
+  "de": "Nichts gefunden – fragen Sie Butler",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Rules": {
+  "ru": "Правила",
+  "de": "Regeln",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "new documents into the right folder": {
+  "ru": "новые документы сами в нужную папку",
+  "de": "neue Dokumente automatisch in den Ordner",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "If sender or text contains": {
+  "ru": "Если отправитель или текст содержит",
+  "de": "Wenn Absender oder Text enthält",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "then into folder": {
+  "ru": "то в папку",
+  "de": "dann in Ordner",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "＋ Rule": {
+  "ru": "＋ Правило",
+  "de": "＋ Regel",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "No rules yet.": {
+  "ru": "Правил пока нет.",
+  "de": "Noch keine Regeln.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "A rule applies only to new documents, each once. Everything is logged.": {
+  "ru": "Правило касается только новых документов, каждого один раз. Всё видно в журнале.",
+  "de": "Eine Regel gilt nur für neue Dokumente, jedes nur einmal. Alles steht im Protokoll.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Presets": {
+  "ru": "Готовые примеры",
+  "de": "Vorlagen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "applied: %n": {
+  "ru": "сработало: %n",
+  "de": "angewendet: %n",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Please enter a word and choose a folder": {
+  "ru": "Впишите слово и выберите папку",
+  "de": "Bitte Wort eintragen und Ordner wählen",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Where is my data stored?": {
+  "ru": "Где хранятся мои данные?",
+  "de": "Wo liegen meine Daten?",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Only on this phone, in the browser storage. There is no server. So make a backup regularly (Profile → Security).": {
+  "ru": "Только на этом телефоне, в памяти браузера. Сервера нет. Поэтому регулярно делайте резервную копию (Профиль → Безопасность).",
+  "de": "Nur auf diesem Telefon, im Speicher des Browsers. Es gibt keinen Server. Darum regelmäßig eine Sicherung machen (Profil → Sicherheit).",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "How do I move to a new phone?": {
+  "ru": "Как перенести данные на новый телефон?",
+  "de": "Wie komme ich auf ein neues Telefon?",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Create a backup file, send it to yourself and choose “Restore” on the new phone.": {
+  "ru": "Сделайте резервную копию (файл), перешлите её себе и на новом телефоне выберите «Восстановить».",
+  "de": "Sicherung (Datei) erstellen, an sich selbst senden und auf dem neuen Telefon „Wiederherstellen“ wählen.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Does Butler connect to my bank or email?": {
+  "ru": "Подключается ли Батлер к банку или почте?",
+  "de": "Verbindet sich Butler mit Bank oder E-Mail?",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "No. You add statements and letters yourself (scan, file, CSV). So the data never leaves the phone.": {
+  "ru": "Нет. Выписки и письма Вы добавляете сами (скан, файл, CSV). Так данные не покидают телефон.",
+  "de": "Nein. Auszüge und Briefe fügen Sie selbst hinzu (Scan, Datei, CSV). So verlassen die Daten das Telefon nicht.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Warranty vs statutory warranty – the difference?": {
+  "ru": "Garantie и Gewährleistung — в чём разница?",
+  "de": "Garantie oder Gewährleistung – was ist der Unterschied?",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Statutory warranty: by law, 2 years from purchase, the shop is liable. Warranty: a voluntary promise by the maker, terms in the document.": {
+  "ru": "Gewährleistung — по закону, 2 года от покупки, отвечает продавец. Garantie — добровольное обещание производителя, условия в документе.",
+  "de": "Gewährleistung gilt per Gesetz 2 Jahre ab Kauf, der Händler haftet. Garantie ist ein freiwilliges Versprechen des Herstellers, Bedingungen im Dokument.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Does Butler file the tax return to ELSTER?": {
+  "ru": "Батлер отправляет декларацию в ELSTER?",
+  "de": "Sendet Butler die Steuererklärung an ELSTER?",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "No. Butler collects receipts and the adviser folder; you file via ELSTER or your adviser.": {
+  "ru": "Нет. Батлер собирает чеки и папку для консультанта; отправляете Вы сами через ELSTER или консультанта.",
+  "de": "Nein. Butler sammelt Belege und die Mappe für den Berater; senden tun Sie selbst über ELSTER oder Ihren Berater.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "How do reminders work?": {
+  "ru": "Как работают напоминания?",
+  "de": "Wie funktionieren Erinnerungen?",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Deadlines are in the bell on Start. Push comes with the App Store version; you can already add a deadline to the phone calendar (.ics).": {
+  "ru": "Сроки видны в колокольчике на главной. Push-уведомления появятся с версией из App Store; уже сейчас можно добавить срок в календарь телефона (.ics).",
+  "de": "Fristen stehen in der Glocke auf Start. Push kommt mit der App-Store-Version; schon jetzt lässt sich eine Frist in den Telefonkalender übernehmen (.ics).",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Does Butler give legal or medical advice?": {
+  "ru": "Даёт ли Батлер юридические или медицинские советы?",
+  "de": "Gibt Butler Rechts- oder Gesundheitsrat?",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "No. Butler organizes, counts deadlines and prepares drafts. You, a lawyer or a doctor decide.": {
+  "ru": "Нет. Батлер упорядочивает, считает сроки и готовит черновики. Решения — за Вами, юристом или врачом.",
+  "de": "Nein. Butler ordnet, rechnet Fristen und bereitet Entwürfe vor. Entscheiden tun Sie, Anwalt oder Ärztin.",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "How do I protect the app?": {
+  "ru": "Как защитить приложение?",
+  "de": "Wie schütze ich die App?",
+  "files": [
+   "werkzeuge.js"
+  ]
+ },
+ "Lock code in Profile, a vault for key documents, an own code for “Health”.": {
+  "ru": "Код блокировки в Профиле, сейф для важных документов, отдельный код для «Здоровья».",
+  "de": "Sperrcode im Profil, Tresor für wichtige Dokumente, eigener Code für „Gesundheit“.",
+  "files": [
+   "werkzeuge.js"
   ]
  }
 }

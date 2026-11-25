@@ -1787,3 +1787,75 @@
 1786	Vacuna pendiente: %n
 1787	Visitas, medicamentos, vacunas, análisis
 1788	fecha
+1789	Datos personales
+1790	Estado, n.º fiscal, clase – opcional
+1791	para los festivos del calendario
+1792	N.º fiscal (11 dígitos)
+1793	Clase fiscal
+1794	El n.º fiscal tiene 11 dígitos
+1795	Solo queda en el teléfono. Solo para su resumen.
+1796	Datos y almacenamiento
+1797	espacio, duplicados, archivo, CSV
+1798	Usado: %u de %q
+1799	El navegador no indica el tamaño del almacenamiento
+1800	Conservar los datos
+1801	pedir al navegador que no borre nada
+1802	Confirmado por el navegador
+1803	El navegador no confirmó – haga una copia
+1804	Qué está guardado
+1805	Compras
+1806	Sin título claro: %n
+1807	Posibles duplicados: %n
+1808	Contratos finalizados: %n
+1809	Todo en orden
+1810	Mismo título y número de páginas. Butler no borra nada por sí solo.
+1811	Exportar CSV
+1812	para Excel, separador «;»
+1813	Contratos.csv
+1814	Gastos.csv
+1815	Contactos.csv
+1816	Compras.csv
+1817	Vacío – nada que exportar
+1818	Registro de seguridad
+1819	qué pasó con sus datos en este teléfono
+1820	Aún no hay entradas
+1821	Vaciar registro
+1822	App abierta
+1823	Copia creada
+1824	Caja fuerte abierta
+1825	Exportación: %n
+1826	Regla: %n
+1827	Movido por regla: %n
+1828	Datos personales cambiados
+1829	Ayuda
+1830	preguntas y respuestas, escribir a soporte
+1831	Buscar en preguntas
+1832	Escribir a soporte
+1833	abre su correo; versión incluida
+1834	Nada encontrado – pregunte a Butler
+1835	Reglas
+1836	documentos nuevos a la carpeta correcta
+1837	Si el remitente o el texto contiene
+1838	entonces a la carpeta
+1839	＋ Regla
+1840	Aún no hay reglas.
+1841	Una regla solo se aplica a documentos nuevos, una vez cada uno. Todo queda registrado.
+1842	Plantillas
+1843	aplicada: %n
+1844	Introduzca una palabra y elija carpeta
+1845	¿Dónde se guardan mis datos?
+1846	Solo en este teléfono, en el almacenamiento del navegador. No hay servidor. Por eso haga copias con regularidad (Perfil → Seguridad).
+1847	¿Cómo paso a un teléfono nuevo?
+1848	Cree un archivo de copia, envíeselo y elija «Restaurar» en el teléfono nuevo.
+1849	¿Butler se conecta al banco o al correo?
+1850	No. Usted añade extractos y cartas (escaneo, archivo, CSV). Así los datos no salen del teléfono.
+1851	Garantía o garantía legal: ¿qué diferencia hay?
+1852	Garantía legal: por ley, 2 años desde la compra, responde la tienda. Garantía: promesa voluntaria del fabricante, condiciones en el documento.
+1853	¿Butler envía la declaración a ELSTER?
+1854	No. Butler reúne recibos y la carpeta para el asesor; usted presenta por ELSTER o su asesor.
+1855	¿Cómo funcionan los recordatorios?
+1856	Los plazos están en la campana de Inicio. Las push llegarán con la versión de App Store; ya puede añadir un plazo al calendario (.ics).
+1857	¿Butler da consejos legales o médicos?
+1858	No. Butler ordena, calcula plazos y prepara borradores. Decide usted, un abogado o un médico.
+1859	¿Cómo protejo la app?
+1860	Código de bloqueo en el Perfil, caja fuerte para documentos clave, código propio para «Salud».

@@ -1787,3 +1787,75 @@
 1786	Vaccin à faire : %n
 1787	Visites, médicaments, vaccins, résultats
 1788	date
+1789	Données personnelles
+1790	Land, n° fiscal, classe – facultatif
+1791	pour les jours fériés du calendrier
+1792	N° fiscal (11 chiffres)
+1793	Classe d’imposition
+1794	Le n° fiscal a 11 chiffres
+1795	Reste uniquement sur le téléphone. Juste pour votre vue d’ensemble.
+1796	Données et stockage
+1797	espace, doublons, archive, CSV
+1798	Utilisé : %u sur %q
+1799	Le navigateur n’indique pas la taille du stockage
+1800	Conserver les données
+1801	demander au navigateur de ne rien effacer
+1802	Confirmé par le navigateur
+1803	Le navigateur n’a pas confirmé – faites une sauvegarde
+1804	Ce qui est enregistré
+1805	Achats
+1806	Sans titre clair : %n
+1807	Doublons possibles : %n
+1808	Contrats terminés : %n
+1809	Tout va bien
+1810	Même titre et même nombre de pages. Butler ne supprime rien lui-même.
+1811	Export CSV
+1812	pour Excel, séparateur « ; »
+1813	Contrats.csv
+1814	Dépenses.csv
+1815	Contacts.csv
+1816	Achats.csv
+1817	Vide – rien à exporter
+1818	Journal de sécurité
+1819	ce qui est arrivé à vos données sur ce téléphone
+1820	Aucune entrée
+1821	Vider le journal
+1822	Application ouverte
+1823	Sauvegarde créée
+1824	Coffre ouvert
+1825	Export : %n
+1826	Règle : %n
+1827	Déplacé par règle : %n
+1828	Données personnelles modifiées
+1829	Aide
+1830	questions-réponses, écrire au support
+1831	Rechercher dans les questions
+1832	Écrire au support
+1833	ouvre votre messagerie ; version incluse
+1834	Rien trouvé – demandez à Butler
+1835	Règles
+1836	nouveaux documents dans le bon dossier
+1837	Si l’expéditeur ou le texte contient
+1838	alors dans le dossier
+1839	＋ Règle
+1840	Aucune règle.
+1841	Une règle ne s’applique qu’aux nouveaux documents, une fois chacun. Tout est journalisé.
+1842	Modèles
+1843	appliquée : %n
+1844	Saisissez un mot et choisissez un dossier
+1845	Où sont stockées mes données ?
+1846	Uniquement sur ce téléphone, dans le stockage du navigateur. Pas de serveur. Faites donc régulièrement une sauvegarde (Profil → Sécurité).
+1847	Comment passer à un nouveau téléphone ?
+1848	Créez un fichier de sauvegarde, envoyez-le-vous et choisissez « Restaurer » sur le nouveau téléphone.
+1849	Butler se connecte-t-il à ma banque ou à mes e-mails ?
+1850	Non. Vous ajoutez vous-même relevés et lettres (scan, fichier, CSV). Les données ne quittent jamais le téléphone.
+1851	Garantie ou garantie légale – quelle différence ?
+1852	Garantie légale : par la loi, 2 ans après l’achat, le vendeur est responsable. Garantie : promesse volontaire du fabricant, conditions dans le document.
+1853	Butler envoie-t-il la déclaration à ELSTER ?
+1854	Non. Butler rassemble les justificatifs et le dossier pour le conseiller ; vous déclarez via ELSTER ou votre conseiller.
+1855	Comment fonctionnent les rappels ?
+1856	Les échéances sont dans la cloche sur l’accueil. Le push arrivera avec la version App Store ; vous pouvez déjà ajouter une échéance au calendrier (.ics).
+1857	Butler donne-t-il des conseils juridiques ou médicaux ?
+1858	Non. Butler organise, calcule les échéances et prépare des brouillons. Vous, un avocat ou un médecin décidez.
+1859	Comment protéger l’application ?
+1860	Code de verrouillage dans le Profil, coffre pour les documents clés, code propre pour « Santé ».

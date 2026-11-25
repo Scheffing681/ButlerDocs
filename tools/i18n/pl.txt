@@ -1787,3 +1787,75 @@
 1786	Szczepienie: %n
 1787	Wizyty, leki, szczepienia, wyniki
 1788	data
+1789	Dane osobowe
+1790	Land, Steuer-ID, klasa – opcjonalnie
+1791	dla świąt w kalendarzu
+1792	Steuer-ID (11 cyfr)
+1793	Klasa podatkowa
+1794	Steuer-ID ma 11 cyfr
+1795	Zostaje tylko w telefonie. Tylko dla Twojego przeglądu.
+1796	Dane i pamięć
+1797	miejsce, duplikaty, archiwum, CSV
+1798	Zajęte: %u z %q
+1799	Przeglądarka nie podaje rozmiaru pamięci
+1800	Zachowaj dane na stałe
+1801	poproś przeglądarkę, by nic nie usuwała
+1802	Potwierdzone przez przeglądarkę
+1803	Przeglądarka nie potwierdziła – zrób kopię
+1804	Co jest zapisane
+1805	Zakupy
+1806	Bez jasnego tytułu: %n
+1807	Możliwe duplikaty: %n
+1808	Zakończone umowy: %n
+1809	Wszystko w porządku
+1810	Ten sam tytuł i liczba stron. Butler sam niczego nie usuwa.
+1811	Eksport CSV
+1812	dla Excela, separator „;”
+1813	Umowy.csv
+1814	Wydatki.csv
+1815	Kontakty.csv
+1816	Zakupy.csv
+1817	Pusto – nie ma czego eksportować
+1818	Dziennik bezpieczeństwa
+1819	co działo się z Twoimi danymi na tym telefonie
+1820	Brak wpisów
+1821	Wyczyść dziennik
+1822	Aplikacja otwarta
+1823	Utworzono kopię
+1824	Otwarto sejf
+1825	Eksport: %n
+1826	Reguła: %n
+1827	Przeniesiono regułą: %n
+1828	Zmieniono dane osobowe
+1829	Pomoc
+1830	pytania i odpowiedzi, napisz do wsparcia
+1831	Szukaj w pytaniach
+1832	Napisz do wsparcia
+1833	otwiera Twoją pocztę; wersja jest wpisana
+1834	Nic nie znaleziono – zapytaj Butlera
+1835	Reguły
+1836	nowe dokumenty do właściwego folderu
+1837	Jeśli nadawca lub tekst zawiera
+1838	to do folderu
+1839	＋ Reguła
+1840	Brak reguł.
+1841	Reguła dotyczy tylko nowych dokumentów, każdego raz. Wszystko jest w dzienniku.
+1842	Szablony
+1843	zastosowano: %n
+1844	Wpisz słowo i wybierz folder
+1845	Gdzie są moje dane?
+1846	Tylko na tym telefonie, w pamięci przeglądarki. Nie ma serwera. Dlatego regularnie rób kopię (Profil → Bezpieczeństwo).
+1847	Jak przejść na nowy telefon?
+1848	Utwórz plik kopii, wyślij go sobie i na nowym telefonie wybierz „Przywróć”.
+1849	Czy Butler łączy się z bankiem lub pocztą?
+1850	Nie. Wyciągi i listy dodajesz sam (skan, plik, CSV). Dzięki temu dane nie opuszczają telefonu.
+1851	Gwarancja a rękojmia – jaka różnica?
+1852	Rękojmia: z mocy prawa, 2 lata od zakupu, odpowiada sprzedawca. Gwarancja: dobrowolna obietnica producenta, warunki w dokumencie.
+1853	Czy Butler wysyła zeznanie do ELSTER?
+1854	Nie. Butler zbiera paragony i teczkę dla doradcy; wysyłasz sam przez ELSTER lub doradcę.
+1855	Jak działają przypomnienia?
+1856	Terminy są w dzwonku na Start. Push pojawi się z wersją z App Store; już teraz możesz dodać termin do kalendarza (.ics).
+1857	Czy Butler udziela porad prawnych lub medycznych?
+1858	Nie. Butler porządkuje, liczy terminy i przygotowuje szkice. Decydujesz Ty, prawnik lub lekarz.
+1859	Jak chronić aplikację?
+1860	Kod blokady w Profilu, sejf na ważne dokumenty, osobny kod dla „Zdrowia”.

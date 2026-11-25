@@ -1787,3 +1787,75 @@
 1786	Aşı zamanı: %n
 1787	Ziyaretler, ilaçlar, aşılar, değerler
 1788	tarih
+1789	Kişisel bilgiler
+1790	Eyalet, vergi no, vergi sınıfı – isteğe bağlı
+1791	takvimdeki tatiller için
+1792	Vergi kimlik no (11 hane)
+1793	Vergi sınıfı
+1794	Vergi kimlik no 11 hanelidir
+1795	Yalnızca telefonda kalır. Sadece genel bakışınız için.
+1796	Veriler ve depolama
+1797	alan, kopyalar, arşiv, CSV
+1798	Kullanılan: %u / %q
+1799	Tarayıcı depolama boyutunu bildirmiyor
+1800	Verileri kalıcı tut
+1801	tarayıcıdan silmemesini iste
+1802	Tarayıcı onayladı
+1803	Tarayıcı onaylamadı – lütfen yedek alın
+1804	Kayıtlı olanlar
+1805	Satın alımlar
+1806	Açık başlığı olmayan: %n
+1807	Olası kopyalar: %n
+1808	Sona eren sözleşmeler: %n
+1809	Her şey yolunda
+1810	Aynı başlık ve sayfa sayısı. Butler kendiliğinden hiçbir şey silmez.
+1811	CSV dışa aktarma
+1812	Excel için, ayırıcı “;”
+1813	Sözleşmeler.csv
+1814	Harcamalar.csv
+1815	Kişiler.csv
+1816	Satın_alımlar.csv
+1817	Boş – aktarılacak bir şey yok
+1818	Güvenlik günlüğü
+1819	bu telefonda verilerinize ne oldu
+1820	Henüz kayıt yok
+1821	Günlüğü temizle
+1822	Uygulama açıldı
+1823	Yedek oluşturuldu
+1824	Kasa açıldı
+1825	Dışa aktarma: %n
+1826	Kural: %n
+1827	Kuralla taşındı: %n
+1828	Kişisel bilgiler değişti
+1829	Yardım
+1830	sorular ve cevaplar, desteğe yaz
+1831	Sorularda ara
+1832	Desteğe yaz
+1833	e-posta uygulamanızı açar; sürüm eklenmiştir
+1834	Bulunamadı – Butler’a sorun
+1835	Kurallar
+1836	yeni belgeler doğru klasöre
+1837	Gönderen veya metin şunu içeriyorsa
+1838	şu klasöre
+1839	＋ Kural
+1840	Henüz kural yok.
+1841	Kural yalnızca yeni belgelere, her birine bir kez uygulanır. Her şey günlükte görünür.
+1842	Şablonlar
+1843	uygulandı: %n
+1844	Lütfen bir kelime girin ve klasör seçin
+1845	Verilerim nerede saklanıyor?
+1846	Yalnızca bu telefonda, tarayıcı belleğinde. Sunucu yok. Bu yüzden düzenli yedek alın (Profil → Güvenlik).
+1847	Yeni telefona nasıl geçerim?
+1848	Yedek dosyası oluşturun, kendinize gönderin ve yeni telefonda “Geri yükle”yi seçin.
+1849	Butler bankaya veya e-postaya bağlanır mı?
+1850	Hayır. Dökümleri ve mektupları kendiniz eklersiniz (tarama, dosya, CSV). Böylece veriler telefondan çıkmaz.
+1851	Garanti ve yasal garanti – fark nedir?
+1852	Yasal garanti: kanunen, satın almadan itibaren 2 yıl, satıcı sorumludur. Garanti: üreticinin gönüllü vaadi, koşullar belgede.
+1853	Butler beyannameyi ELSTER’e gönderir mi?
+1854	Hayır. Butler fişleri ve danışman klasörünü toplar; gönderimi siz ELSTER veya danışmanınız üzerinden yaparsınız.
+1855	Hatırlatmalar nasıl çalışır?
+1856	Süreler ana sayfadaki zildedir. Push, App Store sürümüyle gelir; şimdiden bir süreyi telefon takvimine ekleyebilirsiniz (.ics).
+1857	Butler hukuki veya tıbbi tavsiye verir mi?
+1858	Hayır. Butler düzenler, süreleri hesaplar ve taslak hazırlar. Kararı siz, avukat veya doktor verir.
+1859	Uygulamayı nasıl korurum?
+1860	Profilde kilit kodu, önemli belgeler için kasa, “Sağlık” için ayrı kod.

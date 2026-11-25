@@ -1600,3 +1600,73 @@
 1599	Le document n’a pas de fichier
 1600	Face ID, rappels, sauvegarde, formules
 1601	pour un conseiller fiscal ou financier, en ZIP ou PDF
+1602	Contacts
+1603	Personnel
+1604	Assurances et finances
+1605	Entreprises
+1606	Conseillers
+1607	Nom, entreprise, téléphone …
+1608	Favoris
+1609	Importer VCF / CSV
+1610	%n ajoutés, %k déjà présents
+1611	Aucun contact dans le fichier
+1612	Rien trouvé
+1613	%n contrats
+1614	＋ Appel
+1615	＋ Rendez-vous
+1616	Rendez-vous
+1617	Document
+1618	Dossier
+1619	De quoi s’agissait-il ? (bref)
+1620	Me rappeler de reprendre contact
+1621	Reprendre contact : %n
+1622	Tâche créée
+1623	Dossiers
+1624	Encore vide. Ajoutez un appel, un rendez-vous ou une note – l’historique reste ici.
+1625	Ouvrir la fiche
+1626	＋ Nouveau dossier
+1627	Courrier et demandes
+1628	Chaque lettre ou demande est un dossier – de l’arrivée à la réponse.
+1629	En attente
+1630	À vérifier
+1631	Préparé
+1632	Remis
+1633	En attente de réponse
+1634	Réponse reçue
+1635	Relance nécessaire
+1636	Archivé
+1637	«Remis» seulement avec preuve. Reliez un reçu ou une confirmation.
+1638	Avec qui
+1639	Numéro de dossier
+1640	Contestation
+1641	Facture / relance
+1642	Demande / réclamation
+1643	Décision / attestation
+1644	Statut
+1645	jusqu’au
+1646	Réponse attendue le
+1647	Pièces jointes
+1648	＋ Pièce jointe
+1649	p. ex. copie de la carte d’identité
+1650	Manque : %n
+1651	vérifiez vous-même – pas un contrôle juridique
+1652	Dossier créé
+1653	Statut : %s
+1654	Document : %t
+1655	Étape suivante : %t
+1656	Tout le dossier en ZIP
+1657	Supprimer le dossier
+1658	Vraiment supprimer ? Touchez encore (les documents restent)
+1659	envoyé le %d
+1660	Relancer
+1661	Créer un dossier à partir de cette lettre
+1662	Réponse au dossier «%t» ?
+1663	même numéro de dossier
+1664	même expéditeur
+1665	Pas encore de dossiers. Créez-en un depuis une lettre ou ci-dessous.
+1666	Indiquez un objet
+1667	Dossiers et demandes
+1668	statut, délais, réponses attendues
+1669	Tous les contacts
+1670	personnes, administrations, entreprises – avec historique
+1671	Oui

@@ -107,3 +107,4 @@ docs/eingang-smart.js
 docs/akte.js
 docs/ueberblick.js
 docs/abschluss.js
+docs/kontakte-post.js

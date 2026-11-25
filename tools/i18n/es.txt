@@ -1600,3 +1600,73 @@
 1599	El documento no tiene archivo
 1600	Face ID, recordatorios, copia, planes
 1601	para un asesor fiscal o financiero, como ZIP o PDF
+1602	Contactos
+1603	Personal
+1604	Seguros y finanzas
+1605	Empresas
+1606	Asesores
+1607	Nombre, empresa, teléfono …
+1608	Favoritos
+1609	Importar VCF / CSV
+1610	%n añadidos, %k ya estaban
+1611	No hay contactos en el archivo
+1612	No se encontró nada
+1613	%n contratos
+1614	＋ Llamada
+1615	＋ Reunión
+1616	Reunión
+1617	Documento
+1618	Expediente
+1619	¿De qué se trató? (breve)
+1620	Recordarme contactar
+1621	Contactar: %n
+1622	Tarea creada
+1623	Expedientes
+1624	Aún vacío. Añade una llamada, reunión o nota – el historial queda aquí.
+1625	Abrir la ficha
+1626	＋ Nuevo expediente
+1627	Cartas y solicitudes
+1628	Cada carta o solicitud es un expediente – desde la llegada hasta la respuesta.
+1629	En espera
+1630	Por revisar
+1631	Preparado
+1632	Entregado
+1633	Esperando respuesta
+1634	Respuesta recibida
+1635	Se necesita aclaración
+1636	Archivado
+1637	«Entregado» solo con prueba. Vincula un resguardo o confirmación.
+1638	Con quién
+1639	Número de expediente
+1640	Recurso
+1641	Factura / requerimiento
+1642	Consulta / queja
+1643	Resolución / certificado
+1644	Estado
+1645	hasta
+1646	Respuesta esperada hasta
+1647	Anexos
+1648	＋ Anexo
+1649	p. ej. copia del DNI
+1650	Falta: %n
+1651	compruébalo tú – no es una revisión legal
+1652	Expediente creado
+1653	Estado: %s
+1654	Documento: %t
+1655	Siguiente paso: %t
+1656	Todo el expediente en ZIP
+1657	Eliminar expediente
+1658	¿Eliminar de verdad? Toca otra vez (los documentos se quedan)
+1659	enviado el %d
+1660	Reclamar respuesta
+1661	Crear un expediente con esta carta
+1662	¿Respuesta al expediente «%t»?
+1663	mismo número de expediente
+1664	mismo remitente
+1665	Aún no hay expedientes. Crea uno desde una carta o abajo.
+1666	Escribe un asunto
+1667	Expedientes y solicitudes
+1668	estado, plazos, respuestas esperadas
+1669	Todos los contactos
+1670	personas, oficinas, empresas – con historial
+1671	Sí

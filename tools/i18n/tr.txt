@@ -1600,3 +1600,73 @@
 1599	Belgede dosya yok
 1600	Face ID, hatırlatmalar, yedek, planlar
 1601	vergi veya finans danışmanı için, ZIP veya PDF
+1602	Kişiler
+1603	Kişisel
+1604	Sigorta ve finans
+1605	Firmalar
+1606	Danışmanlar
+1607	Ad, firma, telefon …
+1608	Favoriler
+1609	VCF / CSV içe aktar
+1610	%n eklendi, %k zaten vardı
+1611	Dosyada kişi yok
+1612	Hiçbir şey bulunamadı
+1613	%n sözleşme
+1614	＋ Arama
+1615	＋ Görüşme
+1616	Görüşme
+1617	Belge
+1618	Dosya
+1619	Konu neydi? (kısa)
+1620	İletişime geçmeyi hatırlat
+1621	İletişime geç: %n
+1622	Görev oluşturuldu
+1623	Dosyalar
+1624	Henüz boş. Arama, görüşme veya not ekleyin – geçmiş burada kalır.
+1625	Kartı aç
+1626	＋ Yeni dosya
+1627	Yazışmalar ve başvurular
+1628	Her yazı veya başvuru bir dosyadır – gelişten cevaba kadar.
+1629	Bekliyor
+1630	Kontrol edilecek
+1631	Hazırlandı
+1632	Teslim edildi
+1633	Cevap bekleniyor
+1634	Cevap alındı
+1635	Ek soru gerekli
+1636	Arşivlendi
+1637	“Teslim edildi” yalnızca kanıtla. Lütfen makbuz veya onay bağlayın.
+1638	Kiminle
+1639	Dosya numarası
+1640	İtiraz
+1641	Fatura / ihtar
+1642	Talep / şikâyet
+1643	Karar / belge
+1644	Durum
+1645	kadar
+1646	Beklenen cevap tarihi
+1647	Ekler
+1648	＋ Ek
+1649	ör. kimlik fotokopisi
+1650	Eksik: %n
+1651	kendiniz kontrol edin – hukuki kontrol değil
+1652	Dosya oluşturuldu
+1653	Durum: %s
+1654	Belge: %t
+1655	Sonraki adım: %t
+1656	Tüm dosya ZIP olarak
+1657	Dosyayı sil
+1658	Gerçekten silinsin mi? Tekrar dokunun (belgeler kalır)
+1659	%d tarihinde gönderildi
+1660	Sor
+1661	Bu mektuptan dosya oluştur
+1662	“%t” dosyasına cevap mı?
+1663	aynı dosya numarası
+1664	aynı gönderen
+1665	Henüz dosya yok. Bir mektuptan veya aşağıdan oluşturun.
+1666	Lütfen bir konu girin
+1667	Dosyalar ve başvurular
+1668	durum, süreler, beklenen cevaplar
+1669	Tüm kişiler
+1670	kişiler, kurumlar, firmalar – geçmişiyle
+1671	Evet

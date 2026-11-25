@@ -126,6 +126,7 @@
    "abschluss.js",
    "behoerden.js",
    "finanzen.js",
+   "kontakte-post.js",
    "notizen.js",
    "start.js"
   ]
@@ -138,6 +139,7 @@
    "akte.js",
    "business.js",
    "dokumente-butler.js",
+   "kontakte-post.js",
    "mappen.js"
   ]
  },
@@ -591,7 +593,8 @@
   "ru": "История",
   "de": "Verlauf",
   "files": [
-   "akte.js"
+   "akte.js",
+   "kontakte-post.js"
   ]
  },
  "✓ paid on %d": {
@@ -628,14 +631,16 @@
   "files": [
    "akte.js",
    "behoerden.js",
-   "finanzen2.js"
+   "finanzen2.js",
+   "kontakte-post.js"
   ]
  },
  "＋ Link a document": {
   "ru": "＋ Связать документ",
   "de": "＋ Dokument verknüpfen",
   "files": [
-   "akte.js"
+   "akte.js",
+   "kontakte-post.js"
   ]
  },
  "Which documents belong here?": {
@@ -673,6 +678,7 @@
    "business.js",
    "finanzen.js",
    "finanzen2.js",
+   "kontakte-post.js",
    "mappen.js",
    "nav-edit.js",
    "steuer-plus.js",
@@ -726,7 +732,8 @@
   "ru": "Нет",
   "de": "Nein",
   "files": [
-   "akte.js"
+   "akte.js",
+   "kontakte-post.js"
   ]
  },
  "Belongs to: %n": {
@@ -842,6 +849,7 @@
   "de": "Verträge",
   "files": [
    "akte.js",
+   "kontakte-post.js",
    "move-phone.js",
    "reliability.js",
    "vertraege-abos.js"
@@ -853,6 +861,7 @@
   "files": [
    "akte.js",
    "finanzen2.js",
+   "kontakte-post.js",
    "layout-docs.js",
    "move-phone.js",
    "notizen.js",
@@ -1201,7 +1210,8 @@
   "de": "Brief",
   "files": [
    "behoerden-briefe.js",
-   "dokumente-butler.js"
+   "dokumente-butler.js",
+   "kontakte-post.js"
   ]
  },
  "Template": {
@@ -1288,6 +1298,7 @@
   "files": [
    "behoerden-briefe.js",
    "behoerden.js",
+   "kontakte-post.js",
    "reliability.js"
   ]
  },
@@ -1295,7 +1306,8 @@
   "ru": "Отправлено",
   "de": "Gesendet",
   "files": [
-   "behoerden-briefe.js"
+   "behoerden-briefe.js",
+   "kontakte-post.js"
   ]
  },
  "Tracking number": {
@@ -1387,6 +1399,7 @@
   "de": "In Bearbeitung",
   "files": [
    "behoerden-briefe.js",
+   "kontakte-post.js",
    "mappen.js"
   ]
  },
@@ -1401,7 +1414,8 @@
   "ru": "Следующий шаг",
   "de": "Nächster Schritt",
   "files": [
-   "behoerden-briefe.js"
+   "behoerden-briefe.js",
+   "kontakte-post.js"
   ]
  },
  "Ask for status": {
@@ -1437,7 +1451,8 @@
   "de": "Anruf",
   "files": [
    "behoerden-briefe.js",
-   "behoerden.js"
+   "behoerden.js",
+   "kontakte-post.js"
   ]
  },
  "Received": {
@@ -1507,7 +1522,8 @@
   "ru": "Заявление",
   "de": "Antrag",
   "files": [
-   "behoerden-briefe.js"
+   "behoerden-briefe.js",
+   "kontakte-post.js"
   ]
  },
  "Found in the letter": {
@@ -1647,6 +1663,7 @@
    "behoerden-termine.js",
    "business.js",
    "finanzen.js",
+   "kontakte-post.js",
    "notizen.js",
    "vertraege-abos.js"
   ]
@@ -1812,6 +1829,7 @@
    "behoerden-termine.js",
    "behoerden.js",
    "eingang-smart.js",
+   "kontakte-post.js",
    "linkup.js",
    "mappen.js",
    "ordnen.js",
@@ -1840,6 +1858,7 @@
   "de": "in %n Tagen",
   "files": [
    "behoerden-termine.js",
+   "kontakte-post.js",
    "start-glas.js",
    "start.js",
    "suche-smart.js"
@@ -1899,6 +1918,7 @@
   "files": [
    "behoerden-termine.js",
    "karriere2.js",
+   "kontakte-post.js",
    "reliability.js",
    "start-glas.js"
   ]
@@ -2011,6 +2031,7 @@
   "files": [
    "behoerden-termine.js",
    "behoerden.js",
+   "kontakte-post.js",
    "layout-docs.js",
    "search-places.js",
    "start.js"
@@ -2130,6 +2151,7 @@
   "files": [
    "behoerden.js",
    "eingang-fristen.js",
+   "kontakte-post.js",
    "post.js",
    "scan-glas.js",
    "start-glas.js"
@@ -2323,7 +2345,8 @@
   "de": "Adresse",
   "files": [
    "behoerden.js",
-   "business.js"
+   "business.js",
+   "kontakte-post.js"
   ]
  },
  "Opening hours": {
@@ -3423,7 +3446,8 @@
   "ru": "E-Mail",
   "de": "E-Mail",
   "files": [
-   "business.js"
+   "business.js",
+   "kontakte-post.js"
   ]
  },
  "Invoice number prefix": {
@@ -3474,6 +3498,7 @@
   "files": [
    "business.js",
    "finanzen.js",
+   "kontakte-post.js",
    "linkup.js",
    "vertraege-abos.js"
   ]
@@ -3935,6 +3960,7 @@
   "de": "Fristen",
   "files": [
    "business.js",
+   "kontakte-post.js",
    "search-places.js",
    "start.js",
    "suche-smart.js",
@@ -4077,7 +4103,8 @@
   "ru": "Связано",
   "de": "Verknüpft",
   "files": [
-   "business.js"
+   "business.js",
+   "kontakte-post.js"
   ]
  },
  "remove here (document stays)": {
@@ -5164,7 +5191,8 @@
   "ru": "Новые",
   "de": "Neu",
   "files": [
-   "eingang-smart.js"
+   "eingang-smart.js",
+   "kontakte-post.js"
   ]
  },
  "Archive": {
@@ -6428,7 +6456,8 @@
   "ru": "Вид",
   "de": "Art",
   "files": [
-   "karriere2.js"
+   "karriere2.js",
+   "kontakte-post.js"
   ]
  },
  "School / institution": {
@@ -6838,6 +6867,554 @@
   "de": "Arbeitsuchend melden – Vertrag %c endet am %d",
   "files": [
    "karriere2.js"
+  ]
+ },
+ "Contacts": {
+  "ru": "Контакты",
+  "de": "Kontakte",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Personal": {
+  "ru": "Личные",
+  "de": "Persönlich",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Work": {
+  "ru": "Работа",
+  "de": "Beruflich",
+  "files": [
+   "kontakte-post.js",
+   "notizen.js",
+   "search-places.js",
+   "start.js"
+  ]
+ },
+ "Insurance & finance": {
+  "ru": "Страховки и финансы",
+  "de": "Versicherungen & Finanzen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Companies": {
+  "ru": "Фирмы",
+  "de": "Firmen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Advisers": {
+  "ru": "Консультанты",
+  "de": "Beratung",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Name, company, phone …": {
+  "ru": "Имя, фирма, телефон …",
+  "de": "Name, Firma, Telefon …",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Favourites": {
+  "ru": "Избранные",
+  "de": "Favoriten",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Import VCF / CSV": {
+  "ru": "Импорт VCF / CSV",
+  "de": "Import VCF / CSV",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "%n added, %k already there": {
+  "ru": "Добавлено: %n, уже были: %k",
+  "de": "%n übernommen, %k schon vorhanden",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "No contacts in the file": {
+  "ru": "В файле нет контактов",
+  "de": "In der Datei sind keine Kontakte",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Nothing found": {
+  "ru": "Ничего не найдено",
+  "de": "Nichts gefunden",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "%n contracts": {
+  "ru": "договоров: %n",
+  "de": "%n Verträge",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "＋ Call": {
+  "ru": "＋ Звонок",
+  "de": "＋ Anruf",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "＋ Meeting": {
+  "ru": "＋ Встреча",
+  "de": "＋ Treffen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "＋ Note": {
+  "ru": "＋ Заметка",
+  "de": "＋ Notiz",
+  "files": [
+   "kontakte-post.js",
+   "notizen.js"
+  ]
+ },
+ "Meeting": {
+  "ru": "Встреча",
+  "de": "Treffen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Document": {
+  "ru": "Документ",
+  "de": "Dokument",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Case": {
+  "ru": "Дело",
+  "de": "Vorgang",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "What was it about? (short)": {
+  "ru": "О чём? (кратко)",
+  "de": "Worum ging es? (kurz)",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Remind me to get in touch": {
+  "ru": "Напомнить связаться",
+  "de": "Erinnern, sich zu melden",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Get in touch: %n": {
+  "ru": "Связаться: %n",
+  "de": "Melden bei: %n",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Task created": {
+  "ru": "Задача создана",
+  "de": "Aufgabe angelegt",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Cases": {
+  "ru": "Дела",
+  "de": "Vorgänge",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Empty yet. Add a call, meeting or note – the history stays here.": {
+  "ru": "Пока пусто. Добавьте звонок, встречу или заметку — история сохранится здесь.",
+  "de": "Noch leer. Anruf, Treffen oder Notiz hinzufügen – der Verlauf bleibt hier.",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Open card": {
+  "ru": "Открыть карточку",
+  "de": "Karte öffnen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "＋ New case": {
+  "ru": "＋ Новое дело",
+  "de": "＋ Neuer Vorgang",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Letters & applications": {
+  "ru": "Дела и заявления",
+  "de": "Post & Anträge",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Every letter or application is one case – from arrival to answer.": {
+  "ru": "Каждое письмо или заявление — одно дело: от получения до ответа.",
+  "de": "Jedes Schreiben, jeder Antrag ist ein Vorgang – vom Eingang bis zur Antwort.",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Waiting": {
+  "ru": "Жду ответа",
+  "de": "Wartet",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "To check": {
+  "ru": "Проверить",
+  "de": "Zu prüfen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Prepared": {
+  "ru": "Подготовлено",
+  "de": "Vorbereitet",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Delivered": {
+  "ru": "Доставлено",
+  "de": "Zugestellt",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Waiting for answer": {
+  "ru": "Жду ответа",
+  "de": "Wartet auf Antwort",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Answer received": {
+  "ru": "Ответ получен",
+  "de": "Antwort erhalten",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Follow-up needed": {
+  "ru": "Нужен доп. запрос",
+  "de": "Rückfrage erforderlich",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Archived": {
+  "ru": "В архиве",
+  "de": "Archiviert",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "“Delivered” only with proof. Please link a receipt or confirmation.": {
+  "ru": "«Доставлено» — только с подтверждением. Привяжите квитанцию или подтверждение.",
+  "de": "„Zugestellt“ nur mit Nachweis. Bitte Beleg oder Bestätigung verknüpfen.",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Subject": {
+  "ru": "Тема",
+  "de": "Betreff",
+  "files": [
+   "kontakte-post.js",
+   "mappen.js"
+  ]
+ },
+ "With whom": {
+  "ru": "С кем",
+  "de": "Mit wem",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "File number": {
+  "ru": "Номер дела (Aktenzeichen)",
+  "de": "Aktenzeichen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Objection": {
+  "ru": "Возражение",
+  "de": "Einspruch / Widerspruch",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Cancellation": {
+  "ru": "Расторжение",
+  "de": "Kündigung",
+  "files": [
+   "kontakte-post.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "Bill / reminder": {
+  "ru": "Счёт / требование",
+  "de": "Rechnung / Mahnung",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Request / complaint": {
+  "ru": "Запрос / жалоба",
+  "de": "Anfrage / Beschwerde",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Decision / certificate": {
+  "ru": "Решение / справка",
+  "de": "Bescheid / Bestätigung",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Status": {
+  "ru": "Статус",
+  "de": "Status",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "by": {
+  "ru": "до",
+  "de": "bis",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Answer expected by": {
+  "ru": "Ответ ожидается до",
+  "de": "Antwort erwartet bis",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Enclosures": {
+  "ru": "Приложения",
+  "de": "Anlagen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "＋ Enclosure": {
+  "ru": "＋ Приложение",
+  "de": "＋ Anlage",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "e.g. copy of ID": {
+  "ru": "Напр. копия паспорта",
+  "de": "z. B. Kopie Ausweis",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Complete": {
+  "ru": "Комплект выглядит полным",
+  "de": "Vollständig",
+  "files": [
+   "kontakte-post.js",
+   "start.js"
+  ]
+ },
+ "Missing: %n": {
+  "ru": "Не хватает: %n",
+  "de": "Fehlt: %n",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "check yourself – not a legal check": {
+  "ru": "проверьте сами — это не юридическая проверка",
+  "de": "bitte selbst prüfen – keine rechtliche Prüfung",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Case created": {
+  "ru": "Дело создано",
+  "de": "Vorgang angelegt",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Status: %s": {
+  "ru": "Статус: %s",
+  "de": "Status: %s",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Document: %t": {
+  "ru": "Документ: %t",
+  "de": "Dokument: %t",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Next step: %t": {
+  "ru": "Следующий шаг: %t",
+  "de": "Nächster Schritt: %t",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Whole case as ZIP": {
+  "ru": "Всё дело одним ZIP",
+  "de": "Ganzen Vorgang als ZIP",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Delete case": {
+  "ru": "Удалить дело",
+  "de": "Vorgang löschen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Really delete? Tap again (documents stay)": {
+  "ru": "Точно удалить? Нажмите ещё раз (документы останутся)",
+  "de": "Wirklich löschen? Nochmals tippen (Dokumente bleiben)",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "%n days ago": {
+  "ru": "%n дн. назад",
+  "de": "vor %n Tagen",
+  "files": [
+   "kontakte-post.js",
+   "suche-smart.js"
+  ]
+ },
+ "sent on %d": {
+  "ru": "отправлено %d",
+  "de": "versendet am %d",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Follow up": {
+  "ru": "Напомнить о себе",
+  "de": "Nachfragen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Text copied": {
+  "ru": "Текст скопирован",
+  "de": "Text kopiert",
+  "files": [
+   "kontakte-post.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "Create a case from this letter": {
+  "ru": "Создать дело из этого письма",
+  "de": "Als Vorgang anlegen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Answer to case “%t”?": {
+  "ru": "Ответ по делу «%t»?",
+  "de": "Antwort zum Vorgang „%t“?",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "same file number": {
+  "ru": "то же Aktenzeichen",
+  "de": "gleiches Aktenzeichen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "same sender": {
+  "ru": "тот же отправитель",
+  "de": "gleicher Absender",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "No cases yet. Create one from a letter or below.": {
+  "ru": "Дел пока нет. Создайте из письма («Als Vorgang anlegen») или кнопкой ниже.",
+  "de": "Noch keine Vorgänge. Aus einem Brief („Als Vorgang anlegen“) oder unten anlegen.",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Please enter a subject": {
+  "ru": "Впишите тему",
+  "de": "Bitte einen Betreff eintragen",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Cases & applications": {
+  "ru": "Дела и заявления",
+  "de": "Vorgänge & Anträge",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "status, deadlines, expected answers": {
+  "ru": "статус, сроки, ожидаемые ответы",
+  "de": "Status, Fristen, erwartete Antworten",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "All contacts": {
+  "ru": "Все контакты",
+  "de": "Alle Kontakte",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "people, offices, companies – with history": {
+  "ru": "люди, ведомства, фирмы — с историей",
+  "de": "Menschen, Ämter, Firmen – mit Verlauf",
+  "files": [
+   "kontakte-post.js"
+  ]
+ },
+ "Yes": {
+  "ru": "Да",
+  "de": "Ja",
+  "files": [
+   "kontakte-post.js"
   ]
  },
  "This language is not in the app yet – it is in English for now. You can change the language in the profile.": {
@@ -7356,13 +7933,6 @@
  "Reference / listing": {
   "ru": "Номер дела / объявления",
   "de": "Aktenzeichen / Inserat",
-  "files": [
-   "mappen.js"
-  ]
- },
- "Subject": {
-  "ru": "Тема",
-  "de": "Betreff",
   "files": [
    "mappen.js"
   ]
@@ -8190,15 +8760,6 @@
    "notizen.js"
   ]
  },
- "Work": {
-  "ru": "Работа",
-  "de": "Arbeit",
-  "files": [
-   "notizen.js",
-   "search-places.js",
-   "start.js"
-  ]
- },
  "Learning": {
   "ru": "Учёба",
   "de": "Lernen",
@@ -8566,13 +9127,6 @@
  "Photo %d": {
   "ru": "Фото %d",
   "de": "Foto %d",
-  "files": [
-   "notizen.js"
-  ]
- },
- "＋ Note": {
-  "ru": "＋ Заметка",
-  "de": "＋ Notiz",
   "files": [
    "notizen.js"
   ]
@@ -9580,13 +10134,6 @@
    "start.js"
   ]
  },
- "Complete": {
-  "ru": "Полнота",
-  "de": "Vollständig",
-  "files": [
-   "start.js"
-  ]
- },
  "key documents": {
   "ru": "важных документов",
   "de": "wichtige Unterlagen",
@@ -10452,13 +10999,6 @@
    "suche-smart.js"
   ]
  },
- "%n days ago": {
-  "ru": "%n дн. назад",
-  "de": "vor %n Tagen",
-  "files": [
-   "suche-smart.js"
-  ]
- },
  "Self-check: all fine ✓": {
   "ru": "Самопроверка: всё в порядке ✓",
   "de": "Selbsttest: alles in Ordnung ✓",
@@ -11042,13 +11582,6 @@
    "vertraege-abos.js"
   ]
  },
- "Cancellation": {
-  "ru": "Расторжение",
-  "de": "Kündigung",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
  "Yellow: filled in by Butler from your data. Tap the text to change it.": {
   "ru": "Жёлтым — то, что Батлер взял из Ваших данных. Нажмите на текст, чтобы изменить.",
   "de": "Gelb markiert: von Butler aus Ihren Unterlagen eingesetzt. Tippen zum Ändern.",
@@ -11094,13 +11627,6 @@
  "for the contact form": {
   "ru": "для формы на сайте",
   "de": "für das Kontaktformular",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
- "Text copied": {
-  "ru": "Текст скопирован",
-  "de": "Text kopiert",
   "files": [
    "vertraege-abos.js"
   ]

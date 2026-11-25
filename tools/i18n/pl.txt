@@ -1600,3 +1600,73 @@
 1599	Dokument nie ma pliku
 1600	Face ID, przypomnienia, kopia, plany
 1601	dla doradcy podatkowego lub finansowego, jako ZIP lub PDF
+1602	Kontakty
+1603	Prywatne
+1604	Ubezpieczenia i finanse
+1605	Firmy
+1606	Doradcy
+1607	Imię, firma, telefon …
+1608	Ulubione
+1609	Import VCF / CSV
+1610	Dodano: %n, już były: %k
+1611	W pliku nie ma kontaktów
+1612	Nic nie znaleziono
+1613	umów: %n
+1614	＋ Rozmowa
+1615	＋ Spotkanie
+1616	Spotkanie
+1617	Dokument
+1618	Sprawa
+1619	O czym? (krótko)
+1620	Przypomnij o kontakcie
+1621	Skontaktuj się: %n
+1622	Utworzono zadanie
+1623	Sprawy
+1624	Na razie pusto. Dodaj rozmowę, spotkanie lub notatkę – historia zostanie tutaj.
+1625	Otwórz kartę
+1626	＋ Nowa sprawa
+1627	Pisma i wnioski
+1628	Każde pismo lub wniosek to jedna sprawa – od wpływu do odpowiedzi.
+1629	Czeka
+1630	Do sprawdzenia
+1631	Przygotowane
+1632	Doręczone
+1633	Czeka na odpowiedź
+1634	Otrzymano odpowiedź
+1635	Potrzebne dodatkowe pytanie
+1636	Zarchiwizowane
+1637	«Doręczone» tylko z dowodem. Połącz potwierdzenie nadania lub odbioru.
+1638	Z kim
+1639	Sygnatura
+1640	Sprzeciw
+1641	Rachunek / upomnienie
+1642	Zapytanie / skarga
+1643	Decyzja / zaświadczenie
+1644	Status
+1645	do
+1646	Odpowiedź oczekiwana do
+1647	Załączniki
+1648	＋ Załącznik
+1649	np. kopia dowodu
+1650	Brakuje: %n
+1651	sprawdź sam – to nie kontrola prawna
+1652	Utworzono sprawę
+1653	Status: %s
+1654	Dokument: %t
+1655	Następny krok: %t
+1656	Cała sprawa jako ZIP
+1657	Usuń sprawę
+1658	Na pewno usunąć? Dotknij ponownie (dokumenty zostają)
+1659	wysłano %d
+1660	Ponów zapytanie
+1661	Utwórz sprawę z tego pisma
+1662	Odpowiedź w sprawie «%t»?
+1663	ta sama sygnatura
+1664	ten sam nadawca
+1665	Brak spraw. Utwórz z pisma lub poniżej.
+1666	Wpisz temat
+1667	Sprawy i wnioski
+1668	status, terminy, oczekiwane odpowiedzi
+1669	Wszystkie kontakty
+1670	osoby, urzędy, firmy – z historią
+1671	Tak

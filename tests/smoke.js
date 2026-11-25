@@ -721,12 +721,12 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
  await T(()=>window.__T.R('fnacc'));await p.waitForTimeout(400);check('«Meine Konten und Karten» leads to Finanzen',await T(()=>window.__T.m().route)==='fzm');await T(()=>window.__T.R('home'))}
  where='i18n';{let ok=true,det='';try{require('child_process').execSync('node tools/i18n-extract.js && node tools/i18n-build.js '+require('../tools/i18n-active.json').join(' '),{cwd:require('path').join(__dirname,'..'),stdio:'pipe'})}catch(e){ok=false;det=String(e.stdout||e).slice(0,300)}
  check('every text of the Docs modules is translated into the shown languages (tools/i18n-active.json)',ok,det);
- const keys=require('../tools/i18n-keys.json');const r=await T(k=>{const out={};for(const L of['tr','uk']){out[L]=k.filter(x=>!(window.__i18n[L]&&window.__i18n[L][x])).length}return out},keys);
- check('dictionaries of the shown languages are complete in the app (tr, uk)',r.tr===0&&r.uk===0,JSON.stringify(r));
+ const keys=require('../tools/i18n-keys.json');const r=await T(k=>{const out={};for(const L of['tr','uk','pl','fr','es']){out[L]=k.filter(x=>!(window.__i18n[L]&&window.__i18n[L][x])).length}return out},keys);
+ check('dictionaries of the shown languages are complete in the app (tr, uk, pl, fr, es)',Object.values(r).every(n=>n===0),JSON.stringify(r));
  const c=await T(()=>{const G=window.__T.g(),was=G.lang;G.lang='tr';const a=window.__cv5(['Сохранить','Speichern','Save']);G.lang='es';const b=window.__cv5(['Сохранить','Speichern','Save']);G.lang='ru';const d=window.__cv5(['Сохранить','Speichern','Save']);G.lang=was;return[a,b,d]});
  check('a Docs text shows in the chosen language (tr, es) and ru stays ru',c[0]==='Kaydet'&&c[1]==='Guardar'&&c[2]==='Сохранить',JSON.stringify(c))}
  const nw=await T(()=>{const G=window.__T.g(),was=G.lang,o={n:window.__xl(),c:{}};for(const L of['it','uk','ro','bg','sr','hr']){o.c[L]=Object.keys(window.__i18n[L]||{}).length}G.lang='sr';o.sv=window.__cv5(['Сохранить','Speichern','Save']);o.sd=window.__i18('Speichern');o.sl=window.__i18('Sprache: Deutsch');G.lang='hr';o.hd=window.__i18('Speichern');G.lang='bg';o.bd=window.__i18('Save');G.lang=was;return o});
- check('5 languages in the picker (de en tr ru uk), the hidden dictionaries stay in the code',nw.n===5&&Object.values(nw.c).every(n=>n>1400),JSON.stringify(nw));
+ check('8 languages in the picker (de en tr ru uk + pl fr es since v79), the hidden dictionaries stay in the code',nw.n===8&&Object.values(nw.c).every(n=>n>1400),JSON.stringify(nw));
  check('new languages: module and core texts translated, Serbian in Latin script',nw.sv==='Sačuvaj'&&nw.sd==='Sačuvaj'&&nw.hd==='Spremi'&&nw.bd==='Запази'&&nw.sl==='Jezik: Srpski',JSON.stringify(nw));
  const hid=await T(async()=>{const G=window.__T.g(),was=G.lang;G.lang='it';window.__T.R('home');await new Promise(r=>setTimeout(r,300));const now=G.lang;G.lang=was;window.__T.save();window.__T.R('home');return now});
  check('a hidden language (it) switches to English once',hid==='en',hid);

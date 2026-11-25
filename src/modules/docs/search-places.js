@@ -12,7 +12,7 @@ const SP_L=[
  ['bsv','doc',['Ведомства','Behörden','Offices'],['ведомств','відомств','behörd','amt','office','kurum','бюргерамт','bürgeramt']],
  ['concierge','spark',['Батлер','Butler','Butler'],['батлер','butler','помощ','hilfe','help']],
  ['style','note',['Оформление','Erscheinungsbild','Appearance'],['оформлен','тема','тёмн','темн','светл','dunkel','hell','dark','light','stil','style','design','дизайн','farbe','цвет']]];
-const SP_T={ru:'Разделы',de:'Bereiche',en:'Sections',tr:'Bölümler',uk:'Розділи'};
+const SP_T={ru:'Разделы',de:'Bereiche',en:'Sections',tr:'Bölümler',uk:'Розділи',pl:'Obszary',fr:'Rubriques',es:'Secciones'};
 try{Object.keys(SP_T).forEach(l=>{if(TD9T[l])TD9T[l].sPlaces=SP_T[l]});if(TD9T.en)TD9T.en.sPlaces=TD9T.en.sPlaces||'Sections'}catch(e){Hooks.err('spt',e)}
 function spFind(q){const e=td9low(q).trim();if(e.length<3)return[];
  return SP_L.filter(([r,ic,lab,st])=>{const names=lab.map(x=>td9low(x));return names.some(n=>n.includes(e))||st.some(s=>{const k=td9low(s);return k.includes(e)||(e.length>=3&&e.includes(k))})})

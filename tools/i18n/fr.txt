@@ -1023,3 +1023,580 @@
 1022	Les données de la puce diffèrent de la fiche : %t
 1023	La vérification de la puce montre que les données sont signées par l’État et inchangées. Ce n’est pas une identification officielle – pour cela il y a l’eID de l’État / le portefeuille EUDI.
 1024	Butler a complété : %t
+1025	Cette langue n’est pas encore dans l’app – elle est en anglais pour l’instant. Vous changez la langue dans le profil.
+1026	Demander à Butler ou chercher …
+1027	Ajouter
+1028	Scan · Photo · Fichier · Imprimante
+1029	Aide IA
+1030	Expliquer une lettre, trouver un délai
+1031	Important pour vous
+1032	Tout est en ordre : aucun délai dans les 60 jours
+1033	encore %n
+1034	Complet
+1035	documents clés
+1036	Mes dossiers
+1037	Prévoyance
+1038	%n bientôt
+1039	%n en retard
+1040	Ajouter un document
+1041	Scanner avec l’appareil photo
+1042	Bords, ombres, plusieurs pages → PDF
+1043	Depuis les photos
+1044	Images et captures d’écran
+1045	Fichier ou PDF
+1046	Depuis «Fichiers» et iCloud
+1047	Imprimante et scanner (Wi‑Fi)
+1048	Lire la puce de la carte
+1049	dans l’app
+1050	Cela viendra avec l’app de l’App Store et de Google Play : un navigateur ne peut pas toujours parler à l’imprimante ou à la puce.
+1051	Butler reconnaît lui-même le type, les dates et les délais – vous confirmez seulement.
+1052	Documents clés
+1053	Ce dont on a généralement besoin en Allemagne. Coche = déjà dans «Documents».
+1054	Carte d’assurance maladie
+1055	Carte d’assurance sociale
+1056	Contrat de location
+1057	Profil
+1058	Butler
+1059	Boîte de réception
+1060	Les nouveaux documents arrivent d’abord ici. Vérifiez ce que Butler a reconnu et confirmez.
+1061	Vérifier
+1062	Prêt
+1063	à vérifier
+1064	prêt
+1065	doublon ?
+1066	Type non reconnu – donnez-lui un nom
+1067	Semblable à «%t»
+1068	Confirmer
+1069	Confirmer les prêts : %n
+1070	Confirmés : %n
+1071	La boîte est vide. Tout ce que vous ajoutez apparaît d’abord ici.
+1072	Tous les délais au même endroit : documents, contrats, administrations et tâches.
+1073	Tâches
+1074	En retard
+1075	Cette semaine
+1076	Ce mois-ci
+1077	Aucun délai
+1078	Délai ou tâche
+1079	Calendrier
+1080	Fait ✓
+1081	Sauvegarde il y a %n jours
+1082	Sauvegarde aujourd’hui
+1083	%n docs
+1084	Pas encore de sauvegarde
+1085	Chercher : nom, texte, numéro …
+1086	Fichier
+1087	Dossiers
+1088	Bientôt dû
+1089	tous %n
+1090	%n expire
+1091	%n expiré
+1092	C’est parti – les 3 plus importants
+1093	Pour que Butler connaisse les délais et que tout soit là en cas d’urgence.
+1094	Plus
+1095	Courrier reçu
+1096	Impôts
+1097	Contrats et assurances
+1098	Gérer les dossiers
+1099	Bonjour, je suis Butler.
+1100	Je connais vos documents et délais – et je réponds sans internet.
+1101	Ou posez votre question ci-dessous avec vos mots.
+1102	Expliquer une lettre
+1103	Quels délais arrivent ?
+1104	Préparer les papiers pour la banque
+1105	Trouver les documents manquants
+1106	sans internet
+1107	IA · plus tard
+1108	Dans les 30 jours : %n délais.
+1109	Dans les 30 jours : %n délais, dont %l en retard.
+1110	Aucun délai dans les 30 jours. Tout est en ordre.
+1111	Tous les délais
+1112	Sur 8 papiers clés, vous en avez %k.
+1113	Les 8 papiers clés sont là.
+1114	Toute la liste
+1115	scanner
+1116	Pour un prêt, la banque demande en général %n papiers. Vous en avez %k.
+1117	Créer le dossier «Prêt / banque»
+1118	Photographiez la lettre : Butler trouve l’expéditeur, la date et le délai – sans internet. Expliquer la lettre avec ses propres mots nécessite l’IA en ligne ; cela viendra plus tard et seulement avec votre accord.
+1119	Photographier la lettre
+1120	Tous les dossiers, recherche, scanner
+1121	Passeport, carte d’identité, permis, cartes
+1122	Tous les délais au même endroit
+1123	Rendez-vous, numéros, lettres
+1124	Impôts, contrats, coûts
+1125	Emploi, entreprise, formation
+1126	Carte, vaccins, résultats
+1127	Famille et personnes importantes
+1128	Testaments, patrimoine, coffre
+1129	Tous les domaines
+1130	Livre de vie
+1131	Coffre
+1132	Famille et proches
+1133	Personnes importantes
+1134	Ajoutez partenaire, enfants, parents – Butler rappelle les anniversaires et sait qui appeler en cas d’urgence.
+1135	Médecin, notaire, conseiller fiscal, banque, propriétaire – tous ceux dont vous avez besoin pour vos affaires.
+1136	Ajouter une personne
+1137	Mots de passe, PIN, accès – chiffrés
+1138	Modifier les pages
+1139	%n pages · l’original ne change qu’avec «Terminé»
+1140	%n pages · l’original reste inchangé
+1141	Touchez les pages pour les sélectionner.
+1142	%n sélectionnées
+1143	Avant
+1144	Pivoter
+1145	Séparer
+1146	Fusionner
+1147	Nouvelle version
+1148	%n pages deviennent un document séparé avec «Terminé»
+1149	Document séparé : %n pages
+1150	rétablir
+1151	Ajouter des pages d’un document
+1152	L’autre document reste inchangé.
+1153	%t – partie %n
+1154	%t (nouvelle version)
+1155	Enregistré comme nouvelle version
+1156	Il doit rester au moins une page
+1157	Un instant …
+1158	Pour les scans et photos. Couper des PDF terminés – plus tard.
+1159	Protégez votre sauvegarde
+1160	Tout se trouve uniquement sur ce téléphone. Une sauvegarde restaure tout – après une perte, une panne ou sur un nouveau téléphone.
+1161	Butler chiffre chaque sauvegarde avec votre mot de passe : sans lui, personne ne peut ouvrir le fichier – même pas nous.
+1162	Notez le mot de passe sur papier et gardez-le avec vos papiers importants. Mot de passe oublié = sauvegarde perdue.
+1163	Mot de passe (au moins 8 caractères)
+1164	Répétez le mot de passe
+1165	Par exemple trois mots : Tilleul-Port-Café
+1166	J’ai noté le mot de passe
+1167	Définir le mot de passe
+1168	Au moins 8 caractères
+1169	Les mots de passe diffèrent
+1170	Notez d’abord le mot de passe
+1171	Mot de passe défini
+1172	Enregistrer la première sauvegarde maintenant ? Elle va dans «Fichiers» – idéalement dans iCloud Drive.
+1173	Enregistrer la première sauvegarde
+1174	Le mot de passe reste sur ce téléphone : une sauvegarde se fait d’un geste.
+1175	Changer le mot de passe de sauvegarde
+1176	Mot de passe actuel
+1177	Le mot de passe actuel est incorrect
+1178	Mot de passe changé. Les anciennes sauvegardes s’ouvrent avec l’ancien mot de passe.
+1179	Les sauvegardes sont chiffrées avec votre mot de passe
+1180	Apparence
+1181	Clair
+1182	Ivoire et vert
+1183	Émeraude
+1184	Vert foncé lumineux
+1185	Sombre
+1186	Auto
+1187	Comme le téléphone
+1188	Couleur d’accent
+1189	Turquoise
+1190	Vert
+1191	Bleu
+1192	Or
+1193	Ancien aspect
+1194	Revenir à l’ancien aspect de l’app
+1195	Parler
+1196	Délai / note
+1197	Demander à Butler…
+1198	Envoyer
+1199	Par exemple
+1200	Voici Butler
+1201	Toucher : demander ou ajouter. Maintenir : scanner tout de suite.
+1202	Rappeler demain
+1203	Dans 3 jours
+1204	La semaine prochaine
+1205	Dans le calendrier de l’iPhone
+1206	Avec une alerte la veille et le jour même à 9 h
+1207	Marqué comme fait
+1208	Masqué jusqu’au %d
+1209	Tout est en ordre : aucun délai dans les 14 jours
+1210	Scan · Photo
+1211	%n à vérifier
+1212	tout est vérifié
+1213	Fichier calendrier ouvert – touchez «Ajouter» dans le calendrier.
+1214	Comment puis-je aider ?
+1215	Plus d’options
+1216	Lire les réponses à voix haute
+1217	activé
+1218	désactivé
+1219	Effacer la conversation
+1220	Les documents et délais restent
+1221	Papiers clés
+1222	Photos
+1223	Autres moyens
+1224	Délais le %d
+1225	Aucun délai ce jour-là
+1226	Encore vide – 3 premiers pas
+1227	Pour que tout soit réuni quand vous en avez besoin.
+1228	ajouter
+1229	y aller
+1230	Nom et depuis quand
+1231	photo ou fichier
+1232	Fiche de paie
+1233	la plus récente suffit
+1234	Ajouter la mairie
+1235	Adresse, horaires, rendez-vous
+1236	Centre des impôts
+1237	Saisir le numéro fiscal
+1238	photographiez – le délai est trouvé
+1239	Recto et verso
+1240	Carnet de vaccination
+1241	chaque page avec des entrées
+1242	Médecin de famille
+1243	Nom et téléphone dans «Personnes importantes»
+1244	Scanner un document
+1245	Les bords et les ombres sont supprimés
+1246	Lettres
+1247	Famille et personnes importantes
+1248	Courrier
+1249	Écrire une lettre
+1250	Avec en-tête, enveloppe – PDF, e‑mail ou SMS
+1251	Une lettre est arrivée
+1252	Lettre de la boîte aux lettres
+1253	photographiez – Butler trouve le délai
+1254	Photo
+1255	Lettre par e‑mail
+1256	Copiez le texte dans «Mail» et collez-le
+1257	Mes lettres
+1258	Pas encore de lettres
+1259	reçue
+1260	envoyée
+1261	brouillon
+1262	réglée
+1263	Les lettres n’arrivent pas toutes seules : l’app n’a pas de serveur de courrier. Automatique seulement dans la version App Store.
+1264	%n lettres
+1265	1 lettre
+1266	Bords et ombres disparus, plusieurs pages → PDF
+1267	Feuille
+1268	Carte · 2 faces
+1269	Utiliser un fichier prêt
+1270	PDF ou photo depuis Fichiers, Photos, iCloud
+1271	Meilleure qualité
+1272	Photo avec l’appareil de l’iPhone, Butler la redresse
+1273	Depuis une imprimante ou un e‑mail
+1274	Imprimante
+1275	sur l’imprimante «Scan vers e‑mail / iCloud» – ou dans l’app de l’imprimante «Enregistrer dans Fichiers»
+1276	maintenez la pièce jointe → «Enregistrer dans Fichiers»
+1277	Puis ici
+1278	«Utiliser un fichier prêt» – Butler lit le type, la date et le délai
+1279	Parfait comme un vrai scanner : dans «Fichiers» → ⋯ → «Scanner des documents», puis «Utiliser un fichier prêt».
+1280	Récents
+1281	Rien de scanné pour l’instant
+1282	Écrire et recevoir des lettres
+1283	Livre de vie
+1284	Souvenirs, histoire
+1285	Réinitialiser
+1286	Faites glisser une tuile
+1287	Barre du bas
+1288	Touchez un emplacement, puis ce qui doit y aller. Butler au milieu et «Plus» restent toujours.
+1289	Barre du bas enregistrée
+1290	toujours
+1291	Ce qui peut y aller
+1292	Modifications non enregistrées
+1293	Ce qui est à côté de Butler
+1294	Clair · Sombre · Auto, couleur, barre du bas
+1295	＋ Plus de détails (heure, répétition, personne …)
+1296	− Moins
+1297	Dépenses
+1298	Frais fixes
+1299	%a par an
+1300	%n contrats · %a
+1301	%n abonnements · %a
+1302	Hausse de prix détectée
+1303	Le prix augmente
+1304	à partir du %d
+1305	+%a par an
+1306	Résiliation anticipée possible jusqu’au %d (à vérifier)
+1307	Préparer la résiliation
+1308	Garder
+1309	Bientôt résiliable
+1310	avant le %d · %k jours
+1311	Tous %n
+1312	Contrats %n
+1313	Abonnements %n
+1314	Abo
+1315	résiliable à tout moment
+1316	depuis %y
+1317	＋ Contrat ou abonnement
+1318	Tout reste uniquement sur ce téléphone. Butler montre seulement – vous décidez.
+1319	Pas encore de contrats. Touchez «＋ Contrat ou abonnement» – assurance, électricité, téléphone, internet, salle de sport, Netflix …
+1320	Hausse de prix
+1321	Surcoût
+1322	par mois / par an
+1323	Résilier avant le
+1324	anticipé, à cause de la hausse
+1325	encore %n jours
+1326	Contrat depuis
+1327	N°
+1328	Que voulez-vous faire ?
+1329	Une lettre prête, vous vérifiez et envoyez
+1330	Me rappeler
+1331	le %a et le %b
+1332	le nouveau prix est accepté
+1333	Rappels ajoutés
+1334	Bien, le contrat reste
+1335	%n : décider de la résiliation (avant le %d)
+1336	Vérifiez le délai dans la lettre du fournisseur. Butler ne donne pas de conseil juridique.
+1337	Résiliation
+1338	En jaune : complété par Butler à partir de vos données. Touchez le texte pour le modifier.
+1339	Envoyer avec mon e‑mail
+1340	ouvre votre app de messagerie
+1341	Enregistrer en PDF
+1342	pour imprimer ou téléverser
+1343	Copier le texte
+1344	pour le formulaire de contact
+1345	Texte copié
+1346	Après l’envoi, Butler vous rappelle dans 14 jours de vérifier la confirmation.
+1347	%n : vérifier la confirmation de résiliation
+1348	Noté : résiliation envoyée
+1349	Dépenses · %m
+1350	Fixes %a
+1351	Saisies %a
+1352	＋ Dépense
+1353	Dernières
+1354	automatique
+1355	Charger un relevé (CSV) – facultatif
+1356	Seulement les dépenses, sans revenus ni connexion bancaire. Tout reste sur ce téléphone.
+1357	Rien de saisi ce mois-ci. «＋ Dépense» – montant, catégorie, c’est fait.
+1358	Nouvelle dépense
+1359	Dépense
+1360	Montant
+1361	Où ? (facultatif) – p. ex. REWE
+1362	Tapez le montant, touchez une catégorie, c’est fait.
+1363	%n dépenses importées (%k doublons ignorés)
+1364	Aucune dépense trouvée dans le fichier
+1365	Courses
+1366	Carburant
+1367	Restaurant
+1368	Vêtements
+1369	Droguerie
+1370	Maison
+1371	Cadeaux
+1372	Voiture
+1373	Loisirs
+1374	Contrats et abos
+1375	Compter comme abonnement
+1376	affiché à part des contrats dans «Finances»
+1377	Contrats et abonnements
+1378	«%t» dans le texte
+1379	Recherches récentes
+1380	Effacer l’historique
+1381	Recherches enregistrées
+1382	Demandez par exemple
+1383	⭐ Enregistrer la recherche
+1384	Recherche enregistrée
+1385	Retirer des enregistrées
+1386	%n résultats · à jour
+1387	Combien je paie pour mes abonnements ?
+1388	Que puis-je résilier dans 3 mois ?
+1389	Dernière fiche de paie
+1390	Dépenses du mois dernier
+1391	Combien me coûte ma voiture par an ?
+1392	Abonnements : %n
+1393	Contrats et abonnements : %n
+1394	contrat
+1395	dépenses «%c»
+1396	%n entrées
+1397	Résiliable : %p
+1398	Rien à résilier sur cette période.
+1399	Dépenses · %p
+1400	Frais fixes (contrats)
+1401	%n mois
+1402	Voiture · %p
+1403	≈ %a par mois
+1404	Incomplet
+1405	Aucune dépense saisie pour : %m.
+1406	Aucun contrat de voiture enregistré.
+1407	Chaque facture et chaque entrée ne compte qu’une fois.
+1408	Document le plus récent
+1409	Prochain délai
+1410	Calcul : %t
+1411	vos saisies + frais fixes des contrats
+1412	contrats de la voiture + «Carburant» et «Voiture» des dépenses
+1413	Trouvé aussi par des mots proches : %w
+1414	ce mois-ci
+1415	le mois dernier
+1416	depuis janvier
+1417	%n derniers mois
+1418	%n prochains jours
+1419	jusqu’à la fin de l’année
+1420	hier
+1421	il y a %n jours
+1422	Nouveaux
+1423	▲ prix
+1424	Correspond à : %t
+1425	contrat «%n»
+1426	échéance %d
+1427	＋ Scan · Photo · Fichier
+1428	Plusieurs fichiers à la fois. La reconnaissance se fait uniquement sur ce téléphone.
+1429	Ce que Butler a fait
+1430	Rien ici.
+1431	Document reconnu
+1432	Facture reconnue
+1433	Lettre reconnue
+1434	de la ligne «%l»
+1435	À payer le
+1436	= contrat «%n» ✓
+1437	modifier
+1438	Nouveau prix
+1439	Butler propose
+1440	Relier au contrat «%n»
+1441	même numéro
+1442	même nom d’entreprise
+1443	Rappel de paiement
+1444	le %d, 2 jours avant
+1445	Saisir dans «Dépenses»
+1446	déjà compté via le contrat – pas deux fois
+1447	Mettre le nouveau prix dans le contrat
+1448	%a à partir du %d → Butler montre la hausse
+1449	Créer une tâche
+1450	«%t» dans 7 jours
+1451	Rien ne se passe sans votre confirmation. Tout peut être annulé.
+1452	Ouvrir le document
+1453	Fait : %n
+1454	Hier
+1455	Annulé
+1456	Le journal reste 90 jours sur ce téléphone.
+1457	%t → contrat «%n»
+1458	Rappel %d : %t
+1459	%a dans «Dépenses»
+1460	Nouveau prix %a dans «%n»
+1461	Tâche : %t
+1462	Confirmé : %t
+1463	Archivé : %t
+1464	confirmé par vous
+1465	Payer : %t (%a)
+1466	À régler : %t
+1467	même numéro et montant que «%t»
+1468	%n délais
+1469	Contrat · N° %n
+1470	Contrat
+1471	depuis le %d
+1472	à partir du %d : %a
+1473	Historique du prix
+1474	Historique
+1475	✓ payé le %d
+1476	pas marqué «payé» – à vérifier ?
+1477	Début du contrat
+1478	original
+1479	＋ Relier un document
+1480	Quels documents en font partie ?
+1481	Pas encore de documents reliés. Factures et lettres arrivent via la «Boîte de réception» ou le bouton ci-dessous.
+1482	Ouvrir le contrat
+1483	Cela concerne-t-il «%n» ?
+1484	Même numéro %v.
+1485	Même nom d’entreprise.
+1486	Oui, relier
+1487	Non
+1488	Concerne : %n
+1489	Relié à «%n»
+1490	Lien supprimé, le document reste
+1491	✓ Marquer comme payé
+1492	Noté : payé
+1493	Supprimer un lien ne supprime jamais le document lui-même.
+1494	Tout sur la voiture
+1495	Tout sur le logement
+1496	Patrimoine
+1497	%a depuis janvier
+1498	≈ %a / mois
+1499	Bientôt
+1500	Tout
+1501	Dépenses depuis janvier
+1502	＋ Ajouter un document
+1503	Ne concerne pas
+1504	TÜV jusqu’au %d
+1505	Rien trouvé pour l’instant. Ajoutez un document (carte grise, assurance, TÜV) – Butler rassemble le reste.
+1506	Votre semaine
+1507	Vue d’ensemble
+1508	Paiements · %a
+1509	Paiements
+1510	Hausses de prix
+1511	dans la boîte
+1512	Semaine
+1513	Mois
+1514	Trimestre
+1515	Personnaliser
+1516	Rendez-vous et tâches
+1517	par rapport à %m
+1518	source : %t
+1519	dépenses + %n contrats
+1520	Dans la boîte
+1521	Expirent bientôt
+1522	Factures non marquées payées
+1523	Abonnements par mois
+1524	Sur cette période
+1525	Tâches ouvertes
+1526	TÜV de la voiture
+1527	Voiture depuis janvier
+1528	Logement depuis janvier
+1529	Anniversaire : %n
+1530	Documents de la famille qui expirent
+1531	pas de données – %t
+1532	saisissez les dépenses
+1533	ajoutez des contrats
+1534	ajoutez vos proches dans «Contacts»
+1535	ajoutez une carte grise ou un contrat de location
+1536	tout est calme ✓
+1537	Période
+1538	«Votre semaine» sur l’accueil
+1539	Chaque chiffre indique d’où il vient. Si des données manquent, Butler le dit.
+1540	Proches
+1541	Dossier pour un conseiller
+1542	Conseiller fiscal
+1543	Conseiller financier
+1544	Attestation annuelle de l’impôt sur le salaire
+1545	Artisans et charges
+1546	Avis d’imposition
+1547	Relevés bancaires
+1548	Prêts
+1549	Loyer et logement
+1550	Pièces d’identité
+1551	Procurations
+1552	1 document
+1553	Code à l’ouverture
+1554	dans le profil → «Protection d’accès»
+1555	Vue des contrats
+1556	%n contrats avec montants et délais
+1557	En ZIP
+1558	tous les originaux + table des matières
+1559	En un seul PDF
+1560	couverture, vue d’ensemble et liste
+1561	Puis «Partager» → Mail, AirDrop ou iCloud.
+1562	Butler montre seulement – il ne conseille pas et ne vend rien.
+1563	Création du dossier …
+1564	Aucun document sélectionné
+1565	Table des matières
+1566	Créé le %d
+1567	pour : %p
+1568	Sécurité et données
+1569	Protection
+1570	Coffre avec son propre code
+1571	Pièces d’identité, mots de passe, PIN
+1572	Face ID au lieu d’un code
+1573	arrive avec la version App Store
+1574	Rappels
+1575	Premier rappel
+1576	si tôt un délai apparaît dans «Important pour vous»
+1577	%n jours avant
+1578	1 jour avant
+1579	Notifications push
+1580	Aujourd’hui : «Dans le calendrier de l’iPhone» pour chaque délai
+1581	fichier chiffré – vers iCloud Drive, une clé USB ou «Fichiers»
+1582	Confidentialité
+1583	ce qui est enregistré et où
+1584	Famille et urgence
+1585	Envoyer un dossier à la famille
+1586	par AirDrop ou e‑mail – sans stockage partagé
+1587	Dossier d’urgence
+1588	dans «Prévoyance» : fichier + mot de passe sur papier pour une personne de confiance
+1589	Formules
+1590	tout ce qui existe aujourd’hui
+1591	via l’App Store
+1592	plus tard
+1593	Tout reste sur ce téléphone. Butler n’a pas de serveur et ne voit jamais vos données.
+1594	Partager avec une IA …
+1595	Partager le document avec une IA ?
+1596	«%t» quitte alors ce téléphone et va vers l’app que vous choisissez (p. ex. Claude). Butler lui-même n’envoie jamais rien.
+1597	Choisir une app
+1598	Ce navigateur ne peut pas partager de fichiers. Ouvrez le document et utilisez «Partager».
+1599	Le document n’a pas de fichier
+1600	Face ID, rappels, sauvegarde, formules
+1601	pour un conseiller fiscal ou financier, en ZIP ou PDF

@@ -33,7 +33,8 @@ const zqS={
  thisM:['этот месяц','dieser Monat','this month'],lastM:['прошлый месяц','letzter Monat','last month'],yearTD:['с января','seit Januar','since January'],lastN:['последние %n мес.','letzte %n Monate','last %n months'],nextN:['ближайшие %n дн.','nächste %n Tage','next %n days'],toYE:['до конца года','bis Jahresende','until year end']};
 const zqt=(k,o)=>{let s=cv5n(zqS[k]||[k]);if(o)for(const p in o)s=s.split('%'+p).join(o[p]);return s};
 const ZQ_T={ru:{sVa:'Договоры и подписки',sAus:'Расходы',sDl:'Сроки'},de:{sVa:'Verträge & Abos',sAus:'Ausgaben',sDl:'Fristen'},en:{sVa:'Contracts & subscriptions',sAus:'Spending',sDl:'Deadlines'},
- tr:{sVa:'Sözleşmeler ve abonelikler',sAus:'Harcamalar',sDl:'Süreler'},uk:{sVa:'Договори й підписки',sAus:'Витрати',sDl:'Строки'}};
+ tr:{sVa:'Sözleşmeler ve abonelikler',sAus:'Harcamalar',sDl:'Süreler'},uk:{sVa:'Договори й підписки',sAus:'Витрати',sDl:'Строки'},
+ pl:{sVa:'Umowy i subskrypcje',sAus:'Wydatki',sDl:'Terminy'},fr:{sVa:'Contrats et abonnements',sAus:'Dépenses',sDl:'Délais'},es:{sVa:'Contratos y suscripciones',sAus:'Gastos',sDl:'Plazos'}};
 try{Object.keys(ZQ_T).forEach(l=>{if(TD9T[l])Object.assign(TD9T[l],ZQ_T[l])})}catch(e){Hooks.err('zqt',e)}
 /* similar words — a word that starts like one of them brings the whole group */
 const ZQ_SYN=[['strom','stadtwerke','energie','elektri','электр','свет','electric','power','enercity','vattenfall','eon','e.on','enbw','yello','abschlag'],

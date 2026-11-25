@@ -101,7 +101,7 @@ Hooks.act('kpfav',d=>{const D=kpD();if(D.fav[d.k])delete D.fav[d.k];else D.fav[d
 document.addEventListener('input',e=>{try{if(m.route!=='kon'||!e.target.matches('[data-kpq]'))return;m.kpQ=e.target.value;const pos=e.target.selectionStart;v();setTimeout(()=>{const x=document.querySelector('[data-kpq]');if(x){x.focus();try{x.setSelectionRange(pos,pos)}catch{}}},0)}catch{}},!0);
 Hooks.act('kph',dd=>{H(kpt('k_'+dd.t),`<div class="bsvys"><textarea class="field" data-kpt rows="3" placeholder="${i(kpt('what'))}"></textarea><label class="bsvl">${i(kpt('date'))}</label><input class="field" type="date" data-kpd value="${vaIso(0)}"><button type="button" class="vaadd" data-kps>${i(kpt('save'))}</button></div>`,
  el=>{el.classList.add('bsvsh');el.querySelector('[data-kps]').onclick=()=>{const t=el.querySelector('[data-kpt]').value.trim()||kpt('k_'+dd.t),d=el.querySelector('[data-kpd]').value||vaIso(0),D=kpD();(D.h[dd.k]=D.h[dd.k]||[]).push({id:V(),ts:Date.parse(d+'T12:00:00'),k:dd.t,t});$();el.remove();v()}})});
-Hooks.act('kprem',d=>{const k=kpByKey(d.k);if(!k)return;g.tasks=Array.isArray(g.tasks)?g.tasks:[];g.tasks.push({id:V(),t:kpt('remT',{n:k.n}),due:vaIso(+d.n),done:!1,ts:Date.now()});$();T(kpt('remOk'))});
+Hooks.act('kprem',d=>{const k=kpByKey(d.k);if(!k)return;g.tasks=Array.isArray(g.tasks)?g.tasks:[];g.tasks.push({id:V(),t:kpt('remT',{n:k.n}),tk:['kpt','remT',{n:k.n}],tkT:kpt('remT',{n:k.n}),due:vaIso(+d.n),done:!1,ts:Date.now()});$();T(kpt('remOk'))});
 /* VCF / CSV import */
 function kpParseVcf(t){const out=[];String(t||'').replace(/\r\n[ \t]/g,'').split(/BEGIN:VCARD/i).slice(1).forEach(b=>{const get=r=>{const m1=b.match(new RegExp('^'+r+'(?:;[^:\\n]*)?:(.*)$','im'));return m1?m1[1].trim():''};
  const n=get('N').split(';'),fn=get('FN'),o={first:n[1]||'',last:n[0]||'',phone:get('TEL'),email:get('EMAIL'),org:get('ORG').replace(/;/g,' ').trim(),addr:get('ADR').split(';').filter(Boolean).join(', ')};
@@ -118,7 +118,7 @@ Hooks.act('kpimp',()=>{const inp=document.createElement('input');inp.type='file'
 const VG_ST=['neu','pruef','bearb','vorb','vers','zug','wart','antw','rueck','erl','arch'],VG_K=['antrag','einspr','kuend','rech','anfr','besch','sonst'];
 const kpVg=()=>{if(!Array.isArray(g.vg))g.vg=[];return g.vg};
 const vgGet=id=>kpVg().find(x=>x.id===id);
-const vgLog=(x,t)=>{(x.log=x.log||[]).unshift({ts:Date.now(),t})};
+const vgLog=(x,t,tk)=>{const o={ts:Date.now(),t};if(tk)o.tk=tk;(x.log=x.log||[]).unshift(o)};
 const vgTab=x=>['erl','arch'].includes(x.st)?'done':['vers','zug','wart'].includes(x.st)?'wait':'open';
 function vgScreen(){const L2=kpVg(),tab=m.vgT||'open',S=L2.filter(x=>vgTab(x)===tab).sort((a,b)=>(b.ts||0)-(a.ts||0));const n=k=>L2.filter(x=>vgTab(x)===k).length;
  const row=x=>{const sent=(x.log||[]).find(l=>/^vers/.test(l.k||''));const days=sent?Math.round((Date.now()-sent.ts)/864e5):null;
@@ -146,7 +146,7 @@ let vgSel=null;
 (Hooks.h.screen=Hooks.h.screen||[]).unshift(()=>{try{if(m.route==='kon')return konScreen();if(m.route==='konk'){const k=kpSel&&kpByKey(kpSel);if(!k){setTimeout(()=>R('kon',void 0,!0),0);return'<div class="screen"></div>'}return konCard(k)}
  if(m.route==='vg')return vgScreen();if(m.route==='vgd'){const x=vgSel&&vgGet(vgSel);if(!x){setTimeout(()=>R('vg',void 0,!0),0);return'<div class="screen"></div>'}return vgCard(x)}}catch(e){Hooks.err('kpscreen',e)}});
 Hooks.act('vgtab',d=>{m.vgT=d.k;v()});Hooks.act('vgopen',d=>{vgSel=d.id;R('vgd')});
-function vgCreate(o){const x=Object.assign({id:V(),t:'',cat:'sonst',who:'',whoN:'',az:'',st:'neu',ts:Date.now(),due:'',next:'',exp:'',docs:[],anl:[],log:[]},o);vgLog(x,kpt('l_new'));kpVg().unshift(x);$();return x}
+function vgCreate(o){const x=Object.assign({id:V(),t:'',cat:'sonst',who:'',whoN:'',az:'',st:'neu',ts:Date.now(),due:'',next:'',exp:'',docs:[],anl:[],log:[]},o);vgLog(x,kpt('l_new'),['kpt','l_new',null]);kpVg().unshift(x);$();return x}
 Hooks.act('vgnew',dd=>{const k=dd&&dd.k?kpByKey(dd.k):null;H(kpt('newVg').replace(/^＋\s*/,''),`<div class="bsvys"><label class="bsvl">${i(kpt('title'))}</label><input class="field" data-vn="t" autocomplete="off">
  <label class="bsvl">${i(kpt('cat'))}</label><div class="vachips kpwrap">${VG_K.map((c,j)=>`<button type="button" class="${j===0?'on':''}" data-vk="${c}">${i(kpt('k_'+c))}</button>`).join('')}</div>
  <label class="bsvl">${i(kpt('who'))}</label><input class="field" data-vn="w" value="${i(k?k.n:'')}" list="kpdl" autocomplete="off"><datalist id="kpdl">${kpAll().slice(0,200).map(x=>`<option value="${i(x.n)}">`).join('')}</datalist>
@@ -159,11 +159,11 @@ Hooks.act('vgst',d=>{const x=vgGet(d.id);if(!x||x.st===d.k)return;if(d.k==='zug'
  x.st=d.k;vgLog(Object.assign(x,{}),kpt('l_st',{s:kpt('s_'+d.k)}));x.log[0].k=d.k;if(d.k==='wart'&&!x.exp){x.exp=vaIso(28)}
  if(d.k==='wart'&&x.exp){g.tasks=Array.isArray(g.tasks)?g.tasks:[];if(!g.tasks.some(t=>t.vg===x.id&&!t.done))g.tasks.push({id:V(),t:'Wiedervorlage: '+x.t,due:x.exp,done:!1,vg:x.id,ts:Date.now()})}$();v()});
 document.addEventListener('change',e=>{try{const f=e.target.closest&&e.target.closest('[data-vgf]');if(!f||m.route!=='vgd')return;const x=vgGet(vgSel);if(!x)return;const k=f.dataset.vgf,val=f.value.trim();if(x[k]===val)return;x[k]=val;
- if(k==='next'&&val)vgLog(x,kpt('l_next',{t:val}));if(k==='due'&&val&&x.next){g.tasks=Array.isArray(g.tasks)?g.tasks:[];const tk=g.tasks.find(t=>t.vgn===x.id&&!t.done);if(tk){tk.due=val;tk.t=x.next+' – '+x.t}else g.tasks.push({id:V(),t:x.next+' – '+x.t,due:val,done:!1,vgn:x.id,ts:Date.now()})}$()}catch(er){Hooks.err('vgf',er)}},!0);
+ if(k==='next'&&val)vgLog(x,kpt('l_next',{t:val}),['kpt','l_next',{t:val}]);if(k==='due'&&val&&x.next){g.tasks=Array.isArray(g.tasks)?g.tasks:[];const tk=g.tasks.find(t=>t.vgn===x.id&&!t.done);if(tk){tk.due=val;tk.t=x.next+' – '+x.t}else g.tasks.push({id:V(),t:x.next+' – '+x.t,due:val,done:!1,vgn:x.id,ts:Date.now()})}$()}catch(er){Hooks.err('vgf',er)}},!0);
 function vgDocSheet(x,zug){let D=[];try{D=Ke().items.filter(d=>d&&!d.type&&!d.del).sort((a,b)=>(b.ts||0)-(a.ts||0)).slice(0,80)}catch{}
  H(kpt('docAdd').replace(/^＋\s*/,''),`<div class="bsvys"><div class="krdl">${D.map(d=>`<label class="bsvtog"><input type="checkbox" data-vgd="${d.id}" ${(x.docs||[]).includes(d.id)?'checked':''}><span>${i(d.title||'—')}</span></label>`).join('')}</div><button type="button" class="vaadd" data-vgds>${i(kpt('save'))}</button></div>`,
- el=>{el.classList.add('bsvsh');el.querySelector('[data-vgds]').onclick=()=>{const was=new Set(x.docs||[]);x.docs=[...el.querySelectorAll('[data-vgd]:checked')].map(c=>c.dataset.vgd);x.docs.filter(id=>!was.has(id)).forEach(id=>{const d=D.find(z=>z.id===id);vgLog(x,kpt('l_doc',{t:d?d.title:'—'}))});
-  if(zug&&x.docs.length>was.size){x.zugOk=1;x.st='zug';vgLog(x,kpt('l_st',{s:kpt('s_zug')}))}$();el.remove();v()}})}
+ el=>{el.classList.add('bsvsh');el.querySelector('[data-vgds]').onclick=()=>{const was=new Set(x.docs||[]);x.docs=[...el.querySelectorAll('[data-vgd]:checked')].map(c=>c.dataset.vgd);x.docs.filter(id=>!was.has(id)).forEach(id=>{const d=D.find(z=>z.id===id);vgLog(x,kpt('l_doc',{t:d?d.title:'—'}),['kpt','l_doc',{t:d?d.title:'—'}])});
+  if(zug&&x.docs.length>was.size){x.zugOk=1;x.st='zug';vgLog(x,kpt('l_st',{s:kpt('s_zug')}),['kpt','l_st',{s:kpt('s_zug')}])}$();el.remove();v()}})}
 Hooks.act('vgdoc',d=>{const x=vgGet(d.id);x&&vgDocSheet(x)});Hooks.act('vgdocx',d=>{const x=vgGet(d.id);if(!x)return;x.docs=(x.docs||[]).filter(z=>z!==d.d);$();v()});
 Hooks.act('vganladd',d=>{const x=vgGet(d.id),inp=document.querySelector('[data-anlt]');if(!x||!inp||!inp.value.trim())return;(x.anl=x.anl||[]).push({t:inp.value.trim(),doc:''});$();v()});
 Hooks.act('vganl',dd=>{const x=vgGet(dd.id),a=x&&(x.anl||[])[+dd.j];if(!a)return;if(a.doc){a.doc='';$();v();return}const D=(x.docs||[]).map(id=>Ke().items.find(z=>z.id===id)).filter(Boolean);if(!D.length){vgDocSheet(x);return}
@@ -189,10 +189,10 @@ function kpDocPut(){try{if(m.route!=='bdoc'||!m.bdid)return;const sc=document.qu
  else if(/brief|schreiben|bescheid|letter|письм|mahnung|antrag|kündigung|kuendigung|einspruch|widerspruch/i.test([d.title,d.dtname,d.kind].join(' '))||d.party)html=`<button type="button" class="vabtn kpdc kpasvg" data-act="kpasvg" data-id="${d.id}">📂 ${i(kpt('asVg'))}</button>`;
  if(!html)return;const w=sc.querySelector('.akdcw');if(w)w.insertAdjacentHTML('beforeend',html);else{const t=sc.querySelector(':scope>.bgtitle,:scope>.sub-hdr');(t||sc.firstElementChild).insertAdjacentHTML('afterend',`<div class="akdcw">${html}</div>`)}}catch(e){Hooks.err('kpdoc',e)}}
 Hooks.on('render',()=>setTimeout(kpDocPut,20));
-Hooks.act('kpvgyes',dd=>{const x=vgGet(dd.v),d=Ke().items.find(z=>z.id===dd.id);if(!x||!d)return;(x.docs=x.docs||[]).push(d.id);vgLog(x,kpt('l_doc',{t:d.title||'—'}));if(['vers','zug','wart'].includes(x.st)){x.st='antw';vgLog(x,kpt('l_st',{s:kpt('s_antw')}))}$();v()});
+Hooks.act('kpvgyes',dd=>{const x=vgGet(dd.v),d=Ke().items.find(z=>z.id===dd.id);if(!x||!d)return;(x.docs=x.docs||[]).push(d.id);vgLog(x,kpt('l_doc',{t:d.title||'—'}),['kpt','l_doc',{t:d.title||'—'}]);if(['vers','zug','wart'].includes(x.st)){x.st='antw';vgLog(x,kpt('l_st',{s:kpt('s_antw')}),['kpt','l_st',{s:kpt('s_antw')}])}$();v()});
 Hooks.act('kpvgno',dd=>{const d=Ke().items.find(z=>z.id===dd.id);if(!d)return;d.vgNo=1;$();v()});
 Hooks.act('kpasvg',dd=>{const d=Ke().items.find(z=>z.id===dd.id);if(!d)return;const p=d.party||'',wk=p?kpAll().find(x=>kpMatchName(x.n,p)):null;const t=/einspruch|widerspruch/i.test(d.title||'')?'einspr':/kündigung|kuendigung/i.test(d.title||'')?'kuend':/rechnung|mahnung/i.test(d.title||'')?'rech':/bescheid|bestätigung/i.test(d.title||'')?'besch':/antrag/i.test(d.title||'')?'antrag':'sonst';
- const x=vgCreate({t:d.title||'—',cat:t,who:wk?wk.key:'',whoN:wk?wk.n:p,az:kpAz(d),docs:[d.id],st:'pruef'});vgLog(x,kpt('l_doc',{t:d.title||'—'}));$();T(kpt('asVgOk'));vgSel=x.id;R('vgd')});
+ const x=vgCreate({t:d.title||'—',cat:t,who:wk?wk.key:'',whoN:wk?wk.n:p,az:kpAz(d),docs:[d.id],st:'pruef'});vgLog(x,kpt('l_doc',{t:d.title||'—'}),['kpt','l_doc',{t:d.title||'—'}]);$();T(kpt('asVgOk'));vgSel=x.id;R('vgd')});
 /* entries: Post screen, Familie screen, search places */
 Hooks.on('screen',h=>{try{if(typeof h!=='string')return h;const row=(act,ic,t,s)=>`<button type="button" class="vaabot abent" ${act}><span><b>${ic} ${i(t)}</b><small>${i(s)}</small></span><span class="akch">›</span></button>`;
  if(m.route==='post'){const n=kpVg().filter(x=>vgTab(x)!=='done').length;const e=h.lastIndexOf('</div>');return h.slice(0,e)+row('data-act="go" data-to="vg"','📂',kpt('postRow')+(n?' · '+n:''),kpt('postRowS'))+row('data-act="go" data-to="kon"','👥',kpt('konRow'),kpt('konRowS'))+h.slice(e)}

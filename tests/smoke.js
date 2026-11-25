@@ -1257,6 +1257,16 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
   check('…and becomes a PDF',(await T(()=>window.__T.ub.pdf()))>1000);
   await T(()=>{const G=window.__T.g(),K=window.__T.Ke();G.rules=[];delete G.kauf;G.vg=(G.vg||[]).filter(x=>!(x.docs||[]).includes('hd1'));for(let j=K.items.length-1;j>=0;j--)if(K.items[j].id==='hd1')K.items.splice(j,1);window.__T.save();window.__T.R('home')})}
 
+ where='v90 sprache';{await T(()=>{const G=window.__T.g();const d={id:'lxd',title:'Personalausweis',pages:[],files:[],ts:Date.now()};window.__T.Ke().items.push(d);d.end=new Date(Date.now()+400*864e5).toISOString().slice(0,10);
+   G.events=(G.events||[]).filter(e=>e.id!=='dcv_'+d.id);G.events.push({id:'dcv_'+d.id,title:(d.title||'—')+' · Срок действия',date:d.end,type:'event',yearly:!1,dcdoc:d.id});
+   G.eiLog=G.eiLog||[];G.eiLog.unshift({id:'lx1',ts:Date.now(),k:'arch',t:'Убрано в архив: X',u:{},tk:['eit','l_arch',{t:'X'}]});
+   G.tasks=G.tasks||[];G.tasks.push({id:'lxt',t:'Ответить: Y',tk:['tlxt','taskT',{t:'Y'}],tkT:'Ответить: Y',done:!1},{id:'lxu',t:'Meine eigene Aufgabe',tk:['tlxt','taskT',{t:'Z'}],tkT:'Ответить: Z',done:!1});
+   G.lxL='ru';G.lang='de';window.__T.save();window.__T.R('home')});await p.waitForTimeout(600);
+  const r=await T(()=>{const G=window.__T.g();return{ev:G.events.filter(e=>e.dcdoc).map(e=>e.title).join('|'),lg:G.eiLog.find(x=>x.id==='lx1').t,t1:G.tasks.find(x=>x.id==='lxt').t,t2:G.tasks.find(x=>x.id==='lxu').t}});
+  check('automatic calendar entries follow the language',!/[А-Яа-я]/.test(r.ev),r.ev);check('Butler’s journal follows the language',!/[А-Яа-я]/.test(r.lg),r.lg);
+  check('a task Butler wrote follows the language',r.t1==='Antworten: Y',r.t1);check('…a task the user changed stays as it is',r.t2==='Meine eigene Aufgabe');
+  await T(()=>{const G=window.__T.g();G.tasks=G.tasks.filter(x=>!/^lx/.test(x.id));G.eiLog=G.eiLog.filter(x=>x.id!=='lx1');const K=window.__T.Ke();for(let j=K.items.length-1;j>=0;j--)if(K.items[j].id==='lxd')K.items.splice(j,1);window.__T.save()})}
+
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

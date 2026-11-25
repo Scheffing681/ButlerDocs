@@ -113,3 +113,4 @@ docs/kalender-nz.js
 docs/kauf-gesund.js
 docs/werkzeuge.js
 docs/butler-rechte.js
+docs/sprache-fix.js

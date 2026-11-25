@@ -63,7 +63,7 @@ function eiMatch(d,o){let C=[];try{C=vaContracts()}catch{}if(!C.length)return nu
 /* ---------- states ---------- */
 try{const _st=egState;egState=function(d,A){const r=_st.apply(this,arguments);try{if(r.s!=='ok')return r;const o=eiRead(d),nd=eiDig(o.num);if(nd.length>=4&&o.amt){const tw=A.find(x=>x!==d&&!x.type&&!x.insId&&x.ok&&(()=>{const p=eiRead(x);return eiDig(p.num)===nd&&p.amt===o.amt&&(p.due||'')===(o.due||'')})());if(tw)return{s:'dup',tw,num:1}}}catch(e){Hooks.err('eist',e)}return r}}catch(e){Hooks.err('eist0',e)}
 const eiLogD=()=>{if(!Array.isArray(g.eiLog))g.eiLog=[];const lim=Date.now()-90*864e5;g.eiLog=g.eiLog.filter(x=>x&&x.ts>lim);return g.eiLog};
-const eiAddLog=(k,t,u)=>{eiLogD().unshift({id:V(),ts:Date.now(),k,t,u:u||{}})};
+const eiAddLog=(k,t,u,tk)=>{const o={id:V(),ts:Date.now(),k,t,u:u||{}};if(tk)o.tk=tk;eiLogD().unshift(o)};
 function eiDone(){let A=[];try{A=Ke().items}catch{}const lim=Date.now()-30*864e5;return A.filter(d=>d&&!d.type&&!d.insId&&d.ok&&!d.arch&&(d.okTs||0)>lim).sort((a,b)=>(b.okTs||0)-(a.okTs||0))}
 function eiArch(){let A=[];try{A=Ke().items}catch{}return A.filter(d=>d&&!d.type&&!d.insId&&d.arch).sort((a,b)=>(b.okTs||0)-(a.okTs||0))}
 function eiRow(d,st){const o=eiRead(d),mt=eiMatch(d,o);let pill='',why='';
@@ -83,7 +83,7 @@ egScreen=function(){const L2=egList(),tab=m.egTab||'neu',N=L2.filter(x=>x.s==='o
 /* confirm from the list also writes the journal */
 
 Hooks.act('egok',d=>eiConfirm([d.id]));Hooks.act('egall',()=>eiConfirm(egList().filter(x=>x.s==='ok').map(x=>x.d.id)));
-function eiConfirm(ids){const D=Ke().items.filter(d=>ids.includes(d.id));D.forEach(d=>{d.ok=1;d.okTs=Date.now();eiAddLog('ok',eit('l_ok',{t:d.title||'—'}),{doc:d.id})});$();v();try{lnqBar(egt('done',{n:D.length}),()=>{D.forEach(d=>{delete d.ok;delete d.okTs});eiLogD().forEach(x=>{if(x.k==='ok'&&D.some(d=>d.id===(x.u||{}).doc))x.done=1});$();v()})}catch{T(eit('okN',{n:D.length}))}}
+function eiConfirm(ids){const D=Ke().items.filter(d=>ids.includes(d.id));D.forEach(d=>{d.ok=1;d.okTs=Date.now();eiAddLog('ok',eit('l_ok',{t:d.title||'—'}),{doc:d.id},['eit','l_ok',{t:d.title||'—'}])});$();v();try{lnqBar(egt('done',{n:D.length}),()=>{D.forEach(d=>{delete d.ok;delete d.okTs});eiLogD().forEach(x=>{if(x.k==='ok'&&D.some(d=>d.id===(x.u||{}).doc))x.done=1});$();v()})}catch{T(eit('okN',{n:D.length}))}}
 /* ---------- the card ---------- */
 let eiSel=null;
 function eiCard(d){const o=eiRead(d),mt=eiMatch(d,o),c=mt&&mt.c;let fold='';try{fold=we('c_'+ho(d))}catch{}
@@ -113,13 +113,13 @@ const eiCat=(d,o)=>{const t=[d.title,o.party,eiTxt(d).slice(0,300)].join(' ');tr
 Hooks.act('eiopen',d=>{eiSel=d.id;m.eiOpt=null;const doc=Ke().items.find(x=>x.id===d.id);R('eik');try{if(doc&&doc.hasText&&!(Fa.text&&Fa.text[doc.id]!=null)&&typeof vl==='function')vl(doc).then(()=>{if(m.route==='eik'&&eiSel===doc.id){m.eiOpt=null;v()}})}catch{}});
 document.addEventListener('change',e=>{try{const c=e.target.closest&&e.target.closest('[data-eio]');if(!c||m.route!=='eik'||!m.eiOpt)return;m.eiOpt[c.dataset.eio]=c.checked;if(c.dataset.eio==='link')v()}catch{}},!0);
 Hooks.act('eigo',dd=>{const d=Ke().items.find(x=>x.id===dd.id);if(!d)return;const o=eiRead(d),mt=eiMatch(d,o),c=mt&&mt.c,S=m.eiOpt||{},nm=d.title||'—';let n=0;
- try{if(S.link&&c){const prev=d.ctr;d.ctr=c.id;eiAddLog('link',eit('l_link',{t:nm,n:c.co||c.title||'—'}),{doc:d.id,prev});n++}
-  if(S.price&&c&&o.newP&&o.newFrom){c.prices=Array.isArray(c.prices)?c.prices:[];if(!c.prices.some(p=>p.from===o.newFrom)){const per='m';c.prices.push({from:o.newFrom,amt:o.newP,per});eiAddLog('price',eit('l_price',{a:vaEur(o.newP),n:c.co||'—'}),{ctr:c.id,from:o.newFrom});n++}}
-  if(S.rem&&o.due&&o.amt){const due=vaDays(o.due)>=3?vaAdd(o.due,-2):vaIso(0),t=eit('remT',{t:nm,a:vaEur(o.amt)}),id=V();g.tasks=Array.isArray(g.tasks)?g.tasks:[];g.tasks.push({id,t,due,done:!1,ts:Date.now()});eiAddLog('rem',eit('l_rem',{d:vaDate(due),t:nm}),{task:id});n++}
-  if(S.aus&&!(S.link&&c)&&o.amt){const id=V();vaAD().e.push({id,d:(o.due&&o.due<=vaIso(0))?o.due:vaIso(0),a:o.amt,c:eiCat(d,o),w:o.party||nm,ts:Date.now(),doc:d.id});eiAddLog('aus',eit('l_aus',{a:vaEur(o.amt)}),{aus:id});n++}
-  if(S.task){const id=V();g.tasks=Array.isArray(g.tasks)?g.tasks:[];g.tasks.push({id,t:eit('taskT',{t:nm}),due:vaIso(7),done:!1,ts:Date.now()});eiAddLog('task',eit('l_task',{t:nm}),{task:id});n++}
-  d.ok=1;d.okTs=Date.now();eiAddLog('ok',eit('l_ok',{t:nm}),{doc:d.id});$();T(eit('okN',{n:n+1}));m.eiOpt=null;eiSel=null;const h=m.hist||[];if(h.length&&h[h.length-1].route==='eing')h.pop();R('eing',void 0,!0)}catch(e){Hooks.err('eigo',e)}});
-Hooks.act('eiarch',dd=>{const d=Ke().items.find(x=>x.id===dd.id);if(!d)return;d.ok=1;d.arch=1;d.okTs=d.okTs||Date.now();eiAddLog('arch',eit('l_arch',{t:d.title||'—'}),{doc:d.id});$();eiSel=null;R('eing',void 0,!0)});
+ try{if(S.link&&c){const prev=d.ctr;d.ctr=c.id;eiAddLog('link',eit('l_link',{t:nm,n:c.co||c.title||'—'}),{doc:d.id,prev},['eit','l_link',{t:nm,n:c.co||c.title||'—'}]);n++}
+  if(S.price&&c&&o.newP&&o.newFrom){c.prices=Array.isArray(c.prices)?c.prices:[];if(!c.prices.some(p=>p.from===o.newFrom)){const per='m';c.prices.push({from:o.newFrom,amt:o.newP,per});eiAddLog('price',eit('l_price',{a:vaEur(o.newP),n:c.co||'—'}),{ctr:c.id,from:o.newFrom},['eit','l_price',{a:vaEur(o.newP),n:c.co||'—'}]);n++}}
+  if(S.rem&&o.due&&o.amt){const due=vaDays(o.due)>=3?vaAdd(o.due,-2):vaIso(0),t=eit('remT',{t:nm,a:vaEur(o.amt)}),id=V();g.tasks=Array.isArray(g.tasks)?g.tasks:[];g.tasks.push({id,t,due,done:!1,ts:Date.now()});eiAddLog('rem',eit('l_rem',{d:vaDate(due),t:nm}),{task:id},['eit','l_rem',{d:vaDate(due),t:nm}]);n++}
+  if(S.aus&&!(S.link&&c)&&o.amt){const id=V();vaAD().e.push({id,d:(o.due&&o.due<=vaIso(0))?o.due:vaIso(0),a:o.amt,c:eiCat(d,o),w:o.party||nm,ts:Date.now(),doc:d.id});eiAddLog('aus',eit('l_aus',{a:vaEur(o.amt)}),{aus:id},['eit','l_aus',{a:vaEur(o.amt)}]);n++}
+  if(S.task){const id=V();g.tasks=Array.isArray(g.tasks)?g.tasks:[];g.tasks.push({id,t:eit('taskT',{t:nm}),tk:['eit','taskT',{t:nm}],tkT:eit('taskT',{t:nm}),due:vaIso(7),done:!1,ts:Date.now()});eiAddLog('task',eit('l_task',{t:nm}),{task:id},['eit','l_task',{t:nm}]);n++}
+  d.ok=1;d.okTs=Date.now();eiAddLog('ok',eit('l_ok',{t:nm}),{doc:d.id},['eit','l_ok',{t:nm}]);$();T(eit('okN',{n:n+1}));m.eiOpt=null;eiSel=null;const h=m.hist||[];if(h.length&&h[h.length-1].route==='eing')h.pop();R('eing',void 0,!0)}catch(e){Hooks.err('eigo',e)}});
+Hooks.act('eiarch',dd=>{const d=Ke().items.find(x=>x.id===dd.id);if(!d)return;d.ok=1;d.arch=1;d.okTs=d.okTs||Date.now();eiAddLog('arch',eit('l_arch',{t:d.title||'—'}),{doc:d.id},['eit','l_arch',{t:d.title||'—'}]);$();eiSel=null;R('eing',void 0,!0)});
 /* ---------- the journal ---------- */
 const EI_IC={move:'📁',new:'✨',kauf:'🛍',vg:'📂',link:'🔗',price:'▲',rem:'⏰',aus:'💶',task:'✓',ok:'📥',arch:'🗄'};
 function eiJournal(){const L2=eiLogD(),day=ts=>{const a=new Date(ts);a.setHours(0,0,0,0);const n=new Date();n.setHours(0,0,0,0);const k=Math.round((n-a)/864e5);return k===0?'today':k===1?'yest':'earlier'};

@@ -154,9 +154,9 @@ Hooks.act('tlxrp',d=>{const r=tlxRules().find(x=>x.id===d.id);if(!r)return;r.pau
 function tlxApply(){const L2=tlxRules().filter(r=>!r.pause);if(!L2.length)return 0;let n=0;tlxDocs().forEach(d=>{if(d.rlx)return;const ts=d.ts||0;const hay=tlxHay(d);
  const r=L2.find(r=>ts>=r.ts&&hay.includes(tlxNorm(r.w)));if(!r)return;d.rlx=r.id;let did=0;
  try{if(r.f&&d.folder!==r.f){d.folder=r.f;did=1;tlxLog('move',(d.title||'—')+' → '+tlxFn(r.f))}
-  if(r.ctr&&!d.ctr){if(tlxCtrs().some(c=>c.id===r.ctr)){d.ctr=r.ctr;did=1;eiAddLog('link',eit('l_link',{t:d.title||'—',n:tlxCtrN(r.ctr)}),{doc:d.id,prev:''})}else r.err=tlxt('errCtr')}
-  if(r.task){const id=V();g.tasks=Array.isArray(g.tasks)?g.tasks:[];g.tasks.push({id,t:tlxt('taskT',{t:d.title||'—'}),due:vaIso(7),done:!1,ts:Date.now()});did=1;eiAddLog('new',tlxt('l_task',{t:d.title||'—'}),{col:'tasks',id})}
-  if(r.vg){const x=vgCreate({t:d.title||'—',docs:[d.id],who:'',whoN:d.party||''});did=1;eiAddLog('vg',tlxt('l_vg',{t:d.title||'—'}),{id:x.id})}}catch(e){r.err=String(e&&e.message||e).slice(0,60)}
+  if(r.ctr&&!d.ctr){if(tlxCtrs().some(c=>c.id===r.ctr)){d.ctr=r.ctr;did=1;eiAddLog('link',eit('l_link',{t:d.title||'—',n:tlxCtrN(r.ctr)}),{doc:d.id,prev:''},['eit','l_link',{t:d.title||'—',n:tlxCtrN(r.ctr)}])}else r.err=tlxt('errCtr')}
+  if(r.task){const id=V();g.tasks=Array.isArray(g.tasks)?g.tasks:[];g.tasks.push({id,t:tlxt('taskT',{t:d.title||'—'}),tk:['tlxt','taskT',{t:d.title||'—'}],tkT:tlxt('taskT',{t:d.title||'—'}),due:vaIso(7),done:!1,ts:Date.now()});did=1;eiAddLog('new',tlxt('l_task',{t:d.title||'—'}),{col:'tasks',id},['tlxt','l_task',{t:d.title||'—'}])}
+  if(r.vg){const x=vgCreate({t:d.title||'—',docs:[d.id],who:'',whoN:d.party||''});did=1;eiAddLog('vg',tlxt('l_vg',{t:d.title||'—'}),{id:x.id},['tlxt','l_vg',{t:d.title||'—'}])}}catch(e){r.err=String(e&&e.message||e).slice(0,60)}
  if(did){r.n=(r.n||0)+1;r.last=Date.now();n++}});if(n)$();return n}
 let tlxAT=0;Hooks.on('render',()=>{clearTimeout(tlxAT);tlxAT=setTimeout(()=>{try{tlxApply()}catch(e){Hooks.err('tlxapply',e)}},400)});
 /* ---- routes, entries ---- */

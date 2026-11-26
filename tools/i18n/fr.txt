@@ -2254,3 +2254,23 @@
 2253	Pour « %n » il manque : %l
 2254	« %n » est entièrement lié.
 2255	Mandat de protection
+2256	Domaines
+2257	Documents personnels
+2258	Travail et salaire
+2259	Impôts
+2260	Prévoyance et succession
+2261	Un seul original – chaque domaine le voit par un lien.
+2262	Aucun document ici pour l’instant.
+2263	Rien ne correspond à ce filtre.
+2264	Lié à rien pour l’instant.
+2265	Domaine
+2266	Dans quel domaine ?
+2267	Bien
+2268	Disposition
+2269	Consigne
+2270	Achat
+2271	Dossier
+2272	Tout sur la voiture
+2273	Tout sur le logement
+2274	(depuis Documents)
+2275	%n liens

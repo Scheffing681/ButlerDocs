@@ -2254,3 +2254,23 @@
 2253	“%n” için eksik: %l
 2254	“%n” tamamen bağlı.
 2255	Vekâletname
+2256	Alanlar
+2257	Kişisel belgeler
+2258	İş ve maaş
+2259	Vergiler
+2260	Vasiyet ve miras
+2261	Tek asıl – tüm alanlar onu bir bağlantıyla görür.
+2262	Burada henüz belge yok.
+2263	Bu filtreye uyan bir şey yok.
+2264	Henüz hiçbir şeye bağlı değil.
+2265	Alan
+2266	Hangi alana?
+2267	Varlık
+2268	Vasiyet
+2269	Talimat
+2270	Satın alma
+2271	Klasör seti
+2272	Araba hakkında her şey
+2273	Ev hakkında her şey
+2274	(Belgeler’den)
+2275	%n bağlantı

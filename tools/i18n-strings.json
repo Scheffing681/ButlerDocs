@@ -29,7 +29,8 @@
    "nav-edit.js",
    "notizen.js",
    "start.js",
-   "ueberblick.js"
+   "ueberblick.js",
+   "zentrale.js"
   ]
  },
  "Own": {
@@ -85,7 +86,8 @@
    "abschluss.js",
    "behoerden-kat.js",
    "business.js",
-   "nachlass-plus.js"
+   "nachlass-plus.js",
+   "zentrale.js"
   ]
  },
  "Bank statements": {
@@ -135,7 +137,8 @@
    "kauf-gesund.js",
    "kontakte-post.js",
    "notizen.js",
-   "start.js"
+   "start.js",
+   "zentrale.js"
   ]
  },
  "%n documents": {
@@ -563,7 +566,8 @@
   "ru": "Договор",
   "de": "Vertrag",
   "files": [
-   "akte.js"
+   "akte.js",
+   "zentrale.js"
   ]
  },
  "%a / month": {
@@ -831,7 +835,8 @@
   "files": [
    "akte.js",
    "nachlass-plus.js",
-   "ueberblick.js"
+   "ueberblick.js",
+   "zentrale.js"
   ]
  },
  "%a since January": {
@@ -874,7 +879,8 @@
    "move-phone.js",
    "reliability.js",
    "vertraege-abos.js",
-   "werkzeuge.js"
+   "werkzeuge.js",
+   "zentrale.js"
   ]
  },
  "Documents": {
@@ -1208,7 +1214,8 @@
    "finanzen.js",
    "kontakte-post.js",
    "linkup.js",
-   "vertraege-abos.js"
+   "vertraege-abos.js",
+   "zentrale.js"
   ]
  },
  "Sick": {
@@ -1734,7 +1741,8 @@
    "behoerden.js",
    "start-glas.js",
    "start.js",
-   "suche-smart.js"
+   "suche-smart.js",
+   "zentrale.js"
   ]
  },
  "tomorrow": {
@@ -1759,7 +1767,8 @@
    "kontakte-post.js",
    "post.js",
    "scan-glas.js",
-   "start-glas.js"
+   "start-glas.js",
+   "zentrale.js"
   ]
  },
  "Still empty – 3 first steps": {
@@ -2381,7 +2390,8 @@
   "files": [
    "behoerden-briefe.js",
    "behoerden-termine.js",
-   "business.js"
+   "business.js",
+   "zentrale.js"
   ]
  },
  "What to keep": {
@@ -2793,7 +2803,8 @@
   "ru": "подобрано автоматически",
   "de": "automatisch zugeordnet",
   "files": [
-   "behoerden-kat.js"
+   "behoerden-kat.js",
+   "zentrale.js"
   ]
  },
  "Decisions (Bescheide)": {
@@ -3210,7 +3221,8 @@
   "files": [
    "behoerden-termine.js",
    "behoerden.js",
-   "nachlass-plus.js"
+   "nachlass-plus.js",
+   "zentrale.js"
   ]
  },
  "Whom to notify: pension, health insurer, tax office …": {
@@ -4601,7 +4613,8 @@
   "ru": "Образование",
   "de": "Ausbildung",
   "files": [
-   "business.js"
+   "business.js",
+   "zentrale.js"
   ]
  },
  "💼 I have my own business": {
@@ -5568,7 +5581,8 @@
   "de": "Verknüpft",
   "files": [
    "business.js",
-   "kontakte-post.js"
+   "kontakte-post.js",
+   "zentrale.js"
   ]
  },
  "remove here (document stays)": {
@@ -6805,7 +6819,8 @@
   "files": [
    "eingang-smart.js",
    "kalender-nz.js",
-   "kontakte-post.js"
+   "kontakte-post.js",
+   "zentrale.js"
   ]
  },
  "Archive": {
@@ -8863,14 +8878,16 @@
   "ru": "Идёт",
   "de": "Läuft",
   "files": [
-   "kauf-gesund.js"
+   "kauf-gesund.js",
+   "zentrale.js"
   ]
  },
  "Expired": {
   "ru": "Истекла",
   "de": "Vorbei",
   "files": [
-   "kauf-gesund.js"
+   "kauf-gesund.js",
+   "zentrale.js"
   ]
  },
  "＋ Purchase": {
@@ -9361,7 +9378,8 @@
   "ru": "Дело",
   "de": "Vorgang",
   "files": [
-   "kontakte-post.js"
+   "kontakte-post.js",
+   "zentrale.js"
   ]
  },
  "What was it about? (short)": {
@@ -11148,7 +11166,8 @@
   "ru": "Транспорт",
   "de": "Fahrzeuge",
   "files": [
-   "nachlass-plus.js"
+   "nachlass-plus.js",
+   "zentrale.js"
   ]
  },
  "Digital accounts": {
@@ -11211,7 +11230,8 @@
   "ru": "Связанные документы",
   "de": "Verknüpfte Dokumente",
   "files": [
-   "nachlass-plus.js"
+   "nachlass-plus.js",
+   "zentrale.js"
   ]
  },
  "＋ document": {
@@ -11582,7 +11602,8 @@
   "ru": "Финансы",
   "de": "Finanzen",
   "files": [
-   "nachlass-plus.js"
+   "nachlass-plus.js",
+   "zentrale.js"
   ]
  },
  "Dates": {
@@ -12071,7 +12092,8 @@
   "ru": "Папки",
   "de": "Ordner",
   "files": [
-   "notizen.js"
+   "notizen.js",
+   "zentrale.js"
   ]
  },
  "all": {
@@ -12366,7 +12388,8 @@
   "ru": "Связано с",
   "de": "Verknüpft mit",
   "files": [
-   "notizen.js"
+   "notizen.js",
+   "zentrale.js"
   ]
  },
  "Link with …": {
@@ -12969,7 +12992,8 @@
   "ru": "Недавние",
   "de": "Zuletzt",
   "files": [
-   "scan-glas.js"
+   "scan-glas.js",
+   "zentrale.js"
   ]
  },
  "Nothing scanned yet": {
@@ -16219,6 +16243,146 @@
   "de": "Sperrcode im Profil, Tresor für wichtige Dokumente, eigener Code für „Gesundheit“.",
   "files": [
    "werkzeuge.js"
+  ]
+ },
+ "Areas": {
+  "ru": "Разделы",
+  "de": "Bereiche",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Personal documents": {
+  "ru": "Личные документы",
+  "de": "Persönliche Dokumente",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Work & pay": {
+  "ru": "Работа и зарплата",
+  "de": "Arbeit & Gehalt",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Taxes": {
+  "ru": "Налоги",
+  "de": "Steuern",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Provisions & estate": {
+  "ru": "Распоряжения и наследство",
+  "de": "Vorsorge & Nachlass",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "One original – every area sees it through a link.": {
+  "ru": "Один оригинал — все разделы видят его по ссылке.",
+  "de": "Ein Original – alle Bereiche sehen es über eine Verknüpfung.",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "No documents here yet.": {
+  "ru": "Здесь пока нет документов.",
+  "de": "Hier sind noch keine Dokumente.",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Nothing matches this filter.": {
+  "ru": "Под этот фильтр ничего не подходит.",
+  "de": "Zu diesem Filter passt nichts.",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Not linked to anything yet.": {
+  "ru": "Пока ни с чем не связано.",
+  "de": "Noch mit nichts verknüpft.",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Area": {
+  "ru": "Раздел",
+  "de": "Bereich",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Which area?": {
+  "ru": "В какой раздел?",
+  "de": "In welchen Bereich?",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Asset": {
+  "ru": "Имущество",
+  "de": "Vermögen",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Directive": {
+  "ru": "Распоряжение",
+  "de": "Verfügung",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Instruction": {
+  "ru": "Указание",
+  "de": "Anweisung",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Purchase": {
+  "ru": "Покупка",
+  "de": "Kauf",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "Folder set": {
+  "ru": "Папка-подборка",
+  "de": "Mappe",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "All about the car": {
+  "ru": "Всё об автомобиле",
+  "de": "Alles zum Auto",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "All about the home": {
+  "ru": "Всё о жилье",
+  "de": "Alles zur Wohnung",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "(from Documents)": {
+  "ru": "(из «Документов»)",
+  "de": "(aus Dokumente)",
+  "files": [
+   "zentrale.js"
+  ]
+ },
+ "%n links": {
+  "ru": "связей: %n",
+  "de": "%n Verknüpfungen",
+  "files": [
+   "zentrale.js"
   ]
  }
 }

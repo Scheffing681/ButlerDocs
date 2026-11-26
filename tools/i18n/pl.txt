@@ -2254,3 +2254,23 @@
 2253	Dla „%n” brakuje: %l
 2254	„%n” jest w pełni powiązane.
 2255	Pełnomocnictwo
+2256	Obszary
+2257	Dokumenty osobiste
+2258	Praca i wynagrodzenie
+2259	Podatki
+2260	Dyspozycje i spadek
+2261	Jeden oryginał – wszystkie obszary widzą go przez powiązanie.
+2262	Tu nie ma jeszcze dokumentów.
+2263	Nic nie pasuje do tego filtra.
+2264	Jeszcze z niczym niepowiązane.
+2265	Obszar
+2266	Do którego obszaru?
+2267	Majątek
+2268	Dyspozycja
+2269	Wskazówka
+2270	Zakup
+2271	Teczka
+2272	Wszystko o aucie
+2273	Wszystko o mieszkaniu
+2274	(z Dokumentów)
+2275	%n powiązań

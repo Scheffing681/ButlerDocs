@@ -2254,3 +2254,23 @@
 2253	Para «%n» falta: %l
 2254	«%n» está totalmente vinculado.
 2255	Poder preventivo
+2256	Áreas
+2257	Documentos personales
+2258	Trabajo y salario
+2259	Impuestos
+2260	Previsión y herencia
+2261	Un solo original: todas las áreas lo ven mediante un enlace.
+2262	Aquí aún no hay documentos.
+2263	Nada coincide con este filtro.
+2264	Aún no está vinculado a nada.
+2265	Área
+2266	¿En qué área?
+2267	Bien
+2268	Disposición
+2269	Instrucción
+2270	Compra
+2271	Carpeta
+2272	Todo sobre el coche
+2273	Todo sobre la vivienda
+2274	(de Documentos)
+2275	%n vínculos

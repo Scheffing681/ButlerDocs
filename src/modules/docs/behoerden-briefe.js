@@ -19,7 +19,7 @@ const bsvS3={
  lets:['Письма и решения','Schreiben & Bescheide','Letters & decisions'],
  br:['Письмо','Brief','Letter'],tpl:['Шаблон','Vorlage','Template'],ref:['Решение / письмо от','Bescheid / Schreiben vom','Decision / letter of'],az:['Номер дела','Aktenzeichen','Reference'],
  txt:['Текст письма','Brieftext','Letter text'],via:['Как отправить','Versand','How to send'],
- v_ein:['Einschreiben','Einschreiben','Registered'],v_post:['Обычной почтой','Brief','Post'],v_mail:['E-mail','E-Mail','Email'],v_fax:['Факс','Fax','Fax'],v_hand:['Лично','Persönlich','In person'],
+ v_ein:['Заказное письмо (Einschreiben)','Einschreiben','Registered'],v_post:['Обычной почтой','Brief','Post'],v_mail:['E-mail','E-Mail','Email'],v_fax:['Факс','Fax','Fax'],v_hand:['Лично','Persönlich','In person'],
  print:['PDF / печать','PDF / Drucken','PDF / print'],mail:['E-mail','E-Mail','Email'],copy:['Копировать','Kopieren','Copy'],sent:['Отправлено','Gesendet','Sent'],
  trk:['Номер отправления (Einschreiben)','Sendungsnummer (Einschreiben)','Tracking number'],sentOk:['Записано в журнал и в «Письма»','Im Verlauf und unter „Briefe“ gespeichert','Saved to the log and “Letters”'],
  noAddr:['Свой адрес впишите в «Мои данные» — он встанет в письмо сам.','Ihre Adresse unter „Meine Angaben“ eintragen – dann steht sie im Brief.','Add your address under “My details” – it then goes into the letter.'],

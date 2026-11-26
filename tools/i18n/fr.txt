@@ -1922,3 +1922,21 @@
 1921	Règle : tâche « Répondre : %t »
 1922	Règle : dossier « %t »
 1923	Saisissez un mot et choisissez au moins une action
+1924	Jour de l’An
+1925	Vendredi saint
+1926	Lundi de Pâques
+1927	Fête du Travail
+1928	Ascension
+1929	Lundi de Pentecôte
+1930	Jour de l’Unité allemande
+1931	Noël
+1932	Lendemain de Noël
+1933	Épiphanie
+1934	Journée internationale des femmes
+1935	Fête-Dieu
+1936	Assomption
+1937	Journée mondiale de l’enfance
+1938	Fête de la Réformation
+1939	Toussaint
+1940	Jour de pénitence et de prière
+1941	Le dossier « %n » existe déjà – ouvert

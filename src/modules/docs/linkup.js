@@ -15,7 +15,7 @@ const LNQ={
  bar:['Показано и у %n','Auch bei %n gezeigt','Also shown at %n'],undo:['Отменить','Rückgängig','Undo'],
  also:['Показан также в','Erscheint auch in','Also shown in'],more:['＋ Ещё место','＋ Weitere Stelle','＋ Another place'],xS:['× убирает отсюда – документ остаётся.','× nimmt es dort weg – das Dokument bleibt.','× removes it there – the document stays.'],
  none:['Пока только в «Документах»','Bisher nur in «Dokumente»','Only in «Documents» so far'],tax:['→ также в Steuer-Mappe %y','→ auch in der Steuer-Mappe %y','→ also in the tax folder %y'],
- where:['Куда ещё?','Wo noch zeigen?','Where else?'],emp:['Работодатель','Arbeitgeber','Employer'],biz:['Mein Business','Mein Business','My business'],slot:['Какое место?','Welcher Platz?','Which place?'],other:['Прочее','Sonstiges','Other'],
+ where:['Куда ещё?','Wo noch zeigen?','Where else?'],emp:['Работодатель','Arbeitgeber','Employer'],biz:['Мой бизнес','Mein Business','My business'],slot:['Какое место?','Welcher Platz?','Which place?'],other:['Прочее','Sonstiges','Other'],
  noPl:['Подходящих мест нет. Работодателя можно добавить в «Arbeit & Business».','Keine passenden Stellen. Einen Arbeitgeber legen Sie in «Arbeit & Business» an.','No matching places. Add an employer in «Work & business».'],
  vsg:['Завещание и доверенности','Testament & Vorsorge','Will & powers'],ban:['%n док. подходят к %c','%n Dokumente passen zu %c','%n documents match %c'],banS:['Они уже в «Документах» – связать?','Sie liegen schon in «Dokumente» – verknüpfen?','They are already in «Documents» – link them?'],
  banGo:['Связать %n','%n verknüpfen','Link %n'],later:['Позже','Später','Later'],linked:['Связано: %n','Verknüpft: %n','Linked: %n']

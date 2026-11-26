@@ -1268,7 +1268,7 @@
   ]
  },
  "Registered": {
-  "ru": "Einschreiben",
+  "ru": "Заказное письмо (Einschreiben)",
   "de": "Einschreiben",
   "files": [
    "behoerden-briefe.js"
@@ -2563,7 +2563,7 @@
   ]
  },
  "Tax ID, customer number, file reference …": {
-  "ru": "Steuer-ID, Kundennummer, Aktenzeichen …",
+  "ru": "Steuer-ID, номер клиента, номер дела …",
   "de": "Steuer-ID, Kundennummer, Aktenzeichen …",
   "files": [
    "behoerden.js"
@@ -3205,7 +3205,7 @@
   ]
  },
  "Small business § 19 UStG": {
-  "ru": "Kleinunternehmer § 19 UStG",
+  "ru": "Малый предприниматель (Kleinunternehmer § 19 UStG)",
   "de": "Kleinunternehmer § 19 UStG",
   "files": [
    "business.js"
@@ -3261,7 +3261,7 @@
   ]
  },
  "VAT pre-return": {
-  "ru": "USt-Voranmeldung",
+  "ru": "Предв. декларация НДС (USt-Voranmeldung)",
   "de": "USt-Voranmeldung",
   "files": [
    "business.js"
@@ -3426,7 +3426,7 @@
   ]
  },
  "Tax number": {
-  "ru": "Steuernummer",
+  "ru": "Налоговый номер (Steuernummer)",
   "de": "Steuernummer",
   "files": [
    "business.js"
@@ -3506,7 +3506,7 @@
   ]
  },
  "Sole trader": {
-  "ru": "Einzelunternehmen",
+  "ru": "ИП (Einzelunternehmen)",
   "de": "Einzelunternehmen",
   "files": [
    "business.js"
@@ -3520,7 +3520,7 @@
   ]
  },
  "UG": {
-  "ru": "UG (haftungsbeschränkt)",
+  "ru": "UG (ООО с ограниченной ответственностью)",
   "de": "UG (haftungsbeschränkt)",
   "files": [
    "business.js"
@@ -4003,21 +4003,21 @@
   ]
  },
  "Business registration": {
-  "ru": "Gewerbeanmeldung",
+  "ru": "Регистрация бизнеса (Gewerbeanmeldung)",
   "de": "Gewerbeanmeldung",
   "files": [
    "business.js"
   ]
  },
  "Tax number (tax office)": {
-  "ru": "Steuernummer (Finanzamt)",
+  "ru": "Налоговый номер фирмы (Steuernummer)",
   "de": "Steuernummer (Finanzamt)",
   "files": [
    "business.js"
   ]
  },
  "Business liability insurance": {
-  "ru": "Betriebshaftpflicht",
+  "ru": "Страхование ответственности (Betriebshaftpflicht)",
   "de": "Betriebshaftpflicht",
   "files": [
    "business.js"
@@ -4038,7 +4038,7 @@
   ]
  },
  "Commercial register / IHK": {
-  "ru": "Handelsregister / IHK",
+  "ru": "Торговый реестр / IHK (Handelsregister)",
   "de": "Handelsregister / IHK",
   "files": [
    "business.js"
@@ -4280,14 +4280,14 @@
   ]
  },
  "Prepayment": {
-  "ru": "Vorauszahlung",
+  "ru": "Авансовый платёж (Vorauszahlung)",
   "de": "Vorauszahlung",
   "files": [
    "business.js"
   ]
  },
  "Tax prepayment %s": {
-  "ru": "Vorauszahlung Finanzamt %s",
+  "ru": "Аванс в Finanzamt %s",
   "de": "Vorauszahlung Finanzamt %s",
   "files": [
    "business.js"
@@ -6050,7 +6050,7 @@
   ]
  },
  "Kita, childminder, after-school": {
-  "ru": "Kita, Tagesmutter, Hort",
+  "ru": "Детсад, няня, продлёнка (Kita, Tagesmutter, Hort)",
   "de": "Kita, Tagesmutter, Hort",
   "files": [
    "finanzen.js"
@@ -6071,7 +6071,7 @@
   ]
  },
  "Health, liability, pension": {
-  "ru": "Kranken-, Haftpflicht-, Rentenversicherung",
+  "ru": "Медицинская, ответственности, пенсионная страховка",
   "de": "Kranken-, Haftpflicht-, Rentenversicherung",
   "files": [
    "finanzen.js"
@@ -6740,6 +6740,125 @@
    "kalender-nz.js"
   ]
  },
+ "New Year’s Day": {
+  "ru": "Новый год",
+  "de": "Neujahr",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Good Friday": {
+  "ru": "Страстная пятница",
+  "de": "Karfreitag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Easter Monday": {
+  "ru": "Пасхальный понедельник",
+  "de": "Ostermontag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Labour Day": {
+  "ru": "День труда",
+  "de": "Tag der Arbeit",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Ascension Day": {
+  "ru": "Вознесение",
+  "de": "Christi Himmelfahrt",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Whit Monday": {
+  "ru": "Духов день (понедельник после Троицы)",
+  "de": "Pfingstmontag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "German Unity Day": {
+  "ru": "День единства Германии",
+  "de": "Tag der Deutschen Einheit",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Christmas Day": {
+  "ru": "Рождество",
+  "de": "1. Weihnachtstag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Boxing Day": {
+  "ru": "Второй день Рождества",
+  "de": "2. Weihnachtstag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Epiphany": {
+  "ru": "Богоявление (Трёх королей)",
+  "de": "Heilige Drei Könige",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "International Women’s Day": {
+  "ru": "Международный женский день",
+  "de": "Frauentag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Corpus Christi": {
+  "ru": "Праздник Тела Христова",
+  "de": "Fronleichnam",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Assumption Day": {
+  "ru": "Успение Богородицы",
+  "de": "Mariä Himmelfahrt",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "World Children’s Day": {
+  "ru": "День защиты детей",
+  "de": "Weltkindertag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Reformation Day": {
+  "ru": "День Реформации",
+  "de": "Reformationstag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "All Saints’ Day": {
+  "ru": "День всех святых",
+  "de": "Allerheiligen",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
+ "Day of Repentance and Prayer": {
+  "ru": "День покаяния и молитвы",
+  "de": "Buß- und Bettag",
+  "files": [
+   "kalender-nz.js"
+  ]
+ },
  "Employers": {
   "ru": "Работодатели",
   "de": "Arbeitgeber",
@@ -6763,7 +6882,7 @@
   ]
  },
  "Reference (Zeugnis)": {
-  "ru": "Arbeitszeugnis",
+  "ru": "Характеристика с работы (Arbeitszeugnis)",
   "de": "Arbeitszeugnis",
   "files": [
    "karriere2.js"
@@ -6777,7 +6896,7 @@
   ]
  },
  "Wage tax certificate": {
-  "ru": "Lohnsteuerbescheinigung",
+  "ru": "Справка о налоге с зарплаты (Lohnsteuerbescheinigung)",
   "de": "Lohnsteuerbescheinigung",
   "files": [
    "karriere2.js",
@@ -6920,7 +7039,7 @@
   ]
  },
  "Vocational training": {
-  "ru": "Ausbildung",
+  "ru": "Профобучение (Ausbildung)",
   "de": "Ausbildung",
   "files": [
    "karriere2.js"
@@ -7048,7 +7167,7 @@
   ]
  },
  "Application folder (PDF)": {
-  "ru": "Bewerbungsmappe (PDF)",
+  "ru": "Папка для работодателя (Bewerbungsmappe, PDF)",
   "de": "Bewerbungsmappe (PDF)",
   "files": [
    "karriere2.js"
@@ -8992,8 +9111,15 @@
    "mappen.js"
   ]
  },
+ "The collection “%n” already exists – opened": {
+  "ru": "Подборка «%n» уже есть — открыл её",
+  "de": "Die Mappe „%n“ gibt es schon – geöffnet",
+  "files": [
+   "mappen.js"
+  ]
+ },
  "Child benefit / parental allowance": {
-  "ru": "Kindergeld / Elterngeld",
+  "ru": "Детские пособия (Kindergeld / Elterngeld)",
   "de": "Kindergeld / Elterngeld",
   "files": [
    "mappen.js"
@@ -11207,14 +11333,14 @@
   ]
  },
  "Commuter allowance": {
-  "ru": "Pendlerpauschale",
+  "ru": "Расходы на дорогу (Pendlerpauschale)",
   "de": "Pendlerpauschale",
   "files": [
    "steuer-plus.js"
   ]
  },
  "Home office allowance": {
-  "ru": "Homeoffice-Pauschale",
+  "ru": "Домашний офис (Homeoffice-Pauschale)",
   "de": "Homeoffice-Pauschale",
   "files": [
    "steuer-plus.js"
@@ -11256,7 +11382,7 @@
   ]
  },
  "Wage tax certificate %y": {
-  "ru": "Lohnsteuerbescheinigung %y",
+  "ru": "Справка о налоге с зарплаты %y (Lohnsteuerbescheinigung)",
   "de": "Lohnsteuerbescheinigung %y",
   "files": [
    "steuer-plus.js"
@@ -11298,7 +11424,7 @@
   ]
  },
  "Tax assessment %y": {
-  "ru": "Steuerbescheid %y",
+  "ru": "Налоговое решение %y (Steuerbescheid)",
   "de": "Steuerbescheid %y",
   "files": [
    "steuer-plus.js"
@@ -11368,7 +11494,7 @@
   ]
  },
  "Exemption orders": {
-  "ru": "Freistellungsaufträge",
+  "ru": "Освобождение доходов от налога (Freistellungsaufträge)",
   "de": "Freistellungsaufträge",
   "files": [
    "steuer-plus.js"
@@ -11487,7 +11613,7 @@
   ]
  },
  "Pension statement": {
-  "ru": "Renteninformation",
+  "ru": "Пенсионная справка (Renteninformation)",
   "de": "Renteninformation",
   "files": [
    "steuer-plus.js"
@@ -13054,7 +13180,7 @@
   ]
  },
  "local court": {
-  "ru": "Amtsgericht",
+  "ru": "Участковый суд (Amtsgericht)",
   "de": "Amtsgericht",
   "files": [
    "vorsorge.js"

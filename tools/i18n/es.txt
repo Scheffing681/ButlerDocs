@@ -1922,3 +1922,21 @@
 1921	Regla: tarea «Responder: %t»
 1922	Regla: trámite «%t»
 1923	Introduzca una palabra y elija al menos una acción
+1924	Año Nuevo
+1925	Viernes Santo
+1926	Lunes de Pascua
+1927	Día del Trabajo
+1928	Ascensión
+1929	Lunes de Pentecostés
+1930	Día de la Unidad Alemana
+1931	Navidad
+1932	Segundo día de Navidad
+1933	Epifanía
+1934	Día Internacional de la Mujer
+1935	Corpus Christi
+1936	Asunción
+1937	Día Mundial del Niño
+1938	Día de la Reforma
+1939	Día de Todos los Santos
+1940	Día de Penitencia y Oración
+1941	La carpeta «%n» ya existe – abierta

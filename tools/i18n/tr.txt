@@ -1922,3 +1922,21 @@
 1921	Kural: görev “Yanıtla: %t”
 1922	Kural: dosya “%t”
 1923	Lütfen bir kelime girin ve en az bir işlem seçin
+1924	Yılbaşı
+1925	Kutsal Cuma
+1926	Paskalya Pazartesi
+1927	Emek Bayramı
+1928	Göğe Yükseliş Günü
+1929	Pentekost Pazartesi
+1930	Alman Birliği Günü
+1931	Noel
+1932	Noel’in ikinci günü
+1933	Epifani
+1934	Dünya Kadınlar Günü
+1935	Kutsal Beden Bayramı
+1936	Meryem’in Göğe Kabulü
+1937	Dünya Çocuk Günü
+1938	Reform Günü
+1939	Tüm Azizler Günü
+1940	Tövbe ve Dua Günü
+1941	“%n” dosyası zaten var – açıldı

@@ -41,7 +41,7 @@ const bsvS={
  paste:['Вставить','Einfügen','Paste'],pasteNo:['Не удалось вставить — удержите поле и нажмите «Вставить»','Einfügen nicht möglich – Feld gedrückt halten und „Einfügen“','Could not paste – hold the field and choose “Paste”'],
  btns:['Кнопки и ссылки','Knöpfe und Links','Buttons and links'],btnAdd:['＋ свою кнопку','＋ eigener Knopf','＋ own button'],btnT:['Надпись','Beschriftung','Label'],btnU:['Ссылка, телефон или e-mail','Link, Telefon oder E-Mail','Link, phone or email'],
  numAdd:['＋ номер','＋ Nummer','＋ number'],numT:['Что за номер','Wofür','What it is'],numV:['Номер','Nummer','Number'],numS:['секретный','geheim','secret'],
- numEx:['Steuer-ID, Kundennummer, Aktenzeichen …','Steuer-ID, Kundennummer, Aktenzeichen …','Tax ID, customer number, file reference …'],
+ numEx:['Steuer-ID, номер клиента, номер дела …','Steuer-ID, Kundennummer, Aktenzeichen …','Tax ID, customer number, file reference …'],
  pin:['Закрепить наверху','Oben anheften','Pin to top'],home:['На главную','Auf die Startseite','On the home screen'],
  save:['Сохранить','Speichern','Save'],cancel:['Отмена','Abbrechen','Cancel'],saved:['Сохранено','Gespeichert','Saved'],
  needN:['Впишите название','Bitte einen Namen eingeben','Please enter a name'],badU:['Эта ссылка не подходит','Dieser Link passt nicht','This link is not valid'],

@@ -47,7 +47,7 @@ const MPX={
  take:['Перенести в документ','Übernehmen','Apply'],taken:['Данные перенесены','Angaben übernommen','Details applied'],k_P:['Паспорт','Reisepass','Passport'],k_I:['Удостоверение личности','Personalausweis / ID','ID card'],k_A:['Вид на жительство','Aufenthaltstitel','Residence permit'],
  /* template names and slots */
  t_wohnung:['Аренда квартиры','Wohnung mieten','Renting a flat'],t_bewerb:['Заявление на работу','Bewerbung','Job application'],t_einb:['Гражданство','Einbürgerung','Naturalisation'],
- t_kind:['Kindergeld / Elterngeld','Kindergeld / Elterngeld','Child benefit / parental allowance'],t_kredit:['Кредит / банк','Kredit / Bank','Loan / bank'],
+ exists:['Подборка «%n» уже есть — открыл её','Die Mappe „%n“ gibt es schon – geöffnet','The collection “%n” already exists – opened'],t_kind:['Детские пособия (Kindergeld / Elterngeld)','Kindergeld / Elterngeld','Child benefit / parental allowance'],t_kredit:['Кредит / банк','Kredit / Bank','Loan / bank'],
  s_id:['Паспорт или ID','Ausweis oder Pass','ID card or passport'],s_selbst:['Анкета арендатора','Mieterselbstauskunft','Tenant self-disclosure'],h_selbst:['бланк от арендодателя','Formular vom Vermieter','form from the landlord'],
  s_gehalt:['Расчётные листы (3 последних)','Lohnabrechnungen (3 letzte)','Payslips (last 3)'],h_gehalt:['от работодателя, по месяцам','vom Arbeitgeber, monatlich','from the employer, monthly'],
  s_avertrag:['Трудовой договор','Arbeitsvertrag','Employment contract'],h_avertrag:['подписанный','unterschrieben','signed'],
@@ -125,7 +125,7 @@ function mpxOrder(M){const S=mpxSum(M),base=[];S.R.forEach(r=>{if(r.st!=='skip')
  if(!M.ord)return base;const o=M.ord.filter(id=>base.includes(id));base.forEach(id=>{if(!o.includes(id))o.push(id)});return o}
 /* --- screens --- */
 const mpxHdr=(t,back)=>`<div class="sub-hdr"><button class="iconbtn" data-act="${back}" aria-label="back">${_('back')}</button><div class="ttl"><h2>${i(t)}</h2></div><span></span></div>`;
-function mpxListScreen(){const D=mpxD();
+function mpxListScreen(){try{mpxDedupe()}catch{}const D=mpxD();
  const cards=D.list.map(M=>{const S=mpxSum(M),pc=S.need?Math.round(S.ok/S.need*100):0,done=S.need&&S.ok===S.need,last=M.sent[0];
   let sub=done?'':S.open.length?mpxT('missL',{t:S.open.slice(0,2).map(r=>mpxT('s_'+r.s.k)).join(' · ')+(S.open.length>2?' …':'')}):'';
   if(last){const pk=(g.pkSent||[]).find(z=>z.id===last.pk);sub=mpxT(pk&&pk.ans?'sentA':'sentL',{d:je(last.d)})}
@@ -184,7 +184,11 @@ function mpxPdfSheet(M){const D=mpxOrder(M).map(mpxDoc).filter(d=>d&&((d.pages||
    try{await $1(D,b,k,sh);const now=(g.pkSent||[])[0];if(now&&now!==before){M.sent.unshift({d:mpxToday(),to:k.to,pk:now.id});M.sent=M.sent.slice(0,30);mpxSave()}}catch(er){Hooks.err('mpxpdf',er)}finally{bt.isConnected&&(bt.disabled=!1)}}})}
 function mpxRenSheet(M){H(mpxT('ren'),`<label class="asf"><span>${i(mpxT('name'))}</span><input class="field mpxnm" value="${i(mpxName(M))}" maxlength="60"></label><button type="button" class="dcadd gold" data-ok>${i(mpxT('save'))}</button>`,sh=>{sh.classList.add('bsvsh');
  const inp=sh.querySelector('.mpxnm');setTimeout(()=>inp.focus(),80);sh.querySelector('[data-ok]').onclick=()=>{const n=inp.value.trim();if(n)M.name=n.slice(0,60);mpxSave();sh.remove();v()}})}
-function mpxNew(tid){const tp=tid?mpxTpl(tid):null,M={id:V(),tpl:tp?tp.id:'',e:tp?tp.e:'📂',name:'',pk:{},skip:{},extra:[],ord:null,ts:Date.now(),sent:[]};mpxD().list.unshift(M);mpxSave();mpxCur=M.id;R('mpxd');
+/* no doubles: a template that is already in work opens the existing collection; an untouched copy made by a second tap is removed */
+const mpxBlank=M=>!M.name&&!Object.keys(M.pk||{}).length&&!Object.keys(M.skip||{}).length&&!(M.extra||[]).length&&!(M.sent||[]).length&&!M.ord;
+function mpxDedupe(){const D=mpxD(),seen={};let ch=0;D.list=D.list.slice().reverse().filter(M=>{const k=M.tpl||'';if(!seen[k]){seen[k]=M;return!0}if(mpxBlank(M)){ch=1;return!1}return!0}).reverse();if(ch)mpxSave();return ch}
+function mpxNew(tid){const ex=mpxD().list.find(z=>(z.tpl||'')===(tid||'')&&(tid||mpxBlank(z)));if(ex){mpxCur=ex.id;R('mpxd');T(mpxT('exists',{n:mpxName(ex)}));if(!tid)setTimeout(()=>mpxPickSheet(ex,null),120);return}
+ const tp=tid?mpxTpl(tid):null,M={id:V(),tpl:tp?tp.id:'',e:tp?tp.e:'📂',name:'',pk:{},skip:{},extra:[],ord:null,ts:Date.now(),sent:[]};mpxD().list.unshift(M);mpxSave();mpxCur=M.id;R('mpxd');
  if(tp)T(mpxT('created',{n:mpxName(M)}));else setTimeout(()=>mpxPickSheet(M,null),120)}
 /* --- recognition in the document: status + MRZ --- */
 const MPX_MRZ_DT=['passport','id','residence','intpass'];

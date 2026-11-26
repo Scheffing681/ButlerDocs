@@ -1922,3 +1922,21 @@
 1921	Reguła: zadanie „Odpowiedz: %t”
 1922	Reguła: sprawa „%t”
 1923	Wpisz słowo i wybierz co najmniej jedną akcję
+1924	Nowy Rok
+1925	Wielki Piątek
+1926	Poniedziałek Wielkanocny
+1927	Święto Pracy
+1928	Wniebowstąpienie
+1929	Poniedziałek Zielonoświątkowy
+1930	Dzień Jedności Niemiec
+1931	Boże Narodzenie
+1932	Drugi dzień Bożego Narodzenia
+1933	Trzech Króli
+1934	Dzień Kobiet
+1935	Boże Ciało
+1936	Wniebowzięcie NMP
+1937	Światowy Dzień Dziecka
+1938	Święto Reformacji
+1939	Wszystkich Świętych
+1940	Dzień Pokuty i Modlitwy
+1941	Zestaw „%n” już istnieje – otwarto

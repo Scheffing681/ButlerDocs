@@ -2274,3 +2274,11 @@
 2273	Todo sobre la vivienda
 2274	(de Documentos)
 2275	%n vínculos
+2276	＋ Mosaicos
+2277	Mi pantalla de inicio
+2278	Active los mosaicos que quiera. Arrastre para cambiar el orden.
+2279	Estándar
+2280	Deje al menos un mosaico
+2281	Patrimonio
+2282	Instrucciones
+2283	Carpetas

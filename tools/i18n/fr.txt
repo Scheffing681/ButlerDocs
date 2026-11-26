@@ -2274,3 +2274,11 @@
 2273	Tout sur le logement
 2274	(depuis Documents)
 2275	%n liens
+2276	＋ Tuiles
+2277	Mon écran d’accueil
+2278	Activez les tuiles voulues. Faites glisser pour changer l’ordre.
+2279	Standard
+2280	Gardez au moins une tuile
+2281	Patrimoine
+2282	Consignes
+2283	Dossiers

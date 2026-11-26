@@ -86,6 +86,7 @@
    "abschluss.js",
    "behoerden-kat.js",
    "business.js",
+   "kacheln.js",
    "nachlass-plus.js",
    "zentrale.js"
   ]
@@ -834,6 +835,7 @@
   "de": "Besitz",
   "files": [
    "akte.js",
+   "kacheln.js",
    "nachlass-plus.js",
    "ueberblick.js",
    "zentrale.js"
@@ -874,6 +876,7 @@
   "files": [
    "akte.js",
    "behoerden-kat.js",
+   "kacheln.js",
    "kalender-nz.js",
    "kontakte-post.js",
    "move-phone.js",
@@ -3022,6 +3025,7 @@
    "behoerden-termine.js",
    "behoerden.js",
    "eingang-smart.js",
+   "kacheln.js",
    "kontakte-post.js",
    "linkup.js",
    "mappen.js",
@@ -4207,6 +4211,7 @@
    "bereiche.js",
    "design.js",
    "dokumente-butler.js",
+   "kacheln.js",
    "screens-glas.js"
   ]
  },
@@ -4216,6 +4221,7 @@
   "files": [
    "bereiche.js",
    "eingang-fristen.js",
+   "kacheln.js",
    "kalender-nz.js"
   ]
  },
@@ -4239,6 +4245,7 @@
   "de": "Tresor",
   "files": [
    "bereiche.js",
+   "kacheln.js",
    "nachlass-plus.js"
   ]
  },
@@ -4614,6 +4621,7 @@
   "de": "Ausbildung",
   "files": [
    "business.js",
+   "kacheln.js",
    "zentrale.js"
   ]
  },
@@ -6277,6 +6285,7 @@
   "files": [
    "design.js",
    "dokumente-butler.js",
+   "kacheln.js",
    "notizen.js",
    "scan-glas.js",
    "screens-glas.js",
@@ -7859,6 +7868,113 @@
    "formen-glas.js"
   ]
  },
+ "＋ Tiles": {
+  "ru": "＋ Плитки",
+  "de": "＋ Kacheln",
+  "files": [
+   "kacheln.js"
+  ]
+ },
+ "My start screen": {
+  "ru": "Мой стартовый экран",
+  "de": "Mein Startbildschirm",
+  "files": [
+   "kacheln.js"
+  ]
+ },
+ "Switch on the tiles you want. Drag to change the order.": {
+  "ru": "Включите нужные плитки. Порядок меняется перетаскиванием.",
+  "de": "Schalten Sie die Kacheln ein, die Sie möchten. Die Reihenfolge ändern Sie durch Ziehen.",
+  "files": [
+   "kacheln.js"
+  ]
+ },
+ "Standard": {
+  "ru": "Обычные",
+  "de": "Standard",
+  "files": [
+   "kacheln.js"
+  ]
+ },
+ "Reset": {
+  "ru": "Как было",
+  "de": "Zurücksetzen",
+  "files": [
+   "kacheln.js",
+   "nav-edit.js",
+   "ordnen.js"
+  ]
+ },
+ "Keep at least one tile": {
+  "ru": "Оставьте хотя бы одну плитку",
+  "de": "Mindestens eine Kachel behalten",
+  "files": [
+   "kacheln.js"
+  ]
+ },
+ "Taxes": {
+  "ru": "Налоги",
+  "de": "Steuern",
+  "files": [
+   "kacheln.js",
+   "zentrale.js"
+  ]
+ },
+ "Vehicles": {
+  "ru": "Транспорт",
+  "de": "Fahrzeuge",
+  "files": [
+   "kacheln.js",
+   "nachlass-plus.js",
+   "zentrale.js"
+  ]
+ },
+ "Assets": {
+  "ru": "Имущество",
+  "de": "Vermögen",
+  "files": [
+   "kacheln.js"
+  ]
+ },
+ "Instructions": {
+  "ru": "Указания",
+  "de": "Anweisungen",
+  "files": [
+   "kacheln.js"
+  ]
+ },
+ "Purchases": {
+  "ru": "Покупки",
+  "de": "Käufe",
+  "files": [
+   "kacheln.js",
+   "kalender-nz.js",
+   "werkzeuge.js"
+  ]
+ },
+ "Folder sets": {
+  "ru": "Подборки",
+  "de": "Mappen",
+  "files": [
+   "kacheln.js"
+  ]
+ },
+ "Letters": {
+  "ru": "Письма",
+  "de": "Briefe",
+  "files": [
+   "kacheln.js",
+   "search-places.js"
+  ]
+ },
+ "Areas": {
+  "ru": "Разделы",
+  "de": "Bereiche",
+  "files": [
+   "kacheln.js",
+   "zentrale.js"
+  ]
+ },
  "List": {
   "ru": "Список",
   "de": "Liste",
@@ -8012,14 +8128,6 @@
   "de": "Gelesen",
   "files": [
    "kalender-nz.js"
-  ]
- },
- "Purchases": {
-  "ru": "Покупки",
-  "de": "Käufe",
-  "files": [
-   "kalender-nz.js",
-   "werkzeuge.js"
   ]
  },
  "Snoozed": {
@@ -11162,14 +11270,6 @@
    "nachlass-plus.js"
   ]
  },
- "Vehicles": {
-  "ru": "Транспорт",
-  "de": "Fahrzeuge",
-  "files": [
-   "nachlass-plus.js",
-   "zentrale.js"
-  ]
- },
  "Digital accounts": {
   "ru": "Цифровые аккаунты",
   "de": "Digitale Konten",
@@ -11965,14 +12065,6 @@
   "de": "Platz antippen, dann das, was dorthin soll. Butler in der Mitte und «Mehr» bleiben immer.",
   "files": [
    "nav-edit.js"
-  ]
- },
- "Reset": {
-  "ru": "Как было",
-  "de": "Wie vorher",
-  "files": [
-   "nav-edit.js",
-   "ordnen.js"
   ]
  },
  "Bottom bar saved": {
@@ -13036,13 +13128,6 @@
   "de": "An diesem Tag keine Fristen",
   "files": [
    "screens-glas.js"
-  ]
- },
- "Letters": {
-  "ru": "Письма",
-  "de": "Briefe",
-  "files": [
-   "search-places.js"
   ]
  },
  "Family & important people": {
@@ -16245,13 +16330,6 @@
    "werkzeuge.js"
   ]
  },
- "Areas": {
-  "ru": "Разделы",
-  "de": "Bereiche",
-  "files": [
-   "zentrale.js"
-  ]
- },
  "Personal documents": {
   "ru": "Личные документы",
   "de": "Persönliche Dokumente",
@@ -16262,13 +16340,6 @@
  "Work & pay": {
   "ru": "Работа и зарплата",
   "de": "Arbeit & Gehalt",
-  "files": [
-   "zentrale.js"
-  ]
- },
- "Taxes": {
-  "ru": "Налоги",
-  "de": "Steuern",
   "files": [
    "zentrale.js"
   ]

@@ -2274,3 +2274,11 @@
 2273	Wszystko o mieszkaniu
 2274	(z Dokumentów)
 2275	%n powiązań
+2276	＋ Kafelki
+2277	Mój ekran startowy
+2278	Włącz potrzebne kafelki. Kolejność zmienisz przeciągając.
+2279	Standardowe
+2280	Zostaw co najmniej jeden kafelek
+2281	Majątek
+2282	Wskazówki
+2283	Teczki

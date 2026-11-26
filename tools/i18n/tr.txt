@@ -2274,3 +2274,11 @@
 2273	Ev hakkında her şey
 2274	(Belgeler’den)
 2275	%n bağlantı
+2276	＋ Kutucuklar
+2277	Başlangıç ekranım
+2278	İstediğiniz kutucukları açın. Sırayı sürükleyerek değiştirin.
+2279	Standart
+2280	En az bir kutucuk kalsın
+2281	Varlıklar
+2282	Talimatlar
+2283	Klasör setleri

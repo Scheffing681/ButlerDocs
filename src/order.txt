@@ -118,3 +118,4 @@ docs/arbeit-zeit.js
 docs/business-plus.js
 docs/ikonen.js
 docs/behoerden-kat.js
+docs/nachlass-plus.js

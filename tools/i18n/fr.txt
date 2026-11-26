@@ -2117,3 +2117,140 @@
 2116	Polices
 2117	Véhicule
 2118	Bulletins et attestations
+2119	Tout ce dont vos proches auront besoin : dispositions, patrimoine et vos consignes. Uniquement sur ce téléphone.
+2120	Mes dispositions en un coup d’œil
+2121	Mon patrimoine en un coup d’œil
+2122	Testament, compléments et souhaits personnels
+2123	Dossier en cas de décès
+2124	Tout l’essentiel pour vos proches en un PDF
+2125	Mots de passe, PIN, accès et informations confidentielles
+2126	Mes consignes
+2127	Notes importantes, contacts et démarches
+2128	État des dispositions
+2129	État du patrimoine
+2130	%a sur %b domaines nécessaires sont prêts
+2131	De quoi ai-je besoin ?
+2132	Cochez ce dont vous avez besoin. Un document manquant n’est pas une faute, juste un rappel.
+2133	Prochaine vérification
+2134	Conseillé : vérifier vos dispositions une fois par an.
+2135	Vérifier les dispositions
+2136	Les coordonnées des mandataires sont-elles à jour ?
+2137	Les originaux sont-ils toujours à l’endroit indiqué ?
+2138	Existe-t-il de nouvelles versions ?
+2139	Les personnes de confiance sont-elles les mêmes ?
+2140	Tout vérifié – prochaine dans un an
+2141	Vérifié le %d
+2142	Vérifier les dispositions (Vorsorge & Nachlass)
+2143	pas encore vérifié
+2144	protégé par un code
+2145	Contacts importants
+2146	Documents – où sont les originaux
+2147	Véhicules
+2148	Comptes numériques
+2149	Souhaits personnels
+2150	Autres consignes
+2151	Nouvelle consigne
+2152	Ce qu’il faut savoir et faire
+2153	Personne responsable
+2154	ex. fils Andrej, 0171 …
+2155	Confidentiel – dans le dossier seulement si je le choisis
+2156	Documents liés
+2157	＋ document
+2158	N’inscrivez pas de mots de passe ni de PIN ici – le coffre est fait pour ça.
+2159	Aucune consigne. Commencez par l’essentiel : qui appeler d’abord et où sont les originaux.
+2160	mis à jour %d
+2161	confidentiel
+2162	Comptes et finances
+2163	Objets de valeur
+2164	Participations
+2165	Autres biens
+2166	Maisons, appartements, terrains
+2167	Voitures, motos, camping-cars
+2168	Comptes, dépôts, épargne
+2169	Bijoux, montres, art, collections
+2170	Sociétés, parts, entreprises
+2171	Autres valeurs et biens
+2172	Ajouter à « %k »
+2173	Passeport du patrimoine (PDF)
+2174	Vue d’ensemble de votre patrimoine – pour notaire, assureur ou héritiers
+2175	Valeur indiquée
+2176	estimé
+2177	Valeur estimée, €
+2178	Prix d’achat, €
+2179	Acquis le
+2180	Où sont les papiers/l’original
+2181	Type
+2182	Surface, m²
+2183	Pièces
+2184	Année de construction
+2185	Reste du prêt, €
+2186	Frais par mois, €
+2187	Revenus locatifs par mois, €
+2188	Plaque d’immatriculation
+2189	VIN
+2190	Kilométrage
+2191	Titulaire
+2192	Banque ou établissement
+2193	Titulaire
+2194	Ouvert le
+2195	Fabricant
+2196	Lieu de conservation
+2197	Certificat d’authenticité
+2198	Part, %
+2199	Interlocuteur
+2200	Sous-catégorie
+2201	Garantie jusqu’au
+2202	TÜV / contrôle technique
+2203	Vidange / entretien
+2204	Changement de pneus
+2205	Échéance d’assurance
+2206	Entretien du chauffage
+2207	Inspection
+2208	Informations de base
+2209	Finances
+2210	Échéances
+2211	Lier un document
+2212	Lier un contrat
+2213	Aucun contrat
+2214	Dans le passeport du patrimoine
+2215	PIN, mots de passe et accès vont dans le coffre.
+2216	Une estimation n’est ni un prix de marché ni une garantie.
+2217	Dates ajoutées au calendrier
+2218	sans documents
+2219	sans valeur
+2220	lieu de conservation manquant
+2221	Complet
+2222	Résumé
+2223	Pour le notaire
+2224	Pour l’assureur
+2225	Pour les proches
+2226	Tous les détails, documents, lieux, manques
+2227	Seulement nom et valeur
+2228	Sans prix d’achat ; documents et lieux
+2229	Valeurs, numéros de série, garanties
+2230	Ce qu’il y a et où sont les papiers – sans montants
+2231	Manquant ou à vérifier
+2232	État au %d
+2233	Données saisies par le propriétaire ; valeurs estimées. Pas un document juridique.
+2234	Ce qui va dans le dossier
+2235	Le dossier n’est jamais envoyé tout seul – vous décidez à qui et quand le donner.
+2236	Dispositions et où sont les originaux
+2237	Aperçu du patrimoine
+2238	y compris les consignes confidentielles
+2239	Joindre les pages des documents
+2240	Autres documents en dossier ›
+2241	Informations pour mes proches
+2242	Vérifier et créer le PDF
+2243	Vérifié avant le PDF
+2244	Tout est là
+2245	Le PDF n’a pas de mot de passe : gardez-le en lieu sûr ou remettez-le en main propre.
+2246	Tout le patrimoine
+2247	Patrimoine : %n entrées, indiqué %v. %c
+2248	Encore ouvert : %l.
+2249	Toutes les dispositions nécessaires sont là.
+2250	Original du testament : %o
+2251	L’emplacement de l’original du testament n’est pas encore indiqué.
+2252	Consignes : %n
+2253	Pour « %n » il manque : %l
+2254	« %n » est entièrement lié.
+2255	Mandat de protection

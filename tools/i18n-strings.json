@@ -84,7 +84,8 @@
   "files": [
    "abschluss.js",
    "behoerden-kat.js",
-   "business.js"
+   "business.js",
+   "nachlass-plus.js"
   ]
  },
  "Bank statements": {
@@ -641,7 +642,8 @@
    "behoerden.js",
    "finanzen2.js",
    "kauf-gesund.js",
-   "kontakte-post.js"
+   "kontakte-post.js",
+   "nachlass-plus.js"
   ]
  },
  "＋ Link a document": {
@@ -693,6 +695,7 @@
    "kauf-gesund.js",
    "kontakte-post.js",
    "mappen.js",
+   "nachlass-plus.js",
    "nav-edit.js",
    "steuer-plus.js",
    "vertraege-abos.js",
@@ -827,6 +830,7 @@
   "de": "Besitz",
   "files": [
    "akte.js",
+   "nachlass-plus.js",
    "ueberblick.js"
   ]
  },
@@ -886,6 +890,7 @@
    "kontakte-post.js",
    "layout-docs.js",
    "move-phone.js",
+   "nachlass-plus.js",
    "notizen.js",
    "reliability.js",
    "search-places.js",
@@ -1297,6 +1302,7 @@
    "finanzen.js",
    "finanzen2.js",
    "kauf-gesund.js",
+   "nachlass-plus.js",
    "seiten.js",
    "steuer-plus.js",
    "vertraege-abos.js",
@@ -1582,7 +1588,8 @@
   "de": "Firma",
   "files": [
    "arbeit-zeit.js",
-   "finanzen2.js"
+   "finanzen2.js",
+   "nachlass-plus.js"
   ]
  },
  "Position": {
@@ -2411,14 +2418,16 @@
   "files": [
    "behoerden-briefe.js",
    "behoerden.js",
-   "kalender-nz.js"
+   "kalender-nz.js",
+   "nachlass-plus.js"
   ]
  },
  "Other date": {
   "ru": "Другая дата",
   "de": "Anderes Datum",
   "files": [
-   "behoerden-briefe.js"
+   "behoerden-briefe.js",
+   "nachlass-plus.js"
   ]
  },
  "Not needed": {
@@ -2636,14 +2645,16 @@
   "ru": "Категории",
   "de": "Kategorien",
   "files": [
-   "behoerden-kat.js"
+   "behoerden-kat.js",
+   "nachlass-plus.js"
   ]
  },
  "Show all": {
   "ru": "Показать все",
   "de": "Alle anzeigen",
   "files": [
-   "behoerden-kat.js"
+   "behoerden-kat.js",
+   "nachlass-plus.js"
   ]
  },
  "Frequently used": {
@@ -2730,7 +2741,8 @@
   "ru": "В этой категории пока ничего нет.",
   "de": "In dieser Kategorie ist noch nichts.",
   "files": [
-   "behoerden-kat.js"
+   "behoerden-kat.js",
+   "nachlass-plus.js"
   ]
  },
  "No documents in this category yet. Scan a letter – it lands here.": {
@@ -3071,6 +3083,7 @@
    "karriere2.js",
    "kauf-gesund.js",
    "kontakte-post.js",
+   "nachlass-plus.js",
    "reliability.js",
    "start-glas.js"
   ]
@@ -3175,6 +3188,7 @@
    "behoerden.js",
    "finanzen.js",
    "finanzen2.js",
+   "nachlass-plus.js",
    "vertraege-abos.js"
   ]
  },
@@ -3195,7 +3209,8 @@
   "de": "Behörden & Dienste",
   "files": [
    "behoerden-termine.js",
-   "behoerden.js"
+   "behoerden.js",
+   "nachlass-plus.js"
   ]
  },
  "Whom to notify: pension, health insurer, tax office …": {
@@ -3481,7 +3496,8 @@
   "files": [
    "behoerden.js",
    "business.js",
-   "kontakte-post.js"
+   "kontakte-post.js",
+   "nachlass-plus.js"
   ]
  },
  "Opening hours": {
@@ -3528,6 +3544,7 @@
    "business-plus.js",
    "kauf-gesund.js",
    "mappen.js",
+   "nachlass-plus.js",
    "notizen.js",
    "seiten.js"
   ]
@@ -3698,6 +3715,7 @@
    "behoerden.js",
    "business.js",
    "kalender-nz.js",
+   "nachlass-plus.js",
    "seiten.js",
    "steuer-plus.js",
    "steuerzentrum.js",
@@ -4208,7 +4226,8 @@
   "ru": "Сейф",
   "de": "Tresor",
   "files": [
-   "bereiche.js"
+   "bereiche.js",
+   "nachlass-plus.js"
   ]
  },
  "Scanner": {
@@ -5115,7 +5134,8 @@
   "ru": "Создать PDF",
   "de": "PDF erstellen",
   "files": [
-   "business.js"
+   "business.js",
+   "nachlass-plus.js"
   ]
  },
  "✉ Send by e-mail (your mail)": {
@@ -6594,6 +6614,7 @@
   "files": [
    "dokumente-butler.js",
    "mappen.js",
+   "nachlass-plus.js",
    "vorsorge.js"
   ]
  },
@@ -7724,6 +7745,7 @@
   "files": [
    "finanzen2.js",
    "karriere2.js",
+   "nachlass-plus.js",
    "notizen.js"
   ]
  },
@@ -7767,7 +7789,8 @@
   "de": "Bitte einen Titel eintragen",
   "files": [
    "finanzen2.js",
-   "karriere2.js"
+   "karriere2.js",
+   "nachlass-plus.js"
   ]
  },
  "Career": {
@@ -7796,7 +7819,8 @@
   "ru": "Договоры и страховки",
   "de": "Verträge & Versicherungen",
   "files": [
-   "finanzen2.js"
+   "finanzen2.js",
+   "nachlass-plus.js"
   ]
  },
  "in «Finances» – with amounts and deadlines": {
@@ -8334,7 +8358,8 @@
   "ru": "подходит",
   "de": "passt",
   "files": [
-   "karriere2.js"
+   "karriere2.js",
+   "nachlass-plus.js"
   ]
  },
  "Linked ✓": {
@@ -8442,7 +8467,8 @@
   "de": "Land",
   "files": [
    "karriere2.js",
-   "mappen.js"
+   "mappen.js",
+   "nachlass-plus.js"
   ]
  },
  "Recognition in Germany": {
@@ -8584,6 +8610,7 @@
   "de": "PDF wird erstellt …",
   "files": [
    "karriere2.js",
+   "nachlass-plus.js",
    "vorsorge.js"
   ]
  },
@@ -8892,7 +8919,8 @@
   "ru": "Серийный номер",
   "de": "Seriennummer",
   "files": [
-   "kauf-gesund.js"
+   "kauf-gesund.js",
+   "nachlass-plus.js"
   ]
  },
  "Warranty until (per document)": {
@@ -10099,7 +10127,8 @@
   "ru": "не нужно",
   "de": "nicht nötig",
   "files": [
-   "mappen.js"
+   "mappen.js",
+   "nachlass-plus.js"
   ]
  },
  "📄 One PDF with cover letter & list": {
@@ -10901,6 +10930,1013 @@
   "de": "Das alte Telefon behält seine Daten, bis Sie sie dort löschen.",
   "files": [
    "move-phone.js"
+  ]
+ },
+ "Everything your family will need: directives, assets and your instructions. Only on this phone.": {
+  "ru": "Всё, что понадобится близким: распоряжения, имущество и Ваши указания. Только на этом телефоне.",
+  "de": "Alles, was Ihre Angehörigen brauchen: Verfügungen, Vermögen und Ihre Anweisungen. Nur auf diesem Telefon.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "My directives at a glance": {
+  "ru": "Мои распоряжения — обзор",
+  "de": "Meine Verfügungen im Überblick",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "My assets at a glance": {
+  "ru": "Моё имущество — обзор",
+  "de": "Mein Vermögen im Überblick",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Will & provisions": {
+  "ru": "Завещание и распоряжения",
+  "de": "Testament & Vorsorge",
+  "files": [
+   "nachlass-plus.js",
+   "vorsorge.js"
+  ]
+ },
+ "Will, additions and personal wishes": {
+  "ru": "Завещание, дополнения и личные пожелания",
+  "de": "Testament, Ergänzungen und persönliche Wünsche",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Package for the event of death": {
+  "ru": "Пакет на случай смерти",
+  "de": "Paket für den Todesfall",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Everything important for your family in one PDF": {
+  "ru": "Всё важное для близких одним PDF",
+  "de": "Alles Wichtige für Ihre Angehörigen in einem PDF",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Passwords, PINs, access data and confidential things": {
+  "ru": "Пароли, PIN, доступы и конфиденциальное",
+  "de": "Passwörter, PINs, Zugänge und Vertrauliches",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "My instructions": {
+  "ru": "Мои указания",
+  "de": "Meine Anweisungen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Important notes, contacts and steps": {
+  "ru": "Важные советы, контакты и порядок действий",
+  "de": "Wichtige Hinweise, Kontakte und Abläufe",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Directives status": {
+  "ru": "Статус распоряжений",
+  "de": "Verfügungs-Status",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Assets status": {
+  "ru": "Статус имущества",
+  "de": "Vermögens-Status",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "%a of %b areas you need are set up": {
+  "ru": "%a из %b нужных Вам пунктов есть",
+  "de": "%a von %b für Sie nötigen Bereichen eingerichtet",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "What do I need?": {
+  "ru": "Что нужно лично мне",
+  "de": "Was brauche ich?",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Mark what you need for yourself. A missing paper is no fault, only a hint.": {
+  "ru": "Отметьте, что нужно именно Вам. Отсутствующий документ — не нарушение, а только подсказка.",
+  "de": "Markieren Sie, was Sie für sich brauchen. Ein fehlendes Papier ist kein Fehler, nur ein Hinweis.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Next check": {
+  "ru": "Следующая проверка",
+  "de": "Nächste Prüfung",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Recommended: check your directives once a year.": {
+  "ru": "Рекомендуется раз в год проверять распоряжения.",
+  "de": "Empfohlen: Ihre Verfügungen jährlich überprüfen.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Check your directives": {
+  "ru": "Проверка распоряжений",
+  "de": "Verfügungen prüfen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Are the contacts of the named persons still current?": {
+  "ru": "Контакты доверенных лиц ещё актуальны?",
+  "de": "Sind die Kontakte der Bevollmächtigten noch aktuell?",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Are the originals still where it says?": {
+  "ru": "Оригиналы лежат там же, где указано?",
+  "de": "Liegen die Originale noch dort, wo es steht?",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Are there new versions of the papers?": {
+  "ru": "Есть новые версии документов?",
+  "de": "Gibt es neue Fassungen der Papiere?",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Are the trusted persons the same?": {
+  "ru": "Доверенные лица не изменились?",
+  "de": "Sind die Vertrauenspersonen dieselben?",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "All checked – next check in a year": {
+  "ru": "Всё проверено — следующая через год",
+  "de": "Alles geprüft – nächste Prüfung in einem Jahr",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Checked %d": {
+  "ru": "Проверено %d",
+  "de": "Geprüft am %d",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Check directives (Vorsorge & Nachlass)": {
+  "ru": "Проверить распоряжения (Vorsorge & Nachlass)",
+  "de": "Verfügungen prüfen (Vorsorge & Nachlass)",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "not checked yet": {
+  "ru": "ещё не проверялось",
+  "de": "noch nie geprüft",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "protected by a code": {
+  "ru": "защищён кодом",
+  "de": "mit Code geschützt",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "there": {
+  "ru": "есть",
+  "de": "vorhanden",
+  "files": [
+   "nachlass-plus.js",
+   "vorsorge.js"
+  ]
+ },
+ "Important contacts": {
+  "ru": "Важные контакты",
+  "de": "Wichtige Kontakte",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Documents – where the originals are": {
+  "ru": "Документы — где оригиналы",
+  "de": "Dokumente – wo die Originale sind",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Vehicles": {
+  "ru": "Транспорт",
+  "de": "Fahrzeuge",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Digital accounts": {
+  "ru": "Цифровые аккаунты",
+  "de": "Digitale Konten",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Personal wishes": {
+  "ru": "Личные пожелания",
+  "de": "Persönliche Wünsche",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Other notes": {
+  "ru": "Прочие указания",
+  "de": "Sonstige Hinweise",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "New instruction": {
+  "ru": "Новое указание",
+  "de": "Neue Anweisung",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "What to know and to do": {
+  "ru": "Что нужно знать и сделать",
+  "de": "Was man wissen und tun soll",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Person in charge": {
+  "ru": "Ответственный контакт",
+  "de": "Zuständige Person",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "e.g. son Andrej, 0171 …": {
+  "ru": "например сын Андрей, 0171 …",
+  "de": "z. B. Sohn Andrej, 0171 …",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Confidential – into the package only if I choose": {
+  "ru": "Конфиденциально — не включать в пакет без моего выбора",
+  "de": "Vertraulich – nur auf meine Auswahl ins Paket",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Linked documents": {
+  "ru": "Связанные документы",
+  "de": "Verknüpfte Dokumente",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "＋ document": {
+  "ru": "＋ документ",
+  "de": "＋ Dokument",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Don’t put passwords or PINs here – that is what the safe is for.": {
+  "ru": "Пароли и PIN сюда не пишите — для них есть Tresor.",
+  "de": "Passwörter und PINs nicht hier eintragen – dafür gibt es den Tresor.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "No instructions yet. Start with the most important: whom to call first and where the originals are.": {
+  "ru": "Пока нет указаний. Начните с самого важного: кому позвонить первым и где лежат оригиналы.",
+  "de": "Noch keine Anweisungen. Beginnen Sie mit dem Wichtigsten: wen man zuerst anruft und wo die Originale liegen.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "updated %d": {
+  "ru": "обновлено %d",
+  "de": "aktualisiert %d",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "confidential": {
+  "ru": "конфиденциально",
+  "de": "vertraulich",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Accounts & finance": {
+  "ru": "Счета и финансы",
+  "de": "Konten & Finanzen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Valuables": {
+  "ru": "Ценные вещи",
+  "de": "Wertgegenstände",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Shareholdings": {
+  "ru": "Доли участия",
+  "de": "Beteiligungen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Other assets": {
+  "ru": "Прочее имущество",
+  "de": "Sonstiges Vermögen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Houses, flats, plots": {
+  "ru": "Дома, квартиры, участки",
+  "de": "Häuser, Wohnungen, Grundstücke",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Cars, motorbikes, campers": {
+  "ru": "Авто, мотоциклы, дома на колёсах",
+  "de": "Autos, Motorräder, Wohnmobile",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Accounts, depots, savings": {
+  "ru": "Счета, депо, вклады",
+  "de": "Konten, Depots, Sparanlagen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Jewellery, watches, art, collections": {
+  "ru": "Украшения, часы, искусство, коллекции",
+  "de": "Schmuck, Uhren, Kunst, Sammlungen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Companies, stakes, firms": {
+  "ru": "Компании, доли, фирмы",
+  "de": "Unternehmen, Anteile, Firmen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Other values and belongings": {
+  "ru": "Другие ценности и вещи",
+  "de": "Weitere Werte und Besitztümer",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Add to “%k”": {
+  "ru": "Добавить в «%k»",
+  "de": "Zu „%k“ hinzufügen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Property passport (PDF)": {
+  "ru": "Паспорт имущества (PDF)",
+  "de": "Vermögenspass (PDF)",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Overview of all your assets – for notary, insurer or heirs": {
+  "ru": "Обзор всего имущества — для нотариуса, страховой или наследников",
+  "de": "Übersicht über Ihr gesamtes Vermögen – für Notar, Versicherung oder Erben",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Stated value": {
+  "ru": "Указанная стоимость",
+  "de": "Angegebener Wert",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "estimated": {
+  "ru": "ориентировочно",
+  "de": "geschätzt",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Estimated value, €": {
+  "ru": "Ориентировочная стоимость, €",
+  "de": "Geschätzter Wert, €",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Purchase price, €": {
+  "ru": "Цена покупки, €",
+  "de": "Kaufpreis, €",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Acquired on": {
+  "ru": "Дата приобретения",
+  "de": "Erworben am",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Where papers/original are": {
+  "ru": "Где лежат документы/оригинал",
+  "de": "Wo liegen Papiere/Original",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Type": {
+  "ru": "Тип",
+  "de": "Art",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Area, m²": {
+  "ru": "Площадь, м²",
+  "de": "Fläche, m²",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Rooms": {
+  "ru": "Комнат",
+  "de": "Zimmer",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Year built": {
+  "ru": "Год постройки / выпуска",
+  "de": "Baujahr",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Loan balance, €": {
+  "ru": "Остаток кредита, €",
+  "de": "Restschuld Kredit, €",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Costs per month, €": {
+  "ru": "Расходы в месяц, €",
+  "de": "Kosten pro Monat, €",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Rental income per month, €": {
+  "ru": "Доход от аренды в месяц, €",
+  "de": "Mieteinnahmen pro Monat, €",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Number plate": {
+  "ru": "Номерной знак",
+  "de": "Kennzeichen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "VIN": {
+  "ru": "VIN (FIN)",
+  "de": "FIN / VIN",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Mileage, km": {
+  "ru": "Пробег, км",
+  "de": "Kilometerstand",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Keeper": {
+  "ru": "Владелец",
+  "de": "Halter",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Bank or institution": {
+  "ru": "Банк или организация",
+  "de": "Bank oder Institut",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Owner": {
+  "ru": "Владелец",
+  "de": "Inhaber",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Opened": {
+  "ru": "Открыт",
+  "de": "Eröffnet",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Maker": {
+  "ru": "Производитель",
+  "de": "Hersteller",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Where it is kept": {
+  "ru": "Где находится",
+  "de": "Aufbewahrungsort",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Certificate of authenticity": {
+  "ru": "Сертификат подлинности",
+  "de": "Echtheitszertifikat",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Share, %": {
+  "ru": "Доля, %",
+  "de": "Anteil, %",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Contact person": {
+  "ru": "Контактное лицо",
+  "de": "Ansprechpartner",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Subcategory": {
+  "ru": "Подкатегория",
+  "de": "Unterkategorie",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Warranty until": {
+  "ru": "Гарантия до",
+  "de": "Garantie bis",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "MOT": {
+  "ru": "TÜV / техосмотр",
+  "de": "TÜV / HU",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Oil change / service": {
+  "ru": "Замена масла / сервис",
+  "de": "Ölwechsel / Inspektion",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Tyre change": {
+  "ru": "Смена шин",
+  "de": "Reifenwechsel",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Insurance date": {
+  "ru": "Страховка — срок",
+  "de": "Versicherung – Termin",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Heating service": {
+  "ru": "Обслуживание отопления",
+  "de": "Heizungswartung",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Inspection": {
+  "ru": "Проверка/осмотр",
+  "de": "Prüfung / Begehung",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Basics": {
+  "ru": "Основное",
+  "de": "Grunddaten",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Finance": {
+  "ru": "Финансы",
+  "de": "Finanzen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Dates": {
+  "ru": "Сроки",
+  "de": "Termine & Fristen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Link a document": {
+  "ru": "Связать документ",
+  "de": "Dokument verknüpfen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Link a contract": {
+  "ru": "Связать договор",
+  "de": "Vertrag verknüpfen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "No contracts yet": {
+  "ru": "Договоров пока нет",
+  "de": "Noch keine Verträge",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "In the property passport": {
+  "ru": "В паспорт имущества",
+  "de": "In den Vermögenspass",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "PINs, passwords and access data belong in the safe.": {
+  "ru": "PIN, пароли и доступы — только в Tresor.",
+  "de": "PINs, Passwörter und Zugänge gehören in den Tresor.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "An estimate is no market price and no guarantee.": {
+  "ru": "Оценка — не рыночная цена и не гарантия.",
+  "de": "Eine Schätzung ist kein Marktpreis und keine Garantie.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Dates added to the calendar": {
+  "ru": "Даты внесены в календарь",
+  "de": "Termine im Kalender eingetragen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "without documents": {
+  "ru": "без документов",
+  "de": "ohne Dokumente",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "without value": {
+  "ru": "без стоимости",
+  "de": "ohne Wert",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "storage place missing": {
+  "ru": "не указано, где оригинал",
+  "de": "Ablageort fehlt",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Full": {
+  "ru": "Полный",
+  "de": "Vollständig",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Short": {
+  "ru": "Кратко",
+  "de": "Kurzfassung",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "For the notary": {
+  "ru": "Для нотариуса",
+  "de": "Für Notar",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "For the insurer": {
+  "ru": "Для страховой",
+  "de": "Für Versicherung",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "For the family": {
+  "ru": "Для близких",
+  "de": "Für Angehörige",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "All details, documents, places, what is missing": {
+  "ru": "Все данные, документы, где оригиналы, что не хватает",
+  "de": "Alle Angaben, Dokumente, Ablageorte, was fehlt",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Only name and value": {
+  "ru": "Только название и стоимость",
+  "de": "Nur Bezeichnung und Wert",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Without purchase prices; documents and places": {
+  "ru": "Без цен покупки; документы и места хранения",
+  "de": "Ohne Kaufpreise; Dokumente und Ablageorte",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Values, serial numbers, warranties": {
+  "ru": "Ценности, серийные номера, стоимость, гарантии",
+  "de": "Werte, Seriennummern, Garantien",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "What there is and where the papers are – no amounts": {
+  "ru": "Что есть и где документы — без сумм",
+  "de": "Was es gibt und wo die Papiere liegen – ohne Beträge",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Missing or worth checking": {
+  "ru": "Не хватает или стоит проверить",
+  "de": "Fehlt oder bitte prüfen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "As of %d": {
+  "ru": "По состоянию на %d",
+  "de": "Stand: %d",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Details entered by the owner; values estimated. Not a legal document.": {
+  "ru": "Сведения внесены владельцем; стоимость ориентировочная. Не юридический документ.",
+  "de": "Angaben vom Eigentümer; Werte geschätzt. Kein Rechtsdokument.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "What goes into the package": {
+  "ru": "Что включить в пакет",
+  "de": "Was ins Paket kommt",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "The package is never sent by itself – you decide whom to give it and when.": {
+  "ru": "Пакет не отправляется сам — Вы сами решаете, кому и когда его дать.",
+  "de": "Das Paket wird nicht verschickt – Sie entscheiden selbst, wem und wann Sie es geben.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Directives and where the originals are": {
+  "ru": "Распоряжения и где оригиналы",
+  "de": "Verfügungen und wo die Originale liegen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Asset overview": {
+  "ru": "Обзор имущества",
+  "de": "Vermögensübersicht",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "incl. confidential instructions": {
+  "ru": "вкл. конфиденциальные указания",
+  "de": "inkl. vertrauliche Anweisungen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Attach the pages of the directive papers": {
+  "ru": "Добавить страницы документов распоряжений",
+  "de": "Seiten der Verfügungs-Dokumente anhängen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Other documents as a package ›": {
+  "ru": "Другие документы как пакет ›",
+  "de": "Weitere Dokumente als Paket ›",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Information for my family": {
+  "ru": "Информация для моих близких",
+  "de": "Informationen für meine Angehörigen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Check and make PDF": {
+  "ru": "Проверить и создать PDF",
+  "de": "Prüfen und PDF erstellen",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Checked before the PDF": {
+  "ru": "Проверка перед PDF",
+  "de": "Vor dem PDF geprüft",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Everything there": {
+  "ru": "Всё на месте",
+  "de": "Alles vorhanden",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "The PDF has no password: keep it safe or hand it over in person.": {
+  "ru": "PDF без пароля: храните его в надёжном месте или передавайте лично.",
+  "de": "Das PDF hat kein Passwort: sicher aufbewahren oder persönlich übergeben.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "All assets": {
+  "ru": "Всё имущество",
+  "de": "Alle Vermögenswerte",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Assets: %n entries, stated %v. %c": {
+  "ru": "Имущество: %n записей, указано %v. %c",
+  "de": "Vermögen: %n Einträge, angegeben %v. %c",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Still open: %l.": {
+  "ru": "Не заполнено: %l.",
+  "de": "Noch offen: %l.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "All needed directives are there.": {
+  "ru": "Все нужные распоряжения есть.",
+  "de": "Alle nötigen Verfügungen sind da.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Original of the will: %o": {
+  "ru": "Оригинал завещания: %o",
+  "de": "Original des Testaments: %o",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Where the original will is has not been entered yet.": {
+  "ru": "Где лежит оригинал завещания, ещё не указано.",
+  "de": "Wo das Original des Testaments liegt, ist noch nicht eingetragen.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Instructions: %n": {
+  "ru": "Указаний: %n",
+  "de": "Anweisungen: %n",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "For “%n” missing: %l": {
+  "ru": "Для «%n» не хватает: %l",
+  "de": "Für „%n“ fehlt: %l",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "“%n” is fully linked.": {
+  "ru": "У «%n» всё связано.",
+  "de": "Bei „%n“ ist alles verknüpft.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Will": {
+  "ru": "Завещание",
+  "de": "Testament",
+  "files": [
+   "nachlass-plus.js",
+   "vorsorge.js"
+  ]
+ },
+ "Power of attorney": {
+  "ru": "Доверенность",
+  "de": "Vorsorge­vollmacht",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Living will": {
+  "ru": "Распоряжение пациента",
+  "de": "Patienten­verfügung",
+  "files": [
+   "nachlass-plus.js",
+   "vorsorge.js"
+  ]
+ },
+ "Care directive": {
+  "ru": "Об опеке",
+  "de": "Betreuungs­verfügung",
+  "files": [
+   "nachlass-plus.js",
+   "vorsorge.js"
+  ]
+ },
+ "Funeral wishes": {
+  "ru": "О похоронах",
+  "de": "Bestattungs­verfügung",
+  "files": [
+   "nachlass-plus.js",
+   "vorsorge.js"
   ]
  },
  "Tap a place, then what should go there. Butler in the middle and «More» always stay.": {
@@ -14345,44 +15381,9 @@
    "vertraege-abos.js"
   ]
  },
- "Will & provisions": {
-  "ru": "Завещание и распоряжения",
-  "de": "Testament & Vorsorge",
-  "files": [
-   "vorsorge.js"
-  ]
- },
- "Will": {
-  "ru": "Завещание",
-  "de": "Testament",
-  "files": [
-   "vorsorge.js"
-  ]
- },
  "Lasting power of attorney": {
   "ru": "Генеральная доверенность (Vorsorgevollmacht)",
   "de": "Vorsorgevollmacht",
-  "files": [
-   "vorsorge.js"
-  ]
- },
- "Living will": {
-  "ru": "Распоряжение пациента",
-  "de": "Patientenverfügung",
-  "files": [
-   "vorsorge.js"
-  ]
- },
- "Care directive": {
-  "ru": "Распоряжение об опеке",
-  "de": "Betreuungsverfügung",
-  "files": [
-   "vorsorge.js"
-  ]
- },
- "Funeral wishes": {
-  "ru": "Распоряжение о похоронах",
-  "de": "Bestattungsverfügung",
   "files": [
    "vorsorge.js"
   ]
@@ -14516,13 +15517,6 @@
  "Will & provisions – overview": {
   "ru": "Завещание и распоряжения — обзор",
   "de": "Testament & Vorsorge – Übersicht",
-  "files": [
-   "vorsorge.js"
-  ]
- },
- "there": {
-  "ru": "есть",
-  "de": "vorhanden",
   "files": [
    "vorsorge.js"
   ]

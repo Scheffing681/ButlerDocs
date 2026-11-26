@@ -2117,3 +2117,140 @@
 2116	Poliçeler
 2117	Araç
 2118	Karneler ve belgeler
+2119	Yakınlarınızın ihtiyaç duyacağı her şey: vasiyetler, varlıklar ve talimatlarınız. Yalnızca bu telefonda.
+2120	Vasiyetlerim – genel bakış
+2121	Varlıklarım – genel bakış
+2122	Vasiyet, ekler ve kişisel istekler
+2123	Vefat durumu paketi
+2124	Yakınlarınız için tüm önemli bilgiler tek PDF’te
+2125	Şifreler, PIN’ler, erişimler ve gizli bilgiler
+2126	Talimatlarım
+2127	Önemli notlar, kişiler ve adımlar
+2128	Vasiyet durumu
+2129	Varlık durumu
+2130	İhtiyacınız olan %b alandan %a hazır
+2131	Neye ihtiyacım var?
+2132	Kendiniz için gerekenleri işaretleyin. Eksik bir belge hata değil, yalnızca bir ipucudur.
+2133	Sonraki kontrol
+2134	Önerilen: vasiyetlerinizi yılda bir kontrol edin.
+2135	Vasiyetleri kontrol et
+2136	Vekillerin iletişim bilgileri hâlâ güncel mi?
+2137	Asıllar hâlâ yazılan yerde mi?
+2138	Belgelerin yeni sürümleri var mı?
+2139	Güvenilen kişiler aynı mı?
+2140	Hepsi kontrol edildi – sonraki bir yıl sonra
+2141	Kontrol: %d
+2142	Vasiyetleri kontrol et (Vorsorge & Nachlass)
+2143	henüz kontrol edilmedi
+2144	kodla korunuyor
+2145	Önemli kişiler
+2146	Belgeler – asıllar nerede
+2147	Araçlar
+2148	Dijital hesaplar
+2149	Kişisel istekler
+2150	Diğer notlar
+2151	Yeni talimat
+2152	Bilinmesi ve yapılması gerekenler
+2153	Sorumlu kişi
+2154	örn. oğlu Andrej, 0171 …
+2155	Gizli – yalnızca seçersem pakete
+2156	Bağlı belgeler
+2157	＋ belge
+2158	Şifre ve PIN’leri buraya yazmayın – bunun için kasa var.
+2159	Henüz talimat yok. En önemlisiyle başlayın: önce kim aranmalı ve asıllar nerede.
+2160	güncellendi %d
+2161	gizli
+2162	Hesaplar ve finans
+2163	Değerli eşyalar
+2164	İştirakler
+2165	Diğer varlıklar
+2166	Evler, daireler, arsalar
+2167	Otomobil, motosiklet, karavan
+2168	Hesaplar, depolar, birikimler
+2169	Takı, saat, sanat, koleksiyon
+2170	Şirketler, paylar, firmalar
+2171	Diğer değerler ve eşyalar
+2172	“%k” kategorisine ekle
+2173	Varlık pasaportu (PDF)
+2174	Tüm varlıklarınıza genel bakış – noter, sigorta veya mirasçılar için
+2175	Belirtilen değer
+2176	tahmini
+2177	Tahmini değer, €
+2178	Satın alma fiyatı, €
+2179	Edinme tarihi
+2180	Belgeler/asıl nerede
+2181	Tür
+2182	Alan, m²
+2183	Oda
+2184	Yapım yılı
+2185	Kredi kalan borç, €
+2186	Aylık giderler, €
+2187	Aylık kira geliri, €
+2188	Plaka
+2189	Şasi no (VIN)
+2190	Kilometre
+2191	Ruhsat sahibi
+2192	Banka veya kurum
+2193	Sahibi
+2194	Açılış
+2195	Üretici
+2196	Saklandığı yer
+2197	Orijinallik sertifikası
+2198	Pay, %
+2199	İrtibat kişisi
+2200	Alt kategori
+2201	Garanti bitişi
+2202	TÜV / muayene
+2203	Yağ değişimi / bakım
+2204	Lastik değişimi
+2205	Sigorta tarihi
+2206	Kalorifer bakımı
+2207	Muayene / kontrol
+2208	Temel bilgiler
+2209	Finans
+2210	Tarihler
+2211	Belge bağla
+2212	Sözleşme bağla
+2213	Henüz sözleşme yok
+2214	Varlık pasaportuna
+2215	PIN, şifre ve erişimler kasaya aittir.
+2216	Tahmin bir piyasa fiyatı veya garanti değildir.
+2217	Tarihler takvime eklendi
+2218	belgesiz
+2219	değersiz
+2220	saklama yeri eksik
+2221	Tam
+2222	Kısa
+2223	Noter için
+2224	Sigorta için
+2225	Aile için
+2226	Tüm bilgiler, belgeler, yerler, eksikler
+2227	Yalnızca ad ve değer
+2228	Alış fiyatları olmadan; belgeler ve yerler
+2229	Değerler, seri numaraları, garantiler
+2230	Neler var ve belgeler nerede – tutarsız
+2231	Eksik veya kontrol edilmeli
+2232	Tarih: %d
+2233	Bilgiler sahibi tarafından girildi; değerler tahminidir. Hukuki belge değildir.
+2234	Pakete neler girsin
+2235	Paket kendiliğinden gönderilmez – kime ve ne zaman vereceğinize siz karar verirsiniz.
+2236	Vasiyetler ve asılların yeri
+2237	Varlık özeti
+2238	gizli talimatlar dahil
+2239	Vasiyet belgelerinin sayfalarını ekle
+2240	Diğer belgeler paket olarak ›
+2241	Yakınlarım için bilgiler
+2242	Kontrol et ve PDF oluştur
+2243	PDF öncesi kontrol
+2244	Her şey tamam
+2245	PDF’in şifresi yok: güvenli saklayın veya elden verin.
+2246	Tüm varlıklar
+2247	Varlıklar: %n kayıt, belirtilen %v. %c
+2248	Hâlâ açık: %l.
+2249	Gerekli tüm vasiyetler mevcut.
+2250	Vasiyetin aslı: %o
+2251	Vasiyetin aslının nerede olduğu henüz girilmedi.
+2252	Talimatlar: %n
+2253	“%n” için eksik: %l
+2254	“%n” tamamen bağlı.
+2255	Vekâletname

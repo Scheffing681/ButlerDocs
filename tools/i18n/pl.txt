@@ -2117,3 +2117,140 @@
 2116	Polisy
 2117	Pojazd
 2118	Świadectwa i zaświadczenia
+2119	Wszystko, czego potrzebują bliscy: dyspozycje, majątek i Twoje wskazówki. Tylko na tym telefonie.
+2120	Moje dyspozycje – przegląd
+2121	Mój majątek – przegląd
+2122	Testament, uzupełnienia i osobiste życzenia
+2123	Pakiet na wypadek śmierci
+2124	Wszystko ważne dla bliskich w jednym PDF
+2125	Hasła, PIN-y, dostępy i poufne informacje
+2126	Moje wskazówki
+2127	Ważne wskazówki, kontakty i kroki
+2128	Stan dyspozycji
+2129	Stan majątku
+2130	%a z %b potrzebnych obszarów gotowe
+2131	Czego potrzebuję?
+2132	Zaznacz, czego potrzebujesz. Brak dokumentu to nie błąd, tylko wskazówka.
+2133	Następna kontrola
+2134	Zalecane: sprawdzaj dyspozycje raz w roku.
+2135	Sprawdź dyspozycje
+2136	Czy kontakty pełnomocników są aktualne?
+2137	Czy oryginały leżą tam, gdzie zapisano?
+2138	Czy są nowe wersje dokumentów?
+2139	Czy osoby zaufane są te same?
+2140	Wszystko sprawdzone – następna za rok
+2141	Sprawdzono %d
+2142	Sprawdź dyspozycje (Vorsorge & Nachlass)
+2143	jeszcze nie sprawdzono
+2144	chronione kodem
+2145	Ważne kontakty
+2146	Dokumenty – gdzie oryginały
+2147	Pojazdy
+2148	Konta cyfrowe
+2149	Osobiste życzenia
+2150	Inne wskazówki
+2151	Nowa wskazówka
+2152	Co trzeba wiedzieć i zrobić
+2153	Osoba odpowiedzialna
+2154	np. syn Andrzej, 0171 …
+2155	Poufne – do pakietu tylko na mój wybór
+2156	Powiązane dokumenty
+2157	＋ dokument
+2158	Nie wpisuj tu haseł ani PIN-ów – służy do tego sejf.
+2159	Brak wskazówek. Zacznij od najważniejszego: do kogo dzwonić najpierw i gdzie są oryginały.
+2160	zaktualizowano %d
+2161	poufne
+2162	Konta i finanse
+2163	Kosztowności
+2164	Udziały
+2165	Inny majątek
+2166	Domy, mieszkania, działki
+2167	Samochody, motocykle, kampery
+2168	Konta, depozyty, oszczędności
+2169	Biżuteria, zegarki, sztuka, kolekcje
+2170	Firmy, udziały, spółki
+2171	Inne wartości i rzeczy
+2172	Dodaj do „%k”
+2173	Paszport majątku (PDF)
+2174	Przegląd całego majątku – dla notariusza, ubezpieczyciela lub spadkobierców
+2175	Podana wartość
+2176	szacunkowo
+2177	Szacowana wartość, €
+2178	Cena zakupu, €
+2179	Data nabycia
+2180	Gdzie leżą dokumenty/oryginał
+2181	Rodzaj
+2182	Powierzchnia, m²
+2183	Pokoje
+2184	Rok budowy
+2185	Pozostały kredyt, €
+2186	Koszty miesięczne, €
+2187	Przychód z najmu miesięcznie, €
+2188	Tablica rejestracyjna
+2189	VIN
+2190	Przebieg, km
+2191	Posiadacz
+2192	Bank lub instytucja
+2193	Właściciel
+2194	Otwarte
+2195	Producent
+2196	Miejsce przechowywania
+2197	Certyfikat autentyczności
+2198	Udział, %
+2199	Osoba kontaktowa
+2200	Podkategoria
+2201	Gwarancja do
+2202	TÜV / przegląd
+2203	Wymiana oleju / przegląd
+2204	Wymiana opon
+2205	Termin ubezpieczenia
+2206	Serwis ogrzewania
+2207	Kontrola / przegląd
+2208	Podstawowe dane
+2209	Finanse
+2210	Terminy
+2211	Powiąż dokument
+2212	Powiąż umowę
+2213	Brak umów
+2214	Do paszportu majątku
+2215	PIN-y, hasła i dostępy należą do sejfu.
+2216	Szacunek to nie cena rynkowa ani gwarancja.
+2217	Terminy dodano do kalendarza
+2218	bez dokumentów
+2219	bez wartości
+2220	brak miejsca przechowywania
+2221	Pełny
+2222	Skrócony
+2223	Dla notariusza
+2224	Dla ubezpieczyciela
+2225	Dla bliskich
+2226	Wszystkie dane, dokumenty, miejsca, braki
+2227	Tylko nazwa i wartość
+2228	Bez cen zakupu; dokumenty i miejsca
+2229	Wartości, numery seryjne, gwarancje
+2230	Co jest i gdzie dokumenty – bez kwot
+2231	Brakuje lub warto sprawdzić
+2232	Stan na %d
+2233	Dane wprowadził właściciel; wartości szacunkowe. To nie dokument prawny.
+2234	Co wchodzi do pakietu
+2235	Pakiet nie jest wysyłany sam – Ty decydujesz, komu i kiedy go dać.
+2236	Dyspozycje i gdzie oryginały
+2237	Przegląd majątku
+2238	z poufnymi wskazówkami
+2239	Dołącz strony dokumentów dyspozycji
+2240	Inne dokumenty jako pakiet ›
+2241	Informacje dla moich bliskich
+2242	Sprawdź i utwórz PDF
+2243	Sprawdzono przed PDF
+2244	Wszystko jest
+2245	PDF nie ma hasła: przechowuj bezpiecznie lub przekaż osobiście.
+2246	Cały majątek
+2247	Majątek: %n wpisów, podano %v. %c
+2248	Jeszcze otwarte: %l.
+2249	Wszystkie potrzebne dyspozycje są.
+2250	Oryginał testamentu: %o
+2251	Nie podano jeszcze, gdzie jest oryginał testamentu.
+2252	Wskazówki: %n
+2253	Dla „%n” brakuje: %l
+2254	„%n” jest w pełni powiązane.
+2255	Pełnomocnictwo

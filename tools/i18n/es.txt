@@ -2117,3 +2117,140 @@
 2116	Pólizas
 2117	Vehículo
 2118	Notas y certificados
+2119	Todo lo que necesitará su familia: disposiciones, patrimonio y sus instrucciones. Solo en este teléfono.
+2120	Mis disposiciones de un vistazo
+2121	Mi patrimonio de un vistazo
+2122	Testamento, añadidos y deseos personales
+2123	Paquete en caso de fallecimiento
+2124	Todo lo importante para su familia en un PDF
+2125	Contraseñas, PIN, accesos e información confidencial
+2126	Mis instrucciones
+2127	Notas importantes, contactos y pasos
+2128	Estado de las disposiciones
+2129	Estado del patrimonio
+2130	%a de %b áreas que necesita están listas
+2131	¿Qué necesito?
+2132	Marque lo que necesita. Un documento que falta no es un error, solo una pista.
+2133	Próxima revisión
+2134	Recomendado: revisar sus disposiciones una vez al año.
+2135	Revisar disposiciones
+2136	¿Siguen vigentes los contactos de los apoderados?
+2137	¿Siguen los originales donde se indica?
+2138	¿Hay nuevas versiones de los documentos?
+2139	¿Son las mismas personas de confianza?
+2140	Todo revisado – próxima en un año
+2141	Revisado el %d
+2142	Revisar disposiciones (Vorsorge & Nachlass)
+2143	aún no revisado
+2144	protegido con código
+2145	Contactos importantes
+2146	Documentos – dónde están los originales
+2147	Vehículos
+2148	Cuentas digitales
+2149	Deseos personales
+2150	Otras notas
+2151	Nueva instrucción
+2152	Qué saber y qué hacer
+2153	Persona responsable
+2154	p. ej. hijo Andrej, 0171 …
+2155	Confidencial – al paquete solo si lo elijo
+2156	Documentos vinculados
+2157	＋ documento
+2158	No ponga aquí contraseñas ni PIN: para eso está la caja fuerte.
+2159	Aún no hay instrucciones. Empiece por lo esencial: a quién llamar primero y dónde están los originales.
+2160	actualizado %d
+2161	confidencial
+2162	Cuentas y finanzas
+2163	Objetos de valor
+2164	Participaciones
+2165	Otros bienes
+2166	Casas, pisos, terrenos
+2167	Coches, motos, autocaravanas
+2168	Cuentas, depósitos, ahorros
+2169	Joyas, relojes, arte, colecciones
+2170	Empresas, participaciones, firmas
+2171	Otros valores y pertenencias
+2172	Añadir a «%k»
+2173	Pasaporte de bienes (PDF)
+2174	Resumen de todo su patrimonio – para notario, aseguradora o herederos
+2175	Valor indicado
+2176	estimado
+2177	Valor estimado, €
+2178	Precio de compra, €
+2179	Adquirido el
+2180	Dónde están papeles/original
+2181	Tipo
+2182	Superficie, m²
+2183	Habitaciones
+2184	Año de construcción
+2185	Saldo del préstamo, €
+2186	Gastos al mes, €
+2187	Ingresos por alquiler al mes, €
+2188	Matrícula
+2189	VIN
+2190	Kilometraje
+2191	Titular
+2192	Banco o entidad
+2193	Titular
+2194	Abierta el
+2195	Fabricante
+2196	Dónde se guarda
+2197	Certificado de autenticidad
+2198	Participación, %
+2199	Persona de contacto
+2200	Subcategoría
+2201	Garantía hasta
+2202	TÜV / ITV
+2203	Cambio de aceite / revisión
+2204	Cambio de neumáticos
+2205	Fecha del seguro
+2206	Mantenimiento de la calefacción
+2207	Inspección
+2208	Datos básicos
+2209	Finanzas
+2210	Fechas
+2211	Vincular documento
+2212	Vincular contrato
+2213	Aún no hay contratos
+2214	En el pasaporte de bienes
+2215	PIN, contraseñas y accesos van en la caja fuerte.
+2216	Una estimación no es un precio de mercado ni una garantía.
+2217	Fechas añadidas al calendario
+2218	sin documentos
+2219	sin valor
+2220	falta el lugar de custodia
+2221	Completo
+2222	Resumen
+2223	Para el notario
+2224	Para la aseguradora
+2225	Para la familia
+2226	Todos los datos, documentos, lugares, faltas
+2227	Solo nombre y valor
+2228	Sin precios de compra; documentos y lugares
+2229	Valores, números de serie, garantías
+2230	Qué hay y dónde están los papeles – sin importes
+2231	Falta o conviene revisar
+2232	A fecha de %d
+2233	Datos introducidos por el propietario; valores estimados. No es un documento legal.
+2234	Qué entra en el paquete
+2235	El paquete nunca se envía solo: usted decide a quién y cuándo dárselo.
+2236	Disposiciones y dónde están los originales
+2237	Resumen del patrimonio
+2238	incl. instrucciones confidenciales
+2239	Adjuntar las páginas de los documentos
+2240	Otros documentos como paquete ›
+2241	Información para mi familia
+2242	Revisar y crear PDF
+2243	Revisado antes del PDF
+2244	Todo está
+2245	El PDF no tiene contraseña: guárdelo bien o entréguelo en persona.
+2246	Todo el patrimonio
+2247	Patrimonio: %n entradas, indicado %v. %c
+2248	Aún pendiente: %l.
+2249	Están todas las disposiciones necesarias.
+2250	Original del testamento: %o
+2251	Aún no se ha indicado dónde está el original del testamento.
+2252	Instrucciones: %n
+2253	Para «%n» falta: %l
+2254	«%n» está totalmente vinculado.
+2255	Poder preventivo

@@ -2069,3 +2069,51 @@
 2068	Convertir en factura
 2069	Presupuesto %n
 2070	Hola:\n\nadjuntamos nuestro presupuesto %n por %s.\n\nAtentamente\n%f
+2071	Ciudad y servicios ciudadanos
+2072	Finanzas e impuestos
+2073	Finanzamt, Familienkasse, banco
+2074	Trabajo y asuntos sociales
+2075	Jobcenter, Agentur für Arbeit, pensión
+2076	Salud y cuidados
+2077	Krankenkasse, médico de cabecera, dentista
+2078	Derecho y seguridad
+2079	Policía, juzgado, abogado
+2080	Coche y transporte
+2081	Kfz-Zulassung, TÜV, carné
+2082	Vivienda y energía
+2083	casero, Stadtwerke, tasa de radiodifusión
+2084	responsabilidad civil, hogar, seguro de coche
+2085	Educación y familia
+2086	colegio, guardería, Jugendamt
+2087	clubes, iglesia, otros
+2088	Categorías
+2089	Ver todo
+2090	Usados a menudo
+2091	Todas las entradas
+2092	1 entrada
+2093	vacío por ahora
+2094	Servicios
+2095	Citas
+2096	Escanear documento
+2097	Añadir organismo
+2098	Aún no hay nada en esta categoría.
+2099	Aún no hay documentos aquí. Escanee una carta y llegará aquí.
+2100	No hay citas.
+2101	Primero añada un organismo
+2102	¿Para qué organismo?
+2103	Elegir categoría
+2104	asignada automáticamente
+2105	Resoluciones (Bescheide)
+2106	Solicitudes
+2107	Facturas
+2108	Correspondencia
+2109	Declaración de la renta
+2110	Impuesto salarial y nómina
+2111	Kindergeld
+2112	Identidad y residencia
+2113	Empadronamiento
+2114	Resultados e informes médicos
+2115	Recetas
+2116	Pólizas
+2117	Vehículo
+2118	Notas y certificados

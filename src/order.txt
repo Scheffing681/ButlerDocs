@@ -116,3 +116,5 @@ docs/butler-rechte.js
 docs/sprache-fix.js
 docs/arbeit-zeit.js
 docs/business-plus.js
+docs/ikonen.js
+docs/behoerden-kat.js

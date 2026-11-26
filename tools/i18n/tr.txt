@@ -2069,3 +2069,51 @@
 2068	Faturaya dönüştür
 2069	Teklif %n
 2070	Merhaba,\n\nekte %s tutarındaki %n numaralı teklifimizi bulabilirsiniz.\n\nSaygılarımızla\n%f
+2071	Şehir ve vatandaş hizmetleri
+2072	Finans ve vergiler
+2073	Finanzamt, Familienkasse, banka
+2074	Çalışma ve sosyal
+2075	Jobcenter, Agentur für Arbeit, emeklilik
+2076	Sağlık ve bakım
+2077	Krankenkasse, aile hekimi, diş hekimi
+2078	Hukuk ve güvenlik
+2079	Polis, mahkeme, avukat
+2080	Araç ve trafik
+2081	Kfz-Zulassung, TÜV, ehliyet
+2082	Konut ve enerji
+2083	ev sahibi, Stadtwerke, yayın katkı payı
+2084	sorumluluk, ev eşyası, araç sigortası
+2085	Eğitim ve aile
+2086	okul, kreş, Jugendamt
+2087	dernekler, kilise, diğer kurumlar
+2088	Kategoriler
+2089	Tümünü göster
+2090	Sık kullanılanlar
+2091	Tüm kayıtlar
+2092	1 kayıt
+2093	henüz boş
+2094	Hizmetler
+2095	Randevular
+2096	Belge tara
+2097	Kurum ekle
+2098	Bu kategoride henüz bir şey yok.
+2099	Bu kategoride henüz belge yok. Bir mektup tarayın – buraya gelir.
+2100	Randevu yok.
+2101	Önce bir kurum ekleyin
+2102	Hangi kurum için?
+2103	Kategori seçin
+2104	otomatik atandı
+2105	Kararlar (Bescheide)
+2106	Başvurular
+2107	Faturalar
+2108	Yazışmalar
+2109	Vergi beyannamesi
+2110	Ücret vergisi ve maaş
+2111	Kindergeld
+2112	Kimlik ve oturum
+2113	Adres kaydı
+2114	Bulgular ve doktor mektupları
+2115	Reçeteler
+2116	Poliçeler
+2117	Araç
+2118	Karneler ve belgeler

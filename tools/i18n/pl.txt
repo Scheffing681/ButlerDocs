@@ -2069,3 +2069,51 @@
 2068	Zamień na fakturę
 2069	Oferta %n
 2070	Dzień dobry,\n\nw załączeniu nasza oferta %n na kwotę %s.\n\nZ poważaniem\n%f
+2071	Miasto i usługi obywatelskie
+2072	Finanse i podatki
+2073	Finanzamt, Familienkasse, bank
+2074	Praca i sprawy socjalne
+2075	Jobcenter, Agentur für Arbeit, emerytura
+2076	Zdrowie i opieka
+2077	Krankenkasse, lekarz rodzinny, dentysta
+2078	Prawo i bezpieczeństwo
+2079	Policja, sąd, adwokat
+2080	Samochód i transport
+2081	Kfz-Zulassung, TÜV, prawo jazdy
+2082	Mieszkanie i energia
+2083	wynajmujący, Stadtwerke, opłata RTV
+2084	OC, mienie domowe, ubezpieczenie auta
+2085	Edukacja i rodzina
+2086	szkoła, przedszkole, Jugendamt
+2087	kluby, kościół, inne
+2088	Kategorie
+2089	Pokaż wszystkie
+2090	Często używane
+2091	Wszystkie wpisy
+2092	1 wpis
+2093	na razie pusto
+2094	Usługi
+2095	Terminy
+2096	Skanuj dokument
+2097	Dodaj urząd
+2098	W tej kategorii jeszcze nic nie ma.
+2099	Brak dokumentów w tej kategorii. Zeskanuj pismo – trafi tutaj.
+2100	Brak terminów.
+2101	Najpierw dodaj urząd
+2102	Dla którego urzędu?
+2103	Wybierz kategorię
+2104	przypisano automatycznie
+2105	Decyzje (Bescheide)
+2106	Wnioski
+2107	Faktury
+2108	Korespondencja
+2109	Zeznanie podatkowe
+2110	Podatek od wynagrodzeń i pensja
+2111	Kindergeld
+2112	Dowody i pobyt
+2113	Meldunek
+2114	Wyniki i listy lekarskie
+2115	Recepty
+2116	Polisy
+2117	Pojazd
+2118	Świadectwa i zaświadczenia

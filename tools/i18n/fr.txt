@@ -2069,3 +2069,51 @@
 2068	Transformer en facture
 2069	Devis %n
 2070	Bonjour,\n\nveuillez trouver ci-joint notre devis %n d’un montant de %s.\n\nCordialement\n%f
+2071	Ville et services aux citoyens
+2072	Finances et impôts
+2073	Finanzamt, Familienkasse, banque
+2074	Travail et social
+2075	Jobcenter, Agentur für Arbeit, retraite
+2076	Santé et soins
+2077	Krankenkasse, médecin traitant, dentiste
+2078	Droit et sécurité
+2079	Police, tribunal, avocat
+2080	Voiture et transport
+2081	Kfz-Zulassung, TÜV, permis
+2082	Logement et énergie
+2083	bailleur, Stadtwerke, redevance
+2084	responsabilité civile, habitation, assurance auto
+2085	Éducation et famille
+2086	école, crèche, Jugendamt
+2087	associations, église, autres
+2088	Catégories
+2089	Tout afficher
+2090	Utilisés souvent
+2091	Toutes les entrées
+2092	1 entrée
+2093	vide pour l’instant
+2094	Services
+2095	Rendez-vous
+2096	Scanner un document
+2097	Ajouter un organisme
+2098	Rien dans cette catégorie pour l’instant.
+2099	Pas encore de documents ici. Scannez une lettre – elle arrivera ici.
+2100	Aucun rendez-vous.
+2101	Ajoutez d’abord un organisme
+2102	Pour quel organisme ?
+2103	Choisir une catégorie
+2104	attribuée automatiquement
+2105	Décisions (Bescheide)
+2106	Demandes
+2107	Factures
+2108	Correspondance
+2109	Déclaration d’impôts
+2110	Impôt sur salaire et paie
+2111	Kindergeld
+2112	Identité et séjour
+2113	Déclaration de domicile
+2114	Résultats et lettres médicales
+2115	Ordonnances
+2116	Polices
+2117	Véhicule
+2118	Bulletins et attestations

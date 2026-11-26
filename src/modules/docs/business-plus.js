@@ -32,7 +32,7 @@ const bzpLow=()=>{const B=bzxD();return B.lager?B.prod.filter(p=>p.min!=null&&p.
 /* ---------- home: quick actions + «Mehr» ---------- */
 Hooks.on('screen',h=>{try{if(typeof h!=='string')return h;
  if(m.route==='kar'&&krD().tab==='biz'&&bzxOn()){const B=bzxD();
-  h=h.replace('<div class="bzqa">','<div class="bzqa bzq6">').replace(/(<button type="button" data-act="bzxcusts">)/,`<button type="button" data-act="bzxang"><b>📝</b>${i(bzpt('ang'))}</button><button type="button" data-act="bzpm"><b>⏰</b>${i(bzpt('mahn'))}</button>$1`);
+  h=h.replace('<div class="bzqa">','<div class="bzqa bzq6">').replace(/(<button type="button" data-act="bzxcusts">)/,`<button type="button" data-act="bzxang"><b class="ikw" data-ik="1">${iknF('pen','recht','m')}</b>${i(bzpt('ang'))}</button><button type="button" data-act="bzpm"><b class="ikw" data-ik="1">${iknF('bell','ges','m')}</b>${i(bzpt('mahn'))}</button>$1`);
   const low=bzpLow(),A=B.ang.slice().sort((a,b)=>String(b.d).localeCompare(String(a.d)));
   const blk=`<div class="vash bzpmh">${i(bzpt('more'))}${bzpNeu()}</div><div class="dhcard bzpmore">
    ${A.length?`<div class="bzpgrp">${A.slice(0,3).map(a=>{const c=bzxCust(a.cust);return`<button type="button" class="odr bzrow" data-act="bzxinv" data-id="${i(a.id)}"><span><b>${i(a.no)}</b><small>${i([c?c.n:'',bzxDe(a.d),a.inv?'→ '+bzpt('conv'):''].filter(Boolean).join(' · '))}</small></span><em>${i(bzxEur(bzxSum(a).gross))}</em></button>`}).join('')}<small class="bzpn">${i(bzpt('angs',{n:A.length}))} · ${i(bzpt('angsS'))}</small></div>`:''}

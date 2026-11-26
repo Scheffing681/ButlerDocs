@@ -83,6 +83,7 @@
   "de": "Versicherungen",
   "files": [
    "abschluss.js",
+   "behoerden-kat.js",
    "business.js"
   ]
  },
@@ -863,6 +864,7 @@
   "de": "Verträge",
   "files": [
    "akte.js",
+   "behoerden-kat.js",
    "kalender-nz.js",
    "kontakte-post.js",
    "move-phone.js",
@@ -876,6 +878,7 @@
   "de": "Dokumente",
   "files": [
    "akte.js",
+   "behoerden-kat.js",
    "butler-rechte.js",
    "finanzen2.js",
    "kalender-nz.js",
@@ -931,6 +934,7 @@
   "de": "%n Einträge",
   "files": [
    "akte.js",
+   "behoerden-kat.js",
    "butler-rechte.js",
    "suche-smart.js"
   ]
@@ -1194,6 +1198,7 @@
   "de": "Andere",
   "files": [
    "arbeit-zeit.js",
+   "behoerden-kat.js",
    "business.js",
    "finanzen.js",
    "kontakte-post.js",
@@ -2508,6 +2513,375 @@
    "behoerden-briefe.js"
   ]
  },
+ "City & citizen services": {
+  "ru": "Город и гражданские службы",
+  "de": "Stadt & Bürgerdienste",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Finance & taxes": {
+  "ru": "Финансы и налоги",
+  "de": "Finanzen & Steuern",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Finanzamt, Familienkasse, bank": {
+  "ru": "Finanzamt, Familienkasse, Bank",
+  "de": "Finanzamt, Familienkasse, Bank",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Work & social": {
+  "ru": "Работа и соцслужбы",
+  "de": "Arbeit & Soziales",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Jobcenter, Agentur für Arbeit, pension": {
+  "ru": "Jobcenter, Agentur für Arbeit, Rente",
+  "de": "Jobcenter, Agentur für Arbeit, Rente",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Health & care": {
+  "ru": "Здоровье и уход",
+  "de": "Gesundheit & Pflege",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Krankenkasse, GP, dentist": {
+  "ru": "Krankenkasse, Hausarzt, Zahnarzt",
+  "de": "Krankenkasse, Hausarzt, Zahnarzt",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Law & safety": {
+  "ru": "Право и безопасность",
+  "de": "Recht & Sicherheit",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Police, court, lawyer": {
+  "ru": "Polizei, Amtsgericht, Anwalt",
+  "de": "Polizei, Amtsgericht, Anwalt",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Car & transport": {
+  "ru": "Авто и транспорт",
+  "de": "Auto & Verkehr",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Kfz-Zulassung, TÜV, licence": {
+  "ru": "Kfz-Zulassung, TÜV, Führerschein",
+  "de": "Kfz-Zulassung, TÜV, Führerschein",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Home & energy": {
+  "ru": "Жильё и энергия",
+  "de": "Wohnen & Energie",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "landlord, utilities, licence fee": {
+  "ru": "Vermieter, Stadtwerke, Rundfunkbeitrag",
+  "de": "Vermieter, Stadtwerke, Rundfunkbeitrag",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "liability, contents, car insurance": {
+  "ru": "Haftpflicht, Hausrat, Kfz-Versicherung",
+  "de": "Haftpflicht, Hausrat, Kfz-Versicherung",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Education & family": {
+  "ru": "Образование и семья",
+  "de": "Bildung & Familie",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "school, nursery, youth office": {
+  "ru": "Schule, Kita, Jugendamt",
+  "de": "Schule, Kita, Jugendamt",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "clubs, church, others": {
+  "ru": "Vereine, Kirche, sonstige Stellen",
+  "de": "Vereine, Kirche, sonstige Stellen",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Categories": {
+  "ru": "Категории",
+  "de": "Kategorien",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Show all": {
+  "ru": "Показать все",
+  "de": "Alle anzeigen",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Frequently used": {
+  "ru": "Часто используемые",
+  "de": "Häufig genutzt",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "All entries": {
+  "ru": "Все записи",
+  "de": "Alle Einträge",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "1 entry": {
+  "ru": "1 запись",
+  "de": "1 Eintrag",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "empty so far": {
+  "ru": "пока пусто",
+  "de": "noch leer",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Scan a letter": {
+  "ru": "Сканировать письмо",
+  "de": "Schreiben scannen",
+  "files": [
+   "behoerden-kat.js",
+   "behoerden.js"
+  ]
+ },
+ "Services": {
+  "ru": "Службы",
+  "de": "Dienste",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Appointments": {
+  "ru": "Термины",
+  "de": "Termine",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Apply": {
+  "ru": "Подать заявление",
+  "de": "Antrag stellen",
+  "files": [
+   "behoerden-kat.js",
+   "mappen.js"
+  ]
+ },
+ "Scan document": {
+  "ru": "Сканировать документ",
+  "de": "Dokument scannen",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Add appointment": {
+  "ru": "Записать термин",
+  "de": "Termin eintragen",
+  "files": [
+   "behoerden-kat.js",
+   "behoerden-termine.js"
+  ]
+ },
+ "Add an office": {
+  "ru": "Добавить учреждение",
+  "de": "Einrichtung hinzufügen",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Nothing in this category yet.": {
+  "ru": "В этой категории пока ничего нет.",
+  "de": "In dieser Kategorie ist noch nichts.",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "No documents in this category yet. Scan a letter – it lands here.": {
+  "ru": "Документов к этой категории пока нет. Отсканируйте письмо — оно попадёт сюда.",
+  "de": "Noch keine Dokumente in dieser Kategorie. Scannen Sie ein Schreiben – es landet hier.",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "No appointments.": {
+  "ru": "Терминов нет.",
+  "de": "Keine Termine.",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Add an office first": {
+  "ru": "Сначала добавьте учреждение",
+  "de": "Zuerst eine Einrichtung hinzufügen",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "For which office?": {
+  "ru": "Для какого учреждения?",
+  "de": "Für welche Einrichtung?",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Category": {
+  "ru": "Категория",
+  "de": "Kategorie",
+  "files": [
+   "behoerden-kat.js",
+   "business.js",
+   "finanzen.js"
+  ]
+ },
+ "Choose a category": {
+  "ru": "Выберите категорию",
+  "de": "Kategorie wählen",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "assigned automatically": {
+  "ru": "подобрано автоматически",
+  "de": "automatisch zugeordnet",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Decisions (Bescheide)": {
+  "ru": "Решения (Bescheide)",
+  "de": "Bescheide",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Applications": {
+  "ru": "Заявления",
+  "de": "Anträge",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Invoices": {
+  "ru": "Счета",
+  "de": "Rechnungen",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Correspondence": {
+  "ru": "Переписка",
+  "de": "Kommunikation",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Tax return": {
+  "ru": "Налоговая декларация",
+  "de": "Steuererklärung",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Wage tax & pay": {
+  "ru": "Lohnsteuer и зарплата",
+  "de": "Lohnsteuer & Gehalt",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Child benefit": {
+  "ru": "Kindergeld",
+  "de": "Kindergeld",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "ID & residence": {
+  "ru": "Документы личности",
+  "de": "Ausweise & Aufenthalt",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Registration": {
+  "ru": "Регистрация (Meldebescheinigung)",
+  "de": "Meldebescheinigung",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Findings & doctor’s letters": {
+  "ru": "Заключения и анализы",
+  "de": "Befunde & Arztbriefe",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Prescriptions": {
+  "ru": "Рецепты",
+  "de": "Rezepte",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Policies": {
+  "ru": "Полисы",
+  "de": "Policen",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Vehicle": {
+  "ru": "Автомобиль",
+  "de": "Fahrzeug",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
+ "Reports & certificates": {
+  "ru": "Табели и справки",
+  "de": "Zeugnisse & Bescheinigungen",
+  "files": [
+   "behoerden-kat.js"
+  ]
+ },
  "Upcoming appointments": {
   "ru": "Ближайшие термины",
   "de": "Nächste Termine",
@@ -2518,13 +2892,6 @@
  "My appointments": {
   "ru": "Мои термины",
   "de": "Meine Termine",
-  "files": [
-   "behoerden-termine.js"
-  ]
- },
- "Add appointment": {
-  "ru": "Термин записан — внести",
-  "de": "Termin eintragen",
   "files": [
    "behoerden-termine.js"
   ]
@@ -3546,13 +3913,6 @@
  "Which letter?": {
   "ru": "Какое письмо?",
   "de": "Welches Schreiben?",
-  "files": [
-   "behoerden.js"
-  ]
- },
- "Scan a letter": {
-  "ru": "Сканировать письмо",
-  "de": "Schreiben scannen",
   "files": [
    "behoerden.js"
   ]
@@ -4917,14 +5277,6 @@
   "de": "Betrag € (brutto)",
   "files": [
    "business.js"
-  ]
- },
- "Category": {
-  "ru": "Категория",
-  "de": "Kategorie",
-  "files": [
-   "business.js",
-   "finanzen.js"
   ]
  },
  "Photo or file of the receipt": {
@@ -10019,13 +10371,6 @@
  "Valid until": {
   "ru": "Действителен до",
   "de": "Gültig bis",
-  "files": [
-   "mappen.js"
-  ]
- },
- "Apply": {
-  "ru": "Перенести в документ",
-  "de": "Übernehmen",
   "files": [
    "mappen.js"
   ]

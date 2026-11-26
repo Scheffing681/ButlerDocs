@@ -121,3 +121,4 @@ docs/behoerden-kat.js
 docs/nachlass-plus.js
 docs/zentrale.js
 docs/kacheln.js
+docs/fahrzeuge.js

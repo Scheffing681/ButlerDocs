@@ -14,13 +14,15 @@ const skxt=k=>cv5n(SKX_S[k]||[k]);
 /* key|glyph|colour|action */
 const SKX_X=[['kal','cal','#4A84D6','data-act="go" data-to="kal"'],['vtr','pen','#E3873A','data-act="fzkost"'],['steu','coins','#E0A92E','data-act="taxopen"'],['immo','house','#3F9FA3','data-act="vnxk" data-k="immo"'],
  ['fz','car','#4A84D6','data-act="vnxk" data-k="fz"'],['verm','diamond','#8B6FD0','data-act="skxverm"'],['tres','safe','#E3873A','data-act="dhvault"'],['anw','list','#4E9E5F','data-act="go" data-to="vnxa"'],
- ['kauf','bag','#E3873A','data-act="go" data-to="kauf"'],['mpx','fld','#3F9FA3','data-act="go" data-to="mpx"'],['vers','shield','#8B6FD0','data-act="zlopen" data-k="vers"'],['bild','cap','#8B6FD0','data-act="zlopen" data-k="bild"'],
+ ['kauf','bag','#E3873A','data-act="go" data-to="kauf"'],['mpx','fld','#3F9FA3','data-act="go" data-to="mpx"'],['bild','cap','#8B6FD0','data-act="zlopen" data-k="bild"'],
  ['scan','camera','#4E9E5F','data-act="go" data-to="sc9"'],['ber','grid','#8A93A0','data-act="skxber"']];
 const skxD=()=>{const o=g.stTiles=g.stTiles&&typeof g.stTiles==='object'?g.stTiles:{};if(!Array.isArray(o.on))o.on=[];if(!Array.isArray(o.off))o.off=[];return o};
-const skxTile=([k,gl,c,a])=>`<button type="button" class="sta sga skxt" data-k="x_${k}" ${a}>${iknF(gl,c)}<b>${i(skxt('x_'+k))}</b><small>&nbsp;</small></button>`;
+const skxTile=([k,gl,c,a])=>`<button type="button" class="sta sga skxt" data-k="x_${k}" data-act="skxgo" data-x="${k}">${iknF(gl,c)}<b>${i(skxt('x_'+k))}</b><small>&nbsp;</small></button>`;
 Hooks.on('screen',h=>{try{if(m.route!=='home'||typeof h!=='string'||!h.includes('class="star sgar"'))return h;const o=skxD();if(!o.on.length&&!o.off.length)return h;
  o.off.forEach(k=>{h=h.replace(new RegExp(`<button type="button" class="sta sga" data-k="${k}"[\\s\\S]*?</button>`),'')});
  const add=SKX_X.filter(x=>o.on.includes(x[0])).map(skxTile).join('');if(add){const p=h.indexOf('class="star sgar"'),e=h.indexOf('</div>',p);if(e>0)h=h.slice(0,e)+add+h.slice(e)}}catch(e){Hooks.err('skxscreen',e)}return h});
+Hooks.act('skxgo',d=>{const x=SKX_X.find(z=>z[0]===d.x);if(!x)return;if(d.x==='fz')return R('fzg');const a=x[3],act=(a.match(/data-act="([^"]+)"/)||[])[1],to=(a.match(/data-to="([^"]+)"/)||[])[1],k=(a.match(/data-k="([^"]+)"/)||[])[1];
+ if(act==='go')return R(to);const b=document.createElement('button');b.type='button';b.dataset.act=act;if(k)b.dataset.k=k;b.hidden=!0;(document.querySelector('.screen')||document.body).appendChild(b);b.click();b.remove()});
 Hooks.act('skxverm',()=>{g.dnach=Object.assign(g.dnach||{},{tab:'a'});R('dnach')});
 Hooks.act('skxber',()=>{m.zlV='ber';R('archive')});
 const skxCol={},skxLab={};

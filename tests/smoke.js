@@ -1346,6 +1346,19 @@ const check=(name,ok,detail)=>{results.push([ok?'PASS':'FAIL',name,detail||'']);
   await T(()=>{try{window.__T.skx.stop()}catch(e){}delete window.__T.g().stTiles;window.__T.save()});
  }
 
+ where='v97 fahrzeuge';{
+  await T(()=>{const G=window.__T.g();G.fin=G.fin||{};G.fin.assets=(G.fin.assets||[]).filter(a=>!/^fzt/.test(a.id));G.fin.assets.push({id:'fzt1',name:'Testwagen',vk:'fz',type:'other',value:0,cur:'EUR',x:{kz:'T-1',km:'1000'},dl:{}});window.__T.save();window.__T.R('fzg')});await p.waitForTimeout(500);
+  check('Fahrzeuge shows numbers, the vehicle and eight section tiles',await T(()=>document.querySelectorAll('.fzgsts .fzgst').length===4&&!!document.querySelector('[data-act=vnxa][data-id=fzt1]')&&document.querySelectorAll('.fzgsec button').length===8));
+  await T(()=>document.querySelector('[data-act=vnxa][data-id=fzt1]').click());await p.waitForTimeout(400);
+  check('the vehicle card has nine sections',await T(()=>document.querySelectorAll('.fzgsecs button').length===9));
+  await T(()=>document.querySelector('[data-act=fzgcs][data-k=tuv]').click());await p.waitForTimeout(300);await T(()=>document.querySelector('[data-act=fzglog]').click());await p.waitForTimeout(300);
+  await T(()=>{document.querySelector('[data-fl=d]').value='2026-03-01';document.querySelector('[data-fl=d]').dispatchEvent(new Event('change'));document.querySelector('[data-fl=km]').value='5000';document.querySelector('[data-fl=eur]').value='120';document.querySelector('[data-fls]').click()});await p.waitForTimeout(300);
+  check('a TÜV entry sets the next TÜV in 24 months, updates km and goes into the calendar',await T(()=>{const a=window.__T.g().fin.assets.find(z=>z.id==='fzt1');return a.dl.tuv==='2028-03-01'&&a.x.km==='5000'&&a.log.length===1&&a.log[0].eur===12000&&(window.__T.g().events||[]).some(e=>e.vnx==='fzt1:tuv')}));
+  await T(()=>document.querySelector('[data-act=fzgsell]').click());await p.waitForTimeout(200);
+  check('a sold vehicle is kept and marked',await T(()=>!!window.__T.g().fin.assets.find(z=>z.id==='fzt1').sold));
+  await T(()=>{const G=window.__T.g();G.fin.assets=G.fin.assets.filter(a=>a.id!=='fzt1');G.events=(G.events||[]).filter(e=>!(e.vnx||'').startsWith('fzt1'));window.__T.save()});
+ }
+
  where='end';check('no errors in the app',!errs.length,errs.slice(0,8).join(' || '));
  const he=await T(()=>window.__T.Hooks.errors);check('no errors inside hooks',!he.length,JSON.stringify(he).slice(0,300));
  await b.close();srv.close();fs.rmSync(TMP,{recursive:true,force:true});

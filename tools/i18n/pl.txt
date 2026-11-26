@@ -2282,3 +2282,42 @@
 2281	Majątek
 2282	Wskazówki
 2283	Teczki
+2284	Moje pojazdy i wszystko wokół nich
+2285	Koszty
+2286	pojazdy
+2287	serwis wkrótce
+2288	TÜV wkrótce
+2289	koszty od stycznia
+2290	Moje pojazdy
+2291	Sprzedany
+2292	＋ Pojazd
+2293	Brak pojazdu. Dodaj pierwszy – dane z dowodu rejestracyjnego wpisujesz sam.
+2294	Dane pojazdu
+2295	Rejestracja i dokumenty
+2296	Serwis
+2297	Opony
+2298	Przebieg i historia
+2299	Inne dokumenty
+2300	＋ Wpis
+2301	Następny TÜV za 24 miesiące wpisany
+2302	Brak wpisów.
+2303	Obecnie założone
+2304	Letnie
+2305	Zimowe
+2306	Całoroczne
+2307	W tym roku
+2308	Razem
+2309	Umowy i wydatki z „Alles zum Auto”
+2310	Sprzedany / archiwizuj
+2311	Znowu aktywny
+2312	Sprzedany %d
+2313	Teczka pojazdu (PDF)
+2314	Edytuj dane
+2315	Brak dokumentów.
+2316	Dowód rejestracyjny cz. I i II, umowa kupna
+2317	Butler przypomina o TÜV, serwisie i oponach oraz liczy koszty – z Twoich wpisów.
+2318	Dla którego pojazdu?
+2319	Pierwsza rejestracja
+2320	Paliwo / napęd
+2321	Stan
+2322	Nr rejestru

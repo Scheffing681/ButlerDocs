@@ -2282,3 +2282,42 @@
 2281	Varlıklar
 2282	Talimatlar
 2283	Klasör setleri
+2284	Araçlarım ve kullanımla ilgili her şey
+2285	Masraflar
+2286	araç
+2287	servis yakında
+2288	TÜV yakında
+2289	Ocak’tan beri masraf
+2290	Araçlarım
+2291	Satıldı
+2292	＋ Araç
+2293	Henüz araç yok. İlkini ekleyin – ruhsattaki bilgileri kendiniz girersiniz.
+2294	Araç bilgileri
+2295	Ruhsat ve belgeler
+2296	Bakım ve servis
+2297	Lastikler
+2298	Kilometre ve geçmiş
+2299	Diğer belgeler
+2300	＋ Kayıt
+2301	Sonraki TÜV 24 ay sonrasına girildi
+2302	Henüz kayıt yok.
+2303	Şu an takılı
+2304	Yazlık
+2305	Kışlık
+2306	Dört mevsim
+2307	Bu yıl
+2308	Toplam
+2309	“Alles zum Auto”dan sözleşmeler ve giderler
+2310	Satıldı / arşivle
+2311	Tekrar aktif
+2312	%d tarihinde satıldı
+2313	Araç dosyası (PDF)
+2314	Bilgileri düzenle
+2315	Henüz belge yok.
+2316	Ruhsat Bölüm I ve II, satış sözleşmesi
+2317	Butler TÜV, servis ve lastikleri hatırlatır ve masrafları sayar – kayıtlarınızdan.
+2318	Hangi araç için?
+2319	İlk tescil
+2320	Yakıt / motor
+2321	Durum
+2322	Ticaret sicil no.

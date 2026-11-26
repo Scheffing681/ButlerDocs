@@ -61,7 +61,7 @@ const VNX_S={
  f_bank:['Банк или организация','Bank oder Institut','Bank or institution'],f_owner:['Владелец','Inhaber','Owner'],f_open:['Открыт','Eröffnet','Opened'],
  f_herst:['Производитель','Hersteller','Maker'],f_sn:['Серийный номер','Seriennummer','Serial number'],f_ort:['Где находится','Aufbewahrungsort','Where it is kept'],f_zert:['Сертификат подлинности','Echtheitszertifikat','Certificate of authenticity'],
  f_firma:['Компания','Firma','Company'],f_anteil:['Доля, %','Anteil, %','Share, %'],f_kontakt:['Контактное лицо','Ansprechpartner','Contact person'],
- f_kat:['Подкатегория','Unterkategorie','Subcategory'],f_gar:['Гарантия до','Garantie bis','Warranty until'],
+ f_kat:['Подкатегория','Unterkategorie','Subcategory'],f_erst:['Первая регистрация','Erstzulassung','First registration'],f_kraft:['Топливо / двигатель','Kraftstoff / Antrieb','Fuel / drive'],f_zust:['Состояние','Zustand','Condition'],f_reg:['Регистрация (Handelsregister)','Handelsregister-Nr.','Register number'],f_gar:['Гарантия до','Garantie bis','Warranty until'],
  d_tuv:['TÜV / техосмотр','TÜV / HU','MOT'],d_oel:['Замена масла / сервис','Ölwechsel / Inspektion','Oil change / service'],d_reif:['Смена шин','Reifenwechsel','Tyre change'],d_vers:['Страховка — срок','Versicherung – Termin','Insurance date'],
  d_heiz:['Обслуживание отопления','Heizungswartung','Heating service'],d_pruef:['Проверка/осмотр','Prüfung / Begehung','Inspection'],
  sMain:['Основное','Grunddaten','Basics'],sFin:['Финансы','Finanzen','Finance'],sDates:['Сроки','Termine & Fristen','Dates'],sDocs:['Документы','Dokumente','Documents'],sVtr:['Договоры и страховки','Verträge & Versicherungen','Contracts & insurance'],
@@ -167,12 +167,12 @@ function vnxKScr(){const k=vnxSelK,L=k?vnxIn(k):vnxAs(),tot=vnxSum(L);
  <button type="button" class="bsvaddb" data-act="vnxnew" data-k="${k}">＋ ${i(k?vnxt('aAdd',{k:vnxt('k_'+k)}):vnxt('add'))}</button></div>`}
 
 /* fields per category: 'key|label|type'; dates d: go to the calendar */
-const VNX_F={immo:['art|f_art|sel:Wohnung,Haus,Grundstück,Gewerbe','addr|f_addr','land|f_land','qm|f_qm|num','zi|f_zi|num','bj|f_bj|num'],
- fz:['kz|f_kz','vin|f_vin','bj|f_bj|num','km|f_km|num','halter|f_halter'],
- kto:['bank|f_bank','art|f_art|sel:Girokonto,Sparkonto,Tagesgeld,Festgeld,Depot,Wertpapiere,Sonstige','owner|f_owner','open|f_open|date'],
- wert:['art|f_kat|sel:Schmuck,Uhr,Kunst,Antiquität,Sammlung,Sonstiges','herst|f_herst','sn|f_sn','ort|f_ort','zert|f_zert'],
- bet:['firma|f_firma','land|f_land','art|f_art|sel:GmbH-Anteil,Unternehmensbeteiligung,Projektanteil,Sonstige','anteil|f_anteil|num','kontakt|f_kontakt'],
- son:'art|f_kat ort|f_ort sn|f_sn'.split(' ')};
+const VNX_F={immo:['art|f_art|sel:Wohnung,Haus,Grundstück,Gewerbe','addr|f_addr','land|f_land','qm|f_qm|num','zi|f_zi|num','bj|f_bj|num','owner|f_owner'],
+ fz:['typ|f_art|sel:PKW,Motorrad,Wohnmobile,Anhänger,Transporter,Sonstiges','kz|f_kz','vin|f_vin','bj|f_bj|num','erst|f_erst|date','km|f_km|num','kraft|f_kraft|sel:Benzin,Diesel,Elektro,Hybrid,Gas,Sonstiges','halter|f_halter'],
+ kto:['bank|f_bank','art|f_art|sel:Sparguthaben,Festgeld,Tagesgeld,Wertpapiere,Investmentfonds,Bargeld,Girokonto,Sonstige','owner|f_owner','open|f_open|date'],
+ wert:['art|f_kat|sel:Schmuck,Uhren,Kunst,Sammlungen,Edelmetalle,Antiquitäten,Weitere','herst|f_herst','sn|f_sn','ort|f_ort','zust|f_zust|sel:Neu,Sehr gut,Gut,Gebraucht','zert|f_zert'],
+ bet:['firma|f_firma','land|f_land','art|f_art|sel:GmbH,UG,AG,KG,GbR,Einzelunternehmen,Projektanteil,Sonstige','reg|f_reg','anteil|f_anteil|num','kontakt|f_kontakt'],
+ son:['art|f_kat|sel:Elektronik,Möbel,Werkzeuge,Maschinen,Geräte,Sonstige','ort|f_ort','sn|f_sn','herst|f_herst']};
 const VNX_FIN={immo:'kred|f_kred|eur mon|f_mon|eur miete|f_miete|eur'.split(' ')};
 const VNX_DL={immo:['heiz|d_heiz','pruef|d_pruef'],fz:['tuv|d_tuv','oel|d_oel','reif|d_reif','vers|d_vers'],wert:['gar|f_gar'],son:['gar|f_gar']};
 const vnxSp=s=>{const p=String(s).split('|');return{k:p[0],l:p[1],t:p[2]||'txt'}};

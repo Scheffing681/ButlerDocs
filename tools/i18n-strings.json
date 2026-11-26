@@ -695,6 +695,7 @@
    "behoerden.js",
    "business-plus.js",
    "business.js",
+   "fahrzeuge.js",
    "finanzen.js",
    "finanzen2.js",
    "kauf-gesund.js",
@@ -893,6 +894,7 @@
    "akte.js",
    "behoerden-kat.js",
    "butler-rechte.js",
+   "fahrzeuge.js",
    "finanzen2.js",
    "kalender-nz.js",
    "kauf-gesund.js",
@@ -1265,6 +1267,7 @@
    "behoerden-briefe.js",
    "behoerden-termine.js",
    "business.js",
+   "fahrzeuge.js",
    "finanzen.js",
    "kontakte-post.js",
    "notizen.js",
@@ -3055,6 +3058,7 @@
   "de": "in %n Tagen",
   "files": [
    "behoerden-termine.js",
+   "fahrzeuge.js",
    "kalender-nz.js",
    "kontakte-post.js",
    "start-glas.js",
@@ -3157,7 +3161,8 @@
   "ru": "Следующий срок",
   "de": "Nächste Frist",
   "files": [
-   "behoerden-termine.js"
+   "behoerden-termine.js",
+   "fahrzeuge.js"
   ]
  },
  "Repeat": {
@@ -3730,6 +3735,7 @@
   "files": [
    "behoerden.js",
    "business.js",
+   "fahrzeuge.js",
    "kalender-nz.js",
    "nachlass-plus.js",
    "seiten.js",
@@ -4826,6 +4832,7 @@
   "de": "überfällig",
   "files": [
    "business.js",
+   "fahrzeuge.js",
    "kalender-nz.js",
    "start-glas.js",
    "start.js"
@@ -7236,6 +7243,334 @@
    "erkennung.js"
   ]
  },
+ "Vehicles": {
+  "ru": "Транспорт",
+  "de": "Fahrzeuge",
+  "files": [
+   "fahrzeuge.js",
+   "kacheln.js",
+   "nachlass-plus.js",
+   "zentrale.js"
+  ]
+ },
+ "My vehicles and everything around them": {
+  "ru": "Мои машины и всё, что с ними связано",
+  "de": "Meine Fahrzeuge und alles rund um den Betrieb",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Overview": {
+  "ru": "Обзор",
+  "de": "Überblick",
+  "files": [
+   "fahrzeuge.js",
+   "ueberblick.js"
+  ]
+ },
+ "Costs": {
+  "ru": "Расходы",
+  "de": "Kosten",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Dates": {
+  "ru": "Сроки",
+  "de": "Termine",
+  "files": [
+   "fahrzeuge.js",
+   "nachlass-plus.js"
+  ]
+ },
+ "vehicles": {
+  "ru": "машин",
+  "de": "Fahrzeuge",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "service soon": {
+  "ru": "сервис скоро",
+  "de": "Service bald",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "MOT soon": {
+  "ru": "TÜV скоро",
+  "de": "TÜV / HU bald",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "costs since January": {
+  "ru": "расходы с января",
+  "de": "Kosten seit Januar",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "My vehicles": {
+  "ru": "Мои машины",
+  "de": "Meine Fahrzeuge",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Active": {
+  "ru": "Активна",
+  "de": "Aktiv",
+  "files": [
+   "fahrzeuge.js",
+   "kauf-gesund.js",
+   "zentrale.js"
+  ]
+ },
+ "Sold": {
+  "ru": "Продана",
+  "de": "Verkauft",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "＋ Vehicle": {
+  "ru": "＋ Машина",
+  "de": "＋ Fahrzeug",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "No vehicle yet. Add the first – you type the details from the registration yourself.": {
+  "ru": "Машин пока нет. Добавьте первую — данные из техпаспорта можно вписать вручную.",
+  "de": "Noch kein Fahrzeug. Fügen Sie das erste hinzu – die Angaben aus dem Fahrzeugschein tragen Sie selbst ein.",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Vehicle data": {
+  "ru": "Данные машины",
+  "de": "Fahrzeugdaten",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Registration & papers": {
+  "ru": "Регистрация и бумаги",
+  "de": "Zulassung & Papiere",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "MOT": {
+  "ru": "TÜV / HU / AU",
+  "de": "TÜV / HU / AU",
+  "files": [
+   "fahrzeuge.js",
+   "nachlass-plus.js"
+  ]
+ },
+ "Service": {
+  "ru": "Обслуживание",
+  "de": "Wartung & Service",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Repairs": {
+  "ru": "Ремонт",
+  "de": "Reparaturen",
+  "files": [
+   "fahrzeuge.js",
+   "kauf-gesund.js"
+  ]
+ },
+ "Tyres": {
+  "ru": "Шины",
+  "de": "Reifen",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Mileage & history": {
+  "ru": "Пробег и история",
+  "de": "Kilometer & Verlauf",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Other documents": {
+  "ru": "Другие документы",
+  "de": "Weitere Dokumente",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "＋ Entry": {
+  "ru": "＋ Запись",
+  "de": "＋ Eintrag",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Mileage, km": {
+  "ru": "Пробег, км",
+  "de": "Kilometerstand",
+  "files": [
+   "fahrzeuge.js",
+   "nachlass-plus.js"
+  ]
+ },
+ "Amount, €": {
+  "ru": "Сумма, €",
+  "de": "Betrag, €",
+  "files": [
+   "fahrzeuge.js",
+   "finanzen.js"
+  ]
+ },
+ "What was done": {
+  "ru": "Что сделано",
+  "de": "Was wurde gemacht",
+  "files": [
+   "fahrzeuge.js",
+   "kauf-gesund.js"
+  ]
+ },
+ "Next MOT set in 24 months": {
+  "ru": "Следующий TÜV через 24 месяца поставлен",
+  "de": "Nächster TÜV in 24 Monaten eingetragen",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "No entries yet.": {
+  "ru": "Записей пока нет.",
+  "de": "Noch keine Einträge.",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Currently fitted": {
+  "ru": "Сейчас стоят",
+  "de": "Aktuell montiert",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Summer": {
+  "ru": "Летние",
+  "de": "Sommerreifen",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Winter": {
+  "ru": "Зимние",
+  "de": "Winterreifen",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "All-season": {
+  "ru": "Всесезонные",
+  "de": "Ganzjahresreifen",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "This year": {
+  "ru": "В этом году",
+  "de": "Dieses Jahr",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "In total": {
+  "ru": "Всего",
+  "de": "Insgesamt",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Contracts and expenses from “Alles zum Auto”": {
+  "ru": "Договоры и расходы «Alles zum Auto»",
+  "de": "Verträge und Ausgaben aus „Alles zum Auto“",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Sold / archive": {
+  "ru": "Продана / в архив",
+  "de": "Verkauft / archivieren",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Active again": {
+  "ru": "Снова активна",
+  "de": "Wieder aktiv",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Sold on %d": {
+  "ru": "Продана %d",
+  "de": "Verkauft am %d",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Vehicle file (PDF)": {
+  "ru": "Карточка машины (PDF)",
+  "de": "Fahrzeugakte (PDF)",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Edit data": {
+  "ru": "Изменить данные",
+  "de": "Daten bearbeiten",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Link a document": {
+  "ru": "Связать документ",
+  "de": "Dokument verknüpfen",
+  "files": [
+   "fahrzeuge.js",
+   "nachlass-plus.js"
+  ]
+ },
+ "No documents yet.": {
+  "ru": "Документов пока нет.",
+  "de": "Noch keine Dokumente.",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Registration parts I and II, purchase contract": {
+  "ru": "Техпаспорт (Teil I), ПТС (Teil II), договор купли",
+  "de": "Zulassungsbescheinigung Teil I und II, Kaufvertrag",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "Butler reminds you of MOT, service and tyres and counts the costs – from your entries.": {
+  "ru": "Butler напоминает о TÜV, сервисе и шинах и считает расходы — по Вашим записям.",
+  "de": "Butler erinnert an TÜV, Service und Reifen und zählt die Kosten – aus Ihren Einträgen.",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
+ "For which vehicle?": {
+  "ru": "Для какой машины?",
+  "de": "Für welches Fahrzeug?",
+  "files": [
+   "fahrzeuge.js"
+  ]
+ },
  "Mail": {
   "ru": "Почта",
   "de": "Post",
@@ -7376,13 +7711,6 @@
  "Empty so far – photograph the first receipt.": {
   "ru": "Здесь пока пусто — сфотографируйте первый чек.",
   "de": "Noch leer – fotografieren Sie den ersten Beleg.",
-  "files": [
-   "finanzen.js"
-  ]
- },
- "Amount, €": {
-  "ru": "Сумма, €",
-  "de": "Betrag, €",
   "files": [
    "finanzen.js"
   ]
@@ -7917,15 +8245,6 @@
   "de": "Steuern",
   "files": [
    "kacheln.js",
-   "zentrale.js"
-  ]
- },
- "Vehicles": {
-  "ru": "Транспорт",
-  "de": "Fahrzeuge",
-  "files": [
-   "kacheln.js",
-   "nachlass-plus.js",
    "zentrale.js"
   ]
  },
@@ -8982,14 +9301,6 @@
    "karriere2.js"
   ]
  },
- "Active": {
-  "ru": "Идёт",
-  "de": "Läuft",
-  "files": [
-   "kauf-gesund.js",
-   "zentrale.js"
-  ]
- },
  "Expired": {
   "ru": "Истекла",
   "de": "Vorbei",
@@ -9090,23 +9401,9 @@
    "kauf-gesund.js"
   ]
  },
- "Repairs": {
-  "ru": "Ремонты",
-  "de": "Reparaturen",
-  "files": [
-   "kauf-gesund.js"
-  ]
- },
  "＋ Repair": {
   "ru": "＋ Ремонт",
   "de": "＋ Reparatur",
-  "files": [
-   "kauf-gesund.js"
-  ]
- },
- "What was done": {
-  "ru": "Что сделано",
-  "de": "Was wurde gemacht",
   "files": [
    "kauf-gesund.js"
   ]
@@ -11565,13 +11862,6 @@
    "nachlass-plus.js"
   ]
  },
- "Mileage, km": {
-  "ru": "Пробег, км",
-  "de": "Kilometerstand",
-  "files": [
-   "nachlass-plus.js"
-  ]
- },
  "Keeper": {
   "ru": "Владелец",
   "de": "Halter",
@@ -11642,16 +11932,37 @@
    "nachlass-plus.js"
   ]
  },
- "Warranty until": {
-  "ru": "Гарантия до",
-  "de": "Garantie bis",
+ "First registration": {
+  "ru": "Первая регистрация",
+  "de": "Erstzulassung",
   "files": [
    "nachlass-plus.js"
   ]
  },
- "MOT": {
-  "ru": "TÜV / техосмотр",
-  "de": "TÜV / HU",
+ "Fuel / drive": {
+  "ru": "Топливо / двигатель",
+  "de": "Kraftstoff / Antrieb",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Condition": {
+  "ru": "Состояние",
+  "de": "Zustand",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Register number": {
+  "ru": "Регистрация (Handelsregister)",
+  "de": "Handelsregister-Nr.",
+  "files": [
+   "nachlass-plus.js"
+  ]
+ },
+ "Warranty until": {
+  "ru": "Гарантия до",
+  "de": "Garantie bis",
   "files": [
    "nachlass-plus.js"
   ]
@@ -11704,20 +12015,6 @@
   "files": [
    "nachlass-plus.js",
    "zentrale.js"
-  ]
- },
- "Dates": {
-  "ru": "Сроки",
-  "de": "Termine & Fristen",
-  "files": [
-   "nachlass-plus.js"
-  ]
- },
- "Link a document": {
-  "ru": "Связать документ",
-  "de": "Dokument verknüpfen",
-  "files": [
-   "nachlass-plus.js"
   ]
  },
  "Link a contract": {
@@ -14721,13 +15018,6 @@
  "Your week": {
   "ru": "Ваша неделя",
   "de": "Ihre Woche",
-  "files": [
-   "ueberblick.js"
-  ]
- },
- "Overview": {
-  "ru": "Обзор",
-  "de": "Überblick",
   "files": [
    "ueberblick.js"
   ]

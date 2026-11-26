@@ -2282,3 +2282,42 @@
 2281	Patrimonio
 2282	Instrucciones
 2283	Carpetas
+2284	Mis vehículos y todo lo relacionado
+2285	Costes
+2286	vehículos
+2287	revisión pronto
+2288	ITV pronto
+2289	costes desde enero
+2290	Mis vehículos
+2291	Vendido
+2292	＋ Vehículo
+2293	Aún no hay vehículo. Añada el primero: usted introduce los datos del permiso.
+2294	Datos del vehículo
+2295	Matriculación y papeles
+2296	Mantenimiento
+2297	Neumáticos
+2298	Kilometraje e historial
+2299	Otros documentos
+2300	＋ Entrada
+2301	Próxima ITV en 24 meses anotada
+2302	Aún no hay entradas.
+2303	Montados ahora
+2304	Verano
+2305	Invierno
+2306	Todo el año
+2307	Este año
+2308	En total
+2309	Contratos y gastos de «Alles zum Auto»
+2310	Vendido / archivar
+2311	Activo de nuevo
+2312	Vendido el %d
+2313	Ficha del vehículo (PDF)
+2314	Editar datos
+2315	Aún no hay documentos.
+2316	Permiso parte I y II, contrato de compra
+2317	Butler recuerda ITV, revisión y neumáticos y suma los costes, según sus entradas.
+2318	¿Para qué vehículo?
+2319	Primera matriculación
+2320	Combustible / motor
+2321	Estado
+2322	N.º de registro

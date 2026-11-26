@@ -2282,3 +2282,42 @@
 2281	Patrimoine
 2282	Consignes
 2283	Dossiers
+2284	Mes véhicules et tout ce qui les concerne
+2285	Coûts
+2286	véhicules
+2287	entretien bientôt
+2288	contrôle bientôt
+2289	coûts depuis janvier
+2290	Mes véhicules
+2291	Vendu
+2292	＋ Véhicule
+2293	Aucun véhicule. Ajoutez le premier – vous saisissez vous-même les données de la carte grise.
+2294	Données du véhicule
+2295	Immatriculation et papiers
+2296	Entretien
+2297	Pneus
+2298	Kilométrage et historique
+2299	Autres documents
+2300	＋ Entrée
+2301	Prochain contrôle dans 24 mois enregistré
+2302	Aucune entrée.
+2303	Montés actuellement
+2304	Été
+2305	Hiver
+2306	Toutes saisons
+2307	Cette année
+2308	Au total
+2309	Contrats et dépenses de « Alles zum Auto »
+2310	Vendu / archiver
+2311	À nouveau actif
+2312	Vendu le %d
+2313	Dossier du véhicule (PDF)
+2314	Modifier les données
+2315	Aucun document.
+2316	Certificat d’immatriculation I et II, contrat d’achat
+2317	Butler rappelle contrôle, entretien et pneus et compte les coûts – d’après vos entrées.
+2318	Pour quel véhicule ?
+2319	Première immatriculation
+2320	Carburant / motorisation
+2321	État
+2322	N° de registre

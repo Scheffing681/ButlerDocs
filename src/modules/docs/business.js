@@ -52,7 +52,7 @@ const BZX={
  iSaved:['Счёт сохранён','Rechnung gespeichert','Invoice saved'],iPdfOk:['PDF сохранён в «Документах»','PDF in «Dokumente» gespeichert','PDF saved in «Documents»'],
  eCust:['Выберите клиента','Bitte einen Kunden wählen','Please choose a customer'],eItem:['Нужна хотя бы одна позиция с описанием и ценой','Mindestens eine Position mit Beschreibung und Preis','At least one item with description and price'],
  eFirm:['Сначала заполните название, владельца, адрес и Steuernummer фирмы','Bitte zuerst Name, Inhaber/in, Anschrift und Steuernummer der Firma eintragen','Please fill in the firm name, owner, address and tax number first'],eNo:['Такой номер уже есть','Diese Nummer gibt es schon','This number already exists'],
- mSub:['Счёт %n','Rechnung %n','Invoice %n'],mBody:['Здравствуйте,\n\nво вложении счёт %n на сумму %s.\n\nС уважением\n%f','Guten Tag,\n\nanbei erhalten Sie die Rechnung %n über %s.\n\nMit freundlichen Grüßen\n%f','Hello,\n\nplease find attached invoice %n for %s.\n\nKind regards\n%f'],
+ aNew:['Новое предложение','Neues Angebot','New quote'],aValid:['Действует','Gültig','Valid'],aPdf:['Предложение PDF','Angebot als PDF','Quote as PDF'],aToInv:['Сделать из него счёт','In Rechnung umwandeln','Turn into an invoice'],aSub:['Предложение %n','Angebot %n','Quote %n'],aBody:['Здравствуйте,\n\nво вложении наше предложение %n на сумму %s.\n\nС уважением\n%f','Guten Tag,\n\nanbei erhalten Sie unser Angebot %n über %s.\n\nMit freundlichen Grüßen\n%f','Hello,\n\nplease find attached our quote %n for %s.\n\nKind regards\n%f'],mSub:['Счёт %n','Rechnung %n','Invoice %n'],mBody:['Здравствуйте,\n\nво вложении счёт %n на сумму %s.\n\nС уважением\n%f','Guten Tag,\n\nanbei erhalten Sie die Rechnung %n über %s.\n\nMit freundlichen Grüßen\n%f','Hello,\n\nplease find attached invoice %n for %s.\n\nKind regards\n%f'],
  mAtt:['PDF скачан – приложите его к письму.','PDF wurde geladen – bitte an die E-Mail anhängen.','PDF downloaded – please attach it to the e-mail.'],
  tPay:['Проверить оплату: %n · %c','Zahlung prüfen: %n · %c','Check payment: %n · %c'],tEst:['Налоговая декларация %y (EÜR) до %d','Steuererklärung %y (EÜR) bis %d','Tax return %y (EÜR) by %d'],
  /* receipts */
@@ -86,7 +86,7 @@ const BZX_SLOT=[['gew','🏪'],['stnr','🧾'],['bhv','🛡'],['kv','🤝'],['mi
 const BZX_CAT=['mat','buero','soft','fahrt','tel','vers','miete','wer','x'];
 const BZX_FORM=['eu','fb','gbr','ug','gmbh','x'];
 function bzxD(){const o=g.bzx=g.bzx&&typeof g.bzx==='object'?g.bzx:{};o.firm=o.firm&&typeof o.firm==='object'?o.firm:{};
- for(const k of['cust','inv','exp','docs'])if(!Array.isArray(o[k]))o[k]=[];o.dk=o.dk&&typeof o.dk==='object'?o.dk:{};o.tk=o.tk&&typeof o.tk==='object'?o.tk:{};
+ for(const k of['cust','inv','exp','docs','ang','prod'])if(!Array.isArray(o[k]))o[k]=[];o.dk=o.dk&&typeof o.dk==='object'?o.dk:{};o.tk=o.tk&&typeof o.tk==='object'?o.tk:{};
  if(o.firm.klein==null)o.firm.klein=!0;return o}
 function bzxOn(){try{return!!(g.bzx&&g.bzx.on)}catch{return!1}}
 const bzxToday=()=>x(new Date());
@@ -109,8 +109,9 @@ function bzxSum(v){const kl=v.klein!=null?v.klein:bzxD().firm.klein;let net=0;co
  const vat=kl?[]:Object.keys(R2).map(Number).filter(r=>r>0).sort((a,b)=>b-a).map(r=>({r,n:R2[r],v:Math.round(R2[r]*r/100)}));
  const tv=vat.reduce((a,z)=>a+z.v,0);return{net,vat,tv,gross:net+tv,kl}}
 const bzxSt=v=>v.storno?'st':v.paid?'ok':(v.due&&v.due<bzxToday()?'ov':'op');
-function bzxNextNo(y){const f=bzxD().firm,pre=String(f.pre||'RE').trim()||'RE';let n=0;
- for(const v of bzxD().inv){const m2=String(v.no||'').match(/(\d+)\s*$/);if(String(v.d||'').slice(0,4)===String(y)&&m2)n=Math.max(n,+m2[1])}
+const bzxL=v=>v&&v.kind==='ang'?bzxD().ang:bzxD().inv;
+function bzxNextNo(y,kind){const f=bzxD().firm,pre=kind==='ang'?'AN':String(f.pre||'RE').trim()||'RE';let n=0;
+ for(const v of(kind==='ang'?bzxD().ang:bzxD().inv)){const m2=String(v.no||'').match(/(\d+)\s*$/);if(String(v.d||'').slice(0,4)===String(y)&&m2)n=Math.max(n,+m2[1])}
  return`${pre}-${y}-${String(n+1).padStart(3,'0')}`}
 /* Steuererklärung: without adviser 31.07. of the next year, with adviser end of February of the year after (weekend → Monday) */
 function bzxWk(iso){const d=new Date(iso+'T12:00:00');while(d.getDay()===0||d.getDay()===6)d.setDate(d.getDate()+1);return x(d)}
@@ -195,8 +196,8 @@ function bzxCustSheet(id,after){const B=bzxD(),c0=id&&bzxCust(id),c=c0?Object.as
   const dl=sh.querySelector('[data-cdel]');dl&&(dl.onclick=()=>{if(B.inv.some(v=>v.cust===c0.id)){sh.querySelector('[data-cerr]').textContent=bzxT('cUsed');return}B.cust=B.cust.filter(z=>z!==c0);sh.remove();bzxSave();v()})})}
 /* ---------- invoice editor (route bzinv) ---------- */
 let bzxCur=null;
-function bzxInvOpen(id){const B=bzxD(),v0=id&&B.inv.find(z=>z.id===id),td=bzxToday();
- bzxCur=v0?JSON.parse(JSON.stringify(v0)):{id:'',no:bzxNextNo(td.slice(0,4)),d:td,ld:td,dd:14,cust:'',items:[{t:'',q:1,u:'',p:null,r:19}],note:'',paid:'',storno:!1};
+function bzxInvOpen(id,kind){const B=bzxD(),v0=id&&(B.inv.find(z=>z.id===id)||B.ang.find(z=>z.id===id)),td=bzxToday();
+ bzxCur=v0?JSON.parse(JSON.stringify(v0)):Object.assign({id:'',no:bzxNextNo(td.slice(0,4),kind),d:td,ld:td,dd:kind==='ang'?30:14,cust:'',items:[{t:'',q:1,u:'',p:null,r:19}],note:'',paid:'',storno:!1},kind==='ang'?{kind:'ang'}:{});
  if(!bzxCur.items.length)bzxCur.items.push({t:'',q:1,u:'',p:null,r:19});R('bzinv')}
 function bzxRead(){const s=document.querySelector('.bzinv');if(!s||!bzxCur)return;
  s.querySelectorAll('[data-bf]').forEach(z=>{const k=z.dataset.bf;bzxCur[k]=k==='dd'?+z.value||0:z.value.trim()});
@@ -209,27 +210,28 @@ function bzxInvScreen(){const B=bzxD(),c=bzxCur,kl=B.firm.klein,ex=!!c.id;
   <div class="bzpr"><label><small>${i(bzxT('iQ'))}</small><input class="field" data-bi="${k}" data-bk="q" inputmode="decimal" value="${i(bzxQs(it.q==null?1:it.q))}"></label><label><small>${i(bzxT('iU'))}</small><input class="field" data-bi="${k}" data-bk="u" value="${i(it.u||'')}" placeholder="Std." autocomplete="off"></label>
   <label><small>${i(bzxT('iP'))}</small><input class="field" data-bi="${k}" data-bk="p" inputmode="decimal" value="${i(bzxNum(it.p))}" placeholder="0,00"></label>${kl?'':`<label><small>${i(bzxT('iR'))}</small><select class="field" data-bi="${k}" data-bk="r">${[19,7,0].map(r=>`<option value="${r}" ${(+it.r||0)===r?'selected':''}>${r} %</option>`).join('')}</select></label>`}
   ${c.items.length>1?`<button type="button" class="bsvsm x" data-act="bzxpdel" data-k="${k}" aria-label="×">×</button>`:''}</div></div>`).join('');
- return`<div class="screen dhome fz bzinv">${bzxHdr(ex?c.no:bzxT('iNew'),'bzxback')}
+ const ang=c.kind==='ang';
+ return`<div class="screen dhome fz bzinv${ang?' bzang':''}">${bzxHdr(ex?c.no:ang?bzxT('aNew'):bzxT('iNew'),'bzxback')}
  <label class="bsvl">${i(bzxT('iCust'))}</label><div class="bzcrow"><select class="field" data-bf="cust"><option value="">${i(bzxT('iPick'))}</option>${B.cust.map(z=>`<option value="${i(z.id)}" ${c.cust===z.id?'selected':''}>${i(z.n)}</option>`).join('')}</select><button type="button" class="bsvplus" data-act="bzxcnew" aria-label="${i(bzxT('cNew'))}">＋</button></div>
- <div class="bsv2c"><div><label class="bsvl">${i(bzxT('iNo'))}</label><input class="field" data-bf="no" value="${i(c.no)}" autocomplete="off"></div><div><label class="bsvl">${i(bzxT('iDue'))}</label><select class="field" data-bf="dd">${[0,7,14,30].map(n=>`<option value="${n}" ${(+c.dd||0)===n?'selected':''}>${i(n?bzxT('days',{n}):bzxT('now'))}</option>`).join('')}</select></div></div>
+ <div class="bsv2c"><div><label class="bsvl">${i(bzxT('iNo'))}</label><input class="field" data-bf="no" value="${i(c.no)}" autocomplete="off"></div><div><label class="bsvl">${i(ang?bzxT('aValid'):bzxT('iDue'))}</label><select class="field" data-bf="dd">${(ang?[14,30,60]:[0,7,14,30]).map(n=>`<option value="${n}" ${(+c.dd||0)===n?'selected':''}>${i(n?bzxT('days',{n}):bzxT('now'))}</option>`).join('')}</select></div></div>
  <div class="bsv2c"><div><label class="bsvl">${i(bzxT('iD'))}</label><input class="field" type="date" data-bf="d" value="${i(c.d||'')}"></div><div><label class="bsvl">${i(bzxT('iLd'))}</label><input class="field" type="date" data-bf="ld" value="${i(c.ld||'')}"></div></div>
  <label class="bsvl">${i(bzxT('iPos'))}</label>${rows}<button type="button" class="bsvplus" data-act="bzxpadd">${i(bzxT('iAdd'))}</button>
  <div class="bztot">${bzxTotHtml()}</div>
  <div class="bznote">${i(kl?bzxT('i19'):bzxT('iReg'))}</div>
  <label class="bsvl">${i(bzxT('iNote'))}</label><textarea class="field" data-bf="note" rows="2">${i(c.note||'')}</textarea>
- ${ex?`<label class="bsvl">${i(bzxT('iPaid'))}</label><input class="field" type="date" data-bf="paid" value="${i(c.paid||'')}"><p class="fdsmall">${i(bzxT('iPaidS'))}</p>`:''}
+ ${ex&&!ang?`<label class="bsvl">${i(bzxT('iPaid'))}</label><input class="field" type="date" data-bf="paid" value="${i(c.paid||'')}"><p class="fdsmall">${i(bzxT('iPaidS'))}</p>`:''}
  <small class="verr bzerr"></small>
- <button type="button" class="dcadd gold" data-act="bzxpdf">${i(bzxT('iPdf'))}</button><button type="button" class="btn bzbtn" data-act="bzxmail">${i(bzxT('iMail'))}</button><button type="button" class="btn bzbtn" data-act="bzxisave">${i(bzxT('iSave'))}</button>
- ${ex?`<button type="button" class="bsvdel" data-act="bzxstorno">${i(c.storno?bzxT('iUnst'):bzxT('iStorno'))}</button><p class="fdsmall">${i(bzxT('iStornoS'))}</p>`:''}
+ <button type="button" class="dcadd gold" data-act="bzxpdf">${i(ang?bzxT('aPdf'):bzxT('iPdf'))}</button><button type="button" class="btn bzbtn" data-act="bzxmail">${i(bzxT('iMail'))}</button><button type="button" class="btn bzbtn" data-act="bzxisave">${i(bzxT('iSave'))}</button>
+ ${ex&&ang?`<button type="button" class="vaadd" data-act="bzxa2i">${i(bzxT('aToInv'))}</button>`:''}${ex&&!ang?`<button type="button" class="bsvdel" data-act="bzxstorno">${i(c.storno?bzxT('iUnst'):bzxT('iStorno'))}</button><p class="fdsmall">${i(bzxT('iStornoS'))}</p>`:''}
  <div class="fztip"><b>ⓘ E-Rechnung</b> ${i(bzxT('eRe'))}</div></div>`}
 function bzxErr(t){const e=document.querySelector('.bzerr');if(e){e.textContent=t||'';t&&e.scrollIntoView({block:'center',behavior:'smooth'})}}
 /* check & store the draft; returns the stored invoice or null */
 function bzxCommit(){bzxRead();const B=bzxD(),c=bzxCur,f=B.firm;if(!c)return null;
  if(!f.n||!f.addr||!(f.stnr||f.ust)||(['eu','fb'].includes(f.form||'eu')&&!f.own)){bzxErr(bzxT('eFirm'));return null}if(!c.cust){bzxErr(bzxT('eCust'));return null}
  c.items=c.items.filter(it=>it.t||it.p);if(!c.items.length||!c.items.every(it=>it.t&&it.p!=null)){if(!c.items.length)c.items.push({t:'',q:1,u:'',p:null,r:19});bzxErr(bzxT('eItem'));return null}
- c.no=c.no||bzxNextNo(String(c.d||bzxToday()).slice(0,4));if(B.inv.some(v=>v.no===c.no&&v.id!==c.id)){bzxErr(bzxT('eNo'));return null}
- c.klein=!!f.klein;c.due=bzxAdd(c.d,+c.dd||0);let o=c.id&&B.inv.find(v=>v.id===c.id);
- if(o)Object.assign(o,JSON.parse(JSON.stringify(c)));else{c.id=V();o=JSON.parse(JSON.stringify(c));B.inv.push(o)}bzxErr('');bzxSync();bzxSave();return o}
+ const LL=bzxL(c);c.no=c.no||bzxNextNo(String(c.d||bzxToday()).slice(0,4),c.kind);if(LL.some(v=>v.no===c.no&&v.id!==c.id)){bzxErr(bzxT('eNo'));return null}
+ c.klein=!!f.klein;c.due=bzxAdd(c.d,+c.dd||0);let o=c.id&&LL.find(v=>v.id===c.id);
+ if(o)Object.assign(o,JSON.parse(JSON.stringify(c)));else{c.id=V();o=JSON.parse(JSON.stringify(c));LL.push(o)}bzxErr('');bzxSync();bzxSave();return o}
 /* ---------- invoice PDF ---------- */
 function bzxInvPages(v){const B=bzxD(),f=B.firm,c=bzxCust(v.cust)||{n:'',addr:''},S=bzxSum(v),P=[];let[cv,x2]=fzPage();P.push(cv);
  const ml=110,mr=FZ_W-110,F=(s,b)=>`${b?'bold ':''}${s}px Helvetica, Arial, sans-serif`;
@@ -239,8 +241,8 @@ function bzxInvPages(v){const B=bzxD(),f=B.firm,c=bzxCust(v.cust)||{n:'',addr:''
  tx(f.n,mr,100,{s:30,b:1,a:'right'});let yy=142;for(const l of[f.own&&f.own!==f.n?'Inh. '+f.own:'',...fl,f.tel?'Tel. '+f.tel:'',f.mail||''].filter(Boolean)){tx(l,mr,yy,{s:19,c:'#444',a:'right'});yy+=26}
  tx([f.n,...fl].join(' · '),ml,300,{s:15,c:'#777'});x2.fillStyle='#bbb';x2.fillRect(ml,322,560,1);
  yy=338;for(const l of[c.n,...String(c.addr||'').split('\n').map(z=>z.trim()).filter(Boolean)]){tx(l,ml,yy,{s:24});yy+=32}
- tx(v.storno?'Rechnung (storniert)':'Rechnung',ml,560,{s:44,b:1});
- const meta=[['Rechnungsnummer',v.no],['Rechnungsdatum',bzxDe(v.d)],['Leistungsdatum',bzxDe(v.ld||v.d)],f.ust?['USt-IdNr.',f.ust]:['Steuernummer',f.stnr]];
+ const AN=v.kind==='ang';tx(AN?'Angebot':v.storno?'Rechnung (storniert)':'Rechnung',ml,560,{s:44,b:1});
+ const meta=AN?[['Angebotsnummer',v.no],['Angebotsdatum',bzxDe(v.d)],['Gültig bis',bzxDe(v.due)],f.ust?['USt-IdNr.',f.ust]:['Steuernummer',f.stnr]]:[['Rechnungsnummer',v.no],['Rechnungsdatum',bzxDe(v.d)],['Leistungsdatum',bzxDe(v.ld||v.d)],f.ust?['USt-IdNr.',f.ust]:['Steuernummer',f.stnr]];
  if(f.ust&&f.stnr)meta.push(['Steuernummer',f.stnr]);yy=560;for(const[a,b]of meta){tx(a,mr-260,yy+6,{s:18,c:'#666',a:'right'});tx(b,mr,yy+6,{s:19,b:1,a:'right'});yy+=30}
  yy=Math.max(yy,640)+50;const cP=ml,cT=ml+60,cQ=mr-430,cE=mr-180,cB=mr,wT=cQ-cT-110;
  const head=()=>{x2.fillStyle='#f1efe8';x2.fillRect(ml-10,yy-6,mr-ml+20,40);tx('Pos.',cP,yy+2,{s:17,b:1});tx('Beschreibung',cT,yy+2,{s:17,b:1});tx('Menge',cQ,yy+2,{s:17,b:1,a:'right'});tx(S.kl?'Einzelpreis':'Einzelpreis netto',cE,yy+2,{s:17,b:1,a:'right'});tx(S.kl?'Betrag':'Betrag netto',cB,yy+2,{s:17,b:1,a:'right'});yy+=52};
@@ -254,18 +256,19 @@ function bzxInvPages(v){const B=bzxD(),f=B.firm,c=bzxCust(v.cust)||{n:'',addr:''
  if(S.kl)para('Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.');
  if(S.vat.length===0&&!S.kl&&S.net>0)para('Steuerfreie Leistung.');
  if(v.note)para(v.note);
- if(!v.storno)para(v.paid?`Betrag erhalten am ${bzxDe(v.paid)}. Vielen Dank!`:(+v.dd?`Bitte überweisen Sie den Betrag bis zum ${bzxDe(v.due)} ohne Abzug`:'Zahlbar sofort ohne Abzug')+(f.iban?` auf das Konto IBAN ${f.iban}${f.bank?' ('+f.bank+')':''}`:'')+`. Verwendungszweck: ${v.no}.`);
- if(!v.paid&&!v.storno)para('Vielen Dank für Ihren Auftrag!');
+ if(AN){para(`Dieses Angebot ist gültig bis zum ${bzxDe(v.due)}.`);para('Wir freuen uns auf Ihren Auftrag.')}
+ else if(!v.storno)para(v.paid?`Betrag erhalten am ${bzxDe(v.paid)}. Vielen Dank!`:(+v.dd?`Bitte überweisen Sie den Betrag bis zum ${bzxDe(v.due)} ohne Abzug`:'Zahlbar sofort ohne Abzug')+(f.iban?` auf das Konto IBAN ${f.iban}${f.bank?' ('+f.bank+')':''}`:'')+`. Verwendungszweck: ${v.no}.`);
+ if(!AN&&!v.paid&&!v.storno)para('Vielen Dank für Ihren Auftrag!');
  P.forEach((pc,k)=>{const cx=pc.getContext('2d');cx.fillStyle='#ccc';cx.fillRect(ml,FZ_H-120,mr-ml,1);cx.font=F(15);cx.fillStyle='#777';cx.textAlign='left';
   cx.fillText([f.own&&f.own!==f.n?f.n+' · Inh. '+f.own:f.n,f.stnr?'St.-Nr. '+f.stnr:'',f.ust?'USt-IdNr. '+f.ust:'',f.iban?'IBAN '+f.iban:''].filter(Boolean).join('  ·  '),ml,FZ_H-104);
   if(P.length>1){cx.textAlign='right';cx.fillText(`Seite ${k+1} von ${P.length}`,mr,FZ_H-104)}cx.textAlign='left'});
  return P}
-const bzxFile=v=>{const P=bzxInvPages(v),blob=new Blob([Kn(P)],{type:'application/pdf'}),name=`Rechnung ${v.no}.pdf`.replace(/[\/\\:]/g,'-');return{blob,name,file:new File([blob],name,{type:'application/pdf'}),pages:P.length}};
+const bzxFile=v=>{const P=bzxInvPages(v),blob=new Blob([Kn(P)],{type:'application/pdf'}),name=`${v.kind==='ang'?'Angebot':'Rechnung'} ${v.no}.pdf`.replace(/[\/\\:]/g,'-');return{blob,name,file:new File([blob],name,{type:'application/pdf'}),pages:P.length}};
 /* the PDF is kept ONCE in «Dokumente»: a new version replaces the file of the same document */
 async function bzxStore(v){const B=bzxD(),R0=bzxFile(v),c=bzxCust(v.cust);let n=null;try{n=v.docId&&Ke().items.find(d=>d.id===v.docId&&!d.del)}catch{}
  if(!n){n=gt({id:V(),title:'',kind:'other',party:'',start:'',end:'',notice:'',note:'',files:[],pages:[],ts:Date.now()});n.folder=bzxFolder();Ke().items.push(n);v.docId=n.id}
- n.title=`Rechnung ${v.no}${c?' · '+c.n:''}`.slice(0,100);n.party=c?c.n:'';n.date=v.d;n.files=[];bzxQuiet();$();await Cr(n,R0.file);n.ts=Date.now();
- const o=B.inv.find(z=>z.id===v.id);if(o)o.docId=n.id;bzxSave();window.__bzxLast={name:R0.name,size:R0.blob.size,pages:R0.pages,doc:n.id};return R0}
+ n.title=`${v.kind==='ang'?'Angebot':'Rechnung'} ${v.no}${c?' · '+c.n:''}`.slice(0,100);n.party=c?c.n:'';n.date=v.d;n.files=[];bzxQuiet();$();await Cr(n,R0.file);n.ts=Date.now();
+ const o=bzxL(v).find(z=>z.id===v.id);if(o)o.docId=n.id;bzxSave();window.__bzxLast={name:R0.name,size:R0.blob.size,pages:R0.pages,doc:n.id};return R0}
 function bzxDl(R0){try{xu({blob:R0.blob,name:R0.name})}catch{const u=URL.createObjectURL(R0.blob),a=document.createElement('a');a.href=u;a.download=R0.name;a.click();setTimeout(()=>URL.revokeObjectURL(u),6e4)}}
 async function bzxShare(R0,txt){try{if(navigator.canShare&&navigator.canShare({files:[R0.file]})){await navigator.share(Object.assign({files:[R0.file],title:R0.name},txt?{text:txt}:{}));return'share'}}catch(e){if(e&&e.name==='AbortError')return'abort'}
  try{await xu({blob:R0.blob,name:R0.name})}catch{const u=URL.createObjectURL(R0.blob),a=document.createElement('a');a.href=u;a.download=R0.name;a.click();setTimeout(()=>URL.revokeObjectURL(u),6e4)}return'dl'}
@@ -371,13 +374,14 @@ Hooks.act('bzxfirm',()=>bzxFirmSheet());Hooks.act('bzxcusts',()=>bzxCustList());
 Hooks.act('bzxunt',()=>R('bzunt'));Hooks.act('bzxslot',d=>bzxSlot(d.k));
 Hooks.act('bzxyr',d=>{const B=bzxD(),Y=+bzxToday().slice(0,4);B.yr=Math.min(Y,bzxYr()+(+d.d||0));if(B.yr===Y)delete B.yr;bzxSave();v()});
 Hooks.act('bzxback',()=>{bzxCur=null;const h=m.hist||[];if(h.length&&h[h.length-1].route==='kar')h.pop();R('kar',void 0,!0)});
-Hooks.act('bzxinv',d=>bzxInvOpen(d&&d.id));
+Hooks.act('bzxinv',d=>bzxInvOpen(d&&d.id));Hooks.act('bzxang',d=>bzxInvOpen(d&&d.id,'ang'));
+Hooks.act('bzxa2i',()=>{const o=bzxCommit();if(!o)return;const td=bzxToday();bzxCur={id:'',no:bzxNextNo(td.slice(0,4)),d:td,ld:td,dd:14,cust:o.cust,items:JSON.parse(JSON.stringify(o.items)),note:'',paid:'',storno:!1,from:o.id};o.inv=1;bzxSave();v()});
 Hooks.act('bzxpadd',()=>{bzxRead();const last=bzxCur.items[bzxCur.items.length-1];bzxCur.items.push({t:'',q:1,u:'',p:null,r:last?last.r:19});v();setTimeout(()=>{const L2=document.querySelectorAll('.bzinv .bzpt');L2.length&&L2[L2.length-1].focus()},60)});
 Hooks.act('bzxpdel',d=>{bzxRead();bzxCur.items.splice(+d.k,1);v()});
 Hooks.act('bzxcnew',()=>{bzxRead();bzxCustSheet(null,o=>{bzxCur.cust=o.id;v()})});
 Hooks.act('bzxisave',()=>{const o=bzxCommit();if(!o)return;bzxCur=JSON.parse(JSON.stringify(o));T(bzxT('iSaved'));v()});
 Hooks.act('bzxpdf',async()=>{const o=bzxCommit();if(!o)return;bzxCur=JSON.parse(JSON.stringify(o));try{const R0=await bzxStore(o);bzxCur.docId=o.docId;T(bzxT('iPdfOk'));v();await bzxShare(R0)}catch(e){Hooks.err('bzxpdf',e);bzxErr(String(e&&e.message||e))}});
-Hooks.act('bzxmail',async()=>{const o=bzxCommit();if(!o)return;bzxCur=JSON.parse(JSON.stringify(o));const c=bzxCust(o.cust)||{},S=bzxSum(o),sub=bzxT('mSub',{n:o.no}),body=bzxT('mBody',{n:o.no,s:bzxEur(S.gross),f:bzxSign()});
+Hooks.act('bzxmail',async()=>{const o=bzxCommit();if(!o)return;bzxCur=JSON.parse(JSON.stringify(o));const c=bzxCust(o.cust)||{},S=bzxSum(o),sub=bzxT(o.kind==='ang'?'aSub':'mSub',{n:o.no}),body=bzxT(o.kind==='ang'?'aBody':'mBody',{n:o.no,s:bzxEur(S.gross),f:bzxSign()});
  try{const R0=await bzxStore(o);v();
   if(navigator.canShare&&navigator.canShare({files:[R0.file]})){try{await navigator.share({files:[R0.file],title:sub,text:body});return}catch(e){if(e&&e.name==='AbortError')return}}
   bzxDl(R0);T(bzxT('mAtt'));window.__bzxMail=`mailto:${encodeURIComponent(c.mail||'')}?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent(body)}`;

@@ -1940,3 +1940,132 @@
 1939	Tüm Azizler Günü
 1940	Tövbe ve Dua Günü
 1941	“%n” dosyası zaten var – açıldı
+1942	Güncel
+1943	%d tarihine kadar süreli
+1944	Önceki
+1945	YENİ
+1946	Çalışılan
+1947	%a / %b sa
+1948	Sonraki vardiya: %s
+1949	Henüz vardiya yok – girmek için dokunun
+1950	Vardiya planı
+1951	sabah · akşam · gece
+1952	Maaş
+1953	aylık brüt · net
+1954	%m için net %a
+1955	kalan: %n gün
+1956	izin günlerini girin
+1957	sözleşme, bordrolar
+1958	İş başvuruları
+1959	Henüz yok – durum, takvimde görüşme, “yanıt bekleniyor”
+1960	açık: %n · yanıt bekleniyor: %w
+1961	Çalışma süresi
+1962	Hafta %w · %a – %b
+1963	Gerçek / hedef
+1964	%n sa kaldı
+1965	Fazla mesai: %n sa
+1966	Sabah vardiyası
+1967	Akşam vardiyası
+1968	Gece vardiyası
+1969	Sabah
+1970	Akşam
+1971	Gece
+1972	Hasta
+1973	planlı
+1974	✓ Plana göre çalıştım
+1975	＋ Vardiya ekle
+1976	Vardiya
+1977	Başlangıç
+1978	Bitiş
+1979	Mola (dk.)
+1980	%d: vardiya ve “%e” çakışıyor
+1981	Haftalık hedef (sa)
+1982	sözleşmeye göre
+1983	%m ayında çalışılan
+1984	Hedef (iş günü × hedef/5)
+1985	%y iş günleri: %n
+1986	Yol masrafı indirimi için aktar
+1987	Vergi klasörüne aktarıldı: %n gün
+1988	Vardiya girilen günler sayılır (izin ve hastalık hariç). Beyandan önce kontrol edin.
+1989	Ritim (değiştirmek için güne dokunun)
+1990	Başlangıç günü
+1991	＋ gün
+1992	− gün
+1993	Vardiya saatleri
+1994	4 hafta takvime ekle
+1995	Takvimde: %n vardiya
+1996	Sonraki 14 gün
+1997	Önce bir işveren ekleyin
+1998	Yalnızca sizin girdikleriniz. Butler maaş hesaplamaz ve işverene bir şey göndermez.
+1999	Brüt
+2000	Net (ödenen)
+2001	Belgeden (isteğe bağlı)
+2002	Belgede bulundu – lütfen rakamları kontrol edin
+2003	Belgede tutar bulunamadı – lütfen kendiniz girin
+2004	Ortalama net: %a
+2005	%y brüt: %a
+2006	ücret vergi belgesiyle karşılaştırın
+2007	Henüz ay yok. Kendiniz girin veya bordrodan alın.
+2008	＋ Ay
+2009	İzin %y
+2010	Yıllık izin günleri
+2011	Geçen yıldan kalan
+2012	%t günden %n kaldı
+2013	＋ İzin
+2014	%n iş günü
+2015	Kalan izin genelde 31 Mart civarında düşer – sözleşmeniz belirleyicidir.
+2016	%d tarihine kadar izin
+2017	Henüz izin girilmedi
+2018	Pozisyon
+2019	İlan bağlantısı
+2020	Başvuru tarihi
+2021	Mülakat
+2022	İlginç
+2023	Hazırlanıyor
+2024	Başvuruldu
+2025	Yanıt bekleniyor
+2026	Teklif
+2027	Ret
+2028	%n gündür yanıt yok
+2029	Mülakat: %c
+2030	＋ Başvuru
+2031	N
+2032	Teklif
+2033	İhtarname
+2034	faturaya dönüştürüldü
+2035	İşiniz için daha fazlası
+2036	Teklifler: %n
+2037	gelir sayılmaz
+2038	Ürünler ve hizmetler
+2039	tek dokunuşla fatura satırları için
+2040	Stok
+2041	stok, minimum, “azalıyor”
+2042	azalıyor: %n
+2043	ay · çeyrek · yıl
+2044	Vadesi geçmiş fatura yok
+2045	Hangi fatura?
+2046	Aşama
+2047	Ödeme hatırlatması
+2048	1. ihtar
+2049	2. ihtar
+2050	Yeni süre
+2051	İhtar ücreti (anlaşıldıysa)
+2052	Ücret yalnızca izinli ve makulse – lütfen kontrol edin. Butler hiçbir şey göndermez.
+2053	Şimdiye kadar: %h
+2054	Ödemeyi kontrol et: %n
+2055	Katalogdan
+2056	Katalog boş – ürün veya hizmet ekleyin
+2057	＋ Ürün / hizmet
+2058	Stokta
+2059	Minimum
+2060	Stok tut
+2061	fatura kaydedilince stok düşer
+2062	Henüz boş
+2063	PDF oluştur
+2064	Rapor oluşturuldu
+2065	Yeni teklif
+2066	Geçerli
+2067	PDF teklif
+2068	Faturaya dönüştür
+2069	Teklif %n
+2070	Merhaba,\n\nekte %s tutarındaki %n numaralı teklifimizi bulabilirsiniz.\n\nSaygılarımızla\n%f

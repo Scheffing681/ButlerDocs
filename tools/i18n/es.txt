@@ -1940,3 +1940,132 @@
 1939	Día de Todos los Santos
 1940	Día de Penitencia y Oración
 1941	La carpeta «%n» ya existe – abierta
+1942	Actual
+1943	Temporal hasta %d
+1944	Anterior
+1945	NUEVO
+1946	Trabajado
+1947	%a / %b h
+1948	Próximo turno: %s
+1949	Aún no hay turnos – toque para añadir
+1950	Plan de turnos
+1951	mañana · tarde · noche
+1952	Salario
+1953	bruto · neto por mes
+1954	neto %a en %m
+1955	quedan: %n días
+1956	introduzca los días de vacaciones
+1957	contrato, nóminas
+1958	Candidaturas
+1959	Aún ninguna – estado, entrevista en el calendario, «esperando respuesta»
+1960	abiertas: %n · esperando respuesta: %w
+1961	Horario laboral
+1962	Semana %w · %a – %b
+1963	Real / objetivo
+1964	Faltan %n h
+1965	Horas extra: %n h
+1966	Turno de mañana
+1967	Turno de tarde
+1968	Turno de noche
+1969	Mañana
+1970	Tarde
+1971	Noche
+1972	Baja
+1973	previsto
+1974	✓ Trabajado según plan
+1975	＋ Añadir turno
+1976	Turno
+1977	Desde
+1978	Hasta
+1979	Pausa (min)
+1980	%d: el turno y «%e» se solapan
+1981	Objetivo semanal (h)
+1982	según contrato
+1983	Trabajado en %m
+1984	Objetivo (días laborables × objetivo/5)
+1985	Días trabajados %y: %n
+1986	Pasar a la deducción por desplazamiento
+1987	Pasado a la carpeta fiscal: %n días
+1988	Cuentan los días con turno (sin vacaciones ni baja). Compruébelo antes de declarar.
+1989	Ritmo (toque un día para cambiar)
+1990	Empieza el
+1991	＋ día
+1992	− día
+1993	Horarios de turno
+1994	Al calendario para 4 semanas
+1995	En el calendario: %n turnos
+1996	Próximos 14 días
+1997	Añada primero un empleador
+1998	Solo sus datos. Butler no calcula el salario ni envía nada al empleador.
+1999	Bruto
+2000	Neto (pagado)
+2001	Desde un documento (opcional)
+2002	Encontrado en el documento – compruebe las cifras
+2003	No se encontraron importes – introdúzcalos
+2004	Neto medio: %a
+2005	Bruto %y: %a
+2006	compárelo con el certificado fiscal
+2007	Aún no hay meses. Introdúzcalos o tómelos de la nómina.
+2008	＋ Mes
+2009	Vacaciones %y
+2010	Días de vacaciones al año
+2011	Restantes del año pasado
+2012	Quedan %n de %t días
+2013	＋ Vacaciones
+2014	%n días laborables
+2015	Los días restantes suelen caducar hacia el 31 de marzo – decide su contrato.
+2016	Vacaciones hasta %d
+2017	Aún no hay vacaciones
+2018	Puesto
+2019	Enlace a la oferta
+2020	Fecha de solicitud
+2021	Entrevista
+2022	Interesante
+2023	Preparando
+2024	Enviada
+2025	Esperando respuesta
+2026	Oferta
+2027	Rechazada
+2028	%n días sin respuesta
+2029	Entrevista: %c
+2030	＋ Candidatura
+2031	N
+2032	Presupuesto
+2033	Recordatorio
+2034	convertido en factura
+2035	Más para su negocio
+2036	Presupuestos: %n
+2037	no cuentan como ingreso
+2038	Productos y servicios
+2039	para líneas de factura con un toque
+2040	Almacén
+2041	existencias, mínimo, «se agota»
+2042	se agota: %n
+2043	mes · trimestre · año
+2044	No hay facturas vencidas
+2045	¿Qué factura?
+2046	Nivel
+2047	Recordatorio de pago
+2048	1.er requerimiento
+2049	2.º requerimiento
+2050	Nuevo plazo
+2051	Gastos de recordatorio (si se acordó)
+2052	Gastos solo si están permitidos y son razonables; compruébelo. Butler no envía nada.
+2053	Hasta ahora: %h
+2054	Comprobar pago: %n
+2055	Del catálogo
+2056	Catálogo vacío – añada productos o servicios
+2057	＋ Producto / servicio
+2058	En existencias
+2059	Mínimo
+2060	Llevar almacén
+2061	las existencias bajan al guardar una factura
+2062	Aún vacío
+2063	Crear PDF
+2064	Informe creado
+2065	Nuevo presupuesto
+2066	Válido
+2067	Presupuesto en PDF
+2068	Convertir en factura
+2069	Presupuesto %n
+2070	Hola:\n\nadjuntamos nuestro presupuesto %n por %s.\n\nAtentamente\n%f

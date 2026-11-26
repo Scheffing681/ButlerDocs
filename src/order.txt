@@ -114,3 +114,5 @@ docs/kauf-gesund.js
 docs/werkzeuge.js
 docs/butler-rechte.js
 docs/sprache-fix.js
+docs/arbeit-zeit.js
+docs/business-plus.js

@@ -1940,3 +1940,132 @@
 1939	Toussaint
 1940	Jour de pénitence et de prière
 1941	Le dossier « %n » existe déjà – ouvert
+1942	Actuel
+1943	CDD jusqu’au %d
+1944	Ancien
+1945	NOUVEAU
+1946	Travaillé
+1947	%a / %b h
+1948	Prochain poste : %s
+1949	Pas encore de postes – touchez pour saisir
+1950	Planning des postes
+1951	matin · après-midi · nuit
+1952	Salaire
+1953	brut · net par mois
+1954	net %a en %m
+1955	reste : %n jours
+1956	saisir les jours de congé
+1957	contrat, fiches de paie
+1958	Candidatures
+1959	Aucune – statut, entretien dans le calendrier, « en attente de réponse »
+1960	ouvertes : %n · en attente : %w
+1961	Temps de travail
+1962	Semaine %w · %a – %b
+1963	Réel / objectif
+1964	Encore %n h
+1965	Heures sup. : %n h
+1966	Poste du matin
+1967	Poste d’après-midi
+1968	Poste de nuit
+1969	Matin
+1970	Après-midi
+1971	Nuit
+1972	Malade
+1973	prévu
+1974	✓ Travaillé comme prévu
+1975	＋ Saisir un poste
+1976	Poste
+1977	De
+1978	À
+1979	Pause (min)
+1980	%d : le poste et « %e » se chevauchent
+1981	Objectif par semaine (h)
+1982	selon le contrat
+1983	Travaillé en %m
+1984	Objectif (jours ouvrés × objectif/5)
+1985	Jours travaillés %y : %n
+1986	Reprendre pour les frais de trajet
+1987	Repris dans le dossier fiscal : %n jours
+1988	Les jours avec un poste saisi comptent (sans congés ni maladie). Vérifiez avant la déclaration.
+1989	Rythme (touchez un jour pour changer)
+1990	Commence le
+1991	＋ jour
+1992	− jour
+1993	Horaires des postes
+1994	Dans le calendrier pour 4 semaines
+1995	Dans le calendrier : %n postes
+1996	14 prochains jours
+1997	Ajoutez d’abord un employeur
+1998	Uniquement vos saisies. Butler ne calcule pas le salaire et n’envoie rien à l’employeur.
+1999	Brut
+2000	Net (versé)
+2001	Depuis un document (facultatif)
+2002	Trouvé dans le document – vérifiez les chiffres
+2003	Aucun montant trouvé – saisissez-les
+2004	Net moyen : %a
+2005	Brut %y : %a
+2006	comparez avec l’attestation fiscale
+2007	Pas encore de mois. Saisissez ou reprenez depuis la fiche de paie.
+2008	＋ Mois
+2009	Congés %y
+2010	Jours de congé par an
+2011	Reste de l’an dernier
+2012	Reste %n sur %t jours
+2013	＋ Congé
+2014	%n jours ouvrés
+2015	Les jours restants expirent souvent vers le 31 mars – voyez votre contrat.
+2016	Congé jusqu’au %d
+2017	Pas encore de congé
+2018	Poste
+2019	Lien vers l’offre
+2020	Postulé le
+2021	Entretien
+2022	Intéressant
+2023	En préparation
+2024	Postulé
+2025	En attente de réponse
+2026	Offre
+2027	Refusée
+2028	%n jours sans réponse
+2029	Entretien : %c
+2030	＋ Candidature
+2031	N
+2032	Devis
+2033	Relance
+2034	transformé en facture
+2035	Plus pour votre activité
+2036	Devis : %n
+2037	ne comptent pas comme revenu
+2038	Produits et services
+2039	pour les lignes de facture en un geste
+2040	Stock
+2041	stock, minimum, « bientôt épuisé »
+2042	bientôt épuisé : %n
+2043	mois · trimestre · année
+2044	Aucune facture en retard
+2045	Quelle facture ?
+2046	Niveau
+2047	Rappel de paiement
+2048	1re relance
+2049	2e relance
+2050	Nouveau délai
+2051	Frais de relance (si convenu)
+2052	Frais seulement si autorisés et raisonnables – vérifiez. Butler n’envoie rien.
+2053	Jusqu’ici : %h
+2054	Vérifier le paiement : %n
+2055	Depuis le catalogue
+2056	Catalogue vide – ajoutez produits ou services
+2057	＋ Produit / service
+2058	En stock
+2059	Minimum
+2060	Gérer le stock
+2061	le stock baisse à l’enregistrement d’une facture
+2062	Encore vide
+2063	Créer le PDF
+2064	Rapport créé
+2065	Nouveau devis
+2066	Valable
+2067	Devis en PDF
+2068	Transformer en facture
+2069	Devis %n
+2070	Bonjour,\n\nveuillez trouver ci-joint notre devis %n d’un montant de %s.\n\nCordialement\n%f

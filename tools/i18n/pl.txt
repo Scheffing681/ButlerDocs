@@ -1940,3 +1940,132 @@
 1939	Wszystkich Świętych
 1940	Dzień Pokuty i Modlitwy
 1941	Zestaw „%n” już istnieje – otwarto
+1942	Aktualnie
+1943	Na czas określony do %d
+1944	Poprzedni
+1945	NOWE
+1946	Przepracowano
+1947	%a / %b godz.
+1948	Następna zmiana: %s
+1949	Brak zmian – dotknij, aby dodać
+1950	Grafik zmian
+1951	ranna · popołudniowa · nocna
+1952	Wynagrodzenie
+1953	brutto · netto miesięcznie
+1954	netto %a za %m
+1955	zostało: %n dni
+1956	wpisz dni urlopu
+1957	umowa, paski płacowe
+1958	Aplikacje o pracę
+1959	Jeszcze brak – status, rozmowa w kalendarzu, „czeka na odpowiedź”
+1960	otwarte: %n · czeka na odpowiedź: %w
+1961	Czas pracy
+1962	Tydzień %w · %a – %b
+1963	Rzeczywiste / plan
+1964	Zostało %n godz.
+1965	Nadgodziny: %n godz.
+1966	Zmiana ranna
+1967	Zmiana popołudniowa
+1968	Zmiana nocna
+1969	Ranna
+1970	Popołudniowa
+1971	Nocna
+1972	Choroba
+1973	planowane
+1974	✓ Przepracowano wg planu
+1975	＋ Dodaj zmianę
+1976	Zmiana
+1977	Od
+1978	Do
+1979	Przerwa (min)
+1980	%d: zmiana i „%e” się pokrywają
+1981	Norma tygodniowa (godz.)
+1982	wg umowy
+1983	Przepracowano w %m
+1984	Plan (dni robocze × norma/5)
+1985	Dni robocze %y: %n
+1986	Przekaż do ulgi na dojazdy
+1987	Przeniesiono do teczki podatkowej: %n dni
+1988	Liczą się dni z wpisaną zmianą (bez urlopu i choroby). Sprawdź przed zeznaniem.
+1989	Rytm (dotknij dnia, aby zmienić)
+1990	Zaczyna się
+1991	＋ dzień
+1992	− dzień
+1993	Godziny zmian
+1994	Do kalendarza na 4 tygodnie
+1995	W kalendarzu: %n zmian
+1996	Następne 14 dni
+1997	Najpierw dodaj pracodawcę
+1998	Tylko Twoje wpisy. Butler nie liczy wynagrodzenia i nic nie wysyła pracodawcy.
+1999	Brutto
+2000	Netto (wypłata)
+2001	Z dokumentu (opcjonalnie)
+2002	Znaleziono w dokumencie – sprawdź liczby
+2003	W dokumencie nie znaleziono kwot – wpisz sam
+2004	Średnio netto: %a
+2005	Brutto %y: %a
+2006	porównaj z Lohnsteuerbescheinigung
+2007	Brak miesięcy. Wpisz sam lub z paska płacowego.
+2008	＋ Miesiąc
+2009	Urlop %y
+2010	Dni urlopu w roku
+2011	Pozostałe z zeszłego roku
+2012	Zostało %n z %t dni
+2013	＋ Urlop
+2014	%n dni roboczych
+2015	Zaległy urlop często przepada ok. 31 marca – decyduje umowa.
+2016	Urlop do %d
+2017	Brak urlopów
+2018	Stanowisko
+2019	Link do oferty
+2020	Data aplikacji
+2021	Rozmowa
+2022	Ciekawe
+2023	W przygotowaniu
+2024	Wysłano
+2025	Czekam na odpowiedź
+2026	Oferta
+2027	Odmowa
+2028	%n dni bez odpowiedzi
+2029	Rozmowa: %c
+2030	＋ Aplikacja
+2031	N
+2032	Oferta
+2033	Monit
+2034	zamieniono na fakturę
+2035	Więcej dla firmy
+2036	Oferty: %n
+2037	nie liczą się jako przychód
+2038	Produkty i usługi
+2039	do pozycji faktury jednym dotknięciem
+2040	Magazyn
+2041	stan, minimum, „kończy się”
+2042	kończy się: %n
+2043	miesiąc · kwartał · rok
+2044	Brak zaległych faktur
+2045	Która faktura?
+2046	Stopień
+2047	Przypomnienie o płatności
+2048	1. monit
+2049	2. monit
+2050	Nowy termin
+2051	Opłata za monit (jeśli uzgodniona)
+2052	Opłata tylko, jeśli dozwolona i rozsądna – sprawdź. Butler nic nie wysyła.
+2053	Dotąd: %h
+2054	Sprawdź płatność: %n
+2055	Z katalogu
+2056	Katalog pusty – dodaj produkty lub usługi
+2057	＋ Produkt / usługa
+2058	Stan
+2059	Minimum
+2060	Prowadź magazyn
+2061	stan maleje po zapisaniu faktury
+2062	Na razie pusto
+2063	Utwórz PDF
+2064	Raport utworzony
+2065	Nowa oferta
+2066	Ważna
+2067	Oferta PDF
+2068	Zamień na fakturę
+2069	Oferta %n
+2070	Dzień dobry,\n\nw załączeniu nasza oferta %n na kwotę %s.\n\nZ poważaniem\n%f

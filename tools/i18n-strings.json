@@ -636,6 +636,7 @@
   "de": "Notiz",
   "files": [
    "akte.js",
+   "arbeit-zeit.js",
    "behoerden.js",
    "finanzen2.js",
    "kauf-gesund.js",
@@ -680,9 +681,11 @@
   "de": "Speichern",
   "files": [
    "akte.js",
+   "arbeit-zeit.js",
    "behoerden-briefe.js",
    "behoerden-termine.js",
    "behoerden.js",
+   "business-plus.js",
    "business.js",
    "finanzen.js",
    "finanzen2.js",
@@ -932,6 +935,821 @@
    "suche-smart.js"
   ]
  },
+ "Current": {
+  "ru": "Сейчас",
+  "de": "Aktuell",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Fixed-term until %d": {
+  "ru": "Срочный до %d",
+  "de": "Befristet bis %d",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Former": {
+  "ru": "Прежний",
+  "de": "Ehemalig",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "NEW": {
+  "ru": "НОВОЕ",
+  "de": "NEU",
+  "files": [
+   "arbeit-zeit.js",
+   "business-plus.js"
+  ]
+ },
+ "This week": {
+  "ru": "Эта неделя",
+  "de": "Diese Woche",
+  "files": [
+   "arbeit-zeit.js",
+   "eingang-fristen.js"
+  ]
+ },
+ "Worked": {
+  "ru": "Отработано",
+  "de": "Gearbeitet",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "%a / %b h": {
+  "ru": "%a / %b ч",
+  "de": "%a / %b Std.",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Next shift: %s": {
+  "ru": "Следующая смена: %s",
+  "de": "Nächste Schicht: %s",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "No shifts yet – tap to add": {
+  "ru": "Смены не внесены — нажмите, чтобы внести",
+  "de": "Noch keine Schichten – tippen zum Eintragen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Shift plan": {
+  "ru": "План смен",
+  "de": "Schichtplan",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "early · late · night": {
+  "ru": "ранняя · поздняя · ночная",
+  "de": "Früh · Spät · Nacht",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Salary": {
+  "ru": "Зарплата",
+  "de": "Gehalt",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "gross · net per month": {
+  "ru": "брутто · нетто по месяцам",
+  "de": "Brutto · Netto je Monat",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "net %a in %m": {
+  "ru": "нетто %a за %m",
+  "de": "Netto %a im %m",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Holiday": {
+  "ru": "Отпуск",
+  "de": "Urlaub",
+  "files": [
+   "arbeit-zeit.js",
+   "kalender-nz.js"
+  ]
+ },
+ "left: %n days": {
+  "ru": "осталось: %n дн.",
+  "de": "Rest: %n Tage",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "enter holiday days": {
+  "ru": "внесите дни отпуска",
+  "de": "Urlaubstage eintragen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Papers": {
+  "ru": "Документы",
+  "de": "Unterlagen",
+  "files": [
+   "arbeit-zeit.js",
+   "business.js",
+   "karriere2.js"
+  ]
+ },
+ "contract, payslips": {
+  "ru": "договор, расчётные листы",
+  "de": "Vertrag, Abrechnungen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Job applications": {
+  "ru": "Заявки на работу",
+  "de": "Bewerbungen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "None yet – status, interview in the calendar, “awaiting reply”": {
+  "ru": "Пока нет — статус, собеседование в календаре, «ждёт ответа»",
+  "de": "Noch keine – Status, Gespräch im Kalender, „wartet auf Antwort“",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "open: %n · awaiting reply: %w": {
+  "ru": "открыто: %n · ждут ответа: %w",
+  "de": "offen: %n · wartet auf Antwort: %w",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Working time": {
+  "ru": "Рабочее время",
+  "de": "Arbeitszeit",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Week %w · %a – %b": {
+  "ru": "Неделя %w · %a – %b",
+  "de": "KW %w · %a – %b",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Week": {
+  "ru": "Неделя",
+  "de": "Woche",
+  "files": [
+   "arbeit-zeit.js",
+   "kalender-nz.js",
+   "ueberblick.js"
+  ]
+ },
+ "Month": {
+  "ru": "Месяц",
+  "de": "Monat",
+  "files": [
+   "arbeit-zeit.js",
+   "business-plus.js",
+   "ueberblick.js"
+  ]
+ },
+ "Actual / target": {
+  "ru": "Факт / план",
+  "de": "Ist / Soll",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "%n h to go": {
+  "ru": "Осталось %n ч",
+  "de": "Noch %n Std.",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Overtime: %n h": {
+  "ru": "Сверх плана: %n ч",
+  "de": "Überstunden: %n Std.",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Early shift": {
+  "ru": "Ранняя смена",
+  "de": "Frühschicht",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Late shift": {
+  "ru": "Поздняя смена",
+  "de": "Spätschicht",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Night shift": {
+  "ru": "Ночная смена",
+  "de": "Nachtschicht",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Early": {
+  "ru": "Ранняя",
+  "de": "Früh",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Late": {
+  "ru": "Поздняя",
+  "de": "Spät",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Night": {
+  "ru": "Ночная",
+  "de": "Nacht",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Other": {
+  "ru": "Другое",
+  "de": "Andere",
+  "files": [
+   "arbeit-zeit.js",
+   "business.js",
+   "finanzen.js",
+   "kontakte-post.js",
+   "linkup.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "Sick": {
+  "ru": "Больничный",
+  "de": "Krank",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "off": {
+  "ru": "выходной",
+  "de": "frei",
+  "files": [
+   "arbeit-zeit.js",
+   "butler-glas.js"
+  ]
+ },
+ "planned": {
+  "ru": "по плану",
+  "de": "geplant",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "✓ Worked as planned": {
+  "ru": "✓ Отработал по плану",
+  "de": "✓ So gearbeitet",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "＋ Add a shift": {
+  "ru": "＋ Внести смену",
+  "de": "＋ Schicht erfassen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Date": {
+  "ru": "Дата",
+  "de": "Datum",
+  "files": [
+   "arbeit-zeit.js",
+   "behoerden-briefe.js",
+   "behoerden-termine.js",
+   "business.js",
+   "finanzen.js",
+   "kontakte-post.js",
+   "notizen.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "Shift": {
+  "ru": "Смена",
+  "de": "Schicht",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "From": {
+  "ru": "С",
+  "de": "Von",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "To": {
+  "ru": "До",
+  "de": "Bis",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Break (min)": {
+  "ru": "Перерыв, мин",
+  "de": "Pause (Min.)",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Delete": {
+  "ru": "Удалить",
+  "de": "Löschen",
+  "files": [
+   "arbeit-zeit.js",
+   "behoerden-briefe.js",
+   "behoerden-termine.js",
+   "behoerden.js",
+   "business-plus.js",
+   "business.js",
+   "finanzen.js",
+   "finanzen2.js",
+   "kauf-gesund.js",
+   "seiten.js",
+   "steuer-plus.js",
+   "vertraege-abos.js",
+   "werkzeuge.js"
+  ]
+ },
+ "%d: shift and “%e” overlap": {
+  "ru": "%d: смена и «%e» пересекаются",
+  "de": "%d: Schicht und „%e“ überschneiden sich",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Target per week (h)": {
+  "ru": "Норма в неделю, ч",
+  "de": "Soll pro Woche (Std.)",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "per contract": {
+  "ru": "по договору",
+  "de": "laut Vertrag",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Worked in %m": {
+  "ru": "Отработано в %m",
+  "de": "Gearbeitet im %m",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Target (working days × target/5)": {
+  "ru": "План (рабочие дни × норма)",
+  "de": "Soll (Arbeitstage × Soll/5)",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Working days %y: %n": {
+  "ru": "Рабочих дней в %y: %n",
+  "de": "Arbeitstage %y: %n",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Hand over for the commuter allowance": {
+  "ru": "Передать в налоговую папку (Pendlerpauschale)",
+  "de": "Für die Pendlerpauschale übernehmen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Taken into the tax folder: %n days": {
+  "ru": "Внесено в налоговую папку: %n дн.",
+  "de": "In die Steuer-Mappe übernommen: %n Tage",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Days with an entered shift count (no holiday or sick days). Please check before filing.": {
+  "ru": "Считаются дни, где Вы внесли смену (без отпуска и больничного). Проверьте перед декларацией.",
+  "de": "Gezählt werden Tage mit erfasster Schicht (ohne Urlaub und Krank). Vor der Erklärung bitte prüfen.",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Rhythm (tap a day to change)": {
+  "ru": "Ритм (нажмите на день, чтобы сменить)",
+  "de": "Rhythmus (Tag antippen zum Wechseln)",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Starts on": {
+  "ru": "Начало ритма",
+  "de": "Beginnt am",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "＋ day": {
+  "ru": "＋ день",
+  "de": "＋ Tag",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "− day": {
+  "ru": "− день",
+  "de": "− Tag",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Shift times": {
+  "ru": "Время смен",
+  "de": "Schichtzeiten",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Into the calendar for 4 weeks": {
+  "ru": "В календарь на 4 недели",
+  "de": "Für 4 Wochen in den Kalender",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "In the calendar: %n shifts": {
+  "ru": "В календаре: %n смен",
+  "de": "Im Kalender: %n Schichten",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Next 14 days": {
+  "ru": "Ближайшие 14 дней",
+  "de": "Nächste 14 Tage",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Please add an employer first": {
+  "ru": "Сначала добавьте работодателя",
+  "de": "Bitte zuerst einen Arbeitgeber anlegen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Only your entries. Butler computes no pay and sends nothing to the employer.": {
+  "ru": "Только Ваши записи. Батлер не считает зарплату и ничего не отправляет работодателю.",
+  "de": "Nur Ihre Einträge. Butler rechnet keinen Lohn und sendet nichts an den Arbeitgeber.",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Gross": {
+  "ru": "Брутто",
+  "de": "Brutto",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Net (paid out)": {
+  "ru": "Нетто (к выплате)",
+  "de": "Netto (Auszahlung)",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Payslip": {
+  "ru": "Расчётный лист",
+  "de": "Abrechnung",
+  "files": [
+   "arbeit-zeit.js",
+   "areas-glas.js"
+  ]
+ },
+ "From a document (optional)": {
+  "ru": "Из документа (необязательно)",
+  "de": "Aus Dokument (optional)",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Found in the document – please check the figures": {
+  "ru": "Найдено в документе — проверьте цифры",
+  "de": "Im Dokument gefunden – bitte Zahlen prüfen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "No amounts found in the document – please enter them": {
+  "ru": "В документе суммы не найдены — впишите сами",
+  "de": "Im Dokument keine Beträge gefunden – bitte selbst eintragen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Average net: %a": {
+  "ru": "В среднем нетто: %a",
+  "de": "Durchschnitt netto: %a",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Gross %y: %a": {
+  "ru": "Брутто за %y: %a",
+  "de": "Brutto %y: %a",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "compare with the wage tax certificate": {
+  "ru": "сравните с Lohnsteuerbescheinigung",
+  "de": "mit der Lohnsteuerbescheinigung vergleichen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "No months yet. Enter yourself or take from a payslip.": {
+  "ru": "Месяцев пока нет. Внесите сумму сами или из расчётного листа.",
+  "de": "Noch keine Monate. Selbst eintragen oder aus der Abrechnung übernehmen.",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "＋ Month": {
+  "ru": "＋ Месяц",
+  "de": "＋ Monat",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Holiday %y": {
+  "ru": "Отпуск %y",
+  "de": "Urlaub %y",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Holiday days per year": {
+  "ru": "Дней отпуска в году",
+  "de": "Urlaubstage pro Jahr",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Left from last year": {
+  "ru": "Остаток с прошлого года",
+  "de": "Rest aus dem Vorjahr",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "%n of %t days left": {
+  "ru": "Осталось %n из %t",
+  "de": "Noch %n von %t Tagen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "＋ Holiday": {
+  "ru": "＋ Отпуск",
+  "de": "＋ Urlaub",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "%n working days": {
+  "ru": "%n раб. дн.",
+  "de": "%n Arbeitstage",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Leftover days often lapse around 31 March – your contract decides.": {
+  "ru": "Остаток прошлого года часто сгорает около 31 марта — смотрите договор.",
+  "de": "Resturlaub verfällt oft ≈ am 31. März – maßgeblich ist Ihr Vertrag.",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Holiday until %d": {
+  "ru": "Отпуск до %d",
+  "de": "Urlaub bis %d",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "No holiday entered yet": {
+  "ru": "Отпусков пока нет",
+  "de": "Noch kein Urlaub eingetragen",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Company": {
+  "ru": "Фирма",
+  "de": "Firma",
+  "files": [
+   "arbeit-zeit.js",
+   "finanzen2.js"
+  ]
+ },
+ "Position": {
+  "ru": "Должность",
+  "de": "Position",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Link to the job": {
+  "ru": "Ссылка на вакансию",
+  "de": "Link zur Stelle",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Applied on": {
+  "ru": "Дата заявки",
+  "de": "Beworben am",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Status": {
+  "ru": "Статус",
+  "de": "Status",
+  "files": [
+   "arbeit-zeit.js",
+   "kontakte-post.js",
+   "steuerzentrum.js"
+  ]
+ },
+ "Interview": {
+  "ru": "Собеседование",
+  "de": "Gespräch",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Interesting": {
+  "ru": "Интересно",
+  "de": "Interessant",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Preparing": {
+  "ru": "Готовлю",
+  "de": "Vorbereiten",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Applied": {
+  "ru": "Отправлено",
+  "de": "Beworben",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Awaiting reply": {
+  "ru": "Жду ответа",
+  "de": "Rückmeldung ausstehend",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Offer": {
+  "ru": "Предложение",
+  "de": "Zusage",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Rejected": {
+  "ru": "Отказ",
+  "de": "Absage",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Closed": {
+  "ru": "Закрыто",
+  "de": "Erledigt",
+  "files": [
+   "arbeit-zeit.js",
+   "behoerden.js",
+   "steuerzentrum.js"
+  ]
+ },
+ "%n days without reply": {
+  "ru": "%n дн. без ответа",
+  "de": "seit %n Tagen ohne Antwort",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Interview: %c": {
+  "ru": "Собеседование: %c",
+  "de": "Vorstellungsgespräch: %c",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Please enter the company": {
+  "ru": "Впишите фирму",
+  "de": "Bitte die Firma eintragen",
+  "files": [
+   "arbeit-zeit.js",
+   "finanzen2.js"
+  ]
+ },
+ "Application folder (PDF)": {
+  "ru": "Bewerbungsmappe (PDF)",
+  "de": "Bewerbungsmappe (PDF)",
+  "files": [
+   "arbeit-zeit.js",
+   "karriere2.js"
+  ]
+ },
+ "＋ Application": {
+  "ru": "＋ Заявка",
+  "de": "＋ Bewerbung",
+  "files": [
+   "arbeit-zeit.js"
+  ]
+ },
+ "Really delete? Again": {
+  "ru": "Точно удалить? Ещё раз",
+  "de": "Wirklich löschen? Nochmals",
+  "files": [
+   "arbeit-zeit.js",
+   "kauf-gesund.js"
+  ]
+ },
+ "today": {
+  "ru": "сегодня",
+  "de": "heute",
+  "files": [
+   "arbeit-zeit.js",
+   "behoerden-termine.js",
+   "behoerden.js",
+   "start-glas.js",
+   "start.js",
+   "suche-smart.js"
+  ]
+ },
+ "tomorrow": {
+  "ru": "завтра",
+  "de": "morgen",
+  "files": [
+   "arbeit-zeit.js",
+   "behoerden-termine.js",
+   "behoerden.js",
+   "start-glas.js"
+  ]
+ },
+ "All": {
+  "ru": "Все",
+  "de": "Alle",
+  "files": [
+   "arbeit-zeit.js",
+   "behoerden.js",
+   "eingang-fristen.js",
+   "kalender-nz.js",
+   "kauf-gesund.js",
+   "kontakte-post.js",
+   "post.js",
+   "scan-glas.js",
+   "start-glas.js"
+  ]
+ },
  "Still empty – 3 first steps": {
   "ru": "Пока пусто — 3 первых шага",
   "de": "Noch leer – 3 erste Schritte",
@@ -996,13 +1814,6 @@
  "photo or file": {
   "ru": "Фото или файл",
   "de": "fotografieren oder Datei",
-  "files": [
-   "areas-glas.js"
-  ]
- },
- "Payslip": {
-  "ru": "Расчётный лист",
-  "de": "Gehaltsabrechnung",
   "files": [
    "areas-glas.js"
   ]
@@ -1675,36 +2486,6 @@
    "behoerden-briefe.js"
   ]
  },
- "Date": {
-  "ru": "Дата",
-  "de": "Datum",
-  "files": [
-   "behoerden-briefe.js",
-   "behoerden-termine.js",
-   "business.js",
-   "finanzen.js",
-   "kontakte-post.js",
-   "notizen.js",
-   "vertraege-abos.js"
-  ]
- },
- "Delete": {
-  "ru": "Удалить",
-  "de": "Löschen",
-  "files": [
-   "behoerden-briefe.js",
-   "behoerden-termine.js",
-   "behoerden.js",
-   "business.js",
-   "finanzen.js",
-   "finanzen2.js",
-   "kauf-gesund.js",
-   "seiten.js",
-   "steuer-plus.js",
-   "vertraege-abos.js",
-   "werkzeuge.js"
-  ]
- },
  "Empty so far": {
   "ru": "Пока пусто",
   "de": "Noch leer",
@@ -1885,26 +2666,6 @@
    "start-glas.js",
    "start.js",
    "suche-smart.js"
-  ]
- },
- "today": {
-  "ru": "сегодня",
-  "de": "heute",
-  "files": [
-   "behoerden-termine.js",
-   "behoerden.js",
-   "start-glas.js",
-   "start.js",
-   "suche-smart.js"
-  ]
- },
- "tomorrow": {
-  "ru": "завтра",
-  "de": "morgen",
-  "files": [
-   "behoerden-termine.js",
-   "behoerden.js",
-   "start-glas.js"
   ]
  },
  "past": {
@@ -2170,20 +2931,6 @@
    "notizen.js"
   ]
  },
- "All": {
-  "ru": "Все",
-  "de": "Alle",
-  "files": [
-   "behoerden.js",
-   "eingang-fristen.js",
-   "kalender-nz.js",
-   "kauf-gesund.js",
-   "kontakte-post.js",
-   "post.js",
-   "scan-glas.js",
-   "start-glas.js"
-  ]
- },
  "Your offices and services go here. Add only what you use.": {
   "ru": "Здесь будут Ваши ведомства и службы. Добавьте только то, чем пользуетесь.",
   "de": "Hier stehen Ihre Behörden und Dienste. Fügen Sie nur hinzu, was Sie nutzen.",
@@ -2303,14 +3050,6 @@
    "behoerden.js"
   ]
  },
- "Closed": {
-  "ru": "Закрыто",
-  "de": "Geschlossen",
-  "files": [
-   "behoerden.js",
-   "steuerzentrum.js"
-  ]
- },
  "opens %d %t": {
   "ru": "откроется %d %t",
   "de": "öffnet %d %t",
@@ -2343,7 +3082,8 @@
   "ru": "Скопировано",
   "de": "Kopiert",
   "files": [
-   "behoerden.js"
+   "behoerden.js",
+   "business-plus.js"
   ]
  },
  "Show": {
@@ -2418,6 +3158,7 @@
   "de": "Name",
   "files": [
    "behoerden.js",
+   "business-plus.js",
    "kauf-gesund.js",
    "mappen.js",
    "notizen.js",
@@ -2601,6 +3342,7 @@
   "de": "Bitte einen Namen eingeben",
   "files": [
    "behoerden.js",
+   "business-plus.js",
    "business.js"
   ]
  },
@@ -3161,6 +3903,313 @@
    "bereiche.js"
   ]
  },
+ "Quote": {
+  "ru": "Предложение",
+  "de": "Angebot",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Reminder": {
+  "ru": "Mahnung",
+  "de": "Mahnung",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "turned into invoice": {
+  "ru": "счёт создан",
+  "de": "in Rechnung umgewandelt",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "More for your business": {
+  "ru": "Ещё для бизнеса",
+  "de": "Mehr für Ihr Geschäft",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Quotes: %n": {
+  "ru": "Предложения: %n",
+  "de": "Angebote: %n",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "not counted as income": {
+  "ru": "не считаются доходом",
+  "de": "zählen nicht als Einnahme",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Products & services": {
+  "ru": "Товары и услуги",
+  "de": "Produkte & Leistungen",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "for invoice lines in one tap": {
+  "ru": "для строк счёта в одно касание",
+  "de": "für Rechnungszeilen mit einem Tipp",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Stock": {
+  "ru": "Склад",
+  "de": "Lager",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "optional": {
+  "ru": "по желанию",
+  "de": "optional",
+  "files": [
+   "business-plus.js",
+   "mappen.js"
+  ]
+ },
+ "stock, minimum, “running low”": {
+  "ru": "остаток, минимум, «заканчивается»",
+  "de": "Bestand, Mindestmenge, „wird knapp“",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "running low: %n": {
+  "ru": "заканчивается: %n",
+  "de": "knapp: %n",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Report as PDF": {
+  "ru": "Отчёт PDF",
+  "de": "Bericht als PDF",
+  "files": [
+   "business-plus.js",
+   "ueberblick.js"
+  ]
+ },
+ "month · quarter · year": {
+  "ru": "месяц · квартал · год",
+  "de": "Monat · Quartal · Jahr",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "No overdue invoices": {
+  "ru": "Просроченных счетов нет",
+  "de": "Keine überfälligen Rechnungen",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Which invoice?": {
+  "ru": "Какой счёт?",
+  "de": "Welche Rechnung?",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Level": {
+  "ru": "Ступень",
+  "de": "Stufe",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Payment reminder": {
+  "ru": "Напоминание об оплате",
+  "de": "Zahlungserinnerung",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "1st reminder": {
+  "ru": "1-я Mahnung",
+  "de": "1. Mahnung",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "2nd reminder": {
+  "ru": "2-я Mahnung",
+  "de": "2. Mahnung",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "New deadline": {
+  "ru": "Новый срок",
+  "de": "Neue Frist",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Reminder fee (if agreed)": {
+  "ru": "Плата за напоминание (если договорено)",
+  "de": "Mahngebühr (falls vereinbart)",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Add a fee only if allowed and reasonable – please check. Butler sends nothing.": {
+  "ru": "Плату указывайте, только если это допустимо и соразмерно — проверьте. Батлер ничего не отправляет.",
+  "de": "Gebühr nur, wenn zulässig und angemessen – bitte prüfen. Butler sendet nichts.",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Copy text": {
+  "ru": "Копировать текст",
+  "de": "Text kopieren",
+  "files": [
+   "business-plus.js",
+   "vertraege-abos.js"
+  ]
+ },
+ "So far: %h": {
+  "ru": "Уже: %h",
+  "de": "Bisher: %h",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Check payment: %n": {
+  "ru": "Проверить оплату: %n",
+  "de": "Zahlung prüfen: %n",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "From catalogue": {
+  "ru": "Из каталога",
+  "de": "Aus Katalog",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Catalogue empty – add products or services": {
+  "ru": "Каталог пуст — добавьте товары или услуги",
+  "de": "Katalog leer – Produkte oder Leistungen anlegen",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "＋ Product / service": {
+  "ru": "＋ Товар / услуга",
+  "de": "＋ Produkt / Leistung",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Unit": {
+  "ru": "Единица",
+  "de": "Einheit",
+  "files": [
+   "business-plus.js",
+   "business.js",
+   "kauf-gesund.js"
+  ]
+ },
+ "Price": {
+  "ru": "Цена",
+  "de": "Preis",
+  "files": [
+   "business-plus.js",
+   "kauf-gesund.js"
+  ]
+ },
+ "VAT": {
+  "ru": "НДС",
+  "de": "USt",
+  "files": [
+   "business-plus.js",
+   "business.js"
+  ]
+ },
+ "In stock": {
+  "ru": "Остаток",
+  "de": "Bestand",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Minimum": {
+  "ru": "Минимум",
+  "de": "Mindestmenge",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Keep stock": {
+  "ru": "Вести склад",
+  "de": "Lager führen",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "stock goes down when an invoice is saved": {
+  "ru": "остаток уменьшается после сохранения счёта",
+  "de": "Bestand sinkt, wenn eine Rechnung gespeichert wird",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Empty yet": {
+  "ru": "Пока пусто",
+  "de": "Noch leer",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Period": {
+  "ru": "Период",
+  "de": "Zeitraum",
+  "files": [
+   "business-plus.js",
+   "ueberblick.js"
+  ]
+ },
+ "Quarter": {
+  "ru": "Квартал",
+  "de": "Quartal",
+  "files": [
+   "business-plus.js",
+   "ueberblick.js"
+  ]
+ },
+ "Year": {
+  "ru": "Год",
+  "de": "Jahr",
+  "files": [
+   "business-plus.js",
+   "business.js",
+   "finanzen2.js",
+   "kalender-nz.js",
+   "karriere2.js"
+  ]
+ },
+ "Create PDF": {
+  "ru": "Создать PDF",
+  "de": "PDF erstellen",
+  "files": [
+   "business-plus.js"
+  ]
+ },
+ "Report created": {
+  "ru": "Отчёт готов",
+  "de": "Bericht erstellt",
+  "files": [
+   "business-plus.js"
+  ]
+ },
  "My business": {
   "ru": "Мой бизнес",
   "de": "Mein Business",
@@ -3286,14 +4335,6 @@
   "de": "Kunde",
   "files": [
    "business.js"
-  ]
- },
- "Papers": {
-  "ru": "Документы",
-  "de": "Unterlagen",
-  "files": [
-   "business.js",
-   "karriere2.js"
   ]
  },
  "%y · income & expenses": {
@@ -3526,17 +4567,6 @@
    "business.js"
   ]
  },
- "Other": {
-  "ru": "другая",
-  "de": "Sonstige",
-  "files": [
-   "business.js",
-   "finanzen.js",
-   "kontakte-post.js",
-   "linkup.js",
-   "vertraege-abos.js"
-  ]
- },
  "Customers": {
   "ru": "Клиенты",
   "de": "Kunden",
@@ -3650,24 +4680,9 @@
    "business.js"
   ]
  },
- "Unit": {
-  "ru": "Ед.",
-  "de": "Einheit",
-  "files": [
-   "business.js",
-   "kauf-gesund.js"
-  ]
- },
  "Price €": {
   "ru": "Цена, €",
   "de": "Preis €",
-  "files": [
-   "business.js"
-  ]
- },
- "VAT": {
-  "ru": "НДС",
-  "de": "USt",
   "files": [
    "business.js"
   ]
@@ -3809,6 +4824,48 @@
  "This number already exists": {
   "ru": "Такой номер уже есть",
   "de": "Diese Nummer gibt es schon",
+  "files": [
+   "business.js"
+  ]
+ },
+ "New quote": {
+  "ru": "Новое предложение",
+  "de": "Neues Angebot",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Valid": {
+  "ru": "Действует",
+  "de": "Gültig",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Quote as PDF": {
+  "ru": "Предложение PDF",
+  "de": "Angebot als PDF",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Turn into an invoice": {
+  "ru": "Сделать из него счёт",
+  "de": "In Rechnung umwandeln",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Quote %n": {
+  "ru": "Предложение %n",
+  "de": "Angebot %n",
+  "files": [
+   "business.js"
+  ]
+ },
+ "Hello,\n\nplease find attached our quote %n for %s.\n\nKind regards\n%f": {
+  "ru": "Здравствуйте,\n\nво вложении наше предложение %n на сумму %s.\n\nС уважением\n%f",
+  "de": "Guten Tag,\n\nanbei erhalten Sie unser Angebot %n über %s.\n\nMit freundlichen Grüßen\n%f",
   "files": [
    "business.js"
   ]
@@ -4227,16 +5284,6 @@
    "business.js"
   ]
  },
- "Year": {
-  "ru": "Год",
-  "de": "Jahr",
-  "files": [
-   "business.js",
-   "finanzen2.js",
-   "kalender-nz.js",
-   "karriere2.js"
-  ]
- },
  "%a invoices · %b receipts": {
   "ru": "%a счетов · %b чеков",
   "de": "%a Rechnungen · %b Belege",
@@ -4415,13 +5462,6 @@
  "on": {
   "ru": "вкл.",
   "de": "an",
-  "files": [
-   "butler-glas.js"
-  ]
- },
- "off": {
-  "ru": "выкл.",
-  "de": "aus",
   "files": [
    "butler-glas.js"
   ]
@@ -5342,13 +6382,6 @@
  "Overdue": {
   "ru": "Просрочено",
   "de": "Überfällig",
-  "files": [
-   "eingang-fristen.js"
-  ]
- },
- "This week": {
-  "ru": "На этой неделе",
-  "de": "Diese Woche",
   "files": [
    "eingang-fristen.js"
   ]
@@ -6276,13 +7309,6 @@
    "finanzen2.js"
   ]
  },
- "Company": {
-  "ru": "Фирма",
-  "de": "Firma",
-  "files": [
-   "finanzen2.js"
-  ]
- },
  "Role": {
   "ru": "Должность",
   "de": "Position",
@@ -6384,13 +7410,6 @@
    "finanzen2.js"
   ]
  },
- "Please enter the company": {
-  "ru": "Впишите название фирмы",
-  "de": "Bitte die Firma eintragen",
-  "files": [
-   "finanzen2.js"
-  ]
- },
  "Please enter a title": {
   "ru": "Впишите название проекта",
   "de": "Bitte einen Titel eintragen",
@@ -6454,14 +7473,6 @@
   "de": "Liste",
   "files": [
    "kalender-nz.js"
-  ]
- },
- "Week": {
-  "ru": "Неделя",
-  "de": "Woche",
-  "files": [
-   "kalender-nz.js",
-   "ueberblick.js"
   ]
  },
  "e.g. “Meeting landlord 5.12. 3 pm”": {
@@ -6531,13 +7542,6 @@
  "for public holidays": {
   "ru": "для праздников",
   "de": "für die Feiertage",
-  "files": [
-   "kalender-nz.js"
-  ]
- },
- "Holiday": {
-  "ru": "Праздник",
-  "de": "Feiertag",
   "files": [
    "kalender-nz.js"
   ]
@@ -7166,13 +8170,6 @@
    "karriere2.js"
   ]
  },
- "Application folder (PDF)": {
-  "ru": "Папка для работодателя (Bewerbungsmappe, PDF)",
-  "de": "Bewerbungsmappe (PDF)",
-  "files": [
-   "karriere2.js"
-  ]
- },
  "Application folder": {
   "ru": "Bewerbungsmappe",
   "de": "Bewerbungsmappe",
@@ -7539,13 +8536,6 @@
    "kauf-gesund.js"
   ]
  },
- "Price": {
-  "ru": "Цена",
-  "de": "Preis",
-  "files": [
-   "kauf-gesund.js"
-  ]
- },
  "Serial number": {
   "ru": "Серийный номер",
   "de": "Seriennummer",
@@ -7647,13 +8637,6 @@
  "Create a purchase with warranty": {
   "ru": "Создать покупку с гарантией",
   "de": "Als Kauf mit Garantie anlegen",
-  "files": [
-   "kauf-gesund.js"
-  ]
- },
- "Really delete? Again": {
-  "ru": "Точно удалить? Ещё раз",
-  "de": "Wirklich löschen? Nochmals",
   "files": [
    "kauf-gesund.js"
   ]
@@ -8186,14 +9169,6 @@
   "de": "Bescheid / Bestätigung",
   "files": [
    "kontakte-post.js"
-  ]
- },
- "Status": {
-  "ru": "Статус",
-  "de": "Status",
-  "files": [
-   "kontakte-post.js",
-   "steuerzentrum.js"
   ]
  },
  "by": {
@@ -8771,13 +9746,6 @@
  "not needed": {
   "ru": "не нужно",
   "de": "nicht nötig",
-  "files": [
-   "mappen.js"
-  ]
- },
- "optional": {
-  "ru": "по желанию",
-  "de": "optional",
   "files": [
    "mappen.js"
   ]
@@ -12330,13 +13298,6 @@
    "ueberblick.js"
   ]
  },
- "Report as PDF": {
-  "ru": "Отчёт PDF",
-  "de": "Bericht als PDF",
-  "files": [
-   "ueberblick.js"
-  ]
- },
  "period, date and sources – for you or your adviser": {
   "ru": "период, дата и источники — для себя или консультанта",
   "de": "Zeitraum, Datum und Quellen – für Sie oder Ihren Berater",
@@ -12361,20 +13322,6 @@
  "The figures show only what is in the app. What is missing is missing in the report, too.": {
   "ru": "Цифры показывают только то, что внесено в приложение. Если чего-то нет — в отчёте этого тоже нет.",
   "de": "Die Zahlen zeigen nur, was in der App erfasst ist. Was fehlt, fehlt auch im Bericht.",
-  "files": [
-   "ueberblick.js"
-  ]
- },
- "Month": {
-  "ru": "Месяц",
-  "de": "Monat",
-  "files": [
-   "ueberblick.js"
-  ]
- },
- "Quarter": {
-  "ru": "Квартал",
-  "de": "Quartal",
   "files": [
    "ueberblick.js"
   ]
@@ -12545,13 +13492,6 @@
  "all calm ✓": {
   "ru": "всё спокойно ✓",
   "de": "alles ruhig ✓",
-  "files": [
-   "ueberblick.js"
-  ]
- },
- "Period": {
-  "ru": "Период",
-  "de": "Zeitraum",
   "files": [
    "ueberblick.js"
   ]
@@ -12853,13 +13793,6 @@
  "to print or upload": {
   "ru": "для печати или загрузки",
   "de": "zum Drucken oder Hochladen",
-  "files": [
-   "vertraege-abos.js"
-  ]
- },
- "Copy text": {
-  "ru": "Скопировать текст",
-  "de": "Text kopieren",
   "files": [
    "vertraege-abos.js"
   ]
